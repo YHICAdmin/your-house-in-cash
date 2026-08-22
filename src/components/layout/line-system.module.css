@@ -1,6 +1,5 @@
 .system {
   position: fixed;
-  z-index: 10;
   inset-block: 0;
   left: 50%;
   border-inline: 1px solid var(--color-line);
