@@ -1,9 +1,30 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# Your House in Cash — Project Instructions
 
-# This is NOT the Next.js you know
+## Project Documentation
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+The project documentation in `/docs` is the source of truth for product, UX, visual design, and component decisions.
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+Relevant documents include:
 
-<!-- END:nextjs-agent-rules -->
+- Website Specification
+- Visual Design System
+- Component Library
+
+Read the relevant project documentation before implementing UI that it governs.
+
+If project documentation conflicts with assumptions, framework defaults, or generated code, follow the project documentation.
+
+## Project Rules
+
+- Use Next.js App Router with TypeScript.
+- Prefer Server Components by default.
+- Use Client Components only when client-side interaction is required.
+- Keep Client Component boundaries as small as practical.
+- Prefer static/prerendered rendering for public content pages unless dynamic rendering is required.
+- Do not add third-party dependencies without approval.
+- Do not invent product, UX, visual-design, or architectural requirements.
+- Do not invent colors, spacing values, typography, shadows, radii, breakpoints, or other design-system values when they are defined in the project documentation.
+- Do not add UI elements, interactions, or functionality that were not requested or specified.
+- If a material requirement is ambiguous, ask before implementing it.
+- Keep implementations as simple as the requirements allow.
+- Do not modify unrelated parts of the codebase while implementing a task.
