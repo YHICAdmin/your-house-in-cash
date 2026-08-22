@@ -28,3 +28,10 @@ If project documentation conflicts with assumptions, framework defaults, or gene
 - If a material requirement is ambiguous, ask before implementing it.
 - Keep implementations as simple as the requirements allow.
 - Do not modify unrelated parts of the codebase while implementing a task.
+
+## Implementation Approval
+
+- Do not begin implementation of a feature, component, section, or architectural change until I explicitly approve it for implementation.
+- Planning, clarification, specification updates, analysis, and discussion do not constitute implementation approval.
+- If a requirement is unresolved or TBD, do not create preparatory code, abstractions, infrastructure, placeholders, or configuration for it.
+- When asked only to analyze, review, or clarify, do not modify implementation files.
