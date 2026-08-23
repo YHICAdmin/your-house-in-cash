@@ -63,21 +63,19 @@ Typography should feel clean, modern, and direct. Avoid creating unnecessary typ
 
 ## Layout & Grid
 
-Purpose
+### Purpose
 
 Create a consistent layout system across the entire website that maintains reliable alignment, generous whitespace, and a clear hierarchy between elements.
 
 The Grid is not only a technical tool for aligning content, but also an integral part of the website’s visual language.
 
-| Definition | Desktop | Tablet | Mobile |
-| --- | --- | --- | --- |
-| Max Page Width | 1440px | 100% | 100% |
-| Content Container | 1248px max | 100% | 100% |
-| Horizontal Page Padding | 96px → 16px minimum | 16px | 16px |
-| Columns | 12 | 8 | 4 |
-| Gutter | 24px | 24px | 16px |
+* **Max Page Width:** Desktop 1440px · Tablet 100% · Mobile 100%
+* **Content Container:** Desktop 1248px max · Tablet 100% · Mobile 100%
+* **Horizontal Page Padding:** Desktop 96px → 16px minimum · Tablet 16px · Mobile 16px
+* **Columns:** Desktop 12 · Tablet 8 · Mobile 4
+* **Gutter:** Desktop 24px · Tablet 24px · Mobile 16px
 
-Content Container
+### Content Container
 
 All primary website content remains within a Content Container with a maximum width of 1248px.
 
@@ -87,7 +85,7 @@ When the viewport is not wide enough to accommodate a 1248px Content Container, 
 
 The Content Container must never extend directly to the viewport edges.
 
-Grid
+### Grid
 
 The Content Container is divided into a Grid according to the Breakpoint:
 
@@ -111,17 +109,14 @@ Columns may also be intentionally left empty.
 
 Whitespace is part of the Layout and should not be treated as space that needs to be filled.
 
-Vertical Section Spacing
+### Vertical Section Spacing
 
 The default vertical spacing for a Section is:
+* **Desktop:** 144px
+* **Tablet:** 96px
+* **Mobile:** 72px
 
-| Breakpoint | Vertical Spacing |
-| --- | --- |
-| Desktop | 144px |
-| Tablet | 96px |
-| Mobile | 72px |
-
-Vertical Section Spacing
+### Vertical Section Spacing
 
 The default vertical spacing for a Section is:
 
@@ -129,7 +124,7 @@ The value refers to the Section’s default vertical padding. It may be overridd
 
 Sections do not have a fixed height. Section height continues to be determined by its content.
 
-General Principle
+### General Principle
 
 The Grid is intended to create consistency without making the website rigid.
 
@@ -151,19 +146,17 @@ The system adapts according to the Breakpoint while preserving the same underlyi
 
 The lines continue uninterrupted throughout the page, including through the Header and Sections, and do not stop or restart between different areas.
 
-| Breakpoint | Number of Lines | Visual Columns | Outer Line Position | Internal Line Position | Content Distance from Outer Lines |
-| --- | --- | --- | --- | --- | --- |
-| Desktop | 5 | 4 | At the boundaries of the 1248px Content Container | Center of the Gutters between Columns 3–4, 6–7, and 9–10 | 16px |
-| Tablet | 3 | 2 | At the boundaries of the content area | Center of the Gutter between Columns 4–5 | 16px |
-| Mobile | 2 | 1 | At the boundaries of the content area | — | 16px |
+* **Desktop:** 5 lines · 4 visual columns · Outer lines at the boundaries of the 1248px Content Container · Internal lines at the center of the gutters between Columns 3–4, 6–7, and 9–10 · Content distance from outer lines: 16px
+* **Tablet:** 3 lines · 2 visual columns · Outer lines at the boundaries of the content area · Internal line at the center of the gutter between Columns 4–5 · Content distance from outer lines: 16px
+* **Mobile:** 2 lines · 1 visual column · Outer lines at the boundaries of the content area · No internal lines · Content distance from outer lines: 16px
 
-Behavior & Override
+### Behavior & Override
 
 The Line System is a visual layer only and does not occupy space within the Layout. Elements may be positioned over or across the lines when required by the composition.
 
 The distance between content and the outer System Lines may be overridden at the Component level when required by the composition.
 
-Layering
+### Layering
 
 The Line System sits above Section backgrounds and Background Treatments, including gradients, so the lines remain continuously visible throughout the page.
 
@@ -171,19 +164,17 @@ All foreground content renders above the Line System, including text, images, ca
 
 The Line System is non-interactive and must not intercept pointer events.
 
-Spacing System
+### Spacing System
 
-| Token | Spacing | Typical Use |
-| --- | --- | --- |
-| XS | 8px | Small spacing / compact elements |
-| S | 16px | Small spacing |
-| M | 24px | Medium spacing |
-| L | 32px | Standard spacing between groups |
-| XL | 48px | Significant spacing |
-| 2XL | 64px | Large spacing |
-| 3XL | 96px | Significant whitespace |
+* **XS:** 8px · Small spacing / compact elements
+* **S:** 16px · Small spacing
+* **M:** 24px · Medium spacing
+* **L:** 32px · Standard spacing between groups
+* **XL:** 48px · Significant spacing
+* **2XL:** 64px · Large spacing
+* **3XL:** 96px · Significant whitespace
 
-Spacing Scale
+### Spacing Scale
 
 Margin, padding, and gap values should use the defined Spacing Scale by default. Explicit values defined at the Component or Section level may override the scale when required by the composition.
 
@@ -195,18 +186,16 @@ Whitespace is an intentional part of the composition. It should not be filled or
 
 ## Color System
 
-| Token | Color | Usage |
-| --- | --- | --- |
-| Background | #FFFFFF | Primary website background |
-| Background Soft | #F7F9F7 | Sections with a subtle background variation |
-| Surface | #FFFFFF | Cards / floating elements |
-| Text Primary | #101114 | Headlines and primary text |
-| Text Secondary | #555B63 | Supporting copy |
-| Text Muted | #777D85 | Microcopy / metadata |
-| Border | #E4E7E4 | Cards and dividers |
-| Line System | #F2F0F0 | Visual lines used by the Line System. 1px thickness. Remains subtle and visually secondary to the content. |
+* **Background:** #FFFFFF · Primary website background
+* **Background Soft:** #F7F9F7 · Sections with a subtle background variation
+* **Surface:** #FFFFFF · Cards / floating elements
+* **Text Primary:** #101114 · Headlines and primary text
+* **Text Secondary:** #555B63 · Supporting copy
+* **Text Muted:** #777D85 · Microcopy / metadata
+* **Border:** #E4E7E4 · Cards and dividers
+* **Line System:** #F2F0F0 · Visual lines used by the Line System · 1px thickness · Remains subtle and visually secondary to the content
 
-## Brand Palette
+### Brand Palette
 
 #2C6B3D
 
@@ -214,11 +203,11 @@ Whitespace is an intentional part of the composition. It should not be filled or
 
 #5CA469
 
-Usage Principle
+### Usage Principle
 
 The website remains predominantly neutral and light. Brand colors are used minimally and intentionally as accents rather than as dominant colors that fill the interface.
 
-CTA
+### CTA
 
 The Primary CTA remains dark / near-black. There is no need to make all action buttons green.
 
@@ -228,17 +217,17 @@ Neutral colors lead the design; green reinforces the brand identity.
 
 ## Background System
 
-Default Behavior
+### Default Behavior
 
 By default, visual separation and rhythm between Sections are created by alternating between the two background colors defined in the Color System: Background and Background Soft.
 
 Adjacent Sections generally do not use the same background color, ensuring that the transition between them remains clear without requiring a Border or additional separator.
 
-Exceptions
+### Exceptions
 
 The alternating pattern may be overridden when a Section uses a Background Treatment that already creates clear visual separation from the adjacent Section.
 
-Hero Gradient
+### Hero Gradient
 
 The Hero is a consistent exception to the system and uses a dedicated Gradient treatment toward its lower portion.
 
@@ -248,7 +237,7 @@ The Gradient should remain subtle and should not compete with the headline, cont
 
 Because the Gradient creates its own visual separation, the Section immediately following the Hero may use Background even when the Hero's base color is also Background.
 
-Responsive Behavior
+### Responsive Behavior
 
 Background Treatments and Gradients are preserved across all Breakpoints as part of the website's visual language.
 
@@ -256,13 +245,13 @@ Their dimensions, positioning, and proportions may be adjusted according to the 
 
 ## Buttons & CTAs
 
-General Principle
+### General Principle
 
 The website’s action system remains simple and restrained. Not every action needs to appear as a full button.
 
 The Primary CTA is reserved for the most important actions, while secondary actions generally use the Text Link / Secondary Action.
 
-Primary CTA
+### Primary CTA
 
 The Primary CTA uses the Primary CTA defined in the Component Library.
 
@@ -272,15 +261,15 @@ Used for the website’s primary conversion actions.
 
 Appears consistently in areas such as the Header, Hero, How It Works, and Final CTA.
 
-Secondary Actions
+### Secondary Actions
 
 Secondary actions use the Text Link / Secondary Action defined in the Component Library.
 
-Component Details
+### Component Details
 
 Typography, dimensions, spacing, colors, states, responsive behavior, accessibility, and customization are defined in the Component Library.
 
-Hierarchy Principle
+### Hierarchy Principle
 
 Within each area, the distinction between the primary and secondary action should be clear.
 
@@ -288,13 +277,13 @@ Do not add buttons simply to fill the composition.
 
 ## Cards & Surfaces
 
-General Principle
+### General Principle
 
 Cards are used only when there is a genuine need to group information or visually separate an element from its surroundings.
 
 Do not place content inside a Card simply to introduce an additional design element.
 
-Visual Direction
+### Visual Direction
 
 Use a white or subtle neutral background.
 
@@ -310,13 +299,13 @@ Preserve ample whitespace within the Card.
 
 There is no need to use a distinct Border, Shadow, and Background simultaneously when one treatment is sufficient to create the necessary separation.
 
-Composition
+### Composition
 
 Cards do not need to be identical in size.
 
 When appropriate for the content, different sizes and proportions may be used to create a less generic composition — as defined for the statistics composition in the Local / Area Section.
 
-Hierarchy
+### Hierarchy
 
 The content is the focal point of the Card. The Card itself should remain visually quiet and should not become the dominant element.
 
@@ -324,11 +313,11 @@ Where the same separation can be achieved using whitespace or a subtle line alon
 
 ## Borders, Shadows & Radius
 
-General Principle
+### General Principle
 
 Borders, Shadows, and rounded corners are used only to create subtle separation and hierarchy. They should not become dominant visual elements.
 
-Borders
+### Borders
 
 Use thin, subtle lines.
 
@@ -338,7 +327,7 @@ Default Border: 1px solid #E4E7E4.
 
 Prefer a subtle Border over a Shadow when the Border alone provides sufficient separation.
 
-Shadows
+### Shadows
 
 Use Shadows sparingly.
 
@@ -350,7 +339,7 @@ Shadows may be used on floating Cards such as the Local Trust Card.
 
 Not every Card requires a Shadow.
 
-Border Radius
+### Border Radius
 
 Use moderately rounded corners consistently.
 
@@ -360,35 +349,31 @@ Avoid highly rounded corners as the default treatment.
 
 Small elements such as Labels may use a larger Radius or Pill treatment when appropriate.
 
-Border Radius Scale
+### Border Radius Scale
 
-| Token | Value | Typical Use |
-| --- | --- | --- |
-| Small | 8px | Buttons and compact elements |
-| Medium | 12px | Cards, Images, and Surfaces |
-| Large | 16px | Large elements or more prominent visual treatments |
-| Pill | 999px | Labels and Pill-shaped elements |
+* **Small:** 8px · Buttons and compact elements
+* **Medium:** 12px · Cards, Images, and Surfaces
+* **Large:** 16px · Large elements or more prominent visual treatments
+* **Pill:** 999px · Labels and pill-shaped elements
 
-Shadow Scale
+### Shadow Scale
 
-| Token | Value | Typical Use |
-| --- | --- | --- |
-| Subtle | 0 2px 8px rgba(16, 17, 20, 0.06) | Sticky Header, subtle separation |
-| Floating | 0 8px 24px rgba(16, 17, 20, 0.08) | Floating Cards such as the Local Trust Card |
+* **Subtle:** 0 2px 8px rgba(16, 17, 20, 0.06) · Sticky Header, subtle separation
+* **Floating:** 0 8px 24px rgba(16, 17, 20, 0.08) · Floating Cards such as the Local Trust Card
 
 The default treatment for Cards is no Shadow. A Shadow should only be used when the Component or composition requires additional separation or a sense of elevation.
 
-Guiding Principle
+### Guiding Principle
 
 When a Border, Shadow, or Radius does not contribute clear hierarchy or meaning, it is not necessary.
 
 ## Images & Media
 
-General Principle
+### General Principle
 
 Media is intended to support the message and composition rather than compete with the headline or primary content. Prefer a restrained number of visual elements, each with a clear purpose.
 
-Placement & Grid
+### Placement & Grid
 
 Do not use media simply to fill empty space.
 
@@ -396,7 +381,7 @@ Text and media generally remain in separate areas and do not overlap.
 
 Text and media may overlap only in exceptional cases where the overlap is an intentional part of the composition and does not compromise readability.
 
-Images
+### Images
 
 Prefer authentic images relevant to the business and local area over generic Stock imagery.
 
@@ -408,7 +393,7 @@ Asymmetric compositions may be used when they add visual interest.
 
 Images remain visually secondary to the typography and primary message.
 
-Graphics & Maps
+### Graphics & Maps
 
 Graphics should remain simple and clean.
 
@@ -416,81 +401,68 @@ Maps are used to communicate local presence rather than as purely decorative ele
 
 Avoid placing excessive amounts of information within the graphic itself.
 
-Image Behavior
+### Image Behavior
 
 Images preserve their defined Aspect Ratio and fill their media area using object-fit: cover without distortion.
 
 When the complete image needs to remain visible, alternative behavior may be defined at the Component or Section level.
 
-Guiding Principle
+### Guiding Principle
 
 If media does not add information, credibility, local context, or compositional value, it should not be added.
 
 ## Icons
 
-General Principle
+### General Principle
 
 Icons are used to support content and enable quick understanding, not as decoration. Their use should remain restrained and consistent.
 
-Style
+### Style
 
-Use simple, minimal icons.
+- Use simple, minimal icons.
+- Maintain a consistent icon style throughout the website.
+- Line Icons are the default.
+- Maintain consistent stroke weight.
+- Avoid unnecessary detail or complexity.
+- Brand Green may be used as a subtle accent.
+- Icons do not need to be placed inside a circle or Card by default.
 
-Maintain a consistent icon style throughout the website.
+### Icon Size Scale
 
-Line Icons are the default.
-
-Maintain consistent stroke weight.
-
-Avoid unnecessary detail or complexity.
-
-Brand Green may be used as a subtle accent.
-
-Icons do not need to be placed inside a circle or Card by default.
-
-Icon Size Scale
-
-| Token | Size | Typical Use |
-| --- | --- | --- |
-| Small | 16px | Labels, metadata, and compact elements |
-| Medium | 20px | Default icon size |
-| Large | 24px | Icons requiring greater visual presence |
+* **Small:** 16px · Labels, metadata, and compact elements
+* **Medium:** 20px · Default icon size
+* **Large:** 24px · Icons requiring greater visual presence
 
 The default icon size is 20px. Alternative sizes are defined at the Component or Section level when required.
 
 Icon sizes do not change automatically between Breakpoints.
 
-Guiding Principle
+### Guiding Principle
 
 If the text communicates the same meaning just as clearly without the icon, the icon is not necessary.
 
 ## Responsive System
 
-Breakpoints
+### Breakpoints
 
-| Device | Viewport | Grid |
-| --- | --- | --- |
-| Mobile | Less than 768px | 4 columns / 16px gutter |
-| Tablet | 768px to 1199px | 8 columns / 24px gutter |
-| Desktop | 1200px and above | 12 columns / 24px gutter |
+* **Mobile:** Less than 768px · 4 columns · 16px gutter
+* **Tablet:** 768px to 1199px · 8 columns · 24px gutter
+* **Desktop:** 1200px and above · 12 columns · 24px gutter
 
 1440px is the Max Page Width and is not a Breakpoint.
 
-Minimum Layout Width
+### Minimum Layout Width
 
 The minimum supported layout width is 320px. Below 320px, the layout does not continue to compress and horizontal scrolling is allowed.
 
-Content Container
+### Content Container
 
-Max width: 1248px
+- Max width: 1248px
+- Width: fluid
+- Minimum horizontal page padding: 16px
+- Alignment: centered
 
-Width: fluid
-
-Minimum horizontal page padding: 16px
-
-Alignment: centered
-
-Responsive Behavior
+### Responsive Behavior
 
 The Layout remains fluid within each Breakpoint.
 
