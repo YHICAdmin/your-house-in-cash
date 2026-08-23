@@ -164,6 +164,14 @@ The Line System is a visual layer only and does not occupy space within the Layo
 
 The distance between content and the outer System Lines may be overridden at the Component level when required by the composition.
 
+Layering
+
+The Line System sits above Section backgrounds and Background Treatments, including gradients, so the lines remain continuously visible throughout the page.
+
+All foreground content renders above the Line System, including text, images, cards, buttons, icons, and separators.
+
+The Line System is non-interactive and must not intercept pointer events.
+
 Spacing System
 
 | Token | Spacing | Typical Use |
