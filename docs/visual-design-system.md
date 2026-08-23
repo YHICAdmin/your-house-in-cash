@@ -54,9 +54,9 @@ Used for primary CTA buttons throughout the website.
 
 Responsive Typography
 
-Typography sizes are fixed at each Breakpoint according to the values defined in the Typography table. Do not use fluid scaling or clamp() between Breakpoints.
+Typography uses the documented fixed values at each Breakpoint. There is no Fluid Scaling or clamp() between Breakpoints.
 
-Specific adjustments may be made during implementation when required by the composition.
+Any exception must be explicitly defined and approved at the Component or Section level. Implementation should not introduce additional typography values independently.
 
 General Principle
 
