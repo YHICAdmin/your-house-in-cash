@@ -36,60 +36,48 @@ The Header consists of three primary areas:
 
 ##### Sticky & Scroll Behavior
 
-- The Header remains sticky while scrolling.
 - There is no additional trigger and no hide/reveal behavior while scrolling.
 - In the default state, the Header uses the bottom border defined below and no shadow.
 - In the sticky state, the bottom border is removed and replaced by the global Subtle Shadow.
 - Scrolled State Trigger: activates as soon as the page is scrolled (`scrollY > 0`).
+Opening the Menu does not change the Header’s border or shadow state.
 
 #### Technical Specifications
 
 ##### Header
 
-| Property | Desktop | Tablet | Mobile |
-| --- | --- | --- | --- |
-| Height | 80px | 72px | 64px |
-| Position | sticky | sticky | sticky |
-| Top | 0 | 0 | 0 |
-| Background | #FFFFFF | #FFFFFF | #FFFFFF |
-| Bottom Border | 1px solid #F0F2F0 | 1px solid #F0F2F0 | 1px solid #F0F2F0 |
-| Sticky Shadow | Subtle Shadow | Subtle Shadow | Subtle Shadow |
+- Height:
+  - Desktop: 80px
+  - Tablet: 72px
+  - Mobile: 64px
+- Position: sticky
+- Top: 0
+- Background: #FFFFFF
+- Default Bottom Border: 1px solid #F2F0F0
+- Sticky Shadow: Subtle Shadow
+- Vertical Alignment: center
 
 ##### Logo
 
-| Property | Desktop | Tablet | Mobile |
-| --- | --- | --- | --- |
-| Height | 56px | 48px | 44px |
-| Width | auto | auto | auto |
-| Aspect Ratio | Preserved | Preserved | Preserved |
+- Height:
+  - Desktop: 56px
+  - Tablet: 48px
+  - Mobile: 44px
+- Width: auto
+- Aspect Ratio: preserved
 
 ##### Navigation
 
-| Property | Desktop | Tablet | Mobile |
-| --- | --- | --- | --- |
-| Typography | Body Small | — | — |
-| Gap | 24px | — | — |
-
-##### Hamburger
-
-| Property | Desktop | Tablet | Mobile |
-| --- | --- | --- | --- |
-| Icon | — | 3 horizontal lines | 3 horizontal lines |
-| Icon Size | — | 24px | 24px |
-| Hit Area | — | 40 × 40px | 40 × 40px |
-| Background | — | transparent | transparent |
-| Border | — | none | none |
-| Color | — | #101114 | #101114 |
-| Gap from Primary CTA | — | 16px | 16px |
+- Typography:
+  - Desktop: Body Small
+  - Tablet: —
+  - Mobile: —
+- Gap:
+  - Desktop: 24px
+  - Tablet: —
+  - Mobile: —
 
 #### Responsive Behavior
-
-| Element | Desktop | Tablet | Mobile |
-| --- | --- | --- | --- |
-| Logo | Left | Left | Left |
-| Navigation | Full | Hidden | Hidden |
-| Primary CTA | Right | Right | Right |
-| Hamburger | Hidden | Right | Right |
 
 - On Tablet and Mobile, the Primary CTA and Hamburger are grouped on the right.
 - The Primary CTA remains visible and does not move inside the Hamburger Menu.
@@ -98,29 +86,27 @@ The Header consists of three primary areas:
 
 - Header navigation and controls must remain keyboard accessible.
 - Interactive controls use their appropriate semantic elements.
+- Menu transitions are disabled when prefers-reduced-motion: reduce is enabled.
 
 #### Line System
 
 - The outer system lines bound the Header content according to the global definition.
 - The internal system lines remain visible but do not dictate the placement of the Logo, Navigation, or Primary CTA.
+- The global Line System remains visible over the open Menu background.
 
 #### Menu
 
 ##### Open Menu Behavior
 
-- Available on Tablet and Mobile only.
-- Opens directly below the Header with no gap.
-- The Header remains visible while the menu is open.
-- The menu opens as a full-width, full-height navigation panel that spans the viewport width and fills the remaining viewport height below the Header.
+- The menu fills the entire screen below the Header.
 - The panel uses a solid white background.
-- Navigation items are displayed vertically in full-width rows.
 - The Hamburger icon changes to a Close icon while the menu is open.
-- The Primary CTA remains visible in the Header and is not duplicated inside the menu unless explicitly specified later.
 - The panel closes when:
   - the Close button is pressed;
   - a navigation item is selected;
   - the user presses `Escape`.
 - The panel should feel spacious and minimal, similar in behavior and hierarchy to the provided Stripe reference, without copying Stripe-specific content or styling.
+- If the viewport changes to Desktop while the Menu is open, the Menu closes and its state resets.
 
 ##### Navigation Rows
 
@@ -132,13 +118,12 @@ The Header consists of three primary areas:
 - Divider: 1px solid #E4E7E4 between navigation rows.
 - No individual item background, Card treatment, or Radius.
 - The entire row is clickable, not only the text.
-- Hover / Focus: text changes to Brand Green.
+- Hover / Focus-visible: text changes to Brand Green.
 
 ##### Menu Scroll Behavior
 
 - While the navigation panel is open, page scrolling is locked.
 - If the navigation content exceeds the available viewport height, the panel itself becomes vertically scrollable.
-- The Header remains fixed/sticky and visible above the scrollable panel.
 
 ##### Menu Focus Behavior
 
@@ -152,11 +137,25 @@ The Header consists of three primary areas:
 ##### Menu Transition
 
 - Use a short, subtle open/close transition.
-- Animate opacity and a small vertical offset only.
+- Animate opacity and a small downward vertical offset of 8px only.
 - Open duration: approximately 200ms with `ease-out`.
 - Close duration: approximately 180ms with `ease-in`.
 - Do not animate individual navigation items separately.
 - Do not use side-slide, scale, or exaggerated motion.
+
+##### Hamburger / Close Control
+
+- Closed state: 3 horizontal lines.
+- Open state: X.
+- Icon size: 24px.
+- Hit area: 40 × 40px.
+- Background: transparent.
+- Border: none.
+- Color: #101114.
+- Gap from Primary CTA: 16px.
+- Hover: icon color changes to #2C6B3D.
+- Focus-visible: 2px solid #2C6B3D outline with 3px offset.
+- Active: no additional visual treatment.
 
 ### Footer
 
