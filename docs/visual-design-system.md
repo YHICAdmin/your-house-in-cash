@@ -1,6 +1,6 @@
 ## Typography
 
-Font Family
+### Font Family
 
 The primary typeface for the website is Inter.
 
@@ -8,19 +8,18 @@ Font Loading: Inter via next/font/google. Include only the font weights defined 
 
 The website uses a single font family consistently throughout. Typographic hierarchy is created through font size, font weight, line height, and letter spacing, rather than by combining multiple typefaces.
 
-| Style | Desktop | Tablet | Mobile | Weight | Line Height |
-| --- | --- | --- | --- | --- | --- |
-| Display / H1 | 72px | 60px | 44px | 600 | 1.05 |
-| H2 | 52px | 44px | 36px | 600 | 1.10 |
-| H3 | 28px | 26px | 24px | 600 | 1.20 |
-| Body Large | 20px | 19px | 18px | 400 | 1.50 |
-| Body | 16px | 16px | 16px | 400 | 1.60 |
-| Body Small | 14px | 14px | 14px | 400 | 1.50 |
-| Label | 13px | 13px | 13px | 600 | 1.30 |
-| Button | 16px | 16px | 16px | 600 | 1.00 |
-| Caption | 13px | 13px | 13px | 400 | 1.40 |
+* **Display / H1:** Desktop 72px · Tablet 60px · Mobile 44px · Weight 600 · Line Height 1.05
+* **H2:** Desktop 52px · Tablet 44px · Mobile 36px · Weight 600 · Line Height 1.10
+* **H3:** Desktop 28px · Tablet 26px · Mobile 24px · Weight 600 · Line Height 1.20
+* **Body Large:** Desktop 20px · Tablet 19px · Mobile 18px · Weight 400 · Line Height 1.50
+* **Body:** Desktop 16px · Tablet 16px · Mobile 16px · Weight 400 · Line Height 1.60
+* **Body Small:** Desktop 14px · Tablet 14px · Mobile 14px · Weight 400 · Line Height 1.50
+* **Label:** Desktop 13px · Tablet 13px · Mobile 13px · Weight 600 · Line Height 1.30
+* **Button:** Desktop 16px · Tablet 16px · Mobile 16px · Weight 600 · Line Height 1.00
+* **Caption:** Desktop 13px · Tablet 13px · Mobile 13px · Weight 400 · Line Height 1.40
 
-Headlines
+
+### Headlines
 
 Headlines use 600 font weight.
 
@@ -30,13 +29,13 @@ Large headlines use a relatively tight line height to maintain a modern, compact
 
 Headlines are one of the primary elements used to establish the page's visual hierarchy.
 
-Section Label
+### Section Label
 
 The Section Label is used to identify, contextualize, or categorize a Section or content area and always remains visually secondary to the primary headline.
 
 The website uses the Section Label defined in the Component Library, which defines its typography, spacing, icon behavior, responsive behavior, and customization options.
 
-Body Copy
+### Body Copy
 
 Standard body text: 16px.
 
@@ -46,19 +45,19 @@ Secondary information: 14px.
 
 Maintain generous line height for readability and reasonable line lengths.
 
-Buttons
+### Buttons
 
 16px / 600.
 
 Used for primary CTA buttons throughout the website.
 
-Responsive Typography
+### Responsive Typography
 
 Typography uses the documented fixed values at each Breakpoint. There is no Fluid Scaling or clamp() between Breakpoints.
 
 Any exception must be explicitly defined and approved at the Component or Section level. Implementation should not introduce additional typography values independently.
 
-General Principle
+### General Principle
 
 Typography should feel clean, modern, and direct. Avoid creating unnecessary typographic variations. A restrained set of recurring styles should be used consistently throughout all Sections.
 

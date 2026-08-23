@@ -1,6 +1,6 @@
 # Visual Direction
 
-### Element Restraint / Visual Simplicity ###
+*** Element Restraint / Visual Simplicity ***
 
 Each section should be built around a limited number of elements, each serving a clear purpose. Do not add cards, icons, badges, text, statistics, or decorative elements simply to fill empty space.
 
@@ -8,9 +8,11 @@ The default structure is: label, headline, supporting copy, CTA when needed, and
 
 Whitespace is an intentional part of the design and should not be filled unnecessarily. Each section should have one clear visual concept.
 
-### Note ###
+*** Note ***
 
 Mockups and visual references serve as design guidance and are not Pixel-Perfect implementation specifications. In the event of a conflict between a concept image and the Website Specification or Visual Design System, the written documentation is the source of truth.
+
+## Components
 
 ### Header
 
@@ -159,11 +161,11 @@ Opening the Menu does not change the Header’s border or shadow state.
 
 ### Footer
 
-**Purpose**
+#### Purpose
 
 Provide secondary navigation, company information, legal information, and contact details in a clear and unobtrusive way, while creating a structured conclusion to the page.
 
-**Structure**
+#### Structure
 
 The Footer is divided into several content areas:
 
@@ -176,7 +178,7 @@ The Footer is divided into several content areas:
 
 A separate bottom row contains the copyright notice and any additional secondary information.
 
-**Visual Direction**
+#### Visual Direction
 
 - Clean, minimal, and spacious.
 - Maintain a clear but understated typographic hierarchy.
@@ -185,21 +187,21 @@ A separate bottom row contains the copyright notice and any additional secondary
 - Preserve generous whitespace.
 - Do not add elements solely to fill available space.
 
-**Behavior**
+#### Behavior
 
 No specific interactive behavior is currently defined beyond standard link behavior.
 
-**Technical Specifications**
+#### Technical Specifications
 
 No Footer-specific technical specifications are currently defined. Global typography, spacing, color, container, and component rules apply unless explicitly overridden.
 
-**Responsive Behavior**
+#### Responsive Behavior
 
 The Footer should adapt its multi-column structure to smaller viewports while preserving clear content grouping and hierarchy.
 
 The exact Tablet and Mobile layout is not currently specified.
 
-**Line System**
+#### Line System
 
 - The outer System Lines bound the Footer content, using the globally defined content padding.
 - On Desktop, the four visual areas may be used as the basis for organizing **Company / Navigation / Legal / Contact**.
@@ -240,11 +242,11 @@ Sections may use different compositions as long as a cohesive visual language is
 
 ### Hero
 
-**Purpose**
+#### Purpose
 
 Immediately communicate the location, offer, and credibility of the business, while providing the seller with a clear path to begin the conversion process.
 
-**Structure**
+#### Structure
 
 - Section Label: **Location**, with Location icon.
 - Primary headline.
@@ -255,7 +257,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 - Local media composition using a limited number of images featuring properties, Cleveland, and the surrounding area.
 - A personal trust element that reinforces credibility and local presence.
 
-**Visual Direction**
+#### Visual Direction
 
 - The primary headline is the main visual focal point.
 - The Section Label is positioned above the primary headline.
@@ -264,16 +266,16 @@ Immediately communicate the location, offer, and credibility of the business, wh
 - The three key benefits are compact and displayed in a horizontal row.
 - Use generous whitespace.
 
-**Behavior**
+#### Behavior
 
 - The Primary CTA leads to the form flow used to collect seller and property information.
 - The Header CTA leads to the same conversion flow.
 
-**Technical Specifications**
+#### Technical Specifications
 
 No additional Hero-specific technical specifications are currently defined. Global typography, spacing, color, component, and layout rules apply unless explicitly overridden below.
 
-**Responsive Behavior**
+#### Responsive Behavior
 
 No Hero-specific Tablet or Mobile composition is currently defined.
 
@@ -281,13 +283,13 @@ The Hero should adapt to smaller viewports while preserving the hierarchy betwee
 
 Exact stacking, ordering, and media proportions for Tablet and Mobile remain to be defined.
 
-**Line System**
+#### Line System
 
 - The left content area maintains the globally defined content padding from the left outer System Line.
 - Internal System Lines serve as alignment axes but do not constrain the composition.
 - The image composition on the right extends slightly beyond the right outer System Line to create a more asymmetric, distinctive, and less generic composition.
 
-**Hero Media Composition**
+#### Hero Media Composition
 
 - Use an asymmetric composition consisting of three rectangular images with different dimensions and aspect ratios.
 - The **left image** is wide and horizontal and is positioned slightly lower than the right image.
@@ -302,7 +304,7 @@ Exact stacking, ordering, and media proportions for Tablet and Mobile remain to 
 - The Local Trust Card and the three images should read as a single media unit without forming a symmetrical grid or rigid rectangular block.
 - The overall composition should feel **balanced, asymmetric, and editorial**, rather than like a collection of uniform cards.
 
-**Background Gradient**
+#### Background Gradient
 
 - The Hero begins with a white background and gradually transitions into a subtle green gradient toward the bottom.
 - The gradient spans the full viewport width and is not constrained by the Line System.
@@ -312,13 +314,13 @@ Exact stacking, ordering, and media proportions for Tablet and Mobile remain to 
 
 ### Situations — Situations We Can Help With
 
-**Purpose**
+#### Purpose
 
 Allow sellers to quickly identify the situation that best matches their circumstances and understand that we know how to handle it.
 
 The section also provides entry points to dedicated content and SEO pages for each situation.
 
-**Structure**
+#### Structure
 
 - Section Label: **We Help With**, with House icon.
 - Headline: **What brings you here?**
@@ -331,7 +333,7 @@ The section also provides entry points to dedicated content and SEO pages for ea
   - CTA linking to the dedicated situation page.
 - **Contact Us** option for users who are unsure which situation applies to them.
 
-**Visual Direction**
+#### Visual Direction
 
 - The headline and supporting copy appear above the main content area rather than inside it.
 - The Section Label is positioned above the primary headline.
@@ -341,24 +343,24 @@ The section also provides entry points to dedicated content and SEO pages for ea
 - The active situation receives a subtle visual distinction.
 - The image supports the selected situation but should not become the dominant visual element.
 
-**Behavior**
+#### Behavior
 
 - Selecting a situation on the left updates the dynamic content area on the right.
 - Each situation can link to its own dedicated SEO page.
 - **Foreclosure** may be used as the default selected situation.
 - All primary situation options should remain visible without requiring a carousel.
 
-**Technical Specifications**
+#### Technical Specifications
 
 No additional Situations-specific technical specifications are currently defined. Global typography, spacing, color, component, and layout rules apply unless explicitly overridden.
 
-**Responsive Behavior**
+#### Responsive Behavior
 
 No specific Tablet or Mobile composition is currently defined.
 
 The section should preserve access to all primary situations and the relationship between the Situation Selector and the selected content. Exact stacking, ordering, and interaction behavior on smaller viewports remain to be defined.
 
-**Line System**
+#### Line System
 
 - The outer System Lines bound the main content area.
 - On Desktop, the **second System Line from the left** also serves as the divider between the Situation Selector and the dynamic content area.
@@ -367,13 +369,13 @@ The section should preserve access to all primary situations and the relationshi
 
 ### Reviews
 
-**Purpose**
+#### Purpose
 
 Strengthen trust and social proof through authentic reviews from sellers who have worked with us.
 
 Demonstrate that the business is local, credible, and has already helped homeowners throughout the Cleveland area.
 
-**Structure**
+#### Structure
 
 - Section Label: **Customer Reviews**, with Star icon.
 - Headline: **What Cleveland homeowners say**
@@ -386,7 +388,7 @@ Demonstrate that the business is local, credible, and has already helped homeown
 - Link to view additional reviews.
 - Short trust message at the bottom of the section.
 
-**Visual Direction**
+#### Visual Direction
 
 - Keep the section clean, minimal, and spacious.
 - Position the Section Label above the primary headline.
@@ -398,7 +400,7 @@ Demonstrate that the business is local, credible, and has already helped homeown
 - The carousel extends toward the side to reveal part of the next card.
 - Preserve generous whitespace around the content.
 
-**Behavior**
+#### Behavior
 
 - Reviews are displayed in a horizontal carousel.
 - On Desktop, multiple review cards are visible simultaneously.
@@ -408,17 +410,17 @@ Demonstrate that the business is local, credible, and has already helped homeown
 - The **See more reviews on Google** link leads to the external Google reviews profile.
 - On Mobile, the number of visible cards adapts to the available viewport width.
 
-**Technical Specifications**
+#### Technical Specifications
 
 No additional Reviews-specific technical specifications are currently defined. Global typography, spacing, color, component, and layout rules apply unless explicitly overridden.
 
-**Responsive Behavior**
+#### Responsive Behavior
 
 - Desktop displays multiple review cards simultaneously.
 - Mobile adjusts the number of visible cards according to the available viewport width.
 - The exact Tablet behavior, card widths, number of visible cards, and carousel movement increments are not currently defined.
 
-**Line System**
+#### Line System
 
 - The outer System Lines bound the primary content area with the globally defined content padding.
 - The headline, supporting copy, and Google rating remain within the area defined by the outer System Lines.
@@ -426,11 +428,11 @@ No additional Reviews-specific technical specifications are currently defined. G
 
 ### How It Works
 
-**Purpose**
+#### Purpose
 
 Present the home-selling process as a simple, fast, and clear three-step process, while guiding the user toward starting the process.
 
-**Structure**
+#### Structure
 
 - Section Label: **HOW IT WORKS**, with Gear icon.
 - Headline: **Selling your house can be simple.**
@@ -442,7 +444,7 @@ Present the home-selling process as a simple, fast, and clear three-step process
 - Component: **Button / Primary**
 - Compact benefits row below the CTA.
 
-**Visual Direction**
+#### Visual Direction
 
 - Use an asymmetric composition rather than three identical cards.
 - The headline and supporting copy are positioned on the left as an independent content block.
@@ -458,21 +460,21 @@ Present the home-selling process as a simple, fast, and clear three-step process
 - Do not turn the three steps into three symmetrical, identical cards. The difference in size and visual weight between the steps is an intentional part of the composition.
 - Position the Section Label above the primary headline.
 
-**Behavior**
+#### Behavior
 
 - The Primary CTA leads the user into the conversion process.
 
-**Technical Specifications**
+#### Technical Specifications
 
 No additional How It Works-specific technical specifications are currently defined. Global typography, spacing, color, component, and layout rules apply unless explicitly overridden.
 
-**Responsive Behavior**
+#### Responsive Behavior
 
 No specific Tablet or Mobile composition is currently defined.
 
 The section should preserve the sequence and hierarchy of the three steps on smaller viewports. The exact stacking, positioning of the CTA and benefits, and treatment of the asymmetric step composition remain to be defined.
 
-**Line System**
+#### Line System
 
 - The main composition containing the headline and three process steps is not constrained by the internal System Lines.
 - The Benefits row is divided according to the four visual areas, with one Benefit in each area and appropriate padding from the outer System Lines.
@@ -480,7 +482,7 @@ The section should preserve the sequence and hierarchy of the three steps on sma
 
 ### Local / Area Section
 
-**Purpose**
+#### Purpose
 
 Create a meaningful local section that differentiates the individual Area Pages across the website.
 
@@ -493,7 +495,7 @@ Primary goals:
 - Highlight nearby cities and neighborhoods where we buy houses.
 - Create unique and meaningful local content for each Area Page.
 
-**Content**
+#### Content
 
 - Section Label: **Location**, with Location icon.
 - Large area-specific headline.
@@ -506,26 +508,26 @@ Primary goals:
 - Data sources.
 - Optional CTA at the end of the section.
 
-**Structure**
+#### Structure
 
 This is intentionally a relatively long and spacious section. Do not attempt to compress all content into a single viewport.
 
 The section uses a two-column composition, but neither column needs to be fully occupied at every point.
 
-**Left Column**
+##### Left Column
 
 - Introductory content.
 - Local map.
 - Local statistics.
 
-**Right Column**
+##### Right Column
 
 - Nearby cities / neighborhoods.
 - Local market familiarity content.
 
 Whitespace and intentionally unoccupied areas are part of the composition.
 
-**Visual Direction**
+#### Visual Direction
 
 - Use generous whitespace.
 - Keep the number of elements restrained.
@@ -534,18 +536,18 @@ Whitespace and intentionally unoccupied areas are part of the composition.
 - Position the Section Label above the primary headline.
 - Maintain the site's overall design language through consistent typography, border radius, spacing, and iconography.
 
-**Behavior**
+#### Behavior
 
 - Content changes according to the specific Area Page.
 - The **See all areas we buy in →** link leads to the complete list of areas where we buy houses.
 - Local statistics may vary between Area Pages according to what is relevant to each location.
 - The CTA at the end of the section is optional.
 
-**Technical Specifications**
+#### Technical Specifications
 
 No additional Local / Area Section-specific technical specifications are currently defined. Global typography, spacing, component, color, and layout rules apply unless explicitly overridden below.
 
-**Responsive Behavior**
+#### Responsive Behavior
 
 No specific Tablet or Mobile composition is currently defined.
 
@@ -553,20 +555,20 @@ The section should preserve the hierarchy and relationship between the introduct
 
 Exact column stacking, content ordering, map dimensions, and statistics composition for Tablet and Mobile remain to be defined.
 
-**Line System**
+#### Line System
 
 - The outer System Lines bound the content area.
 - The center System Line serves as the primary division between the left and right columns.
 - The two additional internal System Lines remain visible but do not dictate the positioning of elements within either column.
 
-**Local Map**
+#### Local Map
 
 - Appears only within the left column.
 - Remains relatively compact and does not dominate the section.
 - Shows the current area and relevant surrounding areas.
 - Uses a simple and understated visual treatment that supports the content rather than competing with it.
 
-**Nearby Areas**
+#### Nearby Areas
 
 Nearby cities and neighborhoods are presented visually rather than as a conventional text list.
 
@@ -575,7 +577,7 @@ Nearby cities and neighborhoods are presented visually rather than as a conventi
 
 **See all areas we buy in →**
 
-**Local Statistics**
+#### Local Statistics
 
 Display a small number of useful, area-specific data points in a format that is easy to scan and creates a distinct visual moment within the section.
 
@@ -596,7 +598,7 @@ The statistics use an asymmetric composition of blocks/cards with varying sizes 
 - Data sources appear discreetly below the statistics composition.
 - The specific data points may vary between Area Pages according to what is relevant to each location.
 
-**Local Market Content**
+#### Local Market Content
 
 A short editorial-style content block appears in the right column to reinforce familiarity with the local market.
 
@@ -609,11 +611,11 @@ The supporting copy should be specific to the individual area rather than generi
 
 ### FAQ
 
-**Purpose**
+#### Purpose
 
 Provide clear and quick answers to the main questions sellers may have, reduce uncertainty and objections, and help users understand the process without overloading the rest of the page with information.
 
-**Content**
+#### Content
 
 - Section Label: **FAQ**, no icon.
 - Headline: **Questions? We’ve got answers.**
@@ -621,7 +623,7 @@ Provide clear and quick answers to the main questions sellers may have, reduce u
 - **Contact us** link for users who did not find the answer they were looking for.
 - List of frequently asked questions.
 
-**Example Questions**
+##### Example Questions
 
 - How does the process work?
 - Do I need to make any repairs?
@@ -630,7 +632,7 @@ Provide clear and quick answers to the main questions sellers may have, reduce u
 - How do you determine your offer?
 - Am I obligated to accept the offer?
 
-**Structure**
+#### Structure
 
 - Two-column asymmetric layout.
 - Left column is relatively narrow and contains:
@@ -640,7 +642,7 @@ Provide clear and quick answers to the main questions sellers may have, reduce u
   - Contact us link.
 - The right column is wider and contains the Accordion.
 
-**Visual Direction**
+#### Visual Direction
 
 - Keep the section highly minimal and primarily driven by typography, whitespace, and subtle lines.
 - The Accordion should feel wide, clean, and visually light.
@@ -649,22 +651,22 @@ Provide clear and quick answers to the main questions sellers may have, reduce u
 - The FAQ should feel editorial rather than component-heavy.
 - Visual hierarchy should come primarily from typography, spacing, and the Accordion interaction rather than from cards or decorative UI.
 
-**Behavior**
+#### Behavior
 
 - Questions are displayed using the **Accordion** defined in the Component Library.
 - One question may be open by default.
 
-**Technical Specifications**
+#### Technical Specifications
 
 No additional FAQ-specific technical specifications are currently defined. Global typography, spacing, component, color, and layout rules apply unless explicitly overridden.
 
-**Responsive Behavior**
+#### Responsive Behavior
 
 No specific Tablet or Mobile composition is currently defined.
 
 The relationship between the content block and Accordion should remain clear on smaller viewports. Exact stacking, ordering, and Accordion width behavior remain to be defined.
 
-**Line System**
+#### Line System
 
 - The outer System Lines bound the content area using the globally defined content padding.
 - The center System Line serves as the primary division between the headline/content area and the Accordion.
@@ -672,13 +674,13 @@ The relationship between the content block and Accordion should remain clear on 
 
 ### Final CTA
 
-**Purpose**
+#### Purpose
 
 Conclude the page with a clear and simple conversion path.
 
 At this stage, the user has already received the necessary information throughout the page, so the section does not introduce new information. Instead, it focuses attention on the primary action — receiving an offer for their house.
 
-**Content**
+#### Content
 
 - Section Label: **Ready When You Are**, no icon.
 - Headline: **Ready to sell your Cleveland house?**
@@ -686,7 +688,7 @@ At this stage, the user has already received the necessary information throughou
 - Component: **Button / Primary**
 - Short reassurance row below the button, for example: **100% Free • No Obligation • Secure**
 
-**Structure**
+#### Structure
 
 - Section Label positioned above the primary headline.
 - Headline and supporting copy.
@@ -694,7 +696,7 @@ At this stage, the user has already received the necessary information throughou
 - Reassurance row positioned below the CTA.
 - Content is centered and presented as a single focused composition.
 
-**Visual Direction**
+#### Visual Direction
 
 - Keep the section simple and focused, using a minimal number of elements.
 - The headline is the primary visual focal point.
@@ -702,22 +704,22 @@ At this stage, the user has already received the necessary information throughou
 - Preserve generous whitespace around the content.
 - Do not add cards, statistics, or additional supporting elements.
 
-**Behavior**
+#### Behavior
 
 - The Primary CTA leads to the same **Seller Lead Form Flow** used by the Hero and Header CTAs.
 - On Area Pages, the headline and supporting content adapt to the current city / area.
 
-**Technical Specifications**
+#### Technical Specifications
 
 No additional Final CTA-specific technical specifications are currently defined. Global typography, spacing, component, color, and layout rules apply unless explicitly overridden.
 
-**Responsive Behavior**
+#### Responsive Behavior
 
 No specific Tablet or Mobile composition is currently defined.
 
 The centered hierarchy of the Section Label, headline, supporting copy, CTA, and reassurance row should be preserved across breakpoints.
 
-**Line System**
+#### Line System
 
 - The outer System Lines bound the content area using the globally defined content padding.
 - The centered content — headline, supporting copy, and CTA — is not constrained by the internal System Lines.
@@ -749,11 +751,11 @@ The goal is to provide users with information relevant to their specific situati
 
 ### Hero
 
-**Purpose**
+#### Purpose
 
 Immediately confirm that the user has reached a page relevant to their specific situation, establish relevance and trust, and encourage them to continue reading.
 
-**Content**
+#### Content
 
 - Section Label: **Situation Name**.
 - H1 specific to both the situation and the area.
@@ -761,14 +763,14 @@ Immediately confirm that the user has reached a page relevant to their specific 
 - One authentic image relevant to the situation.
 - No CTA within the Hero.
 
-**Structure**
+#### Structure
 
 - Simple, spacious two-column composition.
 - **Left:** Section Label, H1, and supporting copy.
 - **Right:** One primary image.
 - The Section Label is positioned above the primary headline.
 
-**Visual Direction**
+#### Visual Direction
 
 - The headline is the dominant element in the section.
 - The image is large and visually present, with a subtle corner radius.
@@ -776,29 +778,29 @@ Immediately confirm that the user has reached a page relevant to their specific 
 - Preserve generous whitespace.
 - Keep the overall composition simpler and more focused than the Area Page Hero.
 
-**Behavior**
+#### Behavior
 
 - The Hero does not include a direct action or form.
 - Content and imagery change according to the specific Situation Page.
 - The Header remains the site's global Header.
 
-**Technical Specifications**
+#### Technical Specifications
 
 No additional Situation Hero-specific technical specifications are currently defined. Global typography, spacing, component, color, and layout rules apply unless explicitly overridden below.
 
-**Responsive Behavior**
+#### Responsive Behavior
 
 No specific Tablet or Mobile composition is currently defined.
 
 The relationship and hierarchy between the text content and primary image should be preserved on smaller viewports. Exact stacking, ordering, and image proportions remain to be defined.
 
-**Line System**
+#### Line System
 
 - The outer System Lines bound the content area using the globally defined content padding.
 - The center System Line may serve as the division between the text area on the left and the image on the right.
 - The remaining internal System Lines stay visible but do not dictate the composition.
 
-**Background Gradient**
+#### Background Gradient
 
 - Most of the Hero remains on a white background.
 - A subtle, light gray-green gradient appears toward the bottom.
@@ -808,11 +810,11 @@ The relationship and hierarchy between the text content and primary image should
 
 ### Situation Content
 
-**Purpose**
+#### Purpose
 
 Present in-depth, situation-specific content in a clear and readable format, while allowing users to navigate quickly between the key questions and topics on the page.
 
-**Content**
+#### Content
 
 - Sidebar containing a list of questions / topics covered on the page.
 - Main content area containing a continuous sequence of questions and answers.
@@ -821,14 +823,14 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 - A small contact CTA appears at the bottom of the Sidebar.
 - The main content area does not use a fixed Section structure.
 
-**Structure**
+#### Structure
 
 - The section is divided into a narrow Sidebar and a wider main content area.
 - The Sidebar contains the page navigation and contact CTA.
 - The main content area contains the complete sequence of questions and answers.
 - Content elements such as images and callouts are incorporated only when justified by the content.
 
-**Visual Direction**
+#### Visual Direction
 
 - The section uses a white background.
 - The Sidebar is minimal and text-based, without circles or additional navigation indicators.
@@ -838,23 +840,23 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 - Maintain generous whitespace between questions.
 - Images and additional visual elements are included only when the content justifies them.
 
-**Behavior**
+#### Behavior
 
 - Each Sidebar item acts as an anchor to its corresponding question / topic.
 - On Desktop, the Sidebar remains sticky while the user scrolls through the Situation Content area.
 - The active Sidebar item receives subtle visual emphasis based on the user's current position within the page.
 
-**Technical Specifications**
+#### Technical Specifications
 
 No additional Situation Content-specific technical specifications are currently defined. Global typography, spacing, component, color, and layout rules apply unless explicitly overridden below.
 
-**Responsive Behavior**
+#### Responsive Behavior
 
 No specific Tablet or Mobile behavior is currently defined for the Sidebar navigation.
 
 The Desktop sticky Sidebar behavior applies only to Desktop. The exact navigation treatment, content ordering, and Sidebar behavior for Tablet and Mobile remain to be defined.
 
-**Line System**
+#### Line System
 
 - The five-line System remains visible throughout the section.
 - The left internal System Line integrates with the Sidebar and serves as a navigation indicator. At the active item, the relevant portion of the line changes to Brand Green.
@@ -864,47 +866,47 @@ The Desktop sticky Sidebar behavior applies only to Desktop. The exact navigatio
 
 ### Final CTA
 
-**Purpose**
+#### Purpose
 
 Conclude the Situation Page with a clear conversion point after the user has received the information relevant to their situation.
 
-**Content**
+#### Content
 
 - Short headline tailored to the specific situation.
 - Short supporting copy.
 - Primary CTA: **Get My Cash Offer**.
 - Short microcopy below the CTA when appropriate.
 
-**Structure**
+#### Structure
 
 - Headline and supporting copy.
 - Primary CTA.
 - Optional microcopy positioned below the CTA.
 - Content is presented as a single focused composition.
 
-**Visual Direction**
+#### Visual Direction
 
 - Keep the section simple and spacious with a strong visual hierarchy.
 - Create clear visual separation from the preceding Q&A content.
 - Do not add unnecessary cards or supporting elements.
 - The section may use a different background treatment in accordance with the **Background System**.
 
-**Behavior**
+#### Behavior
 
 - The Primary CTA leads to the offer process.
 - Content may change according to the specific situation of the page.
 
-**Technical Specifications**
+#### Technical Specifications
 
 No additional Situation Final CTA-specific technical specifications are currently defined. Global typography, spacing, component, color, and layout rules apply unless explicitly overridden.
 
-**Responsive Behavior**
+#### Responsive Behavior
 
 No specific Tablet or Mobile composition is currently defined.
 
 The hierarchy between the headline, supporting copy, CTA, and optional microcopy should be preserved across breakpoints.
 
-**Line System**
+#### Line System
 
 - Content remains within the two outer System Lines using the globally defined content padding.
 - The internal System Lines remain visible but are not required to dictate element alignment.
