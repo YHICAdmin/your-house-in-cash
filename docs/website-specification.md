@@ -111,7 +111,7 @@ The Header consists of three primary areas:
 - Available on Tablet and Mobile only.
 - Opens directly below the Header with no gap.
 - The Header remains visible while the menu is open.
-- The menu opens as a full-height navigation panel that fills the remaining viewport below the Header.
+- The menu opens as a full-width, full-height navigation panel that spans the viewport width and fills the remaining viewport height below the Header.
 - The panel uses a solid white background.
 - Navigation items are displayed vertically in full-width rows.
 - The Hamburger icon changes to a Close icon while the menu is open.
@@ -124,7 +124,7 @@ The Header consists of three primary areas:
 
 ##### Navigation Rows
 
-- Navigation items are displayed as full-width rows.
+- Navigation items are displayed vertically in rows aligned to the Header content area.
 - Typography: Inter / 16px / 600.
 - Text alignment: left.
 - Vertical padding: 24px.
