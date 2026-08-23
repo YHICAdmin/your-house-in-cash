@@ -186,7 +186,7 @@ Spacing System
 
 Spacing Scale
 
-All margin, padding, and gap values throughout the website are selected from the defined Spacing Scale.
+Margin, padding, and gap values should use the defined Spacing Scale by default. Explicit values defined at the Component or Section level may override the scale when required by the composition.
 
 Values are not assigned in advance to specific pairs of elements. Their usage is determined according to the individual Component and Layout requirements.
 
