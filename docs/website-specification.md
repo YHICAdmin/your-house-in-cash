@@ -14,11 +14,11 @@ Mockups and visual references serve as design guidance and are not Pixel-Perfect
 
 ### Header
 
-**Purpose**
+#### Purpose
 
 Provide clear, accessible navigation while keeping the primary conversion path available to the user at all times.
 
-**Structure**
+#### Structure
 
 The Header consists of three primary areas:
 
@@ -26,23 +26,25 @@ The Header consists of three primary areas:
 - Navigation — How It Works / Situations / Areas We Buy In / Reviews / FAQ / About Us.
 - Primary CTA — Get My Cash Offer, positioned on the right.
 
-**Visual Direction**
+#### Visual Direction
 
 - Quiet and minimal, with generous whitespace.
 - The Primary CTA is clear and accessible but does not compete with the page content.
 - Do not use a persistent Active Page Indicator in the primary navigation.
 
-**Behavior**
+#### Behavior
+
+##### Sticky & Scroll Behavior
 
 - The Header remains sticky while scrolling.
 - There is no additional trigger and no hide/reveal behavior while scrolling.
 - In the default state, the Header uses the bottom border defined below and no shadow.
 - In the sticky state, the bottom border is removed and replaced by the global Subtle Shadow.
-- Scrolled State Trigger: Activates as soon as the page is scrolled (scrollY > 0).
+- Scrolled State Trigger: activates as soon as the page is scrolled (`scrollY > 0`).
 
-**Technical Specifications**
+#### Technical Specifications
 
-**Header**
+##### Header
 
 | Property | Desktop | Tablet | Mobile |
 | --- | --- | --- | --- |
@@ -53,7 +55,7 @@ The Header consists of three primary areas:
 | Bottom Border | 1px solid #F0F2F0 | 1px solid #F0F2F0 | 1px solid #F0F2F0 |
 | Sticky Shadow | Subtle Shadow | Subtle Shadow | Subtle Shadow |
 
-**Logo**
+##### Logo
 
 | Property | Desktop | Tablet | Mobile |
 | --- | --- | --- | --- |
@@ -61,14 +63,14 @@ The Header consists of three primary areas:
 | Width | auto | auto | auto |
 | Aspect Ratio | Preserved | Preserved | Preserved |
 
-**Navigation**
+##### Navigation
 
 | Property | Desktop | Tablet | Mobile |
 | --- | --- | --- | --- |
 | Typography | Body Small | — | — |
 | Gap | 24px | — | — |
 
-**Hamburger**
+##### Hamburger
 
 | Property | Desktop | Tablet | Mobile |
 | --- | --- | --- | --- |
@@ -80,7 +82,7 @@ The Header consists of three primary areas:
 | Color | — | #101114 | #101114 |
 | Gap from Primary CTA | — | 16px | 16px |
 
-**Responsive Behavior**
+#### Responsive Behavior
 
 | Element | Desktop | Tablet | Mobile |
 | --- | --- | --- | --- |
@@ -92,12 +94,19 @@ The Header consists of three primary areas:
 - On Tablet and Mobile, the Primary CTA and Hamburger are grouped on the right.
 - The Primary CTA remains visible and does not move inside the Hamburger Menu.
 
-**Line System**
+#### Accessibility
+
+- Header navigation and controls must remain keyboard accessible.
+- Interactive controls use their appropriate semantic elements.
+
+#### Line System
 
 - The outer system lines bound the Header content according to the global definition.
 - The internal system lines remain visible but do not dictate the placement of the Logo, Navigation, or Primary CTA.
 
-**Open Menu Behavior**
+#### Menu
+
+##### Open Menu Behavior
 
 - Available on Tablet and Mobile only.
 - Opens directly below the Header with no gap.
@@ -105,16 +114,49 @@ The Header consists of three primary areas:
 - The menu opens as a full-height navigation panel that fills the remaining viewport below the Header.
 - The panel uses a solid white background.
 - Navigation items are displayed vertically in full-width rows.
-- Subtle horizontal dividers may separate navigation items.
 - The Hamburger icon changes to a Close icon while the menu is open.
 - The Primary CTA remains visible in the Header and is not duplicated inside the menu unless explicitly specified later.
 - The panel closes when:
   - the Close button is pressed;
   - a navigation item is selected;
-  - the user presses Escape.
-- The Hamburger / Close button exposes its state using aria-expanded.
-- When closed with Escape, focus returns to the Hamburger / Close button.
+  - the user presses `Escape`.
 - The panel should feel spacious and minimal, similar in behavior and hierarchy to the provided Stripe reference, without copying Stripe-specific content or styling.
+
+##### Navigation Rows
+
+- Navigation items are displayed as full-width rows.
+- Typography: Inter / 16px / 600.
+- Text alignment: left.
+- Vertical padding: 24px.
+- Horizontal padding follows the Header / panel content alignment.
+- Divider: 1px solid #E4E7E4 between navigation rows.
+- No individual item background, Card treatment, or Radius.
+- The entire row is clickable, not only the text.
+- Hover / Focus: text changes to Brand Green.
+
+##### Menu Scroll Behavior
+
+- While the navigation panel is open, page scrolling is locked.
+- If the navigation content exceeds the available viewport height, the panel itself becomes vertically scrollable.
+- The Header remains fixed/sticky and visible above the scrollable panel.
+
+##### Menu Focus Behavior
+
+- When the navigation panel opens, focus moves to the first navigation item.
+- While the panel is open, keyboard focus is contained within the Header and navigation panel.
+- `Tab` and `Shift + Tab` cycle only through interactive elements within the open Header/menu state.
+- Pressing `Escape` closes the panel and returns focus to the Hamburger / Close control.
+- Content behind the open navigation panel is not keyboard-interactive while the panel is open.
+- The Hamburger / Close control exposes its state using `aria-expanded`.
+
+##### Menu Transition
+
+- Use a short, subtle open/close transition.
+- Animate opacity and a small vertical offset only.
+- Open duration: approximately 200ms with `ease-out`.
+- Close duration: approximately 180ms with `ease-in`.
+- Do not animate individual navigation items separately.
+- Do not use side-slide, scale, or exaggerated motion.
 
 ### Footer
 
