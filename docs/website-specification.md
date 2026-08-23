@@ -1,6 +1,6 @@
 # Visual Direction
 
-**Element Restraint / Visual Simplicity**
+### Element Restraint / Visual Simplicity ###
 
 Each section should be built around a limited number of elements, each serving a clear purpose. Do not add cards, icons, badges, text, statistics, or decorative elements simply to fill empty space.
 
@@ -8,7 +8,7 @@ The default structure is: label, headline, supporting copy, CTA when needed, and
 
 Whitespace is an intentional part of the design and should not be filled unnecessarily. Each section should have one clear visual concept.
 
-**Note**
+### Note ###
 
 Mockups and visual references serve as design guidance and are not Pixel-Perfect implementation specifications. In the event of a conflict between a concept image and the Website Specification or Visual Design System, the written documentation is the source of truth.
 
