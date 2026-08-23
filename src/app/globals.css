@@ -203,6 +203,7 @@
   .text-label {
     font-size: var(--text-label);
     font-weight: 600;
+    letter-spacing: 0.07em;
     line-height: var(--text-label--line-height);
   }
 
