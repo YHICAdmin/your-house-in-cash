@@ -102,17 +102,19 @@ The Header consists of three primary areas:
 - Available on Tablet and Mobile only.
 - Opens directly below the Header with no gap.
 - The Header remains visible while the menu is open.
-- The menu is a dropdown panel, not a full-screen overlay.
-- Navigation links are displayed vertically.
-- The Primary CTA remains in the Header and is not duplicated inside the menu.
-- Use a short, subtle open/close transition.
-- The menu closes when:
-  - the Hamburger button is pressed again;
+- The menu opens as a full-height navigation panel that fills the remaining viewport below the Header.
+- The panel uses a solid white background.
+- Navigation items are displayed vertically in full-width rows.
+- Subtle horizontal dividers may separate navigation items.
+- The Hamburger icon changes to a Close icon while the menu is open.
+- The Primary CTA remains visible in the Header and is not duplicated inside the menu unless explicitly specified later.
+- The panel closes when:
+  - the Close button is pressed;
   - a navigation item is selected;
-  - the user clicks outside the menu;
   - the user presses Escape.
-- The Hamburger button exposes its state using aria-expanded.
-- When closed with Escape, focus returns to the Hamburger button.
+- The Hamburger / Close button exposes its state using aria-expanded.
+- When closed with Escape, focus returns to the Hamburger / Close button.
+- The panel should feel spacious and minimal, similar in behavior and hierarchy to the provided Stripe reference, without copying Stripe-specific content or styling.
 
 ### Footer
 
