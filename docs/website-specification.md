@@ -125,7 +125,7 @@ The Header consists of three primary areas:
 ##### Navigation Rows
 
 - Navigation items are displayed vertically in rows aligned to the Header content area.
-- Typography: Inter / 16px / 600.
+- Typography: Inter / 16px / 600 / 1.5.
 - Text alignment: left.
 - Vertical padding: 24px.
 - Horizontal padding follows the Header / panel content alignment.
