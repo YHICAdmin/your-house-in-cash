@@ -469,6 +469,10 @@ Breakpoints
 
 1440px is the Max Page Width and is not a Breakpoint.
 
+Minimum Layout Width
+
+The minimum supported layout width is 320px. Below 320px, the layout does not continue to compress and horizontal scrolling is allowed.
+
 Content Container
 
 Max width: 1248px
