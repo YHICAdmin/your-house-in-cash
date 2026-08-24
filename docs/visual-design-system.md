@@ -253,11 +253,11 @@ Their dimensions, positioning, and proportions may be adjusted according to the 
 
 The website’s action system remains simple and restrained. Not every action needs to appear as a full button.
 
-The Primary CTA is reserved for the most important actions, while secondary actions generally use the Text Link / Secondary Action.
+The Primary CTA is reserved for the most important actions, while secondary actions generally use the Text Link.
 
 ### Primary CTA
 
-The Primary CTA uses the Primary CTA defined in the Component Library.
+The Primary CTA uses the Button defined in the Component Library.
 
 Remains dark / near-black by default.
 
@@ -267,7 +267,7 @@ Appears consistently in areas such as the Header, Hero, How It Works, and Final 
 
 ### Secondary Actions
 
-Secondary actions use the Text Link / Secondary Action defined in the Component Library.
+Secondary actions use the Text Link defined in the Component Library.
 
 ### Component Details
 

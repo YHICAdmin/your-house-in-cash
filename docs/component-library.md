@@ -1,8 +1,6 @@
 ## Button
 
-A generic Component for primary actions in the interface. It can use the appropriate semantic element depending on the action.
-
-### Primary
+A generic Component for actions displayed as a button. It can use the appropriate semantic element depending on the action.
 
 - Font: Inter / 16px / 600 / 1
 - Background: #101114
@@ -15,24 +13,24 @@ A generic Component for primary actions in the interface. It can use the appropr
 - Width: content by default
 - Border/Shadow: none
 
-#### States
+### States
 
 - Hover: background Brand Green Dark
-- Focus: 2px solid Brand Green Dark outline with 3px offset; displayed on :focus-visible; background unchanged
+- Focus: 2px solid Brand Green Dark outline with 3px offset; displayed on `:focus-visible`; background unchanged
 - Active: transform: scale(0.98); no additional color or shadow change
 - Disabled: opacity 40%; pointer interaction disabled; no hover or active states
 - Keyboard behavior follows the semantic role of the rendered element
 - Transition: background-color 150ms ease, transform 100ms ease
 
-#### Configurable
+### Configurable
 
 Label, icon, icon position, width and exceptional text-size overrides.
 
 Core visual properties — colors, typography, radius, internal spacing and interaction behavior — remain consistent between instances.
 
-### Text Link / Secondary Action
+## Text Link
 
-A secondary action that does not compete with the Primary Button.
+A generic Component for actions or navigation displayed as text rather than as a button.
 
 - Font: Inter / 16px / 600 / 1.5
 - Color: #101114
@@ -40,14 +38,20 @@ A secondary action that does not compete with the Primary Button.
 - Width: content
 - Icon gap: 8px
 
-#### States
+### States
 
-- Focus: 2px solid Brand Green Dark outline with 3px offset; displayed on :focus-visible
+- Focus: 2px solid Brand Green Dark outline with 3px offset; displayed on `:focus-visible`
 - Active: color #245A33; no transform or layout change
 - Transition: color 150ms ease
 - Hover: color Brand Green Dark
-- Responsive: content-width at every Breakpoint; does not automatically become a Button or full-width.
-- Configurable: label, destination/action, variant, icon and icon position.
+
+### Responsive
+
+Content-width at every Breakpoint; does not automatically become a Button or full-width.
+
+### Configurable
+
+Label, destination/action, icon and icon position.
 
 ## Section Label
 

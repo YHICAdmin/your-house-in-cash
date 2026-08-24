@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { LineSystem } from "./line-system";
-import { PrimaryButtonLink } from "@/components/ui/primary-button-link";
+import { Button } from "@/components/ui/button";
 import styles from "./site-header.module.css";
 
 const navigationItems = [
@@ -195,7 +195,7 @@ export function SiteHeader() {
 
         <div className={styles.actions}>
           <span className={styles.headerCta}>
-            <PrimaryButtonLink href="#">Get My Cash Offer</PrimaryButtonLink>
+            <Button href="#">Get My Cash Offer</Button>
           </span>
           <button
             ref={toggleRef}
@@ -235,7 +235,7 @@ export function SiteHeader() {
               ))}
             </nav>
             <div className={styles.menuCta}>
-              <PrimaryButtonLink href="#">Get My Cash Offer</PrimaryButtonLink>
+              <Button href="#">Get My Cash Offer</Button>
             </div>
           </div>
         </div>

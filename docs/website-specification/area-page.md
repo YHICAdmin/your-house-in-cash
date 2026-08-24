@@ -39,7 +39,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 - Section Label: **Location**, with Location icon.
 - Primary headline.
 - Supporting copy / subheadline.
-- Component: **Button / Primary**.
+- Component: **Button**.
 - Supporting microcopy: **“100% free. No obligation.”**
 - Three key benefits.
 - Local media composition using a limited number of images featuring properties, Cleveland, and the surrounding area.
@@ -229,7 +229,7 @@ Present the home-selling process as a simple, fast, and clear three-step process
   1. **Tell us about your house**
   2. **Get your cash offer**
   3. **Choose your closing date**
-- Component: **Button / Primary**
+- Component: **Button**
 - Compact benefits row below the CTA.
 
 #### Visual Direction
@@ -242,7 +242,7 @@ Present the home-selling process as a simple, fast, and clear three-step process
 - Subtle circular arrows connect the steps and clarify the direction of the process.
 - The numbers **01 / 02 / 03** act as prominent visual elements and are integrated with the icons.
 - Brand Green is used to emphasize the numbers, icons, and small details, while the cards themselves remain light and understated.
-- The Primary CTA is positioned below the step composition and uses the system's **Button / Primary** component.
+- The Primary CTA is positioned below the step composition and uses the system's **Button** component.
 - A compact horizontal benefits row appears below the CTA.
 - Preserve generous whitespace and a clear hierarchy between the headline, process steps, and CTA.
 - Do not turn the three steps into three symmetrical, identical cards. The difference in size and visual weight between the steps is an intentional part of the composition.
@@ -473,7 +473,7 @@ At this stage, the user has already received the necessary information throughou
 - Section Label: **Ready When You Are**, no icon.
 - Headline: **Ready to sell your Cleveland house?**
 - Short supporting copy.
-- Component: **Button / Primary**
+- Component: **Button**
 - Short reassurance row below the button, for example: **100% Free • No Obligation • Secure**
 
 #### Structure

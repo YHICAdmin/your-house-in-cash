@@ -85,7 +85,7 @@ Opening the Menu does not change the Header’s border or shadow state.
 
 - On Tablet, the Primary CTA and Hamburger are grouped on the right.
 - On Mobile, the Primary CTA is removed from the Header and the Hamburger remains on the right.
-- On Mobile, the Primary CTA appears centered at the bottom of the open Menu, using the standard Primary Button component and its content-based width.
+- On Mobile, the Primary CTA appears centered at the bottom of the open Menu, using the standard Button component and its content-based width.
 
 #### Accessibility
 

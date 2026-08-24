@@ -30,3 +30,16 @@
 .button:active {
   transform: scale(0.98);
 }
+
+.button:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.button:disabled:hover {
+  background: var(--color-text-primary);
+}
+
+.button:disabled:active {
+  transform: none;
+}
