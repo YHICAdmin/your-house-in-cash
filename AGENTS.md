@@ -6,9 +6,12 @@ The project documentation in `/docs` is the source of truth for product, UX, vis
 
 Relevant documents include:
 
-- Website Specification
 - Visual Design System
 - Component Library
+- Website Specification:
+  - `general.md` — global site-wide requirements
+  - `area-page.md` — Area Page-specific requirements
+  - `situation-page.md` — Situation Page-specific requirements
 
 Read the relevant project documentation before implementing UI that it governs.
 
