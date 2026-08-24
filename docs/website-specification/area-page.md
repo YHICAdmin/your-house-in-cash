@@ -377,7 +377,7 @@ The statistics use an asymmetric composition of blocks/cards with varying sizes 
 - Individual statistics may receive greater visual emphasis than others.
 - Do not make the cards identical in size or proportion.
 - Maintain a small and consistent gap between cards.
-- Cards use **bold, solid background colors** and may intentionally extend beyond the Brand Green and Neutral Palette.
+- Cards use **bold, solid background colors** and may intentionally extend beyond the Brand Greens and Neutral Palette.
 - Multiple colors may be used within the same statistics group, such as purple, turquoise, and different shades of blue.
 - The color treatment acts as an intentional **visual accent** within the page and does not require the same palette to be used elsewhere.
 - Text and icons on the cards should be light/white with high contrast.

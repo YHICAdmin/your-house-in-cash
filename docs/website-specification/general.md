@@ -122,7 +122,7 @@ Opening the Menu does not change the Header’s border or shadow state.
 - Divider: 1px solid #E4E7E4 between navigation rows.
 - No individual item background, Card treatment, or Radius.
 - The entire row is clickable, not only the text.
-- Hover / Focus-visible: text changes to Brand Green.
+- Hover / Focus-visible: text changes to Brand Green Dark.
 
 ##### Menu Scroll Behavior
 
@@ -157,8 +157,8 @@ Opening the Menu does not change the Header’s border or shadow state.
 - Border: none.
 - Color: #101114.
 - Gap from Primary CTA: 16px.
-- Hover: icon color changes to #2C6B3D.
-- Focus-visible: 2px solid #2C6B3D outline with 3px offset.
+- Hover: icon color changes to Brand Green Dark.
+- Focus-visible: 2px solid Brand Green Dark outline with 3px offset.
 - Active: no additional visual treatment.
 
 ### Footer

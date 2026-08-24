@@ -25,7 +25,8 @@ If project documentation conflicts with assumptions, framework defaults, or gene
 - Do not invent product, UX, visual-design, or architectural requirements.
 - Do not invent colors, spacing values, typography, shadows, radii, breakpoints, or other design-system values when they are defined in the project documentation.
 - Do not add UI elements, interactions, or functionality that were not requested or specified.
-- If a material requirement is ambiguous, ask before implementing it.
+- If a material requirement is ambiguous and cannot be reasonably resolved from the existing documentation, established project patterns, or conventional implementation defaults, ask before implementing it.
+- Do not treat minor implementation details or straightforward responsive adaptations as unresolved requirements when they can be derived without introducing a new design decision.
 - Keep implementations as simple as the requirements allow.
 - Do not modify unrelated parts of the codebase while implementing a task.
 

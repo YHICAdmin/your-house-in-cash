@@ -196,13 +196,11 @@ Whitespace is an intentional part of the composition. It should not be filled or
 * **Border:** #E4E7E4 · Cards and dividers
 * **Line System:** #ECEEF4 · Visual lines used by the Line System · 1px thickness · Outer lines are solid and internal lines are dashed · Remains subtle and visually secondary to the content
 
-### Brand Palette
+### Brand Greens
 
-#2C6B3D
-
-#3F8750
-
-#5CA469
+- Brand Green Dark: #2C6B3D
+- Brand Green: #4A8755
+- Brand Green Light: #EAF3EC
 
 ### Usage Principle
 

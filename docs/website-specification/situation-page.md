@@ -131,7 +131,7 @@ The Desktop sticky Sidebar behavior applies only to Desktop. The exact navigatio
 
 #### Line System
 
-- The five-line System remains visible throughout the section.
+- The responsive Line System remains visible throughout the section.
 - The left internal System Line integrates with the Sidebar and serves as a navigation indicator. At the active item, the relevant portion of the line changes to Brand Green.
 - The right outer System Line bounds the main content area.
 - Text content maintains the globally defined padding from the right outer System Line.

@@ -17,8 +17,8 @@ A generic Component for primary actions in the interface. It can use the appropr
 
 #### States
 
-- Hover: background #2C6B3D
-- Focus: 2px solid #2C6B3D outline with 3px offset; displayed on :focus-visible; background unchanged
+- Hover: background Brand Green Dark
+- Focus: 2px solid Brand Green Dark outline with 3px offset; displayed on :focus-visible; background unchanged
 - Active: transform: scale(0.98); no additional color or shadow change
 - Disabled: opacity 40%; pointer interaction disabled; no hover or active states
 - Keyboard behavior follows the semantic role of the rendered element
@@ -42,10 +42,10 @@ A secondary action that does not compete with the Primary Button.
 
 #### States
 
-- Focus: 2px solid #2C6B3D outline with 3px offset; displayed on :focus-visible
+- Focus: 2px solid Brand Green Dark outline with 3px offset; displayed on :focus-visible
 - Active: color #245A33; no transform or layout change
 - Transition: color 150ms ease
-- Hover: color #2C6B3D
+- Hover: color Brand Green Dark
 - Responsive: content-width at every Breakpoint; does not automatically become a Button or full-width.
 - Configurable: label, destination/action, variant, icon and icon position.
 
@@ -67,12 +67,12 @@ A small Component used to identify, contextualize, or categorize a Section or co
 
 ##### Visual Style
 
-- Background: #EAF3EC
+- Background: Brand Green Light
 - Text: #101114
 - Border: none
 - Shadow: none
 - Radius: 999px / Pill
-- Icon: #2C6B3D
+- Icon: Brand Green Dark
 - Width: content
 
 #### Spacing
@@ -146,8 +146,8 @@ A Component for displaying multiple content items that can be expanded and colla
 
 - Closed
 - Open
-- Hover: Question color changes to #2C6B3D
-- Focus: 2px solid #2C6B3D outline with 3px offset, displayed on :focus-visible
+- Hover: Question color changes to Brand Green Dark
+- Focus: 2px solid Brand Green Dark outline with 3px offset, displayed on :focus-visible
 
 #### Keyboard & Accessibility
 
