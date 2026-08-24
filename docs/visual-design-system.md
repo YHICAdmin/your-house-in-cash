@@ -112,17 +112,16 @@ Whitespace is part of the Layout and should not be treated as space that needs t
 ### Vertical Section Spacing
 
 The default vertical spacing for a Section is:
-* **Desktop:** 144px
-* **Tablet:** 96px
-* **Mobile:** 72px
-
-### Vertical Section Spacing
-
-The default vertical spacing for a Section is:
 
 The value refers to the Section’s default vertical padding. It may be overridden at the Section level when required by the content or composition.
 
 Sections do not have a fixed height. Section height continues to be determined by its content.
+
+The default vertical spacing for a Section is:
+
+* **Desktop:** 144px
+* **Tablet:** 96px
+* **Mobile:** 72px
 
 ### General Principle
 
