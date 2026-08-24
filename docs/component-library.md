@@ -131,7 +131,7 @@ A Component for displaying multiple content items that can be expanded and colla
 
 #### Typography
 
-- Question: Inter / 16px / 600
+- Question: Inter / 16px / 600 / 1.5
 - Answer: Inter / 16px / 400 / 1.6
 - Question color: #101114
 - Answer color: #555B63
