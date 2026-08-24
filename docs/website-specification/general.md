@@ -26,7 +26,7 @@ The Header consists of three primary areas:
 
 - Logo — positioned on the left.
 - Navigation — How It Works / Situations / Areas We Buy In / Reviews / FAQ / About Us.
-- Primary CTA — Get My Cash Offer, positioned on the right.
+- Primary CTA — Get My Cash Offer, positioned on the right on Desktop and Tablet, and at the bottom of the open Menu on Mobile.
 
 #### Visual Direction
 
@@ -83,8 +83,9 @@ Opening the Menu does not change the Header’s border or shadow state.
 
 #### Responsive Behavior
 
-- On Tablet and Mobile, the Primary CTA and Hamburger are grouped on the right.
-- The Primary CTA remains visible and does not move inside the Hamburger Menu.
+- On Tablet, the Primary CTA and Hamburger are grouped on the right.
+- On Mobile, the Primary CTA is removed from the Header and the Hamburger remains on the right.
+- On Mobile, the Primary CTA appears centered at the bottom of the open Menu, using the standard Primary Button component and its content-based width.
 
 #### Accessibility
 
@@ -105,6 +106,7 @@ Opening the Menu does not change the Header’s border or shadow state.
 - The menu fills the entire screen below the Header.
 - The panel uses a solid white background.
 - The Hamburger icon changes to a Close icon while the menu is open.
+- On Mobile, the Primary CTA appears centered at the bottom of the Menu with spacing-system padding below it.
 - The panel closes when:
   - the Close button is pressed;
   - a navigation item is selected;
@@ -156,7 +158,7 @@ Opening the Menu does not change the Header’s border or shadow state.
 - Background: transparent.
 - Border: none.
 - Color: #101114.
-- Gap from Primary CTA: 16px.
+- Gap from Primary CTA on Tablet: 16px.
 - Hover: icon color changes to Brand Green Dark.
 - Focus-visible: 2px solid Brand Green Dark outline with 3px offset.
 - Active: no additional visual treatment.

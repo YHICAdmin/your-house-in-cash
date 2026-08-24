@@ -194,10 +194,9 @@ export function SiteHeader() {
         </nav>
 
         <div className={styles.actions}>
-          <PrimaryButtonLink href="#">
-            <span className={styles.fullCtaLabel}>Get My Cash Offer</span>
-            <span className={styles.shortCtaLabel}>Get Offer</span>
-          </PrimaryButtonLink>
+          <span className={styles.headerCta}>
+            <PrimaryButtonLink href="#">Get My Cash Offer</PrimaryButtonLink>
+          </span>
           <button
             ref={toggleRef}
             className={styles.menuToggle}
@@ -222,18 +221,23 @@ export function SiteHeader() {
           className={`${styles.menuPanel}${isMenuOpen ? ` ${styles.menuPanelOpen}` : ""}`}
         >
           <LineSystem variant="local" />
-          <nav className={styles.menuNavigation} aria-label="Mobile navigation">
-            {navigationItems.map((item, index) => (
-              <a
-                ref={index === 0 ? firstMenuItemRef : undefined}
-                href="#"
-                key={item}
-                onClick={() => closeMenu()}
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
+          <div className={styles.menuContent}>
+            <nav className={styles.menuNavigation} aria-label="Mobile navigation">
+              {navigationItems.map((item, index) => (
+                <a
+                  ref={index === 0 ? firstMenuItemRef : undefined}
+                  href="#"
+                  key={item}
+                  onClick={() => closeMenu()}
+                >
+                  {item}
+                </a>
+              ))}
+            </nav>
+            <div className={styles.menuCta}>
+              <PrimaryButtonLink href="#">Get My Cash Offer</PrimaryButtonLink>
+            </div>
+          </div>
         </div>
       ) : null}
     </header>
