@@ -42,7 +42,10 @@ export function SiteHeader() {
       toggleRef.current?.focus();
     }
 
-    if (immediately) {
+    const shouldUnmountImmediately =
+      immediately || window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (shouldUnmountImmediately) {
       setIsMenuRendered(false);
       return;
     }
