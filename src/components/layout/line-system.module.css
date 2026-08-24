@@ -16,8 +16,8 @@
 .line {
   grid-row: 1;
   justify-self: end;
-  width: 1px;
+  width: 0;
   height: 100%;
-  background: var(--color-line);
+  border-left: 1px dashed var(--color-line);
   transform: translateX(calc(var(--spacing-m) / 2));
 }

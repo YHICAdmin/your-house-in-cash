@@ -5,7 +5,7 @@
   z-index: 10;
   top: 0;
   height: var(--header-height);
-  border-bottom: 1px solid var(--color-line);
+  border-bottom: 1px dashed var(--color-line);
   background: var(--color-background);
 }
 
@@ -205,7 +205,8 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-m);
-    margin-inline: auto;
+    margin-left: var(--spacing-m);
+    margin-right: auto;
   }
 
   .desktopNavigation a {

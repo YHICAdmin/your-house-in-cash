@@ -145,6 +145,8 @@ The system adapts according to the Breakpoint while preserving the same underlyi
 
 The lines continue uninterrupted throughout the page, including through the Header and Sections, and do not stop or restart between different areas.
 
+The outer System Lines are solid. Internal System Lines are dashed.
+
 * **Desktop:** 5 lines · 4 visual columns · Outer lines at the boundaries of the 1248px Content Container · Internal lines at the center of the gutters between Columns 3–4, 6–7, and 9–10 · Content distance from outer lines: 16px
 * **Tablet:** 3 lines · 2 visual columns · Outer lines at the boundaries of the content area · Internal line at the center of the gutter between Columns 4–5 · Content distance from outer lines: 16px
 * **Mobile:** 2 lines · 1 visual column · Outer lines at the boundaries of the content area · No internal lines · Content distance from outer lines: 16px
@@ -192,7 +194,7 @@ Whitespace is an intentional part of the composition. It should not be filled or
 * **Text Secondary:** #555B63 · Supporting copy
 * **Text Muted:** #777D85 · Microcopy / metadata
 * **Border:** #E4E7E4 · Cards and dividers
-* **Line System:** #F2F0F0 · Visual lines used by the Line System · 1px thickness · Remains subtle and visually secondary to the content
+* **Line System:** #ECEEF4 · Visual lines used by the Line System · 1px thickness · Outer lines are solid and internal lines are dashed · Remains subtle and visually secondary to the content
 
 ### Brand Palette
 

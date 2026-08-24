@@ -55,7 +55,7 @@ Opening the Menu does not change the Header’s border or shadow state.
 - Position: sticky
 - Top: 0
 - Background: #FFFFFF
-- Default Bottom Border: 1px solid #F2F0F0
+- Default Bottom Border: 1px dashed #ECEEF4
 - Sticky Shadow: Subtle Shadow
 - Vertical Alignment: center
 
@@ -70,6 +70,7 @@ Opening the Menu does not change the Header’s border or shadow state.
 
 ##### Navigation
 
+- Desktop alignment: left, directly after the Logo
 - Typography:
   - Desktop: Body Small
   - Tablet: —
@@ -78,6 +79,7 @@ Opening the Menu does not change the Header’s border or shadow state.
   - Desktop: 24px
   - Tablet: —
   - Mobile: —
+- Gap from Logo on Desktop: 24px
 
 #### Responsive Behavior
 
