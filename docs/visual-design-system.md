@@ -165,6 +165,11 @@ All foreground content renders above the Line System, including text, images, ca
 
 The Line System is non-interactive and must not intercept pointer events.
 
+### Foreground Layering Convention
+
+- Standard foreground content uses `.content-grid` or `.content-inset`, which render above the Line System.
+- Elements outside these layout wrappers must define their stacking behavior explicitly according to their intended relationship with the Line System.
+
 ### Spacing System
 
 * **XS:** 8px · Small spacing / compact elements
