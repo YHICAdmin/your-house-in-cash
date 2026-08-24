@@ -1,0 +1,238 @@
+"use client";
+
+import Image from "next/image";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { LineSystem } from "./line-system";
+import { PrimaryButtonLink } from "@/components/ui/primary-button-link";
+import styles from "./site-header.module.css";
+
+const navigationItems = [
+  "How It Works",
+  "Situations",
+  "Areas We Buy In",
+  "Reviews",
+  "FAQ",
+  "About Us",
+];
+
+const closeDuration = 180;
+
+export function SiteHeader() {
+  const [isMenuRendered, setIsMenuRendered] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+  const firstMenuItemRef = useRef<HTMLAnchorElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout>>(null);
+  const animationFrameRef = useRef<number>(null);
+
+  const closeMenu = useCallback((returnFocus = false, immediately = false) => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+    }
+
+    if (animationFrameRef.current) {
+      cancelAnimationFrame(animationFrameRef.current);
+    }
+
+    setIsMenuOpen(false);
+
+    if (returnFocus) {
+      toggleRef.current?.focus();
+    }
+
+    if (immediately) {
+      setIsMenuRendered(false);
+      return;
+    }
+
+    closeTimerRef.current = setTimeout(() => {
+      setIsMenuRendered(false);
+    }, closeDuration);
+  }, []);
+
+  const openMenu = () => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+    }
+
+    setIsMenuRendered(true);
+    animationFrameRef.current = requestAnimationFrame(() => {
+      setIsMenuOpen(true);
+    });
+  };
+
+  useEffect(() => {
+    const updateScrolledState = () => setIsScrolled(window.scrollY > 0);
+
+    updateScrolledState();
+    window.addEventListener("scroll", updateScrolledState, { passive: true });
+
+    return () => window.removeEventListener("scroll", updateScrolledState);
+  }, []);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    firstMenuItemRef.current?.focus();
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (!isMenuRendered) {
+      return;
+    }
+
+    const pageContent = document.getElementById("site-content");
+    const previousOverflow = document.body.style.overflow;
+
+    document.body.style.overflow = "hidden";
+    if (pageContent) {
+      pageContent.inert = true;
+    }
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      if (pageContent) {
+        pageContent.inert = false;
+      }
+    };
+  }, [isMenuRendered]);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeMenu(true);
+        return;
+      }
+
+      if (event.key !== "Tab" || !headerRef.current) {
+        return;
+      }
+
+      const focusableElements = Array.from(
+        headerRef.current.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter((element) => element.getClientRects().length > 0);
+
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements.at(-1);
+
+      if (!firstElement || !lastElement) {
+        return;
+      }
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [closeMenu, isMenuOpen]);
+
+  useEffect(() => {
+    const desktopQuery = window.matchMedia("(min-width: 1200px)");
+    const handleDesktopChange = (event: MediaQueryListEvent) => {
+      if (event.matches) {
+        closeMenu(false, true);
+      }
+    };
+
+    desktopQuery.addEventListener("change", handleDesktopChange);
+
+    return () => {
+      desktopQuery.removeEventListener("change", handleDesktopChange);
+      if (closeTimerRef.current) {
+        clearTimeout(closeTimerRef.current);
+      }
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+    };
+  }, [closeMenu]);
+
+  return (
+    <header
+      ref={headerRef}
+      className={`${styles.header}${isScrolled ? ` ${styles.scrolled}` : ""}`}
+    >
+      <LineSystem variant="local" />
+      <div className={styles.inner}>
+        <a className={styles.logoLink} href="#" aria-label="Your House in Cash home">
+          <Image
+            className={styles.logo}
+            src="/brand/Logo.jpeg"
+            alt="Your House in Cash"
+            width={300}
+            height={200}
+            priority
+          />
+        </a>
+
+        <nav className={styles.desktopNavigation} aria-label="Primary navigation">
+          {navigationItems.map((item) => (
+            <a href="#" key={item}>
+              {item}
+            </a>
+          ))}
+        </nav>
+
+        <div className={styles.actions}>
+          <PrimaryButtonLink href="#">
+            <span className={styles.fullCtaLabel}>Get My Cash Offer</span>
+            <span className={styles.shortCtaLabel}>Get Offer</span>
+          </PrimaryButtonLink>
+          <button
+            ref={toggleRef}
+            className={styles.menuToggle}
+            type="button"
+            aria-controls="responsive-navigation"
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            onClick={() => (isMenuOpen ? closeMenu() : openMenu())}
+          >
+            <span className={styles.menuIcon} aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </span>
+          </button>
+        </div>
+      </div>
+
+      {isMenuRendered ? (
+        <div
+          id="responsive-navigation"
+          className={`${styles.menuPanel}${isMenuOpen ? ` ${styles.menuPanelOpen}` : ""}`}
+        >
+          <LineSystem variant="local" />
+          <nav className={styles.menuNavigation} aria-label="Mobile navigation">
+            {navigationItems.map((item, index) => (
+              <a
+                ref={index === 0 ? firstMenuItemRef : undefined}
+                href="#"
+                key={item}
+                onClick={() => closeMenu()}
+              >
+                {item}
+              </a>
+            ))}
+          </nav>
+        </div>
+      ) : null}
+    </header>
+  );
+}

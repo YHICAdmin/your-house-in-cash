@@ -8,6 +8,11 @@
   transform: translateX(-50%);
 }
 
+.local {
+  position: absolute;
+  z-index: 0;
+}
+
 .line {
   grid-row: 1;
   justify-self: end;

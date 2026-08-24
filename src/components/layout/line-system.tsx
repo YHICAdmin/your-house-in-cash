@@ -1,8 +1,15 @@
 import styles from "./line-system.module.css";
 
-export function LineSystem() {
+type LineSystemProps = {
+  variant?: "global" | "local";
+};
+
+export function LineSystem({ variant = "global" }: LineSystemProps) {
   return (
-    <div className={`${styles.system} content-grid`} aria-hidden="true">
+    <div
+      className={`${styles.system} ${variant === "local" ? styles.local : ""} content-grid`}
+      aria-hidden="true"
+    >
       <span
         className={`${styles.line} hidden tablet:col-start-4 tablet:block desktop:col-start-3`}
       />
