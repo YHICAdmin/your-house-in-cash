@@ -1,5 +1,3 @@
-## Home Page / Area Pages
-
 **Purpose**
 
 The primary page template for Cleveland and future city/area pages.
@@ -28,77 +26,173 @@ Visual elements and gradients may be used to create character and atmosphere, bu
 
 Sections may use different compositions as long as a cohesive visual language is maintained throughout the website.
 
-### Hero
+# Hero
 
-#### Purpose
+## Purpose
 
 Immediately communicate the location, offer, and credibility of the business, while providing the seller with a clear path to begin the conversion process.
 
-#### Structure
+כן. זה אפילו עדיף, כי ה־Layout כולל שתי מערכות שונות: מבנה רספונסיבי ורקע.
 
-- Section Label: **Location**, with Location icon.
-- Primary headline.
-- Supporting copy / subheadline.
-- Component: **Button**.
-- Supporting microcopy: **“100% free. No obligation.”**
-- Three key benefits.
-- Local media composition using a limited number of images featuring properties, Cleveland, and the surrounding area.
-- A personal trust element that reinforces credibility and local presence.
+## Layout
 
-#### Visual Direction
+### Desktop
 
-- The primary headline is the main visual focal point.
-- The Section Label is positioned above the primary headline.
-- The left side contains the primary message and conversion content.
-- The Local Trust Card is smaller and visually secondary to the image composition. It integrates with the images as a single media unit that reinforces credibility and local presence.
-- The three key benefits are compact and displayed in a horizontal row.
-- Use generous whitespace.
+* Uses the global 12-column Grid.
+* The content area occupies 5 columns.
+* One column remains empty between the content and media areas.
+* The media area occupies 6 columns.
+* Grid distribution: `5 / 1 empty / 6`.
 
-#### Behavior
+### Tablet
 
-- The Primary CTA leads to the form flow used to collect seller and property information.
-- The Header CTA leads to the same conversion flow.
+* Uses the global 8-column Grid.
+* The content area occupies all 8 columns.
+* The media area occupies all 8 columns and appears below the content area.
 
-#### Technical Specifications
+### Mobile
 
-No additional Hero-specific technical specifications are currently defined. Global typography, spacing, color, component, and layout rules apply unless explicitly overridden below.
+* Uses the global 4-column Grid.
+* The content area occupies all 4 columns.
+* The media area occupies all 4 columns and appears below the content area.
+* The document order remains unchanged.
 
-#### Responsive Behavior
+### Background Gradient
 
-No Hero-specific Tablet or Mobile composition is currently defined.
+* The Hero begins with a white background at the top and gradually transitions into a subtle light green toward the bottom.
+* The gradient spans the full viewport width and is not constrained by the Grid or Line System.
+* Its direction is primarily vertical, with a slight diagonal bias toward the media area.
+* The green intensity may be slightly stronger behind the media area but should not appear as a separate color block.
+* The Line System remains visible above the gradient.
+* The gradient must not reduce text contrast or readability.
+* Final color values, opacity, and gradient stops are determined during visual design or implementation.
 
-The Hero should adapt to smaller viewports while preserving the hierarchy between the primary message, CTA, benefits, media composition, and Local Trust Card.
+## Section Label
 
-Exact stacking, ordering, and media proportions for Tablet and Mobile remain to be defined.
+* Uses the documented `Section Label` Component.
+* Displays the name of the location represented by the Area Page.
+* The content changes dynamically between Area Pages.
+* Example: `Cleveland, Ohio`.
+* Includes a Location icon before the text.
+* Positioned above the Primary Headline.
+* Non-interactive.
+* Remains visually secondary to the Primary Headline.
 
-#### Line System
+## Primary Headline
 
-- The left content area maintains the globally defined content padding from the left outer System Line.
-- Internal System Lines serve as alignment axes but do not constrain the composition.
-- The image composition on the right extends slightly beyond the right outer System Line to create a more asymmetric, distinctive, and less generic composition.
+* Uses the global `H1` typography.
+* Content template: `Sell Your House Fast in [City], Ohio`.
+* The city name changes dynamically between Area Pages.
+* Serves as the only `H1` on the page.
+* Acts as the primary visual focal point of the Hero.
+* Wraps naturally according to the available width; do not add manual line breaks.
+* A decorative, hand-drawn-style stroke appears beneath the location name.
+* The stroke uses Brand Green and follows the width of the location name.
+* The stroke is decorative only, does not affect the text layout, and is hidden from assistive technologies.
 
-#### Hero Media Composition
+## Supporting Copy
 
-- Use an asymmetric composition consisting of three rectangular images with different dimensions and aspect ratios.
-- The **left image** is wide and horizontal and is positioned slightly lower than the right image.
-- The **right image** is tall and vertical and begins higher than the other images.
-- The **bottom image** is wide and horizontal, positioned below and between the two upper images so that it visually connects them.
-- The images should not align to a symmetrical grid or form a perfect outer rectangle.
-- Maintain a small and consistent gap of approximately **5px** where the images approach one another.
-- All images use a moderate, consistent border radius and a subtle shadow.
-- Keep the composition compact so that it does not compete with the primary headline.
-- The asymmetry is intentional. Do not align the three images into a uniform grid.
-- A smaller **Local Trust Card** appears adjacent to the image composition and contains a personal image and a message emphasizing local presence and credibility.
-- The Local Trust Card and the three images should read as a single media unit without forming a symmetrical grid or rigid rectangular block.
-- The overall composition should feel **balanced, asymmetric, and editorial**, rather than like a collection of uniform cards.
+* Appears directly below the Primary Headline.
+* Uses the global supporting-copy typography.
+* Content template: `We buy houses in [City] as-is, with no repairs, fees, or waiting for a traditional sale.`
+* The city name changes dynamically between Area Pages.
+* Remains visually secondary to the Primary Headline.
 
-#### Background Gradient
+## Button
 
-- The Hero begins with a white background and gradually transitions into a subtle green gradient toward the bottom.
-- The gradient spans the full viewport width and is not constrained by the Line System.
-- Its direction is primarily vertical with a slight diagonal bias, and its intensity may be slightly stronger around the media area.
-- Colors are derived from the Brand Palette at low intensity so that the gradient remains visually secondary to the content.
-- Final color values, opacity, and gradient stops will be determined during implementation.
+* Uses the documented `Button` Component.
+* Label: `Get My Cash Offer`.
+* Appears below the Supporting Copy.
+* Navigates to the seller and property information form flow.
+* Renders with anchor semantics because it navigates to a separate route.
+* Preserves the same content and behavior across all Breakpoints.
+
+## Supporting Microcopy
+
+* Content: `100% free. No obligation.`
+* Appears directly below the `Button`.
+* Uses the global Microcopy typography.
+* Uses the global muted text color.
+* Non-interactive.
+* Remains visually secondary to the `Button`.
+* Preserves the same content and behavior across all Breakpoints.
+
+## Benefits List
+
+* Contains exactly three benefits:
+
+  * House icon — `Sell As-Is`.
+  * Dollar sign with a slash icon — `No Fees`.
+  * Calendar with checkmark icon — `Choose Your Closing Date`.
+* Appears below the Supporting Microcopy.
+* Each benefit consists of a Line Icon followed by a short text label.
+* Icons use the global Medium Icon size.
+* The gap between the icon and label is `8px`.
+* The gap between benefits is `24px`.
+* Benefits are informational and non-interactive.
+* On Desktop and Tablet, the benefits are displayed in a single horizontal row.
+* On Mobile, the benefits are displayed vertically in the same document order.
+* Individual benefits do not use Cards, backgrounds, borders, or shadows.
+
+## Local Media Composition
+
+* Occupies the media area defined in the Hero Layout.
+* Contains three property/location images and one `Local Trust Card`.
+* Uses an asymmetric, editorial composition.
+* The images and `Local Trust Card` read as a single visual unit.
+* The composition does not form a symmetrical Grid or a complete rectangular outer boundary.
+* Remains visually secondary to the Primary Headline.
+* May extend slightly beyond the right outer System Line on Desktop.
+* Does not extend beyond the viewport.
+* The internal composition adapts at smaller Breakpoints without changing the document order of its content.
+
+## Local Images
+
+* The `Local Media Composition` contains exactly three rectangular images with different dimensions and Aspect Ratios.
+* Image content changes between Area Pages and features properties, streets, landmarks, or recognizable residential context from the represented location.
+* All images use `object-fit: cover`, the global Medium Border Radius, and the global Subtle Shadow.
+* A consistent `5px` gap is maintained where the images approach one another.
+* The images do not overlap or form a symmetrical Grid or complete rectangular boundary.
+
+### Left Image
+
+* Wide, horizontal format.
+* Positioned in the upper-left portion of the composition.
+* Begins lower than the `Right Image`.
+
+### Right Image
+
+* Tall, vertical format.
+* Positioned in the upper-right portion of the composition.
+* Begins above the other images and acts as the vertical anchor.
+
+### Bottom Image
+
+* Wide, horizontal format.
+* Positioned below and between the two upper images.
+* Visually connects the `Left Image` and `Right Image`.
+* Does not align with both outer edges of the images above it.
+
+### Responsive Behavior
+
+* The three images preserve the same asymmetric relationship across all Breakpoints.
+* The composition scales according to the available width without changing the image order.
+* The images remain within the viewport at all Breakpoints.
+
+## Local Trust Card
+
+* Appears as part of the `Local Media Composition`.
+* Uses a temporary generic personal image until the final portrait is available.
+* Displays the name `Noah Lubko`.
+* Displays the title `Founder & Home Buyer`.
+* Trust message: `I’ll personally review your property and guide you through the process—no pressure, no obligation.`
+* Is smaller and visually secondary to the three local images.
+* Reinforces direct, personal involvement in the seller’s experience.
+* Uses the global Surface color, Medium Border Radius, and Floating Shadow.
+* Does not contain a CTA.
+* Does not cause the overall media composition to form a rigid rectangular block.
+* Preserves the same content and role across all Area Pages.
+* Remains integrated with the image composition across all Breakpoints.
 
 ### Situations — Situations We Can Help With
 
