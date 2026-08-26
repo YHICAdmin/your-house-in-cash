@@ -32,8 +32,6 @@ Sections may use different compositions as long as a cohesive visual language is
 
 Immediately communicate the location, offer, and credibility of the business, while providing the seller with a clear path to begin the conversion process.
 
-כן. זה אפילו עדיף, כי ה־Layout כולל שתי מערכות שונות: מבנה רספונסיבי ורקע.
-
 ## Layout
 
 ### Desktop
