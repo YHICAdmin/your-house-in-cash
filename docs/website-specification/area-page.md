@@ -77,6 +77,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Positioned above the Primary Headline.
 * Non-interactive.
 * Remains visually secondary to the Primary Headline.
+* Spacing After: `16px` (`S`).
 
 ## Primary Headline
 
@@ -89,6 +90,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * A decorative, hand-drawn-style stroke appears beneath the location name.
 * The stroke uses Brand Green and follows the width of the location name.
 * The stroke is decorative only, does not affect the text layout, and is hidden from assistive technologies.
+* Spacing After: `24px` (`M`).
 
 ## Supporting Copy
 
@@ -97,6 +99,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Content template: `We buy houses in [City] as-is, with no repairs, fees, or waiting for a traditional sale.`
 * The city name changes dynamically between Area Pages.
 * Remains visually secondary to the Primary Headline.
+* Spacing After: `32px` (`L`).
 
 ## Button
 
@@ -106,6 +109,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Navigates to the seller and property information form flow.
 * Renders with anchor semantics because it navigates to a separate route.
 * Preserves the same content and behavior across all Breakpoints.
+* Spacing After: `8px` (`XS`).
 
 ## Supporting Microcopy
 
@@ -116,6 +120,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Non-interactive.
 * Remains visually secondary to the `Button`.
 * Preserves the same content and behavior across all Breakpoints.
+* Spacing After: `32px` (`L`).
 
 ## Benefits List
 
