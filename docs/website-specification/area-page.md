@@ -47,6 +47,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Uses the global 8-column Grid.
 * The content area occupies all 8 columns.
 * The media area occupies all 8 columns and appears below the content area.
+* The media area appears below the content area with a 64px gap.
 
 ### Mobile
 
@@ -54,6 +55,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The content area occupies all 4 columns.
 * The media area occupies all 4 columns and appears below the content area.
 * The document order remains unchanged.
+* The media area appears below the content area with a 48px gap.
 
 ### Background Gradient
 
