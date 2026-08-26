@@ -77,13 +77,13 @@ The Grid is not only a technical tool for aligning content, but also an integral
 
 ### Content Container
 
-All primary website content remains within a Content Container with a maximum width of 1248px.
+All primary website content is placed within a centered, fluid Content Container with a maximum width of `1248px`.
 
-On Desktop, when the page width allows, the Content Container is centered within a maximum page width of 1440px, leaving 96px on each side.
+On Desktop, when the viewport accommodates the maximum page width of `1440px`, the Content Container reaches its maximum width, leaving `96px` of space on each side.
 
-When the viewport is not wide enough to accommodate a 1248px Content Container, the Container contracts while maintaining a minimum Horizontal Page Padding of 16px on each side.
+At narrower viewport widths, the Content Container contracts to fit the available space while preserving a minimum Horizontal Page Padding of `16px` on each side. The Content Container must never reach the viewport edges.
 
-The Content Container must never extend directly to the viewport edges.
+Individual elements may extend beyond the Content Container only when explicitly permitted by the relevant Section or Element specification. Such an exception does not alter the boundaries of the Content Container, and the overflowing element must preserve the minimum Horizontal Page Padding from the viewport edge.
 
 ### Grid
 

@@ -140,9 +140,9 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The images and `Local Trust Card` read as a single visual unit.
 * The composition does not form a symmetrical Grid or a complete rectangular outer boundary.
 * Remains visually secondary to the Primary Headline.
-* May extend slightly beyond the right outer System Line on Desktop.
-* Does not extend beyond the viewport.
-* The internal composition adapts at smaller Breakpoints without changing the document order of its content.
+* On Desktop, the composition uses the maximum available overflow beyond the right outer System Line, up to 48px, while preserving the minimum Horizontal Page Padding.
+* On Tablet and Mobile, it remains within the Content Container.
+* Its internal arrangement and document order remain unchanged across Breakpoints.
 
 ## Local Images
 
