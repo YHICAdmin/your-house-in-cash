@@ -65,7 +65,8 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The green intensity may be slightly stronger behind the media area but should not appear as a separate color block.
 * The Line System remains visible above the gradient.
 * The gradient must not reduce text contrast or readability.
-* Final color values, opacity, and gradient stops are determined during visual design or implementation.
+* Background: `linear-gradient(135deg, #FFFFFF 0%, #F7F9F7 60%, #FFFFFF 100%)`, unchanged across Breakpoints.
+
 
 ## Section Label
 
