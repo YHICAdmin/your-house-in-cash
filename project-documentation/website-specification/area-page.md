@@ -70,6 +70,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 * Uses the documented `Section Label` Component.
 * Content template: `[City], Ohio`.
+* The `[City], Ohio` template renders in uppercase.
 * `[City]` is the city name only, without the state.
 * The content changes dynamically between Area Pages.
 * Example: `Cleveland, Ohio`.
