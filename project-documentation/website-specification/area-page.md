@@ -60,7 +60,9 @@ Immediately communicate the location, offer, and credibility of the business, wh
 ### Background Gradient
 
 * The Hero uses `linear-gradient(190deg, #FFFFFF 0%, #F7F9F7 100%)`, unchanged across Breakpoints.
-* The gradient follows the global Gradient treatment: it spans the full viewport width and blends into the lower portion of the Hero without serving as the full Section background.
+* The gradient layer begins at `50%` of the Hero's height and covers the lower `50%`.
+* The gradient layer is bottom-positioned, spans the full viewport width, does not repeat, and remains unchanged across Breakpoints.
+* The gradient follows the global Gradient treatment and does not serve as the full Section background.
 * The gradient is not constrained by the Content Container, Grid, or Line System.
 * The gradient must preserve text contrast and readability.
 
