@@ -213,9 +213,12 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The portrait appears at the beginning of the card's content row, vertically centered, with a `16px` (`S`) gap before the text.
 * The portrait is decorative and uses `alt=""`.
 * The final portrait will replace the file at the same path and retain the same `1:1` Aspect Ratio and rendering rules.
-* Displays the name `Noah Lubko`.
-* Displays the title `Founder & Home Buyer`.
-* Trust message: `I’ll personally review your property and guide you through the process—no pressure, no obligation.`
+* Uses `16px` (`S`) internal padding.
+* The portrait and text block remain in a single horizontal content row.
+* The text block stacks the name, title, and trust message in that order, with an `8px` (`XS`) vertical gap between each text element.
+* The name `Noah Lubko` uses the global `Label` typography.
+* The title `Founder & Home Buyer` uses the global `Caption` typography.
+* The trust message `I’ll personally review your property and guide you through the process—no pressure, no obligation.` uses the global `Body Small` typography.
 * Is smaller and visually secondary to the three local images.
 * Reinforces direct, personal involvement in the seller’s experience.
 * Uses the global Surface color, Medium Border Radius, and Floating Shadow.
