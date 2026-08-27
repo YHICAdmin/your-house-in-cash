@@ -96,7 +96,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The spacing above the stroke is `8px` (`XS`).
 * The stroke uses `border-top: 3px solid #101114` (`Text Primary`), `border-radius: 50%`, and `transform: rotate(-1deg)`.
 * The stroke remains a single decoration beneath the complete `[City]` block when the city name wraps and must not repeat for individual lines.
-* The stroke is decorative only, does not affect the text layout, and is hidden from assistive technologies.
+* The stroke is decorative only and does not affect the text layout.
 * Spacing After: `24px` (`M`).
 
 ## Supporting Copy
