@@ -7,7 +7,7 @@ type LineSystemProps = {
 export function LineSystem({ variant = "global" }: LineSystemProps) {
   return (
     <div
-      className={`${styles.system} ${variant === "local" ? styles.local : ""} content-grid`}
+      className={`${styles.system} ${styles.grid} ${variant === "local" ? styles.local : ""}`}
       aria-hidden="true"
     >
       <span

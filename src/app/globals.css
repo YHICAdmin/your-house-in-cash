@@ -136,6 +136,7 @@
     display: grid;
     width: min(calc(100% - (var(--spacing-s) * 2)), var(--container-content));
     margin-inline: auto;
+    padding-inline: var(--content-inset);
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: var(--spacing-s);
   }
