@@ -111,7 +111,6 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Appears below the Supporting Copy.
 * Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
 * Renders with anchor semantics because it navigates to a separate route.
-* Preserves the same content and behavior across all Breakpoints.
 * Spacing After: `8px` (`XS`).
 
 ## Supporting Microcopy
