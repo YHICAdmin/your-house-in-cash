@@ -71,7 +71,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * `[City]` is the city name only, without the state.
 * The content changes dynamically between Area Pages.
 * Example: `Cleveland, Ohio`.
-* Includes a Location icon before the text.
+* Includes the `MapPin` icon from `lucide-react` before the text.
 * Positioned above the Primary Headline.
 * Non-interactive.
 * Remains visually secondary to the Primary Headline.
@@ -126,11 +126,11 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 ## Benefits List
 
-* Contains exactly three benefits:
+* Contains exactly three benefits using the canonical `lucide-react` export names:
 
-  * House icon — `Sell As-Is`.
-  * Dollar sign with a slash icon — `No Fees`.
-  * Calendar with checkmark icon — `Choose Your Closing Date`.
+  * `House` — `Sell As-Is`.
+  * `BadgeDollarSign` — `No Fees`.
+  * `CalendarCheck` — `Choose Your Closing Date`.
 * Appears below the Supporting Microcopy.
 * Each benefit consists of a Line Icon followed by a short text label.
 * Benefit labels use the global `Body Small` typography.

@@ -8,8 +8,9 @@ Relevant documents include:
 
 - Visual Design System
 - Component Library
+- Implementation Guidelines
+- External Libraries
 - Website Specification:
-  - `general.md` — global site-wide requirements
   - `area-page.md` — Area Page-specific requirements
   - `situation-page.md` — Situation Page-specific requirements
 
