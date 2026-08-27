@@ -54,7 +54,6 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Uses the global 4-column Grid.
 * The content area occupies all 4 columns.
 * The media area occupies all 4 columns and appears below the content area.
-* The document order remains unchanged.
 * The media area appears below the content area with a 48px gap.
 
 ### Background Gradient
@@ -161,7 +160,6 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Remains visually secondary to the Primary Headline.
 * On Desktop, the composition uses the maximum available overflow beyond the right outer System Line, up to 48px, while preserving the minimum Horizontal Page Padding.
 * On Tablet and Mobile, it remains within the Content Container.
-* Its document order remains unchanged across Breakpoints; the `Local Trust Card` arrangement changes on Mobile as specified below.
 
 ## Local Images
 
