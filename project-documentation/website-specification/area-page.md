@@ -168,7 +168,8 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Image content changes between Area Pages and features properties, streets, landmarks, or recognizable residential context from the represented location.
 * All images use `object-fit: cover`, the global Medium Border Radius, and the global Subtle Shadow.
 * The horizontal gap between the two upper images is `8%` of the composition width.
-* The Bottom Image is separated from the upper row by `16px` (`S`).
+* The upper row's height includes the Left Image's vertical offset.
+* The Bottom Image is separated from the lowest edge of the upper images by `16px` (`S`).
 * The images do not overlap or form a symmetrical Grid or complete rectangular boundary.
 
 ### Left Image
@@ -177,7 +178,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Width: `58%` of the composition width.
 * Aspect Ratio: `4:3`.
 * Positioned in the upper-left portion of the composition.
-* Begins lower than the `Right Image`.
+* Begins `8%` of the composition width below the `Right Image`.
 
 ### Right Image
 
@@ -185,7 +186,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Width: `34%` of the composition width.
 * Aspect Ratio: `3:4`.
 * Positioned in the upper-right portion of the composition.
-* Begins above the other images and acts as the vertical anchor.
+* Begins at the composition's top edge and acts as the vertical anchor.
 
 ### Bottom Image
 
