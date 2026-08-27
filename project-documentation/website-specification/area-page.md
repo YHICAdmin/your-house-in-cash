@@ -225,7 +225,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The name `Noah Lubko` uses the global `Label` typography and `Text Primary` color.
 * The title `Founder & Home Buyer` uses the global `Caption` typography and `Text Secondary` color.
 * The trust message `I’ll personally review your property and guide you through the process—no pressure, no obligation.` uses the global `Body Small` typography and `Text Muted` color.
-* Is smaller and visually secondary to the three local images.
+* Remains visually secondary to the three Local Images.
 * Reinforces direct, personal involvement in the seller’s experience.
 * Uses the global Surface color, Medium Border Radius, and Floating Shadow.
 * Does not contain a CTA.
