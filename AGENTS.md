@@ -2,7 +2,7 @@
 
 ## Project Documentation
 
-The project documentation in `/docs` is the source of truth for product, UX, visual design, and component decisions.
+The project documentation in `/project-documentation` is the source of truth for product, UX, visual design, and component decisions.
 
 Relevant documents include:
 
