@@ -91,6 +91,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Acts as the primary visual focal point of the Hero.
 * Wraps naturally according to the available width; do not add manual line breaks.
 * `[City]` may wrap naturally at word boundaries but must not break within a word.
+* The `[City]` wrapper uses `width: fit-content` and `max-width: 100%`.
 * A decorative stroke is rendered as a `::after` pseudo-element beneath the `[City]` text block.
 * The pseudo-element is `100%` of the rendered width of the `[City]` block and has a height of `8px`.
 * The spacing above the stroke is `8px` (`XS`).
