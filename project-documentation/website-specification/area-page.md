@@ -174,7 +174,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The horizontal gap between the two upper images is `8%` of the composition width.
 * The upper row's height includes the Left Image's vertical offset.
 * The Bottom Image is separated from the lowest edge of the upper images by `16px` (`S`).
-* The images do not overlap or form a symmetrical Grid or complete rectangular boundary.
+* The images do not overlap.
 
 ### Left Image
 
