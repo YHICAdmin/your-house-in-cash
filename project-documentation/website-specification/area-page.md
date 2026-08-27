@@ -198,9 +198,6 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Width: `68%` of the composition width.
 * Aspect Ratio: `16:9`.
 * Offset: `12%` from the composition's left edge.
-* Positioned below and between the two upper images.
-* Visually connects the `Left Image` and `Right Image`.
-* Does not align with both outer edges of the images above it.
 
 ### Responsive Behavior
 
