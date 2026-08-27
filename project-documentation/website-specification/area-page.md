@@ -72,6 +72,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The content changes dynamically between Area Pages.
 * Example: `Cleveland, Ohio`.
 * Includes the `MapPin` icon from `lucide-react` before the text.
+* `MapPin` is decorative, is hidden from assistive technologies, and does not receive keyboard focus.
 * Positioned above the Primary Headline.
 * Non-interactive.
 * Remains visually secondary to the Primary Headline.
@@ -131,6 +132,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
   * `House` — `Sell As-Is`.
   * `BadgeDollarSign` — `No Fees`.
   * `CalendarCheck` — `Choose Your Closing Date`.
+* `House`, `BadgeDollarSign`, and `CalendarCheck` are decorative, are hidden from assistive technologies, and do not receive keyboard focus.
 * Appears below the Supporting Microcopy.
 * Each benefit consists of a Line Icon followed by a short text label.
 * Benefit labels use the global `Body Small` typography.
