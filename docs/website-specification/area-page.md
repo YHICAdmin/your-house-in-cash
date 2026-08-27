@@ -87,9 +87,11 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Acts as the primary visual focal point of the Hero.
 * Wraps naturally according to the available width; do not add manual line breaks.
 * `[City]` may wrap naturally at word boundaries but must not break within a word.
-* A decorative, hand-drawn-style stroke appears beneath the location name.
-* The stroke uses Brand Green.
-* When `[City]` spans multiple lines, the decorative stroke remains a single stroke beneath the complete city-name text block and matches the rendered width of that block; it must not repeat for individual lines.
+* A decorative stroke is rendered as a `::after` pseudo-element beneath the `[City]` text block.
+* The pseudo-element is `100%` of the rendered width of the `[City]` block and has a height of `8px`.
+* The spacing above the stroke is `8px` (`XS`).
+* The stroke uses `border-top: 3px solid #101114` (`Text Primary`), `border-radius: 50%`, and `transform: rotate(-1deg)`.
+* The stroke remains a single decoration beneath the complete `[City]` block when the city name wraps and must not repeat for individual lines.
 * The stroke is decorative only, does not affect the text layout, and is hidden from assistive technologies.
 * Spacing After: `24px` (`M`).
 
