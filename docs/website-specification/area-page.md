@@ -112,7 +112,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 * Content: `100% free. No obligation.`
 * Appears directly below the `Button`.
-* Uses the global Microcopy typography.
+* Uses the global `Body Small` typography.
 * Uses the global muted text color.
 * Non-interactive.
 * Remains visually secondary to the `Button`.
