@@ -179,7 +179,6 @@ Immediately communicate the location, offer, and credibility of the business, wh
 ### Left Image
 
 * Temporary asset path: `/images/area-hero/local-left.webp`.
-* Wide, horizontal format.
 * Width: `58%` of the composition width.
 * Aspect Ratio: `4:3`.
 * Positioned in the upper-left portion of the composition.
@@ -188,7 +187,6 @@ Immediately communicate the location, offer, and credibility of the business, wh
 ### Right Image
 
 * Temporary asset path: `/images/area-hero/local-right.webp`.
-* Tall, vertical format.
 * Width: `34%` of the composition width.
 * Aspect Ratio: `3:4`.
 * Positioned in the upper-right portion of the composition.
@@ -197,7 +195,6 @@ Immediately communicate the location, offer, and credibility of the business, wh
 ### Bottom Image
 
 * Temporary asset path: `/images/area-hero/local-bottom.webp`.
-* Wide, horizontal format.
 * Width: `68%` of the composition width.
 * Aspect Ratio: `16:9`.
 * Offset: `12%` from the composition's left edge.
