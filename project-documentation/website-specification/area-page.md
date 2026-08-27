@@ -207,7 +207,6 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 ### Responsive Behavior
 
-* The three images preserve the same asymmetric relationship across all Breakpoints.
 * The approved widths, Aspect Ratios, gaps, and offsets remain unchanged across Breakpoints, and the composition scales fluidly with the available width without changing the image order.
 * The images remain within the viewport at all Breakpoints.
 
