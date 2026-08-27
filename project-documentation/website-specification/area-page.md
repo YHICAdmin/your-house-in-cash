@@ -224,9 +224,9 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Uses `16px` (`S`) internal padding.
 * The portrait and text block remain in a single horizontal content row.
 * The text block stacks the name, title, and trust message in that order, with an `8px` (`XS`) vertical gap between each text element.
-* The name `Noah Lubko` uses the global `Label` typography.
-* The title `Founder & Home Buyer` uses the global `Caption` typography.
-* The trust message `I’ll personally review your property and guide you through the process—no pressure, no obligation.` uses the global `Body Small` typography.
+* The name `Noah Lubko` uses the global `Label` typography and `Text Primary` color.
+* The title `Founder & Home Buyer` uses the global `Caption` typography and `Text Secondary` color.
+* The trust message `I’ll personally review your property and guide you through the process—no pressure, no obligation.` uses the global `Body Small` typography and `Text Muted` color.
 * Is smaller and visually secondary to the three local images.
 * Reinforces direct, personal involvement in the seller’s experience.
 * Uses the global Surface color, Medium Border Radius, and Floating Shadow.
