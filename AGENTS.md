@@ -4,16 +4,6 @@
 
 The project documentation in `/project-documentation` is the source of truth for product, UX, visual design, and component decisions.
 
-Relevant documents include:
-
-- Visual Design System
-- Component Library
-- Implementation Guidelines
-- External Libraries
-- Website Specification:
-  - `area-page.md` — Area Page-specific requirements
-  - `situation-page.md` — Situation Page-specific requirements
-
 Read the relevant project documentation before implementing UI that it governs.
 
 If project documentation conflicts with assumptions, framework defaults, or generated code, follow the project documentation.
