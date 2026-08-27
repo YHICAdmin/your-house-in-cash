@@ -67,7 +67,8 @@ Immediately communicate the location, offer, and credibility of the business, wh
 ## Section Label
 
 * Uses the documented `Section Label` Component.
-* Displays the name of the location represented by the Area Page.
+* Content template: `[City], Ohio`.
+* `[City]` is the city name only, without the state.
 * The content changes dynamically between Area Pages.
 * Example: `Cleveland, Ohio`.
 * Includes a Location icon before the text.
@@ -81,6 +82,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Uses the global `H1` typography.
 * Content template: `Sell Your House Fast in [City], Ohio`.
 * The city name changes dynamically between Area Pages.
+* This Hero content template applies to City Area Pages; non-city Area Pages require a separately defined content template.
 * Serves as the only `H1` on the page.
 * Acts as the primary visual focal point of the Hero.
 * Wraps naturally according to the available width; do not add manual line breaks.
