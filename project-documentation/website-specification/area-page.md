@@ -73,7 +73,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The `[City], Ohio` template renders in uppercase.
 * `[City]` is the city name only, without the state.
 * The content changes dynamically between Area Pages.
-* Example: `Cleveland, Ohio`.
+* Rendered example: `CLEVELAND, OHIO`.
 * Includes the `MapPin` icon from `lucide-react` before the text.
 * `MapPin` is decorative, is hidden from assistive technologies, and does not receive keyboard focus.
 * Positioned above the Primary Headline.
