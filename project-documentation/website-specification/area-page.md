@@ -207,7 +207,12 @@ Immediately communicate the location, offer, and credibility of the business, wh
 ## Local Trust Card
 
 * Appears as part of the `Local Media Composition`.
-* Uses a temporary generic personal image until the final portrait is available.
+* Uses the local portrait asset at `/images/local-trust-portrait.webp`.
+* The portrait is rendered at `48px × 48px` with a `1:1` Aspect Ratio and `object-fit: cover`.
+* The portrait uses a circular crop with the global Pill Radius.
+* The portrait appears at the beginning of the card's content row, vertically centered, with a `16px` (`S`) gap before the text.
+* The portrait is decorative and uses `alt=""`.
+* The final portrait will replace the file at the same path and retain the same `1:1` Aspect Ratio and rendering rules.
 * Displays the name `Noah Lubko`.
 * Displays the title `Founder & Home Buyer`.
 * Trust message: `I’ll personally review your property and guide you through the process—no pressure, no obligation.`
