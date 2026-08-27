@@ -109,7 +109,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Uses the documented `Button` Component.
 * Label: `Get My Cash Offer`.
 * Appears below the Supporting Copy.
-* Navigates to the seller and property information form flow.
+* Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
 * Renders with anchor semantics because it navigates to a separate route.
 * Preserves the same content and behavior across all Breakpoints.
 * Spacing After: `8px` (`XS`).
