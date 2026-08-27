@@ -18,7 +18,6 @@ The website uses a single font family consistently throughout. Typographic hiera
 * **Button:** Desktop 16px · Tablet 16px · Mobile 16px · Weight 600 · Line Height 1.00
 * **Caption:** Desktop 13px · Tablet 13px · Mobile 13px · Weight 400 · Line Height 1.40
 
-
 ### Headlines
 
 Headlines use 600 font weight.

@@ -62,7 +62,6 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The Hero uses `linear-gradient(190deg, #FFFFFF 0%, #F7F9F7 100%)`, unchanged across Breakpoints.
 * The gradient follows the global Gradient treatment: it spans the full viewport width and blends into the lower portion of the Hero without serving as the full Section background.
 * The gradient is not constrained by the Content Container, Grid, or Line System.
-* The Line System remains visible above the gradient.
 * The gradient must preserve text contrast and readability.
 
 ## Section Label
@@ -93,7 +92,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 ## Supporting Copy
 
 * Appears directly below the Primary Headline.
-* Uses the global supporting-copy typography.
+* Uses the global `Body Large` typography.
 * Content template: `We buy houses in [City] as-is, with no repairs, fees, or waiting for a traditional sale.`
 * The city name changes dynamically between Area Pages.
 * Remains visually secondary to the Primary Headline.
@@ -197,7 +196,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Preserves the same content and role across all Area Pages.
 * Remains integrated with the image composition across all Breakpoints.
 
-### Situations — Situations We Can Help With
+# Situations — Situations We Can Help With
 
 #### Purpose
 
@@ -252,7 +251,7 @@ The section should preserve access to all primary situations and the relationshi
 - Content on both sides of the dividing line maintains appropriate padding.
 - The headline and supporting copy are not required to follow this internal division.
 
-### Reviews
+# Reviews
 
 #### Purpose
 
