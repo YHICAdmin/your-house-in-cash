@@ -164,24 +164,32 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The `Local Media Composition` contains exactly three rectangular images with different dimensions and Aspect Ratios.
 * Image content changes between Area Pages and features properties, streets, landmarks, or recognizable residential context from the represented location.
 * All images use `object-fit: cover`, the global Medium Border Radius, and the global Subtle Shadow.
-* A consistent `5px` gap is maintained where the images approach one another.
+* The horizontal gap between the two upper images is `8%` of the composition width.
+* The Bottom Image is separated from the upper row by `16px` (`S`).
 * The images do not overlap or form a symmetrical Grid or complete rectangular boundary.
 
 ### Left Image
 
 * Wide, horizontal format.
+* Width: `58%` of the composition width.
+* Aspect Ratio: `4:3`.
 * Positioned in the upper-left portion of the composition.
 * Begins lower than the `Right Image`.
 
 ### Right Image
 
 * Tall, vertical format.
+* Width: `34%` of the composition width.
+* Aspect Ratio: `3:4`.
 * Positioned in the upper-right portion of the composition.
 * Begins above the other images and acts as the vertical anchor.
 
 ### Bottom Image
 
 * Wide, horizontal format.
+* Width: `68%` of the composition width.
+* Aspect Ratio: `16:9`.
+* Offset: `12%` from the composition's left edge.
 * Positioned below and between the two upper images.
 * Visually connects the `Left Image` and `Right Image`.
 * Does not align with both outer edges of the images above it.
@@ -189,7 +197,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 ### Responsive Behavior
 
 * The three images preserve the same asymmetric relationship across all Breakpoints.
-* The composition scales according to the available width without changing the image order.
+* The approved widths, Aspect Ratios, gaps, and offsets remain unchanged across Breakpoints, and the composition scales fluidly with the available width without changing the image order.
 * The images remain within the viewport at all Breakpoints.
 
 ## Local Trust Card
