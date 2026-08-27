@@ -165,7 +165,8 @@ Immediately communicate the location, offer, and credibility of the business, wh
 ## Local Images
 
 * The `Local Media Composition` contains exactly three rectangular images with different dimensions and Aspect Ratios.
-* Image content changes between Area Pages and features properties, streets, landmarks, or recognizable residential context from the represented location.
+* All three images are decorative with `alt=""`; the temporary image assets are shared across all City Area Pages.
+* Final location-specific image content will feature properties, streets, landmarks, or recognizable residential context from the represented location and replace the temporary files at the same paths while preserving their respective Aspect Ratios.
 * All images use `object-fit: cover`, the global Medium Border Radius, and the global Subtle Shadow.
 * The horizontal gap between the two upper images is `8%` of the composition width.
 * The upper row's height includes the Left Image's vertical offset.
@@ -174,6 +175,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 ### Left Image
 
+* Temporary asset path: `/images/area-hero/local-left.webp`.
 * Wide, horizontal format.
 * Width: `58%` of the composition width.
 * Aspect Ratio: `4:3`.
@@ -182,6 +184,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 ### Right Image
 
+* Temporary asset path: `/images/area-hero/local-right.webp`.
 * Tall, vertical format.
 * Width: `34%` of the composition width.
 * Aspect Ratio: `3:4`.
@@ -190,6 +193,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 ### Bottom Image
 
+* Temporary asset path: `/images/area-hero/local-bottom.webp`.
 * Wide, horizontal format.
 * Width: `68%` of the composition width.
 * Aspect Ratio: `16:9`.
