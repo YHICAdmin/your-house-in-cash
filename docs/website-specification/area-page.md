@@ -133,11 +133,15 @@ Immediately communicate the location, offer, and credibility of the business, wh
   * Calendar with checkmark icon — `Choose Your Closing Date`.
 * Appears below the Supporting Microcopy.
 * Each benefit consists of a Line Icon followed by a short text label.
+* Benefit labels use the global `Body Small` typography.
+* Each icon-and-label pair remains together as one item.
+* Labels may wrap naturally at word boundaries but must not break within words.
+* Icons align with the first line of multiline labels.
 * Icons use the global Medium Icon size.
 * The gap between the icon and label is `8px`.
 * The gap between benefits is `24px`.
 * Benefits are informational and non-interactive.
-* On Desktop and Tablet, the benefits are displayed in a single horizontal row.
+* On Desktop and Tablet, the benefits are displayed in a single horizontal row that does not wrap.
 * On Mobile, the benefits are displayed vertically in the same document order.
 * Individual benefits do not use Cards, backgrounds, borders, or shadows.
 
