@@ -59,14 +59,11 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 ### Background Gradient
 
-* The Hero begins with a white background at the top and gradually transitions into a subtle light green toward the bottom.
-* The gradient spans the full viewport width and is not constrained by the Grid or Line System.
-* Its direction is primarily vertical, with a slight diagonal bias toward the media area.
-* The green intensity may be slightly stronger behind the media area but should not appear as a separate color block.
+* The Hero uses `linear-gradient(190deg, #FFFFFF 0%, #F7F9F7 100%)`, unchanged across Breakpoints.
+* The gradient follows the global Gradient treatment: it spans the full viewport width and blends into the lower portion of the Hero without serving as the full Section background.
+* The gradient is not constrained by the Content Container, Grid, or Line System.
 * The Line System remains visible above the gradient.
-* The gradient must not reduce text contrast or readability.
-* Background: `linear-gradient(135deg, #FFFFFF 0%, #F7F9F7 60%, #FFFFFF 100%)`, unchanged across Breakpoints.
-
+* The gradient must preserve text contrast and readability.
 
 ## Section Label
 
