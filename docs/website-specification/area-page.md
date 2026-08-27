@@ -139,7 +139,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Icons align with the first line of multiline labels.
 * Icons use the global Medium Icon size.
 * The gap between the icon and label is `8px`.
-* The gap between benefits is `24px`.
+* The inter-benefit gap is `24px` (`M`): horizontal on Desktop and Tablet, and vertical on Mobile.
 * Benefits are informational and non-interactive.
 * On Desktop and Tablet, the benefits are displayed in a single horizontal row that does not wrap.
 * On Mobile, the benefits are displayed vertically in the same document order.
