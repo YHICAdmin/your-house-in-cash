@@ -130,6 +130,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 ## Benefits List
 
+* Uses one semantic unordered list (`<ul>`) containing exactly three list items (`<li>`) in the documented order.
 * Contains exactly three benefits using the canonical `lucide-react` export names:
 
   * `House` — `Sell As-Is`.
