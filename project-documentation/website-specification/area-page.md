@@ -229,7 +229,6 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Reinforces direct, personal involvement in the seller’s experience.
 * Uses the global Surface color, Medium Border Radius, and Floating Shadow.
 * Does not contain a CTA.
-* Does not cause the overall media composition to form a rigid rectangular block.
 * Preserves the same content and role across all Area Pages.
 * Remains integrated with the image composition across all Breakpoints.
 * On Desktop and Tablet, its width is `40%` of the `Local Media Composition` width. It is absolutely positioned, aligned to the composition's right and bottom edges, and overlays the Bottom Image at its lower-right corner without affecting the composition's dimensions.
