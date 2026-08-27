@@ -160,7 +160,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Remains visually secondary to the Primary Headline.
 * On Desktop, the composition uses the maximum available overflow beyond the right outer System Line, up to 48px, while preserving the minimum Horizontal Page Padding.
 * On Tablet and Mobile, it remains within the Content Container.
-* Its internal arrangement and document order remain unchanged across Breakpoints.
+* Its document order remains unchanged across Breakpoints; the `Local Trust Card` arrangement changes on Mobile as specified below.
 
 ## Local Images
 
@@ -218,6 +218,8 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Does not cause the overall media composition to form a rigid rectangular block.
 * Preserves the same content and role across all Area Pages.
 * Remains integrated with the image composition across all Breakpoints.
+* On Desktop and Tablet, its width is `40%` of the `Local Media Composition` width. It is absolutely positioned, aligned to the composition's right and bottom edges, and overlays the Bottom Image at its lower-right corner without affecting the composition's dimensions.
+* On Mobile, its width is `64%` of the `Local Media Composition` width. It does not overlap the images, appears `16px` (`S`) below the Bottom Image, aligns to the composition's right edge, and contributes to the composition's total height.
 
 # Situations — Situations We Can Help With
 
@@ -333,7 +335,7 @@ No additional Reviews-specific technical specifications are currently defined. G
 - The headline, supporting copy, and Google rating remain within the area defined by the outer System Lines.
 - The Carousel is not constrained by the internal System Lines and may extend beyond the right outer System Line to reveal part of the next card.
 
-### How It Works
+# How It Works
 
 #### Purpose
 
@@ -387,7 +389,7 @@ The section should preserve the sequence and hierarchy of the three steps on sma
 - The Benefits row is divided according to the four visual areas, with one Benefit in each area and appropriate padding from the outer System Lines.
 - The three internal System Lines serve as dividers between the Benefits and may use a subtle Brand Green treatment within this area only.
 
-### Local / Area Section
+# Local / Area Section
 
 #### Purpose
 
@@ -516,7 +518,7 @@ This is our market.**
 
 The supporting copy should be specific to the individual area rather than generic company messaging.
 
-### FAQ
+# FAQ
 
 #### Purpose
 
@@ -579,7 +581,7 @@ The relationship between the content block and Accordion should remain clear on 
 - The center System Line serves as the primary division between the headline/content area and the Accordion.
 - The two additional internal System Lines remain visible but do not dictate the positioning of content within either area.
 
-### Final CTA
+# Final CTA
 
 #### Purpose
 
