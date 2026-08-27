@@ -86,8 +86,10 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * Serves as the only `H1` on the page.
 * Acts as the primary visual focal point of the Hero.
 * Wraps naturally according to the available width; do not add manual line breaks.
+* `[City]` may wrap naturally at word boundaries but must not break within a word.
 * A decorative, hand-drawn-style stroke appears beneath the location name.
-* The stroke uses Brand Green and follows the width of the location name.
+* The stroke uses Brand Green.
+* When `[City]` spans multiple lines, the decorative stroke remains a single stroke beneath the complete city-name text block and matches the rendered width of that block; it must not repeat for individual lines.
 * The stroke is decorative only, does not affect the text layout, and is hidden from assistive technologies.
 * Spacing After: `24px` (`M`).
 
