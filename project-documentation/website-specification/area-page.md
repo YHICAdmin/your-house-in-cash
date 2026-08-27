@@ -165,8 +165,11 @@ Immediately communicate the location, offer, and credibility of the business, wh
 ## Local Images
 
 * The `Local Media Composition` contains exactly three rectangular images with different dimensions and Aspect Ratios.
-* All three images are decorative with `alt=""`; the temporary image assets are shared across all City Area Pages.
-* Final location-specific image content will feature properties, streets, landmarks, or recognizable residential context from the represented location and replace the temporary files at the same paths while preserving their respective Aspect Ratios.
+* The same three images are used across all City Area Pages and do not change according to `[City]`.
+* The images provide general residential context and must not imply that they depict the named city.
+* The currently selected image assets are temporary and will later be replaced by three final shared images.
+* The final images retain the same asset paths, Aspect Ratios, composition geometry, and responsive behavior.
+* All three images are decorative and use `alt=""`.
 * All images use `object-fit: cover`, the global Medium Border Radius, and the global Subtle Shadow.
 * The horizontal gap between the two upper images is `8%` of the composition width.
 * The upper row's height includes the Left Image's vertical offset.
