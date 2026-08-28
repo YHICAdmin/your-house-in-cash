@@ -221,56 +221,93 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 ## Purpose
 
-Allow sellers to quickly identify the situation that best matches their circumstances and understand that we know how to handle it.
+Help sellers identify the situation that best matches their circumstances and understand that the company has relevant experience.
 
-The section also provides entry points to dedicated content and SEO pages for each situation.
+Provide entry points to dedicated content and SEO pages for each documented situation.
 
-## Structure
+## Layout
 
-- Section Label: **We Help With**, with House icon.
-- Headline: **What brings you here?**
-- Supporting copy.
-- List of situations.
-- Dynamic content area for the selected situation, including:
-  - Relevant image.
-  - Short explanation.
-  - Relevant benefits.
-  - CTA linking to the dedicated situation page.
-- **Contact Us** option for users who are unsure which situation applies to them.
+The Section Label, Primary Headline, and Supporting Copy appear above the main content area.
 
-## Visual Direction
+On Desktop, the main content area:
 
-- The headline and supporting copy appear above the main content area rather than inside it.
-- The Section Label is positioned above the primary headline.
-- The main content area occupies a relatively limited portion of the available width, preserving generous whitespace.
-- The internal composition uses an approximate **35% Situation Selector / 65% Content** split.
-- Keep the visual language minimal. Do not present every situation as a large card.
-- The active situation receives a subtle visual distinction.
-- The image supports the selected situation but should not become the dominant visual element.
+- Is bounded by the outer System Lines.
+- Uses an approximate `35% Situation Selector / 65% Selected Situation Content` distribution.
+- Uses the second System Line from the left as the divider between the Situation Selector and Selected Situation Content.
+- Preserves spacing between foreground content and the dividing System Line on both sides.
+- Occupies a limited portion of the available width to preserve surrounding whitespace.
 
-## Behavior
+The Primary Headline and Supporting Copy are not constrained by the internal `35% / 65%` division.
 
-- Selecting a situation on the left updates the dynamic content area on the right.
-- Each situation can link to its own dedicated SEO page.
-- **Foreclosure** may be used as the default selected situation.
-- All primary situation options should remain visible without requiring a carousel.
+The Tablet and Mobile composition, stacking, spacing, and interaction behavior remain pending.
 
-## Technical Specifications
+## Section Label
 
-No additional Situations-specific technical specifications are currently defined. Global typography, spacing, color, component, and layout rules apply unless explicitly overridden.
+- First element in the Section.
+- Content: `We Help With`.
+- Includes a House icon.
+- Appears above the Primary Headline.
 
-## Responsive Behavior
+## Primary Headline
 
-No specific Tablet or Mobile composition is currently defined.
+- Follows the Section Label.
+- Content: `What brings you here?`
+- Appears above the main content area.
 
-The section should preserve access to all primary situations and the relationship between the Situation Selector and the selected content. Exact stacking, ordering, and interaction behavior on smaller viewports remain to be defined.
+## Supporting Copy
 
-## Line System
+- Follows the Primary Headline.
+- Appears above the main content area.
+- Content remains pending.
 
-- The outer System Lines bound the main content area.
-- On Desktop, the **second System Line from the left** also serves as the divider between the Situation Selector and the dynamic content area.
-- Content on both sides of the dividing line maintains appropriate padding.
-- The headline and supporting copy are not required to follow this internal division.
+## Situation Selector
+
+- Follows the Supporting Copy in document order.
+- Occupies approximately `35%` of the main content area on Desktop.
+- Displays all primary situation options without a carousel.
+- Does not present every situation as a large Card.
+- Selecting an option updates the Selected Situation Content.
+- The active option receives a subtle visual distinction.
+- The complete list of situations remains pending.
+- The default selected situation remains pending; `Foreclosure` is the proposed default.
+
+## Selected Situation Content
+
+- Follows the Situation Selector in document order.
+- Occupies approximately `65%` of the main content area on Desktop.
+- Displays content corresponding to the active Situation Selector option.
+- Contains the following elements in order:
+  1. Situation Image.
+  2. Situation Explanation.
+  3. Situation Benefits.
+  4. Situation CTA.
+
+### Situation Image
+
+- Displays an image relevant to the selected situation.
+- Supports the content without becoming the dominant visual element.
+- Approved assets, dimensions, Aspect Ratio, and alternative-text treatment remain pending.
+
+### Situation Explanation
+
+- Provides a short explanation relevant to the selected situation.
+- Exact content and typography remain pending.
+
+### Situation Benefits
+
+- Displays benefits relevant to the selected situation.
+- Content, quantity, structure, typography, and semantics remain pending.
+
+### Situation CTA
+
+- Links to the dedicated content or SEO page for the selected situation.
+- Label, Component, variant, and situation-specific destinations remain pending.
+
+## Contact Us Option
+
+- Follows the Selected Situation Content in document order.
+- Provides an alternative path for users who are unsure which situation applies to them.
+- Content, Component, destination, placement, and responsive behavior remain pending.
 
 # Reviews
 
