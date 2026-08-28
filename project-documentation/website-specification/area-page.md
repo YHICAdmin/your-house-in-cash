@@ -61,8 +61,8 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The Hero and the following Situations Section share one cross-Section background transition owned by their page-level wrapper.
 * The treatment begins within the lower Hero, with its smooth wavy upper boundary at approximately `95%` of the Hero height on the left, `80%` near the center, and `65%` on the right.
 * The wave uses a responsive SVG mask with a normalized `viewBox` and smooth Bézier curves; do not approximate it with a jagged polygon.
-* The fill transitions gradually from `#FFFFFF` across the Hero-to-Situations band and reaches solid `#E7F3E9` exactly `96px` (`3XL`) into the Situations Section.
-* The Situations Section remains solid `#E7F3E9` below that completion depth.
+* The fill transitions gradually from `#FFFFFF` across the Hero-to-Situations band and reaches solid `#DFEEE2` exactly `96px` (`3XL`) into the Situations Section.
+* The Situations Section remains solid `#DFEEE2` below that completion depth.
 * The treatment spans the full viewport width and the wrapper clips horizontal overflow without clipping the cross-Section vertical transition.
 * The gradient follows the global Gradient treatment and does not serve as the full Section background.
 * The gradient is not constrained by the Content Container, Grid, or Line System.
