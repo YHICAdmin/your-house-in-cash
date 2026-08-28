@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Provide clear, accessible navigation while keeping the primary conversion path available to the user at all times.
+Provide clear, accessible navigation.
 
 ## Layout
 
