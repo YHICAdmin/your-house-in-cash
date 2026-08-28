@@ -158,55 +158,41 @@ Immediately communicate the location, offer, and credibility of the business, wh
 ## Local Media Composition
 
 * Occupies the media area defined in the Hero Layout.
-* Contains three property/location images and one `Local Trust Card`.
+* Contains two property/location images and one `Local Trust Card`.
 * Uses an asymmetric, editorial composition.
 * The images and `Local Trust Card` read as a single visual unit.
 * The composition does not form a symmetrical Grid or a complete rectangular outer boundary.
 * Remains visually secondary to the Primary Headline.
-* On Desktop, the composition uses the maximum available overflow beyond the right outer System Line, up to 48px, while preserving the minimum Horizontal Page Padding.
-* On Tablet and Mobile, it remains within the Content Container.
+* The complete composition remains within the Content Container at every Breakpoint and preserves the globally defined content inset from the outer System Lines.
 
 ## Local Images
 
-* The `Local Media Composition` contains exactly three rectangular images with different dimensions and Aspect Ratios.
-* The same three images are used across all City Area Pages and do not change according to `[City]`.
+* The `Local Media Composition` contains exactly two rectangular images with different dimensions and Aspect Ratios.
+* The same two images are used across all City Area Pages and do not change according to `[City]`.
 * The images provide general residential context and must not imply that they depict the named city.
-* The currently selected image assets are temporary and will later be replaced by three final shared images.
+* The currently selected image assets are temporary and will later be replaced by two final shared images.
 * The final images retain the same asset paths, Aspect Ratios, composition geometry, and responsive behavior.
-* All three images are decorative and use `alt=""`.
-* All images use `object-fit: cover`, the global Medium Border Radius, and the global Subtle Shadow.
-* The horizontal gap between the two upper images is `8%` of the composition width.
-* The upper row's height includes the Left Image's vertical offset.
-* The Bottom Image is separated from the lowest edge of the upper images by `16px` (`S`).
-* The images do not overlap.
+* Both images are decorative and use `alt=""`.
+* Both images use `object-fit: cover`, the global Medium Border Radius, and the global Subtle Shadow.
+* At the approved Desktop reference size, the Left and Right Images form a `541px`-wide row with approximately `20px` of horizontal space between them.
+* Their bottom edges align, and the images do not overlap.
 
 ### Left Image
 
 * Temporary asset path: `/images/area-hero/local-left.webp`.
-* Width: `58%` of the composition width.
-* Aspect Ratio: `4:3`.
-* Positioned in the upper-left portion of the composition.
-* Begins `8%` of the composition width below the `Right Image`.
+* Desktop reference size: `271px × 202px`.
+* Positioned on the left side of the image row with its bottom edge aligned to the Right Image.
 
 ### Right Image
 
 * Temporary asset path: `/images/area-hero/local-right.webp`.
-* Width: `34%` of the composition width.
-* Aspect Ratio: `3:4`.
-* Positioned in the upper-right portion of the composition.
-* Begins at the composition's top edge and acts as the vertical anchor.
-
-### Bottom Image
-
-* Temporary asset path: `/images/area-hero/local-bottom.webp`.
-* Width: `68%` of the composition width.
-* Aspect Ratio: `16:9`.
-* Offset: `12%` from the composition's left edge.
+* Desktop reference size: `250px × 328px`.
+* Positioned on the right side of the image row with its bottom edge aligned to the Left Image.
 
 ### Responsive Behavior
 
-* The approved widths, Aspect Ratios, gaps, and offsets remain unchanged across Breakpoints, and the composition scales fluidly with the available width without changing the image order.
-* The images remain within the viewport at all Breakpoints.
+* At narrower widths, the approved image sizes, horizontal gap, and relative positions scale down proportionally as one visual unit without changing the image order or bottom alignment.
+* The complete image-and-card composition remains within the Content Container at all Breakpoints.
 
 ## Local Trust Card
 
@@ -223,14 +209,16 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The name `Noah Lubko` uses the global `Label` typography and `Text Primary` color.
 * The title `Founder & Home Buyer` uses the global `Caption` typography and `Text Secondary` color.
 * The trust message `I’ll personally review your property and guide you through the process—no pressure, no obligation.` uses the global `Body Small` typography and `Text Secondary` color.
-* Remains visually secondary to the three Local Images.
+* Remains visually secondary to the two Local Images.
 * Reinforces direct, personal involvement in the seller’s experience.
 * Uses the global Surface color, Medium Border Radius, and Floating Shadow.
 * Does not contain a CTA.
 * Preserves the same content and role across all Area Pages.
 * Remains integrated with the image composition across all Breakpoints.
-* On Desktop and Tablet, its width is `40%` of the `Local Media Composition` width. It is absolutely positioned, aligned to the composition's right and bottom edges, and overlays the Bottom Image at its lower-right corner without affecting the composition's dimensions.
-* On Mobile, its width is `64%` of the `Local Media Composition` width. It does not overlap the images, appears `16px` (`S`) below the Bottom Image, aligns to the composition's right edge, and contributes to the composition's total height.
+* Centered beneath the Left and Right Images without overlapping them.
+* At the approved Desktop reference size, approximately `20px` of vertical space separates the images' shared bottom edge from the card.
+* At narrower widths, this vertical space scales proportionally with the complete media composition.
+* The card contributes to the composition's total height at every Breakpoint.
 
 # Situations — Situations We Can Help With
 
