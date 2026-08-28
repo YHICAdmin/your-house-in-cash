@@ -180,8 +180,8 @@ export function SiteHeader() {
             className={styles.logo}
             src="/brand/Logo.svg"
             alt="Your House in Cash"
-            width={300}
-            height={200}
+            width={5423}
+            height={3534}
             priority
           />
         </Link>
