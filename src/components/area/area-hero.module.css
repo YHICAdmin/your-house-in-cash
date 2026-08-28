@@ -115,9 +115,9 @@
 
 .trustCard {
   display: flex;
-  width: 64%;
-  align-items: center;
-  gap: var(--spacing-s);
+  width: 92.16%;
+  flex-direction: column;
+  gap: var(--spacing-xs);
   margin: 3.6969% auto 0;
   padding: var(--spacing-s);
   border-radius: var(--radius-medium);
@@ -125,22 +125,30 @@
   box-shadow: var(--shadow-floating);
 }
 
+.identityRow {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: var(--spacing-s);
+}
+
 .portrait {
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
+  width: 69.12px;
+  height: 69.12px;
+  flex: 0 0 69.12px;
   border-radius: var(--radius-pill);
   object-fit: cover;
 }
 
-.trustText {
+.identityText {
   display: flex;
   min-width: 0;
   flex-direction: column;
   gap: var(--spacing-xs);
 }
 
-.trustText p {
+.identityText p,
+.message {
   margin: 0;
 }
 
@@ -171,7 +179,7 @@
   }
 
   .trustCard {
-    width: 40%;
+    width: 57.6%;
   }
 }
 

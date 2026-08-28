@@ -68,21 +68,25 @@ export function AreaHero({ city }: AreaHeroProps) {
             </div>
           </div>
           <div className={styles.trustCard}>
-            <Image
-              className={styles.portrait}
-              src="/images/local-trust-portrait.webp"
-              alt=""
-              width={48}
-              height={48}
-            />
-            <div className={styles.trustText}>
-              <p className={styles.name}>Noah Lubko</p>
-              <p className={`${styles.title} text-caption`}>Founder &amp; Home Buyer</p>
-              <p className={`${styles.message} text-body-small`}>
-                I’ll personally review your property and guide you through the
-                process—no pressure, no obligation.
-              </p>
+            <div className={styles.identityRow}>
+              <Image
+                className={styles.portrait}
+                src="/images/local-trust-portrait.webp"
+                alt=""
+                width={48}
+                height={48}
+              />
+              <div className={styles.identityText}>
+                <p className={styles.name}>Noah Lubko</p>
+                <p className={`${styles.title} text-caption`}>
+                  Founder &amp; Home Buyer
+                </p>
+              </div>
             </div>
+            <p className={`${styles.message} text-body-small`}>
+              We’re local to Northeast Ohio and understand the communities we
+              serve.
+            </p>
           </div>
         </div>
       </div>
