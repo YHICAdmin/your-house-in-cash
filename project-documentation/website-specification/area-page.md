@@ -292,7 +292,10 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
 - On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
 - No vertical gap applies between the Situation Selector and Selected Situation Content on Desktop because they appear side by side.
-- The active option receives a subtle visual distinction.
+- Across all Breakpoints, the active option uses Brand Green Dark text at `600` font weight.
+- A persistent `2px` solid Brand Green Dark indicator appears beneath the active option.
+- The active option does not use a background, Card treatment, Radius, or Shadow.
+- The font-weight change and persistent indicator ensure that the selected state is not communicated by color alone.
 - Every option is keyboard focusable and operable, with a clear focus-visible state.
 - Keyboard focus remains visible when navigating the Mobile strip.
 - The selected option and its selected state are communicated to assistive technologies.
