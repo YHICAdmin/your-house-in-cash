@@ -240,7 +240,21 @@ On Desktop, the main content area:
 
 The Primary Headline and Supporting Copy are not constrained by the main content area's internal division.
 
-The Tablet and Mobile composition, stacking, spacing, and interaction behavior remain pending.
+On Tablet:
+
+- The Situation Selector appears above the Selected Situation Content.
+- Both areas use the available content width.
+- The Situation Selector uses a two-column arrangement.
+- The internal System Line does not divide the two stacked areas.
+
+On Mobile:
+
+- The Situation Selector appears above the Selected Situation Content.
+- Both areas use the available content width.
+- The Situation Selector appears as a single horizontal strip.
+- No internal System Line divides the two stacked areas.
+
+The Contact Us Option follows the Selected Situation Content at every Breakpoint.
 
 ## Section Label
 
@@ -265,10 +279,17 @@ The Tablet and Mobile composition, stacking, spacing, and interaction behavior r
 
 - Follows the Supporting Copy in document order.
 - Occupies Grid Columns `1–3` on Desktop.
-- Displays all primary situation options without a carousel.
+- On Desktop, displays all situation options simultaneously in a vertical Selector.
+- On Tablet, displays all situation options simultaneously in a two-column arrangement.
+- On Mobile, displays the situation options in one horizontally scrollable strip.
+- When additional Mobile options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
+- The Mobile selector does not advance automatically.
 - Does not present every situation as a large Card.
-- Selecting an option updates the Selected Situation Content.
+- Selecting an option updates the Selected Situation Content below the Selector; the Selected Situation Content does not scroll horizontally with the Mobile strip.
 - The active option receives a subtle visual distinction.
+- Every option is keyboard focusable and operable, with a clear focus-visible state.
+- Keyboard focus remains visible when navigating the Mobile strip.
+- The selected option and its selected state are communicated to assistive technologies.
 - The complete list of situations remains pending.
 - The default selected situation remains pending; `Foreclosure` is the proposed default.
 
@@ -276,6 +297,8 @@ The Tablet and Mobile composition, stacking, spacing, and interaction behavior r
 
 - Follows the Situation Selector in document order.
 - Occupies Grid Columns `4–12` on Desktop.
+- On Tablet and Mobile, appears below the Situation Selector and uses the available content width.
+- On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
 - Displays content corresponding to the active Situation Selector option.
 - Contains the following elements in order:
   1. Situation Image.
@@ -307,6 +330,7 @@ The Tablet and Mobile composition, stacking, spacing, and interaction behavior r
 ## Contact Us Option
 
 - Follows the Selected Situation Content in document order.
+- Follows the Selected Situation Content at every Breakpoint.
 - Provides an alternative path for users who are unsure which situation applies to them.
 - Content, Component, destination, placement, and responsive behavior remain pending.
 
