@@ -120,6 +120,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 * Content: `100% free. No obligation.`
 * Appears directly below the `Button`.
+* Horizontally centered relative to the `Button` rather than the full content area.
 * Uses the global `Body Small` typography.
 * Uses the global `Text Secondary` color.
 * Non-interactive.

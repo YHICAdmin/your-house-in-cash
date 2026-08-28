@@ -37,6 +37,13 @@
   color: var(--color-text-secondary);
 }
 
+.ctaGroup {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  align-items: center;
+}
+
 .microcopy {
   margin: var(--spacing-xs) 0 var(--spacing-l);
   color: var(--color-text-secondary);

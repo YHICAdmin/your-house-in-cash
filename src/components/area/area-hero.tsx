@@ -35,10 +35,12 @@ export function AreaHero({ city }: AreaHeroProps) {
             We buy houses in {city} as-is, with no repairs, fees, or waiting for a
             traditional sale.
           </p>
-          <Button href="/get-cash-offer">Get My Cash Offer</Button>
-          <p className={`${styles.microcopy} text-body-small`}>
-            100% free. No obligation.
-          </p>
+          <div className={styles.ctaGroup}>
+            <Button href="/get-cash-offer">Get My Cash Offer</Button>
+            <p className={`${styles.microcopy} text-body-small`}>
+              100% free. No obligation.
+            </p>
+          </div>
           <ul className={styles.benefits}>
             {benefits.map(({ icon: Icon, label }) => (
               <li key={label} className="text-body-small">
