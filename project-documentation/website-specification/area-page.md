@@ -296,7 +296,7 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - A persistent `2px` solid Brand Green Dark indicator appears beneath the active option.
 - The active option does not use a background, Card treatment, Radius, or Shadow.
 - The font-weight change and persistent indicator ensure that the selected state is not communicated by color alone.
-- Every option is keyboard focusable and operable, with a clear focus-visible state.
+- Every option is keyboard focusable and operable and uses the global Focus-Visible Treatment.
 - Keyboard focus remains visible when navigating the Mobile strip.
 - The selected option and its selected state are communicated to assistive technologies.
 - The complete list of situations remains pending.

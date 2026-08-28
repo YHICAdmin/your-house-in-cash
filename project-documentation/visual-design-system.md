@@ -278,6 +278,14 @@ Within each area, the distinction between the primary and secondary action shoul
 
 Do not add buttons simply to fill the composition.
 
+## Focus-Visible Treatment
+
+All keyboard-focusable interactive elements use a `2px` solid Brand Green Dark outline with a `3px` offset when focus is visibly indicated.
+
+This is the global default unless a Component or Element specification explicitly defines an approved override.
+
+The global outline supplements any documented focus-specific change to text, icon, background, or another visual state unless that specification explicitly states otherwise.
+
 ## Cards & Surfaces
 
 ### General Principle

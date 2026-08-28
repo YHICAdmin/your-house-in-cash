@@ -52,7 +52,7 @@ Provide clear, accessible navigation.
 * Icon size: `24px`; interactive area: `40px × 40px`.
 * Uses a transparent background, no Border, and `#101114` icon color.
 * Hover changes the icon to Brand Green Dark.
-* Focus-visible uses a `2px` Brand Green Dark outline with a `3px` offset.
+* Uses the global Focus-Visible Treatment.
 * Active state has no additional visual treatment.
 * Activating the closed control opens the Menu; activating the open control closes it.
 
