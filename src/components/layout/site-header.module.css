@@ -180,6 +180,10 @@
   text-decoration: none;
 }
 
+.menuNavigation a:last-child {
+  border-bottom: 0;
+}
+
 .menuNavigation a:hover,
 .menuNavigation a:focus-visible {
   color: var(--color-brand-dark);
