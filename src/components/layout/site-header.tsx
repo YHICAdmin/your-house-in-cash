@@ -224,7 +224,7 @@ export function SiteHeader() {
           inert={!isMenuOpen}
         >
           <div className={styles.menuContent}>
-            <nav className={styles.menuNavigation} aria-label="Mobile navigation">
+            <nav className={styles.menuNavigation} aria-label="Menu navigation">
               {navigationItems.map((item, index) => (
                 <a
                   ref={index === 0 ? firstMenuItemRef : undefined}
