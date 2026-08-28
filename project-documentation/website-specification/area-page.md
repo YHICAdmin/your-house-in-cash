@@ -232,12 +232,13 @@ The Section Label, Primary Headline, and Supporting Copy appear above the main c
 On Desktop, the main content area:
 
 - Is bounded by the outer System Lines.
-- Uses an approximate `35% Situation Selector / 65% Selected Situation Content` distribution.
-- Uses the second System Line from the left as the divider between the Situation Selector and Selected Situation Content.
+- Places the Situation Selector in Grid Columns `1–3`.
+- Places the Selected Situation Content in Grid Columns `4–12`.
+- Uses the second System Line from the left to separate the two areas between Grid Columns `3` and `4`.
 - Preserves spacing between foreground content and the dividing System Line on both sides.
 - Occupies a limited portion of the available width to preserve surrounding whitespace.
 
-The Primary Headline and Supporting Copy are not constrained by the internal `35% / 65%` division.
+The Primary Headline and Supporting Copy are not constrained by the main content area's internal division.
 
 The Tablet and Mobile composition, stacking, spacing, and interaction behavior remain pending.
 
@@ -263,7 +264,7 @@ The Tablet and Mobile composition, stacking, spacing, and interaction behavior r
 ## Situation Selector
 
 - Follows the Supporting Copy in document order.
-- Occupies approximately `35%` of the main content area on Desktop.
+- Occupies Grid Columns `1–3` on Desktop.
 - Displays all primary situation options without a carousel.
 - Does not present every situation as a large Card.
 - Selecting an option updates the Selected Situation Content.
@@ -274,7 +275,7 @@ The Tablet and Mobile composition, stacking, spacing, and interaction behavior r
 ## Selected Situation Content
 
 - Follows the Situation Selector in document order.
-- Occupies approximately `65%` of the main content area on Desktop.
+- Occupies Grid Columns `4–12` on Desktop.
 - Displays content corresponding to the active Situation Selector option.
 - Contains the following elements in order:
   1. Situation Image.
