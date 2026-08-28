@@ -288,7 +288,7 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - When additional Mobile options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
 - The Mobile selector does not advance automatically.
 - Does not present every situation as a large Card.
-- Selecting an option updates the Selected Situation Content below the Selector; the Selected Situation Content does not scroll horizontally with the Mobile strip.
+- Selecting an option updates the Selected Situation Content within the Section.
 - On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
 - On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
 - No vertical gap applies between the Situation Selector and Selected Situation Content on Desktop because they appear side by side.
@@ -299,8 +299,18 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - Every option is keyboard focusable and operable and uses the global Focus-Visible Treatment.
 - Keyboard focus remains visible when navigating the Mobile strip.
 - The selected option and its selected state are communicated to assistive technologies.
-- The complete list of situations remains pending.
-- The default selected situation remains pending; `Foreclosure` is the proposed default.
+- Contains the following options in canonical order:
+  1. `Foreclosure`.
+  2. `Inherited Property`.
+  3. `Tired Landlord`.
+  4. `Major Repairs`.
+  5. `Vacant Property`.
+  6. `Problem Tenants`.
+  7. `Relocation`.
+  8. `Divorce`.
+  9. `Behind on Property Taxes`.
+  10. `Code Violations`.
+- `Foreclosure` is selected by default when the Section first loads.
 
 ## Selected Situation Content
 
