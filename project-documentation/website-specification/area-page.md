@@ -262,18 +262,21 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - Content: `We Help With`.
 - Includes a House icon.
 - Appears above the Primary Headline.
+- Spacing After: `16px` (`S`) across all Breakpoints.
 
 ## Primary Headline
 
 - Follows the Section Label.
 - Content: `What brings you here?`
 - Appears above the main content area.
+- Spacing After: `24px` (`M`) across all Breakpoints.
 
 ## Supporting Copy
 
 - Follows the Primary Headline.
 - Appears above the main content area.
 - Content remains pending.
+- Spacing After: `48px` (`XL`) on Desktop and Tablet, and `32px` (`L`) on Mobile.
 
 ## Situation Selector
 
@@ -286,6 +289,9 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - The Mobile selector does not advance automatically.
 - Does not present every situation as a large Card.
 - Selecting an option updates the Selected Situation Content below the Selector; the Selected Situation Content does not scroll horizontally with the Mobile strip.
+- On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
+- On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
+- No vertical gap applies between the Situation Selector and Selected Situation Content on Desktop because they appear side by side.
 - The active option receives a subtle visual distinction.
 - Every option is keyboard focusable and operable, with a clear focus-visible state.
 - Keyboard focus remains visible when navigating the Mobile strip.
@@ -331,6 +337,7 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 
 - Follows the Selected Situation Content in document order.
 - Follows the Selected Situation Content at every Breakpoint.
+- Spacing Before: `32px` (`L`) across all Breakpoints.
 - Provides an alternative path for users who are unsure which situation applies to them.
 - Content, Component, destination, placement, and responsive behavior remain pending.
 
