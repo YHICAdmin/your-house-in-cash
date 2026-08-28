@@ -221,7 +221,6 @@ export function SiteHeader() {
           id="responsive-navigation"
           className={`${styles.menuPanel}${isMenuOpen ? ` ${styles.menuPanelOpen}` : ""}`}
         >
-          <LineSystem variant="local" />
           <div className={styles.menuContent}>
             <nav className={styles.menuNavigation} aria-label="Mobile navigation">
               {navigationItems.map((item, index) => (

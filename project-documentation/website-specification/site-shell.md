@@ -14,7 +14,7 @@ Provide clear, accessible navigation.
 * As soon as the page is scrolled from its top position by any amount, the bottom border is removed and replaced by the global Subtle Shadow.
 * Opening the Menu does not change the Header's current border or Shadow state.
 * Internal System Lines remain visible but do not dictate the placement of Header elements.
-* The global Line System remains visible above the open Menu background and below its foreground content.
+* The Open Menu Panel uses an uninterrupted solid white background with no System Lines visible through it.
 
 ## Logo
 
