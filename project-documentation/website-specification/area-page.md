@@ -173,7 +173,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 * The currently selected image assets are temporary and will later be replaced by two final shared images.
 * The final images retain the same asset paths, Aspect Ratios, composition geometry, and responsive behavior.
 * Both images are decorative and use `alt=""`.
-* Both images use `object-fit: cover`, the global Medium Border Radius, and the global Subtle Shadow.
+* Both images fill their frames without distortion and use the global Medium Border Radius and global Subtle Shadow.
 * At the approved Desktop reference size, the Left and Right Images form a `541px`-wide row with approximately `20px` of horizontal space between them.
 * Their bottom edges align, and the images do not overlap.
 
@@ -198,17 +198,18 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 * Appears as part of the `Local Media Composition`.
 * Uses the local portrait asset at `/images/local-trust-portrait.webp`.
-* The portrait is rendered at `48px × 48px` with a `1:1` Aspect Ratio and `object-fit: cover`.
+* On Desktop and Tablet, the card is `57.6%` of the media composition width; on Mobile, it is `92.16%` of the media composition width.
+* Uses `16px` (`S`) internal padding.
+* The portrait is rendered at `69.12px × 69.12px` with a `1:1` Aspect Ratio and fills its crop without distortion.
 * The portrait uses a circular crop with the global Pill Radius.
-* The portrait appears at the beginning of the card's content row, vertically centered, with a `16px` (`S`) gap before the text.
 * The portrait is decorative and uses `alt=""`.
 * The final portrait will replace the file at the same path and retain the same `1:1` Aspect Ratio and rendering rules.
-* Uses `16px` (`S`) internal padding.
-* The portrait and text block remain in a single horizontal content row.
-* The text block stacks the name, title, and trust message in that order, with an `8px` (`XS`) vertical gap between each text element.
+* The portrait appears on the left of the card's identity row, with a `16px` (`S`) gap before the name-and-title group.
+* The name-and-title group is vertically centered relative to the portrait and left-aligned.
 * The name `Noah Lubko` uses the global `Label` typography and `Text Primary` color.
-* The title `Founder & Home Buyer` uses the global `Caption` typography and `Text Secondary` color.
-* The trust message `I’ll personally review your property and guide you through the process—no pressure, no obligation.` uses the global `Body Small` typography and `Text Secondary` color.
+* The title `Founder & Home Buyer` appears directly beneath the name with an `8px` (`XS`) vertical gap and uses the global `Caption` typography and `Text Secondary` color.
+* The trust message `We’re local to Northeast Ohio and understand the communities we serve.` appears beneath the complete identity row with an `8px` (`XS`) vertical gap.
+* The trust message spans the card's content width, is left-aligned, and uses the global `Body Small` typography and `Text Secondary` color.
 * Remains visually secondary to the two Local Images.
 * Reinforces direct, personal involvement in the seller’s experience.
 * Uses the global Surface color, Medium Border Radius, and Floating Shadow.
