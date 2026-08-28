@@ -4,18 +4,6 @@
   padding-block: var(--section-spacing);
 }
 
-.hero::before {
-  position: absolute;
-  z-index: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 50%;
-  background: linear-gradient(190deg, #ffffff 0%, #f7f9f7 100%);
-  content: "";
-  pointer-events: none;
-}
-
 .layout {
   align-items: center;
 }
