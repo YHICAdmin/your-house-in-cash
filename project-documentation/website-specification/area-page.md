@@ -219,13 +219,13 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 # Situations — Situations We Can Help With
 
-#### Purpose
+## Purpose
 
 Allow sellers to quickly identify the situation that best matches their circumstances and understand that we know how to handle it.
 
 The section also provides entry points to dedicated content and SEO pages for each situation.
 
-#### Structure
+## Structure
 
 - Section Label: **We Help With**, with House icon.
 - Headline: **What brings you here?**
@@ -238,7 +238,7 @@ The section also provides entry points to dedicated content and SEO pages for ea
   - CTA linking to the dedicated situation page.
 - **Contact Us** option for users who are unsure which situation applies to them.
 
-#### Visual Direction
+## Visual Direction
 
 - The headline and supporting copy appear above the main content area rather than inside it.
 - The Section Label is positioned above the primary headline.
@@ -248,24 +248,24 @@ The section also provides entry points to dedicated content and SEO pages for ea
 - The active situation receives a subtle visual distinction.
 - The image supports the selected situation but should not become the dominant visual element.
 
-#### Behavior
+## Behavior
 
 - Selecting a situation on the left updates the dynamic content area on the right.
 - Each situation can link to its own dedicated SEO page.
 - **Foreclosure** may be used as the default selected situation.
 - All primary situation options should remain visible without requiring a carousel.
 
-#### Technical Specifications
+## Technical Specifications
 
 No additional Situations-specific technical specifications are currently defined. Global typography, spacing, color, component, and layout rules apply unless explicitly overridden.
 
-#### Responsive Behavior
+## Responsive Behavior
 
 No specific Tablet or Mobile composition is currently defined.
 
 The section should preserve access to all primary situations and the relationship between the Situation Selector and the selected content. Exact stacking, ordering, and interaction behavior on smaller viewports remain to be defined.
 
-#### Line System
+## Line System
 
 - The outer System Lines bound the main content area.
 - On Desktop, the **second System Line from the left** also serves as the divider between the Situation Selector and the dynamic content area.
