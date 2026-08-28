@@ -195,7 +195,7 @@ export function SiteHeader() {
 
         <div className={styles.actions}>
           <span className={styles.headerCta}>
-            <Button href="#">Get My Cash Offer</Button>
+            <Button href="/get-cash-offer">Get My Cash Offer</Button>
           </span>
           <button
             ref={toggleRef}
@@ -235,7 +235,7 @@ export function SiteHeader() {
               ))}
             </nav>
             <div className={styles.menuCta}>
-              <Button href="#">Get My Cash Offer</Button>
+              <Button href="/get-cash-offer">Get My Cash Offer</Button>
             </div>
           </div>
         </div>
