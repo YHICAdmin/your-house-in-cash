@@ -118,7 +118,7 @@ Sections do not have a fixed height. Section height continues to be determined b
 
 The default vertical spacing for a Section is:
 
-* **Desktop:** 144px
+* **Desktop:** 96px
 * **Tablet:** 96px
 * **Mobile:** 72px
 

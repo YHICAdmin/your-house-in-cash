@@ -79,7 +79,7 @@
     --text-h2: 3.25rem;
     --text-h3: 1.75rem;
     --text-body-large: 1.25rem;
-    --section-spacing: 9rem;
+    --section-spacing: var(--spacing-3xl);
   }
 }
 
