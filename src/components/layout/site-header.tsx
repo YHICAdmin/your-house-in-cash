@@ -220,6 +220,8 @@ export function SiteHeader() {
         <div
           id="responsive-navigation"
           className={`${styles.menuPanel}${isMenuOpen ? ` ${styles.menuPanelOpen}` : ""}`}
+          aria-hidden={!isMenuOpen}
+          inert={!isMenuOpen}
         >
           <div className={styles.menuContent}>
             <nav className={styles.menuNavigation} aria-label="Mobile navigation">

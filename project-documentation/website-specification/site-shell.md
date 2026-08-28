@@ -62,12 +62,13 @@ Provide clear, accessible navigation.
 * On Tablet, follows the Header CTA and Menu Control in document, reading, and focus order.
 * On Mobile, follows the Menu Control in document, reading, and focus order.
 * Fills the remaining viewport below the Header and uses a solid `#FFFFFF` background.
-* While open, page scrolling is locked. If the Menu content exceeds the available viewport height, the panel becomes vertically scrollable.
+* While the panel is displayed, page scrolling is locked and background page content is non-interactive. If the Menu content exceeds the available viewport height, the panel becomes vertically scrollable.
 * Closes when the Menu Control is activated, a Menu Navigation link is selected, or `Escape` is pressed.
 * If the viewport changes to Desktop while open, the Menu closes and resets.
 * When opened, keyboard focus moves to the first Menu Navigation link.
 * While open, keyboard focus remains within the Header and Menu Panel; `Tab` and `Shift + Tab` cycle through only its interactive elements.
-* Content behind the open Menu Panel is not keyboard-interactive.
+* As soon as closing begins, the Menu Panel and all of its interactive content become non-interactive and hidden from assistive technologies while the visual closing transition completes.
+* Page scrolling remains locked and background page content remains non-interactive until the closing transition finishes and the Menu Panel is removed.
 * Pressing `Escape` closes the Menu and returns focus to the Menu Control.
 * Uses a short, subtle opacity transition combined with an `8px` downward movement.
 * Opening takes approximately `200ms` with ease-out timing; closing takes approximately `180ms` with ease-in timing.
