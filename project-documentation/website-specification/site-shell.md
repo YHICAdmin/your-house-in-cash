@@ -20,12 +20,15 @@ Provide clear, accessible navigation while keeping the primary conversion path a
 
 * First element in the Header.
 * Displays the company Logo on the left and preserves its original Aspect Ratio.
-* Width is determined by the Logo's Aspect Ratio.
 * Height: `56px` on Desktop, `48px` on Tablet, and `44px` on Mobile.
 
 ## Navigation
 
 * Follows the Logo in document order.
+* Contains the Desktop Navigation on Desktop and the Menu Control and Open Menu Panel on Tablet and Mobile.
+
+### Desktop Navigation
+
 * Contains links in this order: `How It Works`, `Situations`, `Areas We Buy In`, `Reviews`, `FAQ`, `About Us`.
 * Displayed only on Desktop.
 * Positioned directly after the Logo with a `24px` (`M`) gap.
@@ -36,8 +39,9 @@ Provide clear, accessible navigation while keeping the primary conversion path a
 
 ### Menu Control
 
-* Follows the Header Primary CTA in document and focus order.
 * Displayed on Tablet and Mobile and not displayed on Desktop.
+* On Tablet, this is an explicit Breakpoint-specific order change: the Header CTA precedes the Menu Control in document, reading, and focus order.
+* On Mobile, follows the Logo in document, reading, and focus order because the Header CTA is not displayed in the Header.
 * Positioned on the right; on Mobile it is the only element in the Header's right-side control area.
 * Uses a semantic button with an accessible name that communicates whether it opens or closes the navigation Menu.
 * Communicates its expanded or collapsed state to assistive technologies.
@@ -51,9 +55,10 @@ Provide clear, accessible navigation while keeping the primary conversion path a
 
 ### Open Menu Panel
 
-* Follows the persistent Header elements in document order and is displayed only while the Tablet or Mobile Menu is opening, open, or closing.
+* Displayed only while the Tablet or Mobile Menu is opening, open, or closing.
+* On Tablet, follows the Header CTA and Menu Control in document, reading, and focus order.
+* On Mobile, follows the Menu Control in document, reading, and focus order.
 * Fills the remaining viewport below the Header and uses a solid `#FFFFFF` background.
-* Feels spacious and minimal, similar in behavior and hierarchy to the provided Stripe reference without copying Stripe-specific content or styling.
 * While open, page scrolling is locked. If the Menu content exceeds the available viewport height, the panel becomes vertically scrollable.
 * Closes when the Menu Control is activated, a Menu Navigation link is selected, or `Escape` is pressed.
 * If the viewport changes to Desktop while open, the Menu closes and resets.
@@ -66,10 +71,10 @@ Provide clear, accessible navigation while keeping the primary conversion path a
 * Individual Menu elements do not animate separately. The transition does not use side-sliding, scaling, or exaggerated motion.
 * The transition is disabled when the user prefers reduced motion.
 
-### Menu Navigation
+#### Menu Navigation
 
 * First content element within the Open Menu Panel.
-* Contains the same links and order as the Primary Navigation.
+* Contains the same links and order as the Desktop Navigation.
 * Links appear as left-aligned vertical rows aligned with the Header content area.
 * Each row uses `Inter / 16px / 600 / 1.5`, with `24px` (`M`) vertical padding.
 * Horizontal alignment follows the Header and Menu Panel content area.
@@ -79,32 +84,31 @@ Provide clear, accessible navigation while keeping the primary conversion path a
 * Hover and focus-visible text color changes to Brand Green Dark.
 * Links remain keyboard accessible and use appropriate navigation and link semantics.
 
-### Menu Primary CTA
+#### Menu Primary CTA
 
 * Follows Menu Navigation in document and focus order.
 * Displayed only on Mobile; not displayed in the Tablet Menu.
 * Label: `Get My Cash Offer`.
 * Uses the standard `Button` Component and its inherited visual styling, dimensions, interaction states, and accessibility behavior.
 * Uses its content-based width and is horizontally centered at the bottom of the Open Menu Panel.
-* Uses spacing-system padding beneath it.
+* Uses `24px` (`M`) padding beneath it.
 
 ## Header CTA
 
-* Follows the Primary Navigation in document order.
 * Label: `Get My Cash Offer`.
 * Uses the standard `Button` Component and its inherited visual styling, dimensions, interaction states, and accessibility behavior.
-* Remains clear and accessible without competing visually with the page content.
-* Positioned on the right side of the Header on Desktop.
+* On Desktop, follows the Desktop Navigation in document, reading, and focus order and is positioned on the right side of the Header.
+* On Tablet, this is an explicit Breakpoint-specific order change: the Header CTA follows the Logo and precedes the Menu Control in document, reading, and focus order.
 * On Tablet, grouped on the right with the Menu Control and separated from it by `16px` (`S`).
 * Not displayed in the Header on Mobile.
 
-### Footer
+# Footer
 
-#### Purpose
+## Purpose
 
 Provide secondary navigation, company information, legal information, and contact details in a clear and unobtrusive way, while creating a structured conclusion to the page.
 
-#### Structure
+## Structure
 
 The Footer is divided into several content areas:
 
@@ -117,7 +121,7 @@ The Footer is divided into several content areas:
 
 A separate bottom row contains the copyright notice and any additional secondary information.
 
-#### Visual Direction
+## Visual Direction
 
 - Clean, minimal, and spacious.
 - Maintain a clear but understated typographic hierarchy.
@@ -126,21 +130,21 @@ A separate bottom row contains the copyright notice and any additional secondary
 - Preserve generous whitespace.
 - Do not add elements solely to fill available space.
 
-#### Behavior
+## Behavior
 
 No specific interactive behavior is currently defined beyond standard link behavior.
 
-#### Technical Specifications
+## Technical Specifications
 
 No Footer-specific technical specifications are currently defined. Global typography, spacing, color, container, and component rules apply unless explicitly overridden.
 
-#### Responsive Behavior
+## Responsive Behavior
 
 The Footer should adapt its multi-column structure to smaller viewports while preserving clear content grouping and hierarchy.
 
 The exact Tablet and Mobile layout is not currently specified.
 
-#### Line System
+## Line System
 
 - The outer System Lines bound the Footer content, using the globally defined content padding.
 - On Desktop, the four visual areas may be used as the basis for organizing **Company / Navigation / Legal / Contact**.
