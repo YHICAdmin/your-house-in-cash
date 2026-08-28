@@ -177,7 +177,7 @@ export function SiteHeader() {
         <a className={styles.logoLink} href="#" aria-label="Your House in Cash home">
           <Image
             className={styles.logo}
-            src="/brand/Logo.jpeg"
+            src="/brand/Logo.svg"
             alt="Your House in Cash"
             width={300}
             height={200}
