@@ -31,13 +31,6 @@
   flex: 0 0 auto;
 }
 
-.logoLink:focus-visible,
-.desktopNavigation a:focus-visible,
-.menuNavigation a:focus-visible {
-  outline: 2px solid var(--color-brand-dark);
-  outline-offset: 3px;
-}
-
 .logo {
   width: auto;
   height: 44px;
@@ -74,11 +67,6 @@
 
 .menuToggle:hover {
   color: var(--color-brand-dark);
-}
-
-.menuToggle:focus-visible {
-  outline: 2px solid var(--color-brand-dark);
-  outline-offset: 3px;
 }
 
 .menuIcon {
