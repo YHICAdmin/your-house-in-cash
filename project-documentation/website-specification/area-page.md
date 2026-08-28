@@ -88,19 +88,14 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 * Uses the global `H1` typography.
 * Content template: `Sell Your House Fast in [City], Ohio`.
+* `Sell Your House Fast in` uses the global `Text Primary` color.
+* The complete location phrase, `[City], Ohio`, uses the global `Brand Green` color.
 * The city name changes dynamically between Area Pages.
 * This Hero content template applies to City Area Pages; non-city Area Pages require a separately defined content template.
 * Serves as the only `H1` on the page.
 * Acts as the primary visual focal point of the Hero.
 * Wraps naturally according to the available width; do not add manual line breaks.
 * `[City]` may wrap naturally at word boundaries but must not break within a word.
-* The `[City]` wrapper uses `width: fit-content` and `max-width: 100%`.
-* A decorative stroke is rendered as a `::after` pseudo-element beneath the `[City]` text block.
-* The pseudo-element is `100%` of the rendered width of the `[City]` block and has a height of `8px`.
-* The spacing above the stroke is `8px` (`XS`).
-* The stroke uses `border-top: 3px solid #101114` (`Text Primary`), `border-radius: 50%`, and `transform: rotate(-1deg)`.
-* The stroke remains a single decoration beneath the complete `[City]` block when the city name wraps and must not repeat for individual lines.
-* The stroke is decorative only and does not affect the text layout.
 * Spacing After: `24px` (`M`).
 
 ## Supporting Copy
