@@ -275,7 +275,7 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 
 - Follows the Primary Headline.
 - Appears above the main content area.
-- Content remains pending.
+- Content: `Every homeowner’s situation is different. Choose what best describes yours to see how we can help.`
 - Spacing After: `48px` (`XL`) on Desktop and Tablet, and `32px` (`L`) on Mobile.
 
 ## Situation Selector
