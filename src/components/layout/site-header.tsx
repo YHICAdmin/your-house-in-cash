@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { LineSystem } from "./line-system";
 import { Button } from "@/components/ui/button";
@@ -174,7 +175,7 @@ export function SiteHeader() {
     >
       <LineSystem variant="local" />
       <div className={styles.inner}>
-        <a className={styles.logoLink} href="#" aria-label="Your House in Cash home">
+        <Link className={styles.logoLink} href="/" aria-label="Your House in Cash home">
           <Image
             className={styles.logo}
             src="/brand/Logo.svg"
@@ -183,7 +184,7 @@ export function SiteHeader() {
             height={200}
             priority
           />
-        </a>
+        </Link>
 
         <nav className={styles.desktopNavigation} aria-label="Primary navigation">
           {navigationItems.map((item) => (
