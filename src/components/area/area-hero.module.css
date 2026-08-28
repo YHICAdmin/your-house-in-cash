@@ -81,14 +81,15 @@
   position: relative;
   grid-column: 1 / -1;
   width: 100%;
+  max-width: 541px;
   margin-top: var(--spacing-xl);
 }
 
 .upperImages {
   display: flex;
   width: 100%;
-  align-items: flex-start;
-  gap: 8%;
+  align-items: flex-end;
+  gap: 3.6969%;
 }
 
 .imageFrame {
@@ -103,21 +104,13 @@
 }
 
 .leftImage {
-  width: 58%;
-  aspect-ratio: 4 / 3;
-  margin-top: 8%;
+  width: 50.0924%;
+  aspect-ratio: 271 / 202;
 }
 
 .rightImage {
-  width: 34%;
-  aspect-ratio: 3 / 4;
-}
-
-.bottomImage {
-  width: 68%;
-  aspect-ratio: 16 / 9;
-  margin-top: var(--spacing-s);
-  margin-left: 12%;
+  width: 46.2107%;
+  aspect-ratio: 250 / 328;
 }
 
 .trustCard {
@@ -125,8 +118,7 @@
   width: 64%;
   align-items: center;
   gap: var(--spacing-s);
-  margin-top: var(--spacing-s);
-  margin-left: auto;
+  margin: 3.6969% auto 0;
   padding: var(--spacing-s);
   border-radius: var(--radius-medium);
   background: var(--color-surface);
@@ -179,11 +171,7 @@
   }
 
   .trustCard {
-    position: absolute;
-    right: 0;
-    bottom: 0;
     width: 40%;
-    margin: 0;
   }
 }
 

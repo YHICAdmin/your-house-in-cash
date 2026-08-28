@@ -67,15 +67,6 @@ export function AreaHero({ city }: AreaHeroProps) {
               />
             </div>
           </div>
-          <div className={`${styles.imageFrame} ${styles.bottomImage}`}>
-            <Image
-              src="/images/area-hero/local-bottom.webp"
-              alt=""
-              fill
-              sizes="(min-width: 1200px) 34vw, 65vw"
-              priority
-            />
-          </div>
           <div className={styles.trustCard}>
             <Image
               className={styles.portrait}
