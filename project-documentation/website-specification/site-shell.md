@@ -1,151 +1,102 @@
-### Header
+# Header
 
-#### Purpose
+## Purpose
 
 Provide clear, accessible navigation while keeping the primary conversion path available to the user at all times.
 
-#### Structure
+## Layout
 
-The Header consists of three primary areas:
+* Quiet and minimal, with generous whitespace.
+* Sticky at the top of the viewport with no hide-and-reveal behavior while scrolling.
+* Height: `80px` on Desktop, `72px` on Tablet, and `64px` on Mobile.
+* Uses a solid `#FFFFFF` background, with all Header content vertically centered.
+* In its default state, uses a `1px` dashed `#ECEEF4` bottom border and no Shadow.
+* As soon as the page is scrolled from its top position by any amount, the bottom border is removed and replaced by the global Subtle Shadow.
+* Opening the Menu does not change the Header's current border or Shadow state.
+* Internal System Lines remain visible but do not dictate the placement of Header elements.
+* The global Line System remains visible above the open Menu background and below its foreground content.
 
-- Logo — positioned on the left.
-- Navigation — How It Works / Situations / Areas We Buy In / Reviews / FAQ / About Us.
-- Primary CTA — Get My Cash Offer, positioned on the right on Desktop and Tablet, and at the bottom of the open Menu on Mobile.
+## Logo
 
-#### Visual Direction
+* First element in the Header.
+* Displays the company Logo on the left and preserves its original Aspect Ratio.
+* Width is determined by the Logo's Aspect Ratio.
+* Height: `56px` on Desktop, `48px` on Tablet, and `44px` on Mobile.
 
-- Quiet and minimal, with generous whitespace.
-- The Primary CTA is clear and accessible but does not compete with the page content.
-- Do not use a persistent Active Page Indicator in the primary navigation.
+## Navigation
 
-#### Behavior
+* Follows the Logo in document order.
+* Contains links in this order: `How It Works`, `Situations`, `Areas We Buy In`, `Reviews`, `FAQ`, `About Us`.
+* Displayed only on Desktop.
+* Positioned directly after the Logo with a `24px` (`M`) gap.
+* Links use the global `Body Small` typography and have a `24px` (`M`) gap between them.
+* Does not use a persistent Active Page Indicator.
+* Hover and focus-visible text color changes to Brand Green Dark.
+* Navigation and links remain keyboard accessible and use the appropriate navigation and link semantics.
 
-##### Sticky & Scroll Behavior
+### Menu Control
 
-- There is no additional trigger and no hide/reveal behavior while scrolling.
-- In the default state, the Header uses the bottom border defined below and no shadow.
-- In the sticky state, the bottom border is removed and replaced by the global Subtle Shadow.
-- Scrolled State Trigger: activates as soon as the page is scrolled (`scrollY > 0`).
-Opening the Menu does not change the Header’s border or shadow state.
+* Follows the Header Primary CTA in document and focus order.
+* Displayed on Tablet and Mobile and not displayed on Desktop.
+* Positioned on the right; on Mobile it is the only element in the Header's right-side control area.
+* Uses a semantic button with an accessible name that communicates whether it opens or closes the navigation Menu.
+* Communicates its expanded or collapsed state to assistive technologies.
+* Closed state: three horizontal lines. Open state: an `X`.
+* Icon size: `24px`; interactive area: `40px × 40px`.
+* Uses a transparent background, no Border, and `#101114` icon color.
+* Hover changes the icon to Brand Green Dark.
+* Focus-visible uses a `2px` Brand Green Dark outline with a `3px` offset.
+* Active state has no additional visual treatment.
+* Activating the closed control opens the Menu; activating the open control closes it.
 
-#### Technical Specifications
+### Open Menu Panel
 
-##### Header
+* Follows the persistent Header elements in document order and is displayed only while the Tablet or Mobile Menu is opening, open, or closing.
+* Fills the remaining viewport below the Header and uses a solid `#FFFFFF` background.
+* Feels spacious and minimal, similar in behavior and hierarchy to the provided Stripe reference without copying Stripe-specific content or styling.
+* While open, page scrolling is locked. If the Menu content exceeds the available viewport height, the panel becomes vertically scrollable.
+* Closes when the Menu Control is activated, a Menu Navigation link is selected, or `Escape` is pressed.
+* If the viewport changes to Desktop while open, the Menu closes and resets.
+* When opened, keyboard focus moves to the first Menu Navigation link.
+* While open, keyboard focus remains within the Header and Menu Panel; `Tab` and `Shift + Tab` cycle through only its interactive elements.
+* Content behind the open Menu Panel is not keyboard-interactive.
+* Pressing `Escape` closes the Menu and returns focus to the Menu Control.
+* Uses a short, subtle opacity transition combined with an `8px` downward movement.
+* Opening takes approximately `200ms` with ease-out timing; closing takes approximately `180ms` with ease-in timing.
+* Individual Menu elements do not animate separately. The transition does not use side-sliding, scaling, or exaggerated motion.
+* The transition is disabled when the user prefers reduced motion.
 
-- Height:
-  - Desktop: 80px
-  - Tablet: 72px
-  - Mobile: 64px
-- Position: sticky
-- Top: 0
-- Background: #FFFFFF
-- Default Bottom Border: 1px dashed #ECEEF4
-- Sticky Shadow: Subtle Shadow
-- Vertical Alignment: center
+### Menu Navigation
 
-##### Logo
+* First content element within the Open Menu Panel.
+* Contains the same links and order as the Primary Navigation.
+* Links appear as left-aligned vertical rows aligned with the Header content area.
+* Each row uses `Inter / 16px / 600 / 1.5`, with `24px` (`M`) vertical padding.
+* Horizontal alignment follows the Header and Menu Panel content area.
+* A `1px` solid `#E4E7E4` divider separates adjacent rows.
+* Rows do not use individual backgrounds, Card treatments, or Radius.
+* The complete row is interactive, not only its text.
+* Hover and focus-visible text color changes to Brand Green Dark.
+* Links remain keyboard accessible and use appropriate navigation and link semantics.
 
-- Height:
-  - Desktop: 56px
-  - Tablet: 48px
-  - Mobile: 44px
-- Width: auto
-- Aspect Ratio: preserved
+### Menu Primary CTA
 
-##### Navigation
+* Follows Menu Navigation in document and focus order.
+* Displayed only on Mobile; not displayed in the Tablet Menu.
+* Label: `Get My Cash Offer`.
+* Uses the standard `Button` Component and its inherited visual styling, dimensions, interaction states, and accessibility behavior.
+* Uses its content-based width and is horizontally centered at the bottom of the Open Menu Panel.
+* Uses spacing-system padding beneath it.
 
-- Desktop alignment: left, directly after the Logo
-- Typography:
-  - Desktop: Body Small
-  - Tablet: —
-  - Mobile: —
-- Gap:
-  - Desktop: 24px
-  - Tablet: —
-  - Mobile: —
-- Gap from Logo on Desktop: 24px
+## Header CTA
 
-#### Responsive Behavior
-
-- On Tablet, the Primary CTA and Hamburger are grouped on the right.
-- On Mobile, the Primary CTA is removed from the Header and the Hamburger remains on the right.
-- On Mobile, the Primary CTA appears centered at the bottom of the open Menu, using the standard Button component and its content-based width.
-
-#### Accessibility
-
-- Header navigation and controls must remain keyboard accessible.
-- Interactive controls use their appropriate semantic elements.
-- Menu transitions are disabled when prefers-reduced-motion: reduce is enabled.
-
-#### Line System
-
-- The outer system lines bound the Header content according to the global definition.
-- The internal system lines remain visible but do not dictate the placement of the Logo, Navigation, or Primary CTA.
-- The global Line System remains visible over the open Menu background.
-
-#### Menu
-
-##### Open Menu Behavior
-
-- The menu fills the entire screen below the Header.
-- The panel uses a solid white background.
-- The Hamburger icon changes to a Close icon while the menu is open.
-- On Mobile, the Primary CTA appears centered at the bottom of the Menu with spacing-system padding below it.
-- The panel closes when:
-  - the Close button is pressed;
-  - a navigation item is selected;
-  - the user presses `Escape`.
-- The panel should feel spacious and minimal, similar in behavior and hierarchy to the provided Stripe reference, without copying Stripe-specific content or styling.
-- If the viewport changes to Desktop while the Menu is open, the Menu closes and its state resets.
-
-##### Navigation Rows
-
-- Navigation items are displayed vertically in rows aligned to the Header content area.
-- Typography: Inter / 16px / 600 / 1.5.
-- Text alignment: left.
-- Vertical padding: 24px.
-- Horizontal padding follows the Header / panel content alignment.
-- Divider: 1px solid #E4E7E4 between navigation rows.
-- No individual item background, Card treatment, or Radius.
-- The entire row is clickable, not only the text.
-- Hover / Focus-visible: text changes to Brand Green Dark.
-
-##### Menu Scroll Behavior
-
-- While the navigation panel is open, page scrolling is locked.
-- If the navigation content exceeds the available viewport height, the panel itself becomes vertically scrollable.
-
-##### Menu Focus Behavior
-
-- When the navigation panel opens, focus moves to the first navigation item.
-- While the panel is open, keyboard focus is contained within the Header and navigation panel.
-- `Tab` and `Shift + Tab` cycle only through interactive elements within the open Header/menu state.
-- Pressing `Escape` closes the panel and returns focus to the Hamburger / Close control.
-- Content behind the open navigation panel is not keyboard-interactive while the panel is open.
-- The Hamburger / Close control exposes its state using `aria-expanded`.
-
-##### Menu Transition
-
-- Use a short, subtle open/close transition.
-- Animate opacity and a small downward vertical offset of 8px only.
-- Open duration: approximately 200ms with `ease-out`.
-- Close duration: approximately 180ms with `ease-in`.
-- Do not animate individual navigation items separately.
-- Do not use side-slide, scale, or exaggerated motion.
-
-##### Hamburger / Close Control
-
-- Closed state: 3 horizontal lines.
-- Open state: X.
-- Icon size: 24px.
-- Hit area: 40 × 40px.
-- Background: transparent.
-- Border: none.
-- Color: #101114.
-- Gap from Primary CTA on Tablet: 16px.
-- Hover: icon color changes to Brand Green Dark.
-- Focus-visible: 2px solid Brand Green Dark outline with 3px offset.
-- Active: no additional visual treatment.
+* Follows the Primary Navigation in document order.
+* Label: `Get My Cash Offer`.
+* Uses the standard `Button` Component and its inherited visual styling, dimensions, interaction states, and accessibility behavior.
+* Remains clear and accessible without competing visually with the page content.
+* Positioned on the right side of the Header on Desktop.
+* On Tablet, grouped on the right with the Menu Control and separated from it by `16px` (`S`).
+* Not displayed in the Header on Mobile.
 
 ### Footer
 
