@@ -19,6 +19,10 @@
   margin: var(--spacing-s) 0 var(--spacing-m);
 }
 
+.location {
+  color: var(--color-brand);
+}
+
 .city {
   position: relative;
   display: inline-block;
@@ -26,19 +30,6 @@
   max-width: 100%;
   overflow-wrap: normal;
   word-break: normal;
-}
-
-.city::after {
-  position: absolute;
-  top: calc(100% + var(--spacing-xs));
-  left: 0;
-  width: 100%;
-  height: 8px;
-  border-top: 3px solid var(--color-text-primary);
-  border-radius: 50%;
-  content: "";
-  pointer-events: none;
-  transform: rotate(-1deg);
 }
 
 .supportingCopy {

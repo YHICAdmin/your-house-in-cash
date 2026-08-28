@@ -26,7 +26,10 @@ export function AreaHero({ city }: AreaHeroProps) {
         <div className={styles.content}>
           <SectionLabel icon={MapPin}>{`${city}, Ohio`}</SectionLabel>
           <h1 id="area-hero-heading" className={`${styles.heading} text-display`}>
-            Sell Your House Fast in <span className={styles.city}>{city}</span>, Ohio
+            Sell Your House Fast in{" "}
+            <span className={styles.location}>
+              <span className={styles.city}>{city}</span>, Ohio
+            </span>
           </h1>
           <p className={`${styles.supportingCopy} text-body-large`}>
             We buy houses in {city} as-is, with no repairs, fees, or waiting for a
