@@ -328,7 +328,22 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 
 - Displays an image relevant to the selected situation.
 - Supports the content without becoming the dominant visual element.
-- Approved assets, dimensions, Aspect Ratio, and alternative-text treatment remain pending.
+- Uses the following temporary asset for each situation:
+  1. `Foreclosure`: `/images/situations/foreclosure.webp`.
+  2. `Inherited Property`: `/images/situations/inherited-property.webp`.
+  3. `Tired Landlord`: `/images/situations/tired-landlord.webp`.
+  4. `Major Repairs`: `/images/situations/major-repairs.webp`.
+  5. `Vacant Property`: `/images/situations/vacant-property.webp`.
+  6. `Problem Tenants`: `/images/situations/problem-tenants.webp`.
+  7. `Relocation`: `/images/situations/relocation.webp`.
+  8. `Divorce`: `/images/situations/divorce.webp`.
+  9. `Behind on Property Taxes`: `/images/situations/behind-on-property-taxes.webp`.
+  10. `Code Violations`: `/images/situations/code-violations.webp`.
+- Each temporary asset is `1200 × 675px` with a `16:9` Aspect Ratio.
+- Final images will replace the temporary assets at the same paths and preserve the same dimensions, Aspect Ratio, and rendering behavior.
+- The image scales fluidly within its allocated width while preserving its Aspect Ratio across all Breakpoints.
+- Moderate cropping is permitted when necessary to fill the approved image frame without distortion.
+- All Situation Images are decorative and use empty alternative text: `alt=""`.
 
 ### Situation Explanation
 
