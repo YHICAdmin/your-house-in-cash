@@ -276,10 +276,22 @@ On Tablet and Mobile:
 
 ## Supporting Copy
 
+### Content
+
+* Text: `Every homeowner’s situation is different. Choose what best describes yours to see how we can help.`
+
+### Component and Semantics
+
 * Uses semantic paragraph text.
+
+### Visual Design
+
 * Uses the global `Body Large` typography and inherited supporting-copy color.
-* Content: `Every homeowner’s situation is different. Choose what best describes yours to see how we can help.`
-* Spacing After: `48px` (`XL`) on Desktop and Tablet, and `32px` (`L`) on Mobile.
+
+### Spacing After
+
+* `48px` (`XL`) on Desktop and Tablet.
+* `32px` (`L`) on Mobile.
 
 ## Situation Selector
 
