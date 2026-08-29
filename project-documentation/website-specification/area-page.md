@@ -288,7 +288,7 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - On Desktop, each option fills the available Situation Selector width, with an `8px` (`XS`) vertical gap between options.
 - On Tablet, each option fills its allocated column, with a `16px` (`S`) row and column gap.
 - On Mobile, each option uses its content-based width, with an `8px` (`XS`) gap between options in the horizontal strip.
-- Selecting an option updates the Selected Situation Content within the Section without moving keyboard focus.
+- Selecting an option updates the Selected Situation Content within the Section and keeps keyboard focus on the selected option.
 - On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
 - On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
 - No vertical gap applies between the Situation Selector and Selected Situation Content on Desktop because they appear side by side.
@@ -310,7 +310,9 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - `Enter` or `Space` selects the focused option.
 - Exactly one option is selected at a time.
 - The selected state is communicated to assistive technologies.
-- Updated Selected Situation Content is communicated to assistive technologies without automatically moving focus into it.
+- Selected Situation Content updates are announced politely without interrupting other assistive-technology output.
+- Update announcement template: `[Situation] details are now available.`
+- The complete updated content is not announced automatically.
 - Keyboard focus remains visible when navigating the Mobile strip.
 - Contains the following options in canonical order:
   1. `Foreclosure`.
