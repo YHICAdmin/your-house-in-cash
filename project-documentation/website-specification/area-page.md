@@ -45,7 +45,6 @@ Provide the seller with a clear path to begin the conversion process.
 
 ### Tablet
 
-* Uses the global 8-column Grid.
 * The content area occupies all 8 columns.
 * The media area occupies all 8 columns.
 * The media area appears below the content area with a 64px gap.
