@@ -275,7 +275,7 @@ Provide the seller with a clear path to begin the conversion process.
 ## Local Trust Card
 
 * Uses the local portrait asset at `/images/local-trust-portrait.webp`.
-* On Desktop and Tablet, the card is `57.6%` of the media composition width; on Mobile, it is `92.16%` of the media composition width.
+* On Desktop and Tablet, the card is `57.6%` of the Local Images row width; on Mobile, it is `92.16%` of the Local Images row width.
 * Uses `16px` (`S`) internal padding.
 * The portrait is rendered at `69.12px × 69.12px` with a `1:1` Aspect Ratio and fills its crop without distortion.
 * The portrait uses a circular crop with the global Pill Radius.
