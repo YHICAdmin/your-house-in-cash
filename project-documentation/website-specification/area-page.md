@@ -479,7 +479,6 @@ On Tablet and Mobile:
 ## Contact Us Option
 
 * Spacing Before: `32px` (`L`) across all Breakpoints.
-* Provides an alternative path for users who are unsure which situation applies to them.
 * Supporting text: `Not sure which situation fits?`
 * Action label: `Tell Us About Your Situation`.
 * Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
