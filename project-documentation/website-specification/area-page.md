@@ -344,6 +344,7 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - The image scales fluidly within its allocated width while preserving its Aspect Ratio across all Breakpoints.
 - Moderate cropping is permitted when necessary to fill the approved image frame without distortion.
 - All Situation Images are decorative and use empty alternative text: `alt=""`.
+- Spacing After: `24px` (`M`) across all Breakpoints.
 
 ### Situation Explanation
 
@@ -360,6 +361,7 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
   8. `Divorce`: `Selling a house during a divorce can add stress to an already difficult transition. We provide a simple and discreet way to sell the property as-is.`
   9. `Behind on Property Taxes`: `Falling behind on property taxes can create increasing pressure. We offer a straightforward as-is sale so you can explore your next step.`
   10. `Code Violations`: `Code violations can make repairs and a traditional listing more difficult. We buy houses as-is, including properties with unresolved violations.`
+- Spacing After: `32px` (`L`) across all Breakpoints.
 
 ### Situation Benefits
 
@@ -413,6 +415,7 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
       - `Sell with existing code violations`.
       - `Avoid completing repairs before the sale`.
       - `Use a straightforward sale process`.
+- Spacing After: `32px` (`L`) across all Breakpoints.
 
 ### Situation CTA
 
