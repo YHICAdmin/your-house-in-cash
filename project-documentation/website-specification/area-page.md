@@ -274,24 +274,43 @@ Provide the seller with a clear path to begin the conversion process.
 
 ## Local Trust Card
 
+### Content
+
 * Uses the local portrait asset at `/images/local-trust-portrait.webp`.
+* The final portrait will replace the file at the same path and retain the same `1:1` Aspect Ratio and rendering rules.
+* Name: `Noah Lubko`.
+* Title: `Founder & Home Buyer`.
+* Trust message: `We’re local to Northeast Ohio and understand the communities we serve.`
+* Preserves the same content across all Area Pages.
+
+### Visual Design
+
+* The portrait fills its crop without distortion and uses a circular crop with the global Pill Radius.
+* The name uses the global `Label` typography and `Text Primary` color.
+* The title uses the global `Caption` typography and `Text Secondary` color.
+* The trust message uses the global `Body Small` typography and `Text Secondary` color.
+* The card uses the global Surface color, Medium Border Radius, and Floating Shadow.
+
+### Dimensions and Alignment
+
 * On Desktop and Tablet, the card is `57.6%` of the Local Images row width; on Mobile, it is `92.16%` of the Local Images row width.
 * Uses `16px` (`S`) internal padding.
-* The portrait is rendered at `69.12px × 69.12px` with a `1:1` Aspect Ratio and fills its crop without distortion.
-* The portrait uses a circular crop with the global Pill Radius.
-* The portrait is decorative and uses `alt=""`.
-* The final portrait will replace the file at the same path and retain the same `1:1` Aspect Ratio and rendering rules.
+* The portrait is rendered at `69.12px × 69.12px` with a `1:1` Aspect Ratio.
 * The portrait appears on the left of the card's identity row, with a `16px` (`S`) gap before the name-and-title group.
 * The name-and-title group is vertically centered relative to the portrait and left-aligned.
-* The name `Noah Lubko` uses the global `Label` typography and `Text Primary` color.
-* The title `Founder & Home Buyer` appears directly beneath the name with an `8px` (`XS`) vertical gap and uses the global `Caption` typography and `Text Secondary` color.
-* The trust message `We’re local to Northeast Ohio and understand the communities we serve.` appears beneath the complete identity row with an `8px` (`XS`) vertical gap.
-* The trust message spans the card's content width, is left-aligned, and uses the global `Body Small` typography and `Text Secondary` color.
-* Uses the global Surface color, Medium Border Radius, and Floating Shadow.
-* Preserves the same content across all Area Pages.
-* Centered beneath the Left and Right Images.
+* The title appears directly beneath the name with an `8px` (`XS`) vertical gap.
+* The trust message appears beneath the complete identity row with an `8px` (`XS`) vertical gap.
+* The trust message spans the card's content width and is left-aligned.
+* The card is centered beneath the Left and Right Images.
 * At the approved Desktop reference size, approximately `20px` of vertical space separates the images' shared bottom edge from the card.
-* At narrower widths, this vertical space scales proportionally with the Local Images row width.
+
+### Accessibility
+
+* The portrait is decorative and uses `alt=""`.
+
+### Responsive Behavior
+
+* At narrower widths, the vertical space between the Local Images and card scales proportionally with the Local Images row width.
 
 # Situations — Situations We Can Help With
 
