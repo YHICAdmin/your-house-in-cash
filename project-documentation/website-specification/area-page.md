@@ -538,6 +538,10 @@ On Desktop, the main content area:
 * Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
 * Uses link semantics.
 
+### Visual Design
+
+* The supporting text uses the global `Body` typography and `Text Secondary` color.
+
 ### Dimensions and Alignment
 
 * On Desktop, occupies Grid Columns `4–12`.
