@@ -234,10 +234,6 @@ On Desktop, the main content area:
 * Spans the complete Desktop Grid from Column `1` through Column `12`.
 * Uses the second System Line from the left to separate the two areas between Grid Columns `3` and `4`.
 
-On Tablet and Mobile:
-
-* The Situation Selector appears above the Selected Situation Content.
-
 ## Section Label
 
 ### Content
