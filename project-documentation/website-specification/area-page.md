@@ -270,7 +270,6 @@ Provide the seller with a clear path to begin the conversion process.
 
 ## Local Trust Card
 
-* Appears as part of the `Local Media Composition`.
 * Uses the local portrait asset at `/images/local-trust-portrait.webp`.
 * On Desktop and Tablet, the card is `57.6%` of the media composition width; on Mobile, it is `92.16%` of the media composition width.
 * Uses `16px` (`S`) internal padding.
