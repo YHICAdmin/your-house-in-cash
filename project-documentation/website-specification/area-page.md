@@ -499,8 +499,8 @@ On Tablet and Mobile:
 
 ### Situation CTA
 
-* Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
-* Uses link semantics.
+#### Content
+
 * Visible label template: `Learn More About [Situation]`.
 * Uses the following destination for each situation:
   1. `Foreclosure`: `/situations/foreclosure`.
@@ -514,6 +514,11 @@ On Tablet and Mobile:
   9. `Behind on Property Taxes`: `/situations/behind-on-property-taxes`.
   10. `Code Violations`: `/situations/code-violations`.
 * These paths establish the canonical route convention for dedicated Situation Pages.
+
+#### Component and Semantics
+
+* Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
+* Uses link semantics.
 
 ## Contact Us Option
 
