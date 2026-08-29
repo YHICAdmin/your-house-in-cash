@@ -363,8 +363,56 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 
 ### Situation Benefits
 
-- Displays benefits relevant to the selected situation.
-- Content, quantity, structure, typography, and semantics remain pending.
+- Displays exactly three benefits for the selected situation in the documented order.
+- Uses one semantic unordered list containing three list items.
+- Each item uses the global `Body` typography and `Text Primary` color.
+- Each item includes the Lucide `Check` icon at `20px` in Brand Green Dark.
+- The icons are decorative and hidden from assistive technologies.
+- The gap between each icon and its text is `12px`.
+- The vertical gap between items is `16px` (`S`).
+- Icons align with the first line when benefit text wraps.
+- The list remains vertical across all Breakpoints.
+- Uses the following benefits for each situation:
+  1. `Foreclosure`:
+     - `Sell without making repairs`.
+     - `Choose a flexible closing date`.
+     - `Avoid a traditional listing`.
+  2. `Inherited Property`:
+     - `Sell the inherited property as-is`.
+     - `Leave unwanted belongings behind`.
+     - `Simplify the sale process`.
+  3. `Tired Landlord`:
+     - `Sell an occupied or vacant rental`.
+     - `Skip repairs and another listing`.
+     - `Choose a timeline that works for you`.
+  4. `Major Repairs`:
+     - `Sell without completing repairs`.
+     - `Skip cleaning and staging`.
+     - `Avoid traditional buyer financing`.
+  5. `Vacant Property`:
+     - `Reduce ongoing holding costs`.
+     - `Sell without preparing the property`.
+     - `Choose a flexible closing date`.
+  6. `Problem Tenants`:
+     - `Sell the property in its current condition`.
+     - `Discuss options for an occupied property`.
+     - `Avoid another traditional listing`.
+  7. `Relocation`:
+     - `Choose a closing date around your move`.
+     - `Skip repairs and staging`.
+     - `Coordinate the sale after relocating`.
+  8. `Divorce`:
+     - `Use a simple, discreet sale process`.
+     - `Choose a flexible timeline`.
+     - `Sell the property as-is`.
+  9. `Behind on Property Taxes`:
+     - `Sell the property as-is`.
+     - `Avoid preparing for a traditional listing`.
+     - `Choose a closing date that fits your situation`.
+  10. `Code Violations`:
+      - `Sell with existing code violations`.
+      - `Avoid completing repairs before the sale`.
+      - `Use a straightforward sale process`.
 
 ### Situation CTA
 
