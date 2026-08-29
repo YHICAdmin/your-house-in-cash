@@ -282,7 +282,7 @@ On Tablet and Mobile:
 
 ### Component and Semantics
 
-* Uses semantic paragraph text.
+* Uses paragraph semantics.
 
 ### Visual Design
 
