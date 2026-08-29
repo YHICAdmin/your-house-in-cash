@@ -236,8 +236,6 @@ On Desktop, the main content area:
 - Places the Selected Situation Content in Grid Columns `4–12`.
 - Uses the second System Line from the left to separate the two areas between Grid Columns `3` and `4`.
 
-The Primary Headline and Supporting Copy are not constrained by the main content area's internal division.
-
 On Tablet and Mobile:
 
 - The Situation Selector appears above the Selected Situation Content.
