@@ -391,7 +391,6 @@ On Tablet and Mobile:
 
 ### Situation Explanation
 
-* Provides a short explanation relevant to the selected situation.
 * Uses the global `Body Large` typography.
 * Uses the following content for each situation:
   1. `Foreclosure`: `Facing foreclosure can feel overwhelming. We offer a straightforward way to sell your house as-is and work around your timeline.`
