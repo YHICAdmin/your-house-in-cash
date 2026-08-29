@@ -317,6 +317,7 @@ On Tablet and Mobile:
 
 ### Visual Design
 
+* Each option uses the global `Body` typography and `Text Primary` color.
 * The default state does not use a background, Border, Divider, Radius, or Shadow.
 * Across all Breakpoints, the selected option uses Brand Green Dark text at `600` font weight.
 * A persistent `2px` solid Brand Green Dark indicator appears beneath the selected option.
