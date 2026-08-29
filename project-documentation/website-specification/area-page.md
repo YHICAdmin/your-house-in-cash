@@ -241,7 +241,6 @@ Provide the seller with a clear path to begin the conversion process.
 ## Local Media Composition
 
 * Contains two property/location images and one `Local Trust Card`.
-* The images and `Local Trust Card` read as a single visual unit.
 * The composition does not form a symmetrical Grid or a complete rectangular outer boundary.
 * Remains visually secondary to the Primary Headline.
 * The complete composition remains within the Content Container at every Breakpoint and preserves the globally defined content inset from the outer System Lines.
