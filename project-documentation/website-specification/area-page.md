@@ -240,7 +240,6 @@ On Tablet and Mobile:
 
 - The Situation Selector appears above the Selected Situation Content.
 - Both areas use the available content width.
-- The internal System Line does not divide the two stacked areas.
 
 The Contact Us Option follows the Selected Situation Content at every Breakpoint.
 
