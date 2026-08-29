@@ -232,7 +232,6 @@ The Section Label, Primary Headline, and Supporting Copy appear above the main c
 On Desktop, the main content area:
 
 * Spans the complete Desktop Grid from Column `1` through Column `12`.
-* Places the Selected Situation Content in Grid Columns `4–12`.
 * Uses the second System Line from the left to separate the two areas between Grid Columns `3` and `4`.
 
 On Tablet and Mobile:
@@ -370,6 +369,10 @@ On Tablet and Mobile:
 * Its accessible name is derived from the selected option and updates when the selection changes.
 * On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
 * Displays content corresponding to the selected Situation Selector option.
+
+### Dimensions and Alignment
+
+* On Desktop, occupies Grid Columns `4–12`.
 
 ### Situation Image
 
