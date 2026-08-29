@@ -173,15 +173,31 @@ Provide the seller with a clear path to begin the conversion process.
 
 ## Supporting Microcopy
 
+### Content
+
 * Content: `100% free. No obligation.`
-* Appears directly below the `Button`.
-* Horizontally centered relative to the `Button` rather than the full content area.
+
+### Visual Design
+
 * Uses the global `Body Small` typography.
 * Uses the global `Text Secondary` color.
-* Non-interactive.
 * Remains visually secondary to the `Button`.
+
+### Dimensions and Alignment
+
+* Horizontally centered relative to the `Button` rather than the full content area.
+
+### Spacing After
+
+* `32px` (`L`).
+
+### Interaction
+
+* Non-interactive.
+
+### Responsive Behavior
+
 * Preserves the same content and behavior across all Breakpoints.
-* Spacing After: `32px` (`L`).
 
 ## Benefits List
 
