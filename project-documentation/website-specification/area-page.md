@@ -243,7 +243,7 @@ On Tablet and Mobile:
 
 ## Section Label
 
-* Uses the documented `Section Label` Component and inherits its approved icon size and visual treatment.
+* Uses the documented `Section Label` Component.
 * Content: `We Help With`.
 * Includes the canonical Lucide `House` icon.
 * The icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
