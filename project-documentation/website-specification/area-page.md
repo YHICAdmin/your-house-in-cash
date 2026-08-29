@@ -361,7 +361,6 @@ On Desktop, the main content area:
 
 * Forms an identifiable content region associated with the currently selected Situation option.
 * Its accessible name is derived from the selected option and updates when the selection changes.
-* On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
 * Displays content corresponding to the selected Situation Selector option.
 
 ### Dimensions and Alignment
@@ -371,6 +370,7 @@ On Desktop, the main content area:
 ### Responsive Behavior
 
 * On Tablet and Mobile, uses the available content width.
+* On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
 
 ### Situation Image
 
