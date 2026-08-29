@@ -407,8 +407,7 @@ On Tablet and Mobile:
 
 ### Situation Benefits
 
-* Displays exactly three benefits for the selected situation in the documented order.
-* Uses one semantic unordered list containing three list items.
+* Uses one semantic unordered list whose three items appear in the documented order.
 * Each item uses the global `Body` typography and `Text Primary` color.
 * Each item includes the Lucide `Check` icon at `20px` in Brand Green Dark.
 * The icons are decorative and hidden from assistive technologies.
