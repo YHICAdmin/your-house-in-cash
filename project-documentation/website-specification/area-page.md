@@ -231,7 +231,6 @@ The Section Label, Primary Headline, and Supporting Copy appear above the main c
 
 On Desktop, the main content area:
 
-- Is bounded by the outer System Lines.
 - Spans the complete Desktop Grid from Column `1` through Column `12`.
 - Places the Situation Selector in Grid Columns `1–3`.
 - Places the Selected Situation Content in Grid Columns `4–12`.
