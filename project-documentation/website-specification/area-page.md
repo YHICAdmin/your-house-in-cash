@@ -235,7 +235,6 @@ On Desktop, the main content area:
 - Places the Situation Selector in Grid Columns `1–3`.
 - Places the Selected Situation Content in Grid Columns `4–12`.
 - Uses the second System Line from the left to separate the two areas between Grid Columns `3` and `4`.
-- Preserves spacing between foreground content and the dividing System Line on both sides.
 
 The Primary Headline and Supporting Copy are not constrained by the main content area's internal division.
 
