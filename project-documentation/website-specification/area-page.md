@@ -296,6 +296,9 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - A persistent `2px` solid Brand Green Dark indicator appears beneath the active option.
 - The active option does not use a background, Card treatment, Radius, or Shadow.
 - The font-weight change and persistent indicator ensure that the selected state is not communicated by color alone.
+- When an unselected option is hovered, its text changes to Brand Green Dark while its font weight remains unchanged.
+- Hovering an unselected option does not display the persistent selected indicator or add a background, Card treatment, Radius, or Shadow.
+- A selected option retains its approved selected-state treatment while hovered.
 - The Situation Selector is a group of independent selection buttons rather than a composite tab interface.
 - Each option is reached individually with `Tab` and `Shift + Tab` and uses the global Focus-Visible Treatment.
 - `Enter` or `Space` selects the focused option.
