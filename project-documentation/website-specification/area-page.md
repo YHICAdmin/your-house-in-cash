@@ -237,7 +237,6 @@ On Desktop, the main content area:
 On Tablet and Mobile:
 
 * The Situation Selector appears above the Selected Situation Content.
-* Both areas use the available content width.
 
 ## Section Label
 
@@ -354,6 +353,7 @@ On Tablet and Mobile:
 
 ### Responsive Behavior
 
+* On Tablet and Mobile, uses the available content width.
 * On Desktop, displays all situation options simultaneously in a vertical Selector.
 * On Tablet, displays all situation options simultaneously in a two-column arrangement.
 * On Mobile, displays the situation options in one horizontally scrollable strip.
@@ -373,6 +373,10 @@ On Tablet and Mobile:
 ### Dimensions and Alignment
 
 * On Desktop, occupies Grid Columns `4–12`.
+
+### Responsive Behavior
+
+* On Tablet and Mobile, uses the available content width.
 
 ### Situation Image
 
