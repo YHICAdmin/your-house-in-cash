@@ -326,7 +326,6 @@ On Tablet and Mobile:
 * The selected state is communicated to assistive technologies.
 * Selected Situation Content updates are announced politely without interrupting other assistive-technology output.
 * Update announcement template: `[Situation] details are now available.`
-* The complete updated content is not announced automatically.
 * Keyboard focus remains visible when navigating the Mobile strip.
 * Contains the following options in canonical order:
   1. `Foreclosure`.
