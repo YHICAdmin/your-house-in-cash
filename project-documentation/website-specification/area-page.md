@@ -127,12 +127,19 @@ Provide the seller with a clear path to begin the conversion process.
 
 ## Supporting Copy
 
-* Appears directly below the Primary Headline.
-* Uses the global `Body Large` typography.
+### Content
+
 * Content template: `We buy houses in [City] as-is, with no repairs, fees, or waiting for a traditional sale.`
 * The city name changes dynamically between Area Pages.
+
+### Visual Design
+
+* Uses the global `Body Large` typography.
 * Remains visually secondary to the Primary Headline.
-* Spacing After: `32px` (`L`).
+
+### Spacing After
+
+* `32px` (`L`).
 
 ## Button
 
