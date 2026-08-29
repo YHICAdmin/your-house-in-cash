@@ -84,6 +84,14 @@ At narrower viewport widths, the Content Container contracts to fit the availabl
 
 Individual elements may extend beyond the Content Container only when explicitly permitted by the relevant Section or Element specification. Such an exception does not alter the boundaries of the Content Container, and the overflowing element must preserve the minimum Horizontal Page Padding from the viewport edge.
 
+### Foreground Content Alignment
+
+By default, Section foreground content begins at the left foreground-content edge established by the global content inset.
+
+Elements within the same content flow share that outer alignment edge unless the relevant Section or Element specification explicitly defines a different alignment.
+
+Component-internal padding does not alter the Component’s outer alignment edge.
+
 ### Grid
 
 The Content Container is divided into a Grid according to the Breakpoint:
