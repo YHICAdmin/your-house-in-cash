@@ -410,7 +410,7 @@ On Tablet and Mobile:
 * Uses one semantic unordered list whose three items appear in the documented order.
 * Each item uses the global `Body` typography and `Text Primary` color.
 * Each item includes the Lucide `Check` icon at `20px` in Brand Green Dark.
-* The icons are decorative and hidden from assistive technologies.
+* The icons are decorative, hidden from assistive technologies, and not keyboard-focusable.
 * The gap between each icon and its text is `12px`.
 * The vertical gap between items is `16px` (`S`).
 * Icons align with the first line when benefit text wraps.
