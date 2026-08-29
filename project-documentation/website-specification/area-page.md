@@ -152,6 +152,12 @@ Provide the seller with a clear path to begin the conversion process.
 * Uses the documented `Button` Component.
 * Renders with anchor semantics because it navigates to a separate route.
 
+### Dimensions and Alignment
+
+* Minimum height: `64px`.
+* Horizontal internal padding: `48px` (`XL`).
+* The label is centered within the Button.
+
 ### Spacing After
 
 * `8px` (`XS`).
@@ -159,6 +165,11 @@ Provide the seller with a clear path to begin the conversion process.
 ### Interaction
 
 * Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
+
+### Responsive Behavior
+
+* On Mobile, uses `100%` of the available content width.
+* On Tablet and Desktop, uses `60%` of the available content width, up to a maximum width of `360px`.
 
 ## Supporting Microcopy
 
