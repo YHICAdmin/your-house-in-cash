@@ -266,7 +266,6 @@ Provide the seller with a clear path to begin the conversion process.
 ### Responsive Behavior
 
 * At narrower widths, the approved image sizes, horizontal gap, and relative positions scale down proportionally as one visual unit without changing the image order or bottom alignment.
-* The complete image-and-card composition remains within the Content Container at all Breakpoints.
 
 ## Local Trust Card
 
