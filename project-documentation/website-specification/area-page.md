@@ -240,19 +240,11 @@ On Desktop, the main content area:
 
 The Primary Headline and Supporting Copy are not constrained by the main content area's internal division.
 
-On Tablet:
+On Tablet and Mobile:
 
 - The Situation Selector appears above the Selected Situation Content.
 - Both areas use the available content width.
-- The Situation Selector uses a two-column arrangement.
 - The internal System Line does not divide the two stacked areas.
-
-On Mobile:
-
-- The Situation Selector appears above the Selected Situation Content.
-- Both areas use the available content width.
-- The Situation Selector appears as a single horizontal strip.
-- No internal System Line divides the two stacked areas.
 
 The Contact Us Option follows the Selected Situation Content at every Breakpoint.
 
@@ -261,34 +253,29 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - First element in the Section.
 - Content: `We Help With`.
 - Includes a House icon.
-- Appears above the Primary Headline.
 - Spacing After: `16px` (`S`) across all Breakpoints.
 
 ## Primary Headline
 
 - Follows the Section Label.
 - Content: `What brings you here?`
-- Appears above the main content area.
 - Spacing After: `24px` (`M`) across all Breakpoints.
 
 ## Supporting Copy
 
 - Follows the Primary Headline.
-- Appears above the main content area.
 - Content: `Every homeowner’s situation is different. Choose what best describes yours to see how we can help.`
 - Spacing After: `48px` (`XL`) on Desktop and Tablet, and `32px` (`L`) on Mobile.
 
 ## Situation Selector
 
 - Follows the Supporting Copy in document order.
-- Occupies Grid Columns `1–3` on Desktop.
 - On Desktop, displays all situation options simultaneously in a vertical Selector.
 - On Tablet, displays all situation options simultaneously in a two-column arrangement.
 - On Mobile, displays the situation options in one horizontally scrollable strip.
 - When additional Mobile options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
 - The Mobile selector does not advance automatically.
-- Does not present every situation as a large Card.
-- Uses the global `Body` typography at `400` font weight and `Text Primary` color.
+- Uses the global `Body` typography and `Text Primary` color.
 - Text is left-aligned.
 - Each option has a minimum interactive height of `48px`, with `8px` vertical and `16px` horizontal internal padding.
 - The default state does not use a background, Border, Divider, Radius, or Shadow.
@@ -299,20 +286,19 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
 - On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
 - No vertical gap applies between the Situation Selector and Selected Situation Content on Desktop because they appear side by side.
-- Across all Breakpoints, the active option uses Brand Green Dark text at `600` font weight.
-- A persistent `2px` solid Brand Green Dark indicator appears beneath the active option.
-- The active option does not use a background, Card treatment, Radius, or Shadow.
-- The font-weight change and persistent indicator ensure that the selected state is not communicated by color alone.
+- Across all Breakpoints, the selected option uses Brand Green Dark text at `600` font weight.
+- A persistent `2px` solid Brand Green Dark indicator appears beneath the selected option.
+- The selected option does not use a background, Card treatment, Radius, or Shadow.
+- Font weight and the persistent indicator communicate the selected state in addition to color.
 - When an unselected option is hovered, its text changes to Brand Green Dark while its font weight remains unchanged.
 - Hovering an unselected option does not display the persistent selected indicator or add a background, Card treatment, Radius, or Shadow.
 - A selected option retains its approved selected-state treatment while hovered.
-- The Situation Selector is a group of independent selection buttons rather than a composite tab interface.
+- The Situation Selector uses independent selection buttons.
 - Each option is reached individually with `Tab` and `Shift + Tab` and uses the global Focus-Visible Treatment.
 - `Enter` or `Space` selects the focused option.
 - Exactly one option is selected at a time.
 - The selected state is communicated to assistive technologies.
 - Updated Selected Situation Content is communicated to assistive technologies without automatically moving focus into it.
-- Arrow-key navigation is not required.
 - Keyboard focus remains visible when navigating the Mobile strip.
 - Contains the following options in canonical order:
   1. `Foreclosure`.
@@ -330,10 +316,8 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 ## Selected Situation Content
 
 - Follows the Situation Selector in document order.
-- Occupies Grid Columns `4–12` on Desktop.
-- On Tablet and Mobile, appears below the Situation Selector and uses the available content width.
 - On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
-- Displays content corresponding to the active Situation Selector option.
+- Displays content corresponding to the selected Situation Selector option.
 - Contains the following elements in order:
   1. Situation Image.
   2. Situation Explanation.
@@ -364,10 +348,9 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 ## Contact Us Option
 
 - Follows the Selected Situation Content in document order.
-- Follows the Selected Situation Content at every Breakpoint.
 - Spacing Before: `32px` (`L`) across all Breakpoints.
 - Provides an alternative path for users who are unsure which situation applies to them.
-- Content, Component, destination, placement, and responsive behavior remain pending.
+- Content, Component, and destination remain pending.
 
 # Reviews
 
