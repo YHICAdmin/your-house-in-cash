@@ -522,11 +522,22 @@ On Tablet and Mobile:
 
 ## Contact Us Option
 
-* Spacing Before: `32px` (`L`) across all Breakpoints.
+### Content
+
 * Supporting text: `Not sure which situation fits?`
 * Action label: `Tell Us About Your Situation`.
+
+### Component and Semantics
+
 * Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
 * Uses link semantics.
+
+### Spacing Before
+
+* `32px` (`L`) across all Breakpoints.
+
+### Interaction
+
 * Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
 
 # Reviews
