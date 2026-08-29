@@ -288,6 +288,13 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - When additional Mobile options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
 - The Mobile selector does not advance automatically.
 - Does not present every situation as a large Card.
+- Uses the global `Body` typography at `400` font weight and `Text Primary` color.
+- Text is left-aligned.
+- Each option has a minimum interactive height of `48px`, with `8px` vertical and `16px` horizontal internal padding.
+- The default state does not use a background, Border, Divider, Radius, or Shadow.
+- On Desktop, each option fills the available Situation Selector width, with an `8px` (`XS`) vertical gap between options.
+- On Tablet, each option fills its allocated column, with a `16px` (`S`) row and column gap.
+- On Mobile, each option uses its content-based width, with an `8px` (`XS`) gap between options in the horizontal strip.
 - Selecting an option updates the Selected Situation Content within the Section without moving keyboard focus.
 - On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
 - On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
