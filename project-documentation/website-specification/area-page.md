@@ -288,7 +288,7 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - When additional Mobile options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
 - The Mobile selector does not advance automatically.
 - Does not present every situation as a large Card.
-- Selecting an option updates the Selected Situation Content within the Section.
+- Selecting an option updates the Selected Situation Content within the Section without moving keyboard focus.
 - On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
 - On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
 - No vertical gap applies between the Situation Selector and Selected Situation Content on Desktop because they appear side by side.
@@ -296,9 +296,14 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - A persistent `2px` solid Brand Green Dark indicator appears beneath the active option.
 - The active option does not use a background, Card treatment, Radius, or Shadow.
 - The font-weight change and persistent indicator ensure that the selected state is not communicated by color alone.
-- Every option is keyboard focusable and operable and uses the global Focus-Visible Treatment.
+- The Situation Selector is a group of independent selection buttons rather than a composite tab interface.
+- Each option is reached individually with `Tab` and `Shift + Tab` and uses the global Focus-Visible Treatment.
+- `Enter` or `Space` selects the focused option.
+- Exactly one option is selected at a time.
+- The selected state is communicated to assistive technologies.
+- Updated Selected Situation Content is communicated to assistive technologies without automatically moving focus into it.
+- Arrow-key navigation is not required.
 - Keyboard focus remains visible when navigating the Mobile strip.
-- The selected option and its selected state are communicated to assistive technologies.
 - Contains the following options in canonical order:
   1. `Foreclosure`.
   2. `Inherited Property`.
