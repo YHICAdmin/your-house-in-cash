@@ -386,7 +386,6 @@ On Tablet and Mobile:
 * Each temporary asset is `1200 × 675px` with a `16:9` Aspect Ratio.
 * Final images will replace the temporary assets at the same paths and preserve the same dimensions, Aspect Ratio, and rendering behavior.
 * The image scales fluidly within its allocated width while preserving its Aspect Ratio across all Breakpoints.
-* Moderate cropping is permitted when necessary to fill the approved image frame without distortion.
 * All Situation Images are decorative and use empty alternative text: `alt=""`.
 * Spacing After: `24px` (`M`) across all Breakpoints.
 
