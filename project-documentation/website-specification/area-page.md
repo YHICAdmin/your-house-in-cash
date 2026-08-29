@@ -223,7 +223,7 @@ Immediately communicate the location, offer, and credibility of the business, wh
 
 Help sellers identify the situation that best matches their circumstances and understand that the company has relevant experience.
 
-Provide entry points to dedicated content and SEO pages for each documented situation.
+Provide entry points to dedicated Situation Pages for each documented situation.
 
 ## Layout
 
