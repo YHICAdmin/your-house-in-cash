@@ -309,7 +309,6 @@ On Tablet and Mobile:
 * Selecting an option updates the Selected Situation Content within the Section and keeps keyboard focus on the selected option.
 * On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
 * On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
-* No vertical gap applies between the Situation Selector and Selected Situation Content on Desktop because they appear side by side.
 * Across all Breakpoints, the selected option uses Brand Green Dark text at `600` font weight.
 * A persistent `2px` solid Brand Green Dark indicator appears beneath the selected option.
 * The indicator follows the rendered option text width only, excluding the option's padding and available row width.
