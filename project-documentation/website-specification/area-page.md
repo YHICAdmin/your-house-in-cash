@@ -421,6 +421,10 @@ On Desktop, the main content area:
   9. `Behind on Property Taxes`: `Falling behind on property taxes can create increasing pressure. We offer a straightforward as-is sale so you can explore your next step.`
   10. `Code Violations`: `Code violations can make repairs and a traditional listing more difficult. We buy houses as-is, including properties with unresolved violations.`
 
+#### Component and Semantics
+
+* Uses paragraph semantics.
+
 #### Visual Design
 
 * Uses the global `Body Large` typography.
