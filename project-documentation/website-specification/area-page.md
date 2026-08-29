@@ -241,7 +241,6 @@ Provide the seller with a clear path to begin the conversion process.
 ## Local Media Composition
 
 * Contains two property/location images and one `Local Trust Card`.
-* Uses an asymmetric, editorial composition.
 * The images and `Local Trust Card` read as a single visual unit.
 * The composition does not form a symmetrical Grid or a complete rectangular outer boundary.
 * Remains visually secondary to the Primary Headline.
