@@ -288,7 +288,6 @@ Provide the seller with a clear path to begin the conversion process.
 * The trust message `We’re local to Northeast Ohio and understand the communities we serve.` appears beneath the complete identity row with an `8px` (`XS`) vertical gap.
 * The trust message spans the card's content width, is left-aligned, and uses the global `Body Small` typography and `Text Secondary` color.
 * Uses the global Surface color, Medium Border Radius, and Floating Shadow.
-* Does not contain a CTA.
 * Preserves the same content and role across all Area Pages.
 * Remains integrated with the image composition across all Breakpoints.
 * Centered beneath the Left and Right Images without overlapping them.
