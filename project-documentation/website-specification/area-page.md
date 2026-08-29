@@ -372,7 +372,6 @@ On Tablet and Mobile:
 
 ### Situation Image
 
-* Supports the content without becoming the dominant visual element.
 * Uses the following temporary asset for each situation:
   1. `Foreclosure`: `/images/situations/foreclosure.webp`.
   2. `Inherited Property`: `/images/situations/inherited-property.webp`.
