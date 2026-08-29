@@ -292,7 +292,6 @@ Provide the seller with a clear path to begin the conversion process.
 * Centered beneath the Left and Right Images.
 * At the approved Desktop reference size, approximately `20px` of vertical space separates the images' shared bottom edge from the card.
 * At narrower widths, this vertical space scales proportionally with the Local Images row width.
-* The card contributes to the composition's total height at every Breakpoint.
 
 # Situations — Situations We Can Help With
 
