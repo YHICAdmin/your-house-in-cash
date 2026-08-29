@@ -201,26 +201,42 @@ Provide the seller with a clear path to begin the conversion process.
 
 ## Benefits List
 
-* Uses one semantic unordered list (`<ul>`) containing exactly three list items (`<li>`) in the documented order.
-* Contains exactly three benefits using the canonical `lucide-react` export names:
+### Content
+
+* Contains exactly three benefits in the documented order:
 
   * `House` — `Sell As-Is`.
   * `BadgeDollarSign` — `No Fees`.
   * `CalendarCheck` — `Choose Your Closing Date`.
-* `House`, `BadgeDollarSign`, and `CalendarCheck` are decorative, are hidden from assistive technologies, and do not receive keyboard focus.
-* Appears below the Supporting Microcopy.
 * Each benefit consists of a Line Icon followed by a short text label.
+
+### Component and Semantics
+
+* Uses one semantic unordered list containing exactly three list items.
+* Benefits are informational and non-interactive.
+
+### Visual Design
+
 * Benefit labels use the global `Body Small` typography.
+* Icons use the global Medium Icon size.
+* Individual benefits do not use Cards, backgrounds, borders, or shadows.
+
+### Dimensions and Alignment
+
 * Each icon-and-label pair remains together as one item.
 * Labels may wrap naturally at word boundaries but must not break within words.
 * Icons align with the first line of multiline labels.
-* Icons use the global Medium Icon size.
 * The gap between the icon and label is `8px`.
-* The inter-benefit gap is `24px` (`M`): horizontal on Desktop and Tablet, and vertical on Mobile.
-* Benefits are informational and non-interactive.
+
+### Accessibility
+
+* `House`, `BadgeDollarSign`, and `CalendarCheck` are decorative, are hidden from assistive technologies, and do not receive keyboard focus.
+
+### Responsive Behavior
+
 * On Desktop and Tablet, the benefits are displayed in a single horizontal row that does not wrap.
 * On Mobile, the benefits are displayed vertically in the same document order.
-* Individual benefits do not use Cards, backgrounds, borders, or shadows.
+* The inter-benefit gap is `24px` (`M`): horizontal on Desktop and Tablet, and vertical on Mobile.
 
 ## Local Media Composition
 
