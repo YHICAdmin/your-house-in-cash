@@ -417,7 +417,21 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 ### Situation CTA
 
 - Links to the dedicated content or SEO page for the selected situation.
-- Label, Component, variant, and situation-specific destinations remain pending.
+- Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
+- Uses link semantics.
+- Visible label template: `Learn More About [Situation]`.
+- Uses the following destination for each situation:
+  1. `Foreclosure`: `/situations/foreclosure`.
+  2. `Inherited Property`: `/situations/inherited-property`.
+  3. `Tired Landlord`: `/situations/tired-landlord`.
+  4. `Major Repairs`: `/situations/major-repairs`.
+  5. `Vacant Property`: `/situations/vacant-property`.
+  6. `Problem Tenants`: `/situations/problem-tenants`.
+  7. `Relocation`: `/situations/relocation`.
+  8. `Divorce`: `/situations/divorce`.
+  9. `Behind on Property Taxes`: `/situations/behind-on-property-taxes`.
+  10. `Code Violations`: `/situations/code-violations`.
+- These paths establish the canonical route convention for dedicated Situation Pages.
 
 ## Contact Us Option
 
