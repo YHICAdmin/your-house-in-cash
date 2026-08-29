@@ -84,16 +84,16 @@ export function AreaHero({ city }: AreaHeroProps) {
                 height={48}
               />
               <div className={styles.identityText}>
-                <p className={styles.name}>Noah Lubko</p>
-                <p className={`${styles.title} text-caption`}>
-                  Founder &amp; Home Buyer
+                <p className={`${styles.trustHeadline} text-heading-3`}>
+                  Local. Reliable.
+                  <br />
+                  Cleveland’s Neighbor.
+                </p>
+                <p className={`${styles.trustSupporting} text-body-small`}>
+                  We’re a local Cleveland company you can trust.
                 </p>
               </div>
             </div>
-            <p className={`${styles.message} text-body-small`}>
-              We’re local to Northeast Ohio and understand the communities we
-              serve.
-            </p>
           </div>
         </div>
       </div>

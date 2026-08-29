@@ -278,29 +278,33 @@ Provide the seller with a clear path to begin the conversion process.
 
 * Uses the local portrait asset at `/images/local-trust-portrait.webp`.
 * The final portrait will replace the file at the same path and retain the same `1:1` Aspect Ratio and rendering rules.
-* Name: `Noah Lubko`.
-* Title: `Founder & Home Buyer`.
-* Trust message: `We’re local to Northeast Ohio and understand the communities we serve.`
+* Primary headline:
+
+  ```text
+  Local. Reliable.
+  Cleveland’s Neighbor.
+  ```
+
+* The line break after `Reliable.` is preserved.
+* Supporting text: `We’re a local Cleveland company you can trust.`
 * Preserves the same content across all Area Pages.
 
 ### Visual Design
 
 * The portrait fills its crop without distortion and uses a circular crop with the global Pill Radius.
-* The name uses the global `Label` typography and `Text Primary` color.
-* The title uses the global `Caption` typography and `Text Secondary` color.
-* The trust message uses the global `Body Small` typography and `Text Secondary` color.
+* The primary headline uses the global `H3` typography: `28px` on Desktop, `26px` on Tablet, and `24px` on Mobile; weight `600`; line height `1.20`; letter spacing `-0.025em`; and `Text Primary` color.
+* The supporting text uses the global `Body Small` typography: `14px` at every Breakpoint; weight `400`; line height `1.50`; and `Text Secondary` color.
 * The card uses the global Surface color, Medium Border Radius, and Floating Shadow.
 
 ### Dimensions and Alignment
 
-* On Desktop and Tablet, the card is `57.6%` of the Local Images row width; on Mobile, it is `92.16%` of the Local Images row width.
+* The card spans `100%` of the Local Images row width and aligns with both outer edges.
 * Uses `16px` (`S`) internal padding.
-* The portrait is rendered at `69.12px × 69.12px` with a `1:1` Aspect Ratio.
-* The portrait appears on the left of the card's identity row, with a `16px` (`S`) gap before the name-and-title group.
-* The name-and-title group is vertically centered relative to the portrait and left-aligned.
-* The title appears directly beneath the name with an `8px` (`XS`) vertical gap.
-* The trust message appears beneath the complete identity row with an `8px` (`XS`) vertical gap.
-* The trust message spans the card's content width and is left-aligned.
+* The portrait is rendered at `89.856px × 89.856px` with a `1:1` Aspect Ratio.
+* The portrait appears on the left, with the text block positioned to its right and separated by a `16px` (`S`) gap.
+* The portrait and text block are vertically centered within the card.
+* All text is left-aligned within the text block.
+* The supporting text appears beneath the primary headline with an `8px` (`XS`) vertical gap.
 * The card is centered beneath the Left and Right Images.
 * At the approved Desktop reference size, approximately `20px` of vertical space separates the images' shared bottom edge from the card.
 
@@ -310,6 +314,8 @@ Provide the seller with a clear path to begin the conversion process.
 
 ### Responsive Behavior
 
+* The full-width card and horizontal portrait-and-text arrangement remain unchanged across all Breakpoints.
+* Text wraps naturally when required by the available width while preserving the explicit line break after `Reliable.`.
 * At narrower widths, the vertical space between the Local Images and card scales proportionally with the Local Images row width.
 
 # Situations — Situations We Can Help With
