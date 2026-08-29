@@ -286,7 +286,7 @@ On Tablet and Mobile:
 
 ### Visual Design
 
-* Uses the global `Body Large` typography and inherited supporting-copy color.
+* Uses the global `Body Large` typography.
 
 ### Spacing After
 
