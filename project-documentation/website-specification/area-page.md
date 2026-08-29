@@ -460,7 +460,6 @@ On Tablet and Mobile:
 
 ### Situation CTA
 
-* Links to the dedicated content or SEO page for the selected situation.
 * Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
 * Uses link semantics.
 * Visible label template: `Learn More About [Situation]`.
