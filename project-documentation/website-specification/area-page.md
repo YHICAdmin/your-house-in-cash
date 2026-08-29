@@ -69,18 +69,33 @@ Provide the seller with a clear path to begin the conversion process.
 
 ## Section Label
 
-* Uses the documented `Section Label` Component.
+### Content
+
 * Content template: `[City], Ohio`.
-* The `[City], Ohio` template renders in uppercase.
 * `[City]` is the city name only, without the state.
 * The content changes dynamically between Area Pages.
 * Rendered example: `CLEVELAND, OHIO`.
-* Includes the `MapPin` icon from `lucide-react` before the text.
-* `MapPin` is decorative, is hidden from assistive technologies, and does not receive keyboard focus.
-* Positioned above the Primary Headline.
+* Includes the `MapPin` icon from `lucide-react`.
+
+### Component and Semantics
+
+* Uses the documented `Section Label` Component.
+
+### Visual Design
+
+* The `[City], Ohio` template renders in uppercase.
+
+### Spacing After
+
+* `16px` (`S`).
+
+### Interaction
+
 * Non-interactive.
-* Remains visually secondary to the Primary Headline.
-* Spacing After: `16px` (`S`).
+
+### Accessibility
+
+* `MapPin` is decorative, is hidden from assistive technologies, and does not receive keyboard focus.
 
 ## Primary Headline
 
