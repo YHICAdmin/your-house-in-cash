@@ -270,10 +270,6 @@ On Tablet and Mobile:
 
 * Serves as the Situations Section's semantic `H2`.
 
-### Visual Design
-
-* Uses the global `H2` typography and inherited headline color.
-
 ### Spacing After
 
 * `24px` (`M`) across all Breakpoints.
