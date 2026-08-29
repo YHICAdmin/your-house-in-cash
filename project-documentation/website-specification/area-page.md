@@ -295,38 +295,8 @@ On Tablet and Mobile:
 
 ## Situation Selector
 
-* On Desktop, displays all situation options simultaneously in a vertical Selector.
-* On Tablet, displays all situation options simultaneously in a two-column arrangement.
-* On Mobile, displays the situation options in one horizontally scrollable strip.
-* When additional Mobile options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
-* The Mobile selector does not advance automatically.
-* Text is left-aligned.
-* Each option has a minimum interactive height of `48px`, with `8px` vertical and `16px` horizontal internal padding.
-* The default state does not use a background, Border, Divider, Radius, or Shadow.
-* On Desktop, each option fills the available Situation Selector width, with an `8px` (`XS`) vertical gap between options.
-* On Tablet, each option fills its allocated column, with a `16px` (`S`) row and column gap.
-* On Mobile, each option uses its content-based width, with an `8px` (`XS`) gap between options in the horizontal strip.
-* Selecting an option updates the Selected Situation Content within the Section and keeps keyboard focus on the selected option.
-* On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
-* On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
-* Across all Breakpoints, the selected option uses Brand Green Dark text at `600` font weight.
-* A persistent `2px` solid Brand Green Dark indicator appears beneath the selected option.
-* The indicator follows the rendered option text width only, excluding the option's padding and available row width.
-* The indicator appears `4px` below the text.
-* The indicator's geometry remains unchanged across all Breakpoints.
-* The selected option does not use a background, Card treatment, Radius, or Shadow.
-* When an unselected option is hovered, its text changes to Brand Green Dark while its font weight remains unchanged.
-* Hovering an unselected option does not display the persistent selected indicator or add a background, Card treatment, Radius, or Shadow.
-* The Situation Selector uses independent selection buttons.
-* The visible Primary Headline provides the Situation Selector's accessible name.
-* The visible Supporting Copy provides the Situation Selector's accessible description.
-* Each option is reached individually with `Tab` and `Shift + Tab`.
-* `Enter` or `Space` selects the focused option.
-* Exactly one option is selected at a time.
-* The selected state is communicated to assistive technologies.
-* Selected Situation Content updates are announced politely without interrupting other assistive-technology output.
-* Update announcement template: `[Situation] details are now available.`
-* Keyboard focus remains visible when navigating the Mobile strip.
+### Content
+
 * Contains the following options in canonical order:
   1. `Foreclosure`.
   2. `Inherited Property`.
@@ -338,7 +308,60 @@ On Tablet and Mobile:
   8. `Divorce`.
   9. `Behind on Property Taxes`.
   10. `Code Violations`.
+
+### Component and Semantics
+
+* The Situation Selector uses independent selection buttons.
+* Exactly one option is selected at a time.
 * `Foreclosure` is selected by default when the Section first loads.
+
+### Visual Design
+
+* The default state does not use a background, Border, Divider, Radius, or Shadow.
+* Across all Breakpoints, the selected option uses Brand Green Dark text at `600` font weight.
+* A persistent `2px` solid Brand Green Dark indicator appears beneath the selected option.
+* The selected option does not use a background, Card treatment, Radius, or Shadow.
+* When an unselected option is hovered, its text changes to Brand Green Dark while its font weight remains unchanged.
+* Hovering an unselected option does not display the persistent selected indicator or add a background, Card treatment, Radius, or Shadow.
+
+### Dimensions and Alignment
+
+* Text is left-aligned.
+* Each option has a minimum interactive height of `48px`, with `8px` vertical and `16px` horizontal internal padding.
+* The indicator follows the rendered option text width only, excluding the option's padding and available row width.
+* The indicator appears `4px` below the text.
+* The indicator's geometry remains unchanged across all Breakpoints.
+
+### Spacing After
+
+* On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
+* On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
+
+### Interaction
+
+* Selecting an option updates the Selected Situation Content within the Section and keeps keyboard focus on the selected option.
+* `Enter` or `Space` selects the focused option.
+
+### Accessibility
+
+* The visible Primary Headline provides the Situation Selector's accessible name.
+* The visible Supporting Copy provides the Situation Selector's accessible description.
+* Each option is reached individually with `Tab` and `Shift + Tab`.
+* The selected state is communicated to assistive technologies.
+* Selected Situation Content updates are announced politely without interrupting other assistive-technology output.
+* Update announcement template: `[Situation] details are now available.`
+* Keyboard focus remains visible when navigating the Mobile strip.
+
+### Responsive Behavior
+
+* On Desktop, displays all situation options simultaneously in a vertical Selector.
+* On Tablet, displays all situation options simultaneously in a two-column arrangement.
+* On Mobile, displays the situation options in one horizontally scrollable strip.
+* When additional Mobile options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
+* The Mobile selector does not advance automatically.
+* On Desktop, each option fills the available Situation Selector width, with an `8px` (`XS`) vertical gap between options.
+* On Tablet, each option fills its allocated column, with a `16px` (`S`) row and column gap.
+* On Mobile, each option uses its content-based width, with an `8px` (`XS`) gap between options in the horizontal strip.
 
 ## Selected Situation Content
 
