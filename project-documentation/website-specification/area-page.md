@@ -325,6 +325,9 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 ## Selected Situation Content
 
 - Follows the Situation Selector in document order.
+- Forms an identifiable content region associated with the currently selected Situation option.
+- Its accessible name is derived from the selected option and updates when the selection changes.
+- This relationship does not introduce duplicate visible or visually hidden text.
 - On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
 - Displays content corresponding to the selected Situation Selector option.
 - Contains the following elements in order:
