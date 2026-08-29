@@ -227,8 +227,6 @@ Provide entry points to dedicated Situation Pages for each documented situation.
 
 ## Layout
 
-The Section Label, Primary Headline, and Supporting Copy appear above the main content area.
-
 On Desktop, the main content area:
 
 * Spans the complete Desktop Grid from Column `1` through Column `12`.
