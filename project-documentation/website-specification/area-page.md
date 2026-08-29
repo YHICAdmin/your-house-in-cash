@@ -243,11 +243,22 @@ On Tablet and Mobile:
 
 ## Section Label
 
-* Uses the documented `Section Label` Component.
-* Content: `We Help With`.
+### Content
+
+* Text: `We Help With`.
 * Includes the canonical Lucide `House` icon.
+
+### Component and Semantics
+
+* Uses the documented `Section Label` Component.
+
+### Accessibility
+
 * The icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
-* Spacing After: `16px` (`S`) across all Breakpoints.
+
+### Spacing After
+
+* `16px` (`S`) across all Breakpoints.
 
 ## Primary Headline
 
