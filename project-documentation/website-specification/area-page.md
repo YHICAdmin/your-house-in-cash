@@ -372,6 +372,8 @@ On Tablet and Mobile:
 
 ### Situation Image
 
+#### Content
+
 * Uses the following temporary asset for each situation:
   1. `Foreclosure`: `/images/situations/foreclosure.webp`.
   2. `Inherited Property`: `/images/situations/inherited-property.webp`.
@@ -383,11 +385,23 @@ On Tablet and Mobile:
   8. `Divorce`: `/images/situations/divorce.webp`.
   9. `Behind on Property Taxes`: `/images/situations/behind-on-property-taxes.webp`.
   10. `Code Violations`: `/images/situations/code-violations.webp`.
-* Each temporary asset is `1200 × 675px` with a `16:9` Aspect Ratio.
 * Final images will replace the temporary assets at the same paths and preserve the same dimensions, Aspect Ratio, and rendering behavior.
-* The image scales fluidly within its allocated width while preserving its Aspect Ratio across all Breakpoints.
+
+#### Visual Design
+
+* Each temporary asset is `1200 × 675px` with a `16:9` Aspect Ratio.
+
+#### Spacing After
+
+* `24px` (`M`) across all Breakpoints.
+
+#### Accessibility
+
 * All Situation Images are decorative and use empty alternative text: `alt=""`.
-* Spacing After: `24px` (`M`) across all Breakpoints.
+
+#### Responsive Behavior
+
+* The image scales fluidly within its allocated width while preserving its Aspect Ratio across all Breakpoints.
 
 ### Situation Explanation
 
