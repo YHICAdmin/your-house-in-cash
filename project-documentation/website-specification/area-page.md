@@ -232,7 +232,6 @@ The Section Label, Primary Headline, and Supporting Copy appear above the main c
 On Desktop, the main content area:
 
 * Spans the complete Desktop Grid from Column `1` through Column `12`.
-* Places the Situation Selector in Grid Columns `1–3`.
 * Places the Selected Situation Content in Grid Columns `4–12`.
 * Uses the second System Line from the left to separate the two areas between Grid Columns `3` and `4`.
 
@@ -327,6 +326,7 @@ On Tablet and Mobile:
 
 ### Dimensions and Alignment
 
+* On Desktop, occupies Grid Columns `1–3`.
 * Text is left-aligned.
 * Each option has a minimum interactive height of `48px`, with `8px` vertical and `16px` horizontal internal padding.
 * The indicator follows the rendered option text width only, excluding the option's padding and available row width.
@@ -533,6 +533,10 @@ On Tablet and Mobile:
 * Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
 * Uses link semantics.
 
+### Dimensions and Alignment
+
+* On Desktop, occupies Grid Columns `4–12`.
+
 ### Spacing Before
 
 * `32px` (`L`) across all Breakpoints.
@@ -540,6 +544,10 @@ On Tablet and Mobile:
 ### Interaction
 
 * Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
+
+### Responsive Behavior
+
+* On Tablet and Mobile, uses the available content width.
 
 # Reviews
 
