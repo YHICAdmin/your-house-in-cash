@@ -134,9 +134,11 @@
 
 .identityRow {
   display: flex;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   align-items: center;
   gap: var(--spacing-s);
+  margin-inline: auto;
 }
 
 .portrait {
@@ -151,7 +153,9 @@
   display: flex;
   min-width: 0;
   flex-direction: column;
+  align-items: flex-start;
   gap: var(--spacing-xs);
+  text-align: left;
 }
 
 .identityText p {

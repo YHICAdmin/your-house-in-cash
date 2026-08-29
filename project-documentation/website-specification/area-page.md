@@ -279,21 +279,20 @@ Provide the seller with a clear path to begin the conversion process.
 * Uses the local portrait asset at `/images/local-trust-portrait.webp`.
 * The final portrait will replace the file at the same path and retain the same `1:1` Aspect Ratio and rendering rules.
 * Primary headline:
-
-  ```text
   Local. Reliable.
   Cleveland’s Neighbor.
-  ```
-
 * The line break after `Reliable.` is preserved.
-* Supporting text: `We’re a local Cleveland company you can trust.`
+* Supporting text:
+  We’re a local Cleveland
+  company you can trust.
+* The line break after `Cleveland` is preserved.
 * Preserves the same content across all Area Pages.
 
 ### Visual Design
 
 * The portrait fills its crop without distortion and uses a circular crop with the global Pill Radius.
 * The primary headline uses the global `H3` typography: `28px` on Desktop, `26px` on Tablet, and `24px` on Mobile; weight `600`; line height `1.20`; letter spacing `-0.025em`; and `Text Primary` color.
-* The supporting text uses the global `Body Small` typography: `14px` at every Breakpoint; weight `400`; line height `1.50`; and `Text Secondary` color.
+* The supporting text uses the global `Body Large` typography: `20px` on Desktop, `19px` on Tablet, and `18px` on Mobile; weight `400`; line height `1.50`; and `Text Secondary` color.
 * The card uses the global Surface color, Medium Border Radius, and Floating Shadow.
 
 ### Dimensions and Alignment
@@ -303,6 +302,7 @@ Provide the seller with a clear path to begin the conversion process.
 * The portrait is rendered at `89.856px × 89.856px` with a `1:1` Aspect Ratio.
 * The portrait appears on the left, with the text block positioned to its right and separated by a `16px` (`S`) gap.
 * The portrait and text block are vertically centered within the card.
+* The complete portrait-and-text row is horizontally centered within the card.
 * All text is left-aligned within the text block.
 * The supporting text appears beneath the primary headline with an `8px` (`XS`) vertical gap.
 * The card is centered beneath the Left and Right Images.
@@ -315,7 +315,7 @@ Provide the seller with a clear path to begin the conversion process.
 ### Responsive Behavior
 
 * The full-width card and horizontal portrait-and-text arrangement remain unchanged across all Breakpoints.
-* Text wraps naturally when required by the available width while preserving the explicit line break after `Reliable.`.
+* Text wraps naturally when required by the available width while preserving the explicit line breaks after `Reliable.` and `Cleveland`.
 * At narrower widths, the vertical space between the Local Images and card scales proportionally with the Local Images row width.
 
 # Situations — Situations We Can Help With

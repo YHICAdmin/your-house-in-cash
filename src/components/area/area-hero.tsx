@@ -89,8 +89,10 @@ export function AreaHero({ city }: AreaHeroProps) {
                   <br />
                   Cleveland’s Neighbor.
                 </p>
-                <p className={`${styles.trustSupporting} text-body-small`}>
-                  We’re a local Cleveland company you can trust.
+                <p className={`${styles.trustSupporting} text-body-large`}>
+                  We’re a local Cleveland
+                  <br />
+                  company you can trust.
                 </p>
               </div>
             </div>
