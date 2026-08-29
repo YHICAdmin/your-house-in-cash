@@ -1,0 +1,22 @@
+.link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: var(--spacing-xs);
+  border: 0;
+  background: none;
+  color: var(--color-text-primary);
+  font-size: var(--text-body);
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.link:hover {
+  color: var(--color-brand-dark);
+}
+
+.link:active {
+  color: #245a33;
+}
