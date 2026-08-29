@@ -38,7 +38,6 @@ Provide the seller with a clear path to begin the conversion process.
 
 ### Desktop
 
-* Uses the global 12-column Grid.
 * The content area occupies 5 columns.
 * One column remains empty between the content and media areas.
 * The media area occupies 6 columns.
