@@ -262,10 +262,21 @@ On Tablet and Mobile:
 
 ## Primary Headline
 
+### Content
+
+* Text: `What brings you here?`
+
+### Component and Semantics
+
 * Serves as the Situations Section's semantic `H2`.
+
+### Visual Design
+
 * Uses the global `H2` typography and inherited headline color.
-* Content: `What brings you here?`
-* Spacing After: `24px` (`M`) across all Breakpoints.
+
+### Spacing After
+
+* `24px` (`M`) across all Breakpoints.
 
 ## Supporting Copy
 
