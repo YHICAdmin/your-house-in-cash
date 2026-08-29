@@ -320,7 +320,7 @@ On Tablet and Mobile:
 * The Situation Selector uses independent selection buttons.
 * The visible Primary Headline provides the Situation Selector's accessible name.
 * The visible Supporting Copy provides the Situation Selector's accessible description.
-* Each option is reached individually with `Tab` and `Shift + Tab` and uses the global Focus-Visible Treatment.
+* Each option is reached individually with `Tab` and `Shift + Tab`.
 * `Enter` or `Space` selects the focused option.
 * Exactly one option is selected at a time.
 * The selected state is communicated to assistive technologies.
