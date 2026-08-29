@@ -372,7 +372,6 @@ On Tablet and Mobile:
 
 ### Situation Image
 
-* Displays an image relevant to the selected situation.
 * Supports the content without becoming the dominant visual element.
 * Uses the following temporary asset for each situation:
   1. `Foreclosure`: `/images/situations/foreclosure.webp`.
