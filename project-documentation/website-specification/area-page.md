@@ -260,6 +260,8 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 ## Primary Headline
 
 - Follows the Section Label.
+- Serves as the Situations Section's semantic `H2`.
+- Uses the global `H2` typography and inherited headline color.
 - Content: `What brings you here?`
 - Spacing After: `24px` (`M`) across all Breakpoints.
 
