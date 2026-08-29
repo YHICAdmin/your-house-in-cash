@@ -143,12 +143,22 @@ Provide the seller with a clear path to begin the conversion process.
 
 ## Button
 
-* Uses the documented `Button` Component.
+### Content
+
 * Label: `Get My Cash Offer`.
-* Appears below the Supporting Copy.
-* Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
+
+### Component and Semantics
+
+* Uses the documented `Button` Component.
 * Renders with anchor semantics because it navigates to a separate route.
-* Spacing After: `8px` (`XS`).
+
+### Spacing After
+
+* `8px` (`XS`).
+
+### Interaction
+
+* Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
 
 ## Supporting Microcopy
 
