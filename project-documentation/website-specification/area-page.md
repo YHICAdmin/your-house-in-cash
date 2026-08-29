@@ -30,7 +30,9 @@ Sections may use different compositions as long as a cohesive visual language is
 
 ## Purpose
 
-Immediately communicate the location, offer, and credibility of the business, while providing the seller with a clear path to begin the conversion process.
+Immediately communicate the location, offer, and credibility of the business.
+
+Provide the seller with a clear path to begin the conversion process.
 
 ## Layout
 
