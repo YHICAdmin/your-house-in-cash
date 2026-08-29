@@ -240,7 +240,6 @@ Provide the seller with a clear path to begin the conversion process.
 
 ## Local Media Composition
 
-* Occupies the media area defined in the Hero Layout.
 * Contains two property/location images and one `Local Trust Card`.
 * Uses an asymmetric, editorial composition.
 * The images and `Local Trust Card` read as a single visual unit.
