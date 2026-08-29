@@ -300,6 +300,9 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - Hovering an unselected option does not display the persistent selected indicator or add a background, Card treatment, Radius, or Shadow.
 - A selected option retains its approved selected-state treatment while hovered.
 - The Situation Selector uses independent selection buttons.
+- The visible Primary Headline provides the Situation Selector's accessible name.
+- The visible Supporting Copy provides the Situation Selector's accessible description.
+- These relationships do not introduce duplicate visible or visually hidden text.
 - Each option is reached individually with `Tab` and `Shift + Tab` and uses the global Focus-Visible Treatment.
 - `Enter` or `Space` selects the focused option.
 - Exactly one option is selected at a time.
