@@ -243,7 +243,6 @@ On Tablet and Mobile:
 
 ## Section Label
 
-* First element in the Section.
 * Uses the documented `Section Label` Component and inherits its approved icon size and visual treatment.
 * Content: `We Help With`.
 * Includes the canonical Lucide `House` icon.
@@ -252,7 +251,6 @@ On Tablet and Mobile:
 
 ## Primary Headline
 
-* Follows the Section Label.
 * Serves as the Situations Section's semantic `H2`.
 * Uses the global `H2` typography and inherited headline color.
 * Content: `What brings you here?`
@@ -260,7 +258,6 @@ On Tablet and Mobile:
 
 ## Supporting Copy
 
-* Follows the Primary Headline.
 * Uses semantic paragraph text.
 * Uses the global `Body Large` typography and inherited supporting-copy color.
 * Content: `Every homeowner’s situation is different. Choose what best describes yours to see how we can help.`
@@ -268,7 +265,6 @@ On Tablet and Mobile:
 
 ## Situation Selector
 
-* Follows the Supporting Copy in document order.
 * On Desktop, displays all situation options simultaneously in a vertical Selector.
 * On Tablet, displays all situation options simultaneously in a two-column arrangement.
 * On Mobile, displays the situation options in one horizontally scrollable strip.
@@ -322,17 +318,11 @@ On Tablet and Mobile:
 
 ## Selected Situation Content
 
-* Follows the Situation Selector in document order.
 * Forms an identifiable content region associated with the currently selected Situation option.
 * Its accessible name is derived from the selected option and updates when the selection changes.
 * This relationship does not introduce duplicate visible or visually hidden text.
 * On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
 * Displays content corresponding to the selected Situation Selector option.
-* Contains the following elements in order:
-  1. Situation Image.
-  2. Situation Explanation.
-  3. Situation Benefits.
-  4. Situation CTA.
 
 ### Situation Image
 
@@ -448,7 +438,6 @@ On Tablet and Mobile:
 
 ## Contact Us Option
 
-* Follows the Selected Situation Content in document order.
 * Spacing Before: `32px` (`L`) across all Breakpoints.
 * Provides an alternative path for users who are unsure which situation applies to them.
 * Supporting text: `Not sure which situation fits?`
