@@ -294,6 +294,9 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 - No vertical gap applies between the Situation Selector and Selected Situation Content on Desktop because they appear side by side.
 - Across all Breakpoints, the selected option uses Brand Green Dark text at `600` font weight.
 - A persistent `2px` solid Brand Green Dark indicator appears beneath the selected option.
+- The indicator follows the rendered option text width only, excluding the option's padding and available row width.
+- The indicator appears `4px` below the text.
+- The indicator's geometry remains unchanged across all Breakpoints.
 - The selected option does not use a background, Card treatment, Radius, or Shadow.
 - Font weight and the persistent indicator communicate the selected state in addition to color.
 - When an unselected option is hovered, its text changes to Brand Green Dark while its font weight remains unchanged.
