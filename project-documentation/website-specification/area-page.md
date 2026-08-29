@@ -99,17 +99,31 @@ Provide the seller with a clear path to begin the conversion process.
 
 ## Primary Headline
 
-* Uses the global `H1` typography.
+### Content
+
 * Content template: `Sell Your House Fast in [City], Ohio`.
-* `Sell Your House Fast in` uses the global `Text Primary` color.
-* The complete location phrase, `[City], Ohio`, uses the global `Brand Green` color.
 * The city name changes dynamically between Area Pages.
 * This Hero content template applies to City Area Pages; non-city Area Pages require a separately defined content template.
+
+### Component and Semantics
+
 * Serves as the only `H1` on the page.
+
+### Visual Design
+
+* Uses the global `H1` typography.
+* `Sell Your House Fast in` uses the global `Text Primary` color.
+* The complete location phrase, `[City], Ohio`, uses the global `Brand Green` color.
 * Acts as the primary visual focal point of the Hero.
+
+### Dimensions and Alignment
+
 * Wraps naturally according to the available width; do not add manual line breaks.
 * `[City]` may wrap naturally at word boundaries but must not break within a word.
-* Spacing After: `24px` (`M`).
+
+### Spacing After
+
+* `24px` (`M`).
 
 ## Supporting Copy
 
