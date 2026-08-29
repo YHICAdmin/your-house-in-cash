@@ -241,27 +241,32 @@ Provide the seller with a clear path to begin the conversion process.
 
 ## Local Images
 
+### Content
+
 * The media area contains exactly two rectangular images with different dimensions and Aspect Ratios.
 * The same two images are used across all City Area Pages and do not change according to `[City]`.
 * The images provide general residential context and must not imply that they depict the named city.
 * The currently selected image assets are temporary and will later be replaced by two final shared images.
 * The final images retain the same asset paths, Aspect Ratios, composition geometry, and responsive behavior.
-* Both images are decorative and use `alt=""`.
+* Left Image temporary asset path: `/images/area-hero/local-left.webp`.
+* Right Image temporary asset path: `/images/area-hero/local-right.webp`.
+
+### Visual Design
+
 * Both images fill their frames without distortion and use the global Medium Border Radius and global Subtle Shadow.
+
+### Dimensions and Alignment
+
+* Left Image Desktop reference size: `271px × 202px`.
+* The Left Image is positioned on the left side of the image row.
+* Right Image Desktop reference size: `250px × 328px`.
+* The Right Image is positioned on the right side of the image row.
 * At the approved Desktop reference size, the Left and Right Images form a `541px`-wide row with approximately `20px` of horizontal space between them.
 * Their bottom edges align.
 
-### Left Image
+### Accessibility
 
-* Temporary asset path: `/images/area-hero/local-left.webp`.
-* Desktop reference size: `271px × 202px`.
-* Positioned on the left side of the image row.
-
-### Right Image
-
-* Temporary asset path: `/images/area-hero/local-right.webp`.
-* Desktop reference size: `250px × 328px`.
-* Positioned on the right side of the image row.
+* Both images are decorative and use `alt=""`.
 
 ### Responsive Behavior
 
