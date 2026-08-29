@@ -249,7 +249,7 @@ Provide the seller with a clear path to begin the conversion process.
 * Both images are decorative and use `alt=""`.
 * Both images fill their frames without distortion and use the global Medium Border Radius and global Subtle Shadow.
 * At the approved Desktop reference size, the Left and Right Images form a `541px`-wide row with approximately `20px` of horizontal space between them.
-* Their bottom edges align, and the images do not overlap.
+* Their bottom edges align.
 
 ### Left Image
 
