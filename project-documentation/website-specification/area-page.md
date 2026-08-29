@@ -261,7 +261,7 @@ Provide the seller with a clear path to begin the conversion process.
 
 * Temporary asset path: `/images/area-hero/local-right.webp`.
 * Desktop reference size: `250px × 328px`.
-* Positioned on the right side of the image row with its bottom edge aligned to the Left Image.
+* Positioned on the right side of the image row.
 
 ### Responsive Behavior
 
