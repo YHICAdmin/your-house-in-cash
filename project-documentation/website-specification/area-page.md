@@ -429,14 +429,8 @@ On Tablet and Mobile:
 
 ### Situation Benefits
 
-* Uses one semantic unordered list whose three items appear in the documented order.
-* Each item uses the global `Body` typography and `Text Primary` color.
-* Each item includes the Lucide `Check` icon at `20px` in Brand Green Dark.
-* The icons are decorative, hidden from assistive technologies, and not keyboard-focusable.
-* The gap between each icon and its text is `12px`.
-* The vertical gap between items is `16px` (`S`).
-* Icons align with the first line when benefit text wraps.
-* The list remains vertical across all Breakpoints.
+#### Content
+
 * Uses the following benefits for each situation:
   1. `Foreclosure`:
      * `Sell without making repairs`.
@@ -478,7 +472,30 @@ On Tablet and Mobile:
       * `Sell with existing code violations`.
       * `Avoid completing repairs before the sale`.
       * `Use a straightforward sale process`.
-* Spacing After: `32px` (`L`) across all Breakpoints.
+
+#### Component and Semantics
+
+* Uses one semantic unordered list whose three items appear in the documented order.
+
+#### Visual Design
+
+* Each item uses the global `Body` typography and `Text Primary` color.
+* Each item includes the Lucide `Check` icon at `20px` in Brand Green Dark.
+* The gap between each icon and its text is `12px`.
+* The vertical gap between items is `16px` (`S`).
+* Icons align with the first line when benefit text wraps.
+
+#### Spacing After
+
+* `32px` (`L`) across all Breakpoints.
+
+#### Accessibility
+
+* The icons are decorative, hidden from assistive technologies, and not keyboard-focusable.
+
+#### Responsive Behavior
+
+* The list remains vertical across all Breakpoints.
 
 ### Situation CTA
 
