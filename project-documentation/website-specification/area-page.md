@@ -287,7 +287,6 @@ Provide the seller with a clear path to begin the conversion process.
 * The title `Founder & Home Buyer` appears directly beneath the name with an `8px` (`XS`) vertical gap and uses the global `Caption` typography and `Text Secondary` color.
 * The trust message `We’re local to Northeast Ohio and understand the communities we serve.` appears beneath the complete identity row with an `8px` (`XS`) vertical gap.
 * The trust message spans the card's content width, is left-aligned, and uses the global `Body Small` typography and `Text Secondary` color.
-* Reinforces direct, personal involvement in the seller’s experience.
 * Uses the global Surface color, Medium Border Radius, and Floating Shadow.
 * Does not contain a CTA.
 * Preserves the same content and role across all Area Pages.
