@@ -317,7 +317,6 @@ On Tablet and Mobile:
 * The selected option does not use a background, Card treatment, Radius, or Shadow.
 * When an unselected option is hovered, its text changes to Brand Green Dark while its font weight remains unchanged.
 * Hovering an unselected option does not display the persistent selected indicator or add a background, Card treatment, Radius, or Shadow.
-* A selected option retains its approved selected-state treatment while hovered.
 * The Situation Selector uses independent selection buttons.
 * The visible Primary Headline provides the Situation Selector's accessible name.
 * The visible Supporting Copy provides the Situation Selector's accessible description.
