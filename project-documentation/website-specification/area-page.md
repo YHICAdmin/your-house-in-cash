@@ -251,8 +251,10 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 ## Section Label
 
 - First element in the Section.
+- Uses the documented `Section Label` Component and inherits its approved icon size and visual treatment.
 - Content: `We Help With`.
-- Includes a House icon.
+- Includes the canonical Lucide `House` icon.
+- The icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
 - Spacing After: `16px` (`S`) across all Breakpoints.
 
 ## Primary Headline
