@@ -300,7 +300,6 @@ On Tablet and Mobile:
 * On Mobile, displays the situation options in one horizontally scrollable strip.
 * When additional Mobile options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
 * The Mobile selector does not advance automatically.
-* Uses the global `Body` typography and `Text Primary` color.
 * Text is left-aligned.
 * Each option has a minimum interactive height of `48px`, with `8px` vertical and `16px` horizontal internal padding.
 * The default state does not use a background, Border, Divider, Radius, or Shadow.
