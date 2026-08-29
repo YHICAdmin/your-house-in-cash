@@ -41,6 +41,7 @@ Provide the seller with a clear path to begin the conversion process.
 * The content area occupies Grid Columns `1–6`.
 * Grid Column `7` remains empty between the content and media areas.
 * The media area occupies Grid Columns `8–12`.
+* The media area contains the `Local Images` and `Local Trust Card`.
 
 ### Tablet
 
@@ -238,16 +239,9 @@ Provide the seller with a clear path to begin the conversion process.
 * On Mobile, the benefits are displayed vertically in the same document order.
 * The inter-benefit gap is `24px` (`M`): horizontal on Desktop and Tablet, and vertical on Mobile.
 
-## Local Media Composition
-
-* Contains two property/location images and one `Local Trust Card`.
-* The composition does not form a symmetrical Grid or a complete rectangular outer boundary.
-* Remains visually secondary to the Primary Headline.
-* The complete composition remains within the Content Container at every Breakpoint and preserves the globally defined content inset from the outer System Lines.
-
 ## Local Images
 
-* The `Local Media Composition` contains exactly two rectangular images with different dimensions and Aspect Ratios.
+* The media area contains exactly two rectangular images with different dimensions and Aspect Ratios.
 * The same two images are used across all City Area Pages and do not change according to `[City]`.
 * The images provide general residential context and must not imply that they depict the named city.
 * The currently selected image assets are temporary and will later be replaced by two final shared images.
