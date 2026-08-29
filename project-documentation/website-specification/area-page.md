@@ -268,6 +268,8 @@ The Contact Us Option follows the Selected Situation Content at every Breakpoint
 ## Supporting Copy
 
 - Follows the Primary Headline.
+- Uses semantic paragraph text.
+- Uses the global `Body Large` typography and inherited supporting-copy color.
 - Content: `Every homeowner’s situation is different. Choose what best describes yours to see how we can help.`
 - Spacing After: `48px` (`XL`) on Desktop and Tablet, and `32px` (`L`) on Mobile.
 
