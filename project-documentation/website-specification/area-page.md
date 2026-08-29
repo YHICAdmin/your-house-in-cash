@@ -231,83 +231,83 @@ The Section Label, Primary Headline, and Supporting Copy appear above the main c
 
 On Desktop, the main content area:
 
-- Spans the complete Desktop Grid from Column `1` through Column `12`.
-- Places the Situation Selector in Grid Columns `1–3`.
-- Places the Selected Situation Content in Grid Columns `4–12`.
-- Uses the second System Line from the left to separate the two areas between Grid Columns `3` and `4`.
+* Spans the complete Desktop Grid from Column `1` through Column `12`.
+* Places the Situation Selector in Grid Columns `1–3`.
+* Places the Selected Situation Content in Grid Columns `4–12`.
+* Uses the second System Line from the left to separate the two areas between Grid Columns `3` and `4`.
 
 On Tablet and Mobile:
 
-- The Situation Selector appears above the Selected Situation Content.
-- Both areas use the available content width.
+* The Situation Selector appears above the Selected Situation Content.
+* Both areas use the available content width.
 
 ## Section Label
 
-- First element in the Section.
-- Uses the documented `Section Label` Component and inherits its approved icon size and visual treatment.
-- Content: `We Help With`.
-- Includes the canonical Lucide `House` icon.
-- The icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
-- Spacing After: `16px` (`S`) across all Breakpoints.
+* First element in the Section.
+* Uses the documented `Section Label` Component and inherits its approved icon size and visual treatment.
+* Content: `We Help With`.
+* Includes the canonical Lucide `House` icon.
+* The icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
+* Spacing After: `16px` (`S`) across all Breakpoints.
 
 ## Primary Headline
 
-- Follows the Section Label.
-- Serves as the Situations Section's semantic `H2`.
-- Uses the global `H2` typography and inherited headline color.
-- Content: `What brings you here?`
-- Spacing After: `24px` (`M`) across all Breakpoints.
+* Follows the Section Label.
+* Serves as the Situations Section's semantic `H2`.
+* Uses the global `H2` typography and inherited headline color.
+* Content: `What brings you here?`
+* Spacing After: `24px` (`M`) across all Breakpoints.
 
 ## Supporting Copy
 
-- Follows the Primary Headline.
-- Uses semantic paragraph text.
-- Uses the global `Body Large` typography and inherited supporting-copy color.
-- Content: `Every homeowner’s situation is different. Choose what best describes yours to see how we can help.`
-- Spacing After: `48px` (`XL`) on Desktop and Tablet, and `32px` (`L`) on Mobile.
+* Follows the Primary Headline.
+* Uses semantic paragraph text.
+* Uses the global `Body Large` typography and inherited supporting-copy color.
+* Content: `Every homeowner’s situation is different. Choose what best describes yours to see how we can help.`
+* Spacing After: `48px` (`XL`) on Desktop and Tablet, and `32px` (`L`) on Mobile.
 
 ## Situation Selector
 
-- Follows the Supporting Copy in document order.
-- On Desktop, displays all situation options simultaneously in a vertical Selector.
-- On Tablet, displays all situation options simultaneously in a two-column arrangement.
-- On Mobile, displays the situation options in one horizontally scrollable strip.
-- When additional Mobile options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
-- The Mobile selector does not advance automatically.
-- Uses the global `Body` typography and `Text Primary` color.
-- Text is left-aligned.
-- Each option has a minimum interactive height of `48px`, with `8px` vertical and `16px` horizontal internal padding.
-- The default state does not use a background, Border, Divider, Radius, or Shadow.
-- On Desktop, each option fills the available Situation Selector width, with an `8px` (`XS`) vertical gap between options.
-- On Tablet, each option fills its allocated column, with a `16px` (`S`) row and column gap.
-- On Mobile, each option uses its content-based width, with an `8px` (`XS`) gap between options in the horizontal strip.
-- Selecting an option updates the Selected Situation Content within the Section and keeps keyboard focus on the selected option.
-- On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
-- On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
-- No vertical gap applies between the Situation Selector and Selected Situation Content on Desktop because they appear side by side.
-- Across all Breakpoints, the selected option uses Brand Green Dark text at `600` font weight.
-- A persistent `2px` solid Brand Green Dark indicator appears beneath the selected option.
-- The indicator follows the rendered option text width only, excluding the option's padding and available row width.
-- The indicator appears `4px` below the text.
-- The indicator's geometry remains unchanged across all Breakpoints.
-- The selected option does not use a background, Card treatment, Radius, or Shadow.
-- Font weight and the persistent indicator communicate the selected state in addition to color.
-- When an unselected option is hovered, its text changes to Brand Green Dark while its font weight remains unchanged.
-- Hovering an unselected option does not display the persistent selected indicator or add a background, Card treatment, Radius, or Shadow.
-- A selected option retains its approved selected-state treatment while hovered.
-- The Situation Selector uses independent selection buttons.
-- The visible Primary Headline provides the Situation Selector's accessible name.
-- The visible Supporting Copy provides the Situation Selector's accessible description.
-- These relationships do not introduce duplicate visible or visually hidden text.
-- Each option is reached individually with `Tab` and `Shift + Tab` and uses the global Focus-Visible Treatment.
-- `Enter` or `Space` selects the focused option.
-- Exactly one option is selected at a time.
-- The selected state is communicated to assistive technologies.
-- Selected Situation Content updates are announced politely without interrupting other assistive-technology output.
-- Update announcement template: `[Situation] details are now available.`
-- The complete updated content is not announced automatically.
-- Keyboard focus remains visible when navigating the Mobile strip.
-- Contains the following options in canonical order:
+* Follows the Supporting Copy in document order.
+* On Desktop, displays all situation options simultaneously in a vertical Selector.
+* On Tablet, displays all situation options simultaneously in a two-column arrangement.
+* On Mobile, displays the situation options in one horizontally scrollable strip.
+* When additional Mobile options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
+* The Mobile selector does not advance automatically.
+* Uses the global `Body` typography and `Text Primary` color.
+* Text is left-aligned.
+* Each option has a minimum interactive height of `48px`, with `8px` vertical and `16px` horizontal internal padding.
+* The default state does not use a background, Border, Divider, Radius, or Shadow.
+* On Desktop, each option fills the available Situation Selector width, with an `8px` (`XS`) vertical gap between options.
+* On Tablet, each option fills its allocated column, with a `16px` (`S`) row and column gap.
+* On Mobile, each option uses its content-based width, with an `8px` (`XS`) gap between options in the horizontal strip.
+* Selecting an option updates the Selected Situation Content within the Section and keeps keyboard focus on the selected option.
+* On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
+* On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
+* No vertical gap applies between the Situation Selector and Selected Situation Content on Desktop because they appear side by side.
+* Across all Breakpoints, the selected option uses Brand Green Dark text at `600` font weight.
+* A persistent `2px` solid Brand Green Dark indicator appears beneath the selected option.
+* The indicator follows the rendered option text width only, excluding the option's padding and available row width.
+* The indicator appears `4px` below the text.
+* The indicator's geometry remains unchanged across all Breakpoints.
+* The selected option does not use a background, Card treatment, Radius, or Shadow.
+* Font weight and the persistent indicator communicate the selected state in addition to color.
+* When an unselected option is hovered, its text changes to Brand Green Dark while its font weight remains unchanged.
+* Hovering an unselected option does not display the persistent selected indicator or add a background, Card treatment, Radius, or Shadow.
+* A selected option retains its approved selected-state treatment while hovered.
+* The Situation Selector uses independent selection buttons.
+* The visible Primary Headline provides the Situation Selector's accessible name.
+* The visible Supporting Copy provides the Situation Selector's accessible description.
+* These relationships do not introduce duplicate visible or visually hidden text.
+* Each option is reached individually with `Tab` and `Shift + Tab` and uses the global Focus-Visible Treatment.
+* `Enter` or `Space` selects the focused option.
+* Exactly one option is selected at a time.
+* The selected state is communicated to assistive technologies.
+* Selected Situation Content updates are announced politely without interrupting other assistive-technology output.
+* Update announcement template: `[Situation] details are now available.`
+* The complete updated content is not announced automatically.
+* Keyboard focus remains visible when navigating the Mobile strip.
+* Contains the following options in canonical order:
   1. `Foreclosure`.
   2. `Inherited Property`.
   3. `Tired Landlord`.
@@ -318,17 +318,17 @@ On Tablet and Mobile:
   8. `Divorce`.
   9. `Behind on Property Taxes`.
   10. `Code Violations`.
-- `Foreclosure` is selected by default when the Section first loads.
+* `Foreclosure` is selected by default when the Section first loads.
 
 ## Selected Situation Content
 
-- Follows the Situation Selector in document order.
-- Forms an identifiable content region associated with the currently selected Situation option.
-- Its accessible name is derived from the selected option and updates when the selection changes.
-- This relationship does not introduce duplicate visible or visually hidden text.
-- On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
-- Displays content corresponding to the selected Situation Selector option.
-- Contains the following elements in order:
+* Follows the Situation Selector in document order.
+* Forms an identifiable content region associated with the currently selected Situation option.
+* Its accessible name is derived from the selected option and updates when the selection changes.
+* This relationship does not introduce duplicate visible or visually hidden text.
+* On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
+* Displays content corresponding to the selected Situation Selector option.
+* Contains the following elements in order:
   1. Situation Image.
   2. Situation Explanation.
   3. Situation Benefits.
@@ -336,9 +336,9 @@ On Tablet and Mobile:
 
 ### Situation Image
 
-- Displays an image relevant to the selected situation.
-- Supports the content without becoming the dominant visual element.
-- Uses the following temporary asset for each situation:
+* Displays an image relevant to the selected situation.
+* Supports the content without becoming the dominant visual element.
+* Uses the following temporary asset for each situation:
   1. `Foreclosure`: `/images/situations/foreclosure.webp`.
   2. `Inherited Property`: `/images/situations/inherited-property.webp`.
   3. `Tired Landlord`: `/images/situations/tired-landlord.webp`.
@@ -349,18 +349,18 @@ On Tablet and Mobile:
   8. `Divorce`: `/images/situations/divorce.webp`.
   9. `Behind on Property Taxes`: `/images/situations/behind-on-property-taxes.webp`.
   10. `Code Violations`: `/images/situations/code-violations.webp`.
-- Each temporary asset is `1200 × 675px` with a `16:9` Aspect Ratio.
-- Final images will replace the temporary assets at the same paths and preserve the same dimensions, Aspect Ratio, and rendering behavior.
-- The image scales fluidly within its allocated width while preserving its Aspect Ratio across all Breakpoints.
-- Moderate cropping is permitted when necessary to fill the approved image frame without distortion.
-- All Situation Images are decorative and use empty alternative text: `alt=""`.
-- Spacing After: `24px` (`M`) across all Breakpoints.
+* Each temporary asset is `1200 × 675px` with a `16:9` Aspect Ratio.
+* Final images will replace the temporary assets at the same paths and preserve the same dimensions, Aspect Ratio, and rendering behavior.
+* The image scales fluidly within its allocated width while preserving its Aspect Ratio across all Breakpoints.
+* Moderate cropping is permitted when necessary to fill the approved image frame without distortion.
+* All Situation Images are decorative and use empty alternative text: `alt=""`.
+* Spacing After: `24px` (`M`) across all Breakpoints.
 
 ### Situation Explanation
 
-- Provides a short explanation relevant to the selected situation.
-- Uses the global `Body Large` typography.
-- Uses the following content for each situation:
+* Provides a short explanation relevant to the selected situation.
+* Uses the global `Body Large` typography.
+* Uses the following content for each situation:
   1. `Foreclosure`: `Facing foreclosure can feel overwhelming. We offer a straightforward way to sell your house as-is and work around your timeline.`
   2. `Inherited Property`: `An inherited property can bring repairs, belongings, and decisions you did not plan for. We make it easier to sell as-is without preparing the house for the traditional market.`
   3. `Tired Landlord`: `Managing tenants, maintenance, and ongoing expenses can become exhausting. We buy rental properties as-is so you can move on without another traditional listing.`
@@ -371,69 +371,69 @@ On Tablet and Mobile:
   8. `Divorce`: `Selling a house during a divorce can add stress to an already difficult transition. We provide a simple and discreet way to sell the property as-is.`
   9. `Behind on Property Taxes`: `Falling behind on property taxes can create increasing pressure. We offer a straightforward as-is sale so you can explore your next step.`
   10. `Code Violations`: `Code violations can make repairs and a traditional listing more difficult. We buy houses as-is, including properties with unresolved violations.`
-- Spacing After: `32px` (`L`) across all Breakpoints.
+* Spacing After: `32px` (`L`) across all Breakpoints.
 
 ### Situation Benefits
 
-- Displays exactly three benefits for the selected situation in the documented order.
-- Uses one semantic unordered list containing three list items.
-- Each item uses the global `Body` typography and `Text Primary` color.
-- Each item includes the Lucide `Check` icon at `20px` in Brand Green Dark.
-- The icons are decorative and hidden from assistive technologies.
-- The gap between each icon and its text is `12px`.
-- The vertical gap between items is `16px` (`S`).
-- Icons align with the first line when benefit text wraps.
-- The list remains vertical across all Breakpoints.
-- Uses the following benefits for each situation:
+* Displays exactly three benefits for the selected situation in the documented order.
+* Uses one semantic unordered list containing three list items.
+* Each item uses the global `Body` typography and `Text Primary` color.
+* Each item includes the Lucide `Check` icon at `20px` in Brand Green Dark.
+* The icons are decorative and hidden from assistive technologies.
+* The gap between each icon and its text is `12px`.
+* The vertical gap between items is `16px` (`S`).
+* Icons align with the first line when benefit text wraps.
+* The list remains vertical across all Breakpoints.
+* Uses the following benefits for each situation:
   1. `Foreclosure`:
-     - `Sell without making repairs`.
-     - `Choose a flexible closing date`.
-     - `Avoid a traditional listing`.
+     * `Sell without making repairs`.
+     * `Choose a flexible closing date`.
+     * `Avoid a traditional listing`.
   2. `Inherited Property`:
-     - `Sell the inherited property as-is`.
-     - `Leave unwanted belongings behind`.
-     - `Simplify the sale process`.
+     * `Sell the inherited property as-is`.
+     * `Leave unwanted belongings behind`.
+     * `Simplify the sale process`.
   3. `Tired Landlord`:
-     - `Sell an occupied or vacant rental`.
-     - `Skip repairs and another listing`.
-     - `Choose a timeline that works for you`.
+     * `Sell an occupied or vacant rental`.
+     * `Skip repairs and another listing`.
+     * `Choose a timeline that works for you`.
   4. `Major Repairs`:
-     - `Sell without completing repairs`.
-     - `Skip cleaning and staging`.
-     - `Avoid traditional buyer financing`.
+     * `Sell without completing repairs`.
+     * `Skip cleaning and staging`.
+     * `Avoid traditional buyer financing`.
   5. `Vacant Property`:
-     - `Reduce ongoing holding costs`.
-     - `Sell without preparing the property`.
-     - `Choose a flexible closing date`.
+     * `Reduce ongoing holding costs`.
+     * `Sell without preparing the property`.
+     * `Choose a flexible closing date`.
   6. `Problem Tenants`:
-     - `Sell the property in its current condition`.
-     - `Discuss options for an occupied property`.
-     - `Avoid another traditional listing`.
+     * `Sell the property in its current condition`.
+     * `Discuss options for an occupied property`.
+     * `Avoid another traditional listing`.
   7. `Relocation`:
-     - `Choose a closing date around your move`.
-     - `Skip repairs and staging`.
-     - `Coordinate the sale after relocating`.
+     * `Choose a closing date around your move`.
+     * `Skip repairs and staging`.
+     * `Coordinate the sale after relocating`.
   8. `Divorce`:
-     - `Use a simple, discreet sale process`.
-     - `Choose a flexible timeline`.
-     - `Sell the property as-is`.
+     * `Use a simple, discreet sale process`.
+     * `Choose a flexible timeline`.
+     * `Sell the property as-is`.
   9. `Behind on Property Taxes`:
-     - `Sell the property as-is`.
-     - `Avoid preparing for a traditional listing`.
-     - `Choose a closing date that fits your situation`.
+     * `Sell the property as-is`.
+     * `Avoid preparing for a traditional listing`.
+     * `Choose a closing date that fits your situation`.
   10. `Code Violations`:
-      - `Sell with existing code violations`.
-      - `Avoid completing repairs before the sale`.
-      - `Use a straightforward sale process`.
-- Spacing After: `32px` (`L`) across all Breakpoints.
+      * `Sell with existing code violations`.
+      * `Avoid completing repairs before the sale`.
+      * `Use a straightforward sale process`.
+* Spacing After: `32px` (`L`) across all Breakpoints.
 
 ### Situation CTA
 
-- Links to the dedicated content or SEO page for the selected situation.
-- Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
-- Uses link semantics.
-- Visible label template: `Learn More About [Situation]`.
-- Uses the following destination for each situation:
+* Links to the dedicated content or SEO page for the selected situation.
+* Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
+* Uses link semantics.
+* Visible label template: `Learn More About [Situation]`.
+* Uses the following destination for each situation:
   1. `Foreclosure`: `/situations/foreclosure`.
   2. `Inherited Property`: `/situations/inherited-property`.
   3. `Tired Landlord`: `/situations/tired-landlord`.
@@ -444,18 +444,18 @@ On Tablet and Mobile:
   8. `Divorce`: `/situations/divorce`.
   9. `Behind on Property Taxes`: `/situations/behind-on-property-taxes`.
   10. `Code Violations`: `/situations/code-violations`.
-- These paths establish the canonical route convention for dedicated Situation Pages.
+* These paths establish the canonical route convention for dedicated Situation Pages.
 
 ## Contact Us Option
 
-- Follows the Selected Situation Content in document order.
-- Spacing Before: `32px` (`L`) across all Breakpoints.
-- Provides an alternative path for users who are unsure which situation applies to them.
-- Supporting text: `Not sure which situation fits?`
-- Action label: `Tell Us About Your Situation`.
-- Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
-- Uses link semantics.
-- Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
+* Follows the Selected Situation Content in document order.
+* Spacing Before: `32px` (`L`) across all Breakpoints.
+* Provides an alternative path for users who are unsure which situation applies to them.
+* Supporting text: `Not sure which situation fits?`
+* Action label: `Tell Us About Your Situation`.
+* Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
+* Uses link semantics.
+* Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
 
 # Reviews
 
