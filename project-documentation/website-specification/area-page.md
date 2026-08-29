@@ -541,6 +541,9 @@ On Desktop, the main content area:
 ### Dimensions and Alignment
 
 * On Desktop, occupies Grid Columns `4–12`.
+* The supporting text appears above the Text Link.
+* Both elements are left-aligned.
+* An `8px` (`XS`) vertical gap separates them.
 
 ### Spacing Before
 
@@ -553,6 +556,7 @@ On Desktop, the main content area:
 ### Responsive Behavior
 
 * On Tablet and Mobile, uses the available content width.
+* The internal arrangement remains unchanged across all Breakpoints.
 
 # Reviews
 
