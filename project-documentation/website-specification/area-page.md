@@ -315,7 +315,6 @@ On Tablet and Mobile:
 * The indicator appears `4px` below the text.
 * The indicator's geometry remains unchanged across all Breakpoints.
 * The selected option does not use a background, Card treatment, Radius, or Shadow.
-* Font weight and the persistent indicator communicate the selected state in addition to color.
 * When an unselected option is hovered, its text changes to Brand Green Dark while its font weight remains unchanged.
 * Hovering an unselected option does not display the persistent selected indicator or add a background, Card treatment, Radius, or Shadow.
 * A selected option retains its approved selected-state treatment while hovered.
