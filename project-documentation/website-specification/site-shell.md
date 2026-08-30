@@ -109,6 +109,7 @@ Provide clear, accessible navigation.
 
 * The Menu Control is positioned on the right and uses a `24px` icon within a `40px × 40px` interactive area.
 * The Open Menu Panel fills the remaining viewport below the Header.
+* The Open Menu Panel overlays page content while the Header's foreground controls remain visually above it.
 * Menu Navigation links appear as left-aligned vertical rows aligned with the Header and Menu Panel content area.
 * Each Menu Navigation row uses `24px` (`M`) vertical padding.
 * If the Menu content exceeds the available viewport height, the Open Menu Panel becomes vertically scrollable.
