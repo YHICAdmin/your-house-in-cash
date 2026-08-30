@@ -172,12 +172,23 @@ Provide clear, accessible navigation.
 
 ## Header CTA
 
+### Content
+
 * Label: `Get My Cash Offer`.
-* Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
+
+### Component and Semantics
+
 * Uses the standard `Button` Component with link semantics and inherits its visual styling, dimensions, interaction states, and accessibility behavior.
+* Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
+
+### Dimensions and Alignment
+
 * On Desktop, positioned on the right side of the Header.
-* On Tablet, this is an explicit Breakpoint-specific order change: the Header CTA follows the Logo and precedes the Menu Control in document, reading, and focus order.
 * On Tablet, grouped on the right with the Menu Control and separated from it by `16px` (`S`).
+
+### Responsive Behavior
+
+* On Tablet, this is an explicit Breakpoint-specific order change: the Header CTA follows the Logo and precedes the Menu Control in document, reading, and focus order.
 * Not displayed in the Header on Mobile.
 
 # Footer
