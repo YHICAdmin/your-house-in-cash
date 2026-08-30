@@ -39,11 +39,14 @@ Provide clear, accessible navigation.
 
 * Contains links in this order: `How It Works`, `Situations`, `Areas We Buy In`, `Reviews`, `FAQ`, `About Us`.
 * Displayed only on Desktop.
-* Positioned directly after the Logo with a `24px` (`M`) gap.
 * Links use the global `Body Small` typography and have a `24px` (`M`) gap between them.
 * Does not use a persistent Active Page Indicator.
 * Hover and focus-visible text color changes to Brand Green Dark.
 * Navigation and links remain keyboard accessible and use the appropriate navigation and link semantics.
+
+#### Spacing Before
+
+* `24px` (`M`) after the Logo.
 
 ### Menu Control
 
