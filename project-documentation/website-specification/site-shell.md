@@ -42,7 +42,8 @@ Provide clear, accessible navigation.
 * Links use the global `Body Small` typography and have a `24px` (`M`) gap between them.
 * Does not use a persistent Active Page Indicator.
 * Hover and focus-visible text color changes to Brand Green Dark.
-* Navigation and links remain keyboard accessible and use the appropriate navigation and link semantics.
+* Uses navigation landmark semantics with the accessible name `Primary navigation`.
+* Each item uses link semantics.
 
 #### Spacing Before
 
