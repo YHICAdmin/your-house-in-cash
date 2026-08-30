@@ -80,8 +80,8 @@ export function AreaHero({ city }: AreaHeroProps) {
                 className={styles.portrait}
                 src="/images/local-trust-portrait.webp"
                 alt=""
-                width={48}
-                height={48}
+                width={125}
+                height={125}
               />
               <div className={styles.identityText}>
                 <p className={`${styles.trustHeadline} text-heading-3`}>

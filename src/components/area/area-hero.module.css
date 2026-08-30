@@ -142,9 +142,9 @@
 }
 
 .portrait {
-  width: 89.856px;
-  height: 89.856px;
-  flex: 0 0 89.856px;
+  width: 125px;
+  height: 125px;
+  flex: 0 0 125px;
   border-radius: var(--radius-pill);
   object-fit: cover;
 }

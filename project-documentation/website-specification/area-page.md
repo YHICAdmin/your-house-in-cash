@@ -277,7 +277,6 @@ Provide the seller with a clear path to begin the conversion process.
 ### Content
 
 * Uses the local portrait asset at `/images/local-trust-portrait.webp`.
-* The final portrait will replace the file at the same path and retain the same `1:1` Aspect Ratio and rendering rules.
 * Primary headline:
   Local. Reliable.
   Cleveland’s Neighbor.
@@ -299,7 +298,7 @@ Provide the seller with a clear path to begin the conversion process.
 
 * The card spans `100%` of the Local Images row width and aligns with both outer edges.
 * Uses `16px` (`S`) internal padding.
-* The portrait is rendered at `89.856px × 89.856px` with a `1:1` Aspect Ratio.
+* The portrait is rendered at `125px × 125px` with a `1:1` Aspect Ratio.
 * The portrait appears on the left, with the text block positioned to its right and separated by a `16px` (`S`) gap.
 * The portrait and text block are vertically centered within the card.
 * The complete portrait-and-text row is horizontally centered within the card.
