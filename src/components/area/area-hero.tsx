@@ -54,7 +54,7 @@ export function AreaHero({ city }: AreaHeroProps) {
         </div>
 
         <div className={styles.media}>
-          <div className={styles.upperImages}>
+          <div className={styles.imageMosaic}>
             <div className={`${styles.imageFrame} ${styles.leftImage}`}>
               <Image
                 src="/images/area-hero/local-left.webp"
@@ -64,14 +64,25 @@ export function AreaHero({ city }: AreaHeroProps) {
                 priority
               />
             </div>
-            <div className={`${styles.imageFrame} ${styles.rightImage}`}>
-              <Image
-                src="/images/area-hero/local-right.webp"
-                alt=""
-                fill
-                sizes="(min-width: 1200px) 17vw, 32vw"
-                priority
-              />
+            <div className={styles.rightImages}>
+              <div className={styles.imageFrame}>
+                <Image
+                  src="/images/area-hero/local-right.webp"
+                  alt=""
+                  fill
+                  sizes="(min-width: 1200px) 17vw, 32vw"
+                  priority
+                />
+              </div>
+              <div className={styles.imageFrame}>
+                <Image
+                  src="/images/area-hero/local-bottom.webp"
+                  alt=""
+                  fill
+                  sizes="(min-width: 1200px) 17vw, 32vw"
+                  priority
+                />
+              </div>
             </div>
           </div>
           <div className={styles.trustCard}>

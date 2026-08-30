@@ -243,34 +243,39 @@ Provide the seller with a clear path to begin the conversion process.
 
 ### Content
 
-* The media area contains exactly two rectangular images with different dimensions and Aspect Ratios.
-* The same two images are used across all City Area Pages and do not change according to `[City]`.
+* The media area contains exactly three rectangular images.
+* The same three images are used across all City Area Pages and do not change according to `[City]`.
 * The images provide general residential context and must not imply that they depict the named city.
-* The currently selected image assets are temporary and will later be replaced by two final shared images.
+* The currently selected image assets are temporary and will later be replaced by three final shared images.
 * The final images retain the same asset paths, Aspect Ratios, composition geometry, and responsive behavior.
 * Left Image temporary asset path: `/images/area-hero/local-left.webp`.
-* Right Image temporary asset path: `/images/area-hero/local-right.webp`.
+* Top-Right Image temporary asset path: `/images/area-hero/local-right.webp`.
+* Bottom-Right Image temporary asset path: `/images/area-hero/local-bottom.webp`.
 
 ### Visual Design
 
-* Both images fill their frames without distortion and use the global Medium Border Radius and global Subtle Shadow.
+* All three images fill their frames without distortion and use the global Medium Border Radius and global Subtle Shadow.
+* The three images form one cohesive rectangular mosaic.
 
 ### Dimensions and Alignment
 
-* Left Image Desktop reference size: `271px × 202px`.
-* The Left Image is positioned on the left side of the image row.
-* Right Image Desktop reference size: `250px × 328px`.
-* The Right Image is positioned on the right side of the image row.
-* At the approved Desktop reference size, the Left and Right Images form a `541px`-wide row with approximately `20px` of horizontal space between them.
-* Their bottom edges align.
+* At the approved Desktop reference size, the complete image mosaic is `541px × 328px`.
+* The Left Image is positioned on the left, measures `271px × 328px`, occupies `50.0924%` of the mosaic width, and spans `100%` of its height.
+* The Top-Right Image is positioned to the right of the Left Image, measures `250px × 154px`, occupies `46.2107%` of the mosaic width and `46.9512%` of its height, and aligns with the mosaic's top edge.
+* The Bottom-Right Image is positioned directly beneath the Top-Right Image, uses the same `250px × 154px` dimensions and proportions, and aligns with the mosaic's bottom edge.
+* The horizontal gap between the Left Image and both right-side images is `3.6969%` of the mosaic width, approximately `20px` at the Desktop reference size.
+* The vertical gap between the Top-Right and Bottom-Right Images is `6.0976%` of the mosaic height, `20px` at the Desktop reference size.
+* The combined height of the two right-side images and their vertical gap equals the full height of the Left Image.
+* The mosaic has no additional outer padding.
 
 ### Accessibility
 
-* Both images are decorative and use `alt=""`.
+* All three images are decorative and use `alt=""`.
 
 ### Responsive Behavior
 
-* At narrower widths, the approved image sizes, horizontal gap, and relative positions scale down proportionally as one visual unit without changing the image order or bottom alignment.
+* At narrower widths, the complete mosaic, image dimensions, horizontal and vertical gaps, and relative positions scale down proportionally as one visual unit.
+* The Left, Top-Right, and Bottom-Right Image order and rectangular mosaic relationship remain unchanged across all Breakpoints, including the supported `320px` minimum width.
 
 ## Local Trust Card
 

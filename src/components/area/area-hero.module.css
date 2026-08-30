@@ -92,10 +92,10 @@
   margin-top: var(--spacing-xl);
 }
 
-.upperImages {
+.imageMosaic {
   display: flex;
   width: 100%;
-  align-items: flex-end;
+  aspect-ratio: 541 / 328;
   gap: 3.6969%;
 }
 
@@ -112,12 +112,20 @@
 
 .leftImage {
   width: 50.0924%;
-  aspect-ratio: 271 / 202;
+  height: 100%;
 }
 
-.rightImage {
+.rightImages {
+  display: flex;
   width: 46.2107%;
-  aspect-ratio: 250 / 328;
+  height: 100%;
+  flex-direction: column;
+  gap: 6.0976%;
+}
+
+.rightImages .imageFrame {
+  min-height: 0;
+  flex: 1;
 }
 
 .trustCard {
