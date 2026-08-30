@@ -13,6 +13,7 @@ Provide clear, accessible navigation.
 * As soon as the page is scrolled from its top position by any amount, the bottom border is removed and replaced by the global Subtle Shadow.
 * Opening the Menu does not change the Header's current border or Shadow state.
 * Internal System Lines remain visible but do not dictate the placement of Header elements.
+* On Desktop, the Logo and Desktop Navigation links form a left-side visual group with a `24px` (`M`) gap between adjacent items.
 
 ## Logo
 
@@ -39,15 +40,11 @@ Provide clear, accessible navigation.
 
 * Contains links in this order: `How It Works`, `Situations`, `Areas We Buy In`, `Reviews`, `FAQ`, `About Us`.
 * Displayed only on Desktop.
-* Links use the global `Body Small` typography and have a `24px` (`M`) gap between them.
+* Links use the global `Body Small` typography.
 * Does not use a persistent Active Page Indicator.
 * Hover and focus-visible text color changes to Brand Green Dark.
 * Uses navigation landmark semantics with the accessible name `Primary navigation`.
 * Each item uses link semantics.
-
-#### Spacing Before
-
-* `24px` (`M`) after the Logo.
 
 ### Menu Control
 
