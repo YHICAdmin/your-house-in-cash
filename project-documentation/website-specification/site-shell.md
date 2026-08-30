@@ -6,7 +6,6 @@ Provide clear, accessible navigation.
 
 ## Layout
 
-* Quiet and minimal, with generous whitespace.
 * Sticky at the top of the viewport with no hide-and-reveal behavior while scrolling.
 * Height: `80px` on Desktop, `72px` on Tablet, and `64px` on Mobile.
 * Uses a solid `#FFFFFF` background, with all Header content vertically centered.
