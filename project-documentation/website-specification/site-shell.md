@@ -152,6 +152,7 @@ Provide clear, accessible navigation.
 * The Menu Control is programmatically associated with the Open Menu Panel.
 * The Menu Control icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
 * The Menu Control uses the global Focus-Visible Treatment.
+* As soon as opening begins, the Open Menu Panel and its interactive content become available to assistive technologies and user interaction.
 * When the Menu opens, keyboard focus moves to the first Menu Navigation link.
 * While the Menu is open, keyboard focus remains within the Header and Open Menu Panel; `Tab` and `Shift + Tab` cycle through only their interactive elements.
 * While the Open Menu Panel is displayed, page scrolling is locked and background page content is non-interactive.
