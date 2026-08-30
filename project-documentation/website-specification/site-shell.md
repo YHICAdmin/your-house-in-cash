@@ -13,7 +13,6 @@ Provide clear, accessible navigation.
 * As soon as the page is scrolled from its top position by any amount, the bottom border is removed and replaced by the global Subtle Shadow.
 * Opening the Menu does not change the Header's current border or Shadow state.
 * Internal System Lines remain visible but do not dictate the placement of Header elements.
-* The Open Menu Panel uses an uninterrupted solid white background with no System Lines visible through it.
 
 ## Logo
 
@@ -60,7 +59,7 @@ Provide clear, accessible navigation.
 * Displayed only while the Tablet or Mobile Menu is opening, open, or closing.
 * On Tablet, follows the Header CTA and Menu Control in document, reading, and focus order.
 * On Mobile, follows the Menu Control in document, reading, and focus order.
-* Fills the remaining viewport below the Header and uses a solid `#FFFFFF` background.
+* Fills the remaining viewport below the Header and uses an uninterrupted solid `#FFFFFF` background with no System Lines visible through it.
 * While the panel is displayed, page scrolling is locked and background page content is non-interactive. If the Menu content exceeds the available viewport height, the panel becomes vertically scrollable.
 * Closes when the Menu Control is activated, a Menu Navigation link is selected, or `Escape` is pressed.
 * If the viewport changes to Desktop while open, the Menu closes and resets.
