@@ -199,18 +199,6 @@
 
   .media {
     grid-column: 8 / span 5;
-    width: calc(
-      100% + var(--content-inset) +
-        min(
-          48px,
-          max(
-            0px,
-            calc(
-              (100vw - min(calc(100vw - 32px), 1248px)) / 2 - 16px
-            )
-          )
-        )
-    );
     margin-top: 0;
   }
 }
