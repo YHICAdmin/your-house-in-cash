@@ -78,7 +78,7 @@ Provide clear, accessible navigation.
 #### Tablet and Mobile
 
 * The Menu Control uses button semantics.
-* The Menu Navigation uses navigation landmark semantics, and each item uses link semantics.
+* The Menu Navigation uses navigation landmark semantics with the accessible name `Menu navigation`, and each item uses link semantics.
 
 #### Mobile
 
