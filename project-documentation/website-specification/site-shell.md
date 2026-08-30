@@ -82,7 +82,7 @@ Provide clear, accessible navigation.
 
 #### Mobile
 
-* The Menu Primary CTA uses the standard `Button` Component and navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
+* The Menu Primary CTA uses the standard `Button` Component with link semantics and navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
 
 ### Visual Design
 
