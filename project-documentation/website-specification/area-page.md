@@ -122,9 +122,11 @@ Provide the seller with a clear path to begin the conversion process.
 * Wraps naturally according to the available width; do not add manual line breaks.
 * `[City]` may wrap naturally at word boundaries but must not break within a word.
 * The `[City]` text block follows the rendered width of the city name and is constrained to the available headline width.
-* A single decorative hand-drawn stroke appears `8px` (`XS`) beneath the complete `[City]` text block.
-* The stroke follows the rendered width of the complete `[City]` text block, occupies an `8px`-high decoration area, and uses an `8px` Brand Green Light line.
-* The stroke forms the previously approved subtle curved shape with an approximately `-1deg` diagonal rotation.
+* A single decorative hand-drawn stroke appears `4px` beneath the complete `[City]` text block.
+* The stroke spans the complete rendered width of the `[City]` text block, with its rounded left and right ends aligned to the corresponding city-text edges.
+* The stroke occupies a `16px`-high decoration area and is approximately `9–11px` thick, with slight natural variation across its length.
+* The stroke's centerline is approximately `7.5px` from the top of the decoration area at the left, descends to approximately `10.5px` through the middle, and lifts to approximately `8px` near the right edge.
+* The stroke is fully opaque Brand Green Light and forms one long, predominantly horizontal marker or brush shape with soft, rounded ends.
 * When a multi-word city wraps, the stroke remains one decoration beneath the complete city block and does not repeat beneath individual lines.
 * The stroke is decorative and does not affect text layout.
 
