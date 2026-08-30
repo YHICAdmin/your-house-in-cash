@@ -33,7 +33,6 @@ Provide clear, accessible navigation.
 
 ## Navigation
 
-* Follows the Logo in document order.
 * Contains the Desktop Navigation on Desktop and the Menu Control and Open Menu Panel on Tablet and Mobile.
 
 ### Desktop Navigation
