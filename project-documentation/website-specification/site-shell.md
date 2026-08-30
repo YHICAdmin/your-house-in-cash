@@ -16,7 +16,6 @@ Provide clear, accessible navigation.
 
 ## Logo
 
-* First element in the Header.
 * Displays the company Logo on the left and preserves its original Aspect Ratio.
 * Links to the canonical homepage at `/` from every page and does not change according to the current Area Page.
 * The homepage currently uses the Area Page template with Cleveland as its location.
