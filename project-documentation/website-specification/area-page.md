@@ -114,13 +114,19 @@ Provide the seller with a clear path to begin the conversion process.
 
 * Uses the global `H1` typography.
 * `Sell Your House Fast in` uses the global `Text Primary` color.
-* `[City]` uses the global `Brand Green` color.
+* `[City]` uses the same global `Text Primary` color as the rest of the headline.
 * Acts as the primary visual focal point of the Hero.
 
 ### Dimensions and Alignment
 
 * Wraps naturally according to the available width; do not add manual line breaks.
 * `[City]` may wrap naturally at word boundaries but must not break within a word.
+* The `[City]` text block follows the rendered width of the city name and is constrained to the available headline width.
+* A single decorative hand-drawn stroke appears `8px` (`XS`) beneath the complete `[City]` text block.
+* The stroke follows the rendered width of the complete `[City]` text block, occupies an `8px`-high decoration area, and uses an `8px` Brand Green Light line.
+* The stroke forms the previously approved subtle curved shape with an approximately `-1deg` diagonal rotation.
+* When a multi-word city wraps, the stroke remains one decoration beneath the complete city block and does not repeat beneath individual lines.
+* The stroke is decorative and does not affect text layout.
 
 ### Spacing After
 
