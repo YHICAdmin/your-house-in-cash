@@ -133,7 +133,7 @@ Provide clear, accessible navigation.
 * The complete Menu Navigation row is interactive, not only its text.
 * Hover and focus-visible change Menu Navigation link text to Brand Green Dark.
 * The Open Menu Panel is displayed only while the Menu is opening, open, or closing.
-* The Menu closes when the Menu Control is activated, a Menu Navigation link is selected, or `Escape` is pressed.
+* The Menu closes when the Menu Control is activated or a Menu Navigation link is selected.
 * If the viewport changes to Desktop while the Menu is open, the Menu closes and resets.
 * The Open Menu Panel uses a short, subtle opacity transition combined with an `8px` downward movement.
 * Opening takes approximately `200ms` with ease-out timing; closing takes approximately `180ms` with ease-in timing.
