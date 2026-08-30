@@ -8,8 +8,8 @@ Provide clear, accessible navigation.
 
 * Sticky at the top of the viewport with no hide-and-reveal behavior while scrolling.
 * Height: `80px` on Desktop, `72px` on Tablet, and `64px` on Mobile.
-* Uses a solid `#FFFFFF` background, with all Header content vertically centered.
-* In its default state, uses a `1px` dashed `#ECEEF4` bottom border and no Shadow.
+* Uses a solid `#FFFFFF` background, matching the global Background color, with all Header content vertically centered.
+* In its default state, uses a `1px` dashed `#ECEEF4` bottom border, matching the global Line System color, and no Shadow.
 * As soon as the page is scrolled from its top position by any amount, the bottom border is removed and replaced by the global Subtle Shadow.
 * Opening the Menu does not change the Header's current border or Shadow state.
 * Internal System Lines remain visible but do not dictate the placement of Header elements.
