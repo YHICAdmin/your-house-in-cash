@@ -126,7 +126,7 @@ Provide the seller with a clear path to begin the conversion process.
 * The stroke spans the complete rendered width of the `[City]` text block, with its rounded left and right ends aligned to the corresponding city-text edges.
 * The stroke occupies a `16px`-high decoration area and is approximately `9–11px` thick, with slight natural variation across its length.
 * The stroke's centerline is approximately `7.5px` from the top of the decoration area at the left, descends to approximately `10.5px` through the middle, and lifts to approximately `8px` near the right edge.
-* The stroke is fully opaque Brand Green Light and forms one long, predominantly horizontal marker or brush shape with soft, rounded ends.
+* The stroke uses Brand Green at `40%` opacity and forms one long, predominantly horizontal marker or brush shape with soft, rounded ends.
 * When a multi-word city wraps, the stroke remains one decoration beneath the complete city block and does not repeat beneath individual lines.
 * The stroke is decorative and does not affect text layout.
 
