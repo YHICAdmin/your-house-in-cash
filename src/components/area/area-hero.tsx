@@ -28,7 +28,7 @@ export function AreaHero({ city }: AreaHeroProps) {
           <h1 id="area-hero-heading" className={`${styles.heading} text-display`}>
             Sell Your House Fast in{" "}
             <span className={styles.location}>
-              <span className={styles.city}>{city}</span>, Ohio
+              <span className={styles.city}>{city}</span>
             </span>
           </h1>
           <p className={`${styles.supportingCopy} text-body-large`}>

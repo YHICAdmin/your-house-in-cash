@@ -102,7 +102,7 @@ Provide the seller with a clear path to begin the conversion process.
 
 ### Content
 
-* Content template: `Sell Your House Fast in [City], Ohio`.
+* Content template: `Sell Your House Fast in [City]`.
 * The city name changes dynamically between Area Pages.
 * This Hero content template applies to City Area Pages; non-city Area Pages require a separately defined content template.
 
@@ -114,7 +114,7 @@ Provide the seller with a clear path to begin the conversion process.
 
 * Uses the global `H1` typography.
 * `Sell Your House Fast in` uses the global `Text Primary` color.
-* The complete location phrase, `[City], Ohio`, uses the global `Brand Green` color.
+* `[City]` uses the global `Brand Green` color.
 * Acts as the primary visual focal point of the Hero.
 
 ### Dimensions and Alignment
