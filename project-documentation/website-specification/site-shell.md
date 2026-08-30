@@ -16,10 +16,19 @@ Provide clear, accessible navigation.
 
 ## Logo
 
-* Displays the company Logo on the left and preserves its original Aspect Ratio.
-* Links to the canonical homepage at `/` from every page and does not change according to the current Area Page.
+### Content
+
+* Displays the company Logo.
 * The homepage currently uses the Area Page template with Cleveland as its location.
+
+### Component and Semantics
+
+* Links to the canonical homepage at `/` from every page and does not change according to the current Area Page.
 * Accessible name: `Your House in Cash home`.
+
+### Dimensions and Alignment
+
+* Positioned on the left and preserves its original Aspect Ratio.
 * Height: `56px` on Desktop, `48px` on Tablet, and `44px` on Mobile.
 
 ## Navigation
