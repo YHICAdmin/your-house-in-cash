@@ -10,6 +10,7 @@ type Situation = {
   benefits: readonly [string, string, string];
   explanation: string;
   image: string;
+  imagePosition: string;
   label: string;
   slug: string;
 };
@@ -19,6 +20,7 @@ const situations = [
     label: "Foreclosure",
     slug: "foreclosure",
     image: "/images/situations/foreclosure.webp",
+    imagePosition: "65% center",
     explanation:
       "Facing foreclosure can feel overwhelming. We offer a straightforward way to sell your house as-is and work around your timeline.",
     benefits: [
@@ -31,6 +33,7 @@ const situations = [
     label: "Inherited Property",
     slug: "inherited-property",
     image: "/images/situations/inherited-property.webp",
+    imagePosition: "60% center",
     explanation:
       "An inherited property can bring repairs, belongings, and decisions you did not plan for. We make it easier to sell as-is without preparing the house for the traditional market.",
     benefits: [
@@ -43,6 +46,7 @@ const situations = [
     label: "Tired Landlord",
     slug: "tired-landlord",
     image: "/images/situations/tired-landlord.webp",
+    imagePosition: "40% center",
     explanation:
       "Managing tenants, maintenance, and ongoing expenses can become exhausting. We buy rental properties as-is so you can move on without another traditional listing.",
     benefits: [
@@ -55,6 +59,7 @@ const situations = [
     label: "Major Repairs",
     slug: "major-repairs",
     image: "/images/situations/major-repairs.webp",
+    imagePosition: "60% center",
     explanation:
       "A house that needs major repairs can be difficult to sell traditionally. We buy properties as-is, so you can sell without completing the repairs first.",
     benefits: [
@@ -67,6 +72,7 @@ const situations = [
     label: "Vacant Property",
     slug: "vacant-property",
     image: "/images/situations/vacant-property.webp",
+    imagePosition: "center",
     explanation:
       "A vacant house can create ongoing costs, maintenance, and security concerns. We provide a straightforward way to sell it as-is.",
     benefits: [
@@ -79,6 +85,7 @@ const situations = [
     label: "Problem Tenants",
     slug: "problem-tenants",
     image: "/images/situations/problem-tenants.webp",
+    imagePosition: "45% center",
     explanation:
       "Selling a property with tenant issues can feel complicated. We can evaluate the property as-is and discuss a sale that fits its current occupancy situation.",
     benefits: [
@@ -91,6 +98,7 @@ const situations = [
     label: "Relocation",
     slug: "relocation",
     image: "/images/situations/relocation.webp",
+    imagePosition: "65% center",
     explanation:
       "When you need to relocate, timing matters. We offer a flexible, straightforward sale without requiring you to prepare the house for the market.",
     benefits: [
@@ -103,6 +111,7 @@ const situations = [
     label: "Divorce",
     slug: "divorce",
     image: "/images/situations/divorce.webp",
+    imagePosition: "center",
     explanation:
       "Selling a house during a divorce can add stress to an already difficult transition. We provide a simple and discreet way to sell the property as-is.",
     benefits: [
@@ -115,6 +124,7 @@ const situations = [
     label: "Behind on Property Taxes",
     slug: "behind-on-property-taxes",
     image: "/images/situations/behind-on-property-taxes.webp",
+    imagePosition: "60% center",
     explanation:
       "Falling behind on property taxes can create increasing pressure. We offer a straightforward as-is sale so you can explore your next step.",
     benefits: [
@@ -127,6 +137,7 @@ const situations = [
     label: "Code Violations",
     slug: "code-violations",
     image: "/images/situations/code-violations.webp",
+    imagePosition: "center",
     explanation:
       "Code violations can make repairs and a traditional listing more difficult. We buy houses as-is, including properties with unresolved violations.",
     benefits: [
@@ -191,24 +202,30 @@ export function SituationExplorer({
           className={styles.situationImage}
           src={selected.image}
           alt=""
+          style={{ objectPosition: selected.imagePosition }}
           width={1200}
           height={675}
           sizes="(min-width: 1200px) 70vw, calc(100vw - 64px)"
         />
-        <p className={`${styles.explanation} text-body-large`}>
-          {selected.explanation}
-        </p>
-        <ul className={styles.benefits}>
-          {selected.benefits.map((benefit) => (
-            <li key={benefit} className="text-body">
-              <Check aria-hidden="true" size={20} />
-              <span>{benefit}</span>
-            </li>
-          ))}
-        </ul>
-        <TextLink href={`/situations/${selected.slug}`}>
-          Learn More About {selected.label}
-        </TextLink>
+        <div className={styles.situationDetails}>
+          <h3 className={`${styles.situationHeading} text-heading-3`}>
+            {selected.label}
+          </h3>
+          <p className={`${styles.explanation} text-body-large`}>
+            {selected.explanation}
+          </p>
+          <ul className={styles.benefits}>
+            {selected.benefits.map((benefit) => (
+              <li key={benefit} className="text-body">
+                <Check aria-hidden="true" size={20} />
+                <span>{benefit}</span>
+              </li>
+            ))}
+          </ul>
+          <TextLink href={`/situations/${selected.slug}`}>
+            Learn More About {selected.label}
+          </TextLink>
+        </div>
       </div>
 
       <div className={styles.contactOption}>

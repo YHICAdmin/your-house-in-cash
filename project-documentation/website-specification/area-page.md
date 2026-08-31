@@ -344,6 +344,7 @@ On Desktop, the main content area:
 
 * Spans the complete Desktop Grid from Column `1` through Column `12`.
 * Uses the second System Line from the left to separate the two areas between Grid Columns `3` and `4`.
+* Places the Situation Selector and Selected Situation Content in one content-driven row whose two areas share the same top and bottom edges.
 
 ## Section Label
 
@@ -421,6 +422,7 @@ On Desktop, the main content area:
 
 ### Visual Design
 
+* Across all Breakpoints, the Situation Selector remains visually open and transparent, without a surrounding Card, background, Border, Radius, or Shadow.
 * Each option uses the global `Body` typography and `Text Primary` color.
 * The default state does not use a background, Border, Divider, Radius, or Shadow.
 * Across all Breakpoints, the selected option uses Brand Green Dark text at `600` font weight.
@@ -462,28 +464,50 @@ On Desktop, the main content area:
 
 * On Tablet and Mobile, uses the available content width.
 * On Desktop, displays all situation options simultaneously in a vertical Selector.
-* On Tablet, displays all situation options simultaneously in a two-column arrangement.
-* On Mobile, displays the situation options in one horizontally scrollable strip.
-* When additional Mobile options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
-* The Mobile selector does not advance automatically.
-* On Desktop, each option fills the available Situation Selector width, with an `8px` (`XS`) vertical gap between options.
-* On Tablet, each option fills its allocated column, with a `16px` (`S`) row and column gap.
-* On Mobile, each option uses its content-based width, with an `8px` (`XS`) gap between options in the horizontal strip.
+* On Tablet and Mobile, displays the situation options in one manually scrollable horizontal strip above the Selected Situation Content.
+* When additional options extend beyond the visible Tablet or Mobile area, part of the next option remains visible to indicate horizontal continuation.
+* The Tablet and Mobile strip does not advance automatically.
+* On Desktop, each option uses its content-based width, with an `8px` (`XS`) vertical gap between options.
+* On Tablet and Mobile, each option uses its content-based width, with an `8px` (`XS`) gap between options in the horizontal strip.
 
 ## Selected Situation Content
+
+### Component and Semantics
 
 * Forms an identifiable content region associated with the currently selected Situation option.
 * Its accessible name is derived from the selected option and updates when the selection changes.
 * Displays content corresponding to the selected Situation Selector option.
 
+### Visual Design
+
+* Uses Background Soft with the global Medium Radius and no Border or Shadow.
+
 ### Dimensions and Alignment
 
 * On Desktop, occupies Grid Columns `4–12`.
+* On Desktop and Tablet, the Situation Image occupies the left `4/9` of the panel and the remaining content occupies the right `5/9`.
+* The content area uses `32px` (`L`) internal padding on Desktop and Tablet and `24px` (`M`) on Mobile.
 
 ### Responsive Behavior
 
 * On Tablet and Mobile, uses the available content width.
+* On Desktop and Tablet, presents the Situation Image on the left and the selected situation heading, Situation Explanation, Situation Benefits, and Situation CTA vertically on the right in that order.
+* On Mobile, presents the Situation Image first, followed by the selected situation heading, Situation Explanation, Situation Benefits, and Situation CTA in one vertical composition.
 * On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
+
+### Selected Situation Heading
+
+#### Content
+
+* Displays the currently selected situation name.
+
+#### Component and Semantics
+
+* Serves as the Selected Situation Content's semantic `H3`.
+
+#### Spacing After
+
+* `24px` (`M`) across all Breakpoints.
 
 ### Situation Image
 
@@ -506,17 +530,14 @@ On Desktop, the main content area:
 
 * Each temporary asset is `1200 × 675px` with a `16:9` Aspect Ratio.
 
-#### Spacing After
-
-* `24px` (`M`) across all Breakpoints.
-
 #### Accessibility
 
 * All Situation Images are decorative and use empty alternative text: `alt=""`.
 
 #### Responsive Behavior
 
-* The image scales fluidly within its allocated width while preserving its Aspect Ratio across all Breakpoints.
+* On Desktop and Tablet, fills the complete height of the panel's left area and crops as needed without stretching or distortion; the primary subject remains visible wherever possible.
+* On Mobile, spans the panel width and preserves its `16:9` Aspect Ratio without distortion.
 
 ### Situation Explanation
 
@@ -657,7 +678,8 @@ On Desktop, the main content area:
 
 ### Dimensions and Alignment
 
-* On Desktop, occupies Grid Columns `4–12`.
+* At every Breakpoint, occupies a separate row using the complete available content width.
+* On Desktop, occupies Grid Columns `1–12`.
 * The supporting text appears above the Text Link.
 * Both elements are left-aligned.
 * An `8px` (`XS`) vertical gap separates them.
@@ -672,7 +694,6 @@ On Desktop, the main content area:
 
 ### Responsive Behavior
 
-* On Tablet and Mobile, uses the available content width.
 * The internal arrangement remains unchanged across all Breakpoints.
 
 # Reviews

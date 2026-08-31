@@ -87,15 +87,26 @@
 .selectedContent {
   min-width: 0;
   grid-column: 1 / -1;
+  border-radius: var(--radius-medium);
+  background: var(--color-background-soft);
 }
 
 .situationImage {
+  display: block;
   width: 100%;
   height: auto;
-  margin-bottom: var(--spacing-m);
-  border-radius: var(--radius-medium);
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-medium) var(--radius-medium) 0 0;
+}
+
+.situationDetails {
+  padding: var(--spacing-m);
+}
+
+.situationHeading {
+  margin: 0 0 var(--spacing-m);
 }
 
 .explanation {
@@ -156,16 +167,22 @@
   }
 
   .selector {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--spacing-s);
-    margin: 0 0 var(--spacing-xl);
-    padding: 0;
-    overflow: visible;
+    margin-bottom: calc(var(--spacing-xl) - 3px);
   }
 
-  .option {
-    width: 100%;
+  .selectedContent {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 5fr);
+  }
+
+  .situationImage {
+    height: 100%;
+    aspect-ratio: auto;
+    border-radius: var(--radius-medium) 0 0 var(--radius-medium);
+  }
+
+  .situationDetails {
+    padding: var(--spacing-l);
   }
 }
 
@@ -176,10 +193,14 @@
     flex-direction: column;
     gap: var(--spacing-xs);
     margin: 0;
+    overflow: visible;
   }
 
-  .selectedContent,
-  .contactOption {
+  .selectedContent {
     grid-column: 4 / -1;
+  }
+
+  .contactOption {
+    grid-column: 1 / -1;
   }
 }
