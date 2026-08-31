@@ -84,6 +84,10 @@ A small Component used to identify, contextualize, or categorize a Section or co
 - Padding: 6px 12px
 - Icon gap: 8px
 
+#### Accessibility
+
+- The icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
+
 #### Configurable
 
 - Label

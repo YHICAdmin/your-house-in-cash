@@ -94,10 +94,6 @@ Provide the seller with a clear path to begin the conversion process.
 
 * Non-interactive.
 
-### Accessibility
-
-* `MapPin` is decorative, is hidden from assistive technologies, and does not receive keyboard focus.
-
 ## Primary Headline
 
 ### Content
@@ -356,10 +352,6 @@ On Desktop, the main content area:
 ### Component and Semantics
 
 * Uses the documented `Section Label` Component.
-
-### Accessibility
-
-* The icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
 
 ### Spacing After
 
