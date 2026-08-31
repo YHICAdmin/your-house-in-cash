@@ -807,7 +807,18 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 ### Content
 
-* Contains the Review Cards.
+* Contains repeated Review Cards and the Carousel Controls.
+* Each Review Card contains:
+  * Customer name.
+  * Customer location.
+  * Review source, such as Google, Facebook, or BBB.
+* The Carousel Controls include navigation arrows.
+
+### Visual Design
+
+* Each Review Card is large enough for comfortable reading without dominating the Section.
+* Each Review Card uses a very subtle Border and avoids unnecessary visual decoration.
+* Each Review Card displays the review source as secondary information.
 
 ### Dimensions and Alignment
 
@@ -816,6 +827,7 @@ Demonstrate that the business is local, credible, and has already helped homeown
 ### Interaction
 
 * Displays reviews in a horizontal carousel.
+* The Carousel Controls allow users to move through the reviews.
 
 ### Spacing After
 
@@ -826,31 +838,6 @@ Demonstrate that the business is local, credible, and has already helped homeown
 * On Desktop, displays multiple Review Cards simultaneously.
 * On Mobile, adapts the number of visible Review Cards to the available viewport width.
 * The exact Tablet behavior, Review Card widths, number of visible Review Cards, and carousel movement increments are not currently defined.
-
-## Review Card
-
-### Content
-
-* Contains:
-  * Customer name.
-  * Customer location.
-  * Review source, such as Google, Facebook, or BBB.
-
-### Visual Design
-
-* Is large enough for comfortable reading without dominating the Section.
-* Uses a very subtle Border and avoids unnecessary visual decoration.
-* Displays the review source as secondary information.
-
-## Carousel Controls
-
-### Content
-
-* Includes navigation arrows.
-
-### Interaction
-
-* Allows users to move through the reviews.
 
 ## Reviews Link
 
