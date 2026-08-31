@@ -708,7 +708,7 @@ On Desktop, the main content area:
 
 Strengthen trust and social proof through authentic reviews from sellers who have worked with us.
 
-Demonstrate that the business is local, credible, and has already helped homeowners throughout the Cleveland area.
+Demonstrate that the business is local, credible, and has already helped homeowners throughout the service area.
 
 ## Layout
 
