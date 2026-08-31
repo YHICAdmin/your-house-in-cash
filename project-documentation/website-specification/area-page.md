@@ -712,7 +712,7 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 ## Layout
 
-* Uses the global Background Soft token (`#F7F9F7`) as the Section background.
+* Uses the global `Background Soft` token as the Section background.
 
 ## Section Label
 
