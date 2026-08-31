@@ -754,16 +754,41 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 ### Content
 
-* Includes the star rating and total number of reviews.
+* Displays the approved Google rating and total number of Google reviews.
+* Content format: `[Rating] out of 5 based on [Review Count] Google reviews`.
+* Displays the approved rating and review count from the business’s official Google Business Profile as manually maintained static content.
+* Pending content values: the exact rating, review count, and official Google Business Profile destination.
+
+### Component and Semantics
+
+* Uses paragraph semantics.
 
 ### Visual Design
 
-* Uses a compact treatment that does not compete with the Primary Headline.
+* Uses a compact horizontal composition containing, in order:
+  1. Visible text: `Google`.
+  2. Numeric rating.
+  3. Visual star rating.
+  4. Total review count.
+* `Google` uses the global `Body Small` typography.
+* The numeric rating uses the global `Body Large` typography.
+* The review count uses the global `Body Small` typography and inherits the global secondary-text color.
+* The visual stars accurately represent the displayed numeric rating.
+
+### Dimensions and Alignment
+
+* Left-aligned with the Primary Headline and Supporting Copy.
+* Items are vertically centered within the horizontal composition.
 
 ### Spacing After
 
 * `48px` (`XL`) on Desktop and Tablet.
 * `32px` (`L`) on Mobile.
+
+### Accessibility
+
+* The complete rating is communicated as: `Google: [Rating] out of 5 based on [Review Count] reviews`.
+* The visual stars are decorative and do not receive keyboard focus.
 
 ## Reviews Carousel
 
