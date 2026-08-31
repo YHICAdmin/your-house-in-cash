@@ -704,62 +704,109 @@ On Desktop, the main content area:
 
 # Reviews
 
-#### Purpose
+## Purpose
 
 Strengthen trust and social proof through authentic reviews from sellers who have worked with us.
 
 Demonstrate that the business is local, credible, and has already helped homeowners throughout the Cleveland area.
 
-#### Structure
+## Visual Design
 
-- Section Label: **Customer Reviews**, with Star icon.
-- Headline: **What Cleveland homeowners say**
-- Short supporting copy.
-- Google rating, including star rating and total number of reviews.
-- Review cards containing:
-  - Customer name.
-  - Customer location.
-  - Review source — Google, Facebook, BBB, etc.
-- Link to view additional reviews.
-- Short trust message at the bottom of the section.
+* Uses a clean, minimal, spacious composition with generous whitespace.
 
-#### Visual Direction
+## Section Label
 
-- Keep the section clean, minimal, and spacious.
-- Position the Section Label above the primary headline.
-- Use a large, prominent headline consistent with the site's overall typographic language.
-- Display the Google rating below the supporting copy in a compact format that does not compete with the headline.
-- Review cards should be large enough for comfortable reading without dominating the section.
-- Cards use a very subtle border and avoid unnecessary visual decoration.
-- The review source is displayed as secondary information.
-- The carousel extends toward the side to reveal part of the next card.
-- Preserve generous whitespace around the content.
+### Content
 
-#### Behavior
+* Text: `Customer Reviews`.
+* Includes the Lucide `Star` icon.
 
-- Reviews are displayed in a horizontal carousel.
-- On Desktop, multiple review cards are visible simultaneously.
-- A portion of the next card remains visible at the edge to indicate additional content.
-- Navigation arrows allow users to move through the reviews.
-- Each review clearly identifies its source.
-- The **See more reviews on Google** link leads to the external Google reviews profile.
-- On Mobile, the number of visible cards adapts to the available viewport width.
+## Primary Headline
 
-#### Technical Specifications
+### Content
 
-No additional Reviews-specific technical specifications are currently defined. Global typography, spacing, color, component, and layout rules apply unless explicitly overridden.
+* Text: `What Cleveland homeowners say`.
 
-#### Responsive Behavior
+### Visual Design
 
-- Desktop displays multiple review cards simultaneously.
-- Mobile adjusts the number of visible cards according to the available viewport width.
-- The exact Tablet behavior, card widths, number of visible cards, and carousel movement increments are not currently defined.
+* Uses a large, prominent headline treatment consistent with the site's global typographic language.
 
-#### Line System
+## Supporting Copy
 
-- The outer System Lines bound the primary content area with the globally defined content padding.
-- The headline, supporting copy, and Google rating remain within the area defined by the outer System Lines.
-- The Carousel is not constrained by the internal System Lines and may extend beyond the right outer System Line to reveal part of the next card.
+### Content
+
+* Includes short supporting copy.
+
+## Google Rating
+
+### Content
+
+* Includes the star rating and total number of reviews.
+
+### Visual Design
+
+* Uses a compact treatment that does not compete with the Primary Headline.
+
+## Reviews Carousel
+
+### Content
+
+* Contains the Review Cards.
+
+### Dimensions and Alignment
+
+* Is not constrained by the internal System Lines and may extend beyond the right outer System Line to reveal part of the next Review Card.
+
+### Interaction
+
+* Displays reviews in a horizontal carousel.
+
+### Responsive Behavior
+
+* On Desktop, displays multiple Review Cards simultaneously.
+* On Mobile, adapts the number of visible Review Cards to the available viewport width.
+* The exact Tablet behavior, Review Card widths, number of visible Review Cards, and carousel movement increments are not currently defined.
+
+## Review Card
+
+### Content
+
+* Contains:
+  * Customer name.
+  * Customer location.
+  * Review source, such as Google, Facebook, or BBB.
+
+### Visual Design
+
+* Is large enough for comfortable reading without dominating the Section.
+* Uses a very subtle Border and avoids unnecessary visual decoration.
+* Displays the review source as secondary information.
+
+## Carousel Controls
+
+### Content
+
+* Includes navigation arrows.
+
+### Interaction
+
+* Allows users to move through the reviews.
+
+## Reviews Link
+
+### Content
+
+* Label: `See more reviews on Google`.
+
+### Interaction
+
+* Leads to the external Google reviews profile.
+
+## Trust Message
+
+### Content
+
+* Includes a short trust message at the bottom of the Section.
 
 # How It Works
 
