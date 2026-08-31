@@ -830,11 +830,11 @@ Demonstrate that the business is local, credible, and has already helped homeown
 ### Visual Design
 
 * Each Review Card uses the global Border color with a `1px` solid border.
-* Each Review Card displays the review source as secondary information.
+* The review source uses the global `Body Small` typography and `Text Muted` color.
 
 ### Dimensions and Alignment
 
-* Is not constrained by the internal System Lines and may extend beyond the right outer System Line to reveal part of the next Review Card.
+* Remains fully contained within the Section container and outer System Lines across all Breakpoints.
 
 ### Interaction
 
