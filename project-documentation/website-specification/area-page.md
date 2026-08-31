@@ -738,6 +738,10 @@ Demonstrate that the business is local, credible, and has already helped homeown
 * Text: `Read what local homeowners have shared about their experience working with us.`
 * The content remains unchanged across Area Pages and does not use a city template.
 
+### Component and Semantics
+
+* Uses paragraph semantics.
+
 ### Spacing After
 
 * `24px` (`M`) across all Breakpoints.
