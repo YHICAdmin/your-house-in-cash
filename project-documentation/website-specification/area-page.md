@@ -723,9 +723,9 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 * Text: `What Cleveland homeowners say`.
 
-### Visual Design
+### Component and Semantics
 
-* Uses a large, prominent headline treatment consistent with the site's global typographic language.
+* Serves as the Reviews Section's semantic `H2`.
 
 ### Spacing After
 
