@@ -710,16 +710,16 @@ Strengthen trust and social proof through authentic reviews from sellers who hav
 
 Demonstrate that the business is local, credible, and has already helped homeowners throughout the Cleveland area.
 
-## Visual Design
-
-* Uses a clean, minimal, spacious composition with generous whitespace.
-
 ## Section Label
 
 ### Content
 
 * Text: `Customer Reviews`.
 * Includes the Lucide `Star` icon.
+
+### Spacing After
+
+* `16px` (`S`) across all Breakpoints.
 
 ## Primary Headline
 
@@ -731,11 +731,19 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 * Uses a large, prominent headline treatment consistent with the site's global typographic language.
 
+### Spacing After
+
+* `24px` (`M`) across all Breakpoints.
+
 ## Supporting Copy
 
 ### Content
 
 * Includes short supporting copy.
+
+### Spacing After
+
+* `24px` (`M`) across all Breakpoints.
 
 ## Google Rating
 
@@ -746,6 +754,11 @@ Demonstrate that the business is local, credible, and has already helped homeown
 ### Visual Design
 
 * Uses a compact treatment that does not compete with the Primary Headline.
+
+### Spacing After
+
+* `48px` (`XL`) on Desktop and Tablet.
+* `32px` (`L`) on Mobile.
 
 ## Reviews Carousel
 
@@ -760,6 +773,10 @@ Demonstrate that the business is local, credible, and has already helped homeown
 ### Interaction
 
 * Displays reviews in a horizontal carousel.
+
+### Spacing After
+
+* `32px` (`L`) across all Breakpoints.
 
 ### Responsive Behavior
 
@@ -801,6 +818,10 @@ Demonstrate that the business is local, credible, and has already helped homeown
 ### Interaction
 
 * Leads to the external Google reviews profile.
+
+### Spacing After
+
+* `16px` (`S`) across all Breakpoints.
 
 ## Trust Message
 
