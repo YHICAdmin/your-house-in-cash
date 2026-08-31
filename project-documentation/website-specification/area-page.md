@@ -710,6 +710,10 @@ Strengthen trust and social proof through authentic reviews from sellers who hav
 
 Demonstrate that the business is local, credible, and has already helped homeowners throughout the Cleveland area.
 
+## Layout
+
+* Uses the global Background Soft token (`#F7F9F7`) as the Section background.
+
 ## Section Label
 
 ### Content
