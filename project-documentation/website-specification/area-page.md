@@ -755,9 +755,9 @@ Demonstrate that the business is local, credible, and has already helped homeown
 ### Content
 
 * Displays the approved Google rating and total number of Google reviews.
-* Content format: `[Rating] out of 5 based on [Review Count] Google reviews`.
+* Visible review-count template: `([Review Count] reviews)`.
 * Displays the approved rating and review count from the business’s official Google Business Profile as manually maintained static content.
-* Pending content values: the exact rating, review count, and official Google Business Profile destination.
+* Pending content values: the exact rating and review count.
 
 ### Component and Semantics
 
@@ -773,12 +773,17 @@ Demonstrate that the business is local, credible, and has already helped homeown
 * `Google` uses the global `Body Small` typography.
 * The numeric rating uses the global `Body Large` typography.
 * The review count uses the global `Body Small` typography and inherits the global secondary-text color.
-* The visual stars accurately represent the displayed numeric rating.
+* The visual star rating uses exactly five canonical Lucide `Star` icons at the approved `20px` icon size, with a `4px` gap between adjacent stars.
+* The filled portion of each star uses Brand Green Dark.
+* The unfilled portion remains transparent and uses the global Border color for its outline.
+* Fractional ratings are represented proportionally within the next star. For example, `4.7` displays four fully filled stars and a fifth star filled to `70%`.
+* The five-star group visually represents the same numeric rating displayed beside it.
 
 ### Dimensions and Alignment
 
 * Left-aligned with the Primary Headline and Supporting Copy.
 * Items are vertically centered within the horizontal composition.
+* Uses an `8px` (`XS`) gap between each adjacent primary item across all Breakpoints.
 
 ### Spacing After
 
@@ -787,8 +792,16 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 ### Accessibility
 
-* The complete rating is communicated as: `Google: [Rating] out of 5 based on [Review Count] reviews`.
-* The visual stars are decorative and do not receive keyboard focus.
+* The complete rating is communicated as: `Google rating: [Rating] out of 5 based on [Review Count] reviews.`
+* The visual stars are decorative, hidden from assistive technologies, and do not receive keyboard focus.
+
+### Responsive Behavior
+
+* On Desktop and Tablet, all four primary items remain on one horizontal line.
+* On Mobile, `Google`, the numeric rating, and the five-star group remain together on the first line.
+* The review count may wrap as one complete item onto a second line when the available width is insufficient.
+* When wrapped, the review count remains left-aligned with the complete Google Rating composition and uses an `8px` (`XS`) vertical gap after the first line.
+* The review-count text remains on one line whenever it fits as one item within the available content width.
 
 ## Reviews Carousel
 
@@ -848,6 +861,7 @@ Demonstrate that the business is local, credible, and has already helped homeown
 ### Interaction
 
 * Leads to the external Google reviews profile.
+* Pending destination: the official Google Business Profile URL.
 
 ### Spacing After
 
