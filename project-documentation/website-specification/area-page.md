@@ -807,17 +807,29 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 ### Content
 
-* Contains repeated Review Cards and the Carousel Controls.
+* Contains exactly ten Review Cards and the Carousel Controls.
 * Each Review Card contains:
   * Customer name.
   * Customer location.
   * Review source, such as Google, Facebook, or BBB.
+  * Review text.
 * The Carousel Controls include navigation arrows.
+* Uses the following temporary content in canonical display order for layout testing:
+  1. Customer name: `Customer Name 01`; location: `Customer Location 01`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+  2. Customer name: `Customer Name 02`; location: `Customer Location 02`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`
+  3. Customer name: `Customer Name 03`; location: `Customer Location 03`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.`
+  4. Customer name: `Customer Name 04`; location: `Customer Location 04`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.`
+  5. Customer name: `Customer Name 05`; location: `Customer Location 05`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.`
+  6. Customer name: `Customer Name 06`; location: `Customer Location 06`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum donec ullamcorper nulla non metus.`
+  7. Customer name: `Customer Name 07`; location: `Customer Location 07`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.`
+  8. Customer name: `Customer Name 08`; location: `Customer Location 08`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.`
+  9. Customer name: `Customer Name 09`; location: `Customer Location 09`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur.`
+  10. Customer name: `Customer Name 10`; location: `Customer Location 10`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.`
+* The temporary content is replaced with approved authentic reviews before production publication.
 
 ### Visual Design
 
-* Each Review Card is large enough for comfortable reading without dominating the Section.
-* Each Review Card uses a very subtle Border and avoids unnecessary visual decoration.
+* Each Review Card uses the global Border color with a `1px` solid border.
 * Each Review Card displays the review source as secondary information.
 
 ### Dimensions and Alignment
@@ -835,9 +847,10 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 ### Responsive Behavior
 
-* On Desktop, displays multiple Review Cards simultaneously.
-* On Mobile, adapts the number of visible Review Cards to the available viewport width.
-* The exact Tablet behavior, Review Card widths, number of visible Review Cards, and carousel movement increments are not currently defined.
+* On Desktop, displays four complete Review Cards simultaneously, with one card within each System Line division and the globally defined content inset preserved.
+* On Tablet, displays two complete Review Cards simultaneously, with one card within each System Line division and the globally defined content inset preserved.
+* On Mobile, displays one complete Review Card within the single System Line division and preserves the globally defined content inset.
+* Carousel movement increments are not currently defined.
 
 ## Reviews Link
 
