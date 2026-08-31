@@ -721,7 +721,7 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 ### Content
 
-* Text: `What Cleveland homeowners say`.
+* Text: `What local homeowners say`.
 
 ### Component and Semantics
 
@@ -735,7 +735,8 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 ### Content
 
-* Includes short supporting copy.
+* Text: `Read what local homeowners have shared about their experience working with us.`
+* The content remains unchanged across Area Pages and does not use a city template.
 
 ### Spacing After
 
