@@ -141,7 +141,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-top: var(--spacing-l);
+  margin-top: var(--spacing-xl);
 }
 
 .contactIcon {

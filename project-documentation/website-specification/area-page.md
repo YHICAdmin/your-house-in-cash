@@ -675,7 +675,7 @@ On Desktop, the main content area:
 
 ### Visual Design
 
-* The sentence uses the global `Body Large` typography and `Text Secondary` color.
+* The sentence uses the global `Body` typography and `Text Secondary` color.
 * The icon uses the global Large Icon size (`24px`) and Brand Green Dark.
 * The Contact Us Option remains visually open and transparent, without a background, Border, Card treatment, Radius, or Shadow.
 
@@ -688,7 +688,7 @@ On Desktop, the main content area:
 
 ### Spacing Before
 
-* `32px` (`L`) across all Breakpoints.
+* `48px` (`XL`) across all Breakpoints.
 
 ### Interaction
 

@@ -235,7 +235,7 @@ export function SituationExplorer({
           focusable="false"
           size={24}
         />
-        <p className={`${styles.contactText} text-body-large`}>
+        <p className={`${styles.contactText} text-body`}>
           Not sure which situation fits? <TextLink href="/contact">Contact us</TextLink>{" "}
           and we&apos;ll point you in the right direction.
         </p>
