@@ -742,6 +742,10 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 * Uses paragraph semantics.
 
+### Visual Design
+
+* Uses the global `Body Large` typography.
+
 ### Spacing After
 
 * `24px` (`M`) across all Breakpoints.
