@@ -664,25 +664,27 @@ On Desktop, the main content area:
 
 ### Content
 
-* Supporting text: `Not sure which situation fits?`
-* Action label: `Tell Us About Your Situation`.
+* Sentence: `Not sure which situation fits? Contact us and we'll point you in the right direction.`
+* Includes the canonical Lucide `MessageCircle` icon before the sentence.
+* Only `Contact us` uses the Text Link treatment.
 
 ### Component and Semantics
 
 * Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
-* Uses link semantics.
+* `Contact us` uses link semantics.
 
 ### Visual Design
 
-* The supporting text uses the global `Body` typography and `Text Secondary` color.
+* The sentence uses the global `Body Large` typography and `Text Secondary` color.
+* The icon uses the global Large Icon size (`24px`) and Brand Green Dark.
+* The Contact Us Option remains visually open and transparent, without a background, Border, Card treatment, Radius, or Shadow.
 
 ### Dimensions and Alignment
 
 * At every Breakpoint, occupies a separate row using the complete available content width.
 * On Desktop, occupies Grid Columns `1–12`.
-* The supporting text appears above the Text Link.
-* Both elements are left-aligned.
-* An `8px` (`XS`) vertical gap separates them.
+* The complete icon-and-sentence group is horizontally centered within the row.
+* The icon appears before the sentence with a `12px` gap and is vertically centered with it.
 
 ### Spacing Before
 
@@ -690,11 +692,15 @@ On Desktop, the main content area:
 
 ### Interaction
 
-* Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
+* Activating `Contact us` navigates to the Contact Page at `/contact`.
+
+### Accessibility
+
+* The icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
 
 ### Responsive Behavior
 
-* The internal arrangement remains unchanged across all Breakpoints.
+* On narrow Mobile widths, the sentence wraps naturally within the available width while the complete group remains centered.
 
 # Reviews
 

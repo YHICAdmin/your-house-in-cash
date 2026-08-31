@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Check } from "lucide-react";
+import { Check, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { TextLink } from "@/components/ui/text-link";
 import styles from "./area-situations.module.css";
@@ -229,12 +229,16 @@ export function SituationExplorer({
       </div>
 
       <div className={styles.contactOption}>
-        <p className={`${styles.contactText} text-body`}>
-          Not sure which situation fits?
+        <MessageCircle
+          className={styles.contactIcon}
+          aria-hidden="true"
+          focusable="false"
+          size={24}
+        />
+        <p className={`${styles.contactText} text-body-large`}>
+          Not sure which situation fits? <TextLink href="/contact">Contact us</TextLink>{" "}
+          and we&apos;ll point you in the right direction.
         </p>
-        <TextLink href="/get-cash-offer">
-          Tell Us About Your Situation
-        </TextLink>
       </div>
 
       <p className={styles.announcement} aria-live="polite" aria-atomic="true">
