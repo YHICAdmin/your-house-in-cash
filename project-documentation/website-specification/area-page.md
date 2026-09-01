@@ -213,25 +213,25 @@ Provide the seller with a clear path to begin the conversion process.
   * `House` — `Sell As-Is`.
   * `BadgeDollarSign` — `No Fees`.
   * `CalendarCheck` — `Choose Your Closing Date`.
-* Each benefit consists of a Line Icon followed by a short text label.
+* Each benefit consists of an `Icon Container` followed by a short text label.
 
 ### Component and Semantics
 
 * Uses one semantic unordered list containing exactly three list items.
 * Benefits are informational and non-interactive.
+* Each benefit icon uses the documented `Icon Container` Component.
 
 ### Visual Design
 
 * Benefit labels use the global `Body Small` typography.
-* Icons use the global Medium Icon size.
-* Individual benefits do not use Cards, backgrounds, borders, or shadows.
+* Outside the `Icon Container`, individual benefits do not use Cards, backgrounds, Borders, or Shadows.
 
 ### Dimensions and Alignment
 
-* Each icon-and-label pair remains together as one item.
+* Each `Icon Container`-and-label pair remains together as one item.
 * Labels may wrap naturally at word boundaries but must not break within words.
-* Icons align with the first line of multiline labels.
-* The gap between the icon and label is `8px`.
+* `Icon Containers` align with the first line of multiline labels.
+* The gap between the `Icon Container` and label is `8px`.
 
 ### Accessibility
 
@@ -608,14 +608,14 @@ On Desktop, the main content area:
 #### Component and Semantics
 
 * Uses one semantic unordered list whose three items appear in the documented order.
+* Each list item includes the canonical Lucide `Check` icon using the documented `Icon Container` Component.
 
 #### Visual Design
 
 * Each item uses the global `Body` typography and `Text Primary` color.
-* Each item includes the Lucide `Check` icon at `20px` in Brand Green Dark.
-* The gap between each icon and its text is `12px`.
+* The gap between each `Icon Container` and its text is `12px`.
 * The vertical gap between items is `16px` (`S`).
-* Icons align with the first line when benefit text wraps.
+* `Icon Containers` align with the first line when benefit text wraps.
 
 #### Spacing After
 
@@ -936,7 +936,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 ### Content
 
 * Contains, in document order:
-  1. Trust icon using the canonical Lucide `ShieldCheck` icon.
+  1. Trust icon using the canonical Lucide `ShieldCheck` icon within an `Icon Container`.
   2. Trust message.
   3. Divider.
   4. Reviews Link.
@@ -946,19 +946,19 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 ### Component and Semantics
 
 * The Reviews Link uses the documented `Text Link` Component.
+* The Trust icon uses the documented `Icon Container` Component.
 
 ### Visual Design
 
-* The `ShieldCheck` icon uses the global `Brand Green Dark` color.
 * The Trust Message uses the global `Body Small` typography and `Text Primary` color.
 * On Desktop and Tablet, the Divider is vertical, `24px` long, and uses the global default `1px` Border with the global Border color.
 
 ### Dimensions and Alignment
 
-* An `8px` (`XS`) horizontal gap separates the Trust icon from the Trust Message across all Breakpoints.
+* An `8px` (`XS`) horizontal gap separates the `Icon Container` from the Trust Message across all Breakpoints.
 * On Desktop and Tablet, a `16px` (`S`) horizontal gap separates the Trust Message from the Divider and the Divider from the Reviews Link.
 * On Desktop and Tablet, all items in the horizontal Footer row are vertically center-aligned.
-* On Mobile, the Trust icon and Trust Message in the first row are vertically center-aligned.
+* On Mobile, the `Icon Container` and Trust Message in the first row are vertically center-aligned.
 * On Mobile, a `16px` (`S`) vertical gap separates the trust row from the Reviews Link row.
 
 ### Interaction

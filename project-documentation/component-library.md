@@ -96,6 +96,42 @@ A small Component used to identify, contextualize, or categorize a Section or co
 
 All other visual properties remain consistent across instances.
 
+## Icon Container
+
+A reusable visual Component that presents one canonical Lucide icon within a circular container.
+
+#### Anatomy
+
+- One required canonical Lucide icon.
+
+#### Visual Style
+
+- Container: `40px × 40px`
+- Background: Brand Green Light
+- Border: none
+- Shadow: none
+- Radius: 999px / Pill
+- Default icon size: Medium Icon / `20px`
+- Default icon color: Brand Green Dark
+- The icon is centered horizontally and vertically within the container.
+
+#### Dimensions and Alignment
+
+- The container does not shrink.
+- External alignment and spacing are defined by the consuming element.
+
+#### Responsive
+
+- The treatment remains unchanged across Breakpoints.
+
+#### Accessibility
+
+- Accessibility semantics are defined by the consuming use.
+
+#### Configurable
+
+- Canonical Lucide icon identity.
+
 ## Accordion
 
 A Component for displaying multiple content items that can be expanded and collapsed. It is used in the FAQ to present questions and answers in a compact format.
