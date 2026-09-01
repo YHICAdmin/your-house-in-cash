@@ -230,7 +230,7 @@ Provide the seller with a clear path to begin the conversion process.
 
 * Each `Icon Container`-and-label pair remains together as one item.
 * Labels may wrap naturally at word boundaries but must not break within words.
-* `Icon Containers` align with the first line of multiline labels.
+* The `Icon Container` and label are vertically center-aligned within each benefit item.
 * The gap between the `Icon Container` and label is `8px`.
 
 ### Accessibility
