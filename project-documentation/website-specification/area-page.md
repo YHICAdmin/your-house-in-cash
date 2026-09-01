@@ -957,6 +957,8 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 * An `8px` (`XS`) horizontal gap separates the Trust icon from the Trust Message across all Breakpoints.
 * On Desktop and Tablet, a `16px` (`S`) horizontal gap separates the Trust Message from the Divider and the Divider from the Reviews Link.
+* On Desktop and Tablet, all items in the horizontal Footer row are vertically center-aligned.
+* On Mobile, the Trust icon and Trust Message in the first row are vertically center-aligned.
 
 ### Interaction
 
