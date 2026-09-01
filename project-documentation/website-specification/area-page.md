@@ -938,8 +938,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 ### Interaction
 
-* Leads to the external Google reviews profile.
-* Pending destination: the official Google Business Profile URL.
+* Leads to the official Google Business Profile; exact URL pending.
 
 ### Spacing After
 
