@@ -773,11 +773,9 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * The filled portion of each star uses Brand Green Dark.
 * The unfilled portion remains transparent and uses the global Border color for its outline.
 * Fractional ratings are represented proportionally within the next star. For example, `4.7` displays four fully filled stars and a fifth star filled to `70%`.
-* The five-star group visually represents the same numeric rating displayed beside it.
 
 ### Dimensions and Alignment
 
-* Left-aligned with the Primary Headline and Supporting Copy.
 * Items are vertically centered within the horizontal composition.
 * Uses an `8px` (`XS`) gap between each adjacent primary item across all Breakpoints.
 
