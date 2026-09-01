@@ -813,7 +813,8 @@ Demonstrate that the business is local, credible, and has already helped homeown
   * Customer location.
   * Review source, such as Google, Facebook, or BBB.
   * Review text.
-* The Carousel Controls include navigation arrows.
+* The previous Carousel Control uses the canonical Lucide `ChevronLeft` icon.
+* The next Carousel Control uses the canonical Lucide `ChevronRight` icon.
 * Uses the following temporary content in canonical display order for layout testing:
   1. Customer name: `Customer Name 01`; location: `Customer Location 01`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
   2. Customer name: `Customer Name 02`; location: `Customer Location 02`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`
@@ -831,15 +832,28 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 * Each Review Card uses the global Border color with a `1px` solid border.
 * The review source uses the global `Body Small` typography and `Text Muted` color.
+* Each Carousel Control uses the global `Surface` color as its default background.
+* Each Carousel Control uses the global default `1px` solid Border.
+* Each Carousel Control uses the global `Pill` Radius.
+* Carousel Control icons use the global Medium Icon size (`20px`) across all Breakpoints.
+* Carousel Control icons use the global `Text Primary` color.
+* Disabled Carousel Controls use `40%` opacity.
 
 ### Dimensions and Alignment
 
 * Remains fully contained within the Section container and outer System Lines across all Breakpoints.
+* Each Carousel Control uses a `40px × 40px` square interactive area across all Breakpoints.
+* The `20px` icon is centered within the Carousel Control.
 
 ### Interaction
 
 * Displays reviews in a horizontal carousel.
 * The Carousel Controls allow users to move through the reviews.
+* Each Carousel Control activation advances the carousel by one Review Card across all Breakpoints.
+* The carousel has finite endpoints and does not loop.
+* At the first Review Card position, the previous Carousel Control is disabled and non-interactive.
+* At the last valid Review Card position, the next Carousel Control is disabled and non-interactive.
+* Disabled Carousel Controls have pointer interaction disabled and do not use hover or active states.
 
 ### Spacing After
 
@@ -850,7 +864,6 @@ Demonstrate that the business is local, credible, and has already helped homeown
 * On Desktop, displays four complete Review Cards simultaneously, with one card within each System Line division and the globally defined content inset preserved.
 * On Tablet, displays two complete Review Cards simultaneously, with one card within each System Line division and the globally defined content inset preserved.
 * On Mobile, displays one complete Review Card within the single System Line division and preserves the globally defined content inset.
-* Carousel movement increments are not currently defined.
 
 ## Reviews Link
 
