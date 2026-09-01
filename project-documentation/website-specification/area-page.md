@@ -734,7 +734,6 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 ### Content
 
 * Text: `Read what local homeowners have shared about their experience working with us.`
-* The content remains unchanged across Area Pages and does not use a city template.
 
 ### Component and Semantics
 
