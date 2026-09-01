@@ -947,6 +947,11 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 * The Reviews Link leads to the official Google Business Profile; exact URL pending.
 
+### Responsive Behavior
+
+* On Desktop and Tablet, the Trust icon, Trust Message, Divider, and Reviews Link form one horizontal row.
+* On Mobile, the Trust icon followed by the Trust Message form the first row, and the Reviews Link forms the second row.
+
 # How It Works
 
 #### Purpose
