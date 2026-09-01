@@ -910,7 +910,6 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * Each Carousel Control uses a `40px × 40px` square interactive area across all Breakpoints.
 * The icon is centered within the Carousel Control.
 * The Carousel Controls appear below the carousel viewport and align with its right edge across all Breakpoints.
-* Within the control group, the previous Carousel Control appears before the next Carousel Control.
 * An `8px` (`XS`) horizontal gap separates the Carousel Controls.
 * A `16px` (`S`) vertical gap separates the Review Cards from the Carousel Control group.
 
