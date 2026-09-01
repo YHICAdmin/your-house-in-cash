@@ -848,10 +848,10 @@ Demonstrate that the business is local, credible, and has already helped homeown
 #### Content
 
 * Each Review Card contains:
+  * Review text.
   * Customer name.
   * Customer location.
   * Review source, such as Google, Facebook, or BBB.
-  * Review text.
 * Uses the following temporary content in canonical display order for layout testing:
   1. Customer name: `Customer Name 01`; location: `Customer Location 01`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
   2. Customer name: `Customer Name 02`; location: `Customer Location 02`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`
@@ -883,6 +883,13 @@ Demonstrate that the business is local, credible, and has already helped homeown
 #### Dimensions and Alignment
 
 * Each Review Card uses `L` (`32px`) internal padding on all sides across all Breakpoints.
+
+#### Spacing
+
+* `M` (`24px`) separates the review text from the customer name.
+* `XS` (`8px`) separates the customer name from the customer location.
+* `S` (`16px`) separates the customer location from the review source.
+* These spacing values remain unchanged across all Breakpoints unless an approved responsive rule explicitly overrides them.
 
 ### Carousel Controls
 
