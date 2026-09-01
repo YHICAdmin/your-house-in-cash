@@ -968,6 +968,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 ### Accessibility
 
 * The `ShieldCheck` icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
+* The Divider is decorative, hidden from assistive technologies, and does not create a separate semantic boundary.
 
 ### Responsive Behavior
 
