@@ -940,7 +940,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
   2. Trust message.
   3. Divider.
   4. Reviews Link.
-* The Trust Message is short.
+* Trust Message: `Real people. Real experiences. Real results.`
 * Reviews Link label: `See more reviews on Google`.
 
 ### Interaction
