@@ -883,7 +883,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * `M` (`24px`) separates the review text from the customer name.
 * `XS` (`8px`) separates the customer name from the customer location.
 * `S` (`16px`) separates the customer location from the review source.
-* These spacing values remain unchanged across all Breakpoints unless an approved responsive rule explicitly overrides them.
+* These spacing values remain unchanged across all Breakpoints.
 
 ### Carousel Controls
 
