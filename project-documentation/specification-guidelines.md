@@ -54,3 +54,22 @@ The decision is governed by these constraints:
 - Request approval when multiple icons communicate materially different meanings or no established icon clearly represents the concept.
 
 This authority applies to future specification work and to new unresolved icon-identity decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
+
+### Shared Component Selection
+
+When an element’s approved content, semantic role, interaction, and visual purpose match the documented contract of an existing shared Component, the specification author may assign that Component without separate approval. The selected Component and any permitted configurable properties must be documented explicitly in the resulting specification.
+
+The decision is governed by these constraints:
+
+- Use only Components already documented in the Component Library.
+- Component-owned properties remain governed by the shared Component.
+- Preserve the Component’s core visual, interaction, responsive, semantic, and accessibility contract.
+- Use only the Component’s documented configurable properties.
+- Preserve approved local content, behavior, hierarchy, and dimensions.
+- Existing local requirements must be compatible with the Component contract.
+- Do not remove or override an approved local rule in order to make an element fit a shared Component.
+- Do not create a new Component, variant, or override.
+- Request approval when an existing local requirement conflicts with a Component-owned property.
+- Request approval when the element only partially matches the Component contract or multiple Components would produce materially different results.
+
+This authority applies to future specification work and to new unresolved Component-selection decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
