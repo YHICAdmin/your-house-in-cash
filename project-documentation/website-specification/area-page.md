@@ -953,6 +953,10 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * The Trust Message uses the global `Body Small` typography and `Text Primary` color.
 * On Desktop and Tablet, the Divider is vertical, `24px` long, and uses the global default `1px` Border with the global Border color.
 
+### Dimensions and Alignment
+
+* An `8px` (`XS`) horizontal gap separates the Trust icon from the Trust Message across all Breakpoints.
+
 ### Interaction
 
 * The Reviews Link leads to the official Google Business Profile; exact URL pending.
