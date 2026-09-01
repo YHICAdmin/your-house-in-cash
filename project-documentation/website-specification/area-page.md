@@ -946,6 +946,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 ### Visual Design
 
 * The `ShieldCheck` icon uses the global `Brand Green Dark` color.
+* The Trust Message uses the global `Body Small` typography and `Text Primary` color.
 * On Desktop and Tablet, the Divider is vertical, `24px` long, and uses the global default `1px` Border with the global Border color.
 
 ### Interaction
