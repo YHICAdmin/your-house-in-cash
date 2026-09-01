@@ -886,6 +886,9 @@ Demonstrate that the business is local, credible, and has already helped homeown
 #### Dimensions and Alignment
 
 * Each Review Card uses `L` (`32px`) internal padding on all sides across all Breakpoints.
+* All Review Cards use a uniform fixed height of `320px` across all Breakpoints that does not change according to Review Text length.
+* Review Text uses a maximum of four visible lines across all Breakpoints.
+* Review Text that exceeds four lines is truncated at that limit and ends with an ellipsis (`…`).
 
 #### Spacing
 
