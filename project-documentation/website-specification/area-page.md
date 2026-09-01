@@ -795,7 +795,6 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * On Mobile, `Google`, the numeric rating, and the five-star group remain together on the first line.
 * The review count may wrap as one complete item onto a second line when the available width is insufficient.
 * When wrapped, the review count remains left-aligned with the complete Google Rating composition and uses an `8px` (`XS`) vertical gap after the first line.
-* The review-count text remains on one line whenever it fits as one item within the available content width.
 
 ## Reviews Carousel
 
@@ -810,10 +809,6 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * The complete Reviews Carousel is an identifiable content region.
 * Its accessible name is derived from the visible Primary Headline.
 * The Review Card collection uses list semantics.
-
-#### Dimensions and Alignment
-
-* Remains fully contained within the Section container and outer System Lines across all Breakpoints.
 
 #### Interaction
 
