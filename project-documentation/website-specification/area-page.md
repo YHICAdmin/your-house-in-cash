@@ -828,9 +828,9 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 #### Responsive Behavior
 
-* On Desktop, displays four complete Review Cards simultaneously, with one card within each System Line division and the globally defined content inset preserved.
-* On Tablet, displays two complete Review Cards simultaneously, with one card within each System Line division and the globally defined content inset preserved.
-* On Mobile, displays one complete Review Card within the single System Line division and preserves the globally defined content inset.
+* On Desktop, displays four complete Review Cards simultaneously, with one card within each System Line division.
+* On Tablet, displays two complete Review Cards simultaneously, with one card within each System Line division.
+* On Mobile, displays one complete Review Card within the single System Line division.
 
 ### Review Card
 
