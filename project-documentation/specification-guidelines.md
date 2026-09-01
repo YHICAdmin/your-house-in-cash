@@ -90,3 +90,20 @@ The decision is governed by these constraints:
 - Request approval when available choices would materially change hierarchy, elevation, or visual emphasis.
 
 This authority applies to future specification work and to new unresolved Border, Radius, and Shadow token-selection decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
+
+### Color-Token Selection
+
+When a specification has already established an element’s color role but leaves the exact color treatment unresolved, the specification author may select the applicable existing global Color System token without separate approval. The selected token and its role must be documented explicitly in the resulting specification.
+
+The decision is governed by these constraints:
+
+- The specification must already establish the element’s color role.
+- Use only existing global Color System tokens.
+- Preserve shared Component-owned colors and approved local values.
+- Use comparable approved elements as precedent.
+- Preserve required foreground readability and contrast.
+- Do not introduce new emphasis, hierarchy, or state meaning while resolving the color token.
+- Do not introduce custom colors, opacity treatments, Gradients, or new semantic color roles.
+- Request approval when available tokens would communicate materially different hierarchy, state, or brand emphasis.
+
+This authority applies to future specification work and to new unresolved color-token decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
