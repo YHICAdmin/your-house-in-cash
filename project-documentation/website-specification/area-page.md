@@ -918,7 +918,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * Each Carousel Control activation advances the carousel by one Review Card across all Breakpoints.
 * On Hover, an enabled Carousel Control uses the global `Brand Green` background and a `#FFFFFF` icon.
 * In the Active state, an enabled Carousel Control uses the global `Brand Green Dark` background and a `#FFFFFF` icon.
-* Hover and Active states preserve the existing Border and control geometry and do not add a Shadow.
+* Hover and Active states preserve the existing Border and control geometry.
 * At the first Review Card position, the previous Carousel Control is disabled and non-interactive.
 * At the last valid Review Card position, the next Carousel Control is disabled and non-interactive.
 * Disabled Carousel Controls have pointer interaction disabled and do not use hover or active states.
