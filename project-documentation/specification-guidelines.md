@@ -73,3 +73,20 @@ The decision is governed by these constraints:
 - Request approval when the element only partially matches the Component contract or multiple Components would produce materially different results.
 
 This authority applies to future specification work and to new unresolved Component-selection decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
+
+### Border, Radius, and Shadow Token Selection
+
+When a specification has already established that an element uses a Border, Radius, or Shadow but leaves its exact treatment unresolved, the specification author may select the applicable existing global token without separate approval. The selected property, token, and measurable value must be documented explicitly in the resulting specification.
+
+The decision is governed by these constraints:
+
+- The specification must already establish that the element uses the applicable Border, Radius, or Shadow treatment.
+- This authority does not permit independently adding or removing a Border, Radius, or Shadow.
+- Use only tokens and default treatments already defined by the Visual Design System.
+- Preserve shared Component-owned treatments and approved local values.
+- Use comparable approved elements and the intended hierarchy as precedent.
+- Do not introduce custom colors, thicknesses, radii, or shadows.
+- Do not combine multiple separation treatments unless the combination is already approved.
+- Request approval when available choices would materially change hierarchy, elevation, or visual emphasis.
+
+This authority applies to future specification work and to new unresolved Border, Radius, and Shadow token-selection decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
