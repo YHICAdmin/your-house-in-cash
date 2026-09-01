@@ -820,7 +820,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * After a Carousel Control advances the carousel, assistive technologies receive a non-urgent status announcement of the newly visible position or range.
 * When multiple Review Cards are visible, the announcement uses the template `Reviews [First]–[Last] of 10`, such as `Reviews 2–5 of 10` on Desktop or `Reviews 3–4 of 10` on Tablet.
 * When one Review Card is visible, the announcement uses the template `Review [Position] of 10`, such as `Review 4 of 10` on Mobile.
-* Automatic announcements contain only the position or range; the complete Review Card content is not announced automatically.
+* Automatic announcements consist only of the approved position or range message.
 
 #### Spacing After
 
