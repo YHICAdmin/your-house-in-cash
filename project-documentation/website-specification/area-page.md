@@ -930,25 +930,21 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * The Carousel Control icons are decorative, hidden from assistive technologies, and do not receive keyboard focus.
 * Keyboard focus remains on the activated Carousel Control after the update.
 
-## Reviews Link
+## Reviews Footer
 
 ### Content
 
-* Label: `See more reviews on Google`.
+* Contains, in document order:
+  1. Trust icon.
+  2. Trust message.
+  3. Divider.
+  4. Reviews Link.
+* The Trust Message is short.
+* Reviews Link label: `See more reviews on Google`.
 
 ### Interaction
 
-* Leads to the official Google Business Profile; exact URL pending.
-
-### Spacing After
-
-* `16px` (`S`) across all Breakpoints.
-
-## Trust Message
-
-### Content
-
-* Includes a short trust message at the bottom of the Section.
+* The Reviews Link leads to the official Google Business Profile; exact URL pending.
 
 # How It Works
 
