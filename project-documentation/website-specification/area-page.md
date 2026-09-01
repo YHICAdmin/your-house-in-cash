@@ -915,7 +915,6 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 #### Interaction
 
-* The Carousel Controls allow users to move through the reviews.
 * Each Carousel Control activation advances the carousel by one Review Card across all Breakpoints.
 * On Hover, an enabled Carousel Control uses the global `Brand Green` background and a `#FFFFFF` icon.
 * In the Active state, an enabled Carousel Control uses the global `Brand Green Dark` background and a `#FFFFFF` icon.
