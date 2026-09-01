@@ -828,6 +828,10 @@ Demonstrate that the business is local, credible, and has already helped homeown
   10. Customer name: `Customer Name 10`; location: `Customer Location 10`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.`
 * The temporary content is replaced with approved authentic reviews before production publication.
 
+### Component and Semantics
+
+* Each Carousel Control uses native button semantics.
+
 ### Visual Design
 
 * Each Review Card uses the global Border color with a `1px` solid border.
@@ -844,6 +848,8 @@ Demonstrate that the business is local, credible, and has already helped homeown
 * Remains fully contained within the Section container and outer System Lines across all Breakpoints.
 * Each Carousel Control uses a `40px × 40px` square interactive area across all Breakpoints.
 * The `20px` icon is centered within the Carousel Control.
+* The Carousel Controls appear below the carousel viewport and align with its right edge across all Breakpoints.
+* Within the control group, the previous Carousel Control appears before the next Carousel Control.
 
 ### Interaction
 
@@ -851,9 +857,18 @@ Demonstrate that the business is local, credible, and has already helped homeown
 * The Carousel Controls allow users to move through the reviews.
 * Each Carousel Control activation advances the carousel by one Review Card across all Breakpoints.
 * The carousel has finite endpoints and does not loop.
+* On Hover, an enabled Carousel Control uses the global `Brand Green` background and a `#FFFFFF` icon.
+* In the Active state, an enabled Carousel Control uses the global `Brand Green Dark` background and a `#FFFFFF` icon.
+* Hover and Active states preserve the existing Border and control geometry and do not add a Shadow.
 * At the first Review Card position, the previous Carousel Control is disabled and non-interactive.
 * At the last valid Review Card position, the next Carousel Control is disabled and non-interactive.
 * Disabled Carousel Controls have pointer interaction disabled and do not use hover or active states.
+
+### Accessibility
+
+* The previous Carousel Control has the accessible name `Previous reviews`.
+* The next Carousel Control has the accessible name `Next reviews`.
+* The Carousel Control icons are decorative, hidden from assistive technologies, and do not receive keyboard focus.
 
 ### Spacing After
 
