@@ -830,6 +830,8 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 ### Component and Semantics
 
+* The complete Reviews Carousel is an identifiable content region.
+* Its accessible name is derived from the visible Primary Headline.
 * The Review Card collection uses list semantics.
 * Each Review Card uses list-item semantics.
 * The review text uses block quotation semantics.
@@ -840,7 +842,9 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 ### Visual Design
 
+* Each Review Card uses the global `Surface` background color.
 * Each Review Card uses the global Border color with a `1px` solid border.
+* Each Review Card uses the global `Large` Radius.
 * The review source uses the global `Body Small` typography and `Text Muted` color.
 * Each Carousel Control uses the global `Surface` color as its default background.
 * Each Carousel Control uses the global default `1px` solid Border.
@@ -852,6 +856,7 @@ Demonstrate that the business is local, credible, and has already helped homeown
 ### Dimensions and Alignment
 
 * Remains fully contained within the Section container and outer System Lines across all Breakpoints.
+* Each Review Card uses `L` (`32px`) internal padding on all sides across all Breakpoints.
 * Each Carousel Control uses a `40px × 40px` square interactive area across all Breakpoints.
 * The `20px` icon is centered within the Carousel Control.
 * The Carousel Controls appear below the carousel viewport and align with its right edge across all Breakpoints.
@@ -877,6 +882,11 @@ Demonstrate that the business is local, credible, and has already helped homeown
 * The previous Carousel Control has the accessible name `Previous reviews`.
 * The next Carousel Control has the accessible name `Next reviews`.
 * The Carousel Control icons are decorative, hidden from assistive technologies, and do not receive keyboard focus.
+* After a Carousel Control advances the carousel, assistive technologies receive a non-urgent status announcement of the newly visible position or range.
+* When multiple Review Cards are visible, the announcement uses the template `Reviews [First]–[Last] of 10`, such as `Reviews 2–5 of 10` on Desktop or `Reviews 3–4 of 10` on Tablet.
+* When one Review Card is visible, the announcement uses the template `Review [Position] of 10`, such as `Review 4 of 10` on Mobile.
+* Keyboard focus remains on the activated Carousel Control after the update.
+* Automatic announcements contain only the position or range; the complete Review Card content is not announced automatically.
 
 ### Spacing After
 
