@@ -38,3 +38,19 @@ The decision is governed by these constraints:
 - Request approval when multiple reasonable typography choices would materially change hierarchy, wrapping, or composition and existing precedent does not resolve the choice.
 
 This authority applies to future specification work and to new unresolved typography decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
+
+### Canonical Icon Selection
+
+When a specification requires an icon and clearly defines the icon’s purpose, context, and semantic role but leaves its identity unresolved, the specification author may select the most appropriate canonical Lucide icon without separate approval. The exact icon identity must be documented in the resulting specification.
+
+The decision is governed by these constraints:
+
+- Use only the approved Lucide library.
+- Preserve any icon identity already approved locally or by a shared Component.
+- Preserve whether the icon is decorative or informative.
+- Reuse an established project icon when the same concept already has one.
+- Do not introduce custom artwork, another icon library, or a new shared Component.
+- Do not add an icon where the specification has not already approved one.
+- Request approval when multiple icons communicate materially different meanings or no established icon clearly represents the concept.
+
+This authority applies to future specification work and to new unresolved icon-identity decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
