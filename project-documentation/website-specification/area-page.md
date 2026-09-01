@@ -936,7 +936,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 ### Content
 
 * Contains, in document order:
-  1. Trust icon.
+  1. Trust icon using the canonical Lucide `ShieldCheck` icon.
   2. Trust message.
   3. Divider.
   4. Reviews Link.
