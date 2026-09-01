@@ -129,11 +129,6 @@
   gap: 12px;
 }
 
-.benefits svg {
-  flex: 0 0 var(--icon-medium);
-  color: var(--color-brand-dark);
-}
-
 .contactOption {
   display: flex;
   min-width: 0;

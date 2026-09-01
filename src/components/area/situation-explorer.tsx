@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Check, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { IconContainer } from "@/components/ui/icon-container";
 import { TextLink } from "@/components/ui/text-link";
 import styles from "./area-situations.module.css";
 
@@ -217,7 +218,7 @@ export function SituationExplorer({
           <ul className={styles.benefits}>
             {selected.benefits.map((benefit) => (
               <li key={benefit} className="text-body">
-                <Check aria-hidden="true" size={20} />
+                <IconContainer icon={Check} aria-hidden="true" />
                 <span>{benefit}</span>
               </li>
             ))}

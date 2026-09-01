@@ -84,12 +84,6 @@
   gap: var(--spacing-xs);
 }
 
-.benefits svg {
-  flex: 0 0 var(--icon-medium);
-  margin-top: 0.0625rem;
-  color: var(--color-brand-dark);
-}
-
 .benefits span {
   word-break: normal;
 }

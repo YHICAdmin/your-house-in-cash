@@ -6,6 +6,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { IconContainer } from "@/components/ui/icon-container";
 import { SectionLabel } from "@/components/ui/section-label";
 import styles from "./area-hero.module.css";
 
@@ -44,7 +45,7 @@ export function AreaHero({ city }: AreaHeroProps) {
           <ul className={styles.benefits}>
             {benefits.map(({ icon: Icon, label }) => (
               <li key={label} className="text-body-small">
-                <Icon aria-hidden="true" size={20} />
+                <IconContainer icon={Icon} aria-hidden="true" />
                 <span>{label}</span>
               </li>
             ))}

@@ -1,4 +1,5 @@
 import { ShieldCheck, Star } from "lucide-react";
+import { IconContainer } from "@/components/ui/icon-container";
 import { SectionLabel } from "@/components/ui/section-label";
 import { TextLink } from "@/components/ui/text-link";
 import { ReviewsCarousel } from "./reviews-carousel";
@@ -74,12 +75,7 @@ export function AreaReviews() {
 
         <div className={styles.footer}>
           <div className={styles.trustGroup}>
-            <ShieldCheck
-              className={styles.trustIcon}
-              size={20}
-              aria-hidden="true"
-              focusable="false"
-            />
+            <IconContainer icon={ShieldCheck} aria-hidden="true" />
             <span className={`${styles.trustMessage} text-body-small`}>
               Real people. Real experiences. Real results.
             </span>

@@ -180,11 +180,6 @@
   gap: var(--spacing-xs);
 }
 
-.trustIcon {
-  flex: 0 0 var(--icon-medium);
-  color: var(--color-brand-dark);
-}
-
 .trustMessage {
   color: var(--color-text-primary);
 }
