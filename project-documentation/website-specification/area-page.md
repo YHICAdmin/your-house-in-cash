@@ -943,6 +943,10 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * Trust Message: `Real people. Real experiences. Real results.`
 * Reviews Link label: `See more reviews on Google`.
 
+### Component and Semantics
+
+* The Reviews Link uses the documented `Text Link` Component.
+
 ### Visual Design
 
 * The `ShieldCheck` icon uses the global `Brand Green Dark` color.
