@@ -139,11 +139,6 @@
   margin-top: var(--spacing-xl);
 }
 
-.contactIcon {
-  flex: 0 0 var(--icon-large);
-  color: var(--color-brand-dark);
-}
-
 .contactText {
   min-width: 0;
   margin: 0;

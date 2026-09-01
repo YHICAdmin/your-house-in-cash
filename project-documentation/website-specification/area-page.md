@@ -657,26 +657,26 @@ On Desktop, the main content area:
 ### Content
 
 * Sentence: `Not sure which situation fits? Contact us and we'll point you in the right direction.`
-* Includes the canonical Lucide `MessageCircle` icon before the sentence.
+* Includes the canonical Lucide `MessageCircle` icon within an `Icon Container` before the sentence.
 * Only `Contact us` uses the Text Link treatment.
 
 ### Component and Semantics
 
 * Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
+* The `MessageCircle` icon uses the documented `Icon Container` Component.
 * `Contact us` uses link semantics.
 
 ### Visual Design
 
 * The sentence uses the global `Body` typography and `Text Secondary` color.
-* The icon uses the global Large Icon size (`24px`) and Brand Green Dark.
-* The Contact Us Option remains visually open and transparent, without a background, Border, Card treatment, Radius, or Shadow.
+* Outside the `Icon Container`, the Contact Us Option remains visually open and transparent, without a background, Border, Card treatment, Radius, or Shadow.
 
 ### Dimensions and Alignment
 
 * At every Breakpoint, occupies a separate row using the complete available content width.
 * On Desktop, occupies Grid Columns `1–12`.
 * The complete icon-and-sentence group is horizontally centered within the row.
-* The icon appears before the sentence with a `12px` gap and is vertically centered with it.
+* The `Icon Container` appears before the sentence with a `12px` gap and is vertically centered with it.
 
 ### Spacing Before
 
