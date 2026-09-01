@@ -830,6 +830,12 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 ### Component and Semantics
 
+* The Review Card collection uses list semantics.
+* Each Review Card uses list-item semantics.
+* The review text uses block quotation semantics.
+* The customer name and location form the attribution for the review text.
+* The review source identifies the external platform from which the review text in the same Review Card originates.
+* The review source uses non-interactive metadata semantics.
 * Each Carousel Control uses native button semantics.
 
 ### Visual Design
