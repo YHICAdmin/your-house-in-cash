@@ -107,3 +107,18 @@ The decision is governed by these constraints:
 - Request approval when available tokens would communicate materially different hierarchy, state, or brand emphasis.
 
 This authority applies to future specification work and to new unresolved color-token decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
+
+### Native Semantic-Role Selection
+
+When an element’s approved content and interaction unambiguously establish its semantic role, the specification author may assign the appropriate native semantic role without separate approval. The selected role and any content relationship it establishes must be documented explicitly in the resulting specification.
+
+The decision is governed by these constraints:
+
+- Prefer native semantics appropriate to the established content and behavior.
+- Preserve the global primary-heading rule and approved local heading hierarchy.
+- Preserve shared Component semantics and approved local roles.
+- Do not introduce new interaction, landmarks, accessible names, live announcements, focus management, or ARIA-specific relationships under this authority.
+- Do not change content order or grouping merely to obtain a preferred semantic structure.
+- Request approval when multiple semantic structures are reasonable or the choice would materially affect interaction or accessibility relationships.
+
+This authority applies to future specification work and to new unresolved semantic-role decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
