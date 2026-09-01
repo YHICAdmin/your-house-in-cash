@@ -876,8 +876,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 * Each Review Card uses `L` (`32px`) internal padding on all sides across all Breakpoints.
 * All Review Cards use a uniform fixed height of `320px` across all Breakpoints.
-* Review Text uses a maximum of four visible lines across all Breakpoints.
-* Review Text that exceeds four lines is truncated at that limit and ends with an ellipsis (`…`).
+* Review Text displays a maximum of four lines across all Breakpoints and truncates overflow with an ellipsis (`…`).
 
 #### Spacing
 
