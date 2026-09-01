@@ -943,6 +943,10 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * Trust Message: `Real people. Real experiences. Real results.`
 * Reviews Link label: `See more reviews on Google`.
 
+### Visual Design
+
+* On Desktop and Tablet, the Divider is vertical, `24px` long, and uses the global default `1px` Border with the global Border color.
+
 ### Interaction
 
 * The Reviews Link leads to the official Google Business Profile; exact URL pending.
@@ -951,6 +955,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 * On Desktop and Tablet, the Trust icon, Trust Message, Divider, and Reviews Link form one horizontal row.
 * On Mobile, the Trust icon followed by the Trust Message form the first row, and the Reviews Link forms the second row.
+* The Divider is omitted on Mobile.
 
 # How It Works
 
