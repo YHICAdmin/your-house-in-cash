@@ -657,7 +657,7 @@ On Desktop, the main content area:
 ### Content
 
 * Sentence: `Not sure which situation fits? Contact us and we'll point you in the right direction.`
-* Includes the canonical Lucide `MessageCircle` icon within an `Icon Container` before the sentence.
+* Includes the canonical Lucide `MessageCircle` icon before the sentence.
 * Only `Contact us` uses the Text Link treatment.
 
 ### Component and Semantics
