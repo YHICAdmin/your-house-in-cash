@@ -615,7 +615,7 @@ On Desktop, the main content area:
 * Each item uses the global `Body` typography and `Text Primary` color.
 * The gap between each `Icon Container` and its text is `12px`.
 * The vertical gap between items is `16px` (`S`).
-* `Icon Containers` align with the first line when benefit text wraps.
+* The `Icon Container` and text are vertically center-aligned within each benefit item.
 
 #### Spacing After
 
