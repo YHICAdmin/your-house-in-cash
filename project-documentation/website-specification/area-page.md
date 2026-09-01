@@ -235,7 +235,7 @@ Provide the seller with a clear path to begin the conversion process.
 
 ### Accessibility
 
-* `House`, `BadgeDollarSign`, and `CalendarCheck` are decorative, are hidden from assistive technologies, and do not receive keyboard focus.
+* `House`, `BadgeDollarSign`, and `CalendarCheck` are decorative.
 
 ### Responsive Behavior
 
@@ -274,7 +274,7 @@ Provide the seller with a clear path to begin the conversion process.
 
 ### Accessibility
 
-* All three images are decorative and use `alt=""`.
+* All three images are decorative.
 
 ### Responsive Behavior
 
@@ -318,7 +318,7 @@ Provide the seller with a clear path to begin the conversion process.
 
 ### Accessibility
 
-* The portrait is decorative and uses `alt=""`.
+* The portrait is decorative.
 
 ### Responsive Behavior
 
@@ -524,7 +524,7 @@ On Desktop, the main content area:
 
 #### Accessibility
 
-* All Situation Images are decorative and use empty alternative text: `alt=""`.
+* All Situation Images are decorative.
 
 #### Responsive Behavior
 
@@ -623,7 +623,7 @@ On Desktop, the main content area:
 
 #### Accessibility
 
-* The icons are decorative, hidden from assistive technologies, and not keyboard-focusable.
+* The icons are decorative.
 
 #### Responsive Behavior
 
@@ -688,7 +688,7 @@ On Desktop, the main content area:
 
 ### Accessibility
 
-* The icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
+* The icon is decorative.
 
 ### Responsive Behavior
 
@@ -786,7 +786,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 ### Accessibility
 
 * The complete rating is communicated as: `Google rating: 4.9 out of 5 based on 127 reviews.`
-* The visual stars are decorative, hidden from assistive technologies, and do not receive keyboard focus.
+* The visual stars are decorative.
 
 ### Responsive Behavior
 
@@ -928,7 +928,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 * The previous Carousel Control has the accessible name `Previous reviews`.
 * The next Carousel Control has the accessible name `Next reviews`.
-* The Carousel Control icons are decorative, hidden from assistive technologies, and do not receive keyboard focus.
+* The Carousel Control icons are decorative.
 * Keyboard focus remains on the activated Carousel Control after the update.
 
 ## Reviews Footer
@@ -967,7 +967,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 ### Accessibility
 
-* The `ShieldCheck` icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
+* The `ShieldCheck` icon is decorative.
 * The Divider is decorative, hidden from assistive technologies, and does not create a separate semantic boundary.
 
 ### Responsive Behavior

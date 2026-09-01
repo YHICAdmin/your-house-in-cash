@@ -151,7 +151,7 @@ Provide clear, accessible navigation.
 * The Menu Control's accessible name communicates whether it opens or closes the navigation Menu.
 * The Menu Control communicates its expanded or collapsed state to assistive technologies.
 * The Menu Control is programmatically associated with the Open Menu Panel.
-* The Menu Control icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
+* The Menu Control icon is decorative.
 * As soon as opening begins, the Open Menu Panel and its interactive content become available to assistive technologies and user interaction.
 * When the Menu opens, keyboard focus moves to the first Menu Navigation link.
 * While the Menu is open, keyboard focus remains within the Header and Open Menu Panel; `Tab` and `Shift + Tab` cycle through only their interactive elements.

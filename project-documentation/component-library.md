@@ -57,7 +57,6 @@ A Component for displaying multiple content items that can be expanded and colla
 - Closed
 - Open
 - Hover: Question color changes to Brand Green Dark
-- Focus: uses the global Focus-Visible Treatment
 
 #### Keyboard & Accessibility
 
@@ -92,7 +91,7 @@ A generic Component for actions displayed as a button. It can use the appropriat
 ### States
 
 - Hover: background Brand Green Dark
-- Focus: uses the global Focus-Visible Treatment; background unchanged
+- Focus: background unchanged
 - Active: transform: scale(0.98); no additional color or shadow change
 - Disabled: opacity 40%; pointer interaction disabled; no hover or active states
 - Keyboard behavior follows the semantic role of the rendered element
@@ -173,7 +172,7 @@ A small Component used to identify, contextualize, or categorize a Section or co
 
 #### Accessibility
 
-- The icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
+- The icon is decorative.
 
 #### Configurable
 
@@ -195,7 +194,6 @@ A generic Component for actions or navigation displayed as text rather than as a
 
 ### States
 
-- Focus: uses the global Focus-Visible Treatment
 - Active: color #245A33; no transform or layout change
 - Transition: color 150ms ease
 - Hover: color Brand Green Dark

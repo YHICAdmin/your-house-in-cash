@@ -278,21 +278,13 @@ Secondary actions use the Text Link defined in the Component Library.
 
 ### Component Details
 
-Typography, dimensions, spacing, colors, states, responsive behavior, accessibility, and customization are defined in the Component Library.
+Typography, dimensions, spacing, colors, states, responsive behavior, and customization are defined in the Component Library. Component-specific accessibility remains defined there, while global accessibility requirements are defined in the Accessibility specification.
 
 ### Hierarchy Principle
 
 Within each area, the distinction between the primary and secondary action should be clear.
 
 Do not add buttons simply to fill the composition.
-
-## Focus-Visible Treatment
-
-All keyboard-focusable interactive elements use a `2px` solid Brand Green Dark outline with a `3px` offset when focus is visibly indicated.
-
-This is the global default unless a Component or Element specification explicitly defines an approved override.
-
-The global outline supplements any documented focus-specific change to text, icon, background, or another visual state unless that specification explicitly states otherwise.
 
 ## Cards & Surfaces
 
