@@ -22,3 +22,19 @@ The decision is governed by these constraints:
 - Request approval when multiple reasonable spacing choices would materially change hierarchy, density, or Section height and existing precedent does not resolve the choice.
 
 This authority applies to future specification work and to new unresolved spacing decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
+
+### Typography-Style Selection
+
+When an element’s content role, semantic role, and hierarchy are defined but its typography remains unresolved, the specification author may select an existing global typography style without separate approval. The selected style and applicable Breakpoint treatment must be documented explicitly in the resulting specification.
+
+The decision is governed by these constraints:
+
+- Use only existing global typography styles.
+- Preserve shared Component-owned typography.
+- Preserve approved semantic roles and local typography values.
+- Use comparable approved elements as precedent.
+- Do not introduce custom font sizes, weights, line heights, or letter spacing.
+- Do not change the approved content or hierarchy while resolving typography.
+- Request approval when multiple reasonable typography choices would materially change hierarchy, wrapping, or composition and existing precedent does not resolve the choice.
+
+This authority applies to future specification work and to new unresolved typography decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
