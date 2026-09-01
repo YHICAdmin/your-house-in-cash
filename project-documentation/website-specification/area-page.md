@@ -751,9 +751,8 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 ### Content
 
-* Visible review-count template: `([Review Count] reviews)`.
-* Displays the approved rating and review count from the business’s official Google Business Profile as manually maintained static content.
-* Pending content values: the exact rating and review count.
+* Visible review-count text: `(127 reviews)`.
+* Displays the approved rating of `4.9` and review count of `127` from the business’s official Google Business Profile as manually maintained static content.
 
 ### Component and Semantics
 
@@ -786,7 +785,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 ### Accessibility
 
-* The complete rating is communicated as: `Google rating: [Rating] out of 5 based on [Review Count] reviews.`
+* The complete rating is communicated as: `Google rating: 4.9 out of 5 based on 127 reviews.`
 * The visual stars are decorative, hidden from assistive technologies, and do not receive keyboard focus.
 
 ### Responsive Behavior
@@ -814,9 +813,8 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 * Displays reviews in a horizontal carousel.
 * The carousel has finite endpoints and does not loop.
-* Movement between carousel positions uses a `300ms` horizontal transition that follows the navigation direction.
+* Movement between carousel positions uses a `300ms` horizontal transition with `cubic-bezier(0.22, 1, 0.36, 1)` easing that follows the navigation direction.
 * When reduced motion is preferred, the position changes immediately without animation.
-* Pending decision: transition easing.
 
 #### Accessibility
 
