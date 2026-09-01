@@ -899,7 +899,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 #### Visual Design
 
 * Each Carousel Control uses the global `Surface` color as its default background.
-* Each Carousel Control uses the global default `1px` solid Border.
+* Each Carousel Control uses the global default Border.
 * Each Carousel Control uses the global `Pill` Radius.
 * Carousel Control icons use the global Medium Icon size (`20px`) across all Breakpoints.
 * Carousel Control icons use the global `Text Primary` color.
