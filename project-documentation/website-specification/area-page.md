@@ -805,16 +805,53 @@ Demonstrate that the business is local, credible, and has already helped homeown
 
 ## Reviews Carousel
 
-### Content
+### Carousel
+
+#### Content
 
 * Contains exactly ten Review Cards and the Carousel Controls.
+
+#### Component and Semantics
+
+* The complete Reviews Carousel is an identifiable content region.
+* Its accessible name is derived from the visible Primary Headline.
+* The Review Card collection uses list semantics.
+
+#### Dimensions and Alignment
+
+* Remains fully contained within the Section container and outer System Lines across all Breakpoints.
+
+#### Interaction
+
+* Displays reviews in a horizontal carousel.
+* The carousel has finite endpoints and does not loop.
+
+#### Accessibility
+
+* After a Carousel Control advances the carousel, assistive technologies receive a non-urgent status announcement of the newly visible position or range.
+* When multiple Review Cards are visible, the announcement uses the template `Reviews [First]–[Last] of 10`, such as `Reviews 2–5 of 10` on Desktop or `Reviews 3–4 of 10` on Tablet.
+* When one Review Card is visible, the announcement uses the template `Review [Position] of 10`, such as `Review 4 of 10` on Mobile.
+* Automatic announcements contain only the position or range; the complete Review Card content is not announced automatically.
+
+#### Spacing After
+
+* `32px` (`L`) across all Breakpoints.
+
+#### Responsive Behavior
+
+* On Desktop, displays four complete Review Cards simultaneously, with one card within each System Line division and the globally defined content inset preserved.
+* On Tablet, displays two complete Review Cards simultaneously, with one card within each System Line division and the globally defined content inset preserved.
+* On Mobile, displays one complete Review Card within the single System Line division and preserves the globally defined content inset.
+
+### Review Card
+
+#### Content
+
 * Each Review Card contains:
   * Customer name.
   * Customer location.
   * Review source, such as Google, Facebook, or BBB.
   * Review text.
-* The previous Carousel Control uses the canonical Lucide `ChevronLeft` icon.
-* The next Carousel Control uses the canonical Lucide `ChevronRight` icon.
 * Uses the following temporary content in canonical display order for layout testing:
   1. Customer name: `Customer Name 01`; location: `Customer Location 01`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
   2. Customer name: `Customer Name 02`; location: `Customer Location 02`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`
@@ -828,24 +865,38 @@ Demonstrate that the business is local, credible, and has already helped homeown
   10. Customer name: `Customer Name 10`; location: `Customer Location 10`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.`
 * The temporary content is replaced with approved authentic reviews before production publication.
 
-### Component and Semantics
+#### Component and Semantics
 
-* The complete Reviews Carousel is an identifiable content region.
-* Its accessible name is derived from the visible Primary Headline.
-* The Review Card collection uses list semantics.
 * Each Review Card uses list-item semantics.
 * The review text uses block quotation semantics.
 * The customer name and location form the attribution for the review text.
 * The review source identifies the external platform from which the review text in the same Review Card originates.
 * The review source uses non-interactive metadata semantics.
-* Each Carousel Control uses native button semantics.
 
-### Visual Design
+#### Visual Design
 
 * Each Review Card uses the global `Surface` background color.
 * Each Review Card uses the global Border color with a `1px` solid border.
 * Each Review Card uses the global `Large` Radius.
 * The review source uses the global `Body Small` typography and `Text Muted` color.
+
+#### Dimensions and Alignment
+
+* Each Review Card uses `L` (`32px`) internal padding on all sides across all Breakpoints.
+
+### Carousel Controls
+
+#### Content
+
+* The previous Carousel Control uses the canonical Lucide `ChevronLeft` icon.
+* The next Carousel Control uses the canonical Lucide `ChevronRight` icon.
+
+#### Component and Semantics
+
+* Each Carousel Control uses native button semantics.
+
+#### Visual Design
+
 * Each Carousel Control uses the global `Surface` color as its default background.
 * Each Carousel Control uses the global default `1px` solid Border.
 * Each Carousel Control uses the global `Pill` Radius.
@@ -853,10 +904,8 @@ Demonstrate that the business is local, credible, and has already helped homeown
 * Carousel Control icons use the global `Text Primary` color.
 * Disabled Carousel Controls use `40%` opacity.
 
-### Dimensions and Alignment
+#### Dimensions and Alignment
 
-* Remains fully contained within the Section container and outer System Lines across all Breakpoints.
-* Each Review Card uses `L` (`32px`) internal padding on all sides across all Breakpoints.
 * Each Carousel Control uses a `40px × 40px` square interactive area across all Breakpoints.
 * The `20px` icon is centered within the Carousel Control.
 * The Carousel Controls appear below the carousel viewport and align with its right edge across all Breakpoints.
@@ -864,12 +913,10 @@ Demonstrate that the business is local, credible, and has already helped homeown
 * An `8px` (`XS`) horizontal gap separates the Carousel Controls.
 * A `16px` (`S`) vertical gap separates the Review Cards from the Carousel Control group.
 
-### Interaction
+#### Interaction
 
-* Displays reviews in a horizontal carousel.
 * The Carousel Controls allow users to move through the reviews.
 * Each Carousel Control activation advances the carousel by one Review Card across all Breakpoints.
-* The carousel has finite endpoints and does not loop.
 * On Hover, an enabled Carousel Control uses the global `Brand Green` background and a `#FFFFFF` icon.
 * In the Active state, an enabled Carousel Control uses the global `Brand Green Dark` background and a `#FFFFFF` icon.
 * Hover and Active states preserve the existing Border and control geometry and do not add a Shadow.
@@ -877,26 +924,12 @@ Demonstrate that the business is local, credible, and has already helped homeown
 * At the last valid Review Card position, the next Carousel Control is disabled and non-interactive.
 * Disabled Carousel Controls have pointer interaction disabled and do not use hover or active states.
 
-### Accessibility
+#### Accessibility
 
 * The previous Carousel Control has the accessible name `Previous reviews`.
 * The next Carousel Control has the accessible name `Next reviews`.
 * The Carousel Control icons are decorative, hidden from assistive technologies, and do not receive keyboard focus.
-* After a Carousel Control advances the carousel, assistive technologies receive a non-urgent status announcement of the newly visible position or range.
-* When multiple Review Cards are visible, the announcement uses the template `Reviews [First]–[Last] of 10`, such as `Reviews 2–5 of 10` on Desktop or `Reviews 3–4 of 10` on Tablet.
-* When one Review Card is visible, the announcement uses the template `Review [Position] of 10`, such as `Review 4 of 10` on Mobile.
 * Keyboard focus remains on the activated Carousel Control after the update.
-* Automatic announcements contain only the position or range; the complete Review Card content is not announced automatically.
-
-### Spacing After
-
-* `32px` (`L`) across all Breakpoints.
-
-### Responsive Behavior
-
-* On Desktop, displays four complete Review Cards simultaneously, with one card within each System Line division and the globally defined content inset preserved.
-* On Tablet, displays two complete Review Cards simultaneously, with one card within each System Line division and the globally defined content inset preserved.
-* On Mobile, displays one complete Review Card within the single System Line division and preserves the globally defined content inset.
 
 ## Reviews Link
 
