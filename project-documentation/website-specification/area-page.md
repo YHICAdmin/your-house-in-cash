@@ -965,6 +965,10 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 * The Reviews Link leads to the official Google Business Profile; exact URL pending.
 
+### Accessibility
+
+* The `ShieldCheck` icon is decorative, hidden from assistive technologies, and does not receive keyboard focus.
+
 ### Responsive Behavior
 
 * On Desktop and Tablet, the Trust icon, Trust Message, Divider, and Reviews Link form one horizontal row.
