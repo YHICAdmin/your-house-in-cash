@@ -14,6 +14,12 @@ Reading and keyboard focus order preserve the intended logical document order ac
 
 Visual layout may position elements side by side without changing their reading or keyboard focus order. Any approved order exception is defined in the relevant Section or Element specification.
 
+## Semantic Structure
+
+### Primary Heading
+
+Each page has exactly one primary heading using `H1` semantics.
+
 ## Keyboard and Focus
 
 ### Focus-Visible Treatment

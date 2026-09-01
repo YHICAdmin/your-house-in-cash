@@ -104,7 +104,7 @@ Provide the seller with a clear path to begin the conversion process.
 
 ### Component and Semantics
 
-* Serves as the only `H1` on the page.
+* Uses `H1` semantics.
 
 ### Visual Design
 
