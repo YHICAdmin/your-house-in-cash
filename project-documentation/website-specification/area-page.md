@@ -878,6 +878,9 @@ Demonstrate that the business is local, credible, and has already helped homeown
 * Each Review Card uses the global `Surface` background color.
 * Each Review Card uses the global Border color with a `1px` solid border.
 * Each Review Card uses the global `Large` Radius.
+* The review text uses the global `Body Large` typography and `Text Primary` color.
+* The customer name uses the global `Body` typography and `Text Primary` color.
+* The customer location uses the global `Body Small` typography and `Text Muted` color.
 * The review source uses the global `Body Small` typography and `Text Muted` color.
 
 #### Dimensions and Alignment
