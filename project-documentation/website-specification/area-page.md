@@ -814,6 +814,9 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 * Displays reviews in a horizontal carousel.
 * The carousel has finite endpoints and does not loop.
+* Movement between carousel positions uses a `300ms` horizontal transition that follows the navigation direction.
+* When reduced motion is preferred, the position changes immediately without animation.
+* Pending decision: transition easing.
 
 #### Accessibility
 
