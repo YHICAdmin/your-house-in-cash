@@ -945,6 +945,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 ### Visual Design
 
+* The `ShieldCheck` icon uses the global `Brand Green Dark` color.
 * On Desktop and Tablet, the Divider is vertical, `24px` long, and uses the global default `1px` Border with the global Border color.
 
 ### Interaction
