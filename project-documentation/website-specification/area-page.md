@@ -751,7 +751,6 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 ### Content
 
-* Displays the approved Google rating and total number of Google reviews.
 * Visible review-count template: `([Review Count] reviews)`.
 * Displays the approved rating and review count from the business’s official Google Business Profile as manually maintained static content.
 * Pending content values: the exact rating and review count.
