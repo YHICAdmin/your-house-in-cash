@@ -156,3 +156,20 @@ The decision is governed by these constraints:
 - Request approval when multiple visible candidates exist or the visible content does not identify the element unambiguously.
 
 This authority applies to future specification work and to new unresolved accessible-name derivation decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
+
+### Decorative-Content Classification
+
+When an approved visual element conveys no unique information, identity, state, instruction, or interaction beyond content already communicated accessibly, the specification author may classify it as decorative without separate approval. The decorative classification must be documented explicitly in the consuming specification or shared Component.
+
+The decision is governed by these constraints:
+
+- The visual element itself must already be approved; this authority does not permit adding or removing it.
+- Removing the element from accessible content must not remove or alter any meaningful information, identity, state, instruction, or interaction.
+- Consider the element across every approved state and Breakpoint.
+- All meaningful information represented by the element must already be available through accessible content.
+- Preserve existing local and shared-Component classifications.
+- Apply the global Decorative Content requirements after classification.
+- Do not autonomously classify controls, state indicators, instructional graphics, informative images, or identity and brand assets as decorative.
+- Request approval whenever the classification could change meaning or understanding.
+
+This authority applies to future specification work and to new unresolved decorative-content classifications encountered after its approval. It does not authorize retrospective changes to existing specifications.
