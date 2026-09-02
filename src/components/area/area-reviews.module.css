@@ -73,11 +73,13 @@
 }
 
 .carouselTrack {
+  --carousel-gap: var(--spacing-m);
+
   display: grid;
   width: 100%;
   grid-auto-columns: 100%;
   grid-auto-flow: column;
-  column-gap: var(--spacing-l);
+  column-gap: var(--carousel-gap);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -267,7 +269,7 @@
   }
 
   .carouselTrack {
-    grid-auto-columns: calc((100% - var(--spacing-l)) / 2);
+    grid-auto-columns: calc((100% - var(--carousel-gap)) / 2);
   }
 
   .footer {
@@ -287,22 +289,6 @@
 
 @media (min-width: 1200px) {
   .carouselTrack {
-    grid-auto-columns: calc((100% - (3 * var(--spacing-l))) / 4);
-  }
-
-  .desktopSlotFirst {
-    margin-right: calc(var(--spacing-m) / 4);
-  }
-
-  .desktopSlotSecond {
-    margin-left: calc(var(--spacing-m) / -4);
-  }
-
-  .desktopSlotThird {
-    margin-right: calc(var(--spacing-m) / -4);
-  }
-
-  .desktopSlotFourth {
-    margin-left: calc(var(--spacing-m) / 4);
+    grid-auto-columns: calc((100% - (3 * var(--carousel-gap))) / 4);
   }
 }
