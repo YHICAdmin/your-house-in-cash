@@ -96,7 +96,7 @@ Component-internal padding does not alter the Component’s outer alignment edge
 
 The Content Container is divided into a Grid according to the Breakpoint:
 
-Desktop: 12 columns with a 24px Gutter.
+Desktop: 12 columns with a 24px Gutter and a 12px outer half-gutter on each side. At the maximum 1248px Content Container width, each column is 80px wide.
 
 Tablet: 8 columns with a 24px Gutter.
 
@@ -154,7 +154,7 @@ The lines continue uninterrupted throughout the page, including through the Head
 
 The outer System Lines are solid. Internal System Lines are dashed.
 
-* **Desktop:** 5 lines · 4 visual columns · Outer lines at the boundaries of the 1248px Content Container · Internal lines at the center of the gutters between Columns 3–4, 6–7, and 9–10 · Content distance from outer lines: 16px
+* **Desktop:** 5 lines · 4 equal visual columns · Outer lines at the boundaries of the 1248px Content Container · Internal lines at the center of the gutters between Columns 3–4, 6–7, and 9–10 · The 12px outer half-gutters and 24px internal gutters position the lines at 0%, 25%, 50%, 75%, and 100% of the Content Container width · Content distance from outer lines: 12px
 * **Tablet:** 3 lines · 2 visual columns · Outer lines at the boundaries of the content area · Internal line at the center of the gutter between Columns 4–5 · Content distance from outer lines: 16px
 * **Mobile:** 2 lines · 1 visual column · Outer lines at the boundaries of the content area · No internal lines · Content distance from outer lines: 16px
 

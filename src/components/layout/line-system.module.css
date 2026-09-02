@@ -37,7 +37,29 @@
 }
 
 @media (min-width: 1200px) {
+  .system {
+    border-inline: 0;
+  }
+
+  .system::before,
+  .system::after {
+    position: absolute;
+    inset-block: 0;
+    width: 1px;
+    background: var(--color-line);
+    content: "";
+  }
+
+  .system::before {
+    left: 0;
+  }
+
+  .system::after {
+    right: 0;
+  }
+
   .grid {
+    padding-inline: calc(var(--spacing-m) / 2);
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 }

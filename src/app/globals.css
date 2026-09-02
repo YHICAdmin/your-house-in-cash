@@ -169,6 +169,7 @@
 
   @media (min-width: theme(--breakpoint-desktop)) {
     .content-grid {
+      padding-inline: calc(var(--spacing-m) / 2);
       grid-template-columns: repeat(12, minmax(0, 1fr));
     }
   }
