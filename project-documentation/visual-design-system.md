@@ -201,7 +201,7 @@ Whitespace is an intentional part of the composition. It should not be filled or
 
 * **Background:** #FFFFFF · Primary website background
 * **Background Soft:** #F7F9F7 · Sections with a subtle background variation
-* **Background Neutral:** #F3F4F3 · Neutral light-gray background for subtle Section separation
+* **Background Neutral:** #F8F8F8 · Neutral light-gray background for subtle Section separation
 * **Surface:** #FFFFFF · Cards / floating elements
 * **Text Primary:** #101114 · Headlines and primary text
 * **Text Secondary:** #555B63 · Supporting copy
