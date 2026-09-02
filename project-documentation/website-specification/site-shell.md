@@ -203,7 +203,7 @@ Provide clear, accessible navigation.
 * The Phone icon, label, Divider, and phone number form one horizontal composition in that order, with an `8px` (`XS`) gap between adjacent items across all Breakpoints.
 * The Divider is vertical and `24px` long across all Breakpoints.
 * The complete Phone Contact is vertically center-aligned across all Breakpoints and, on Desktop and Tablet, vertically centered relative to the Header CTA.
-* On Tablet, appears immediately before the Header CTA, is separated from it by `16px` (`S`), and is left-aligned.
+* On Tablet, appears immediately before the Header CTA and is separated from it by `16px` (`S`).
 * On Mobile, appears directly above the Menu Primary CTA, is separated from it by `16px` (`S`), and is horizontally centered.
 
 ### Responsive Behavior
