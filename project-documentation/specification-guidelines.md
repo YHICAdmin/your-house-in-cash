@@ -140,3 +140,19 @@ The decision is governed by these constraints:
 - Request approval when reasonable adaptations would produce materially different hierarchy, interaction, media treatment, or Section composition.
 
 This authority applies to future specification work and to new unresolved straightforward responsive adaptations encountered after its approval. It does not authorize retrospective changes to existing specifications or responsive redesign.
+
+### Accessible-Name Derivation from Visible Content
+
+When a specification already establishes that an element requires an accessible name and one approved visible heading or label unambiguously identifies that element, the specification author may define the accessible name as derived from that visible content without separate approval. The naming relationship must be documented explicitly in the resulting specification.
+
+The decision is governed by these constraints:
+
+- The requirement for an accessible name must already be established.
+- Use only approved visible content that identifies the same element.
+- Preserve approved local accessible names and naming relationships.
+- Do not introduce hidden naming text or new visible content.
+- Do not introduce a landmark, region, accessible description, state-dependent name, or live announcement under this authority.
+- Do not apply this authority to an icon-only control whose accessible name requires contextual wording.
+- Request approval when multiple visible candidates exist or the visible content does not identify the element unambiguously.
+
+This authority applies to future specification work and to new unresolved accessible-name derivation decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
