@@ -668,15 +668,15 @@ On Desktop, the main content area:
 
 ### Visual Design
 
-* The sentence uses the global `Body` typography and `Text Secondary` color.
+* The sentence uses the global `Body Small` typography and `Text Primary` color.
 * Outside the `Icon Container`, the Contact Us Option remains visually open and transparent, without a background, Border, Card treatment, Radius, or Shadow.
 
 ### Dimensions and Alignment
 
 * At every Breakpoint, occupies a separate row using the complete available content width.
 * On Desktop, occupies Grid Columns `1–12`.
-* The complete icon-and-sentence group is horizontally centered within the row.
 * The `Icon Container` appears before the sentence with a `12px` gap and is vertically centered with it.
+* The sentence is left-aligned.
 
 ### Spacing Before
 
@@ -692,7 +692,7 @@ On Desktop, the main content area:
 
 ### Responsive Behavior
 
-* On narrow Mobile widths, the sentence wraps naturally within the available width while the complete group remains centered.
+* On narrow Mobile widths, the sentence wraps naturally within the available width.
 
 # Reviews
 
