@@ -185,21 +185,34 @@ Provide clear, accessible navigation.
 * Label: `Call Us`.
 * Phone number: `216-111-1111`.
 * The phone number is hardcoded.
+* Includes the canonical Lucide `Phone` icon and a Divider.
 
 ### Visual Design
 
 * The label uses the global `Body Small` typography.
 * The phone number uses the global `Body` typography.
+* The Phone icon uses the global Small Icon size (`16px`) and Brand Green Dark color.
+* The Divider uses the global default `1px` solid Border treatment.
 
 ### Dimensions and Alignment
 
-* On Desktop and Tablet, appears immediately before the Header CTA, is separated from it by `16px` (`S`), and is left-aligned.
+* On Desktop, appears immediately before the Header CTA and is separated from it by `16px` (`S`).
+* The Phone icon, label, Divider, and phone number form one horizontal composition in that order, with an `8px` (`XS`) gap between adjacent items across all Breakpoints.
+* The Divider is vertical and `24px` long across all Breakpoints.
+* The complete Phone Contact is vertically center-aligned across all Breakpoints and, on Desktop and Tablet, vertically centered relative to the Header CTA.
+* On Tablet, appears immediately before the Header CTA, is separated from it by `16px` (`S`), and is left-aligned.
 * On Mobile, appears directly above the Menu Primary CTA, is separated from it by `16px` (`S`), and is horizontally centered.
 
 ### Responsive Behavior
 
-* On Desktop and Tablet, appears in the Header on two lines: `Call Us` on the first line and `216-111-1111` on the second line.
-* On Mobile, appears within the Open Menu Panel on one line: `Call Us: 216-111-1111`.
+* On Desktop and Tablet, appears in the Header.
+* On Mobile, appears within the Open Menu Panel.
+* Its internal one-line composition and order remain unchanged across all Breakpoints.
+
+### Accessibility
+
+* The Phone icon is decorative.
+* The Divider is decorative and does not create a separate semantic boundary.
 
 ## Header CTA
 
