@@ -173,3 +173,13 @@ The decision is governed by these constraints:
 - Request approval whenever the classification could change meaning or understanding.
 
 This authority applies to future specification work and to new unresolved decorative-content classifications encountered after its approval. It does not authorize retrospective changes to existing specifications.
+
+## Specification Authoring Rules
+
+### Global Inheritance and Local Ownership
+
+Local specifications document only requirements that establish local content, ownership, classification, relationships, overrides, extensions, or exceptions. A requirement fully established by an applicable global rule or shared Component is inherited and is not restated locally.
+
+Component assignments and local classifications remain documented when they are necessary to establish which global or shared rules apply.
+
+This rule applies to future specification work. It does not authorize retrospective cleanup of existing specifications.
