@@ -176,7 +176,8 @@
   transition-timing-function: ease-out;
 }
 
-.menuNavigation {
+.menuNavigation,
+.menuCta {
   width: min(calc(100% - (var(--spacing-s) * 2)), var(--container-content));
   margin-inline: auto;
   padding-inline: var(--content-inset);
@@ -192,8 +193,11 @@
 
 .menuCta {
   display: flex;
-  justify-content: center;
   padding-bottom: var(--spacing-m);
+}
+
+.menuCta > a {
+  width: 100%;
 }
 
 .menuNavigation a {

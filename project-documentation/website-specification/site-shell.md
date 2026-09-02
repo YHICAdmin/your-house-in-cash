@@ -118,7 +118,8 @@ Provide clear, accessible navigation.
 #### Mobile
 
 * The Menu Control is the only element in the Header's right-side control area.
-* The Menu Primary CTA inherits the standard `Button` Component's dimensions, uses its content-based width, is horizontally centered at the bottom of the Open Menu Panel, and has `24px` (`M`) padding beneath it.
+* The Menu Primary CTA preserves the standard `Button` Component's dimensions except that its width fills `100%` of the available Menu content width.
+* It remains bounded by the Menu Panel content area, appears at the bottom of the Open Menu Panel, and has `24px` (`M`) padding beneath it.
 
 ### Interaction
 
