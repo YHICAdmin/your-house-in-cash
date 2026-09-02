@@ -122,3 +122,21 @@ The decision is governed by these constraints:
 - Request approval when multiple semantic structures are reasonable or the choice would materially affect interaction or accessibility relationships.
 
 This authority applies to future specification work and to new unresolved semantic-role decisions encountered after its approval. It does not authorize retrospective changes to existing specifications.
+
+### Straightforward Responsive Adaptation
+
+When a specification defines the complete content, document order, hierarchy, and Desktop composition but leaves a straightforward narrower-Breakpoint arrangement unresolved, the specification author may define the simplest responsive adaptation consistent with the global Responsive System without separate approval. The exact composition at every affected Breakpoint must be documented explicitly in the resulting specification.
+
+The decision is governed by these constraints:
+
+- Apply this authority only to straightforward responsive adaptation of an already-defined composition.
+- Use only the established Breakpoints, Grid, Content Container, and minimum-width rules.
+- Preserve content, hierarchy, document order, semantic order, and Component behavior.
+- Preserve every approved local responsive rule.
+- Use comparable approved responsive compositions as precedent.
+- Do not hide, reorder, replace, or duplicate content.
+- Do not introduce new interaction patterns, horizontal scrolling, carousels, sticky behavior, overlap, or Breakpoint-specific assets.
+- Do not materially change the Section composition or media treatment.
+- Request approval when reasonable adaptations would produce materially different hierarchy, interaction, media treatment, or Section composition.
+
+This authority applies to future specification work and to new unresolved straightforward responsive adaptations encountered after its approval. It does not authorize retrospective changes to existing specifications or responsive redesign.
