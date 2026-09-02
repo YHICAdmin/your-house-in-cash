@@ -210,7 +210,6 @@ Provide clear, accessible navigation.
 
 * On Desktop and Tablet, appears in the Header.
 * On Mobile, appears within the Open Menu Panel.
-* Its internal one-line composition and order remain unchanged across all Breakpoints.
 
 ### Accessibility
 
