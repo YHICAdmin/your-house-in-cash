@@ -84,6 +84,30 @@
   }
 }
 
+:root {
+  --layout-content-width: min(
+    calc(100% - (var(--spacing-s) * 2)),
+    var(--container-content)
+  );
+  --layout-grid-columns: 4;
+  --layout-grid-gutter: var(--spacing-s);
+  --layout-grid-inset: var(--content-inset);
+}
+
+@media (min-width: theme(--breakpoint-tablet)) {
+  :root {
+    --layout-grid-columns: 8;
+    --layout-grid-gutter: var(--spacing-m);
+  }
+}
+
+@media (min-width: theme(--breakpoint-desktop)) {
+  :root {
+    --layout-grid-columns: 12;
+    --layout-grid-inset: calc(var(--spacing-m) / 2);
+  }
+}
+
 @layer base {
   *,
   *::before,
@@ -97,7 +121,6 @@
   }
 
   body {
-    isolation: isolate;
     min-height: 100vh;
     margin: 0;
     background: var(--color-background);
@@ -137,20 +160,16 @@
   }
 
   .content-grid {
-    position: relative;
-    z-index: 2;
     display: grid;
-    width: min(calc(100% - (var(--spacing-s) * 2)), var(--container-content));
+    width: var(--layout-content-width);
     margin-inline: auto;
-    padding-inline: var(--content-inset);
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: var(--spacing-s);
+    padding-inline: var(--layout-grid-inset);
+    grid-template-columns: repeat(var(--layout-grid-columns), minmax(0, 1fr));
+    gap: var(--layout-grid-gutter);
   }
 
   .content-inset {
-    position: relative;
-    z-index: 2;
-    width: min(calc(100% - (var(--spacing-s) * 2)), var(--container-content));
+    width: var(--layout-content-width);
     margin-inline: auto;
     padding-inline: var(--content-inset);
   }
@@ -159,23 +178,75 @@
     padding-block: var(--section-spacing);
   }
 
-  @media (min-width: theme(--breakpoint-tablet)) {
-    .content-grid {
-      grid-template-columns: repeat(8, minmax(0, 1fr));
-      gap: var(--spacing-m);
-    }
-
-  }
-
-  @media (min-width: theme(--breakpoint-desktop)) {
-    .content-grid {
-      padding-inline: calc(var(--spacing-m) / 2);
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-    }
-  }
 }
 
 @layer utilities {
+  .system-lines-bg {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .system-lines-bg::before,
+  .system-lines-bg::after {
+    position: absolute;
+    z-index: -1;
+    inset-block: 0;
+    left: 50%;
+    width: var(--layout-content-width);
+    pointer-events: none;
+    transform: translateX(-50%);
+    content: "";
+  }
+
+  .system-lines-bg::before {
+    border-inline: 1px solid var(--system-line-color, var(--color-line));
+  }
+
+  .system-lines-bg::after {
+    display: none;
+  }
+
+  @media (min-width: theme(--breakpoint-tablet)) {
+    .system-lines-bg::after {
+      display: block;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        var(--system-line-color, var(--color-line)) 0 4px,
+        transparent 4px 8px
+      );
+      background-position: calc(50% + 0.5px) 0;
+      background-repeat: repeat-y;
+      background-size: 1px 8px;
+    }
+  }
+
+  @media (min-width: theme(--breakpoint-desktop)) {
+    .system-lines-bg::after {
+      background-image:
+        repeating-linear-gradient(
+          to bottom,
+          var(--system-line-color, var(--color-line)) 0 4px,
+          transparent 4px 8px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          var(--system-line-color, var(--color-line)) 0 4px,
+          transparent 4px 8px
+        ),
+        repeating-linear-gradient(
+          to bottom,
+          var(--system-line-color, var(--color-line)) 0 4px,
+          transparent 4px 8px
+        );
+      background-position:
+        calc(25% + 0.25px) 0,
+        calc(50% + 0.5px) 0,
+        calc(75% + 0.75px) 0;
+      background-repeat: repeat-y;
+      background-size: 1px 8px;
+    }
+  }
+
   .text-display,
   .text-heading-2,
   .text-heading-3 {

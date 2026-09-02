@@ -15,10 +15,8 @@
 }
 
 .inner {
-  position: relative;
-  z-index: 1;
   display: flex;
-  width: min(calc(100% - (var(--spacing-s) * 2)), var(--container-content));
+  width: var(--layout-content-width);
   height: 100%;
   align-items: center;
   justify-content: space-between;
@@ -155,7 +153,6 @@
 
 .menuPanel {
   position: fixed;
-  z-index: 0;
   top: var(--header-height);
   right: 0;
   bottom: 0;
@@ -178,14 +175,12 @@
 
 .menuNavigation,
 .menuCta {
-  width: min(calc(100% - (var(--spacing-s) * 2)), var(--container-content));
+  width: var(--layout-content-width);
   margin-inline: auto;
   padding-inline: var(--content-inset);
 }
 
 .menuContent {
-  position: relative;
-  z-index: 1;
   display: flex;
   min-height: 100%;
   flex-direction: column;

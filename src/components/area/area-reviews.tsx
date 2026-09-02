@@ -53,7 +53,7 @@ function GoogleRating() {
 export function AreaReviews() {
   return (
     <section
-      className={`${styles.section} section-spacing`}
+      className={`${styles.section} section-spacing system-lines-bg`}
       aria-labelledby={headingId}
     >
       <div className={`${styles.layout} content-grid`}>

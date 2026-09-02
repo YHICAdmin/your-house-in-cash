@@ -8,7 +8,7 @@ type AreaIntroTransitionProps = {
 
 export function AreaIntroTransition({ hero, children }: AreaIntroTransitionProps) {
   return (
-    <div className={styles.transition}>
+    <div className={`${styles.transition} system-lines-bg`}>
       <div className={styles.heroStage}>
         <div className={styles.background} aria-hidden="true" />
         {hero}

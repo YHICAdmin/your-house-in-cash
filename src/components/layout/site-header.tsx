@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone as PhoneIcon } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { LineSystem } from "./line-system";
 import { Button } from "@/components/ui/button";
 import styles from "./site-header.module.css";
 
@@ -194,9 +193,8 @@ export function SiteHeader() {
   return (
     <header
       ref={headerRef}
-      className={`${styles.header}${isScrolled ? ` ${styles.scrolled}` : ""}`}
+      className={`${styles.header} system-lines-bg${isScrolled ? ` ${styles.scrolled}` : ""}`}
     >
-      <LineSystem variant="local" />
       <div className={styles.inner}>
         <Link className={styles.logoLink} href="/" aria-label="Your House in Cash home">
           <Image
