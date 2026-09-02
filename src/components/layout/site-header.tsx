@@ -19,6 +19,7 @@ const navigationItems = [
 
 const closeDuration = 180;
 const phoneNumber = "216-111-1111";
+const phoneHref = "tel:2161111111";
 
 type PhoneContactProps = {
   placement: "header" | "menu";
@@ -26,16 +27,17 @@ type PhoneContactProps = {
 
 function PhoneContact({ placement }: PhoneContactProps) {
   return (
-    <div
+    <a
       className={`${styles.phoneContact} ${
         placement === "header" ? styles.headerPhoneContact : styles.menuPhoneContact
       }`}
+      href={phoneHref}
     >
       <PhoneIcon className={styles.phoneIcon} aria-hidden="true" />
       <span className={styles.phoneLabel}>Call Us</span>
       <span className={styles.phoneDivider} aria-hidden="true" />
       <span className={styles.phoneNumber}>{phoneNumber}</span>
-    </div>
+    </a>
   );
 }
 
