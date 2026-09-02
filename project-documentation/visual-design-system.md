@@ -201,6 +201,7 @@ Whitespace is an intentional part of the composition. It should not be filled or
 
 * **Background:** #FFFFFF · Primary website background
 * **Background Soft:** #F7F9F7 · Sections with a subtle background variation
+* **Background Neutral:** #F3F4F3 · Neutral light-gray background for subtle Section separation
 * **Surface:** #FFFFFF · Cards / floating elements
 * **Text Primary:** #101114 · Headlines and primary text
 * **Text Secondary:** #555B63 · Supporting copy
@@ -230,7 +231,9 @@ Neutral colors lead the design; green reinforces the brand identity.
 
 ### Default Behavior
 
-By default, visual separation and rhythm between Sections are created by alternating between the two background colors defined in the Color System: Background and Background Soft.
+By default, visual separation and rhythm between Sections are created by alternating between Background and Background Soft.
+
+Background Neutral is an explicit Section-level alternative when neutral light-gray separation is required.
 
 Adjacent Sections generally do not use the same background color, ensuring that the transition between them remains clear without requiring a Border or additional separator.
 

@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  background: var(--color-background-soft);
+  background: var(--color-background-neutral);
 }
 
 .layout {

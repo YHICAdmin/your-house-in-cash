@@ -702,7 +702,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 ## Layout
 
-* Uses the global `Background Soft` token as the Section background.
+* Uses the global `Background Neutral` token as the Section background.
 
 ## Section Label
 
