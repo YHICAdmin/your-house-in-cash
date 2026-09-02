@@ -14,6 +14,8 @@ Provide clear, accessible navigation.
 * Opening the Menu does not change the Header's current border or Shadow state.
 * Internal System Lines remain visible but do not dictate the placement of Header elements.
 * On Desktop, the Logo and Desktop Navigation links form a left-side visual group with a `24px` (`M`) gap between adjacent items.
+* On Desktop, the Phone Contact and Header CTA form a right-side visual group.
+* On Tablet, the Phone Contact, Header CTA, and Menu Control form a right-side visual group in that order.
 
 ## Logo
 
@@ -66,7 +68,8 @@ Provide clear, accessible navigation.
 * When opened, the Open Menu Panel contains:
 
   1. Menu Navigation containing the Shared Navigation Links.
-  2. Menu Primary CTA with the label `Get My Cash Offer`.
+  2. Phone Contact.
+  3. Menu Primary CTA with the label `Get My Cash Offer`.
 
 ### Component and Semantics
 
@@ -162,8 +165,9 @@ Provide clear, accessible navigation.
 
 #### Tablet
 
+* The Phone Contact precedes the Header CTA and Menu Control in document and reading order.
 * The Header CTA precedes the Menu Control in document, reading, and focus order.
-* The Open Menu Panel follows the Header CTA and Menu Control in document, reading, and focus order.
+* The Open Menu Panel follows the Phone Contact, Header CTA, and Menu Control in document and reading order; its interactive content follows the Header CTA and Menu Control in focus order.
 * Menu Navigation is the first content element in the Open Menu Panel.
 
 #### Mobile
@@ -171,7 +175,31 @@ Provide clear, accessible navigation.
 * The Menu Control follows the Logo in document, reading, and focus order because the Header CTA is not displayed in the Header.
 * The Open Menu Panel follows the Menu Control in document, reading, and focus order.
 * Menu Navigation is the first content element in the Open Menu Panel.
-* The Menu Primary CTA follows Menu Navigation in document and focus order and inherits the standard `Button` Component's accessibility behavior.
+* The Phone Contact follows Menu Navigation in document and reading order.
+* The Menu Primary CTA follows the Phone Contact in document and reading order, follows Menu Navigation in focus order, and inherits the standard `Button` Component's accessibility behavior.
+
+## Phone Contact
+
+### Content
+
+* Label: `Call Us`.
+* Phone number: `216-111-1111`.
+* The phone number is hardcoded.
+
+### Visual Design
+
+* The label uses the global `Body Small` typography.
+* The phone number uses the global `Body` typography.
+
+### Dimensions and Alignment
+
+* On Desktop and Tablet, appears immediately before the Header CTA, is separated from it by `16px` (`S`), and is left-aligned.
+* On Mobile, appears directly above the Menu Primary CTA, is separated from it by `16px` (`S`), and is horizontally centered.
+
+### Responsive Behavior
+
+* On Desktop and Tablet, appears in the Header on two lines: `Call Us` on the first line and `216-111-1111` on the second line.
+* On Mobile, appears within the Open Menu Panel on one line: `Call Us: 216-111-1111`.
 
 ## Header CTA
 
@@ -186,12 +214,12 @@ Provide clear, accessible navigation.
 
 ### Dimensions and Alignment
 
-* On Desktop, positioned on the right side of the Header.
-* On Tablet, grouped on the right with the Menu Control and separated from it by `16px` (`S`).
+* On Desktop, positioned on the right side of the Header after the Phone Contact.
+* On Tablet, positioned between the Phone Contact and Menu Control, with `16px` (`S`) between it and each adjacent element.
 
 ### Responsive Behavior
 
-* On Tablet, this is an explicit Breakpoint-specific order change: the Header CTA follows the Logo and precedes the Menu Control in document, reading, and focus order.
+* On Tablet, this is an explicit Breakpoint-specific order change: the Header CTA follows the Logo and Phone Contact and precedes the Menu Control in document and reading order; it follows the Logo and precedes the Menu Control in focus order.
 * Not displayed in the Header on Mobile.
 
 # Footer
