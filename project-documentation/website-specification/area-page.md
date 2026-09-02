@@ -840,26 +840,25 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * Each Review Card contains:
   * Review text.
   * Customer name.
-  * Customer location.
   * Review source, such as Google, Facebook, or BBB.
 * Uses the following temporary content in canonical display order for layout testing:
-  1. Customer name: `Customer Name 01`; location: `Customer Location 01`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
-  2. Customer name: `Customer Name 02`; location: `Customer Location 02`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`
-  3. Customer name: `Customer Name 03`; location: `Customer Location 03`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.`
-  4. Customer name: `Customer Name 04`; location: `Customer Location 04`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.`
-  5. Customer name: `Customer Name 05`; location: `Customer Location 05`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.`
-  6. Customer name: `Customer Name 06`; location: `Customer Location 06`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum donec ullamcorper nulla non metus.`
-  7. Customer name: `Customer Name 07`; location: `Customer Location 07`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.`
-  8. Customer name: `Customer Name 08`; location: `Customer Location 08`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.`
-  9. Customer name: `Customer Name 09`; location: `Customer Location 09`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur.`
-  10. Customer name: `Customer Name 10`; location: `Customer Location 10`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.`
+  1. Customer name: `Customer Name 01`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+  2. Customer name: `Customer Name 02`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`
+  3. Customer name: `Customer Name 03`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.`
+  4. Customer name: `Customer Name 04`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.`
+  5. Customer name: `Customer Name 05`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.`
+  6. Customer name: `Customer Name 06`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum donec ullamcorper nulla non metus.`
+  7. Customer name: `Customer Name 07`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.`
+  8. Customer name: `Customer Name 08`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.`
+  9. Customer name: `Customer Name 09`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur.`
+  10. Customer name: `Customer Name 10`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.`
 * The temporary content is replaced with approved authentic reviews before production publication.
 
 #### Component and Semantics
 
 * Each Review Card uses list-item semantics.
 * The review text uses block quotation semantics.
-* The customer name and location form the attribution for the review text.
+* The customer name forms the attribution for the review text.
 * The review source identifies the external platform from which the review text in the same Review Card originates.
 * The review source uses non-interactive metadata semantics.
 
@@ -870,7 +869,6 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * Each Review Card uses the global `Large` Radius.
 * The review text uses the global `Body Large` typography and `Text Primary` color.
 * The customer name uses the global `Body` typography and `Text Primary` color.
-* The customer location uses the global `Body Small` typography and `Text Muted` color.
 * The review source uses the global `Body Small` typography and `Text Muted` color.
 
 #### Dimensions and Alignment
@@ -883,8 +881,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 #### Spacing
 
 * `M` (`24px`) separates the review text from the customer name.
-* `XS` (`8px`) separates the customer name from the customer location.
-* `S` (`16px`) separates the customer location from the review source.
+* `S` (`16px`) separates the customer name from the review source.
 * These spacing values remain unchanged across all Breakpoints.
 
 ### Carousel Controls

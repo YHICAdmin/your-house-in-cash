@@ -113,18 +113,12 @@
 }
 
 .customerName,
-.customerLocation,
 .reviewSource {
   display: block;
 }
 
 .customerName {
   color: var(--color-text-primary);
-}
-
-.customerLocation {
-  margin-top: var(--spacing-xs);
-  color: var(--color-text-muted);
 }
 
 .reviewSource {
