@@ -67,6 +67,13 @@ const reviews = [
   },
 ] as const;
 
+const desktopSlotClasses = [
+  styles.desktopSlotFirst,
+  styles.desktopSlotSecond,
+  styles.desktopSlotThird,
+  styles.desktopSlotFourth,
+] as const;
+
 type ReviewsCarouselProps = {
   headingId: string;
 };
@@ -141,8 +148,11 @@ export function ReviewsCarousel({ headingId }: ReviewsCarouselProps) {
           className={styles.carouselTrack}
           style={{ transform: `translate3d(-${offset}px, 0, 0)` }}
         >
-          {reviews.map((review) => (
-            <li key={review.name} className={styles.reviewCard}>
+          {reviews.map((review, index) => (
+            <li
+              key={review.name}
+              className={`${styles.reviewCard} ${desktopSlotClasses[index - position] ?? ""}`}
+            >
               <figure className={styles.reviewFigure}>
                 <blockquote className={styles.reviewQuote}>
                   <p className={`${styles.reviewText} text-body-large`}>
