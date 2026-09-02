@@ -229,12 +229,11 @@ Provide clear, accessible navigation.
 
 ### Dimensions and Alignment
 
-* On Desktop, positioned on the right side of the Header after the Phone Contact.
-* On Tablet, positioned between the Phone Contact and Menu Control, with `16px` (`S`) between it and each adjacent element.
+* On Desktop, positioned on the right side of the Header.
+* On Tablet, positioned immediately before the Menu Control and separated from it by `16px` (`S`).
 
 ### Responsive Behavior
 
-* On Tablet, this is an explicit Breakpoint-specific order change: the Header CTA follows the Logo and Phone Contact and precedes the Menu Control in document and reading order; it follows the Logo and precedes the Menu Control in focus order.
 * Not displayed in the Header on Mobile.
 
 # Footer
