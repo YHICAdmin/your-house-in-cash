@@ -100,6 +100,45 @@
   margin: 0;
 }
 
+.reviewFigure {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.cardTopRow,
+.cardRating,
+.cardBottomRow,
+.attribution,
+.reviewSource {
+  display: flex;
+  align-items: center;
+}
+
+.cardTopRow,
+.cardBottomRow {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.cardRating {
+  gap: 4px;
+  color: var(--color-brand-dark);
+}
+
+.cardRating svg,
+.quoteIcon {
+  flex: 0 0 var(--icon-medium);
+}
+
+.quoteIcon {
+  color: var(--color-brand-light);
+}
+
+.reviewQuote {
+  margin-top: var(--spacing-m);
+}
+
 .reviewText {
   display: -webkit-box;
   overflow: hidden;
@@ -108,22 +147,40 @@
   -webkit-line-clamp: 4;
 }
 
-.attribution {
-  margin-top: var(--spacing-m);
+.cardBottomRow {
+  gap: var(--spacing-s);
+  margin-top: auto;
+  padding-top: var(--spacing-m);
 }
 
-.customerName,
-.reviewSource {
-  display: block;
+.attribution {
+  min-width: 0;
+  gap: var(--spacing-xs);
+}
+
+.customerPortrait {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: var(--radius-pill);
+  object-fit: cover;
 }
 
 .customerName {
+  min-width: 0;
   color: var(--color-text-primary);
 }
 
 .reviewSource {
-  margin-top: var(--spacing-s);
+  flex: 0 0 auto;
+  gap: var(--spacing-xs);
   color: var(--color-text-muted);
+}
+
+.sourceMark {
+  width: auto;
+  height: var(--icon-medium);
+  flex: 0 0 auto;
 }
 
 .carouselControls {

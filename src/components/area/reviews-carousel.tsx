@@ -1,58 +1,89 @@
 "use client";
 
+import Image from "next/image";
 import { useLayoutEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 import styles from "./area-reviews.module.css";
 
 const reviews = [
   {
     name: "Customer Name 01",
-    source: "Review Source",
+    portrait: "/images/reviewers/reviewer-01.png",
+    source: "Google",
+    sourceMark: "/images/review-platforms/google-temporary.svg",
+    sourceMarkWidth: 20,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Customer Name 02",
-    source: "Review Source",
+    portrait: "/images/reviewers/reviewer-02.png",
+    source: "Facebook",
+    sourceMark: "/images/review-platforms/facebook-temporary.svg",
+    sourceMarkWidth: 20,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
   },
   {
     name: "Customer Name 03",
-    source: "Review Source",
+    portrait: "/images/reviewers/reviewer-03.png",
+    source: "BBB",
+    sourceMark: "/images/review-platforms/bbb-temporary.svg",
+    sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
   },
   {
     name: "Customer Name 04",
-    source: "Review Source",
+    portrait: "/images/reviewers/reviewer-04.png",
+    source: "Google",
+    sourceMark: "/images/review-platforms/google-temporary.svg",
+    sourceMarkWidth: 20,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
   },
   {
     name: "Customer Name 05",
-    source: "Review Source",
+    portrait: "/images/reviewers/reviewer-01.png",
+    source: "Facebook",
+    sourceMark: "/images/review-platforms/facebook-temporary.svg",
+    sourceMarkWidth: 20,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
   },
   {
     name: "Customer Name 06",
-    source: "Review Source",
+    portrait: "/images/reviewers/reviewer-02.png",
+    source: "BBB",
+    sourceMark: "/images/review-platforms/bbb-temporary.svg",
+    sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum donec ullamcorper nulla non metus.",
   },
   {
     name: "Customer Name 07",
-    source: "Review Source",
+    portrait: "/images/reviewers/reviewer-03.png",
+    source: "Google",
+    sourceMark: "/images/review-platforms/google-temporary.svg",
+    sourceMarkWidth: 20,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.",
   },
   {
     name: "Customer Name 08",
-    source: "Review Source",
+    portrait: "/images/reviewers/reviewer-04.png",
+    source: "Facebook",
+    sourceMark: "/images/review-platforms/facebook-temporary.svg",
+    sourceMarkWidth: 20,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.",
   },
   {
     name: "Customer Name 09",
-    source: "Review Source",
+    portrait: "/images/reviewers/reviewer-01.png",
+    source: "BBB",
+    sourceMark: "/images/review-platforms/bbb-temporary.svg",
+    sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
   },
   {
     name: "Customer Name 10",
-    source: "Review Source",
+    portrait: "/images/reviewers/reviewer-02.png",
+    source: "Google",
+    sourceMark: "/images/review-platforms/google-temporary.svg",
+    sourceMarkWidth: 20,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.",
   },
 ] as const;
@@ -144,20 +175,60 @@ export function ReviewsCarousel({ headingId }: ReviewsCarouselProps) {
               className={`${styles.reviewCard} ${desktopSlotClasses[index - position] ?? ""}`}
             >
               <figure className={styles.reviewFigure}>
+                <div className={styles.cardTopRow}>
+                  <span
+                    className={styles.cardRating}
+                    role="img"
+                    aria-label="5 out of 5 stars"
+                  >
+                    {Array.from({ length: 5 }, (_, starIndex) => (
+                      <Star
+                        key={starIndex}
+                        size={20}
+                        fill="currentColor"
+                        aria-hidden="true"
+                        focusable="false"
+                      />
+                    ))}
+                  </span>
+                  <Quote
+                    className={styles.quoteIcon}
+                    size={20}
+                    fill="currentColor"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
+                </div>
                 <blockquote className={styles.reviewQuote}>
                   <p className={`${styles.reviewText} text-body-large`}>
                     {review.text}
                   </p>
                 </blockquote>
-                <figcaption className={styles.attribution}>
-                  <span className={`${styles.customerName} text-body`}>
-                    {review.name}
+                <figcaption className={styles.cardBottomRow}>
+                  <span className={styles.attribution}>
+                    <Image
+                      className={styles.customerPortrait}
+                      src={review.portrait}
+                      alt=""
+                      width={48}
+                      height={48}
+                    />
+                    <span className={`${styles.customerName} text-body`}>
+                      {review.name}
+                    </span>
+                  </span>
+                  <span className={`${styles.reviewSource} text-body-small`}>
+                    <Image
+                      className={styles.sourceMark}
+                      src={review.sourceMark}
+                      alt=""
+                      width={review.sourceMarkWidth}
+                      height={20}
+                    />
+                    <span>{review.source}</span>
                   </span>
                 </figcaption>
               </figure>
-              <span className={`${styles.reviewSource} text-body-small`}>
-                {review.source}
-              </span>
             </li>
           ))}
         </ul>

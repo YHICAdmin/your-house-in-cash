@@ -838,20 +838,26 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 #### Content
 
 * Each Review Card contains:
+  * Top row containing:
+    * Five-star review rating.
+    * Decorative quotation-mark icon using the canonical Lucide `Quote` icon.
   * Review text.
-  * Customer name.
-  * Review source, such as Google, Facebook, or BBB.
+  * Bottom row containing:
+    * Customer attribution with a circular customer portrait and Customer Name.
+    * Review Source with the source platform mark and visible platform name.
+* Customer portraits use different temporary representative reviewer images during development and are replaced when approved reviewer assets are available.
+* Review Source uses the official identity mark for Google, Facebook, BBB, or another documented source when an approved asset is available. A temporary representative platform asset may be used during development until the approved asset is available.
 * Uses the following temporary content in canonical display order for layout testing:
-  1. Customer name: `Customer Name 01`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
-  2. Customer name: `Customer Name 02`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`
-  3. Customer name: `Customer Name 03`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.`
-  4. Customer name: `Customer Name 04`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.`
-  5. Customer name: `Customer Name 05`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.`
-  6. Customer name: `Customer Name 06`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum donec ullamcorper nulla non metus.`
-  7. Customer name: `Customer Name 07`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.`
-  8. Customer name: `Customer Name 08`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.`
-  9. Customer name: `Customer Name 09`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur.`
-  10. Customer name: `Customer Name 10`; source: `Review Source`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.`
+  1. Customer name: `Customer Name 01`; source: `Google`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+  2. Customer name: `Customer Name 02`; source: `Facebook`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`
+  3. Customer name: `Customer Name 03`; source: `BBB`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.`
+  4. Customer name: `Customer Name 04`; source: `Google`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.`
+  5. Customer name: `Customer Name 05`; source: `Facebook`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.`
+  6. Customer name: `Customer Name 06`; source: `BBB`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum donec ullamcorper nulla non metus.`
+  7. Customer name: `Customer Name 07`; source: `Google`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.`
+  8. Customer name: `Customer Name 08`; source: `Facebook`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.`
+  9. Customer name: `Customer Name 09`; source: `BBB`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur.`
+  10. Customer name: `Customer Name 10`; source: `Google`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.`
 * The temporary content is replaced with approved authentic reviews before production publication.
 
 #### Component and Semantics
@@ -867,22 +873,41 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * Each Review Card uses the global `Surface` background color.
 * Each Review Card uses the global default Border.
 * Each Review Card uses the global `Large` Radius.
+* The five-star rating uses exactly five filled canonical Lucide `Star` icons at the global Medium Icon size (`20px`) with Brand Green Dark fill.
+* The `Quote` icon uses the global Medium Icon size (`20px`) and Brand Green Light color.
 * The review text uses the global `Body Large` typography and `Text Primary` color.
 * The customer name uses the global `Body` typography and `Text Primary` color.
 * The review source uses the global `Body Small` typography and `Text Muted` color.
+* Customer portraits fill their circular crop without distortion.
 
 #### Dimensions and Alignment
 
 * Each Review Card uses `L` (`32px`) internal padding on all sides across all Breakpoints.
 * Each Review Card uses an equal `S` (`16px`) horizontal inset from both System Lines that bound its System Line division across all Breakpoints, including outer and internal System Lines.
 * All Review Cards use a uniform fixed height of `320px` across all Breakpoints.
+* The top row spans the available card width, with the five-star rating aligned left and the `Quote` icon aligned right; both are vertically center-aligned.
 * Review Text displays a maximum of four lines across all Breakpoints and truncates overflow with an ellipsis (`…`).
+* The bottom row spans the available card width and remains positioned toward the bottom of the Review Card consistently across cards.
+* Within the bottom row, Customer Attribution aligns left and Review Source aligns right; both groups are vertically center-aligned.
+* Customer portraits use `48px × 48px` dimensions, a `1:1` Aspect Ratio, and the global `Pill` Radius across all Breakpoints.
+* Review Source marks use a `20px` height and automatic width that preserves the asset's Aspect Ratio across all Breakpoints.
 
 #### Spacing
 
-* `M` (`24px`) separates the review text from the customer name.
-* `S` (`16px`) separates the customer name from the review source.
+* `4px` separates adjacent stars within the five-star rating.
+* `M` (`24px`) separates the top row from the Review Text.
+* At least `M` (`24px`) separates the Review Text from the bottom row; any additional available space remains above the bottom row.
+* `XS` (`8px`) separates the customer portrait from the Customer Name.
+* `XS` (`8px`) separates the source platform mark from the visible platform name.
+* `S` (`16px`) separates Customer Attribution from Review Source within the bottom row.
 * These spacing values remain unchanged across all Breakpoints.
+
+#### Accessibility
+
+* The five-star rating is communicated as `5 out of 5 stars`; the individual `Star` icons are decorative.
+* Customer portraits are decorative; the Customer Name communicates the reviewer identity.
+* Review-platform marks are decorative; the visible platform name communicates the review source.
+* The `Quote` icon is decorative.
 
 ### Carousel Controls
 
