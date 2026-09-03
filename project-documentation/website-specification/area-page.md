@@ -161,7 +161,6 @@ Provide the seller with a clear path to begin the conversion process.
 
 * Minimum height: `64px`.
 * Horizontal internal padding: `48px` (`XL`).
-* The label is centered within the Button.
 
 ### Spacing After
 
@@ -199,10 +198,6 @@ Provide the seller with a clear path to begin the conversion process.
 ### Interaction
 
 * Non-interactive.
-
-### Responsive Behavior
-
-* Preserves the same content and behavior across all Breakpoints.
 
 ## Benefits List
 

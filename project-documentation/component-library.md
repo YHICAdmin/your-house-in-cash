@@ -101,7 +101,7 @@ A generic Component for actions displayed as a button. It can use the appropriat
 
 Label, icon, icon position, width and exceptional text-size overrides.
 
-Core visual properties — colors, typography, radius, internal spacing and interaction behavior — remain consistent between instances.
+The documented visual and interaction properties define the Button defaults. A consuming element or Section specification may explicitly override individual Button properties; all properties not explicitly overridden continue to inherit from the shared Button.
 
 ## Icon Container
 
