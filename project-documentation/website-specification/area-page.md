@@ -1046,29 +1046,16 @@ Contains, in document order:
   1. Step identification: `Step 1`; title: `Tell us about your house`; description: `Share a few basic details about your property and your situation.`
   2. Step identification: `Step 2`; title: `Get your cash offer`; description: `We’ll review your property details and give you a fair, no-obligation cash offer.`
   3. Step identification: `Step 3`; title: `Choose your closing date`; description: `Pick the closing date that works best for you, and we’ll handle the rest.`
-* Each Step uses a real photographic image as its primary visual:
-  1. Step 1 depicts a real homeowner outside a residential house, speaking on the phone, with the property clearly visible in the background.
-  2. Step 2 depicts a real homeowner reviewing a cash offer on a phone or laptop in a home setting, with the screen interaction clearly suggesting that an offer has been received.
-  3. Step 3 depicts a real homeowner outside the property during or after moving, holding a moving box or house keys, conveying a completed sale and the freedom to move forward on their own timeline.
-* Temporary representative photographs matching the approved Step subjects may be used during development. They are development placeholders, are not canonical assets, and are replaced with separately approved final photographs before launch.
 * A decorative three-mark progress display reflects the currently active Step within the Active Step Visual.
 
 #### Component and Semantics
 
 * The active Step content uses tab-panel semantics and is associated with its selected Step tab.
 * The active Step title uses `H3` semantics.
-* Each Step photograph is decorative because the associated Step text communicates the complete process information.
 
 #### Visual Design
 
-* On Desktop and Tablet, the Step photograph occupies the right `60%` of the visual while preserving its Aspect Ratio through cropping.
-* On Mobile, the Step photograph occupies a full-width media area at the top of the visual.
-* The Step photograph remains at full opacity.
 * The visual uses global `Background Soft` as its base background.
-* On Desktop, an opaque global `Background Soft` treatment extends through the left `30%` of the visual, then gradually transitions to a `35%` `Background Soft` tint by `90%` of the visual width and continues across the remaining photograph.
-* On Tablet, an opaque global `Background Soft` treatment extends through the left `45%` of the visual, then gradually transitions to a `35%` `Background Soft` tint by `90%` of the visual width and continues across the remaining photograph.
-* On Mobile, a `20%` `Background Soft` tint covers the top of the photograph and gradually transitions to opaque `Background Soft` by `70%` of the visual height, remaining opaque through the lower content area.
-* The responsive treatment appears above the photograph and below the Step content and creates a gradual transition rather than a hard boundary.
 * The complete Step content uses the global `Text Primary` color.
 * Step identification uses the global `Label` typography.
 * The Step title uses the global `H3` typography.
@@ -1079,16 +1066,12 @@ Contains, in document order:
 #### Dimensions and Alignment
 
 * Spans the available Section content width.
-* Uses an exact `300px` height on Desktop and Tablet; this height is independent of the photograph's intrinsic dimensions and Aspect Ratio.
-* On Desktop and Tablet, the photograph's media area occupies the right `60%` of the visual's width and the complete visual height.
-* On Mobile, the visual height is determined by its vertical content composition rather than a fixed height or overall Aspect Ratio; the upper photographic media area spans the visual width and uses a `16:9` Aspect Ratio.
-* On Desktop and Tablet, the Step photograph is rendered at `105%` scale, uses a horizontal focal position of `92%`, and is anchored to the bottom-right of its media area.
-* On Mobile, the Step photograph uses a horizontal focal position of `80%` and is anchored to the bottom of its media area.
+* Uses an exact `300px` height on Desktop and Tablet.
 * On Desktop and Tablet, the complete Step content block is positioned at the center-left of the visual, vertically centered and left-aligned.
-* On Mobile, the complete Step content block follows the upper photographic media area within the opaque lower area and remains left-aligned.
+* On Mobile, the complete Step content block remains left-aligned.
 * The Step content block uses a maximum width of `40%` of the visual on Desktop, `60%` on Tablet, and the available internal content width on Mobile.
 * Uses `L` (`32px`) internal padding on Desktop and Tablet.
-* On Mobile, the Step content uses `M` (`24px`) horizontal padding, `L` (`32px`) separation from the bottom of the upper photographic media area, and `XL` (`48px`) bottom padding.
+* On Mobile, the Step content uses `M` (`24px`) horizontal padding and `XL` (`48px`) bottom padding.
 * The progress display is horizontally centered and positioned `S` (`16px`) from the bottom edge of the visual across all Breakpoints.
 * Each progress mark is `S` (`16px`) wide and `2px` thick.
 
@@ -1100,7 +1083,7 @@ Contains, in document order:
 
 #### Interaction
 
-* The active Step photograph and content fade together over `250ms` using `ease-out` when the selected Step changes.
+* The active Step content fades over `250ms` using `ease-out` when the selected Step changes.
 * The transition does not use directional movement, scaling, or sliding.
 
 #### Accessibility
@@ -1152,7 +1135,7 @@ Contains three selectors in this order:
 
 ### Interaction
 
-* Selecting a Step updates the Active Step Visual to display the associated Step photograph and content.
+* Selecting a Step updates the Active Step Visual to display the associated Step content.
 * The decorative progress display updates with the active Step and does not provide interaction.
 * `Step 1` is initially active.
 * Each Step remains active for `6 seconds` before progression advances to the next Step.
