@@ -1061,7 +1061,8 @@ Contains, in document order:
 #### Visual Design
 
 * The Step photograph fills the visual while preserving its Aspect Ratio through cropping.
-* The visual uses a directional gradient based on the global `Text Primary` color. The gradient begins at `70%` opacity at the left edge, maintains that coverage through `40%` of the visual width, and fades progressively to `0%` opacity at `75%`; the remaining right side is unobscured.
+* The Step photograph remains at full opacity.
+* A `#1F4E79` blue overlay covers the complete photograph at `70%` opacity, above the photograph and below the Step content. The photograph's opacity is not reduced.
 * The complete Step content uses the global `Background` color.
 * Step identification uses the global `Label` typography.
 * The Step title uses the global `H3` typography.
