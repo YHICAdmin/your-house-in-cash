@@ -1066,7 +1066,6 @@ Contains, in document order:
 #### Dimensions and Alignment
 
 * Spans the available Section content width.
-* Uses an exact `300px` height on Desktop and Tablet.
 * On Desktop and Tablet, the complete Step content block is positioned at the center-left of the visual, vertically centered and left-aligned.
 * On Mobile, the complete Step content block remains left-aligned.
 * The Step content block uses a maximum width of `40%` of the visual on Desktop, `60%` on Tablet, and the available internal content width on Mobile.

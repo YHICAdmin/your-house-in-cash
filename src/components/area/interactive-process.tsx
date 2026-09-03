@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import {
   type FocusEvent,
   type KeyboardEvent,
@@ -16,19 +15,16 @@ const steps = [
   {
     description:
       "Share a few basic details about your property and your situation.",
-    image: "/images/how-it-works/step-1-temporary.png",
     title: "Tell us about your house",
   },
   {
     description:
       "We’ll review your property details and give you a fair, no-obligation cash offer.",
-    image: "/images/how-it-works/step-2-temporary.png",
     title: "Get your cash offer",
   },
   {
     description:
       "Pick the closing date that works best for you, and we’ll handle the rest.",
-    image: "/images/how-it-works/step-3-temporary.png",
     title: "Choose your closing date",
   },
 ] as const;
@@ -123,16 +119,6 @@ export function InteractiveProcess({ headingId }: InteractiveProcessProps) {
               aria-labelledby={tabId}
               tabIndex={isActive ? 0 : -1}
             >
-              <div className={styles.stepMedia}>
-                <Image
-                  className={styles.stepImage}
-                  src={step.image}
-                  alt=""
-                  fill
-                  sizes="(min-width: 1200px) 735px, (min-width: 768px) 60vw, calc(100vw - 32px)"
-                />
-              </div>
-              <span className={styles.overlay} aria-hidden="true" />
               <div className={styles.stepContent}>
                 <span className={`${styles.stepIdentification} text-label`}>
                   Step {index + 1}

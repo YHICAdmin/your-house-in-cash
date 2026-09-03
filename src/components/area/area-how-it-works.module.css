@@ -40,8 +40,7 @@
 .panel {
   position: relative;
   grid-area: 1 / 1;
-  padding: calc(56.25% + var(--spacing-l)) var(--spacing-m)
-    var(--spacing-xl);
+  padding: var(--spacing-m) var(--spacing-m) var(--spacing-xl);
   border-radius: inherit;
   color: var(--color-text-primary);
   opacity: 0;
@@ -60,30 +59,6 @@
   transition:
     opacity 250ms ease-out,
     visibility 0s linear;
-}
-
-.stepMedia {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  aspect-ratio: 16 / 9;
-}
-
-.stepImage {
-  object-fit: cover;
-  object-position: 80% bottom;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    color-mix(in srgb, var(--color-background-soft) 20%, transparent) 0%,
-    var(--color-background-soft) 70%,
-    var(--color-background-soft) 100%
-  );
 }
 
 .stepContent {
@@ -184,38 +159,10 @@
     margin-top: var(--spacing-xl);
   }
 
-  .visual {
-    height: 300px;
-  }
-
   .panel {
     display: flex;
     align-items: center;
     padding: var(--spacing-l);
-  }
-
-  .stepMedia {
-    top: 0;
-    bottom: 0;
-    left: auto;
-    width: 60%;
-    aspect-ratio: auto;
-  }
-
-  .stepImage {
-    object-position: 92% bottom;
-    transform: scale(1.05);
-    transform-origin: right bottom;
-  }
-
-  .overlay {
-    background: linear-gradient(
-      to right,
-      var(--color-background-soft) 0%,
-      var(--color-background-soft) 45%,
-      color-mix(in srgb, var(--color-background-soft) 35%, transparent) 90%,
-      color-mix(in srgb, var(--color-background-soft) 35%, transparent) 100%
-    );
   }
 
   .stepContent {
@@ -228,13 +175,4 @@
     max-width: 40%;
   }
 
-  .overlay {
-    background: linear-gradient(
-      to right,
-      var(--color-background-soft) 0%,
-      var(--color-background-soft) 30%,
-      color-mix(in srgb, var(--color-background-soft) 35%, transparent) 90%,
-      color-mix(in srgb, var(--color-background-soft) 35%, transparent) 100%
-    );
-  }
 }
