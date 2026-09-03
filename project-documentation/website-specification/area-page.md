@@ -1051,6 +1051,7 @@ Contains, in document order:
   2. Step 2 depicts a real homeowner reviewing a cash offer on a phone or laptop in a home setting, with the screen interaction clearly suggesting that an offer has been received.
   3. Step 3 depicts a real homeowner outside the property during or after moving, holding a moving box or house keys, conveying a completed sale and the freedom to move forward on their own timeline.
 * Temporary representative photographs matching the approved Step subjects may be used during development. They are development placeholders, are not canonical assets, and are replaced with separately approved final photographs before launch.
+* A decorative three-mark progress display reflects the currently active Step within the Active Step Visual.
 
 #### Component and Semantics
 
@@ -1060,27 +1061,32 @@ Contains, in document order:
 
 #### Visual Design
 
-* The Step photograph fills the visual while preserving its Aspect Ratio through cropping.
+* The Step photograph fills the visual while preserving its Aspect Ratio through cropping and is visually concentrated in the right half of the panel.
 * The Step photograph remains at full opacity.
-* A `#1F4E79` blue overlay covers the complete photograph at `70%` opacity, above the photograph and below the Step content. The photograph's opacity is not reduced.
-* The complete Step content uses the global `Background` color.
+* The left `50%` of the visual uses an opaque global `Background Soft` treatment. Between `50%` and `65%` of the visual width, it transitions into a subtle `Background Soft` tint at `20%` opacity that continues across the photograph on the right. The treatment appears above the photograph and below the Step content.
+* The complete Step content uses the global `Text Primary` color.
 * Step identification uses the global `Label` typography.
 * The Step title uses the global `H3` typography.
 * The Step description uses the global `Body Large` typography.
 * The visual uses the global `Large` Radius.
+* The progress display contains three horizontal marks. The active mark uses global `Brand Green`; inactive marks use the global `Border` color.
 
 #### Dimensions and Alignment
 
 * Spans the available Section content width.
-* Uses a `16:7` Aspect Ratio on Desktop, `4:3` on Tablet, and `3:4` on Mobile.
+* Uses a `64:21` Aspect Ratio on Desktop, `16:9` on Tablet, and `1:1` on Mobile.
+* The Step photograph uses a horizontal focal position of `80%` and remains vertically centered within the visual.
 * The complete Step content block is positioned at the center-left of the visual, vertically centered and left-aligned.
 * The Step content block uses a maximum width of `40%` of the visual on Desktop, `60%` on Tablet, and the available internal content width on Mobile.
 * Uses `L` (`32px`) internal padding on Desktop and Tablet and `M` (`24px`) on Mobile.
+* The progress display is horizontally centered and positioned `S` (`16px`) from the bottom edge of the visual across all Breakpoints.
+* Each progress mark is `S` (`16px`) wide and `2px` thick.
 
 #### Spacing
 
 * `XS` (`8px`) separates Step identification from the Step title.
 * `S` (`16px`) separates the Step title from the Step description.
+* `XS` (`8px`) separates adjacent progress marks.
 
 #### Interaction
 
@@ -1090,6 +1096,7 @@ Contains, in document order:
 #### Accessibility
 
 * When reduced motion is preferred, Step changes occur immediately without animation.
+* The progress display is decorative, is hidden from assistive technologies, and does not receive keyboard focus.
 
 ### Step Selectors
 
@@ -1117,14 +1124,15 @@ Contains three selectors in this order:
 
 #### Dimensions and Alignment
 
-* The three selectors form one horizontal row of three equal-width segments across all Breakpoints.
+* The three selectors form one centered, content-width horizontal group of three equal-width segments across all Breakpoints.
 * Each selector has a minimum interactive height of `48px`.
+* Each selector uses `M` (`24px`) horizontal internal padding.
 * Selector labels are horizontally and vertically centered within their segments.
 
 #### Spacing
 
 * `S` (`16px`) separates the Active Step Visual from the Step Selectors.
-* `S` (`16px`) separates adjacent selector segments.
+* `XS` (`8px`) separates adjacent selector segments.
 * `L` (`32px`) separates the Step Selectors from the Section CTA.
 
 #### Interaction
@@ -1135,6 +1143,7 @@ Contains three selectors in this order:
 ### Interaction
 
 * Selecting a Step updates the Active Step Visual to display the associated Step photograph and content.
+* The decorative progress display updates with the active Step and does not provide interaction.
 * `Step 1` is initially active.
 * Each Step remains active for `6 seconds` before progression advances to the next Step.
 * After `Step 3`, progression returns to `Step 1` and continues looping.

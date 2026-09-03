@@ -145,6 +145,15 @@ export function InteractiveProcess({ headingId }: InteractiveProcessProps) {
             </div>
           );
         })}
+
+        <span className={styles.progressIndicators} aria-hidden="true">
+          {steps.map((step, index) => (
+            <span
+              key={step.title}
+              className={`${styles.progressMark}${index === activeStep ? ` ${styles.activeProgressMark}` : ""}`}
+            />
+          ))}
+        </span>
       </div>
 
       <div

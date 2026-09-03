@@ -31,7 +31,7 @@
 .visual {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1;
   border-radius: var(--radius-large);
 }
 
@@ -43,7 +43,7 @@
   padding: var(--spacing-m);
   overflow: hidden;
   border-radius: inherit;
-  color: var(--color-background);
+  color: var(--color-text-primary);
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -64,13 +64,19 @@
 
 .stepImage {
   object-fit: cover;
-  object-position: 70% center;
+  object-position: 80% center;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgb(31 78 121 / 70%);
+  background: linear-gradient(
+    to right,
+    var(--color-background-soft) 0%,
+    var(--color-background-soft) 50%,
+    color-mix(in srgb, var(--color-background-soft) 20%, transparent) 65%,
+    color-mix(in srgb, var(--color-background-soft) 20%, transparent) 100%
+  );
 }
 
 .stepContent {
@@ -93,11 +99,34 @@
   margin: 0;
 }
 
+.progressIndicators {
+  position: absolute;
+  bottom: var(--spacing-s);
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  gap: var(--spacing-xs);
+  transform: translateX(-50%);
+}
+
+.progressMark {
+  width: var(--spacing-s);
+  height: 2px;
+  background: var(--color-border);
+}
+
+.activeProgressMark {
+  background: var(--color-brand);
+}
+
 .selectors {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--spacing-s);
+  gap: var(--spacing-xs);
+  width: fit-content;
   margin-top: var(--spacing-s);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .selector {
@@ -107,7 +136,7 @@
   min-height: 48px;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 0 var(--spacing-m);
   border: 0;
   background: transparent;
   color: var(--color-text-muted);
@@ -148,7 +177,7 @@
   }
 
   .visual {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
   }
 
   .panel {
@@ -162,7 +191,7 @@
 
 @media (min-width: 1200px) {
   .visual {
-    aspect-ratio: 16 / 7;
+    aspect-ratio: 64 / 21;
   }
 
   .stepContent {
