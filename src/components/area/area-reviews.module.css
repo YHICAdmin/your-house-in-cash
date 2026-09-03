@@ -89,7 +89,7 @@
 .reviewCard {
   height: 320px;
   min-width: 0;
-  padding: var(--spacing-l);
+  padding: var(--spacing-m);
   overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-large);
