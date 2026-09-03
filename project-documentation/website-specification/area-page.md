@@ -1011,7 +1011,7 @@ Present the home-selling process as a simple, clear three-step experience and gu
 
 Contains, in document order:
 
-1. Section Label: `HOW IT WORKS`.
+1. Section Label: `HOW IT WORKS`, with the canonical Lucide `Cog` icon.
 2. Primary Headline: `Selling your house can be simple.`
 3. Supporting Copy: `See how easy it is to sell your house for cash in just three simple steps.`
 
@@ -1103,6 +1103,7 @@ Contains three selectors in this order:
 #### Component and Semantics
 
 * The complete selector group uses tab-list semantics.
+* The visible Primary Headline provides the complete selector group's accessible name.
 * Each Step selector uses tab semantics and controls the associated active Step panel.
 * Each tab’s accessible name is derived from its visible Step label.
 
@@ -1165,9 +1166,7 @@ Contains three selectors in this order:
 
 ## Responsive Behavior
 
-* On Desktop, Tablet, and Mobile, the Section Intro, Interactive Process, and Section CTA remain in one vertical composition in document order.
-* The Section Intro and Active Step Visual use the available Section content width across all Breakpoints.
-* The Step Selectors remain one horizontal three-segment row across all Breakpoints.
+* On Desktop, Tablet, and Mobile, the Section Intro, Interactive Process, and Section CTA remain in one vertical composition.
 
 # Local / Area Section
 
