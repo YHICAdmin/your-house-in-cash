@@ -129,7 +129,7 @@ export function InteractiveProcess({ headingId }: InteractiveProcessProps) {
                   src={step.image}
                   alt=""
                   fill
-                  sizes="(min-width: 1200px) 612px, (min-width: 768px) 50vw, calc(100vw - 32px)"
+                  sizes="(min-width: 1200px) 735px, (min-width: 768px) 60vw, calc(100vw - 32px)"
                 />
               </div>
               <span className={styles.overlay} aria-hidden="true" />

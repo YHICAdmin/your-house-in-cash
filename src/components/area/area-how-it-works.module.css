@@ -119,11 +119,11 @@
 .progressMark {
   width: var(--spacing-s);
   height: 2px;
-  background: var(--color-border);
+  background: var(--color-text-muted);
 }
 
 .activeProgressMark {
-  background: var(--color-brand);
+  background: var(--color-brand-dark);
 }
 
 .selectors {
@@ -143,7 +143,7 @@
   min-height: 48px;
   align-items: center;
   justify-content: center;
-  padding: 0 var(--spacing-m);
+  padding: 0 var(--spacing-s);
   border: 0;
   background: transparent;
   color: var(--color-text-muted);
@@ -153,11 +153,12 @@
 .selector::before {
   position: absolute;
   top: 0;
-  right: 0;
-  left: 0;
+  left: 50%;
+  width: var(--spacing-m);
   height: 2px;
   background: transparent;
   content: "";
+  transform: translateX(-50%);
 }
 
 .activeSelector {
@@ -197,17 +198,23 @@
     top: 0;
     bottom: 0;
     left: auto;
-    width: 50%;
+    width: 60%;
     aspect-ratio: auto;
+  }
+
+  .stepImage {
+    object-position: 92% bottom;
+    transform: scale(1.05);
+    transform-origin: right bottom;
   }
 
   .overlay {
     background: linear-gradient(
       to right,
       var(--color-background-soft) 0%,
-      var(--color-background-soft) 60%,
-      color-mix(in srgb, var(--color-background-soft) 20%, transparent) 75%,
-      color-mix(in srgb, var(--color-background-soft) 20%, transparent) 100%
+      var(--color-background-soft) 45%,
+      color-mix(in srgb, var(--color-background-soft) 35%, transparent) 90%,
+      color-mix(in srgb, var(--color-background-soft) 35%, transparent) 100%
     );
   }
 
@@ -225,9 +232,9 @@
     background: linear-gradient(
       to right,
       var(--color-background-soft) 0%,
-      var(--color-background-soft) 50%,
-      color-mix(in srgb, var(--color-background-soft) 20%, transparent) 70%,
-      color-mix(in srgb, var(--color-background-soft) 20%, transparent) 100%
+      var(--color-background-soft) 30%,
+      color-mix(in srgb, var(--color-background-soft) 35%, transparent) 90%,
+      color-mix(in srgb, var(--color-background-soft) 35%, transparent) 100%
     );
   }
 }

@@ -1061,12 +1061,12 @@ Contains, in document order:
 
 #### Visual Design
 
-* On Desktop and Tablet, the Step photograph occupies the right half of the visual while preserving its Aspect Ratio through cropping.
+* On Desktop and Tablet, the Step photograph occupies the right `60%` of the visual while preserving its Aspect Ratio through cropping.
 * On Mobile, the Step photograph occupies a full-width media area at the top of the visual.
 * The Step photograph remains at full opacity.
 * The visual uses global `Background Soft` as its base background.
-* On Desktop, an opaque global `Background Soft` treatment covers the left `50%` of the visual, then gradually transitions to a `20%` `Background Soft` tint by `70%` of the visual width and continues across the remaining photograph.
-* On Tablet, the opaque global `Background Soft` treatment covers the left `60%` of the visual, then gradually transitions to a `20%` `Background Soft` tint by `75%` of the visual width and continues across the remaining photograph.
+* On Desktop, an opaque global `Background Soft` treatment extends through the left `30%` of the visual, then gradually transitions to a `35%` `Background Soft` tint by `90%` of the visual width and continues across the remaining photograph.
+* On Tablet, an opaque global `Background Soft` treatment extends through the left `45%` of the visual, then gradually transitions to a `35%` `Background Soft` tint by `90%` of the visual width and continues across the remaining photograph.
 * On Mobile, a `20%` `Background Soft` tint covers the top of the photograph and gradually transitions to opaque `Background Soft` by `70%` of the visual height, remaining opaque through the lower content area.
 * The responsive treatment appears above the photograph and below the Step content and creates a gradual transition rather than a hard boundary.
 * The complete Step content uses the global `Text Primary` color.
@@ -1074,15 +1074,16 @@ Contains, in document order:
 * The Step title uses the global `H3` typography.
 * The Step description uses the global `Body Large` typography.
 * The visual uses the global `Large` Radius.
-* The progress display contains three horizontal marks. The active mark uses global `Brand Green`; inactive marks use the global `Border` color.
+* The progress display contains three horizontal marks. The active mark uses global `Brand Green Dark`; inactive marks use the global `Text Muted` color.
 
 #### Dimensions and Alignment
 
 * Spans the available Section content width.
 * Uses an exact `300px` height on Desktop and Tablet; this height is independent of the photograph's intrinsic dimensions and Aspect Ratio.
-* On Desktop and Tablet, the photograph's media area occupies the right `50%` of the visual's width and the complete visual height.
+* On Desktop and Tablet, the photograph's media area occupies the right `60%` of the visual's width and the complete visual height.
 * On Mobile, the visual height is determined by its vertical content composition rather than a fixed height or overall Aspect Ratio; the upper photographic media area spans the visual width and uses a `16:9` Aspect Ratio.
-* The Step photograph uses a horizontal focal position of `80%` and is anchored to the bottom of its media area.
+* On Desktop and Tablet, the Step photograph is rendered at `105%` scale, uses a horizontal focal position of `92%`, and is anchored to the bottom-right of its media area.
+* On Mobile, the Step photograph uses a horizontal focal position of `80%` and is anchored to the bottom of its media area.
 * On Desktop and Tablet, the complete Step content block is positioned at the center-left of the visual, vertically centered and left-aligned.
 * On Mobile, the complete Step content block follows the upper photographic media area within the opaque lower area and remains left-aligned.
 * The Step content block uses a maximum width of `40%` of the visual on Desktop, `60%` on Tablet, and the available internal content width on Mobile.
@@ -1127,7 +1128,7 @@ Contains three selectors in this order:
 #### Visual Design
 
 * The selectors use a minimal treatment and do not use a Card treatment.
-* The active selector uses global `Body` typography, global `Brand Green` text, and a `2px` Brand Green indicator line above the label spanning the complete selector segment.
+* The active selector uses global `Body` typography, global `Brand Green` text, and a centered `2px` Brand Green indicator line above the label with a width of `M` (`24px`).
 * Inactive selectors use global `Body` typography and global `Text Muted` color and do not display the active indicator line.
 * Inactive selectors retain the same visual treatment on Hover and display a pointer cursor.
 
@@ -1135,7 +1136,7 @@ Contains three selectors in this order:
 
 * The three selectors form one centered, content-width horizontal group of three equal-width segments across all Breakpoints.
 * Each selector has a minimum interactive height of `48px`.
-* Each selector uses `M` (`24px`) horizontal internal padding.
+* Each selector uses `S` (`16px`) horizontal internal padding.
 * Selector labels are horizontally and vertically centered within their segments.
 
 #### Spacing
