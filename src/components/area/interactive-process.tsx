@@ -123,13 +123,15 @@ export function InteractiveProcess({ headingId }: InteractiveProcessProps) {
               aria-labelledby={tabId}
               tabIndex={isActive ? 0 : -1}
             >
-              <Image
-                className={styles.stepImage}
-                src={step.image}
-                alt=""
-                fill
-                sizes="(min-width: 1200px) 1216px, calc(100vw - 32px)"
-              />
+              <div className={styles.stepMedia}>
+                <Image
+                  className={styles.stepImage}
+                  src={step.image}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1200px) 612px, (min-width: 768px) 50vw, calc(100vw - 32px)"
+                />
+              </div>
               <span className={styles.overlay} aria-hidden="true" />
               <div className={styles.stepContent}>
                 <span className={`${styles.stepIdentification} text-label`}>

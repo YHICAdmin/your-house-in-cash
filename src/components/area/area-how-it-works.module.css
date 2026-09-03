@@ -30,18 +30,18 @@
 
 .visual {
   position: relative;
+  display: grid;
   width: 100%;
-  aspect-ratio: 1;
+  overflow: hidden;
   border-radius: var(--radius-large);
+  background: var(--color-background-soft);
 }
 
 .panel {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  padding: var(--spacing-m);
-  overflow: hidden;
+  position: relative;
+  grid-area: 1 / 1;
+  padding: calc(56.25% + var(--spacing-l)) var(--spacing-m)
+    var(--spacing-xl);
   border-radius: inherit;
   color: var(--color-text-primary);
   opacity: 0;
@@ -62,20 +62,27 @@
     visibility 0s linear;
 }
 
+.stepMedia {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  aspect-ratio: 16 / 9;
+}
+
 .stepImage {
   object-fit: cover;
-  object-position: 80% center;
+  object-position: 80% bottom;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to right,
-    var(--color-background-soft) 0%,
-    var(--color-background-soft) 50%,
-    color-mix(in srgb, var(--color-background-soft) 20%, transparent) 65%,
-    color-mix(in srgb, var(--color-background-soft) 20%, transparent) 100%
+    to bottom,
+    color-mix(in srgb, var(--color-background-soft) 20%, transparent) 0%,
+    var(--color-background-soft) 70%,
+    var(--color-background-soft) 100%
   );
 }
 
@@ -177,11 +184,31 @@
   }
 
   .visual {
-    aspect-ratio: 16 / 9;
+    height: 300px;
   }
 
   .panel {
+    display: flex;
+    align-items: center;
     padding: var(--spacing-l);
+  }
+
+  .stepMedia {
+    top: 0;
+    bottom: 0;
+    left: auto;
+    width: 50%;
+    aspect-ratio: auto;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      to right,
+      var(--color-background-soft) 0%,
+      var(--color-background-soft) 60%,
+      color-mix(in srgb, var(--color-background-soft) 20%, transparent) 75%,
+      color-mix(in srgb, var(--color-background-soft) 20%, transparent) 100%
+    );
   }
 
   .stepContent {
@@ -190,11 +217,17 @@
 }
 
 @media (min-width: 1200px) {
-  .visual {
-    aspect-ratio: 64 / 21;
-  }
-
   .stepContent {
     max-width: 40%;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      to right,
+      var(--color-background-soft) 0%,
+      var(--color-background-soft) 50%,
+      color-mix(in srgb, var(--color-background-soft) 20%, transparent) 70%,
+      color-mix(in srgb, var(--color-background-soft) 20%, transparent) 100%
+    );
   }
 }
