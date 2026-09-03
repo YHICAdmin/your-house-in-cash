@@ -1001,57 +1001,175 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 # How It Works
 
-#### Purpose
+## Purpose
 
-Present the home-selling process as a simple, fast, and clear three-step process, while guiding the user toward starting the process.
+Present the home-selling process as a simple, clear three-step experience and guide the user toward requesting a cash offer.
 
-#### Structure
+## Section Intro
 
-- Section Label: **HOW IT WORKS**, with Gear icon.
-- Headline: **Selling your house can be simple.**
-- Short supporting copy.
-- Three process steps:
-  1. **Tell us about your house**
-  2. **Get your cash offer**
-  3. **Choose your closing date**
-- Component: **Button**
-- Compact benefits row below the CTA.
+### Content
 
-#### Visual Direction
+Contains, in document order:
 
-- Use an asymmetric composition rather than three identical cards.
-- The headline and supporting copy are positioned on the left as an independent content block.
-- The three process steps appear to the right of the headline block.
-- **Step 02 is the dominant element in the composition**, displayed as a larger and taller card.
-- Steps 01 and 03 are smaller and serve as supporting elements around Step 02.
-- Subtle circular arrows connect the steps and clarify the direction of the process.
-- The numbers **01 / 02 / 03** act as prominent visual elements and are integrated with the icons.
-- Brand Green is used to emphasize the numbers, icons, and small details, while the cards themselves remain light and understated.
-- The Primary CTA is positioned below the step composition and uses the system's **Button** component.
-- A compact horizontal benefits row appears below the CTA.
-- Preserve generous whitespace and a clear hierarchy between the headline, process steps, and CTA.
-- Do not turn the three steps into three symmetrical, identical cards. The difference in size and visual weight between the steps is an intentional part of the composition.
-- Position the Section Label above the primary headline.
+1. Section Label: `HOW IT WORKS`.
+2. Primary Headline: `Selling your house can be simple.`
+3. Supporting Copy: `See how easy it is to sell your house for cash in just three simple steps.`
 
-#### Behavior
+### Component and Semantics
 
-- The Primary CTA leads the user into the conversion process.
+* The Section Label uses the shared `Section Label` Component.
+* The Primary Headline uses `H2` semantics.
 
-#### Technical Specifications
+### Visual Design
 
-No additional How It Works-specific technical specifications are currently defined. Global typography, spacing, color, component, and layout rules apply unless explicitly overridden.
+* The Primary Headline uses the global `H2` typography and `Text Primary` color.
+* The Supporting Copy uses the global `Body Large` typography and `Text Secondary` color.
 
-#### Responsive Behavior
+### Dimensions and Alignment
 
-No specific Tablet or Mobile composition is currently defined.
+* The complete Section Intro is left-aligned and uses the available Section content width.
 
-The section should preserve the sequence and hierarchy of the three steps on smaller viewports. The exact stacking, positioning of the CTA and benefits, and treatment of the asymmetric step composition remain to be defined.
+### Spacing
 
-#### Line System
+* `S` (`16px`) separates the Section Label from the Primary Headline.
+* `M` (`24px`) separates the Primary Headline from the Supporting Copy.
+* `XL` (`48px`) separates the Supporting Copy from the Interactive Process Visual on Desktop and Tablet.
+* `L` (`32px`) separates the Supporting Copy from the Interactive Process Visual on Mobile.
 
-- The main composition containing the headline and three process steps is not constrained by the internal System Lines.
-- The Benefits row is divided according to the four visual areas, with one Benefit in each area and appropriate padding from the outer System Lines.
-- The three internal System Lines serve as dividers between the Benefits and may use a subtle Brand Green treatment within this area only.
+## Interactive Process Visual
+
+### Content
+
+* Displays one of the following three Steps at a time:
+  1. Step identification: `Step 1`; title: `Tell us about your house`; description: `Share a few basic details about your property and your situation.`
+  2. Step identification: `Step 2`; title: `Get your cash offer`; description: `We’ll review your property details and give you a fair, no-obligation cash offer.`
+  3. Step identification: `Step 3`; title: `Choose your closing date`; description: `Pick the closing date that works best for you, and we’ll handle the rest.`
+* Each Step uses a real photographic image as its primary visual:
+  1. Step 1 depicts a real homeowner outside a residential house, speaking on the phone, with the property clearly visible in the background.
+  2. Step 2 depicts a real homeowner reviewing a cash offer on a phone or laptop in a home setting, with the screen interaction clearly suggesting that an offer has been received.
+  3. Step 3 depicts a real homeowner outside the property during or after moving, holding a moving box or house keys, conveying a completed sale and the freedom to move forward on their own timeline.
+* Temporary representative photographs matching the approved Step subjects may be used during development. They are development placeholders, are not canonical assets, and are replaced with separately approved final photographs before launch.
+
+### Component and Semantics
+
+* The active Step content uses tab-panel semantics and is associated with its selected Step tab.
+* The active Step title uses `H3` semantics.
+* Each Step photograph is decorative because the associated Step text communicates the complete process information.
+
+### Visual Design
+
+* The Step photograph fills the visual while preserving its Aspect Ratio through cropping.
+* The visual uses a directional gradient based on the global `Text Primary` color. The gradient begins at `70%` opacity at the left edge, maintains that coverage through `40%` of the visual width, and fades progressively to `0%` opacity at `75%`; the remaining right side is unobscured.
+* The complete Step content uses the global `Background` color.
+* Step identification uses the global `Label` typography.
+* The Step title uses the global `H3` typography.
+* The Step description uses the global `Body Large` typography.
+* The visual uses the global `Large` Radius.
+
+### Dimensions and Alignment
+
+* Spans the available Section content width.
+* Uses a `16:7` Aspect Ratio on Desktop, `4:3` on Tablet, and `3:4` on Mobile.
+* The complete Step content block is positioned at the center-left of the visual, vertically centered and left-aligned.
+* The Step content block uses a maximum width of `40%` of the visual on Desktop, `60%` on Tablet, and the available internal content width on Mobile.
+* Uses `L` (`32px`) internal padding on Desktop and Tablet and `M` (`24px`) on Mobile.
+
+### Spacing
+
+* `XS` (`8px`) separates Step identification from the Step title.
+* `S` (`16px`) separates the Step title from the Step description.
+
+### Interaction
+
+* The active Step photograph and content fade together over `250ms` using `ease-out` when the selected Step changes.
+* The transition does not use directional movement, scaling, or sliding.
+
+### Accessibility
+
+* Automatic Step changes update the selected-tab and associated Step-panel state without a live announcement.
+* The Step photographs follow the global Decorative Images requirements.
+* When reduced motion is preferred, Step changes occur immediately without animation.
+
+## Step Selectors
+
+### Content
+
+Contains three selectors in this order:
+
+1. `Step 1`.
+2. `Step 2`.
+3. `Step 3`.
+
+### Component and Semantics
+
+* The complete selector group uses tab-list semantics.
+* Each Step selector uses tab semantics and controls the associated active Step panel.
+* Each tab’s accessible name is derived from its visible Step label.
+
+### Visual Design
+
+* The selectors use a minimal treatment and do not use a Card treatment.
+* The active selector uses global `Body` typography, global `Brand Green` text, and a `2px` Brand Green indicator line above the label spanning the complete selector segment.
+* Inactive selectors use global `Body` typography and global `Text Muted` color and do not display the active indicator line.
+* Inactive selectors retain the same visual treatment on Hover and display a pointer cursor.
+
+### Dimensions and Alignment
+
+* The three selectors form one horizontal row of three equal-width segments across all Breakpoints.
+* Each selector has a minimum interactive height of `48px`.
+* Selector labels are horizontally and vertically centered within their segments.
+
+### Spacing
+
+* `S` (`16px`) separates the Interactive Process Visual from the Step Selectors.
+* `S` (`16px`) separates adjacent selector segments.
+* `L` (`32px`) separates the Step Selectors from the Section CTA.
+
+### Interaction
+
+* Selecting a Step updates the Interactive Process Visual to display the associated Step photograph and content.
+* Left Arrow and Right Arrow move focus between Step tabs and automatically activate the focused Step.
+* Keyboard navigation wraps at the endpoints: Right Arrow from `Step 3` moves to and activates `Step 1`, and Left Arrow from `Step 1` moves to and activates `Step 3`.
+* Activating any Step selector stops automatic progression for the remainder of the current page visit. The selected Step remains active until another Step is selected.
+
+## Automatic Progression
+
+### Interaction
+
+* `Step 1` is initially active.
+* Each Step remains active for `6 seconds` before progression advances to the next Step.
+* After `Step 3`, progression returns to `Step 1` and continues looping.
+* Automatic progression pauses while the Interactive Process Visual or any Step selector is hovered or keyboard-focused.
+* When Hover or keyboard focus ends, a new `6-second` interval begins for the currently active Step before progression continues.
+* Manual Step selection stops automatic progression for the remainder of the current page visit.
+
+### Accessibility
+
+* When reduced motion is preferred, automatic progression is disabled, `Step 1` remains initially active, and Steps change only through manual selection.
+
+## Section CTA
+
+### Content
+
+* Label: `Get My Cash Offer`.
+
+### Component and Semantics
+
+* Uses the shared `Button` Component with link semantics.
+
+### Dimensions and Alignment
+
+* Is left-aligned with the Section Intro’s left content edge across all Breakpoints.
+
+### Interaction
+
+* Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
+
+## Responsive Behavior
+
+* On Desktop, Tablet, and Mobile, the Section Intro, Interactive Process Visual, Step Selectors, and Section CTA remain in one vertical composition in document order.
+* The Section Intro and Interactive Process Visual use the available Section content width across all Breakpoints.
+* The Step Selectors remain one horizontal three-segment row across all Breakpoints.
 
 # Local / Area Section
 

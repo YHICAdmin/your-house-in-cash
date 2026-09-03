@@ -183,3 +183,7 @@ Local specifications document only requirements that establish local content, ow
 Component assignments and local classifications remain documented when they are necessary to establish which global or shared rules apply.
 
 This rule applies to future specification work. It does not authorize retrospective cleanup of existing specifications.
+
+### Element Order and Structural Subsections
+
+Within a Section specification, the documented order of its primary element subsections establishes their canonical element order. Do not use a `Structure`, `Layout`, or equivalent subsection solely to restate that sequence. Retain such a subsection only when it defines an additional multi-element relationship, such as grouping, nesting, parallel composition, responsive arrangement, conditional presence, or an approved difference between document and visual order.
