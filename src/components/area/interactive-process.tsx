@@ -43,6 +43,9 @@ export function InteractiveProcess({ headingId }: InteractiveProcessProps) {
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   const paused = focusWithin || visualHovered || selectorsHovered;
+  const currentStep = steps[activeStep];
+  const activeTabId = `how-it-works-tab-${activeStep + 1}`;
+  const panelId = "how-it-works-panel";
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -104,35 +107,25 @@ export function InteractiveProcess({ headingId }: InteractiveProcessProps) {
         onMouseEnter={() => setVisualHovered(true)}
         onMouseLeave={() => setVisualHovered(false)}
       >
-        {steps.map((step, index) => {
-          const isActive = index === activeStep;
-          const tabId = `how-it-works-tab-${index + 1}`;
-          const panelId = `how-it-works-panel-${index + 1}`;
-
-          return (
-            <div
-              key={step.title}
-              id={panelId}
-              className={`${styles.panel}${isActive ? ` ${styles.activePanel}` : ""}`}
-              role="tabpanel"
-              aria-hidden={!isActive}
-              aria-labelledby={tabId}
-              tabIndex={isActive ? 0 : -1}
-            >
-              <div className={styles.stepContent}>
-                <span className={`${styles.stepIdentification} text-label`}>
-                  Step {index + 1}
-                </span>
-                <h3 className={`${styles.stepTitle} text-heading-3`}>
-                  {step.title}
-                </h3>
-                <p className={`${styles.stepDescription} text-body-large`}>
-                  {step.description}
-                </p>
-              </div>
-            </div>
-          );
-        })}
+        <div
+          id={panelId}
+          className={styles.panel}
+          role="tabpanel"
+          aria-labelledby={activeTabId}
+          tabIndex={0}
+        >
+          <div key={currentStep.title} className={styles.stepContent}>
+            <span className={`${styles.stepIdentification} text-label`}>
+              Step {activeStep + 1}
+            </span>
+            <h3 className={`${styles.stepTitle} text-heading-3`}>
+              {currentStep.title}
+            </h3>
+            <p className={`${styles.stepDescription} text-body-large`}>
+              {currentStep.description}
+            </p>
+          </div>
+        </div>
 
         <span className={styles.progressIndicators} aria-hidden="true">
           {steps.map((step, index) => (
@@ -164,13 +157,13 @@ export function InteractiveProcess({ headingId }: InteractiveProcessProps) {
               className={`${styles.selector}${isActive ? ` ${styles.activeSelector}` : ""} text-body`}
               type="button"
               role="tab"
-              aria-controls={`how-it-works-panel-${index + 1}`}
+              aria-controls={panelId}
               aria-selected={isActive}
               tabIndex={isActive ? 0 : -1}
               onClick={() => selectStep(index)}
               onKeyDown={(event) => handleTabKeyDown(event, index)}
             >
-              Step {index + 1}
+              <span>Step {index + 1}</span>
             </button>
           );
         })}

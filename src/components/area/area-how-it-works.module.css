@@ -30,7 +30,6 @@
 
 .visual {
   position: relative;
-  display: grid;
   width: 100%;
   overflow: hidden;
   border-radius: var(--radius-large);
@@ -39,26 +38,9 @@
 
 .panel {
   position: relative;
-  grid-area: 1 / 1;
   padding: var(--spacing-m) var(--spacing-m) var(--spacing-xl);
   border-radius: inherit;
   color: var(--color-text-primary);
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transition:
-    opacity 250ms ease-out,
-    visibility 0s linear 250ms;
-}
-
-.activePanel {
-  z-index: 1;
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
-  transition:
-    opacity 250ms ease-out,
-    visibility 0s linear;
 }
 
 .stepContent {
@@ -66,6 +48,7 @@
   width: 100%;
   max-width: 100%;
   text-align: left;
+  animation: step-content-fade 250ms ease-out;
 }
 
 .stepIdentification {
@@ -112,12 +95,13 @@
 }
 
 .selector {
-  position: relative;
-  display: flex;
+  display: grid;
+  grid-template-rows: 2px auto;
+  row-gap: var(--spacing-xs);
   min-width: 0;
   min-height: 48px;
-  align-items: center;
-  justify-content: center;
+  align-content: center;
+  justify-items: center;
   padding: 0 var(--spacing-s);
   border: 0;
   background: transparent;
@@ -126,14 +110,10 @@
 }
 
 .selector::before {
-  position: absolute;
-  top: 0;
-  left: 50%;
   width: var(--spacing-m);
   height: 2px;
   background: transparent;
   content: "";
-  transform: translateX(-50%);
 }
 
 .activeSelector {
@@ -149,8 +129,18 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .panel {
-    transition: none;
+  .stepContent {
+    animation: none;
+  }
+}
+
+@keyframes step-content-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
@@ -161,6 +151,7 @@
 
   .panel {
     display: flex;
+    min-height: 250px;
     align-items: center;
     padding: var(--spacing-l);
   }
@@ -174,5 +165,4 @@
   .stepContent {
     max-width: 40%;
   }
-
 }
