@@ -1022,8 +1022,8 @@ Contains, in document order:
 
 ### Visual Design
 
-* The Primary Headline uses the global `H2` typography and `Text Primary` color.
-* The Supporting Copy uses the global `Body Large` typography and `Text Secondary` color.
+* The Primary Headline uses the global `H2` typography.
+* The Supporting Copy uses the global `Body Large` typography.
 
 ### Dimensions and Alignment
 
@@ -1046,7 +1046,7 @@ Contains, in document order:
   1. Step identification: `Step 1`; title: `Tell us about your house`; description: `Share a few basic details about your property and your situation.`
   2. Step identification: `Step 2`; title: `Get your cash offer`; description: `We’ll review your property details and give you a fair, no-obligation cash offer.`
   3. Step identification: `Step 3`; title: `Choose your closing date`; description: `Pick the closing date that works best for you, and we’ll handle the rest.`
-* A decorative three-mark progress display reflects the currently active Step within the Active Step Visual.
+* A three-mark progress display reflects the currently active Step within the Active Step Visual.
 
 #### Component and Semantics
 
@@ -1066,11 +1066,16 @@ Contains, in document order:
 #### Dimensions and Alignment
 
 * Spans the available Section content width.
+* On Desktop and Tablet, uses `min-height: 250px`. The actual height is determined by the active Step content and may exceed `250px` when required.
+* On Mobile, uses natural content-driven height without `min-height`.
+* Inactive Steps do not determine or reserve the visual's height, and the tallest Step is not calculated or measured.
+* Sizing does not use JavaScript.
+* Height changes are not animated.
 * On Desktop and Tablet, the complete Step content block is positioned at the center-left of the visual, vertically centered and left-aligned.
 * On Mobile, the complete Step content block remains left-aligned.
 * The Step content block uses a maximum width of `40%` of the visual on Desktop, `60%` on Tablet, and the available internal content width on Mobile.
 * Uses `L` (`32px`) internal padding on Desktop and Tablet.
-* On Mobile, the Step content uses `M` (`24px`) horizontal padding and `XL` (`48px`) bottom padding.
+* On Mobile, the Step content uses `M` (`24px`) top and horizontal padding and `XL` (`48px`) bottom padding.
 * The progress display is horizontally centered and positioned `S` (`16px`) from the bottom edge of the visual across all Breakpoints.
 * Each progress mark is `S` (`16px`) wide and `2px` thick.
 
@@ -1109,9 +1114,10 @@ Contains three selectors in this order:
 
 #### Visual Design
 
-* The selectors use a minimal treatment and do not use a Card treatment.
-* The active selector uses global `Body` typography, global `Brand Green` text, and a centered `2px` Brand Green indicator line above the label with a width of `M` (`24px`).
-* Inactive selectors use global `Body` typography and global `Text Muted` color and do not display the active indicator line.
+* The selectors use no background, Border, Radius, Shadow, or Card treatment.
+* All selectors use the global `Body` typography.
+* The active selector uses global `Brand Green` text and a centered `2px` Brand Green indicator line above the label with a width of `M` (`24px`).
+* Inactive selectors use global `Text Muted` color and do not display the active indicator line.
 * Inactive selectors retain the same visual treatment on Hover and display a pointer cursor.
 
 #### Dimensions and Alignment
@@ -1125,6 +1131,7 @@ Contains three selectors in this order:
 
 * `S` (`16px`) separates the Active Step Visual from the Step Selectors.
 * `XS` (`8px`) separates adjacent selector segments.
+* `XS` (`8px`) separates the active indicator line from its selector label.
 * `L` (`32px`) separates the Step Selectors from the Section CTA.
 
 #### Interaction
@@ -1157,10 +1164,6 @@ Contains three selectors in this order:
 ### Component and Semantics
 
 * Uses the shared `Button` Component with link semantics.
-
-### Dimensions and Alignment
-
-* Is left-aligned with the Section Intro’s left content edge across all Breakpoints.
 
 ### Interaction
 
