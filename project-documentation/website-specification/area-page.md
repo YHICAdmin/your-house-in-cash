@@ -1045,9 +1045,9 @@ Contains, in document order:
 #### Content
 
 * Displays one of the following three Steps at a time:
-  1. Step identification: `Step 1`; title: `Tell us about your house`; description: `Share a few basic details about your property and your situation.`
-  2. Step identification: `Step 2`; title: `Get your cash offer`; description: `We’ll review your property details and give you a fair, no-obligation cash offer.`
-  3. Step identification: `Step 3`; title: `Choose your closing date`; description: `Pick the closing date that works best for you, and we’ll handle the rest.`
+  1. Step identification: `Step 1`; title: `Tell us about your house`; description: `Share a few basic details about your property and your situation.`; canonical photograph: `/images/how-it-works/step-1.png`.
+  2. Step identification: `Step 2`; title: `Get your cash offer`; description: `We’ll review your property details and give you a fair, no-obligation cash offer.`; canonical photograph: `/images/how-it-works/step-2.png`.
+  3. Step identification: `Step 3`; title: `Choose your closing date`; description: `Pick the closing date that works best for you, and we’ll handle the rest.`; canonical photograph: `/images/how-it-works/step-3.png`.
 * A three-mark progress display reflects the currently active Step within the Active Step Visual.
 
 #### Component and Semantics
@@ -1064,6 +1064,9 @@ Contains, in document order:
 * The Step description uses the global `Body Large` typography.
 * The visual uses the global `Large` Radius.
 * The progress display contains three horizontal marks. The active mark uses global `Brand Green Dark`; inactive marks use the global `Text Muted` color.
+* The Step photograph renders beneath a responsive green overlay.
+* On Mobile, the overlay runs from top to bottom: `#123527` at approximately `88%` opacity at `0%`, full opaque `#123527` by `40%`, and full opaque `#123527` from `40%` through `100%`.
+* On Tablet and Desktop, the overlay runs from left to right: full opaque `#123527` from `0%` through `60%`, followed by a gradual fade from `60%` to `#123527cc` (approximately `80%` opacity) at `100%`.
 
 #### Dimensions and Alignment
 
@@ -1095,6 +1098,7 @@ Contains, in document order:
 
 #### Accessibility
 
+* Each Step photograph is decorative because the associated Step text communicates the complete process information.
 * When reduced motion is preferred, Step changes occur immediately without animation.
 * The progress display is decorative, is hidden from assistive technologies, and does not receive keyboard focus.
 
