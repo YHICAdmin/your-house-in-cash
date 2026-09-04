@@ -49,10 +49,6 @@
   gap: var(--spacing-s);
 }
 
-.stepNumber {
-  color: var(--color-brand);
-}
-
 .cardEyebrow {
   color: var(--color-brand-light);
   text-align: right;

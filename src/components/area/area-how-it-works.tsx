@@ -1,5 +1,6 @@
-import { Cog } from "lucide-react";
+import { BadgeDollarSign, CalendarCheck, Cog, House } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { IconContainer } from "@/components/ui/icon-container";
 import { SectionLabel } from "@/components/ui/section-label";
 import styles from "./area-how-it-works.module.css";
 
@@ -7,19 +8,19 @@ const headingId = "how-it-works-heading";
 
 const processCards = [
   {
-    number: "01",
+    icon: House,
     eyebrow: "A FEW MINUTES",
     title: "Tell Us About Your House",
     body: "We take the time to understand your situation, learn about your property, and discuss your needs. You do not need to prepare the house, make repairs, or have every answer ready. We just want to understand what is going on and what would make a sale work for you.",
   },
   {
-    number: "02",
+    icon: BadgeDollarSign,
     eyebrow: "NO OBLIGATION",
     title: "Get Your Cash Offer",
     body: "We review the information you shared, take a closer look at the property, and put together a fair, no-obligation cash offer. We explain the offer clearly so you can decide whether it works for your situation. There are no fees and no pressure to move forward.",
   },
   {
-    number: "03",
+    icon: CalendarCheck,
     eyebrow: "YOUR TIMELINE",
     title: "Choose Your Closing Date",
     body: "If the offer works for you, you choose when you want to close. Whether you need to move quickly or need additional time, we work around your schedule and handle the details needed to complete the sale. Once closing is complete, you can move forward on your timeline.",
@@ -47,18 +48,17 @@ export function AreaHowItWorks() {
         <ol className={styles.processCards}>
           {processCards.map((card, index) => (
             <li
-              key={card.number}
+              key={card.title}
               className={`${styles.processCard} ${
                 index === 2 ? styles.processCardWide : ""
               }`}
             >
               <div className={styles.cardMeta}>
-                <span
-                  className={`${styles.stepNumber} text-heading-2`}
+                <IconContainer
+                  icon={card.icon}
+                  size="large"
                   aria-hidden="true"
-                >
-                  {card.number}
-                </span>
+                />
                 <span className={`${styles.cardEyebrow} text-label`}>
                   {card.eyebrow}
                 </span>

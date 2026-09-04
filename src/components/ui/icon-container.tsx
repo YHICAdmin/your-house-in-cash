@@ -4,18 +4,21 @@ import styles from "./icon-container.module.css";
 
 type IconContainerProps = HTMLAttributes<HTMLSpanElement> & {
   icon: LucideIcon;
+  size?: "default" | "large";
 };
 
 export function IconContainer({
   icon: Icon,
+  size = "default",
   className,
   ...props
 }: IconContainerProps) {
-  const containerClassName = `${styles.container}${className ? ` ${className}` : ""}`;
+  const containerClassName = `${styles.container} ${styles[size]}${className ? ` ${className}` : ""}`;
+  const iconSize = size === "large" ? 24 : 20;
 
   return (
     <span {...props} className={containerClassName}>
-      <Icon size={20} focusable="false" />
+      <Icon size={iconSize} focusable="false" />
     </span>
   );
 }

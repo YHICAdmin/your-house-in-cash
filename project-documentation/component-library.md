@@ -113,18 +113,18 @@ A reusable visual Component that presents one canonical Lucide icon within a cir
 
 #### Visual Style
 
-- Container: `40px × 40px`
 - Background: Brand Green Light
 - Border: none
 - Shadow: none
 - Radius: 999px / Pill
-- Default icon size: Medium Icon / `20px`
 - Default icon color: Brand Green Dark
 - The icon is centered horizontally and vertically within the container.
 
 #### Dimensions and Alignment
 
 - The container does not shrink.
+- Default size: `40px × 40px`, with the global Medium Icon size (`20px`).
+- Large size: `48px × 48px`, with the global Large Icon size (`24px`).
 - External alignment and spacing are defined by the consuming element.
 
 #### Responsive
@@ -138,6 +138,7 @@ A reusable visual Component that presents one canonical Lucide icon within a cir
 #### Configurable
 
 - Canonical Lucide icon identity.
+- Size: Default or Large. Default is used when no size is specified.
 
 ## Section Label
 
