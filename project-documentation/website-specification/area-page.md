@@ -1057,8 +1057,8 @@ Contains, in document order:
 
 #### Visual Design
 
-* The visual uses global `Background Soft` as its base background.
-* The complete Step content uses the global `Text Primary` color.
+* The visual uses the Section-specific background color `#123527`.
+* The complete Step content uses global `Background` (`#FFFFFF`) as its foreground color.
 * Step identification uses the global `Label` typography.
 * The Step title uses the global `H3` typography.
 * The Step description uses the global `Body Large` typography.
