@@ -1063,7 +1063,7 @@ Contains, in document order:
 * The Step title uses the global `H3` typography.
 * The Step description uses the global `Body Large` typography.
 * The visual uses the global `Large` Radius.
-* The progress display contains three horizontal marks. The active mark uses global `Brand Green Dark`; inactive marks use the global `Text Muted` color.
+* The progress display contains three horizontal marks. The active mark uses global `Brand Green Dark`; inactive marks use global `Background` (`#FFFFFF`).
 * The Step photograph renders beneath a responsive green overlay.
 * On Mobile, the overlay runs from top to bottom: `#123527` at approximately `88%` opacity at `0%`, full opaque `#123527` by `40%`, and full opaque `#123527` from `40%` through `100%`.
 * On Tablet and Desktop, the overlay runs from left to right: full opaque `#123527` from `0%` through `60%`, followed by a gradual fade from `60%` to `#123527` at `80%` opacity at `100%`.

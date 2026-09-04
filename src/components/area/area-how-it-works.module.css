@@ -89,7 +89,7 @@
 .progressMark {
   width: var(--spacing-s);
   height: 2px;
-  background: var(--color-text-muted);
+  background: var(--color-background);
 }
 
 .activeProgressMark {
