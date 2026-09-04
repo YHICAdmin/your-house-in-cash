@@ -56,7 +56,7 @@ export function AreaHero({ city }: AreaHeroProps) {
           <div className={styles.imageMosaic}>
             <div className={`${styles.imageFrame} ${styles.leftImage}`}>
               <Image
-                src="/images/area-hero/local-left.webp"
+                src="/images/area-hero/local-left.png"
                 alt=""
                 fill
                 sizes="(min-width: 1200px) 29vw, 55vw"
@@ -66,7 +66,7 @@ export function AreaHero({ city }: AreaHeroProps) {
             <div className={styles.rightImages}>
               <div className={styles.imageFrame}>
                 <Image
-                  src="/images/area-hero/local-right.webp"
+                  src="/images/area-hero/local-right.png"
                   alt=""
                   fill
                   sizes="(min-width: 1200px) 17vw, 32vw"
@@ -75,7 +75,7 @@ export function AreaHero({ city }: AreaHeroProps) {
               </div>
               <div className={styles.imageFrame}>
                 <Image
-                  src="/images/area-hero/local-bottom.webp"
+                  src="/images/area-hero/local-bottom.png"
                   alt=""
                   fill
                   sizes="(min-width: 1200px) 17vw, 32vw"
