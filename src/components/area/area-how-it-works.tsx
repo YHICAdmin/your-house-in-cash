@@ -23,6 +23,12 @@ export function AreaHowItWorks() {
           </p>
         </div>
 
+        <div className={styles.processCards}>
+          <div className={styles.processCard} />
+          <div className={styles.processCard} />
+          <div className={`${styles.processCard} ${styles.processCardWide}`} />
+        </div>
+
         <div className={styles.cta}>
           <Button href="/get-cash-offer">Get My Cash Offer</Button>
         </div>

@@ -1044,6 +1044,48 @@ Preserve the following approved Step content and assets for the replacement desi
 * Each Step photograph is decorative because the associated Step text communicates the complete process information.
 * Each Step icon is decorative because the associated Step title communicates the same meaning.
 
+## Process Cards
+
+### Composition
+
+* The Section contains exactly three primary process Cards in this order: Card 1, Card 2, and Card 3.
+* No internal Card content is defined at this stage.
+
+### Visual Design
+
+* All three Cards use the Section-specific background color `#123527`.
+* All three Cards use the global `Large` Radius (`16px`).
+* The Cards do not use a Border, Shadow, photograph, Gradient, or other decorative treatment.
+
+### Dimensions and Alignment
+
+* The Card collection uses the same responsive System-Line alignment model as the Review Card collection.
+* The Card geometry derives directly from the global content Grid and a `M` (`24px`) horizontal Card gap without per-Card positions, widths, margins, or corrections.
+
+#### Desktop
+
+* The three Cards form one row.
+* Card 1 occupies the first System Line division, between the left outer System Line and the first internal System Line.
+* Card 2 occupies the second System Line division, between the first and second internal System Lines.
+* Card 3 occupies the remaining two System Line divisions, between the second internal System Line and the right outer System Line.
+* Each Card edge is inset from its bounding System Line by half of the global `M` (`24px`) Desktop Gutter: `12px`.
+* All three Cards have a minimum height of `360px` and may grow when future content requires additional height.
+
+#### Tablet
+
+* Card 1 and Card 2 form the first row, occupy one System Line division each, and use equal widths.
+* Their outer edges use the global `16px` content distance from the outer System Lines, and their adjoining edges use half of the global `M` (`24px`) Tablet Gutter: `12px` from the center System Line. The gap between the Cards is therefore `24px`.
+* Card 3 forms the second row and spans the complete area between the two outer System Lines, preserving its `S` (`16px`) inset from each outer line.
+* Card 1 and Card 2 have a minimum height of `320px`; Card 3 has a minimum height of `360px`. Each Card may grow when future content requires additional height.
+* `S` (`16px`) separates the two Card rows.
+
+#### Mobile
+
+* Card 1, Card 2, and Card 3 form one vertical stack in that order.
+* All three Cards span the complete area between the two outer System Lines, preserving their `S` (`16px`) inset from each outer line.
+* Card 1 and Card 2 have a minimum height of `220px`; Card 3 has a minimum height of `440px`. Each Card may grow when future content requires additional height.
+* `S` (`16px`) separates adjacent Cards.
+
 ## Section CTA
 
 ### Content

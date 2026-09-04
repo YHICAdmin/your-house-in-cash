@@ -1,4 +1,5 @@
 .intro,
+.processCards,
 .cta {
   min-width: 0;
   grid-column: 1 / -1;
@@ -17,4 +18,48 @@
 .supportingCopy {
   margin: 0;
   color: var(--color-text-secondary);
+}
+
+.processCards {
+  --process-cards-gap: var(--spacing-m);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: var(--spacing-s);
+}
+
+.processCard {
+  min-height: 220px;
+  border-radius: var(--radius-large);
+  background: #123527;
+}
+
+.processCardWide {
+  min-height: 440px;
+}
+
+@media (min-width: 768px) {
+  .processCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--process-cards-gap);
+  }
+
+  .processCard {
+    min-height: 320px;
+  }
+
+  .processCardWide {
+    min-height: 360px;
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .processCards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .processCard {
+    min-height: 360px;
+  }
 }
