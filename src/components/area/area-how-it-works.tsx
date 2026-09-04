@@ -5,6 +5,27 @@ import styles from "./area-how-it-works.module.css";
 
 const headingId = "how-it-works-heading";
 
+const processCards = [
+  {
+    number: "01",
+    eyebrow: "A FEW MINUTES",
+    title: "Tell Us About Your House",
+    body: "We take the time to understand your situation, learn about your property, and discuss your needs. You do not need to prepare the house, make repairs, or have every answer ready. We just want to understand what is going on and what would make a sale work for you.",
+  },
+  {
+    number: "02",
+    eyebrow: "NO OBLIGATION",
+    title: "Get Your Cash Offer",
+    body: "We review the information you shared, take a closer look at the property, and put together a fair, no-obligation cash offer. We explain the offer clearly so you can decide whether it works for your situation. There are no fees and no pressure to move forward.",
+  },
+  {
+    number: "03",
+    eyebrow: "YOUR TIMELINE",
+    title: "Choose Your Closing Date",
+    body: "If the offer works for you, you choose when you want to close. Whether you need to move quickly or need additional time, we work around your schedule and handle the details needed to complete the sale. Once closing is complete, you can move forward on your timeline.",
+  },
+] as const;
+
 export function AreaHowItWorks() {
   return (
     <section
@@ -23,11 +44,34 @@ export function AreaHowItWorks() {
           </p>
         </div>
 
-        <div className={styles.processCards}>
-          <div className={styles.processCard} />
-          <div className={styles.processCard} />
-          <div className={`${styles.processCard} ${styles.processCardWide}`} />
-        </div>
+        <ol className={styles.processCards}>
+          {processCards.map((card, index) => (
+            <li
+              key={card.number}
+              className={`${styles.processCard} ${
+                index === 2 ? styles.processCardWide : ""
+              }`}
+            >
+              <div className={styles.cardMeta}>
+                <span
+                  className={`${styles.stepNumber} text-heading-2`}
+                  aria-hidden="true"
+                >
+                  {card.number}
+                </span>
+                <span className={`${styles.cardEyebrow} text-label`}>
+                  {card.eyebrow}
+                </span>
+              </div>
+              <h3 className={`${styles.cardTitle} text-heading-3`}>
+                {card.title}
+              </h3>
+              <p className={`${styles.cardBody} text-body-small`}>
+                {card.body}
+              </p>
+            </li>
+          ))}
+        </ol>
 
         <div className={styles.cta}>
           <Button href="/get-cash-offer">Get My Cash Offer</Button>

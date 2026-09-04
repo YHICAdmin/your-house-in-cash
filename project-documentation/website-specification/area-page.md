@@ -1029,38 +1029,48 @@ Contains, in document order:
 * `S` (`16px`) separates the Section Label from the Primary Headline.
 * `M` (`24px`) separates the Primary Headline from the Supporting Copy.
 
-## Step Content
-
-### Content
-
-Preserve the following approved Step content and assets for the replacement design:
-
-1. Canonical Lucide `House` icon; title: `Tell us about your house`; Primary Body Copy: `Start by sharing a few details about your property and what’s going on.`; Supporting Body Copy: `You don’t need to prepare the house, make repairs, or have every answer ready. We just want to understand the property and what would make a sale work for you.`; canonical photograph: `/images/how-it-works/step-1.png`.
-2. Canonical Lucide `BadgeDollarSign` icon; title: `Get your cash offer`; Primary Body Copy: `We’ll review the information you shared and take a closer look at the property.`; Supporting Body Copy: `Then we’ll put together a fair, no-obligation cash offer based on the home and your situation. There are no fees and no pressure to move forward.`; canonical photograph: `/images/how-it-works/step-2.png`.
-3. Canonical Lucide `CalendarCheck` icon; title: `Choose your closing date`; Primary Body Copy: `If you decide the offer works for you, you choose when you want to close.`; Supporting Body Copy: `Whether you need to move quickly or need more time, we’ll work around your schedule and handle the details needed to get the sale completed.`; canonical photograph: `/images/how-it-works/step-3.png`.
-
-### Accessibility
-
-* Each Step photograph is decorative because the associated Step text communicates the complete process information.
-* Each Step icon is decorative because the associated Step title communicates the same meaning.
-
 ## Process Cards
 
 ### Composition
 
 * The Section contains exactly three primary process Cards in this order: Card 1, Card 2, and Card 3.
-* No internal Card content is defined at this stage.
+* Each Card contains, in document order, a Top Meta Row, Step Title, and Body Copy.
+
+### Content
+
+1. Card 1: Step number `01`; eyebrow `A FEW MINUTES`; title `Tell Us About Your House`; Body Copy: `We take the time to understand your situation, learn about your property, and discuss your needs. You do not need to prepare the house, make repairs, or have every answer ready. We just want to understand what is going on and what would make a sale work for you.`
+2. Card 2: Step number `02`; eyebrow `NO OBLIGATION`; title `Get Your Cash Offer`; Body Copy: `We review the information you shared, take a closer look at the property, and put together a fair, no-obligation cash offer. We explain the offer clearly so you can decide whether it works for your situation. There are no fees and no pressure to move forward.`
+3. Card 3: Step number `03`; eyebrow `YOUR TIMELINE`; title `Choose Your Closing Date`; Body Copy: `If the offer works for you, you choose when you want to close. Whether you need to move quickly or need additional time, we work around your schedule and handle the details needed to complete the sale. Once closing is complete, you can move forward on your timeline.`
+
+### Component and Semantics
+
+* The Card collection uses ordered-list semantics, and each Card uses list-item semantics.
+* The Step Title uses `H3` semantics.
+* The visible Step number is decorative for assistive technologies because the ordered-list semantics communicate the same sequence.
 
 ### Visual Design
 
 * All three Cards use the Section-specific background color `#123527`.
 * All three Cards use the global `Large` Radius (`16px`).
 * The Cards do not use a Border, Shadow, photograph, Gradient, or other decorative treatment.
+* The Step number uses the global `H2` typography and Brand Green color.
+* The eyebrow uses the global `Label` typography, uppercase content, and Brand Green Light color.
+* The Step Title uses the global `H3` typography and `#FFFFFF` color.
+* The Body Copy uses the global `Body Small` typography and Brand Green Light color.
+* The Cards do not use icons.
 
 ### Dimensions and Alignment
 
 * The Card collection uses the same responsive System-Line alignment model as the Review Card collection.
 * The Card geometry derives directly from the global content Grid and a `M` (`24px`) horizontal Card gap without per-Card positions, widths, margins, or corrections.
+* Each Card uses `M` (`24px`) internal padding on all sides across all Breakpoints.
+* All Card content is left-aligned.
+* The Step number and eyebrow form one horizontal Top Meta Row, align to opposite sides of the available Card content width, and align vertically at the top.
+
+### Spacing
+
+* `L` (`32px`) separates the Top Meta Row from the Step Title.
+* `S` (`16px`) separates the Step Title from the Body Copy.
 
 #### Desktop
 
