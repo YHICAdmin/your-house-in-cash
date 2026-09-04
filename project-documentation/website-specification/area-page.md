@@ -1033,6 +1033,13 @@ Contains, in document order:
 
 ## Interactive Process
 
+### Dimensions and Alignment
+
+* Across all Breakpoints, the complete Interactive Process spans from the left outer System Line to the right outer System Line, with its left and right edges aligned directly to those lines.
+* The Interactive Process does not use the normal horizontal content inset. This exception applies to the complete composite containing both the Active Step Visual and Step Selectors.
+* The Step Selectors retain their specified compact, centered, content-width group within the same line-aligned composite rather than using a separately inset container.
+* The Section Intro and Section CTA retain the normal horizontal content alignment and inset.
+
 ### Active Step Visual
 
 #### Content
@@ -1060,7 +1067,7 @@ Contains, in document order:
 
 #### Dimensions and Alignment
 
-* Spans the available Section content width.
+* Spans the complete width of the Interactive Process.
 * Uses `min-height: 300px` across all Breakpoints. The actual height is determined by the active Step content and may exceed `300px` when required.
 * Inactive Steps do not determine or reserve the visual's height, and the tallest Step is not calculated or measured.
 * Sizing does not use JavaScript.
