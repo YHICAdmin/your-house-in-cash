@@ -1028,142 +1028,21 @@ Contains, in document order:
 
 * `S` (`16px`) separates the Section Label from the Primary Headline.
 * `M` (`24px`) separates the Primary Headline from the Supporting Copy.
-* `XL` (`48px`) separates the Supporting Copy from the Interactive Process on Desktop and Tablet.
-* `L` (`32px`) separates the Supporting Copy from the Interactive Process on Mobile.
 
-## Interactive Process
+## Step Content
 
-### Dimensions and Alignment
+### Content
 
-* Across all Breakpoints, the complete Interactive Process spans from the left outer System Line to the right outer System Line, with its left and right edges aligned directly to those lines.
-* The Interactive Process does not use the normal horizontal content inset. This exception applies to the complete composite containing both the Active Step Visual and Step Selectors.
-* The Step Selectors retain their specified compact, centered, content-width group within the same line-aligned composite rather than using a separately inset container.
-* The Section Intro and Section CTA retain the normal horizontal content alignment and inset.
+Preserve the following approved Step content and assets for the replacement design:
 
-### Active Step Visual
-
-#### Content
-
-* Displays one of the following three Steps at a time:
-  1. Step identification: `Step 1`; title: `Tell us about your house`; description: `Share a few basic details about your property and your situation.`; canonical photograph: `/images/how-it-works/step-1.png`.
-  2. Step identification: `Step 2`; title: `Get your cash offer`; description: `We’ll review your property details and give you a fair, no-obligation cash offer.`; canonical photograph: `/images/how-it-works/step-2.png`.
-  3. Step identification: `Step 3`; title: `Choose your closing date`; description: `Pick the closing date that works best for you, and we’ll handle the rest.`; canonical photograph: `/images/how-it-works/step-3.png`.
-* Three Step indicator controls appear within the Active Step Visual, with one control corresponding to each Step.
-
-#### Component and Semantics
-
-* The active Step content uses tab-panel semantics and is associated with its selected Step tab.
-* The active Step title uses `H3` semantics.
-* Each Step indicator control uses native button semantics.
-
-#### Visual Design
-
-* The visual uses the Section-specific background color `#123527`.
-* The complete Step content uses global `Background` (`#FFFFFF`) as its foreground color.
-* Step identification uses the global `Label` typography.
-* The Step title uses the global `H3` typography.
-* The Step description uses the global `Body Large` typography.
-* The visual uses the global `Large` Radius.
-* Each Step indicator control displays one horizontal mark. The active mark uses global `Brand Green Dark`; inactive marks use global `Background` (`#FFFFFF`).
-* The Step photograph renders beneath a responsive green overlay.
-* On Mobile, the overlay runs from top to bottom: `#123527` at approximately `88%` opacity at `0%`, full opaque `#123527` by `40%`, and full opaque `#123527` from `40%` through `100%`.
-* On Tablet and Desktop, the overlay runs from left to right: full opaque `#123527` from `0%` through `60%`, followed by a gradual fade from `60%` to `#123527` at `80%` opacity at `100%`.
-
-#### Dimensions and Alignment
-
-* Spans the complete width of the Interactive Process.
-* The Active Step Visual has a minimum height of `300px` across all Breakpoints. The actual height is determined by the active Step content and may exceed `300px` when required.
-* Inactive Steps do not determine or reserve the visual's height, and the tallest Step is not calculated or measured.
-* Sizing does not use JavaScript.
-* Height changes are not animated.
-* On Desktop and Tablet, the complete Step content block is positioned at the center-left of the visual, vertically centered and left-aligned.
-* On Mobile, the complete Step content block remains left-aligned.
-* The Step content block uses a maximum width of `40%` of the visual on Desktop, `60%` on Tablet, and the available internal content width on Mobile.
-* On Desktop and Tablet, the complete Step photograph remains visible without distortion, fits within the visual without cropping, and aligns to the right edge and vertical center.
-* On Mobile, each Step photograph fills the complete visual without distortion; cropping is permitted, with its focal placement positioned `68%` horizontally from the left edge and `40%` vertically from the top edge.
-* Uses `L` (`32px`) internal padding on Desktop and Tablet.
-* On Mobile, the Step content uses `M` (`24px`) top and horizontal padding and `XL` (`48px`) bottom padding.
-* The Step indicator control group is horizontally centered across all Breakpoints.
-* Each Step indicator control uses a `24px × 24px` interactive area while preserving a visible mark that is `S` (`16px`) wide and `2px` thick.
-* The visible marks remain positioned `S` (`16px`) from the bottom edge of the visual across all Breakpoints.
-
-#### Spacing
-
-* `XS` (`8px`) separates Step identification from the Step title.
-* `S` (`16px`) separates the Step title from the Step description.
-* `XS` (`8px`) separates adjacent visible indicator marks.
-
-#### Interaction
-
-* The active Step content fades over `250ms` using `ease-out` when the selected Step changes.
-* The transition does not use directional movement, scaling, or sliding.
-
-#### Accessibility
-
-* Each Step photograph is decorative because the associated Step text communicates the complete process information.
-* When reduced motion is preferred, Step changes occur immediately without animation.
-* The three Step indicator controls use the accessible names `Show Step 1`, `Show Step 2`, and `Show Step 3`, respectively.
-* Each Step indicator control exposes whether its corresponding Step is active through its pressed state.
-
-### Step Selectors
-
-#### Content
-
-Contains three selectors in this order:
-
-1. `Step 1`.
-2. `Step 2`.
-3. `Step 3`.
-
-#### Component and Semantics
-
-* The complete selector group uses tab-list semantics.
-* The visible Primary Headline provides the complete selector group's accessible name.
-* Each Step selector uses tab semantics and controls the associated active Step panel.
-* Each tab’s accessible name is derived from its visible Step label.
-
-#### Visual Design
-
-* The selectors use no background, Border, Radius, Shadow, or Card treatment.
-* All selectors use the global `Button` typography.
-* The active selector uses global `Brand Green` text.
-* Inactive selectors use global `Text Secondary` color.
-* Inactive selectors retain the same visual treatment on Hover and display a pointer cursor.
-
-#### Dimensions and Alignment
-
-* The three selectors form one centered, content-width horizontal group of three equal-width segments across all Breakpoints.
-* Each selector has a minimum interactive height of `48px`.
-* Each selector uses `S` (`16px`) horizontal internal padding.
-* Selector labels are horizontally and vertically centered within their segments.
-
-#### Spacing
-
-* `S` (`16px`) separates the Active Step Visual from the Step Selectors.
-* `XS` (`8px`) separates adjacent selector segments.
-* `L` (`32px`) separates the Step Selectors from the Section CTA.
-
-#### Interaction
-
-* Left Arrow and Right Arrow move focus between Step tabs and automatically activate the focused Step.
-* Keyboard navigation wraps at the endpoints: Right Arrow from `Step 3` moves to and activates `Step 1`, and Left Arrow from `Step 1` moves to and activates `Step 3`.
-
-### Interaction
-
-* Selecting a Step updates the Active Step Visual to display the associated Step content.
-* Selecting a Step indicator control activates its corresponding Step through the same active-Step state used by the Step Selectors.
-* The Step indicator controls and Step Selectors update together to reflect the active Step.
-* `Step 1` is initially active.
-* Each Step remains active for `6 seconds` before progression advances to the next Step.
-* After `Step 3`, progression returns to `Step 1` and continues looping.
-* Automatic progression pauses while the Active Step Visual or any Step selector is hovered or keyboard-focused.
-* When Hover or keyboard focus ends, a new `6-second` interval begins for the currently active Step before progression continues.
-* Activating any Step selector or Step indicator control stops automatic progression for the remainder of the current page visit. The selected Step remains active until another Step is selected.
+1. Canonical Lucide `House` icon; title: `Tell us about your house`; Primary Body Copy: `Start by sharing a few details about your property and what’s going on.`; Supporting Body Copy: `You don’t need to prepare the house, make repairs, or have every answer ready. We just want to understand the property and what would make a sale work for you.`; canonical photograph: `/images/how-it-works/step-1.png`.
+2. Canonical Lucide `BadgeDollarSign` icon; title: `Get your cash offer`; Primary Body Copy: `We’ll review the information you shared and take a closer look at the property.`; Supporting Body Copy: `Then we’ll put together a fair, no-obligation cash offer based on the home and your situation. There are no fees and no pressure to move forward.`; canonical photograph: `/images/how-it-works/step-2.png`.
+3. Canonical Lucide `CalendarCheck` icon; title: `Choose your closing date`; Primary Body Copy: `If you decide the offer works for you, you choose when you want to close.`; Supporting Body Copy: `Whether you need to move quickly or need more time, we’ll work around your schedule and handle the details needed to get the sale completed.`; canonical photograph: `/images/how-it-works/step-3.png`.
 
 ### Accessibility
 
-* Automatic Step changes update the selected-tab and associated Step-panel state without a live announcement.
-* When reduced motion is preferred, automatic progression is disabled and Steps change only through manual selection.
+* Each Step photograph is decorative because the associated Step text communicates the complete process information.
+* Each Step icon is decorative because the associated Step title communicates the same meaning.
 
 ## Section CTA
 
@@ -1178,10 +1057,6 @@ Contains three selectors in this order:
 ### Interaction
 
 * Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
-
-## Responsive Behavior
-
-* On Desktop, Tablet, and Mobile, the Section Intro, Interactive Process, and Section CTA remain in one vertical composition.
 
 # Local / Area Section
 

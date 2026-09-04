@@ -1,7 +1,6 @@
 import { Cog } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionLabel } from "@/components/ui/section-label";
-import { InteractiveProcess } from "./interactive-process";
 import styles from "./area-how-it-works.module.css";
 
 const headingId = "how-it-works-heading";
@@ -12,7 +11,7 @@ export function AreaHowItWorks() {
       className="section-spacing system-lines-bg"
       aria-labelledby={headingId}
     >
-      <div className={`${styles.layout} content-grid`}>
+      <div className="content-grid">
         <div className={styles.intro}>
           <SectionLabel icon={Cog}>How It Works</SectionLabel>
           <h2 id={headingId} className={`${styles.heading} text-heading-2`}>
@@ -23,8 +22,6 @@ export function AreaHowItWorks() {
             steps.
           </p>
         </div>
-
-        <InteractiveProcess headingId={headingId} />
 
         <div className={styles.cta}>
           <Button href="/get-cash-offer">Get My Cash Offer</Button>
