@@ -26,6 +26,7 @@
 
 .process {
   margin-top: var(--spacing-l);
+  margin-inline: calc(var(--layout-grid-inset) * -1);
 }
 
 .visual {
