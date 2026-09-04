@@ -1061,8 +1061,7 @@ Contains, in document order:
 #### Dimensions and Alignment
 
 * Spans the available Section content width.
-* On Desktop and Tablet, uses `min-height: 250px`. The actual height is determined by the active Step content and may exceed `250px` when required.
-* On Mobile, uses natural content-driven height without `min-height`.
+* Uses `min-height: 300px` across all Breakpoints. The actual height is determined by the active Step content and may exceed `300px` when required.
 * Inactive Steps do not determine or reserve the visual's height, and the tallest Step is not calculated or measured.
 * Sizing does not use JavaScript.
 * Height changes are not animated.
