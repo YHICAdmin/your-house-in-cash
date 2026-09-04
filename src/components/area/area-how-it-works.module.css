@@ -64,10 +64,6 @@
   color: var(--color-brand-light);
 }
 
-.processCardWide {
-  min-height: 440px;
-}
-
 @media (min-width: 768px) {
   .processCards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -78,9 +74,8 @@
     min-height: 320px;
   }
 
-  .processCardWide {
+  .processCard:last-child {
     min-height: 360px;
-    grid-column: span 2;
   }
 }
 

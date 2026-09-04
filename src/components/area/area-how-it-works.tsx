@@ -46,13 +46,8 @@ export function AreaHowItWorks() {
         </div>
 
         <ol className={styles.processCards}>
-          {processCards.map((card, index) => (
-            <li
-              key={card.title}
-              className={`${styles.processCard} ${
-                index === 2 ? styles.processCardWide : ""
-              }`}
-            >
+          {processCards.map((card) => (
+            <li key={card.title} className={styles.processCard}>
               <div className={styles.cardMeta}>
                 <IconContainer
                   icon={card.icon}

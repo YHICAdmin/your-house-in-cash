@@ -1076,7 +1076,8 @@ Contains, in document order:
 * The three Cards form one row.
 * Card 1 occupies the first System Line division, between the left outer System Line and the first internal System Line.
 * Card 2 occupies the second System Line division, between the first and second internal System Lines.
-* Card 3 occupies the remaining two System Line divisions, between the second internal System Line and the right outer System Line.
+* Card 3 occupies the third System Line division, between the second and third internal System Lines.
+* The fourth System Line division remains unused.
 * Each Card edge is inset from its bounding System Line by half of the global `M` (`24px`) Desktop Gutter: `12px`.
 * All three Cards have a minimum height of `360px` and may grow when future content requires additional height.
 
@@ -1084,7 +1085,7 @@ Contains, in document order:
 
 * Card 1 and Card 2 form the first row, occupy one System Line division each, and use equal widths.
 * Their outer edges use the global `16px` content distance from the outer System Lines, and their adjoining edges use half of the global `M` (`24px`) Tablet Gutter: `12px` from the center System Line. The gap between the Cards is therefore `24px`.
-* Card 3 forms the second row and spans the complete area between the two outer System Lines, preserving its `S` (`16px`) inset from each outer line.
+* Card 3 forms the second row and occupies its left System Line division only. The right System Line division remains unused.
 * Card 1 and Card 2 have a minimum height of `320px`; Card 3 has a minimum height of `360px`. Each Card may grow when future content requires additional height.
 * `S` (`16px`) separates the two Card rows.
 
@@ -1092,7 +1093,7 @@ Contains, in document order:
 
 * Card 1, Card 2, and Card 3 form one vertical stack in that order.
 * All three Cards span the complete area between the two outer System Lines, preserving their `S` (`16px`) inset from each outer line.
-* Card 1 and Card 2 have a minimum height of `220px`; Card 3 has a minimum height of `440px`. Each Card may grow when future content requires additional height.
+* All three Cards have a minimum height of `220px` and may grow when their content requires additional height.
 * `S` (`16px`) separates adjacent Cards.
 
 ## Section CTA
