@@ -1066,20 +1066,20 @@ Contains, in document order:
 * The progress display contains three horizontal marks. The active mark uses global `Brand Green Dark`; inactive marks use the global `Text Muted` color.
 * The Step photograph renders beneath a responsive green overlay.
 * On Mobile, the overlay runs from top to bottom: `#123527` at approximately `88%` opacity at `0%`, full opaque `#123527` by `40%`, and full opaque `#123527` from `40%` through `100%`.
-* On Tablet and Desktop, the overlay runs from left to right: full opaque `#123527` from `0%` through `60%`, followed by a gradual fade from `60%` to `#123527cc` (approximately `80%` opacity) at `100%`.
+* On Tablet and Desktop, the overlay runs from left to right: full opaque `#123527` from `0%` through `60%`, followed by a gradual fade from `60%` to `#123527` at `80%` opacity at `100%`.
 
 #### Dimensions and Alignment
 
 * Spans the complete width of the Interactive Process.
-* Uses `min-height: 300px` across all Breakpoints. The actual height is determined by the active Step content and may exceed `300px` when required.
+* The Active Step Visual has a minimum height of `300px` across all Breakpoints. The actual height is determined by the active Step content and may exceed `300px` when required.
 * Inactive Steps do not determine or reserve the visual's height, and the tallest Step is not calculated or measured.
 * Sizing does not use JavaScript.
 * Height changes are not animated.
 * On Desktop and Tablet, the complete Step content block is positioned at the center-left of the visual, vertically centered and left-aligned.
 * On Mobile, the complete Step content block remains left-aligned.
 * The Step content block uses a maximum width of `40%` of the visual on Desktop, `60%` on Tablet, and the available internal content width on Mobile.
-* On Desktop and Tablet, each Step photograph uses `background-size: contain` and `background-position: 100%`.
-* On Mobile, each Step photograph uses `background-size: cover` and `background-position: 68% 40%`.
+* On Desktop and Tablet, the complete Step photograph remains visible without distortion, fits within the visual without cropping, and aligns to the right edge and vertical center.
+* On Mobile, each Step photograph fills the complete visual without distortion; cropping is permitted, with its focal placement positioned `68%` horizontally from the left edge and `40%` vertically from the top edge.
 * Uses `L` (`32px`) internal padding on Desktop and Tablet.
 * On Mobile, the Step content uses `M` (`24px`) top and horizontal padding and `XL` (`48px`) bottom padding.
 * The progress display is horizontally centered and positioned `S` (`16px`) from the bottom edge of the visual across all Breakpoints.
