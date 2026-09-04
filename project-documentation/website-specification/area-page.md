@@ -1075,6 +1075,8 @@ Contains, in document order:
 * On Desktop and Tablet, the complete Step content block is positioned at the center-left of the visual, vertically centered and left-aligned.
 * On Mobile, the complete Step content block remains left-aligned.
 * The Step content block uses a maximum width of `40%` of the visual on Desktop, `60%` on Tablet, and the available internal content width on Mobile.
+* On Desktop and Tablet, each Step photograph uses `background-size: contain` and `background-position: 100%`.
+* On Mobile, each Step photograph uses `background-size: cover` and `background-position: 68% 40%`.
 * Uses `L` (`32px`) internal padding on Desktop and Tablet.
 * On Mobile, the Step content uses `M` (`24px`) top and horizontal padding and `XL` (`48px`) bottom padding.
 * The progress display is horizontally centered and positioned `S` (`16px`) from the bottom edge of the visual across all Breakpoints.

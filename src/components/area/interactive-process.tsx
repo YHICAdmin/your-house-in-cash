@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  type CSSProperties,
   type FocusEvent,
   type KeyboardEvent,
   useEffect,
@@ -15,16 +16,19 @@ const steps = [
   {
     description:
       "Share a few basic details about your property and your situation.",
+    image: "/images/how-it-works/step-1.png",
     title: "Tell us about your house",
   },
   {
     description:
       "We’ll review your property details and give you a fair, no-obligation cash offer.",
+    image: "/images/how-it-works/step-2.png",
     title: "Get your cash offer",
   },
   {
     description:
       "Pick the closing date that works best for you, and we’ll handle the rest.",
+    image: "/images/how-it-works/step-3.png",
     title: "Choose your closing date",
   },
 ] as const;
@@ -104,6 +108,11 @@ export function InteractiveProcess({ headingId }: InteractiveProcessProps) {
     >
       <div
         className={styles.visual}
+        style={
+          {
+            "--active-step-image": `url("${currentStep.image}")`,
+          } as CSSProperties
+        }
         onMouseEnter={() => setVisualHovered(true)}
         onMouseLeave={() => setVisualHovered(false)}
       >

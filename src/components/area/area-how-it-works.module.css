@@ -34,7 +34,17 @@
   width: 100%;
   overflow: hidden;
   border-radius: var(--radius-large);
-  background: #123527;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgb(18 53 39 / 88%) 0%,
+      #123527 40%,
+      #123527 100%
+    ),
+    var(--active-step-image, none);
+  background-position: center, 68% 40%;
+  background-repeat: no-repeat;
+  background-size: cover, cover;
 }
 
 .panel {
@@ -149,6 +159,19 @@
 @media (min-width: 768px) {
   .process {
     margin-top: var(--spacing-xl);
+  }
+
+  .visual {
+    background-image:
+      linear-gradient(
+        to right,
+        #123527 0%,
+        #123527 60%,
+        #123527cc 100%
+      ),
+      var(--active-step-image, none);
+    background-position: center, 100%;
+    background-size: cover, contain;
   }
 
   .panel {
