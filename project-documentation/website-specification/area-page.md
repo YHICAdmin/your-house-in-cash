@@ -1122,9 +1122,9 @@ Contains three selectors in this order:
 #### Visual Design
 
 * The selectors use no background, Border, Radius, Shadow, or Card treatment.
-* All selectors use the global `Body` typography.
-* The active selector uses global `Brand Green` text and a centered `2px` Brand Green indicator line above the label with a width of `M` (`24px`).
-* Inactive selectors use global `Text Muted` color and do not display the active indicator line.
+* All selectors use the global `Button` typography.
+* The active selector uses global `Brand Green` text.
+* Inactive selectors use global `Text Secondary` color.
 * Inactive selectors retain the same visual treatment on Hover and display a pointer cursor.
 
 #### Dimensions and Alignment
@@ -1138,7 +1138,6 @@ Contains three selectors in this order:
 
 * `S` (`16px`) separates the Active Step Visual from the Step Selectors.
 * `XS` (`8px`) separates adjacent selector segments.
-* `XS` (`8px`) separates the active indicator line from its selector label.
 * `L` (`32px`) separates the Step Selectors from the Section CTA.
 
 #### Interaction

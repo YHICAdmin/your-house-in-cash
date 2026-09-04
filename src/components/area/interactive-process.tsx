@@ -163,7 +163,7 @@ export function InteractiveProcess({ headingId }: InteractiveProcessProps) {
                 tabRefs.current[index] = element;
               }}
               id={`how-it-works-tab-${index + 1}`}
-              className={`${styles.selector}${isActive ? ` ${styles.activeSelector}` : ""} text-body`}
+              className={`${styles.selector}${isActive ? ` ${styles.activeSelector}` : ""} text-button`}
               type="button"
               role="tab"
               aria-controls={panelId}
