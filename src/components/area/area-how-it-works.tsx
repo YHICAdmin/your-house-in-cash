@@ -1,4 +1,11 @@
-import { BadgeDollarSign, CalendarCheck, Cog, House } from "lucide-react";
+import Image from "next/image";
+import {
+  BadgeDollarSign,
+  CalendarCheck,
+  CircleCheck,
+  Cog,
+  House,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { IconContainer } from "@/components/ui/icon-container";
 import { SectionLabel } from "@/components/ui/section-label";
@@ -45,28 +52,51 @@ export function AreaHowItWorks() {
           </p>
         </div>
 
-        <ol className={styles.processCards}>
-          {processCards.map((card) => (
-            <li key={card.title} className={styles.processCard}>
-              <div className={styles.cardMeta}>
-                <IconContainer
-                  icon={card.icon}
-                  size="large"
-                  aria-hidden="true"
-                />
-                <span className={`${styles.cardEyebrow} text-label`}>
-                  {card.eyebrow}
+        <div className={styles.processComposition}>
+          <ol className={styles.processCards}>
+            {processCards.map((card) => (
+              <li key={card.title} className={styles.processCard}>
+                <div className={styles.cardMeta}>
+                  <IconContainer
+                    icon={card.icon}
+                    size="large"
+                    aria-hidden="true"
+                  />
+                  <span className={`${styles.cardEyebrow} text-label`}>
+                    {card.eyebrow}
+                  </span>
+                </div>
+                <h3 className={`${styles.cardTitle} text-heading-3`}>
+                  {card.title}
+                </h3>
+                <p className={`${styles.cardBody} text-body-small`}>
+                  {card.body}
+                </p>
+              </li>
+            ))}
+          </ol>
+
+          <div className={styles.closingVisual}>
+            <Image
+              className={styles.closingImage}
+              src="/images/area-hero/sold.png"
+              alt=""
+              fill
+              sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+            />
+            <div className={styles.statusCard}>
+              <IconContainer icon={CircleCheck} aria-hidden="true" />
+              <div className={styles.statusText}>
+                <span className={`${styles.statusEyebrow} text-label`}>
+                  READY TO CLOSE
+                </span>
+                <span className={`${styles.statusMessage} text-body-small`}>
+                  On your timeline
                 </span>
               </div>
-              <h3 className={`${styles.cardTitle} text-heading-3`}>
-                {card.title}
-              </h3>
-              <p className={`${styles.cardBody} text-body-small`}>
-                {card.body}
-              </p>
-            </li>
-          ))}
-        </ol>
+            </div>
+          </div>
+        </div>
 
         <div className={styles.cta}>
           <Button href="/get-cash-offer">Get My Cash Offer</Button>

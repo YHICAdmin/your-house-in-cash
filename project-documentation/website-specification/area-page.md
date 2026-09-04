@@ -1077,7 +1077,6 @@ Contains, in document order:
 * Card 1 occupies the first System Line division, between the left outer System Line and the first internal System Line.
 * Card 2 occupies the second System Line division, between the first and second internal System Lines.
 * Card 3 occupies the third System Line division, between the second and third internal System Lines.
-* The fourth System Line division remains unused.
 * Each Card edge is inset from its bounding System Line by half of the global `M` (`24px`) Desktop Gutter: `12px`.
 * All three Cards have a minimum height of `360px` and may grow when future content requires additional height.
 
@@ -1085,7 +1084,7 @@ Contains, in document order:
 
 * Card 1 and Card 2 form the first row, occupy one System Line division each, and use equal widths.
 * Their outer edges use the global `16px` content distance from the outer System Lines, and their adjoining edges use half of the global `M` (`24px`) Tablet Gutter: `12px` from the center System Line. The gap between the Cards is therefore `24px`.
-* Card 3 forms the second row and occupies its left System Line division only. The right System Line division remains unused.
+* Card 3 forms the second row and occupies its left System Line division only.
 * Card 1 and Card 2 have a minimum height of `320px`; Card 3 has a minimum height of `360px`. Each Card may grow when future content requires additional height.
 * `S` (`16px`) separates the two Card rows.
 
@@ -1095,6 +1094,57 @@ Contains, in document order:
 * All three Cards span the complete area between the two outer System Lines, preserving their `S` (`16px`) inset from each outer line.
 * All three Cards have a minimum height of `220px` and may grow when their content requires additional height.
 * `S` (`16px`) separates adjacent Cards.
+
+## Closing Visual
+
+### Content
+
+* Uses the canonical photograph `/images/area-hero/sold.png`, showing a homeowner holding house keys in front of the sold property.
+* Contains one floating Status Card with, in document order:
+  1. Canonical Lucide `CircleCheck` icon.
+  2. Eyebrow: `READY TO CLOSE`.
+  3. Status message: `On your timeline`.
+
+### Component and Semantics
+
+* The Closing Visual is a separate visual payoff after the three Process Cards and is not a fourth Step.
+* The status Card is informational and non-interactive.
+* The status icon uses the documented `Icon Container` Component at its Default size.
+
+### Visual Design
+
+* The photograph fills the complete Closing Visual without distortion and may crop as needed, with its focal placement centered to preserve the homeowner, keys, and relevant sold-property context.
+* The Closing Visual uses the global `Large` Radius (`16px`) and clips the photograph to that Radius.
+* The floating Status Card uses the global Surface background, Medium Radius (`12px`), and Floating Shadow.
+* The status eyebrow uses the global `Label` typography and Brand Green Dark color.
+* The status message uses the global `Body Small` typography and Text Primary color.
+
+### Dimensions and Alignment
+
+* The Closing Visual uses the same responsive System-Line alignment model as the Process Cards and Review Cards.
+* The floating Status Card is positioned at the bottom-right of the Closing Visual with an `S` (`16px`) inset from both edges.
+* The Status Card uses `S` (`16px`) internal padding, and `XS` (`8px`) separates the Icon Container from the status text group.
+* The status text group is left-aligned, and its two text lines form a vertical stack.
+
+#### Desktop
+
+* The Closing Visual occupies the fourth System Line division, directly after Card 3 in the same row.
+* It uses the same `360px` minimum height as the three Process Cards and may grow with its row.
+
+#### Tablet
+
+* The Closing Visual occupies the right System Line division of the second row, directly beside Card 3.
+* It uses the same `360px` minimum height as Card 3 and may grow with its row.
+
+#### Mobile
+
+* The Closing Visual appears after Card 3 in the vertical stack.
+* It uses the same width, horizontal alignment, `220px` minimum height, and `S` (`16px`) vertical separation as the Process Cards.
+
+### Accessibility
+
+* The photograph is decorative because the Step 3 copy and visible Status Card communicate the completed-sale and customer-timeline meaning; it uses empty alternative text.
+* The `CircleCheck` icon is decorative because the visible Status Card text communicates the same completion meaning.
 
 ## Section CTA
 
