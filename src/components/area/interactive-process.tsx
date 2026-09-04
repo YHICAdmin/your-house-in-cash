@@ -136,14 +136,18 @@ export function InteractiveProcess({ headingId }: InteractiveProcessProps) {
           </div>
         </div>
 
-        <span className={styles.progressIndicators} aria-hidden="true">
+        <div className={styles.progressIndicators}>
           {steps.map((step, index) => (
-            <span
+            <button
               key={step.title}
               className={`${styles.progressMark}${index === activeStep ? ` ${styles.activeProgressMark}` : ""}`}
+              type="button"
+              aria-label={`Show Step ${index + 1}`}
+              aria-pressed={index === activeStep}
+              onClick={() => selectStep(index)}
             />
           ))}
-        </span>
+        </div>
       </div>
 
       <div

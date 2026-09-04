@@ -78,21 +78,33 @@
 
 .progressIndicators {
   position: absolute;
-  bottom: var(--spacing-s);
+  bottom: var(--spacing-xs);
   left: 50%;
   z-index: 2;
   display: flex;
-  gap: var(--spacing-xs);
   transform: translateX(-50%);
 }
 
 .progressMark {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.progressMark::before {
   width: var(--spacing-s);
   height: 2px;
   background: var(--color-background);
+  transform: translateY(3px);
+  content: "";
 }
 
-.activeProgressMark {
+.activeProgressMark::before {
   background: var(--color-brand-dark);
 }
 

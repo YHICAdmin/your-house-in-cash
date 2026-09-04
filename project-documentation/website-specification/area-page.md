@@ -1048,12 +1048,13 @@ Contains, in document order:
   1. Step identification: `Step 1`; title: `Tell us about your house`; description: `Share a few basic details about your property and your situation.`; canonical photograph: `/images/how-it-works/step-1.png`.
   2. Step identification: `Step 2`; title: `Get your cash offer`; description: `We’ll review your property details and give you a fair, no-obligation cash offer.`; canonical photograph: `/images/how-it-works/step-2.png`.
   3. Step identification: `Step 3`; title: `Choose your closing date`; description: `Pick the closing date that works best for you, and we’ll handle the rest.`; canonical photograph: `/images/how-it-works/step-3.png`.
-* A three-mark progress display reflects the currently active Step within the Active Step Visual.
+* Three Step indicator controls appear within the Active Step Visual, with one control corresponding to each Step.
 
 #### Component and Semantics
 
 * The active Step content uses tab-panel semantics and is associated with its selected Step tab.
 * The active Step title uses `H3` semantics.
+* Each Step indicator control uses native button semantics.
 
 #### Visual Design
 
@@ -1063,7 +1064,7 @@ Contains, in document order:
 * The Step title uses the global `H3` typography.
 * The Step description uses the global `Body Large` typography.
 * The visual uses the global `Large` Radius.
-* The progress display contains three horizontal marks. The active mark uses global `Brand Green Dark`; inactive marks use global `Background` (`#FFFFFF`).
+* Each Step indicator control displays one horizontal mark. The active mark uses global `Brand Green Dark`; inactive marks use global `Background` (`#FFFFFF`).
 * The Step photograph renders beneath a responsive green overlay.
 * On Mobile, the overlay runs from top to bottom: `#123527` at approximately `88%` opacity at `0%`, full opaque `#123527` by `40%`, and full opaque `#123527` from `40%` through `100%`.
 * On Tablet and Desktop, the overlay runs from left to right: full opaque `#123527` from `0%` through `60%`, followed by a gradual fade from `60%` to `#123527` at `80%` opacity at `100%`.
@@ -1082,14 +1083,15 @@ Contains, in document order:
 * On Mobile, each Step photograph fills the complete visual without distortion; cropping is permitted, with its focal placement positioned `68%` horizontally from the left edge and `40%` vertically from the top edge.
 * Uses `L` (`32px`) internal padding on Desktop and Tablet.
 * On Mobile, the Step content uses `M` (`24px`) top and horizontal padding and `XL` (`48px`) bottom padding.
-* The progress display is horizontally centered and positioned `S` (`16px`) from the bottom edge of the visual across all Breakpoints.
-* Each progress mark is `S` (`16px`) wide and `2px` thick.
+* The Step indicator control group is horizontally centered across all Breakpoints.
+* Each Step indicator control uses a `24px × 24px` interactive area while preserving a visible mark that is `S` (`16px`) wide and `2px` thick.
+* The visible marks remain positioned `S` (`16px`) from the bottom edge of the visual across all Breakpoints.
 
 #### Spacing
 
 * `XS` (`8px`) separates Step identification from the Step title.
 * `S` (`16px`) separates the Step title from the Step description.
-* `XS` (`8px`) separates adjacent progress marks.
+* `XS` (`8px`) separates adjacent visible indicator marks.
 
 #### Interaction
 
@@ -1100,7 +1102,8 @@ Contains, in document order:
 
 * Each Step photograph is decorative because the associated Step text communicates the complete process information.
 * When reduced motion is preferred, Step changes occur immediately without animation.
-* The progress display is decorative, is hidden from assistive technologies, and does not receive keyboard focus.
+* The three Step indicator controls use the accessible names `Show Step 1`, `Show Step 2`, and `Show Step 3`, respectively.
+* Each Step indicator control exposes whether its corresponding Step is active through its pressed state.
 
 ### Step Selectors
 
@@ -1148,13 +1151,14 @@ Contains three selectors in this order:
 ### Interaction
 
 * Selecting a Step updates the Active Step Visual to display the associated Step content.
-* The decorative progress display updates with the active Step and does not provide interaction.
+* Selecting a Step indicator control activates its corresponding Step through the same active-Step state used by the Step Selectors.
+* The Step indicator controls and Step Selectors update together to reflect the active Step.
 * `Step 1` is initially active.
 * Each Step remains active for `6 seconds` before progression advances to the next Step.
 * After `Step 3`, progression returns to `Step 1` and continues looping.
 * Automatic progression pauses while the Active Step Visual or any Step selector is hovered or keyboard-focused.
 * When Hover or keyboard focus ends, a new `6-second` interval begins for the currently active Step before progression continues.
-* Activating any Step selector stops automatic progression for the remainder of the current page visit. The selected Step remains active until another Step is selected.
+* Activating any Step selector or Step indicator control stops automatic progression for the remainder of the current page visit. The selected Step remains active until another Step is selected.
 
 ### Accessibility
 
