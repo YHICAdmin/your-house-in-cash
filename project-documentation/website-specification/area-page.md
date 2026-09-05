@@ -882,7 +882,7 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 #### Dimensions and Alignment
 
 * Each Review Card uses `M` (`24px`) internal padding on all sides across all Breakpoints.
-* Each Review Card uses an equal `S` (`16px`) horizontal inset from both System Lines that bound its System Line division across all Breakpoints, including outer and internal System Lines.
+* Each Review Card aligns with the canonical Grid content edges within its System Line division and inherits the applicable global Grid and System Line geometry at each Breakpoint.
 * All Review Cards use a uniform fixed height of `320px` across all Breakpoints.
 * The top row spans the available card width, with the five-star rating aligned left and the `Quote` icon aligned right; both are vertically center-aligned.
 * Review Text displays a maximum of four lines across all Breakpoints and truncates overflow with an ellipsis (`…`).
