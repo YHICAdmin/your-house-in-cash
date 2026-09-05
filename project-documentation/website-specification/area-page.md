@@ -292,6 +292,10 @@ Provide the seller with a clear path to begin the conversion process.
 * The line break after `Cleveland` is preserved.
 * Preserves the same content across all Area Pages.
 
+### Component and Semantics
+
+* The Primary Headline uses paragraph semantics rather than semantic heading semantics.
+
 ### Visual Design
 
 * The portrait fills its crop without distortion and uses a circular crop with the global Pill Radius.
