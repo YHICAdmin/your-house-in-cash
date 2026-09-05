@@ -710,6 +710,10 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 * Text: `Customer Reviews`.
 * Includes the Lucide `Star` icon.
 
+### Component and Semantics
+
+* Uses the documented `Section Label` Component.
+
 ### Spacing After
 
 * `16px` (`S`) across all Breakpoints.
