@@ -41,6 +41,7 @@ Provide the seller with a clear path to begin the conversion process.
 * The content area occupies Grid Columns `1–6`.
 * Grid Column `7` remains empty between the content and media areas.
 * The media area occupies Grid Columns `8–12`.
+* The content area and media area are vertically center-aligned within their shared Grid row.
 * The media area contains the `Local Images` and `Local Trust Card`.
 
 ### Tablet
