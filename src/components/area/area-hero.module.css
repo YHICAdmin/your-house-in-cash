@@ -134,7 +134,7 @@
   width: 100%;
   flex-direction: column;
   gap: var(--spacing-xs);
-  margin: 3.6969% auto 0;
+  margin: var(--spacing-s) auto 0;
   padding: var(--spacing-s);
   border-radius: var(--radius-medium);
   background: var(--color-surface);

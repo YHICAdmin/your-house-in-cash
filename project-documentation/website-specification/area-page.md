@@ -310,7 +310,7 @@ Provide the seller with a clear path to begin the conversion process.
 * All text is left-aligned within the text block.
 * The supporting text appears beneath the primary headline with an `8px` (`XS`) vertical gap.
 * The card is centered beneath the Left and Right Images.
-* At the approved Desktop reference size, approximately `20px` of vertical space separates the images' shared bottom edge from the card.
+* `S` (`16px`) of vertical space separates the images' shared bottom edge from the card across all Breakpoints.
 
 ### Accessibility
 
@@ -320,7 +320,6 @@ Provide the seller with a clear path to begin the conversion process.
 
 * The full-width card and horizontal portrait-and-text arrangement remain unchanged across all Breakpoints.
 * Text wraps naturally when required by the available width while preserving the explicit line breaks after `Reliable.` and `Cleveland`.
-* At narrower widths, the vertical space between the Local Images and card scales proportionally with the Local Images row width.
 
 # Situations — Situations We Can Help With
 
