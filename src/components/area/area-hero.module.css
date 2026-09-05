@@ -130,10 +130,7 @@
 }
 
 .trustCard {
-  display: flex;
   width: 100%;
-  flex-direction: column;
-  gap: var(--spacing-xs);
   margin: var(--spacing-s) auto 0;
   padding: var(--spacing-s);
   border-radius: var(--radius-medium);
