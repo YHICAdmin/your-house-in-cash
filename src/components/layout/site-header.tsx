@@ -246,7 +246,10 @@ export function SiteHeader() {
           inert={!isMenuOpen}
         >
           <div className={styles.menuContent}>
-            <nav className={styles.menuNavigation} aria-label="Menu navigation">
+            <nav
+              className={`${styles.menuNavigation} content-inset`}
+              aria-label="Menu navigation"
+            >
               {navigationItems.map((item, index) => (
                 <Link
                   ref={index === 0 ? firstMenuItemRef : undefined}
@@ -259,7 +262,7 @@ export function SiteHeader() {
               ))}
             </nav>
             <PhoneContact placement="menu" />
-            <div className={styles.menuCta}>
+            <div className={`${styles.menuCta} content-inset`}>
               <Button href="/get-cash-offer">Get My Cash Offer</Button>
             </div>
           </div>

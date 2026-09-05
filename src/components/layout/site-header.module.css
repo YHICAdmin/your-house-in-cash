@@ -170,13 +170,6 @@
   transition-timing-function: ease-out;
 }
 
-.menuNavigation,
-.menuCta {
-  width: var(--layout-content-width);
-  margin-inline: auto;
-  padding-inline: var(--content-inset);
-}
-
 .menuContent {
   display: flex;
   min-height: 100%;
