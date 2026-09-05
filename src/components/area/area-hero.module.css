@@ -90,7 +90,6 @@
   position: relative;
   grid-column: 1 / -1;
   width: 100%;
-  max-width: 541px;
   margin-top: var(--spacing-xl);
 }
 
