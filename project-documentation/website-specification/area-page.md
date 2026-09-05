@@ -248,9 +248,9 @@ Provide the seller with a clear path to begin the conversion process.
 * The images provide general residential context and must not imply that they depict the named city.
 * The currently selected image assets are temporary and will later be replaced by three final shared images.
 * The final images retain the same asset paths, Aspect Ratios, composition geometry, and responsive behavior.
-* Left Image temporary asset path: `/images/area-hero/local-left.webp`.
-* Top-Right Image temporary asset path: `/images/area-hero/local-right.webp`.
-* Bottom-Right Image temporary asset path: `/images/area-hero/local-bottom.webp`.
+* Left Image temporary asset path: `/images/area-hero/local-left.png`.
+* Top-Right Image temporary asset path: `/images/area-hero/local-right.png`.
+* Bottom-Right Image temporary asset path: `/images/area-hero/local-bottom.png`.
 
 ### Visual Design
 
