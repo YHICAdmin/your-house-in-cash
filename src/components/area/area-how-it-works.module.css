@@ -1,3 +1,7 @@
+.layout {
+  row-gap: 0;
+}
+
 .intro,
 .processComposition,
 .cta {
@@ -9,6 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: var(--spacing-s);
 }
 
 .heading {
@@ -26,6 +31,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   row-gap: var(--spacing-s);
+  margin-bottom: var(--spacing-s);
 }
 
 .processCards {
@@ -126,6 +132,11 @@
 }
 
 @media (min-width: 768px) {
+  .intro,
+  .processComposition {
+    margin-bottom: var(--spacing-m);
+  }
+
   .processComposition {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: var(--process-cards-gap);

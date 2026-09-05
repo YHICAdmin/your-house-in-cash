@@ -1037,6 +1037,11 @@ Contains, in document order:
 * `S` (`16px`) separates the Section Label from the Primary Headline.
 * `M` (`24px`) separates the Primary Headline from the Supporting Copy.
 
+### Spacing After
+
+* `M` (`24px`) on Desktop and Tablet.
+* `S` (`16px`) on Mobile.
+
 ## Process Cards
 
 ### Composition
@@ -1148,6 +1153,11 @@ Contains, in document order:
 
 * The Closing Visual appears after Card 3 in the vertical stack.
 * It uses the same width, horizontal alignment, `220px` minimum height, and `S` (`16px`) vertical separation as the Process Cards.
+
+### Spacing After
+
+* `M` (`24px`) separates the complete process composition from the Section CTA on Desktop and Tablet.
+* `S` (`16px`) separates the complete process composition from the Section CTA on Mobile.
 
 ### Accessibility
 

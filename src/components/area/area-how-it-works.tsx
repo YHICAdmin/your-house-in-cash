@@ -34,7 +34,7 @@ export function AreaHowItWorks() {
       className="section-spacing system-lines-bg"
       aria-labelledby={headingId}
     >
-      <div className="content-grid">
+      <div className={`${styles.layout} content-grid`}>
         <div className={styles.intro}>
           <SectionLabel icon={Cog}>How It Works</SectionLabel>
           <h2 id={headingId} className={`${styles.heading} text-heading-2`}>
