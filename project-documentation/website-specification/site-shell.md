@@ -52,17 +52,18 @@ Provide clear, accessible navigation.
 * Contains the Desktop Navigation.
 * The Desktop Navigation contains the Shared Navigation Links.
 
-#### Tablet
+#### Tablet and Mobile
 
 * Contains the Menu Control.
 * The Menu Control displays three horizontal lines when closed and an `X` when open.
+
+#### Tablet
+
 * When opened, the Open Menu Panel contains the Menu Navigation.
 * The Menu Navigation contains the Shared Navigation Links.
 
 #### Mobile
 
-* Contains the Menu Control.
-* The Menu Control displays three horizontal lines when closed and an `X` when open.
 * When opened, the Open Menu Panel contains:
 
   1. Menu Navigation containing the Shared Navigation Links.
