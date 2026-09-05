@@ -242,7 +242,7 @@ export function SituationExplorer({
         </p>
       </div>
 
-      <p className={styles.announcement} aria-live="polite" aria-atomic="true">
+      <p className="visually-hidden" aria-live="polite" aria-atomic="true">
         {announcement}
       </p>
     </>

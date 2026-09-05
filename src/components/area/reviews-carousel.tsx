@@ -248,7 +248,7 @@ export function ReviewsCarousel({ headingId }: ReviewsCarouselProps) {
         </button>
       </div>
 
-      <span className={styles.visuallyHidden} role="status" aria-live="polite">
+      <span className="visually-hidden" role="status" aria-live="polite">
         {announcement}
       </span>
     </div>

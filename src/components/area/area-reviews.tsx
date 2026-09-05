@@ -12,7 +12,7 @@ const reviewCount = 127;
 function GoogleRating() {
   return (
     <p className={styles.googleRating}>
-      <span className={styles.visuallyHidden}>
+      <span className="visually-hidden">
         Google rating: {rating} out of 5 based on {reviewCount} reviews.
       </span>
       <span className={styles.ratingVisual} aria-hidden="true">
