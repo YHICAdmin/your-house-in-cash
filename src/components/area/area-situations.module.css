@@ -31,11 +31,11 @@
   grid-column: 1 / -1;
   flex-wrap: nowrap;
   gap: var(--spacing-xs);
-  margin: -3px -3px calc(var(--spacing-l) - 3px);
-  padding: 3px;
+  margin: -5px -5px calc(var(--spacing-l) - 5px);
+  padding: 5px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  scroll-padding-inline: 3px;
+  scroll-padding-inline: 5px;
 }
 
 .option {
@@ -161,7 +161,7 @@
   }
 
   .selector {
-    margin-bottom: calc(var(--spacing-xl) - 3px);
+    margin-bottom: calc(var(--spacing-xl) - 5px);
   }
 
   .selectedContent {
@@ -187,7 +187,9 @@
     flex-direction: column;
     gap: var(--spacing-xs);
     margin: 0;
+    padding: 3px;
     overflow: visible;
+    scroll-padding-inline: 3px;
   }
 
   .selectedContent {
