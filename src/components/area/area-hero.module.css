@@ -5,6 +5,7 @@
 
 .layout {
   align-items: center;
+  row-gap: 0;
 }
 
 .content {
