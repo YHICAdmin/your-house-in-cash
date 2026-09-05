@@ -22,7 +22,10 @@ const benefits = [
 
 export function AreaHero({ city }: AreaHeroProps) {
   return (
-    <section className={styles.hero} aria-labelledby="area-hero-heading">
+    <section
+      className={`${styles.hero} section-spacing`}
+      aria-labelledby="area-hero-heading"
+    >
       <div className={`${styles.layout} content-grid`}>
         <div className={styles.content}>
           <SectionLabel icon={MapPin}>{`${city}, Ohio`}</SectionLabel>
