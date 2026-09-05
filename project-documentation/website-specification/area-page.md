@@ -1038,24 +1038,25 @@ Contains, in document order:
 
 ### Content
 
-1. Card 1: canonical Lucide `House` icon; eyebrow `A FEW MINUTES`; title `Tell Us About Your House`; Body Copy: `We take the time to understand your situation, learn about your property, and discuss your needs. You do not need to prepare the house, make repairs, or have every answer ready. We just want to understand what is going on and what would make a sale work for you.`
-2. Card 2: canonical Lucide `BadgeDollarSign` icon; eyebrow `NO OBLIGATION`; title `Get Your Cash Offer`; Body Copy: `We review the information you shared, take a closer look at the property, and put together a fair, no-obligation cash offer. We explain the offer clearly so you can decide whether it works for your situation. There are no fees and no pressure to move forward.`
-3. Card 3: canonical Lucide `CalendarCheck` icon; eyebrow `YOUR TIMELINE`; title `Choose Your Closing Date`; Body Copy: `If the offer works for you, you choose when you want to close. Whether you need to move quickly or need additional time, we work around your schedule and handle the details needed to complete the sale. Once closing is complete, you can move forward on your timeline.`
+1. Card 1: Step number `01`; eyebrow `A FEW MINUTES`; title `Tell Us About Your House`; Body Copy: `We take the time to understand your situation, learn about your property, and discuss your needs. You do not need to prepare the house, make repairs, or have every answer ready. We just want to understand what is going on and what would make a sale work for you.`
+2. Card 2: Step number `02`; eyebrow `NO OBLIGATION`; title `Get Your Cash Offer`; Body Copy: `We review the information you shared, take a closer look at the property, and put together a fair, no-obligation cash offer. We explain the offer clearly so you can decide whether it works for your situation. There are no fees and no pressure to move forward.`
+3. Card 3: Step number `03`; eyebrow `YOUR TIMELINE`; title `Choose Your Closing Date`; Body Copy: `If the offer works for you, you choose when you want to close. Whether you need to move quickly or need additional time, we work around your schedule and handle the details needed to complete the sale. Once closing is complete, you can move forward on your timeline.`
 
 ### Component and Semantics
 
 * The Card collection uses ordered-list semantics, and each Card uses list-item semantics.
 * The Step Title uses `H3` semantics.
-* Each Step icon uses the documented `Icon Container` Component at its Large size.
-* Each Step icon is decorative because the associated Step Title communicates the same meaning.
+* Each Step number is plain text within a local circular treatment and does not use the `Icon Container` Component or icon semantics.
+* The visible Step number is decorative for assistive technologies because the ordered-list semantics communicate the same sequence.
 
 ### Visual Design
 
 * All three Cards use the Section-specific background color `#123527`.
 * All three Cards use the global `Large` Radius (`16px`).
 * The Cards do not use a Border, Shadow, photograph, Gradient, or other decorative treatment.
+* The Step number uses the global `H4` typography, the Section-specific `#123527` color, and a Brand Green Light circular background.
 * The eyebrow uses the global `Label` typography, uppercase content, and Brand Green Light color.
-* The Step Title uses the global `H3` typography and `#FFFFFF` color.
+* The Step Title uses the global `H4` typography and `#FFFFFF` color.
 * The Body Copy uses the global `Body Small` typography and Brand Green Light color.
 
 ### Dimensions and Alignment
@@ -1064,7 +1065,8 @@ Contains, in document order:
 * The Card geometry derives directly from the global content Grid and a `M` (`24px`) horizontal Card gap without per-Card positions, widths, margins, or corrections.
 * Each Card uses `M` (`24px`) internal padding on all sides across all Breakpoints.
 * All Card content is left-aligned.
-* The Step icon and eyebrow form one horizontal Top Meta Row, align to opposite sides of the available Card content width, and align vertically at the top.
+* The Step number and eyebrow form one horizontal Top Meta Row, align to opposite sides of the available Card content width, and align vertically at the top.
+* The Step number's circular treatment uses `48px × 48px` dimensions and the global `Pill` Radius across all Breakpoints.
 
 ### Spacing
 

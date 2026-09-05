@@ -57,6 +57,18 @@
   gap: var(--spacing-s);
 }
 
+.stepNumber {
+  display: inline-flex;
+  width: var(--spacing-xl);
+  height: var(--spacing-xl);
+  flex: 0 0 var(--spacing-xl);
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-light);
+  color: #123527;
+}
+
 .cardEyebrow {
   color: var(--color-brand-light);
   text-align: right;
