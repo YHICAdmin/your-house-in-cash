@@ -259,12 +259,12 @@ Provide the seller with a clear path to begin the conversion process.
 
 ### Dimensions and Alignment
 
-* At the approved Desktop reference size, the complete image mosaic is `541px × 328px`.
-* The Left Image is positioned on the left, measures `271px × 328px`, occupies `50.0924%` of the mosaic width, and spans `100%` of its height.
-* The Top-Right Image is positioned to the right of the Left Image, measures `250px × 154px`, occupies `46.2107%` of the mosaic width and `46.9512%` of its height, and aligns with the mosaic's top edge.
-* The Bottom-Right Image is positioned directly beneath the Top-Right Image, uses the same `250px × 154px` dimensions and proportions, and aligns with the mosaic's bottom edge.
-* The horizontal gap between the Left Image and both right-side images is `3.6969%` of the mosaic width, approximately `20px` at the Desktop reference size.
-* The vertical gap between the Top-Right and Bottom-Right Images is `6.0976%` of the mosaic height, `20px` at the Desktop reference size.
+* The complete image mosaic fills the available Grid Columns `8–12` media area and preserves a `541:328` Aspect Ratio.
+* The Left Image is positioned on the left, occupies `50.0924%` of the mosaic width, and spans `100%` of its height.
+* The Top-Right Image is positioned to the right of the Left Image, occupies `46.2107%` of the mosaic width and `46.9512%` of its height, and aligns with the mosaic's top edge.
+* The Bottom-Right Image is positioned directly beneath the Top-Right Image, uses the same proportions, and aligns with the mosaic's bottom edge.
+* The horizontal gap between the Left Image and both right-side images is `3.6969%` of the mosaic width.
+* The vertical gap between the Top-Right and Bottom-Right Images is `6.0976%` of the mosaic height.
 * The combined height of the two right-side images and their vertical gap equals the full height of the Left Image.
 * The mosaic has no additional outer padding.
 
