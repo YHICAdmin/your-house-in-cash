@@ -1069,7 +1069,7 @@ Contains, in document order:
 
 ### Dimensions and Alignment
 
-* The Card collection uses the same responsive System-Line alignment model as the Review Card collection.
+* Each Process Card aligns with the canonical Grid content edges within its System Line division and inherits the applicable global Grid and System Line geometry at each Breakpoint.
 * The Card geometry derives directly from the global content Grid and a `M` (`24px`) horizontal Card gap without per-Card positions, widths, margins, or corrections.
 * Each Card uses `M` (`24px`) internal padding on all sides across all Breakpoints.
 * All Card content is left-aligned.
@@ -1087,13 +1087,11 @@ Contains, in document order:
 * Card 1 occupies the first System Line division, between the left outer System Line and the first internal System Line.
 * Card 2 occupies the second System Line division, between the first and second internal System Lines.
 * Card 3 occupies the third System Line division, between the second and third internal System Lines.
-* Each Card edge is inset from its bounding System Line by half of the global `M` (`24px`) Desktop Gutter: `12px`.
 * All three Cards have a minimum height of `360px` and may grow when future content requires additional height.
 
 #### Tablet
 
 * Card 1 and Card 2 form the first row, occupy one System Line division each, and use equal widths.
-* Their outer edges use the global `16px` content distance from the outer System Lines, and their adjoining edges use half of the global `M` (`24px`) Tablet Gutter: `12px` from the center System Line. The gap between the Cards is therefore `24px`.
 * Card 3 forms the second row and occupies its left System Line division only.
 * Card 1 and Card 2 have a minimum height of `320px`; Card 3 has a minimum height of `360px`. Each Card may grow when future content requires additional height.
 * `S` (`16px`) separates the two Card rows.
@@ -1101,7 +1099,7 @@ Contains, in document order:
 #### Mobile
 
 * Card 1, Card 2, and Card 3 form one vertical stack in that order.
-* All three Cards span the complete area between the two outer System Lines, preserving their `S` (`16px`) inset from each outer line.
+* All three Cards span the complete Mobile Grid content width.
 * All three Cards have a minimum height of `220px` and may grow when their content requires additional height.
 * `S` (`16px`) separates adjacent Cards.
 
@@ -1109,7 +1107,7 @@ Contains, in document order:
 
 ### Content
 
-* Uses the canonical photograph `/images/area-hero/sold.png`, showing a homeowner holding house keys in front of the sold property.
+* Uses the canonical photograph `/images/how-it-works/sold.png`, showing a homeowner holding house keys in front of the sold property.
 * Contains one floating Status Card with, in document order:
   1. Canonical Lucide `CircleCheck` icon.
   2. Eyebrow: `READY TO CLOSE`.

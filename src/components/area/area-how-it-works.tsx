@@ -74,7 +74,7 @@ export function AreaHowItWorks() {
           <div className={styles.closingVisual}>
             <Image
               className={styles.closingImage}
-              src="/images/area-hero/sold.png"
+              src="/images/how-it-works/sold.png"
               alt=""
               fill
               sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
