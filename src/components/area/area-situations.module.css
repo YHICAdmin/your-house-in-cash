@@ -50,9 +50,7 @@
   border-radius: 0;
   background: none;
   color: var(--color-text-primary);
-  font-size: var(--text-body);
   font-weight: 400;
-  line-height: var(--text-body--line-height);
   text-align: left;
   box-shadow: none;
 }

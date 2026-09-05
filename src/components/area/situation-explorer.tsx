@@ -183,7 +183,7 @@ export function SituationExplorer({
           return (
             <button
               key={situation.slug}
-              className={`${styles.option}${isSelected ? ` ${styles.selectedOption}` : ""}`}
+              className={`${styles.option} text-body${isSelected ? ` ${styles.selectedOption}` : ""}`}
               type="button"
               aria-pressed={isSelected}
               onClick={() => selectSituation(index)}
