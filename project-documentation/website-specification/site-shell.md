@@ -38,14 +38,14 @@ Provide clear, accessible navigation.
 
 #### Shared Navigation Links
 
-* The navigation links appear in this canonical order:
+* The navigation links and their canonical dedicated-page destinations appear in this order:
 
-  1. `How It Works`
-  2. `Situations`
-  3. `Areas We Buy In`
-  4. `Reviews`
-  5. `FAQ`
-  6. `About Us`
+  1. `How It Works` — `/how-it-works`
+  2. `Situations` — `/situations`
+  3. `Areas We Buy In` — `/areas-we-buy-in`
+  4. `Reviews` — `/reviews`
+  5. `FAQ` — `/faq`
+  6. `About Us` — `/about-us`
 
 #### Desktop
 

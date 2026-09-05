@@ -8,12 +8,12 @@ import { Button } from "@/components/ui/button";
 import styles from "./site-header.module.css";
 
 const navigationItems = [
-  "How It Works",
-  "Situations",
-  "Areas We Buy In",
-  "Reviews",
-  "FAQ",
-  "About Us",
+  { label: "How It Works", href: "/how-it-works" },
+  { label: "Situations", href: "/situations" },
+  { label: "Areas We Buy In", href: "/areas-we-buy-in" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "FAQ", href: "/faq" },
+  { label: "About Us", href: "/about-us" },
 ];
 
 const closeDuration = 180;
@@ -209,9 +209,9 @@ export function SiteHeader() {
 
         <nav className={styles.desktopNavigation} aria-label="Primary navigation">
           {navigationItems.map((item) => (
-            <a href="#" key={item}>
-              {item}
-            </a>
+            <Link href={item.href} key={item.href}>
+              {item.label}
+            </Link>
           ))}
         </nav>
 
@@ -248,14 +248,14 @@ export function SiteHeader() {
           <div className={styles.menuContent}>
             <nav className={styles.menuNavigation} aria-label="Menu navigation">
               {navigationItems.map((item, index) => (
-                <a
+                <Link
                   ref={index === 0 ? firstMenuItemRef : undefined}
-                  href="#"
-                  key={item}
+                  href={item.href}
+                  key={item.href}
                   onClick={() => closeMenu()}
                 >
-                  {item}
-                </a>
+                  {item.label}
+                </Link>
               ))}
             </nav>
             <PhoneContact placement="menu" />
