@@ -299,8 +299,8 @@ Provide the seller with a clear path to begin the conversion process.
 ### Visual Design
 
 * The portrait fills its crop without distortion and uses a circular crop with the global Pill Radius.
-* The primary headline uses the global `H3` typography: `28px` on Desktop, `26px` on Tablet, and `24px` on Mobile; weight `600`; line height `1.20`; letter spacing `-0.025em`; and `Text Primary` color.
-* The supporting text uses the global `Body Large` typography: `20px` on Desktop, `19px` on Tablet, and `18px` on Mobile; weight `400`; line height `1.50`; and `Text Secondary` color.
+* The Primary Headline uses global `H3` typography and the global Text Primary color.
+* The supporting text uses global `Body Large` typography and the global Text Secondary color.
 * The card uses the global Surface color, Medium Border Radius, and Floating Shadow.
 
 ### Dimensions and Alignment
