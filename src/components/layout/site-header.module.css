@@ -16,12 +16,9 @@
 
 .inner {
   display: flex;
-  width: var(--layout-content-width);
   height: 100%;
   align-items: center;
   justify-content: space-between;
-  margin-inline: auto;
-  padding-inline: var(--content-inset);
 }
 
 .logoLink {

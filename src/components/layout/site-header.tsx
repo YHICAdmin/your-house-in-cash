@@ -195,7 +195,7 @@ export function SiteHeader() {
       ref={headerRef}
       className={`${styles.header} system-lines-bg${isScrolled ? ` ${styles.scrolled}` : ""}`}
     >
-      <div className={styles.inner}>
+      <div className={`${styles.inner} content-inset`}>
         <Link className={styles.logoLink} href="/" aria-label="Your House in Cash home">
           <Image
             className={styles.logo}
