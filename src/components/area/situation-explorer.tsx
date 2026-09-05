@@ -154,6 +154,8 @@ type SituationExplorerProps = {
   headingId: string;
 };
 
+const selectedContentId = "selected-situation-content";
+
 export function SituationExplorer({
   descriptionId,
   headingId,
@@ -183,8 +185,10 @@ export function SituationExplorer({
           return (
             <button
               key={situation.slug}
+              id={`situation-option-${situation.slug}`}
               className={`${styles.option} text-body${isSelected ? ` ${styles.selectedOption}` : ""}`}
               type="button"
+              aria-controls={selectedContentId}
               aria-pressed={isSelected}
               onClick={() => selectSituation(index)}
             >
@@ -195,9 +199,10 @@ export function SituationExplorer({
       </div>
 
       <div
+        id={selectedContentId}
         className={styles.selectedContent}
         role="region"
-        aria-label={`${selected.label} details`}
+        aria-labelledby={`situation-option-${selected.slug}`}
       >
         <Image
           className={styles.situationImage}
