@@ -6,6 +6,10 @@ Visual layout may position elements without changing their underlying DOM order.
 
 ## Global and Shared Implementation Reuse
 
-When an existing global utility, layout primitive, typography class, or shared Component already provides the behavior required by the specification, consume that implementation directly rather than recreating the same behavior locally. Repeating the same tokens or values locally does not constitute reuse. Local implementation may add or override only properties explicitly required by the consuming specification; all non-overridden behavior remains owned by the existing global or shared implementation.
+When an existing global utility, layout primitive, typography class, or shared Component already provides the complete reusable behavior required by the specification, consume that implementation directly rather than recreating equivalent behavior locally. Copying or reconstructing the declarations owned by that established implementation does not constitute reuse.
 
-When direct reuse is technically unsuitable, derive both uses from a shared implementation source rather than maintaining parallel definitions.
+This rule governs duplication of established reusable implementations; it does not independently require every local primitive value or literal that matches a global token value to reference that token. Token usage remains governed by the applicable Color, Spacing, Typography, Grid/Layout, Component, and specification ownership rules.
+
+Local implementation may add or override only properties explicitly required by the consuming specification. All non-overridden behavior remains owned by the existing global or shared implementation.
+
+When direct reuse is technically unsuitable and multiple uses require the same reusable behavior, derive them from a shared implementation source rather than maintaining parallel definitions.
