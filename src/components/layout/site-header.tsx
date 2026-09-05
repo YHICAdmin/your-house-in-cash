@@ -33,9 +33,9 @@ function PhoneContact({ placement }: PhoneContactProps) {
       href={phoneHref}
     >
       <PhoneIcon className={styles.phoneIcon} aria-hidden="true" />
-      <span className={styles.phoneLabel}>Call Us</span>
+      <span className="text-body-small">Call Us</span>
       <span className={styles.phoneDivider} aria-hidden="true" />
-      <span className={styles.phoneNumber}>{phoneNumber}</span>
+      <span className="text-body">{phoneNumber}</span>
     </a>
   );
 }

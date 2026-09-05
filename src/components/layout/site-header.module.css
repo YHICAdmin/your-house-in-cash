@@ -55,16 +55,6 @@
   white-space: nowrap;
 }
 
-.phoneLabel {
-  font-size: var(--text-body-small);
-  line-height: var(--text-body-small--line-height);
-}
-
-.phoneNumber {
-  font-size: var(--text-body);
-  line-height: var(--text-body--line-height);
-}
-
 .phoneIcon {
   width: var(--icon-small);
   height: var(--icon-small);
