@@ -1182,22 +1182,17 @@ Contains, in document order:
 
 ## Purpose
 
-Create a meaningful local Section that differentiates individual Area Pages while preserving a consistent overall design structure between locations such as Cleveland, Cleveland Heights, and South Euclid.
+Create a local Section that uses this documented structure across Area Pages while its area-specific content varies by location.
 
 The Section:
 
 * Establishes local familiarity and credibility.
 * Provides useful information about the specific area.
 * Highlights nearby cities and neighborhoods where the company buys houses.
-* Provides unique, meaningful local content for each Area Page.
 
 ## Layout
 
 ### Visual Design
-
-* The Section is intentionally long and spacious and is not compressed into a single viewport.
-* Generous whitespace and intentionally unoccupied areas are part of the composition.
-* The number of elements remains restrained; columns and empty areas are not filled merely because space is available.
 
 ### Desktop
 
@@ -1216,8 +1211,8 @@ The Section:
 Contains, in document order:
 
 1. Section Label: `LOCATION`, with the canonical Lucide `MapPin` icon.
-2. Large area-specific Primary Headline; exact content remains to be defined for each Area Page.
-3. Short area-specific Supporting Copy; exact content remains to be defined for each Area Page.
+2. Area-specific Primary Headline; exact content remains to be defined for each Area Page.
+3. Area-specific Supporting Copy; exact content remains to be defined for each Area Page.
 
 ### Component and Semantics
 
@@ -1248,17 +1243,12 @@ Contains, in document order:
 
 ### Content
 
-* Shows the current area and relevant surrounding areas.
+* Shows the current area and surrounding areas.
 * The exact map content, data source, and presentation format remain to be defined for each Area Page.
-
-### Visual Design
-
-* Uses a simple, understated treatment that supports the local content without competing with it.
 
 ### Dimensions and Alignment
 
 * On Desktop, appears only within the left area.
-* Remains relatively compact and does not dominate the Section.
 * Exact dimensions remain to be defined.
 
 ### Spacing After
@@ -1277,10 +1267,9 @@ Contains, in document order:
 
 ### Content
 
-* Contains a small number of useful, area-specific data points.
 * The exact number and data points vary according to what is relevant to each Area Page and remain to be defined.
 * Statistics are not added merely to fill available space.
-* Individual statistics may include simple icons; exact icon presence and identities remain to be defined with the final data points.
+* Individual statistics may include icons; exact icon presence and identities remain to be defined with the final data points.
 
 ### Component and Semantics
 
@@ -1288,9 +1277,7 @@ Contains, in document order:
 
 ### Visual Design
 
-* The statistics form a distinct visual moment within the Section.
-* Individual statistics may receive greater visual emphasis than others to create hierarchy.
-* Statistics Cards use bold, solid background colors and may intentionally extend beyond the global Brand Greens and Neutral Palette.
+* Statistics Cards use solid background colors and may intentionally extend beyond the global Brand Greens and Neutral Palette.
 * Multiple colors may be used within one statistics composition, including treatments such as purple, turquoise, and different shades of blue.
 * This color treatment is a local visual accent and is not required elsewhere on the website.
 * Exact Statistics Card colors remain to be defined.
