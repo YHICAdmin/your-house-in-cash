@@ -1297,15 +1297,17 @@ For the current Cleveland Area Page:
 
 ### Dimensions and Alignment
 
-* On Desktop, appears only within the left area.
+* On Desktop, fills the complete left Grid area across Columns `1–6`.
+* On Tablet and Mobile, fills the complete available Content Grid width.
+* Uses a `16:9` Aspect Ratio across all Breakpoints. Width is determined by the applicable Grid allocation, and height is derived from the Aspect Ratio rather than specified independently.
 * The initial Map viewport fits the complete Google locality boundary of the current Area Page location and includes consistent internal breathing room around it.
 * The initial zoom is derived from the geographic extent of the current Area rather than using one hardcoded zoom level across Area Pages.
-* Exact viewport padding remains to be defined after the Map dimensions are established and may then be selected under the approved Spacing-Token Selection authority.
-* Exact dimensions remain to be defined.
+* Initial viewport padding is `M` (`24px`) on Desktop and Tablet and `S` (`16px`) on Mobile.
 
 ### Spacing After
 
-* Exact spacing after the Local Map remains to be defined.
+* `M` (`24px`) on Desktop and Tablet.
+* `S` (`16px`) on Mobile.
 
 ### Accessibility
 
@@ -1313,7 +1315,7 @@ For the current Cleveland Area Page:
 
 ### Responsive Behavior
 
-* Exact Tablet and Mobile dimensions and composition remain to be defined.
+* A responsive Aspect-Ratio exception may be introduced only if implementation review demonstrates that the approved `16:9` treatment does not provide sufficient usable geographic or control space at a narrower Breakpoint.
 
 ## Local Statistics
 
