@@ -1252,17 +1252,55 @@ For the current Cleveland Area Page:
 ### Content
 
 * The current Area Page location is the primary geographic focus.
-* Surrounding locations are populated from the Area Page's approved local-area data.
-* The Local Map and Nearby Areas use the same canonical area dataset where their geographic content overlaps; map labels are derived from that data rather than authored separately in each Area Page specification.
-* Exact visible labels vary by Area Page according to its approved local-area data.
-* Streets, points of interest, road networks, and other detailed geographic features are not included by default unless a future approved data model explicitly requires them.
-* Geographic landmarks may be included only when they are represented in the Area Page data and intentionally selected as part of that page's geographic context.
-* Uses a static, non-interactive map graphic to communicate local geographic context and reinforce the Area Page's local credibility; it does not function as a navigation or exploration tool.
+* Approved surrounding locations remain unhighlighted geographic context within the Google base map. They do not receive secondary boundaries, markers, or other custom map treatments.
+* `Nearby Areas` is the dedicated Section element for explicitly presenting the Area Page's approved surrounding locations.
+* The Local Map and Nearby Areas use the same canonical area dataset where their geographic content overlaps, but the Local Map's custom geographic input is limited to the current Area Page location and does not require boundary data for every surrounding location.
+* Google Maps provides the Map's geographic rendering and base-map data. The repository-owned canonical area dataset remains authoritative for the current Area Page location and its approved relationships to surrounding locations.
+* The current Area Page location data determines the Google Maps geographic context; the Map is not hardcoded for Cleveland or any other individual location.
+* The current Area Page location is represented by its highlighted geographic boundary rather than by a central location marker. This treatment applies dynamically across all Area Pages.
+* A central location marker is not displayed by default.
+* Google Maps locality boundary coverage is the canonical source for the current location's boundary. The Google Maps JavaScript API provides and renders the boundary geometry.
+* The repository-owned canonical area dataset identifies the current location using the stable Google geographic identifier required by the boundary implementation, such as its Place ID; it does not provide duplicate polygon or GeoJSON boundary geometry.
+* Suitable Google locality boundary coverage must be verified before an Area Page is considered ready for the Local Map treatment.
+* Missing or unsuitable Google locality boundary coverage remains an Area-specific data and validation issue. It does not cause the Map to switch automatically to a repository-owned custom-geometry architecture.
+* A repository-owned polygon or GeoJSON fallback is not specified. If a future supported Area lacks suitable Google boundary coverage, any fallback becomes a new requirement requiring separate approval.
+* Area-specific map inputs are derived from the canonical area dataset rather than authored separately in each Area Page specification.
+* Uses the Google Maps JavaScript API to render an interactive Map that communicates local geographic context and reinforces the Area Page's local credibility.
+* The Map is dynamic by Area Page and styled and configured through the Google Maps JavaScript API rather than using the default Google Maps presentation.
+* Additional third-party map libraries and wrapper dependencies are not used unless separately approved.
 * The canonical area dataset is repository-owned structured project data. It provides each Area Page's current location and approved surrounding locations, with optional additional geographic metadata when later required by an approved specification decision.
+
+### Visual Design
+
+* Uses a restrained, customized neutral base-map presentation that integrates with the existing site design.
+* Land uses global `Background Soft` (`#F7F9F7`) as its very light neutral treatment.
+* Water uses the local Map color `#EAF2F3`, a very light, subdued blue-green that remains geographically distinguishable without becoming a visual focal point.
+* Points of interest and business or point-of-interest labels are hidden.
+* Road geometry remains visible using global `Line System` (`#ECEEF4`) as a highly subdued treatment, while road labels and detailed road information are hidden.
+* Useful geographic locality and city labels remain visible.
+* Only the current Area Page location receives custom geographic emphasis. Surrounding locations remain part of the neutral Google base-map context without custom treatment.
+* The current Area boundary uses global `Brand Green Light` (`#EAF3EC`) at `0.35` opacity as a translucent fill so the underlying Map remains visible.
+* The current Area boundary uses global `Brand Green` (`#4A8755`) as a `2px` stroke and remains identifiable without becoming visually heavy.
+* The current Area boundary has no hover treatment because it is informative rather than an interactive control.
+* Required Google Maps branding and attribution remain visible and unmodified.
+
+### Interaction
+
+* Uses cooperative gesture handling across all Breakpoints so Map interaction does not unnecessarily interfere with normal page scrolling.
+* Users can pan and zoom the Map.
+* The standard Zoom controls remain visible.
+* Keyboard interaction remains available when the Map receives focus.
+* Street View, map-type, fullscreen, rotation, and scale controls are hidden.
+* The highlighted current-area boundary is non-clickable and receives no interactive states.
+* After the initial framing, users may freely pan and zoom the Map.
+* The Map does not automatically recenter or restore its initial viewport after user interaction.
 
 ### Dimensions and Alignment
 
 * On Desktop, appears only within the left area.
+* The initial Map viewport fits the complete Google locality boundary of the current Area Page location and includes consistent internal breathing room around it.
+* The initial zoom is derived from the geographic extent of the current Area rather than using one hardcoded zoom level across Area Pages.
+* Exact viewport padding remains to be defined after the Map dimensions are established and may then be selected under the approved Spacing-Token Selection authority.
 * Exact dimensions remain to be defined.
 
 ### Spacing After
