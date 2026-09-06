@@ -1339,7 +1339,6 @@ For the current Cleveland Area Page:
 ### Content
 
 * The exact number and data points vary according to what is relevant to each Area Page and remain to be defined.
-* Statistics are not added merely to fill available space.
 * Individual statistics may include icons; exact icon presence and identities remain to be defined with the final data points.
 
 ### Component and Semantics
