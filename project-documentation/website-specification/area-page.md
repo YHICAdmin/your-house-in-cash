@@ -1180,132 +1180,254 @@ Contains, in document order:
 
 # Local / Area Section
 
-#### Purpose
+## Purpose
 
-Create a meaningful local section that differentiates the individual Area Pages across the website.
+Create a meaningful local Section that differentiates individual Area Pages while preserving a consistent overall design structure between locations such as Cleveland, Cleveland Heights, and South Euclid.
 
-The overall design structure remains consistent between pages, while the content changes according to the specific area — Cleveland, Cleveland Heights, South Euclid, etc.
+The Section:
 
-Primary goals:
+* Establishes local familiarity and credibility.
+* Provides useful information about the specific area.
+* Highlights nearby cities and neighborhoods where the company buys houses.
+* Provides unique, meaningful local content for each Area Page.
 
-- Establish local familiarity and credibility.
-- Provide useful information about the specific area.
-- Highlight nearby cities and neighborhoods where we buy houses.
-- Create unique and meaningful local content for each Area Page.
+## Layout
 
-#### Content
+### Visual Design
 
-- Section Label: **Location**, with Location icon.
-- Large area-specific headline.
-- Short supporting copy.
-- Local map.
-- Nearby cities / neighborhoods.
-- Link to all areas where we buy houses.
-- Local statistics.
-- Short local-market familiarity content.
-- Data sources.
-- Optional CTA at the end of the section.
+* The Section is intentionally long and spacious and is not compressed into a single viewport.
+* Generous whitespace and intentionally unoccupied areas are part of the composition.
+* The number of elements remains restrained; columns and empty areas are not filled merely because space is available.
 
-#### Structure
+### Desktop
 
-This is intentionally a relatively long and spacious section. Do not attempt to compress all content into a single viewport.
+* The left area occupies Grid Columns `1–6`.
+* The right area occupies Grid Columns `7–12`.
+* Neither area must be fully occupied at every point.
 
-The section uses a two-column composition, but neither column needs to be fully occupied at every point.
+### Tablet and Mobile
 
-##### Left Column
+* Exact visual stacking and column allocation remain to be defined.
 
-- Introductory content.
-- Local map.
-- Local statistics.
+## Section Intro
 
-##### Right Column
+### Content
 
-- Nearby cities / neighborhoods.
-- Local market familiarity content.
+Contains, in document order:
 
-Whitespace and intentionally unoccupied areas are part of the composition.
+1. Section Label: `LOCATION`, with the canonical Lucide `MapPin` icon.
+2. Large area-specific Primary Headline; exact content remains to be defined for each Area Page.
+3. Short area-specific Supporting Copy; exact content remains to be defined for each Area Page.
 
-#### Visual Direction
+### Component and Semantics
 
-- Use generous whitespace.
-- Keep the number of elements restrained.
-- Do not fill columns or empty areas simply because space is available.
-- Use subtle cards and dividers.
-- Position the Section Label above the primary headline.
-- Maintain the site's overall design language through consistent typography, border radius, spacing, and iconography.
+* The Section Label uses the documented `Section Label` Component.
+* The Primary Headline uses `H2` semantics.
+* The Supporting Copy uses paragraph semantics.
 
-#### Behavior
+### Visual Design
 
-- Content changes according to the specific Area Page.
-- The **See all areas we buy in →** link leads to the complete list of areas where we buy houses.
-- Local statistics may vary between Area Pages according to what is relevant to each location.
-- The CTA at the end of the section is optional.
+* The Primary Headline uses the global `H2` typography.
+* The Supporting Copy uses the global `Body Large` typography.
 
-#### Technical Specifications
+### Dimensions and Alignment
 
-No additional Local / Area Section-specific technical specifications are currently defined. Global typography, spacing, component, color, and layout rules apply unless explicitly overridden below.
+* All Section Intro content is left-aligned.
+* On Desktop, the Section Intro occupies the left area.
 
-#### Responsive Behavior
+### Spacing
 
-No specific Tablet or Mobile composition is currently defined.
+* `S` (`16px`) separates the Section Label from the Primary Headline.
+* `M` (`24px`) separates the Primary Headline from the Supporting Copy.
 
-The section should preserve the hierarchy and relationship between the introductory content, local map, nearby areas, statistics, and local-market content on smaller viewports.
+### Spacing After
 
-Exact column stacking, content ordering, map dimensions, and statistics composition for Tablet and Mobile remain to be defined.
+* Exact spacing after the Section Intro remains to be defined.
 
-#### Line System
+## Local Map
 
-- The outer System Lines bound the content area.
-- The center System Line serves as the primary division between the left and right columns.
-- The two additional internal System Lines remain visible but do not dictate the positioning of elements within either column.
+### Content
 
-#### Local Map
+* Shows the current area and relevant surrounding areas.
+* The exact map content, data source, and presentation format remain to be defined for each Area Page.
 
-- Appears only within the left column.
-- Remains relatively compact and does not dominate the section.
-- Shows the current area and relevant surrounding areas.
-- Uses a simple and understated visual treatment that supports the content rather than competing with it.
+### Visual Design
 
-#### Nearby Areas
+* Uses a simple, understated treatment that supports the local content without competing with it.
 
-Nearby cities and neighborhoods are presented visually rather than as a conventional text list.
+### Dimensions and Alignment
 
-- Use a subtle grid with simple icons and area names.
-- Conclude the group with a clear link:
+* On Desktop, appears only within the left area.
+* Remains relatively compact and does not dominate the Section.
+* Exact dimensions remain to be defined.
 
-**See all areas we buy in →**
+### Spacing After
 
-#### Local Statistics
+* Exact spacing after the Local Map remains to be defined.
 
-Display a small number of useful, area-specific data points in a format that is easy to scan and creates a distinct visual moment within the section.
+### Accessibility
 
-The statistics use an asymmetric composition of blocks/cards with varying sizes and proportions, inspired by Stripe, rather than a generic grid of identical cards.
+* The accessible representation of the map and its local information remains to be defined with the final map format and content.
 
-- Keep the overall statistics composition relatively small and compact compared with the rest of the section.
-- Keep the statistics within the left column.
-- Use varying card sizes and heights to create hierarchy and controlled asymmetry.
-- Individual statistics may receive greater visual emphasis than others.
-- Do not make the cards identical in size or proportion.
-- Maintain a small and consistent gap between cards.
-- Cards use **bold, solid background colors** and may intentionally extend beyond the Brand Greens and Neutral Palette.
-- Multiple colors may be used within the same statistics group, such as purple, turquoise, and different shades of blue.
-- The color treatment acts as an intentional **visual accent** within the page and does not require the same palette to be used elsewhere.
-- Text and icons on the cards should be light/white with high contrast.
-- Maintain the site's overall design language through consistent typography, border radius, spacing, and iconography.
-- Do not add statistics simply to fill available space.
-- Data sources appear discreetly below the statistics composition.
-- The specific data points may vary between Area Pages according to what is relevant to each location.
+### Responsive Behavior
 
-#### Local Market Content
+* Exact Tablet and Mobile dimensions and composition remain to be defined.
 
-A short editorial-style content block appears in the right column to reinforce familiarity with the local market.
+## Local Statistics
 
-Examples:
+### Content
 
-**We live and work here.  
-This is our market.**
+* Contains a small number of useful, area-specific data points.
+* The exact number and data points vary according to what is relevant to each Area Page and remain to be defined.
+* Statistics are not added merely to fill available space.
+* Individual statistics may include simple icons; exact icon presence and identities remain to be defined with the final data points.
 
-The supporting copy should be specific to the individual area rather than generic company messaging.
+### Component and Semantics
+
+* The statistics collection uses semantic list and list-item elements.
+
+### Visual Design
+
+* The statistics form a distinct visual moment within the Section.
+* Individual statistics may receive greater visual emphasis than others to create hierarchy.
+* Statistics Cards use bold, solid background colors and may intentionally extend beyond the global Brand Greens and Neutral Palette.
+* Multiple colors may be used within one statistics composition, including treatments such as purple, turquoise, and different shades of blue.
+* This color treatment is a local visual accent and is not required elsewhere on the website.
+* Exact Statistics Card colors remain to be defined.
+* Statistics Card text and icons use light or white high-contrast foreground treatments.
+* Statistics Cards use the global `Medium` Radius (`12px`).
+* Exact statistics typography remains to be defined with the final content hierarchy.
+
+### Dimensions and Alignment
+
+* On Desktop, the complete composition remains within the left area.
+* Statistics Cards use varying dimensions and proportions to create controlled asymmetry and are not made identical.
+* An `XS` (`8px`) consistent gap separates adjacent Statistics Cards.
+* Exact Card dimensions and asymmetric arrangement remain to be defined.
+
+### Spacing After
+
+* Exact spacing after Local Statistics remains to be defined.
+
+### Accessibility
+
+* Accessibility treatment for any statistics icons remains to be defined with their final content and purpose.
+
+### Responsive Behavior
+
+* Exact Tablet and Mobile statistics composition remains to be defined.
+
+## Data Sources
+
+### Content
+
+* Identifies the sources for the area-specific Local Statistics.
+* Exact source content remains to be defined with the final data points for each Area Page.
+
+### Component and Semantics
+
+* Exact semantics remain to be defined with the final source content and presentation.
+
+### Visual Design
+
+* Uses the global `Body Small` typography.
+
+### Dimensions and Alignment
+
+* On Desktop, occupies the left area.
+* On Desktop, appears directly below the Local Statistics composition.
+
+### Spacing After
+
+* Exact spacing after Data Sources remains to be defined.
+
+## Nearby Areas
+
+### Content
+
+* Presents nearby cities and neighborhoods through area names accompanied by simple icons rather than as a conventional visible text list.
+* The exact nearby-area entries vary by Area Page and remain to be defined.
+* The collection concludes with the link label `See all areas we buy in` and the canonical Lucide `ArrowRight` icon.
+* Exact icons for the individual nearby areas remain to be defined with the final entries.
+
+### Component and Semantics
+
+* The nearby-area collection uses semantic list and list-item elements.
+* Whether individual nearby-area entries are interactive remains to be defined.
+* The concluding link uses the documented `Text Link` Component with link semantics.
+
+### Visual Design
+
+* The nearby-area collection uses a subtle visual grid with simple icons and area names.
+* Nearby-area names use the global `Body` typography.
+
+### Dimensions and Alignment
+
+* On Desktop, occupies the right area.
+* Exact grid dimensions and column count remain to be defined.
+
+### Spacing After
+
+* Exact spacing after Nearby Areas remains to be defined.
+
+### Interaction
+
+* The concluding link navigates to the canonical internal route `/areas-we-buy-in`.
+
+### Accessibility
+
+* Each nearby-area icon is decorative when its accompanying visible area name communicates the same identity.
+* The `ArrowRight` icon is decorative because the visible link label communicates the complete destination.
+
+### Responsive Behavior
+
+* Exact Tablet and Mobile grid composition remains to be defined.
+
+## Local Market Content
+
+### Content
+
+* Contains a short, editorial-style local-market headline and Supporting Copy that reinforce familiarity with the local market.
+* Example headline, shown on two lines: `We live and work here.` followed by `This is our market.`
+* The example is not canonical copy; the final headline and Supporting Copy are specific to each individual area rather than generic company messaging and remain to be defined.
+
+### Component and Semantics
+
+* The local-market headline uses `H3` semantics.
+* The Supporting Copy uses paragraph semantics.
+
+### Visual Design
+
+* The local-market headline uses the global `H3` typography.
+* The Supporting Copy uses the global `Body` typography.
+
+### Dimensions and Alignment
+
+* On Desktop, occupies the right area.
+* All content is left-aligned.
+
+### Spacing After
+
+* Exact spacing after the Local Market Content remains to be defined.
+
+## Optional Section CTA
+
+### Content
+
+* Appears at the end of the Section only when an Area Page requires an additional CTA.
+* CTA presence, label, and destination remain to be defined for each Area Page.
+
+### Component and Semantics
+
+* The CTA Component and semantics remain to be defined if the CTA is included.
+
+### Dimensions and Alignment
+
+* Exact placement and alignment remain to be defined if the CTA is included.
+
+### Responsive Behavior
+
+* Exact Tablet and Mobile treatment remains to be defined if the CTA is included.
 
 # FAQ
 
