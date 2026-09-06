@@ -1211,8 +1211,15 @@ The Section:
 Contains, in document order:
 
 1. Section Label: `LOCATION`, with the canonical Lucide `MapPin` icon.
-2. Area-specific Primary Headline; exact content remains to be defined for each Area Page.
-3. Area-specific Supporting Copy; exact content remains to be defined for each Area Page.
+2. Area-specific Primary Headline.
+3. Area-specific Supporting Copy.
+
+The Primary Headline and Supporting Copy are dynamic Area Page content. Each future Area Page provides its own approved area-specific values while preserving the same Section structure and content roles. No generic automated copy formula is defined.
+
+For the current Cleveland Area Page:
+
+* Primary Headline: `We Know Cleveland`
+* Supporting Copy: `Every local market has its own character. We understand the communities, housing landscape, and local factors that can shape a home sale in Cleveland.`
 
 ### Component and Semantics
 
@@ -1237,14 +1244,21 @@ Contains, in document order:
 
 ### Spacing After
 
-* Exact spacing after the Section Intro remains to be defined.
+* `M` (`24px`) on Desktop and Tablet.
+* `S` (`16px`) on Mobile.
 
 ## Local Map
 
 ### Content
 
-* Shows the current area and surrounding areas.
-* The exact map content, data source, and presentation format remain to be defined for each Area Page.
+* The current Area Page location is the primary geographic focus.
+* Surrounding locations are populated from the Area Page's approved local-area data.
+* The Local Map and Nearby Areas use the same canonical area dataset where their geographic content overlaps; map labels are derived from that data rather than authored separately in each Area Page specification.
+* Exact visible labels vary by Area Page according to its approved local-area data.
+* Streets, points of interest, road networks, and other detailed geographic features are not included by default unless a future approved data model explicitly requires them.
+* Geographic landmarks may be included only when they are represented in the Area Page data and intentionally selected as part of that page's geographic context.
+* Uses a static, non-interactive map graphic to communicate local geographic context and reinforce the Area Page's local credibility; it does not function as a navigation or exploration tool.
+* The canonical area dataset is repository-owned structured project data. It provides each Area Page's current location and approved surrounding locations, with optional additional geographic metadata when later required by an approved specification decision.
 
 ### Dimensions and Alignment
 
@@ -1333,7 +1347,7 @@ Contains, in document order:
 ### Content
 
 * Presents nearby cities and neighborhoods through area names accompanied by simple icons rather than as a conventional visible text list.
-* The exact nearby-area entries vary by Area Page and remain to be defined.
+* Nearby-area entries are populated from the Area Page's approved local-area data and use the same canonical area dataset as the Local Map where their geographic content overlaps.
 * The collection concludes with the link label `See all areas we buy in` and the canonical Lucide `ArrowRight` icon.
 * Exact icons for the individual nearby areas remain to be defined with the final entries.
 
