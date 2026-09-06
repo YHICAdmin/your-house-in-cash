@@ -1192,17 +1192,21 @@ The Section:
 
 ## Layout
 
-### Visual Design
-
 ### Desktop
 
 * The left area occupies Grid Columns `1–6`.
 * The right area occupies Grid Columns `7–12`.
 * Neither area must be fully occupied at every point.
 
-### Tablet and Mobile
+### Tablet
 
-* Exact visual stacking and column allocation remain to be defined.
+* The left area occupies Grid Columns `1–4`.
+* The right area occupies Grid Columns `5–8`.
+
+### Mobile
+
+* The left and right areas collapse into one column spanning the complete available Content Grid width.
+* Elements retain canonical document order: all left-area elements from top to bottom, followed by all right-area elements from top to bottom; the Optional Section CTA remains last when included.
 
 ## Section Intro
 
@@ -1235,7 +1239,7 @@ For the current Cleveland Area Page:
 ### Dimensions and Alignment
 
 * All Section Intro content is left-aligned.
-* On Desktop, the Section Intro occupies the left area.
+* On Desktop and Tablet, the Section Intro occupies the left area.
 
 ### Spacing
 
@@ -1260,7 +1264,7 @@ For the current Cleveland Area Page:
 * The current Area Page location is represented by its highlighted geographic boundary rather than by a central location marker. This treatment applies dynamically across all Area Pages.
 * A central location marker is not displayed by default.
 * Google Maps locality boundary coverage is the canonical source for the current location's boundary. The Google Maps JavaScript API provides and renders the boundary geometry.
-* The repository-owned canonical area dataset identifies the current location using the stable Google geographic identifier required by the boundary implementation, such as its Place ID; it does not provide duplicate polygon or GeoJSON boundary geometry.
+* The repository-owned canonical area dataset identifies the current location using its stable Google Place ID; it does not provide duplicate polygon or GeoJSON boundary geometry or manually maintained viewport coordinates.
 * Suitable Google locality boundary coverage must be verified before an Area Page is considered ready for the Local Map treatment.
 * Missing or unsuitable Google locality boundary coverage remains an Area-specific data and validation issue. It does not cause the Map to switch automatically to a repository-owned custom-geometry architecture.
 * A repository-owned polygon or GeoJSON fallback is not specified. If a future supported Area lacks suitable Google boundary coverage, any fallback becomes a new requirement requiring separate approval.
@@ -1269,6 +1273,13 @@ For the current Cleveland Area Page:
 * The Map is dynamic by Area Page and styled and configured through the Google Maps JavaScript API rather than using the default Google Maps presentation.
 * Additional third-party map libraries and wrapper dependencies are not used unless separately approved.
 * The canonical area dataset is repository-owned structured project data. It provides each Area Page's current location and approved surrounding locations, with optional additional geographic metadata when later required by an approved specification decision.
+
+### Technical Requirements
+
+* The Google Maps JavaScript API Geocoding service resolves the current locality's viewport dynamically from its canonical Place ID. The initial Map framing fits that returned viewport using the approved responsive viewport padding.
+* The Google Maps JavaScript API and Geocoding API must be enabled for the Google Cloud project used by the Map. The implementation does not add a third-party mapping dependency to perform this lookup.
+* Data-driven styling for the locality boundary requires a Google JavaScript vector Map ID associated with the approved customized light Map style and the `LOCALITY` feature layer.
+* The Map ID and browser API key use the same Google Cloud project and are configured with the applicable Google Maps Platform restrictions.
 
 ### Visual Design
 
@@ -1282,6 +1293,8 @@ For the current Cleveland Area Page:
 * The current Area boundary uses global `Brand Green Light` (`#EAF3EC`) at `0.35` opacity as a translucent fill so the underlying Map remains visible.
 * The current Area boundary uses global `Brand Green` (`#4A8755`) as a `2px` stroke and remains identifiable without becoming visually heavy.
 * The current Area boundary has no hover treatment because it is informative rather than an interactive control.
+* The Map container uses the global `Medium` Radius (`12px`) and clips the Google Map content to that Radius.
+* The Map uses no Border or Shadow; the Map surface provides its separation from the surrounding Section background.
 * Required Google Maps branding and attribution remain visible and unmodified.
 
 ### Interaction
@@ -1298,7 +1311,8 @@ For the current Cleveland Area Page:
 ### Dimensions and Alignment
 
 * On Desktop, fills the complete left Grid area across Columns `1–6`.
-* On Tablet and Mobile, fills the complete available Content Grid width.
+* On Tablet, fills the complete left Grid area across Columns `1–4`.
+* On Mobile, fills the complete available Content Grid width.
 * Uses a `16:9` Aspect Ratio across all Breakpoints. Width is determined by the applicable Grid allocation, and height is derived from the Aspect Ratio rather than specified independently.
 * The initial Map viewport fits the complete Google locality boundary of the current Area Page location and includes consistent internal breathing room around it.
 * The initial zoom is derived from the geographic extent of the current Area rather than using one hardcoded zoom level across Area Pages.
@@ -1309,9 +1323,24 @@ For the current Cleveland Area Page:
 * `M` (`24px`) on Desktop and Tablet.
 * `S` (`16px`) on Mobile.
 
+### Unavailable State
+
+* If the Google Maps JavaScript API, Geocoding request, required Map configuration, or locality boundary layer is unavailable at runtime, the unavailable treatment replaces the Map without affecting `Nearby Areas` or any other Section content.
+* Preserves the approved `16:9` Map container and global `Medium` Radius (`12px`) and uses global `Background Soft` (`#F7F9F7`) as its surface.
+* Displays the paragraph `Map of {Area Name} is temporarily unavailable.`, with `{Area Name}` generated dynamically from the current Area Page data.
+* The message uses global `Body` typography and the global `Text Secondary` color.
+* Does not provide a static-map fallback, custom boundary geometry, or a retry control.
+* The message remains in normal accessible reading order and does not trigger a live announcement.
+
 ### Accessibility
 
-* The accessible representation of the map and its local information remains to be defined with the final map format and content.
+* Accessible name: `Interactive map of {Area Name}`, generated dynamically from the current Area Page data.
+* No separate hidden accessible description is added.
+* Google Maps' internal accessible interface is preserved.
+* Google Zoom controls retain their provided accessible names and keyboard behavior.
+* The non-clickable current-area boundary does not receive focus.
+* Panning and zooming do not trigger live announcements.
+* Additional hidden explanatory content is introduced only if a future Map requirement contains meaningful information that is not otherwise available accessibly.
 
 ### Responsive Behavior
 
@@ -1341,7 +1370,7 @@ For the current Cleveland Area Page:
 
 ### Dimensions and Alignment
 
-* On Desktop, the complete composition remains within the left area.
+* On Desktop and Tablet, the complete composition remains within the left area.
 * Statistics Cards use varying dimensions and proportions to create controlled asymmetry and are not made identical.
 * An `XS` (`8px`) consistent gap separates adjacent Statistics Cards.
 * Exact Card dimensions and asymmetric arrangement remain to be defined.
@@ -1375,8 +1404,8 @@ For the current Cleveland Area Page:
 
 ### Dimensions and Alignment
 
-* On Desktop, occupies the left area.
-* On Desktop, appears directly below the Local Statistics composition.
+* On Desktop and Tablet, occupies the left area.
+* On Desktop and Tablet, appears directly below the Local Statistics composition.
 
 ### Spacing After
 
@@ -1404,7 +1433,7 @@ For the current Cleveland Area Page:
 
 ### Dimensions and Alignment
 
-* On Desktop, occupies the right area.
+* On Desktop and Tablet, occupies the right area.
 * Exact grid dimensions and column count remain to be defined.
 
 ### Spacing After
@@ -1444,7 +1473,7 @@ For the current Cleveland Area Page:
 
 ### Dimensions and Alignment
 
-* On Desktop, occupies the right area.
+* On Desktop and Tablet, occupies the right area.
 * All content is left-aligned.
 
 ### Spacing After
