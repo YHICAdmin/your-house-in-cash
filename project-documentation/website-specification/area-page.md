@@ -1192,11 +1192,12 @@ The Section:
 
 ## Layout
 
+On Desktop and Tablet, the left-area elements form one top-to-bottom content flow and the right-area elements form a separate top-to-bottom content flow; the two flows appear in parallel within their allocated Grid columns.
+
 ### Desktop
 
 * The left area occupies Grid Columns `1–6`.
 * The right area occupies Grid Columns `7–12`.
-* Neither area must be fully occupied at every point.
 
 ### Tablet
 
@@ -1256,43 +1257,35 @@ For the current Cleveland Area Page:
 ### Content
 
 * The current Area Page location is the primary geographic focus.
-* Approved surrounding locations remain unhighlighted geographic context within the Google base map. They do not receive secondary boundaries, markers, or other custom map treatments.
 * `Nearby Areas` is the dedicated Section element for explicitly presenting the Area Page's approved surrounding locations.
 * The Local Map and Nearby Areas use the same canonical area dataset where their geographic content overlaps, but the Local Map's custom geographic input is limited to the current Area Page location and does not require boundary data for every surrounding location.
-* Google Maps provides the Map's geographic rendering and base-map data. The repository-owned canonical area dataset remains authoritative for the current Area Page location and its approved relationships to surrounding locations.
+* Google Maps provides the Map's geographic rendering and base-map data.
 * The current Area Page location data determines the Google Maps geographic context; the Map is not hardcoded for Cleveland or any other individual location.
 * The current Area Page location is represented by its highlighted geographic boundary rather than by a central location marker. This treatment applies dynamically across all Area Pages.
-* A central location marker is not displayed by default.
 * Google Maps locality boundary coverage is the canonical source for the current location's boundary. The Google Maps JavaScript API provides and renders the boundary geometry.
 * The repository-owned canonical area dataset identifies the current location using its stable Google Place ID; it does not provide duplicate polygon or GeoJSON boundary geometry or manually maintained viewport coordinates.
 * Suitable Google locality boundary coverage must be verified before an Area Page is considered ready for the Local Map treatment.
-* Missing or unsuitable Google locality boundary coverage remains an Area-specific data and validation issue. It does not cause the Map to switch automatically to a repository-owned custom-geometry architecture.
+* Missing or unsuitable Google locality boundary coverage remains an Area-specific data and validation issue.
 * A repository-owned polygon or GeoJSON fallback is not specified. If a future supported Area lacks suitable Google boundary coverage, any fallback becomes a new requirement requiring separate approval.
-* Area-specific map inputs are derived from the canonical area dataset rather than authored separately in each Area Page specification.
-* Uses the Google Maps JavaScript API to render an interactive Map that communicates local geographic context and reinforces the Area Page's local credibility.
-* The Map is dynamic by Area Page and styled and configured through the Google Maps JavaScript API rather than using the default Google Maps presentation.
-* Additional third-party map libraries and wrapper dependencies are not used unless separately approved.
 * The canonical area dataset is repository-owned structured project data. It provides each Area Page's current location and approved surrounding locations, with optional additional geographic metadata when later required by an approved specification decision.
 
 ### Technical Requirements
 
-* The Google Maps JavaScript API Geocoding service resolves the current locality's viewport dynamically from its canonical Place ID. The initial Map framing fits that returned viewport using the approved responsive viewport padding.
-* The Google Maps JavaScript API and Geocoding API must be enabled for the Google Cloud project used by the Map. The implementation does not add a third-party mapping dependency to perform this lookup.
+* The Google Maps JavaScript API Geocoding service resolves the current locality's viewport dynamically from its canonical Place ID.
+* The Google Maps JavaScript API and Geocoding API must be enabled for the Google Cloud project used by the Map.
 * Data-driven styling for the locality boundary requires a Google JavaScript vector Map ID associated with the approved customized light Map style and the `LOCALITY` feature layer.
 * The Map ID and browser API key use the same Google Cloud project and are configured with the applicable Google Maps Platform restrictions.
 
 ### Visual Design
 
-* Uses a restrained, customized neutral base-map presentation that integrates with the existing site design.
 * Land uses global `Background Soft` (`#F7F9F7`) as its very light neutral treatment.
 * Water uses the local Map color `#EAF2F3`, a very light, subdued blue-green that remains geographically distinguishable without becoming a visual focal point.
 * Points of interest and business or point-of-interest labels are hidden.
-* Road geometry remains visible using global `Line System` (`#ECEEF4`) as a highly subdued treatment, while road labels and detailed road information are hidden.
+* Road geometry remains visible using the local Map color `#ECEEF4` as a highly subdued treatment, while road labels and detailed road information are hidden.
 * Useful geographic locality and city labels remain visible.
 * Only the current Area Page location receives custom geographic emphasis. Surrounding locations remain part of the neutral Google base-map context without custom treatment.
 * The current Area boundary uses global `Brand Green Light` (`#EAF3EC`) at `0.35` opacity as a translucent fill so the underlying Map remains visible.
 * The current Area boundary uses global `Brand Green` (`#4A8755`) as a `2px` stroke and remains identifiable without becoming visually heavy.
-* The current Area boundary has no hover treatment because it is informative rather than an interactive control.
 * The Map container uses the global `Medium` Radius (`12px`) and clips the Google Map content to that Radius.
 * The Map uses no Border or Shadow; the Map surface provides its separation from the surrounding Section background.
 * Required Google Maps branding and attribution remain visible and unmodified.
@@ -1305,7 +1298,6 @@ For the current Cleveland Area Page:
 * Keyboard interaction remains available when the Map receives focus.
 * Street View, map-type, fullscreen, rotation, and scale controls are hidden.
 * The highlighted current-area boundary is non-clickable and receives no interactive states.
-* After the initial framing, users may freely pan and zoom the Map.
 * The Map does not automatically recenter or restore its initial viewport after user interaction.
 
 ### Dimensions and Alignment
@@ -1341,10 +1333,6 @@ For the current Cleveland Area Page:
 * The non-clickable current-area boundary does not receive focus.
 * Panning and zooming do not trigger live announcements.
 * Additional hidden explanatory content is introduced only if a future Map requirement contains meaningful information that is not otherwise available accessibly.
-
-### Responsive Behavior
-
-* A responsive Aspect-Ratio exception may be introduced only if implementation review demonstrates that the approved `16:9` treatment does not provide sufficient usable geographic or control space at a narrower Breakpoint.
 
 ## Local Statistics
 
