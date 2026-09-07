@@ -1309,7 +1309,7 @@ For the current Cleveland Area Page:
   * Source: `Redfin`
 * Every Statistics Card includes the canonical Lucide icon assigned to its statistic role:
   * `Median Sale Price`: `BadgeDollarSign`
-  * `Homes Sold`: `HouseCheck`
+  * `Homes Sold`: `House`
   * `Median Price per Sq. Ft.`: `Ruler`
   * `Median Days on Market`: `CalendarDays`
 

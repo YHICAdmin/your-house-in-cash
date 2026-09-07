@@ -16,6 +16,17 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Google Maps configuration
+
+The Local / Area Section requires these values in a root `.env.local` file:
+
+```bash
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_restricted_browser_key
+NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID=your_vector_map_id
+```
+
+The key and vector Map ID must use the same Google Cloud project. Enable the Maps JavaScript API and Geocoding API, configure the Map ID with the approved light map style and `LOCALITY` feature layer, and restrict the browser key to the deployed site origins and required APIs. Without valid configuration, the Section displays its specified unavailable-map state.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
