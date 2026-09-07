@@ -1378,6 +1378,9 @@ For the current Cleveland Area Page:
 
 ### Content
 
+* Heading, preserving the documented two-line presentation:
+  * Line 1: `CITIES WE KNOW.`
+  * Line 2: `MARKET WE BUY IN.`
 * Every Area Page presents exactly six nearby-city entries.
 * The city names, their order, and their canonical city slugs are area-specific, are supplied by the canonical Area dataset, and use the same dataset as the Local Map where their geographic content overlaps.
 * For the current Cleveland Area Page, the six cities appear in this canonical order:
@@ -1392,12 +1395,14 @@ For the current Cleveland Area Page:
 
 ### Component and Semantics
 
+* The heading uses `h3` semantics.
 * The nearby-city collection uses semantic list and list-item elements.
 * Each list item contains one native link wrapping its complete nearby-city entry, including the decorative `MapPin` and visible city name.
 * The concluding link uses the documented `Text Link` Component with link semantics and places the decorative `ArrowRight` after its visible label.
 
 ### Visual Design
 
+* The heading uses the same local typography and visual treatment as the Local Statistics headline: `18px`, `700` weight, the global `H3` line height and letter spacing, uppercase presentation, and global `Brand Green Dark`.
 * The nearby-city collection uses a visual grid of `MapPin`-and-city-name links.
 * The semantic list has no visible list markers.
 * Each complete linked entry remains visually open and does not use a background, Border, Shadow, or surrounding Card surface.
@@ -1415,6 +1420,7 @@ For the current Cleveland Area Page:
 
 ### Spacing
 
+* `M` (`24px`) separates the heading from the six-city Grid across all Breakpoints.
 * An `S` (`16px`) horizontal and vertical gap separates adjacent city entries across all Breakpoints.
 * An `XS` (`8px`) gap separates the `MapPin` from the city name within each linked entry.
 * `M` (`24px`) separates the six-city Grid from the concluding `See all areas we buy in` Text Link across all Breakpoints.

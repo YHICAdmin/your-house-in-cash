@@ -155,6 +155,12 @@ export function AreaLocal({ area }: AreaLocalProps) {
 
         <div className={styles.rightFlow}>
           <div className={styles.nearbyAreas}>
+            <h3 className={`${styles.nearbyHeading} text-heading-3`}>
+              CITIES WE KNOW.
+              <br />
+              MARKET WE BUY IN.
+            </h3>
+
             <ul className={styles.nearbyGrid}>
               {area.nearbyCities.map((city) => (
                 <li key={city.slug}>
