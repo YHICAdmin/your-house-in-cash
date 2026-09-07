@@ -20,3 +20,10 @@
 .link:active {
   color: #245a33;
 }
+
+.inheritTypography {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}

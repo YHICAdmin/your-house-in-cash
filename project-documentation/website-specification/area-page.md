@@ -648,7 +648,7 @@ On Desktop, the main content area:
 
 #### Component and Semantics
 
-* Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
+* `Contact us` uses the documented `Text Link` Component in its Inherited Typography Mode, inheriting the surrounding global `Body Small` typography while preserving the Component's remaining visual styling, interaction states, and accessibility behavior.
 * Uses link semantics.
 
 ## Contact Us Option
@@ -1415,7 +1415,7 @@ For the current Cleveland Area Page:
 #### Component and Semantics
 
 * Data Sources uses paragraph semantics.
-* `Redfin` uses the documented `Text Link` Component with link semantics.
+* `Redfin` uses the documented `Text Link` Component in its Inherited Typography Mode, inheriting the surrounding global `Body Small` typography while preserving the Component's remaining visual styling, interaction states, and accessibility behavior.
 
 #### Visual Design
 
