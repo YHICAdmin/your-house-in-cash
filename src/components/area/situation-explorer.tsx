@@ -238,7 +238,7 @@ export function SituationExplorer({
         <IconContainer icon={MessageCircle} aria-hidden="true" />
         <p className={`${styles.contactText} text-body-small`}>
           Not sure which situation fits?{" "}
-          <TextLink href="/contact" inheritTypography>
+          <TextLink href="/contact">
             Contact us
           </TextLink>{" "}
           and we&apos;ll point you in the right direction.

@@ -187,17 +187,11 @@ All other visual properties remain consistent across instances.
 
 A generic Component for actions or navigation displayed as text rather than as a button.
 
-- Default font: Inter / 16px / 600 / 1.5
+- Font: Inter / 16px / 600 / 1.5
 - Color: #101114
 - Background/Border/Shadow: none
 - Width: content
 - Icon gap: 8px
-
-### Typography Modes
-
-- Default: uses the documented standalone `16px / 600 / 1.5` typography.
-- Inherited: font family, font size, font weight, and line height inherit from the surrounding text.
-- The Inherited mode preserves the shared Text Link color, states, transition, focus-visible treatment, semantics, and accessibility behavior.
 
 ### States
 
@@ -211,4 +205,4 @@ Content-width at every Breakpoint; does not automatically become a Button or ful
 
 ### Configurable
 
-Label, destination/action, icon, icon position, and Typography Mode.
+Label, destination/action, icon and icon position.
