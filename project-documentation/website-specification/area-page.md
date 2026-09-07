@@ -1316,7 +1316,7 @@ For the current Cleveland Area Page:
 * The Purple and Turquoise Cards use global `Text Primary` (`#101114`) for their text and icons.
 * The Dark Navy and Royal Blue Cards use white (`#FFFFFF`) for their text and icons.
 * Statistics Cards use the global `Medium` Radius (`12px`).
-* The headline uses global `H3` typography.
+* The headline uses a local `18px` font size and `700` weight across all Breakpoints while retaining the global `H3` line height and letter spacing.
 * The headline is displayed in uppercase and uses global `Brand Green Dark`.
 * Statistic values use global `H3` typography.
 * Statistic labels use global `Body` typography.

@@ -68,6 +68,8 @@
 .statisticsHeading {
   margin: 0 0 var(--spacing-m);
   color: var(--color-brand-dark);
+  font-size: 18px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
