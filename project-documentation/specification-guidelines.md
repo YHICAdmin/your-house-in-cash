@@ -2,13 +2,13 @@
 
 ## Purpose
 
-Define categories of specification decisions that may be resolved autonomously within the project’s approved systems. When authoring a new specification requirement or resolving an explicitly unresolved requirement, apply the existing global rules and Approved Specification Authority. If the applicable authority’s prerequisites yield one deterministic decision, make that decision without separate approval and document it precisely.
+Define categories of specification decisions that may be resolved autonomously within the project’s approved systems. When authoring a new specification requirement or resolving an explicitly unresolved requirement, apply the existing global rules and the applicable authority under `Decisions Codex Can Make Without Approval`. If the applicable authority’s prerequisites yield one deterministic decision, make that decision without separate approval and document it precisely.
 
-If no existing rule or Approved Specification Authority permits the required decision, or materially different valid outcomes remain, request the smallest user decision required. Do not invent the missing product, design, content, interaction, navigation, or architectural decision.
+If no existing rule or authority under `Decisions Codex Can Make Without Approval` permits the required decision, or materially different valid outcomes remain, request the smallest user decision required. Do not invent the missing product, design, content, interaction, navigation, or architectural decision.
 
-During a specification audit, treat an existing specified requirement as intentional. Approved Specification Authority does not permit changing, removing, consolidating, relocating, or materially reinterpreting that requirement without user approval merely because the authority might have produced a different result when authoring it from scratch. Specification audits follow this same decision model.
+During a specification audit, treat an existing specified requirement as intentional. The authorities under `Decisions Codex Can Make Without Approval` do not permit changing, removing, consolidating, relocating, or materially reinterpreting that requirement without user approval merely because an authority might have produced a different result when authoring it from scratch. Specification audits follow this same decision model.
 
-## Approved Specification Authority
+## Decisions Codex Can Make Without Approval
 
 ### Spacing-Token Selection
 
@@ -178,7 +178,7 @@ The decision is governed by these constraints:
 
 This authority applies to future specification work and to new unresolved decorative-content classifications encountered after its approval. It does not authorize retrospective changes to existing specifications.
 
-## Specification Authoring Rules
+## How to Write Specifications
 
 ### Global Inheritance and Local Ownership
 
@@ -191,3 +191,37 @@ This rule applies to future specification work. It does not authorize retrospect
 ### Element Order and Structural Subsections
 
 Within a Section specification, the documented order of its primary element subsections establishes their canonical element order. Do not use a `Structure`, `Layout`, or equivalent subsection solely to restate that sequence. Retain such a subsection only when it defines an additional multi-element relationship, such as grouping, nesting, parallel composition, responsive arrangement, conditional presence, or an approved difference between document and visual order.
+
+### Element Specification Structure and Ownership
+
+Element specifications use only the applicable canonical subsections, in this order:
+
+1. `Content`
+2. `Component and Semantics`
+3. `Visual Design`
+4. `Dimensions and Alignment`
+5. `Spacing`
+6. `Spacing After`
+7. `Interaction`
+8. `Accessibility`
+9. `Responsive Behavior`
+10. `Technical Requirements`
+
+Omit subsections that have nothing to own. Document each requirement once under its most precise owner:
+
+- `Content` owns visible content, data identity, required values, and content variability.
+- `Component and Semantics` owns shared Component assignment, native semantic roles, and internal semantic grouping.
+- `Visual Design` owns visual treatment and typography assignments.
+- `Dimensions and Alignment` owns size, proportion, Grid allocation, orientation, and alignment.
+- `Spacing` owns internal spacing relationships within the element or composition.
+- `Spacing After` owns external separation from the complete primary element to the next primary element in the same content flow, only at Breakpoints where that relationship exists. Omit it for separate parallel flows and for the final element in a flow unless another following relationship is explicitly specified.
+- `Interaction` owns interactive behavior and states.
+- `Accessibility` owns content-dependent accessibility requirements and approved local exceptions.
+- `Responsive Behavior` owns Breakpoint-specific changes not owned more precisely by another subsection.
+- `Technical Requirements` owns required architecture, APIs, services, configuration, data acquisition, and other technical prerequisites.
+
+Section-level `Layout` owns only genuine relationships among multiple primary elements that cannot be owned by one element, including shared Grid composition, parallel flows, and multi-element grouping. It does not duplicate individual element placement or properties.
+
+Content that exists solely to support, qualify, attribute, or complete another primary element may be nested under that element. Visual proximity alone does not justify nesting; an element with an independent purpose, placement, responsive composition, or interaction remains a primary element. Nested elements follow the same applicable subsection structure.
+
+A precisely named nested element, composition, or state subsection may be used when it owns a coherent set of interdependent requirements spanning multiple canonical categories and splitting those requirements would obscure their relationship.
