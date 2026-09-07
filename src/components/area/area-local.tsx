@@ -3,6 +3,7 @@ import {
   BadgeDollarSign,
   CalendarDays,
   House,
+  Info,
   MapPin,
   Ruler,
   type LucideIcon,
@@ -82,10 +83,18 @@ export function AreaLocal({ area }: AreaLocalProps) {
           </div>
 
           <div className={styles.map}>
-            <LocalMap
-              areaName={area.city}
-              embedUrl={area.googleMapsEmbedUrl}
-            />
+            <div className={styles.mapFrame}>
+              <LocalMap
+                areaName={area.city}
+                embedUrl={area.googleMapsEmbedUrl}
+              />
+            </div>
+            <p className={`${styles.mapNote} text-body-small`}>
+              <Info aria-hidden="true" size={16} />
+              <span>
+                We buy houses throughout {area.city} and nearby cities.
+              </span>
+            </p>
           </div>
 
           <div className={styles.statistics}>

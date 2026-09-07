@@ -1212,8 +1212,14 @@ For the current Cleveland Area Page:
 
 * The current Area Page location is the primary geographic focus.
 * `Nearby Areas` is the dedicated Section element for explicitly presenting the Area Page's approved surrounding locations.
+* Information note: `We buy houses throughout {Area Name} and nearby cities.`, generated dynamically from the current Area Page data.
+* For the current Cleveland Area Page, the information note is `We buy houses throughout Cleveland and nearby cities.`.
 * The repository-owned canonical Area dataset supplies the Google Maps embed URL for each Area Page. Each URL displays that page's approved current location, so the shared Section is not hardcoded for Cleveland or any other individual location.
 * For the current Cleveland Area Page, the approved embed URL is `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191251.91240052145!2d-81.70586405!3d41.497532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef2ee3686b2d%3A0xed04cb55f7621842!2sCleveland%2C%20OH%2C%20USA!5e0!3m2!1sen!2sil!4v1788783140965!5m2!1sen!2sil`.
+
+### Component and Semantics
+
+* The information note uses paragraph semantics and contains the canonical Lucide `Info` icon before the text.
 
 ### Visual Design
 
@@ -1221,6 +1227,8 @@ For the current Cleveland Area Page:
 * The Map container uses the global `Medium` Radius (`12px`) and clips the Google Map content to that Radius.
 * The Map uses no Border or Shadow; the Map surface provides its separation from the surrounding Section background.
 * Required Google Maps branding and attribution remain visible and unmodified.
+* The information note uses global `Body Small` typography and global `Text Secondary` for both its icon and text.
+* The information note remains visually open without a background, Border, Shadow, or separate surface.
 
 ### Dimensions and Alignment
 
@@ -1229,6 +1237,12 @@ For the current Cleveland Area Page:
 * On Mobile, fills the complete available Content Grid width.
 * Uses a `16:9` Aspect Ratio where the resulting height is at least `200px`. Width is determined by the applicable Grid allocation, and height is derived from the Aspect Ratio.
 * Uses a `200px` minimum height. At narrow widths where `16:9` would produce a shorter Map, the minimum height takes precedence.
+* The information note forms a horizontal icon-and-text flow below the Map and uses the global Small icon size (`16px`).
+
+### Spacing
+
+* `XS` (`8px`) separates the Map from the information note across all Breakpoints.
+* `XS` (`8px`) separates the `Info` icon from the note text across all Breakpoints.
 
 ### Spacing After
 
@@ -1244,6 +1258,7 @@ For the current Cleveland Area Page:
 
 * The iframe title is `Interactive map of {Area Name}`, generated dynamically from the current Area Page data.
 * Google Maps' embedded accessible interface remains unmodified.
+* The `Info` icon is decorative because the adjacent note text communicates the complete information; the icon is hidden from assistive technologies and does not receive an accessible name.
 
 ### Technical Requirements
 

@@ -34,6 +34,9 @@
 .map {
   width: 100%;
   margin-bottom: var(--spacing-s);
+}
+
+.mapFrame {
   overflow: hidden;
   border-radius: var(--radius-medium);
 }
@@ -44,6 +47,18 @@
   min-height: 200px;
   aspect-ratio: 16 / 9;
   border: 0;
+}
+
+.mapNote {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-xs) 0 0;
+  color: var(--color-text-secondary);
+}
+
+.mapNote svg {
+  flex: 0 0 var(--icon-small);
 }
 
 .statistics {
