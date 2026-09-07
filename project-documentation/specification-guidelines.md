@@ -2,7 +2,11 @@
 
 ## Purpose
 
-Define categories of specification decisions that may be resolved autonomously within the project’s approved systems. Decisions made under these rules must still be documented precisely in the resulting specification so implementation remains deterministic.
+Define categories of specification decisions that may be resolved autonomously within the project’s approved systems. When authoring a new specification requirement or resolving an explicitly unresolved requirement, apply the existing global rules and Approved Specification Authority. If the applicable authority’s prerequisites yield one deterministic decision, make that decision without separate approval and document it precisely.
+
+If no existing rule or Approved Specification Authority permits the required decision, or materially different valid outcomes remain, request the smallest user decision required. Do not invent the missing product, design, content, interaction, navigation, or architectural decision.
+
+During a specification audit, treat an existing specified requirement as intentional. Approved Specification Authority does not permit changing, removing, consolidating, relocating, or materially reinterpreting that requirement without user approval merely because the authority might have produced a different result when authoring it from scratch. Specification audits follow this same decision model.
 
 ## Approved Specification Authority
 
