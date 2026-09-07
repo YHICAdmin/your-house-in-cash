@@ -1188,7 +1188,14 @@ The Section:
 
 * Establishes local familiarity and credibility.
 * Provides useful information about the specific area.
-* Highlights nearby cities and neighborhoods where the company buys houses.
+* Highlights nearby cities where the company buys houses.
+
+## Area Page Routing
+
+* Every Area Page uses the canonical route pattern `/sell-your-house-fast-as-is-{city-slug}`.
+* Each Area Page's canonical city slug is supplied by the canonical Area dataset, and its route is derived from that slug rather than stored as an independently authored URL.
+* The current Cleveland Area Page uses the canonical slug `cleveland` and route `/sell-your-house-fast-as-is-cleveland`.
+* `/areas-we-buy-in` remains the broader service-area inventory route and is not the parent path for individual Area Pages.
 
 ## Layout
 
@@ -1207,7 +1214,7 @@ On Desktop and Tablet, the left-area elements form one top-to-bottom content flo
 ### Mobile
 
 * The left and right areas collapse into one column spanning the complete available Content Grid width.
-* Elements retain canonical document order: all left-area elements from top to bottom, followed by all right-area elements from top to bottom; the Optional Section CTA remains last when included.
+* Elements retain canonical document order: all left-area elements from top to bottom, followed by all right-area elements from top to bottom.
 
 ## Section Intro
 
@@ -1429,51 +1436,86 @@ For the current Cleveland Area Page:
 
 ### Content
 
-* Presents nearby cities and neighborhoods through area names accompanied by simple icons rather than as a conventional visible text list.
-* Nearby-area entries are populated from the Area Page's approved local-area data and use the same canonical area dataset as the Local Map where their geographic content overlaps.
+* Every Area Page presents exactly six nearby-city entries.
+* The city names, their order, and their canonical city slugs are area-specific, are supplied by the canonical Area dataset, and use the same dataset as the Local Map where their geographic content overlaps.
+* For the current Cleveland Area Page, the six cities appear in this canonical order:
+  1. `Lakewood`
+  2. `Cleveland Heights`
+  3. `Euclid`
+  4. `Parma`
+  5. `Shaker Heights`
+  6. `Garfield Heights`
 * The collection concludes with the link label `See all areas we buy in` and the canonical Lucide `ArrowRight` icon.
-* Exact icons for the individual nearby areas remain to be defined with the final entries.
+* Every nearby-city entry uses the canonical Lucide `MapPin` icon; city-specific icons or symbolism are not introduced without approved city-specific content that justifies them.
 
 ### Component and Semantics
 
-* The nearby-area collection uses semantic list and list-item elements.
-* Whether individual nearby-area entries are interactive remains to be defined.
-* The concluding link uses the documented `Text Link` Component with link semantics.
+* The nearby-city collection uses semantic list and list-item elements.
+* Each list item contains one native link wrapping its complete nearby-city entry, including the decorative `MapPin` and visible city name.
+* The concluding link uses the documented `Text Link` Component with link semantics and places the decorative `ArrowRight` after its visible label.
 
 ### Visual Design
 
-* The nearby-area collection uses a subtle visual grid with simple icons and area names.
-* Nearby-area names use the global `Body` typography.
+* The nearby-city collection uses a visual grid of `MapPin`-and-city-name links.
+* The semantic list has no visible list markers.
+* Each complete linked entry remains visually open and does not use a background, Border, Shadow, or surrounding Card surface.
+* Nearby-city names use the global `Body` typography.
+* By default, each city name uses global `Text Primary`, each `MapPin` uses global `Brand Green`, and the link has no underline.
 
 ### Dimensions and Alignment
 
 * On Desktop and Tablet, occupies the right area.
-* Exact grid dimensions and column count remain to be defined.
+* On Mobile, occupies the complete available Content Grid width.
+* Across all Breakpoints, the six city entries form a two-column-by-three-row Grid with two equal-width columns.
+* The Grid fills in canonical city order from left to right across each row, then from top to bottom across the three rows.
+* Each nearby-city link spans the complete width of its Grid cell, which forms the complete pointer and keyboard-focus target.
+* Within each link, the `MapPin` appears before the city name in a horizontal flow, and the icon and city name are vertically center-aligned.
+
+### Spacing
+
+* An `S` (`16px`) horizontal and vertical gap separates adjacent city entries across all Breakpoints.
+* An `XS` (`8px`) gap separates the `MapPin` from the city name within each linked entry.
+* `M` (`24px`) separates the six-city Grid from the concluding `See all areas we buy in` Text Link across all Breakpoints.
 
 ### Spacing After
 
-* Exact spacing after Nearby Areas remains to be defined.
+* `L` (`32px`) separates the complete Nearby Areas composition from Local Market Content across all Breakpoints.
 
 ### Interaction
 
+* Each complete nearby-city entry derives its destination from the city's canonical slug using `/sell-your-house-fast-as-is-{city-slug}`.
+* For the current Cleveland Area Page, the destinations are:
+  1. `Lakewood`: `/sell-your-house-fast-as-is-lakewood`
+  2. `Cleveland Heights`: `/sell-your-house-fast-as-is-cleveland-heights`
+  3. `Euclid`: `/sell-your-house-fast-as-is-euclid`
+  4. `Parma`: `/sell-your-house-fast-as-is-parma`
+  5. `Shaker Heights`: `/sell-your-house-fast-as-is-shaker-heights`
+  6. `Garfield Heights`: `/sell-your-house-fast-as-is-garfield-heights`
+* On Hover, the city name and `MapPin` use global `Brand Green Dark`.
+* In the Active state, the city name and `MapPin` use `#245A33`, matching the established Text Link active color.
+* Color transitions use `150ms ease`.
 * The concluding link navigates to the canonical internal route `/areas-we-buy-in`.
 
 ### Accessibility
 
-* Each nearby-area icon is decorative when its accompanying visible area name communicates the same identity.
+* Each `MapPin` icon is decorative because its accompanying visible city name communicates the entry's identity.
 * The `ArrowRight` icon is decorative because the visible link label communicates the complete destination.
-
-### Responsive Behavior
-
-* Exact Tablet and Mobile grid composition remains to be defined.
 
 ## Local Market Content
 
 ### Content
 
-* Contains a short, editorial-style local-market headline and Supporting Copy that reinforce familiarity with the local market.
-* Example headline, shown on two lines: `We live and work here.` followed by `This is our market.`
-* The example is not canonical copy; the final headline and Supporting Copy are specific to each individual area rather than generic company messaging and remain to be defined.
+Contains, in document order:
+
+1. Area-specific local-market headline.
+2. Area-specific Supporting Copy.
+
+Both content roles are dynamic Area Page content. Each future Area Page provides its own approved area-specific values while preserving the same content roles.
+
+For the current Cleveland Area Page:
+
+* Local-market headline: `Understanding the Cleveland Housing Market`
+* Supporting Copy: `From century-old homes to newer developments, Cleveland’s housing market varies from one part of the city to another. Property condition, location, and local buyer demand can all affect how a home sells. We look at those factors when evaluating a property and making a cash offer.`
 
 ### Component and Semantics
 
@@ -1490,28 +1532,9 @@ For the current Cleveland Area Page:
 * On Desktop and Tablet, occupies the right area.
 * All content is left-aligned.
 
-### Spacing After
+### Spacing
 
-* Exact spacing after the Local Market Content remains to be defined.
-
-## Optional Section CTA
-
-### Content
-
-* Appears at the end of the Section only when an Area Page requires an additional CTA.
-* CTA presence, label, and destination remain to be defined for each Area Page.
-
-### Component and Semantics
-
-* The CTA Component and semantics remain to be defined if the CTA is included.
-
-### Dimensions and Alignment
-
-* Exact placement and alignment remain to be defined if the CTA is included.
-
-### Responsive Behavior
-
-* Exact Tablet and Mobile treatment remains to be defined if the CTA is included.
+* `M` (`24px`) separates the local-market headline from the Supporting Copy across all Breakpoints.
 
 # FAQ
 
