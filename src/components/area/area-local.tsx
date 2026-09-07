@@ -72,7 +72,7 @@ export function AreaLocal({ area }: AreaLocalProps) {
       <div className={`${styles.layout} content-grid`}>
         <div className={styles.leftFlow}>
           <div className={styles.intro}>
-            <SectionLabel icon={MapPin}>LOCATION</SectionLabel>
+            <SectionLabel icon={MapPin}>LOCAL EXPERTISE</SectionLabel>
             <h2 id={headingId} className={`${styles.heading} text-heading-2`}>
               {area.intro.headline}
             </h2>

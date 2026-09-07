@@ -1169,7 +1169,7 @@ On Desktop and Tablet, the left-area elements form one top-to-bottom content flo
 
 Contains, in document order:
 
-1. Section Label: `LOCATION`, with the canonical Lucide `MapPin` icon.
+1. Section Label: `LOCAL EXPERTISE`, with the canonical Lucide `MapPin` icon.
 2. Area-specific Primary Headline.
 3. Area-specific Supporting Copy.
 
