@@ -38,24 +38,12 @@
   border-radius: var(--radius-medium);
 }
 
-.mapCanvas,
-.mapUnavailable {
+.mapCanvas {
+  display: block;
   width: 100%;
+  min-height: 200px;
   aspect-ratio: 16 / 9;
-  background: var(--color-background-soft);
-}
-
-.mapUnavailable {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--spacing-m);
-  color: var(--color-text-secondary);
-  text-align: center;
-}
-
-.mapUnavailable p {
-  margin: 0;
+  border: 0;
 }
 
 .statistics {

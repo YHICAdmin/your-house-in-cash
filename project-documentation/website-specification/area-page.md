@@ -1212,81 +1212,43 @@ For the current Cleveland Area Page:
 
 * The current Area Page location is the primary geographic focus.
 * `Nearby Areas` is the dedicated Section element for explicitly presenting the Area Page's approved surrounding locations.
-* The Local Map and Nearby Areas use the same canonical area dataset where their geographic content overlaps, but the Local Map's custom geographic input is limited to the current Area Page location and does not require boundary data for every surrounding location.
-* Google Maps provides the Map's geographic rendering and base-map data.
-* The current Area Page location data determines the Google Maps geographic context; the Map is not hardcoded for Cleveland or any other individual location.
-* The current Area Page location is represented by its highlighted geographic boundary rather than by a central location marker. This treatment applies dynamically across all Area Pages.
-* Google Maps locality boundary coverage is the canonical source for the current location's boundary. The Google Maps JavaScript API provides and renders the boundary geometry.
-* The repository-owned canonical area dataset identifies the current location using its stable Google Place ID; it does not provide duplicate polygon or GeoJSON boundary geometry or manually maintained viewport coordinates.
-* Suitable Google locality boundary coverage must be verified before an Area Page is considered ready for the Local Map treatment.
-* Missing or unsuitable Google locality boundary coverage remains an Area-specific data and validation issue.
-* A repository-owned polygon or GeoJSON fallback is not specified. If a future supported Area lacks suitable Google boundary coverage, any fallback becomes a new requirement requiring separate approval.
-* The canonical area dataset is repository-owned structured project data. It provides each Area Page's current location and approved surrounding locations, with optional additional geographic metadata when later required by an approved specification decision.
-
-### Technical Requirements
-
-* The Google Maps JavaScript API Geocoding service resolves the current locality's viewport dynamically from its canonical Place ID.
-* The Google Maps JavaScript API and Geocoding API must be enabled for the Google Cloud project used by the Map.
-* Data-driven styling for the locality boundary requires a Google JavaScript vector Map ID associated with the approved customized light Map style and the `LOCALITY` feature layer.
-* The Map ID and browser API key use the same Google Cloud project and are configured with the applicable Google Maps Platform restrictions.
+* The repository-owned canonical Area dataset supplies the Google Maps embed URL for each Area Page. Each URL displays that page's approved current location, so the shared Section is not hardcoded for Cleveland or any other individual location.
+* For the current Cleveland Area Page, the approved embed URL is `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191251.91240052145!2d-81.70586405!3d41.497532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef2ee3686b2d%3A0xed04cb55f7621842!2sCleveland%2C%20OH%2C%20USA!5e0!3m2!1sen!2sil!4v1788783140965!5m2!1sen!2sil`.
 
 ### Visual Design
 
-* Land uses global `Background Soft` (`#F7F9F7`) as its very light neutral treatment.
-* Water uses the local Map color `#EAF2F3`, a very light, subdued blue-green that remains geographically distinguishable without becoming a visual focal point.
-* Points of interest and business or point-of-interest labels are hidden.
-* Road geometry remains visible using the local Map color `#ECEEF4` as a highly subdued treatment, while road labels and detailed road information are hidden.
-* Useful geographic locality and city labels remain visible.
-* Only the current Area Page location receives custom geographic emphasis. Surrounding locations remain part of the neutral Google base-map context without custom treatment.
-* The current Area boundary uses global `Brand Green Light` (`#EAF3EC`) at `0.35` opacity as a translucent fill so the underlying Map remains visible.
-* The current Area boundary uses global `Brand Green` (`#4A8755`) as a `2px` stroke and remains identifiable without becoming visually heavy.
+* Google Maps owns the embedded Map's internal presentation, labels, controls, and geographic detail.
 * The Map container uses the global `Medium` Radius (`12px`) and clips the Google Map content to that Radius.
 * The Map uses no Border or Shadow; the Map surface provides its separation from the surrounding Section background.
 * Required Google Maps branding and attribution remain visible and unmodified.
-
-### Interaction
-
-* Uses cooperative gesture handling across all Breakpoints so Map interaction does not unnecessarily interfere with normal page scrolling.
-* Users can pan and zoom the Map.
-* The standard Zoom controls remain visible.
-* Keyboard interaction remains available when the Map receives focus.
-* Street View, map-type, fullscreen, rotation, and scale controls are hidden.
-* The highlighted current-area boundary is non-clickable and receives no interactive states.
-* The Map does not automatically recenter or restore its initial viewport after user interaction.
 
 ### Dimensions and Alignment
 
 * On Desktop, fills the complete left Grid area across Columns `1–6`.
 * On Tablet, fills the complete left Grid area across Columns `1–4`.
 * On Mobile, fills the complete available Content Grid width.
-* Uses a `16:9` Aspect Ratio across all Breakpoints. Width is determined by the applicable Grid allocation, and height is derived from the Aspect Ratio rather than specified independently.
-* The initial Map viewport fits the complete Google locality boundary of the current Area Page location and includes consistent internal breathing room around it.
-* The initial zoom is derived from the geographic extent of the current Area rather than using one hardcoded zoom level across Area Pages.
-* Initial viewport padding is `M` (`24px`) on Desktop and Tablet and `S` (`16px`) on Mobile.
+* Uses a `16:9` Aspect Ratio where the resulting height is at least `200px`. Width is determined by the applicable Grid allocation, and height is derived from the Aspect Ratio.
+* Uses a `200px` minimum height. At narrow widths where `16:9` would produce a shorter Map, the minimum height takes precedence.
 
 ### Spacing After
 
 * `M` (`24px`) on Desktop and Tablet.
 * `S` (`16px`) on Mobile.
 
-### Unavailable State
+### Interaction
 
-* If the Google Maps JavaScript API, Geocoding request, required Map configuration, or locality boundary layer is unavailable at runtime, the unavailable treatment replaces the Map without affecting `Nearby Areas` or any other Section content.
-* Preserves the approved `16:9` Map container and global `Medium` Radius (`12px`) and uses global `Background Soft` (`#F7F9F7`) as its surface.
-* Displays the paragraph `Map of {Area Name} is temporarily unavailable.`, with `{Area Name}` generated dynamically from the current Area Page data.
-* The message uses global `Body` typography and the global `Text Secondary` color.
-* Does not provide a static-map fallback, custom boundary geometry, or a retry control.
-* The message remains in normal accessible reading order and does not trigger a live announcement.
+* The Map remains interactive through the native embedded Google Maps experience.
+* Google Maps owns the embedded controls and interaction behavior; the Section adds no custom JavaScript Map interaction layer.
 
 ### Accessibility
 
-* Accessible name: `Interactive map of {Area Name}`, generated dynamically from the current Area Page data.
-* No separate hidden accessible description is added.
-* Google Maps' internal accessible interface is preserved.
-* Google Zoom controls retain their provided accessible names and keyboard behavior.
-* The non-clickable current-area boundary does not receive focus.
-* Panning and zooming do not trigger live announcements.
-* Additional hidden explanatory content is introduced only if a future Map requirement contains meaningful information that is not otherwise available accessibly.
+* The iframe title is `Interactive map of {Area Name}`, generated dynamically from the current Area Page data.
+* Google Maps' embedded accessible interface remains unmodified.
+
+### Technical Requirements
+
+* Each Area Page's embed URL is generated through Google Maps' standard Share or embed map workflow and stored in the canonical Area dataset.
+* The iframe uses lazy loading and the `strict-origin-when-cross-origin` referrer policy.
 
 ## Local Statistics
 

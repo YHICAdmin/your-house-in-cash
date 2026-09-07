@@ -82,7 +82,10 @@ export function AreaLocal({ area }: AreaLocalProps) {
           </div>
 
           <div className={styles.map}>
-            <LocalMap areaName={area.city} placeId={area.googlePlaceId} />
+            <LocalMap
+              areaName={area.city}
+              embedUrl={area.googleMapsEmbedUrl}
+            />
           </div>
 
           <div className={styles.statistics}>
