@@ -1338,65 +1338,92 @@ For the current Cleveland Area Page:
 
 ### Content
 
-* The exact number and data points vary according to what is relevant to each Area Page and remain to be defined.
-* Individual statistics may include icons; exact icon presence and identities remain to be defined with the final data points.
+* Every Area Page uses the following fixed set of four statistic roles in this canonical order:
+  1. `Median Sale Price`
+  2. `Median Price per Sq. Ft.`
+  3. `Homes Sold`
+  4. `Median Days on Market`
+* Redfin housing-market data is the canonical source for all four statistics.
+* Their values and applicable data period are area-specific and time-dependent.
+* The repository-owned Area data provides the four statistic values, applicable data period, and source reference required by Data Sources.
+* For the current Cleveland Area Page, the approved July 2026 snapshot is:
+  * `Median Sale Price`: `$149,925`
+  * `Median Price per Sq. Ft.`: `$100/sq ft`
+  * `Homes Sold`: `1,202`
+  * `Median Days on Market`: `33 days`
+  * Data period: `July 2026`
+  * Source: `Redfin`
+* Every Statistics Card includes the canonical Lucide icon assigned to its statistic role:
+  * `Median Sale Price`: `BadgeDollarSign`
+  * `Median Price per Sq. Ft.`: `Ruler`
+  * `Homes Sold`: `HouseCheck`
+  * `Median Days on Market`: `CalendarDays`
 
 ### Component and Semantics
 
 * The statistics collection uses semantic list and list-item elements.
+* Within each Statistics Card, the icon, statistic value, and statistic label appear in that document and visual order.
 
 ### Visual Design
 
-* Statistics Cards use solid background colors and may intentionally extend beyond the global Brand Greens and Neutral Palette.
-* Multiple colors may be used within one statistics composition, including treatments such as purple, turquoise, and different shades of blue.
-* This color treatment is a local visual accent and is not required elsewhere on the website.
-* Exact Statistics Card colors remain to be defined.
-* Statistics Card text and icons use light or white high-contrast foreground treatments.
+* Each Statistics Card uses the solid local background color assigned to its canonical statistic role:
+  * `Median Sale Price`: Purple (`#9966FF`)
+  * `Median Price per Sq. Ft.`: Turquoise (`#00C4C4`)
+  * `Homes Sold`: Dark Navy (`#002C59`)
+  * `Median Days on Market`: Royal Blue (`#1959E6`)
+* The Purple and Turquoise Cards use global `Text Primary` (`#101114`) for their text and icons.
+* The Dark Navy and Royal Blue Cards use white (`#FFFFFF`) for their text and icons.
 * Statistics Cards use the global `Medium` Radius (`12px`).
-* Exact statistics typography remains to be defined with the final content hierarchy.
+* Statistic values use global `H3` typography.
+* Statistic labels use global `Body Small` typography.
 
 ### Dimensions and Alignment
 
 * On Desktop and Tablet, the complete composition remains within the left area.
-* Statistics Cards use varying dimensions and proportions to create controlled asymmetry and are not made identical.
+* Across all Breakpoints, the composition uses two equal-width columns.
+* The left column forms an independent top-to-bottom Card flow containing `Median Sale Price` as the taller Card followed by `Homes Sold` as the shorter Card.
+* The right column forms an independent top-to-bottom Card flow containing `Median Price per Sq. Ft.` as the shorter Card followed by `Median Days on Market` as the taller Card.
+* A Card's height in one column does not determine the vertical position of either Card in the other column.
+* No Statistics Card spans both columns.
+* On Desktop and Tablet, each Statistics Card uses `M` (`24px`) internal padding on all sides.
+* On Mobile, each Statistics Card uses `S` (`16px`) internal padding on all sides.
+* Across all Breakpoints, the shorter Cards use a `192px` minimum height and the taller Cards use a `256px` minimum height.
+* Statistics Cards may grow beyond their minimum height when their content requires additional space.
+
+### Spacing
+
 * An `XS` (`8px`) consistent gap separates adjacent Statistics Cards.
-* Exact Card dimensions and asymmetric arrangement remain to be defined.
-
-### Spacing After
-
-* Exact spacing after Local Statistics remains to be defined.
+* `S` (`16px`) separates the icon from the statistic value.
+* `XS` (`8px`) separates the statistic value from its label.
+* `S` (`16px`) separates the Statistics Cards from Data Sources.
 
 ### Accessibility
 
-* Accessibility treatment for any statistics icons remains to be defined with their final content and purpose.
+* Each statistics icon is decorative because its visible statistic label communicates the same meaning; the icon is hidden from assistive technologies and does not receive an accessible name.
 
-### Responsive Behavior
+### Data Sources
 
-* Exact Tablet and Mobile statistics composition remains to be defined.
+#### Content
 
-## Data Sources
+* Visible content follows the pattern `Data from Redfin · Updated {Data Period}`.
+* For the current Cleveland July 2026 snapshot, the visible content is `Data from Redfin · Updated July 2026`.
+* `Redfin` links to the canonical Redfin housing-market source for the current Area Page statistics.
+* The source destination is area-specific. For the current Cleveland Area Page, the destination is `https://www.redfin.com/city/4145/OH/Cleveland/housing-market`.
+* `{Data Period}` reflects the period associated with the currently displayed statistic values.
+* The four statistic values, source destination, and data period are updated together as one data snapshot.
 
-### Content
+#### Component and Semantics
 
-* Identifies the sources for the area-specific Local Statistics.
-* Exact source content remains to be defined with the final data points for each Area Page.
+* Data Sources uses paragraph semantics.
+* `Redfin` uses the documented `Text Link` Component with link semantics.
 
-### Component and Semantics
-
-* Exact semantics remain to be defined with the final source content and presentation.
-
-### Visual Design
+#### Visual Design
 
 * Uses the global `Body Small` typography.
 
-### Dimensions and Alignment
-
-* On Desktop and Tablet, occupies the left area.
-* On Desktop and Tablet, appears directly below the Local Statistics composition.
-
 ### Spacing After
 
-* Exact spacing after Data Sources remains to be defined.
+* On Mobile, `L` (`32px`) separates the complete Local Statistics composition from Nearby Areas.
 
 ## Nearby Areas
 
