@@ -1340,36 +1340,36 @@ For the current Cleveland Area Page:
 
 * Every Area Page uses the following fixed set of four statistic roles in this canonical order:
   1. `Median Sale Price`
-  2. `Median Price per Sq. Ft.`
-  3. `Homes Sold`
+  2. `Homes Sold`
+  3. `Median Price per Sq. Ft.`
   4. `Median Days on Market`
 * Redfin housing-market data is the canonical source for all four statistics.
 * Their values and applicable data period are area-specific and time-dependent.
 * The repository-owned Area data provides the four statistic values, applicable data period, and source reference required by Data Sources.
 * For the current Cleveland Area Page, the approved July 2026 snapshot is:
   * `Median Sale Price`: `$149,925`
-  * `Median Price per Sq. Ft.`: `$100/sq ft`
   * `Homes Sold`: `1,202`
+  * `Median Price per Sq. Ft.`: `$100/sq ft`
   * `Median Days on Market`: `33 days`
   * Data period: `July 2026`
   * Source: `Redfin`
 * Every Statistics Card includes the canonical Lucide icon assigned to its statistic role:
   * `Median Sale Price`: `BadgeDollarSign`
-  * `Median Price per Sq. Ft.`: `Ruler`
   * `Homes Sold`: `HouseCheck`
+  * `Median Price per Sq. Ft.`: `Ruler`
   * `Median Days on Market`: `CalendarDays`
 
 ### Component and Semantics
 
 * The statistics collection uses semantic list and list-item elements.
-* Within each Statistics Card, the icon, statistic value, and statistic label appear in that document and visual order.
+* Within each Statistics Card, the icon, statistic value, and statistic label form a vertical content flow in that document and visual order.
 
 ### Visual Design
 
 * Each Statistics Card uses the solid local background color assigned to its canonical statistic role:
   * `Median Sale Price`: Purple (`#9966FF`)
-  * `Median Price per Sq. Ft.`: Turquoise (`#00C4C4`)
   * `Homes Sold`: Dark Navy (`#002C59`)
+  * `Median Price per Sq. Ft.`: Turquoise (`#00C4C4`)
   * `Median Days on Market`: Royal Blue (`#1959E6`)
 * The Purple and Turquoise Cards use global `Text Primary` (`#101114`) for their text and icons.
 * The Dark Navy and Royal Blue Cards use white (`#FFFFFF`) for their text and icons.
