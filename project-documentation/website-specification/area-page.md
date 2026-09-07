@@ -69,56 +69,46 @@ Provide the seller with a clear path to begin the conversion process.
 * The global System Lines remain visible above the treatment, and foreground content remains above both.
 * The treatment must preserve foreground-content contrast and readability.
 
-## Section Label
+## Section Intro
 
 ### Content
 
-* Content template: `[City], Ohio`.
-* `[City]` is the city name only, without the state.
-* The content changes dynamically between Area Pages.
-* Rendered example: `CLEVELAND, OHIO`.
-* Includes the `MapPin` icon from `lucide-react`.
+Contains, in document order:
+
+1. Section Label:
+   * Content template: `[City], Ohio`.
+   * `[City]` is the city name only, without the state.
+   * The content changes dynamically between Area Pages.
+   * Rendered example: `CLEVELAND, OHIO`.
+   * Includes the `MapPin` icon from `lucide-react`.
+2. Primary Headline:
+   * Content template: `Sell Your House Fast in [City]`.
+   * The city name changes dynamically between Area Pages.
+   * This Hero content template applies to City Area Pages; non-city Area Pages require a separately defined content template.
+3. Supporting Copy:
+   * Content template: `We buy houses in [City] as-is, with no repairs, fees, or waiting for a traditional sale.`
+   * The city name changes dynamically between Area Pages.
 
 ### Component and Semantics
 
-* Uses the documented `Section Label` Component.
+* The Section Label uses the documented `Section Label` Component.
+* The Primary Headline uses `H1` semantics.
 
 ### Visual Design
 
-* The `[City], Ohio` template renders in uppercase.
-
-### Spacing After
-
-* `16px` (`S`).
-
-### Interaction
-
-* Non-interactive.
-
-## Primary Headline
-
-### Content
-
-* Content template: `Sell Your House Fast in [City]`.
-* The city name changes dynamically between Area Pages.
-* This Hero content template applies to City Area Pages; non-city Area Pages require a separately defined content template.
-
-### Component and Semantics
-
-* Uses `H1` semantics.
-
-### Visual Design
-
-* Uses the global `H1` typography.
+* The Section Label's `[City], Ohio` template renders in uppercase.
+* The Primary Headline uses the global `H1` typography.
 * `Sell Your House Fast in` uses the global `Text Primary` color.
-* `[City]` uses the same global `Text Primary` color as the rest of the headline.
-* Acts as the primary visual focal point of the Hero.
+* `[City]` uses the same global `Text Primary` color as the rest of the Primary Headline.
+* The Primary Headline acts as the primary visual focal point of the Hero.
+* The Supporting Copy uses the global `Body Large` typography.
+* The Supporting Copy remains visually secondary to the Primary Headline.
 
 ### Dimensions and Alignment
 
-* Wraps naturally according to the available width; do not add manual line breaks.
+* The Primary Headline wraps naturally according to the available width; do not add manual line breaks.
 * `[City]` may wrap naturally at word boundaries but must not break within a word.
-* The `[City]` text block follows the rendered width of the city name and is constrained to the available headline width.
+* The `[City]` text block follows the rendered width of the city name and is constrained to the available Primary Headline width.
 * A single decorative hand-drawn stroke appears `4px` beneath the complete `[City]` text block.
 * The stroke spans the complete rendered width of the `[City]` text block, with its rounded left and right ends aligned to the corresponding city-text edges.
 * The stroke occupies a `16px`-high decoration area and is approximately `9–11px` thick, with slight natural variation across its length.
@@ -127,25 +117,18 @@ Provide the seller with a clear path to begin the conversion process.
 * When a multi-word city wraps, the stroke remains one decoration beneath the complete city block and does not repeat beneath individual lines.
 * The stroke is decorative and does not affect text layout.
 
-### Spacing After
+### Spacing
 
-* `24px` (`M`).
-
-## Supporting Copy
-
-### Content
-
-* Content template: `We buy houses in [City] as-is, with no repairs, fees, or waiting for a traditional sale.`
-* The city name changes dynamically between Area Pages.
-
-### Visual Design
-
-* Uses the global `Body Large` typography.
-* Remains visually secondary to the Primary Headline.
+* `16px` (`S`) separates the Section Label from the Primary Headline.
+* `24px` (`M`) separates the Primary Headline from the Supporting Copy.
 
 ### Spacing After
 
 * `32px` (`L`).
+
+### Interaction
+
+* The Section Label is non-interactive.
 
 ## Button
 
@@ -341,48 +324,30 @@ On Desktop, the main content area:
 * Uses the second System Line from the left to separate the two areas between Grid Columns `3` and `4`.
 * Places the Situation Selector and Selected Situation Content in one content-driven row whose two areas share the same top and bottom edges.
 
-## Section Label
+## Section Intro
 
 ### Content
 
-* Text: `We Help With`.
-* Includes the canonical Lucide `House` icon.
+Contains, in document order:
+
+1. Section Label: `We Help With`, with the canonical Lucide `House` icon.
+2. Primary Headline: `What brings you here?`
+3. Supporting Copy: `Every homeowner’s situation is different. Choose what best describes yours to see how we can help.`
 
 ### Component and Semantics
 
-* Uses the documented `Section Label` Component.
-
-### Spacing After
-
-* `16px` (`S`) across all Breakpoints.
-
-## Primary Headline
-
-### Content
-
-* Text: `What brings you here?`
-
-### Component and Semantics
-
-* Serves as the Situations Section's semantic `H2`.
-
-### Spacing After
-
-* `24px` (`M`) across all Breakpoints.
-
-## Supporting Copy
-
-### Content
-
-* Text: `Every homeowner’s situation is different. Choose what best describes yours to see how we can help.`
-
-### Component and Semantics
-
-* Uses paragraph semantics.
+* The Section Label uses the documented `Section Label` Component.
+* The Primary Headline serves as the Situations Section's semantic `H2`.
+* The Supporting Copy uses paragraph semantics.
 
 ### Visual Design
 
-* Uses the global `Body Large` typography.
+* The Supporting Copy uses the global `Body Large` typography.
+
+### Spacing
+
+* `16px` (`S`) separates the Section Label from the Primary Headline across all Breakpoints.
+* `24px` (`M`) separates the Primary Headline from the Supporting Copy across all Breakpoints.
 
 ### Spacing After
 
@@ -703,48 +668,30 @@ Strengthen trust and social proof through authentic reviews demonstrating that t
 
 * Uses the global `Background Neutral` token as the Section background.
 
-## Section Label
+## Section Intro
 
 ### Content
 
-* Text: `Customer Reviews`.
-* Includes the Lucide `Star` icon.
+Contains, in document order:
+
+1. Section Label: `Customer Reviews`, with the Lucide `Star` icon.
+2. Primary Headline: `What local homeowners say`.
+3. Supporting Copy: `Read what local homeowners have shared about their experience working with us.`
 
 ### Component and Semantics
 
-* Uses the documented `Section Label` Component.
-
-### Spacing After
-
-* `16px` (`S`) across all Breakpoints.
-
-## Primary Headline
-
-### Content
-
-* Text: `What local homeowners say`.
-
-### Component and Semantics
-
-* Serves as the Reviews Section's semantic `H2`.
-
-### Spacing After
-
-* `24px` (`M`) across all Breakpoints.
-
-## Supporting Copy
-
-### Content
-
-* Text: `Read what local homeowners have shared about their experience working with us.`
-
-### Component and Semantics
-
-* Uses paragraph semantics.
+* The Section Label uses the documented `Section Label` Component.
+* The Primary Headline serves as the Reviews Section's semantic `H2`.
+* The Supporting Copy uses paragraph semantics.
 
 ### Visual Design
 
-* Uses the global `Body Large` typography.
+* The Supporting Copy uses the global `Body Large` typography.
+
+### Spacing
+
+* `16px` (`S`) separates the Section Label from the Primary Headline across all Breakpoints.
+* `24px` (`M`) separates the Primary Headline from the Supporting Copy across all Breakpoints.
 
 ### Spacing After
 
