@@ -1237,17 +1237,18 @@ For the current Cleveland Area Page:
 * On Mobile, fills the complete available Content Grid width.
 * Uses a `16:9` Aspect Ratio where the resulting height is at least `200px`. Width is determined by the applicable Grid allocation, and height is derived from the Aspect Ratio.
 * Uses a `200px` minimum height. At narrow widths where `16:9` would produce a shorter Map, the minimum height takes precedence.
-* The information note forms a horizontal icon-and-text flow below the Map and uses the global Small icon size (`16px`).
+* The information note forms a horizontal icon-and-text flow below the Map, vertically center-aligns the icon and text, and uses the global Small icon size (`16px`).
 
 ### Spacing
 
-* `XS` (`8px`) separates the Map from the information note across all Breakpoints.
+* `S` (`16px`) separates the Map from the information note across all Breakpoints.
 * `XS` (`8px`) separates the `Info` icon from the note text across all Breakpoints.
 
 ### Spacing After
 
-* `M` (`24px`) on Desktop and Tablet.
-* `S` (`16px`) on Mobile.
+* `2XL` (`64px`) on Desktop.
+* `L` (`32px`) on Tablet.
+* `M` (`24px`) on Mobile.
 
 ### Interaction
 
@@ -1329,7 +1330,8 @@ For the current Cleveland Area Page:
 ### Spacing
 
 * `M` (`24px`) separates the headline from the Statistics Cards across all Breakpoints.
-* An `XS` (`8px`) consistent gap separates adjacent Statistics Cards.
+* On Desktop, an `M` (`24px`) horizontal and vertical gap separates adjacent Statistics Cards.
+* On Tablet and Mobile, an `XS` (`8px`) horizontal and vertical gap separates adjacent Statistics Cards.
 * `S` (`16px`) separates the icon from the statistic value.
 * `XS` (`8px`) separates the statistic value from its label.
 * `S` (`16px`) separates the Statistics Cards from Data Sources.

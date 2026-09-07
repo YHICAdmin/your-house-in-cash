@@ -33,7 +33,7 @@
 
 .map {
   width: 100%;
-  margin-bottom: var(--spacing-s);
+  margin-bottom: var(--spacing-m);
 }
 
 .mapFrame {
@@ -51,9 +51,9 @@
 
 .mapNote {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--spacing-xs);
-  margin: var(--spacing-xs) 0 0;
+  margin: var(--spacing-s) 0 0;
   color: var(--color-text-secondary);
 }
 
@@ -198,9 +198,12 @@
     grid-column: 5 / span 4;
   }
 
-  .intro,
-  .map {
+  .intro {
     margin-bottom: var(--spacing-m);
+  }
+
+  .map {
+    margin-bottom: var(--spacing-l);
   }
 
   .statistics {
@@ -219,5 +222,14 @@
 
   .rightFlow {
     grid-column: 7 / span 6;
+  }
+
+  .statisticColumns,
+  .statisticColumn {
+    gap: var(--spacing-m);
+  }
+
+  .map {
+    margin-bottom: var(--spacing-2xl);
   }
 }
