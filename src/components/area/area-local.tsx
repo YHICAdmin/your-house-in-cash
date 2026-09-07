@@ -26,6 +26,7 @@ type StatisticCard = {
   icon: LucideIcon;
   label: string;
   size: "short" | "tall";
+  supportingCopy: string;
   value: string;
 };
 
@@ -39,6 +40,8 @@ export function AreaLocal({ area }: AreaLocalProps) {
       icon: BadgeDollarSign,
       background: "purple",
       size: "tall",
+      supportingCopy:
+        "See what homes are selling for across Cleveland and get a quick sense of the local market.",
     },
     {
       label: "Homes Sold",
@@ -46,6 +49,7 @@ export function AreaLocal({ area }: AreaLocalProps) {
       icon: House,
       background: "navy",
       size: "short",
+      supportingCopy: "Recent sales activity across Cleveland.",
     },
     {
       label: "Median Price per Sq. Ft.",
@@ -53,6 +57,7 @@ export function AreaLocal({ area }: AreaLocalProps) {
       icon: Ruler,
       background: "turquoise",
       size: "short",
+      supportingCopy: "Compare Cleveland home values by square foot.",
     },
     {
       label: "Median Days on Market",
@@ -60,6 +65,8 @@ export function AreaLocal({ area }: AreaLocalProps) {
       icon: CalendarDays,
       background: "blue",
       size: "tall",
+      supportingCopy:
+        "See how long Cleveland homes typically stay on the market before selling.",
     },
   ];
 
@@ -113,13 +120,22 @@ export function AreaLocal({ area }: AreaLocalProps) {
                         key={statistic.label}
                         className={`${styles.statisticCard} ${styles[statistic.background]} ${styles[statistic.size]}`}
                       >
-                        <Icon aria-hidden="true" size={20} />
-                        <span className={`${styles.statisticValue} text-heading-3`}>
-                          {statistic.value}
-                        </span>
-                        <span className={`${styles.statisticLabel} text-body-small`}>
+                        <div className={styles.statisticTopRow}>
+                          <Icon aria-hidden="true" size={20} />
+                          <span
+                            className={`${styles.statisticValue} text-heading-3`}
+                          >
+                            {statistic.value}
+                          </span>
+                        </div>
+                        <span className={`${styles.statisticLabel} text-body`}>
                           {statistic.label}
                         </span>
+                        <p
+                          className={`${styles.statisticSupportingCopy} text-body-small`}
+                        >
+                          {statistic.supportingCopy}
+                        </p>
                       </li>
                     );
                   })}

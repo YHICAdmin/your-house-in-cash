@@ -1292,12 +1292,19 @@ For the current Cleveland Area Page:
   * `Homes Sold`: `House`
   * `Median Price per Sq. Ft.`: `Ruler`
   * `Median Days on Market`: `CalendarDays`
+* Every Statistics Card includes Supporting Copy below its statistic label.
+* For the current Cleveland Area Page, the approved Supporting Copy is:
+  * `Median Sale Price`: `See what homes are selling for across Cleveland and get a quick sense of the local market.`
+  * `Homes Sold`: `Recent sales activity across Cleveland.`
+  * `Median Price per Sq. Ft.`: `Compare Cleveland home values by square foot.`
+  * `Median Days on Market`: `See how long Cleveland homes typically stay on the market before selling.`
 
 ### Component and Semantics
 
 * The headline uses `h3` semantics.
 * The statistics collection uses semantic list and list-item elements.
-* Within each Statistics Card, the icon, statistic value, and statistic label form a vertical content flow in that document and visual order.
+* Within each Statistics Card, the icon and statistic value form a Top Row, followed in document and visual order by the statistic label and Supporting Copy.
+* Supporting Copy uses paragraph semantics.
 
 ### Visual Design
 
@@ -1312,7 +1319,8 @@ For the current Cleveland Area Page:
 * The headline uses global `H3` typography.
 * The headline is displayed in uppercase and uses global `Brand Green Dark`.
 * Statistic values use global `H3` typography.
-* Statistic labels use global `Body Small` typography.
+* Statistic labels use global `Body` typography.
+* Supporting Copy uses global `Body Small` typography.
 
 ### Dimensions and Alignment
 
@@ -1322,6 +1330,7 @@ For the current Cleveland Area Page:
 * The right column forms an independent top-to-bottom Card flow containing `Median Price per Sq. Ft.` as the shorter Card followed by `Median Days on Market` as the taller Card.
 * A Card's height in one column does not determine the vertical position of either Card in the other column.
 * No Statistics Card spans both columns.
+* Within each Card, the icon and statistic value form a horizontal Top Row and are vertically center-aligned.
 * On Desktop and Tablet, each Statistics Card uses `M` (`24px`) internal padding on all sides.
 * On Mobile, each Statistics Card uses `S` (`16px`) internal padding on all sides.
 * Across all Breakpoints, the shorter Cards use a `192px` minimum height and the taller Cards use a `256px` minimum height.
@@ -1332,8 +1341,9 @@ For the current Cleveland Area Page:
 * `M` (`24px`) separates the headline from the Statistics Cards across all Breakpoints.
 * On Desktop, an `M` (`24px`) horizontal and vertical gap separates adjacent Statistics Cards.
 * On Tablet and Mobile, an `XS` (`8px`) horizontal and vertical gap separates adjacent Statistics Cards.
-* `S` (`16px`) separates the icon from the statistic value.
-* `XS` (`8px`) separates the statistic value from its label.
+* `XS` (`8px`) separates the icon from the statistic value within the Top Row.
+* `S` (`16px`) separates the Top Row from the statistic label.
+* `XS` (`8px`) separates the statistic label from Supporting Copy.
 * `S` (`16px`) separates the Statistics Cards from Data Sources.
 
 ### Accessibility

@@ -96,17 +96,29 @@
   border-radius: var(--radius-medium);
 }
 
-.statisticCard > svg {
+.statisticTopRow {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.statisticTopRow > svg {
   flex: 0 0 var(--icon-medium);
-  margin-bottom: var(--spacing-s);
 }
 
 .statisticValue {
+  min-width: 0;
   overflow-wrap: anywhere;
 }
 
 .statisticLabel {
-  margin-top: var(--spacing-xs);
+  margin-top: var(--spacing-s);
+}
+
+.statisticSupportingCopy {
+  margin: var(--spacing-xs) 0 0;
 }
 
 .short {
