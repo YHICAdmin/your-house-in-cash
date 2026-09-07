@@ -50,6 +50,12 @@
   margin-bottom: var(--spacing-l);
 }
 
+.statisticsHeading {
+  margin: 0 0 var(--spacing-m);
+  color: var(--color-brand-dark);
+  text-transform: uppercase;
+}
+
 .statisticColumns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -89,6 +89,10 @@ export function AreaLocal({ area }: AreaLocalProps) {
           </div>
 
           <div className={styles.statistics}>
+            <h3 className={`${styles.statisticsHeading} text-heading-3`}>
+              {area.city} at a Glance
+            </h3>
+
             <div className={styles.statisticColumns}>
               {statisticColumns.map((column, columnIndex) => (
                 <ul key={columnIndex} className={styles.statisticColumn}>

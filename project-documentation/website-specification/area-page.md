@@ -1254,6 +1254,8 @@ For the current Cleveland Area Page:
 
 ### Content
 
+* Headline: `{AREA NAME} AT A GLANCE`, generated dynamically from the current Area Page data.
+* For the current Cleveland Area Page, the headline is `CLEVELAND AT A GLANCE`.
 * Every Area Page uses the following fixed set of four statistic roles in this canonical order:
   1. `Median Sale Price`
   2. `Homes Sold`
@@ -1277,6 +1279,7 @@ For the current Cleveland Area Page:
 
 ### Component and Semantics
 
+* The headline uses `h3` semantics.
 * The statistics collection uses semantic list and list-item elements.
 * Within each Statistics Card, the icon, statistic value, and statistic label form a vertical content flow in that document and visual order.
 
@@ -1290,6 +1293,8 @@ For the current Cleveland Area Page:
 * The Purple and Turquoise Cards use global `Text Primary` (`#101114`) for their text and icons.
 * The Dark Navy and Royal Blue Cards use white (`#FFFFFF`) for their text and icons.
 * Statistics Cards use the global `Medium` Radius (`12px`).
+* The headline uses global `H3` typography.
+* The headline is displayed in uppercase and uses global `Brand Green Dark`.
 * Statistic values use global `H3` typography.
 * Statistic labels use global `Body Small` typography.
 
@@ -1308,6 +1313,7 @@ For the current Cleveland Area Page:
 
 ### Spacing
 
+* `M` (`24px`) separates the headline from the Statistics Cards across all Breakpoints.
 * An `XS` (`8px`) consistent gap separates adjacent Statistics Cards.
 * `S` (`16px`) separates the icon from the statistic value.
 * `XS` (`8px`) separates the statistic value from its label.
