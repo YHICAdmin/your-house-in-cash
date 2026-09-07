@@ -177,6 +177,22 @@
   color: var(--color-text-secondary);
 }
 
+@media (max-width: 767px) {
+  .portrait {
+    width: 112px;
+    height: 112px;
+    flex-basis: 112px;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .trustCard {
+    width: fit-content;
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .heroCta,
   .microcopy {
