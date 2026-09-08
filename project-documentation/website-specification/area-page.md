@@ -1518,66 +1518,89 @@ The headline, content-group headings, and Supporting Copy are shared across Area
 
 # FAQ
 
-#### Purpose
+## Purpose
 
 Provide clear and quick answers to the main questions sellers may have, reduce uncertainty and objections, and help users understand the process without overloading the rest of the page with information.
 
-#### Content
+## Layout
 
-- Section Label: **FAQ**, no icon.
-- Headline: **Questions? We’ve got answers.**
-- Short supporting copy.
-- **Contact us** link for users who did not find the answer they were looking for.
-- List of frequently asked questions.
+- On Desktop, the left flow contains the Section Intro followed by the Contact Us Link across Grid Columns `1–5`, Grid Column `6` remains intentionally empty as composition whitespace, and the FAQ Accordion occupies Grid Columns `7–12`.
+- On Tablet, the left flow contains the Section Intro followed by the Contact Us Link across Grid Columns `1–4`, and the FAQ Accordion occupies Grid Columns `5–8`.
+- On Mobile, the elements form one full-width flow in canonical document order: Section Intro, Contact Us Link, then FAQ Accordion.
+- On Desktop and Tablet, the center System Line serves as the boundary at which the FAQ Accordion begins.
 
-##### Example Questions
+## Section Intro
 
-- How does the process work?
-- Do I need to make any repairs?
-- Are there any fees or commissions?
-- How quickly can I sell my house?
-- How do you determine your offer?
-- Am I obligated to accept the offer?
+### Content
 
-#### Structure
+Contains, in document order:
 
-- Two-column asymmetric layout.
-- Left column is relatively narrow and contains:
-  - Section Label above the primary headline.
-  - Headline.
-  - Supporting copy.
-  - Contact us link.
-- The right column is wider and contains the Accordion.
+1. Section Label: **FAQ**, no icon.
+2. Primary Headline: **Questions? We’ve got answers.**
+3. Supporting Copy: **Get clear answers about how our process works, how we determine your offer, and what to expect when selling your house as-is.**
 
-#### Visual Direction
+### Component and Semantics
 
-- Keep the section highly minimal and primarily driven by typography, whitespace, and subtle lines.
-- The Accordion should feel wide, clean, and visually light.
-- Do not add icons, illustrations, cards, or decorative elements that are not required.
-- Preserve generous whitespace and do not attempt to fill empty areas.
-- The FAQ should feel editorial rather than component-heavy.
-- Visual hierarchy should come primarily from typography, spacing, and the Accordion interaction rather than from cards or decorative UI.
+- The Section Label uses the documented `Section Label` Component.
+- The Primary Headline uses `H2` semantics.
+- The Supporting Copy uses paragraph semantics.
 
-#### Behavior
+### Visual Design
+
+- The Primary Headline uses the global `H2` typography.
+- The Supporting Copy uses the global `Body Large` typography.
+
+### Spacing
+
+- `S` (`16px`) separates the Section Label from the Primary Headline across all Breakpoints.
+- `M` (`24px`) separates the Primary Headline from the Supporting Copy across all Breakpoints.
+
+### Spacing After
+
+- `M` (`24px`) separates the complete Section Intro from the Contact Us Link across all Breakpoints.
+
+## Contact Us Link
+
+### Content
+
+- **Contact us** for users who did not find the answer they were looking for.
+
+### Component and Semantics
+
+- Uses the documented `Text Link` Component with link semantics.
+
+### Spacing After
+
+- On Mobile, `L` (`32px`) separates the Contact Us Link from the FAQ Accordion.
+
+### Interaction
+
+- Activating the link navigates to the Contact Page at `/contact`.
+
+## FAQ Accordion
+
+### Content
+
+- The FAQ uses the following fixed set of six questions in canonical order.
+
+#### Questions and Answers
+
+1. Question: **How does the process work?**
+   Answer: **Start by telling us about your house and your situation. We review the information, take a closer look at the property, and prepare a no-obligation cash offer. If the offer works for you, you choose the closing date and we handle the details needed to complete the sale.**
+2. Question: **Do I need to make any repairs?**
+   Answer: **No. We buy houses as-is, so you do not need to make repairs, complete updates, stage the property, or prepare it for a traditional listing before selling.**
+3. Question: **Are there any fees or commissions?**
+   Answer: **No. We do not charge fees or commissions for selling your house to us. The cash offer is presented clearly so you can understand it before deciding whether to move forward.**
+4. Question: **How quickly can I sell my house?**
+   Answer: **The timeline depends on your situation and the details of the property. If you need to move quickly, we can work toward an earlier closing. If you need more time, you can choose a closing date that better fits your schedule.**
+5. Question: **How do you determine your offer?**
+   Answer: **We consider the property’s condition, location, layout, and any updates or repairs it may need. We also review recent sales, local buyer demand, and how similar properties are performing in the surrounding market before preparing the cash offer.**
+6. Question: **Am I obligated to accept the offer?**
+   Answer: **No. The offer is completely optional, and there is no pressure to accept it. We explain the offer clearly so you can decide whether it is right for your situation.**
+
+### Component and Semantics
 
 - Questions are displayed using the **Accordion** defined in the Component Library.
-- One question may be open by default.
-
-#### Technical Specifications
-
-No additional FAQ-specific technical specifications are currently defined. Global typography, spacing, component, color, and layout rules apply unless explicitly overridden.
-
-#### Responsive Behavior
-
-No specific Tablet or Mobile composition is currently defined.
-
-The relationship between the content block and Accordion should remain clear on smaller viewports. Exact stacking, ordering, and Accordion width behavior remain to be defined.
-
-#### Line System
-
-- The outer System Lines bound the content area using the globally defined content padding.
-- The center System Line serves as the primary division between the headline/content area and the Accordion.
-- The two additional internal System Lines remain visible but do not dictate the positioning of content within either area.
 
 # Final CTA
 
