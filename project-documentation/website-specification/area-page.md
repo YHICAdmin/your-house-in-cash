@@ -1150,7 +1150,8 @@ On Desktop and Tablet, the left-area elements form one top-to-bottom content flo
 
 ### Desktop
 
-* The left area occupies Grid Columns `1–6`.
+* The left area occupies Grid Columns `1–5`.
+* Grid Column `6` remains intentionally empty as composition whitespace between the two content flows.
 * The right area occupies Grid Columns `7–12`.
 
 ### Tablet
@@ -1232,7 +1233,7 @@ For the current Cleveland Area Page:
 
 ### Dimensions and Alignment
 
-* On Desktop, fills the complete left Grid area across Columns `1–6`.
+* On Desktop, fills the complete left Grid area across Columns `1–5`.
 * On Tablet, fills the complete left Grid area across Columns `1–4`.
 * On Mobile, fills the complete available Content Grid width.
 * Uses a `16:9` Aspect Ratio where the resulting height is at least `200px`. Width is determined by the applicable Grid allocation, and height is derived from the Aspect Ratio.
@@ -1241,7 +1242,8 @@ For the current Cleveland Area Page:
 
 ### Spacing
 
-* `S` (`16px`) separates the Map from the information note across all Breakpoints.
+* `M` (`24px`) separates the Map from the information note on Desktop and Tablet.
+* `S` (`16px`) separates the Map from the information note on Mobile.
 * `XS` (`8px`) separates the `Info` icon from the note text across all Breakpoints.
 
 ### Spacing After
@@ -1303,7 +1305,7 @@ For the current Cleveland Area Page:
 
 * The headline uses `h3` semantics.
 * The statistics collection uses semantic list and list-item elements.
-* Within each Statistics Card, the icon and statistic value form a Top Row, followed in document and visual order by the statistic label and Supporting Copy.
+* Within each Statistics Card, the icon and statistic value form the initial content group, followed in document and visual order by the statistic label and Supporting Copy.
 * Supporting Copy uses paragraph semantics.
 
 ### Visual Design
@@ -1330,7 +1332,8 @@ For the current Cleveland Area Page:
 * The right column forms an independent top-to-bottom Card flow containing `Median Price per Sq. Ft.` as the shorter Card followed by `Median Days on Market` as the taller Card.
 * A Card's height in one column does not determine the vertical position of either Card in the other column.
 * No Statistics Card spans both columns.
-* Within each Card, the icon and statistic value form a horizontal Top Row and are vertically center-aligned.
+* On Desktop and Tablet, the icon and statistic value form a horizontal row and are vertically center-aligned within each Card.
+* On Mobile, the icon appears above the statistic value in a vertical flow, and both are left-aligned.
 * On Desktop and Tablet, each Statistics Card uses `M` (`24px`) internal padding on all sides.
 * On Mobile, each Statistics Card uses `S` (`16px`) internal padding on all sides.
 * Across all Breakpoints, the shorter Cards use a `192px` minimum height and the taller Cards use a `256px` minimum height.
@@ -1339,10 +1342,10 @@ For the current Cleveland Area Page:
 ### Spacing
 
 * `M` (`24px`) separates the headline from the Statistics Cards across all Breakpoints.
-* On Desktop, an `M` (`24px`) horizontal and vertical gap separates adjacent Statistics Cards.
-* On Tablet and Mobile, an `XS` (`8px`) horizontal and vertical gap separates adjacent Statistics Cards.
-* `XS` (`8px`) separates the icon from the statistic value within the Top Row.
-* `S` (`16px`) separates the Top Row from the statistic label.
+* On Desktop and Tablet, an `M` (`24px`) horizontal and vertical gap separates adjacent Statistics Cards.
+* On Mobile, an `S` (`16px`) horizontal and vertical gap separates adjacent Statistics Cards.
+* `XS` (`8px`) separates the icon from the statistic value within their initial content group.
+* `S` (`16px`) separates the initial content group from the statistic label.
 * `XS` (`8px`) separates the statistic label from Supporting Copy.
 * `S` (`16px`) separates the Statistics Cards from Data Sources.
 
