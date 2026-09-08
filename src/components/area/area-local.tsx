@@ -185,11 +185,36 @@ export function AreaLocal({ area }: AreaLocalProps) {
               aria-hidden="true"
             />
             <h3 className={`${styles.marketHeading} text-heading-3`}>
-              {area.localMarket.headline}
+              Local Knowledge.
+              <br />
+              Straightforward Offers.
             </h3>
-            <p className={`${styles.marketCopy} text-body`}>
-              {area.localMarket.supportingCopy}
-            </p>
+            <div className={styles.marketColumns}>
+              <div className={styles.marketColumn}>
+                <h4 className={`${styles.marketSubheading} text-heading-4`}>
+                  Every Home Is Different
+                </h4>
+                <p className={`${styles.marketCopy} text-body`}>
+                  No two properties have the same condition, layout, or repair
+                  needs. We look at the home as it stands today, including any
+                  updates it may need and practical factors that could affect
+                  the sale. This helps us prepare a cash offer based on the
+                  property itself—not a one-size-fits-all estimate.
+                </p>
+              </div>
+              <div className={styles.marketColumn}>
+                <h4 className={`${styles.marketSubheading} text-heading-4`}>
+                  Every Market Is Different
+                </h4>
+                <p className={`${styles.marketCopy} text-body`}>
+                  Home values can vary from one area to another and change over
+                  time. We consider recent sales, local buyer demand, and how
+                  similar properties are performing in the surrounding market.
+                  This broader context helps us understand where the home fits
+                  before making a straightforward cash offer.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -20,10 +20,6 @@ export type AreaPageData = {
     headline: string;
     supportingCopy: string;
   };
-  localMarket: {
-    headline: string;
-    supportingCopy: string;
-  };
   nearbyCities: readonly [
     NearbyCity,
     NearbyCity,
@@ -67,9 +63,4 @@ export const clevelandArea = {
     { name: "Shaker Heights", slug: "shaker-heights" },
     { name: "Garfield Heights", slug: "garfield-heights" },
   ],
-  localMarket: {
-    headline: "Understanding the Cleveland Housing Market",
-    supportingCopy:
-      "From century-old homes to newer developments, Cleveland’s housing market varies from one part of the city to another. Property condition, location, and local buyer demand can all affect how a home sells. We look at those factors when evaluating a property and making a cash offer.",
-  },
 } as const satisfies AreaPageData;

@@ -1461,21 +1461,25 @@ For the current Cleveland Area Page:
 Contains, in document order:
 
 1. The canonical Lucide `House` icon.
-2. Area-specific local-market headline.
-3. Area-specific Supporting Copy.
+2. Shared local-market headline, preserving the intentional line break:
+   * Line 1: `Local Knowledge.`
+   * Line 2: `Straightforward Offers.`
+3. Two content groups:
+   * Group 1:
+     * Heading: `Every Home Is Different`
+     * Supporting Copy: `No two properties have the same condition, layout, or repair needs. We look at the home as it stands today, including any updates it may need and practical factors that could affect the sale. This helps us prepare a cash offer based on the property itself—not a one-size-fits-all estimate.`
+   * Group 2:
+     * Heading: `Every Market Is Different`
+     * Supporting Copy: `Home values can vary from one area to another and change over time. We consider recent sales, local buyer demand, and how similar properties are performing in the surrounding market. This broader context helps us understand where the home fits before making a straightforward cash offer.`
 
-Both content roles are dynamic Area Page content. Each future Area Page provides its own approved area-specific values while preserving the same content roles.
-
-For the current Cleveland Area Page:
-
-* Local-market headline: `Understanding the Cleveland Housing Market`
-* Supporting Copy: `From century-old homes to newer developments, Cleveland’s housing market varies from one part of the city to another. Property condition, location, and local buyer demand can all affect how a home sells. We look at those factors when evaluating a property and making a cash offer.`
+The headline, content-group headings, and Supporting Copy are shared across Area Pages and do not vary by city.
 
 ### Component and Semantics
 
 * The `House` icon uses the documented `Icon Container` Component at its Large size.
 * The local-market headline uses `H3` semantics.
-* The Supporting Copy uses paragraph semantics.
+* Each content-group heading uses `H4` semantics.
+* Each Supporting Copy uses paragraph semantics.
 
 ### Visual Design
 
@@ -1483,22 +1487,34 @@ For the current Cleveland Area Page:
 * A decorative dot field occupies the top-right `48%` of the surface width and `42%` of its height. It uses `1px` global `Brand Green` dots at `28%` opacity on a `10px × 10px` repeat and fades from full visibility near the top-right toward transparency at `78%` of the diagonal toward the Card interior.
 * The decorative dot field remains behind the content and does not reduce foreground readability.
 * The local-market headline uses the global `H3` typography.
-* The Supporting Copy uses the global `Body` typography.
+* Each content-group heading uses a local `16px` font size, `600` weight, and `1.25` line height while retaining the global `H4` letter spacing.
+* Each Supporting Copy uses the global `Body` typography.
+* On Desktop and Tablet, a `1px` global `Brand Green` vertical separator begins at the top between the two content groups and uses a fixed `15px` height.
+* On Desktop, the global dashed System Line treatment continues through the complete height of the surface between the two content columns. The short Brand Green separator overlays the top of that line.
 
 ### Dimensions and Alignment
 
 * On Desktop and Tablet, occupies the right area.
 * All content is left-aligned.
 * The complete composition uses `L` (`32px`) internal padding on Desktop and Tablet and `M` (`24px`) on Mobile.
+* On Desktop and Tablet, the two content groups form two equal-width columns.
+* On Desktop, the separator and continued System Line align with the System Line between Grid Columns `9` and `10`; on Tablet, the separator remains centered between the two content columns.
 
 ### Spacing
 
 * `M` (`24px`) separates the `Icon Container` from the local-market headline across all Breakpoints.
-* `M` (`24px`) separates the local-market headline from the Supporting Copy across all Breakpoints.
+* `M` (`24px`) separates the local-market headline from the content groups across all Breakpoints.
+* `S` (`16px`) separates each content-group heading from its Supporting Copy across all Breakpoints.
+* On Desktop and Tablet, an `M` (`24px`) horizontal gap separates the two content groups.
+* On Mobile, an `L` (`32px`) vertical gap separates the two content groups.
+
+### Responsive Behavior
+
+* On Mobile, the two content groups form one vertical flow and the separator is not displayed.
 
 ### Accessibility
 
-* The `House` icon and dot field are decorative because they add no information beyond the visible local-market content.
+* The `House` icon, dot field, and separator are decorative because they add no information beyond the visible local-market content.
 
 # FAQ
 
