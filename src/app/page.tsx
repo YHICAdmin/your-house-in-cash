@@ -1,6 +1,7 @@
 import { AreaIntroTransition } from "@/components/area/area-intro-transition";
 import { AreaHero } from "@/components/area/area-hero";
 import { AreaFaq } from "@/components/area/area-faq";
+import { AreaFinalCta } from "@/components/area/area-final-cta";
 import { AreaHowItWorks } from "@/components/area/area-how-it-works";
 import { AreaLocal } from "@/components/area/area-local";
 import { AreaReviews } from "@/components/area/area-reviews";
@@ -17,6 +18,7 @@ export default function Home() {
       <AreaHowItWorks />
       <AreaLocal area={clevelandArea} />
       <AreaFaq />
+      <AreaFinalCta areaName={clevelandArea.city} />
     </main>
   );
 }

@@ -1604,53 +1604,87 @@ Contains, in document order:
 
 # Final CTA
 
-#### Purpose
+## Purpose
 
 Conclude the page with a clear and simple conversion path.
 
 At this stage, the user has already received the necessary information throughout the page, so the section does not introduce new information. Instead, it focuses attention on the primary action — receiving an offer for their house.
 
-#### Content
+## Layout
 
-- Section Label: **Ready When You Are**, no icon.
-- Headline: **Ready to sell your Cleveland house?**
-- Short supporting copy.
-- Component: **Button**
-- Short reassurance row below the button, for example: **100% Free • No Obligation • Secure**
+- The Section Intro, Primary CTA, and Reassurance Row form one centered, focused composition.
+- On Desktop and Tablet, the complete composition uses `100%` of the available width up to a maximum width of `720px` and is centered horizontally.
+- On Mobile, the complete composition uses the full available Content Container width.
+- The centered content is not constrained by the internal System Lines.
 
-#### Structure
+## Section Intro
 
-- Section Label positioned above the primary headline.
-- Headline and supporting copy.
-- Primary CTA.
-- Reassurance row positioned below the CTA.
-- Content is centered and presented as a single focused composition.
+### Content
 
-#### Visual Direction
+Contains, in document order:
 
-- Keep the section simple and focused, using a minimal number of elements.
-- The headline is the primary visual focal point.
-- Position the Section Label above the primary headline.
-- Preserve generous whitespace around the content.
-- Do not add cards, statistics, or additional supporting elements.
+1. Section Label: **Ready When You Are**, no icon.
+2. Primary Headline: **Ready to sell your {Area Name} house?** For the current Cleveland Area Page: **Ready to sell your Cleveland house?**
+3. Supporting Copy: **Tell us about your {Area Name} house and receive a fair, no-obligation cash offer built around your situation and timeline.** For the current Cleveland Area Page: **Tell us about your Cleveland house and receive a fair, no-obligation cash offer built around your situation and timeline.**
 
-#### Behavior
+- `{Area Name}` is supplied dynamically by the current Area Page data.
 
-- The Primary CTA leads to the same **Seller Lead Form Flow** used by the Hero and Header CTAs.
-- On Area Pages, the headline and supporting content adapt to the current city / area.
+### Component and Semantics
 
-#### Technical Specifications
+- The Section Label uses the documented `Section Label` Component.
+- The Primary Headline uses `H2` semantics.
+- The Supporting Copy uses paragraph semantics.
 
-No additional Final CTA-specific technical specifications are currently defined. Global typography, spacing, component, color, and layout rules apply unless explicitly overridden.
+### Visual Design
 
-#### Responsive Behavior
+- The Primary Headline uses the global `H2` typography.
+- The Supporting Copy uses the global `Body Large` typography.
 
-No specific Tablet or Mobile composition is currently defined.
+### Dimensions and Alignment
 
-The centered hierarchy of the Section Label, headline, supporting copy, CTA, and reassurance row should be preserved across breakpoints.
+- The complete Section Intro is center-aligned.
 
-#### Line System
+### Spacing
 
-- The outer System Lines bound the content area using the globally defined content padding.
-- The centered content — headline, supporting copy, and CTA — is not constrained by the internal System Lines.
-- The internal System Lines remain visible as part of the visual system but do not dictate the composition.
+- `S` (`16px`) separates the Section Label from the Primary Headline across all Breakpoints.
+- `M` (`24px`) separates the Primary Headline from the Supporting Copy across all Breakpoints.
+
+### Spacing After
+
+- `L` (`32px`) separates the complete Section Intro from the Primary CTA across all Breakpoints.
+
+## Primary CTA
+
+### Content
+
+- Label: **Get My Cash Offer**.
+
+### Component and Semantics
+
+- Uses the documented **Button** Component.
+
+### Spacing After
+
+- `XS` (`8px`) separates the Primary CTA from the Reassurance Row across all Breakpoints.
+
+### Interaction
+
+- Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
+
+## Reassurance Row
+
+### Content
+
+- **100% free. No obligation.**
+
+### Component and Semantics
+
+- Uses paragraph semantics.
+
+### Visual Design
+
+- Uses the global `Body Small` typography.
+
+## Responsive Behavior
+
+- The centered hierarchy of the Section Intro, Primary CTA, and Reassurance Row is preserved across Breakpoints.
