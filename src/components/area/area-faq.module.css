@@ -1,0 +1,57 @@
+.section {
+  background: var(--color-background);
+}
+
+.layout {
+  row-gap: 0;
+}
+
+.leftFlow,
+.accordionColumn {
+  min-width: 0;
+  grid-column: 1 / -1;
+}
+
+.leftFlow {
+  margin-bottom: var(--spacing-l);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heading {
+  margin: var(--spacing-s) 0 var(--spacing-m);
+}
+
+.supportingCopy {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.contactLink {
+  margin-top: var(--spacing-m);
+}
+
+@media (min-width: 768px) {
+  .leftFlow {
+    grid-column: 1 / span 4;
+    margin-bottom: 0;
+  }
+
+  .accordionColumn {
+    grid-column: 5 / span 4;
+  }
+}
+
+@media (min-width: 1200px) {
+  .leftFlow {
+    grid-column: 1 / span 5;
+  }
+
+  .accordionColumn {
+    grid-column: 7 / span 6;
+  }
+}

@@ -1,0 +1,79 @@
+.accordion {
+  border-top: 1px solid var(--color-border);
+}
+
+.item {
+  padding-block: var(--spacing-m);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.trigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-s);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  font: inherit;
+  font-size: var(--text-body);
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.question {
+  transition: color 150ms ease;
+}
+
+.trigger:hover .question {
+  color: var(--color-brand-dark);
+}
+
+.toggle {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-primary);
+  font-size: var(--text-body);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 200ms ease;
+}
+
+.panel[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.panelInner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.answer {
+  margin-top: var(--spacing-s);
+  color: var(--color-text-secondary);
+  font-size: var(--text-body);
+  font-weight: 400;
+  line-height: var(--text-body--line-height);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .question {
+    transition: none;
+  }
+}
