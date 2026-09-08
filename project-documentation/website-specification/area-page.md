@@ -1455,8 +1455,9 @@ For the current Cleveland Area Page:
 
 Contains, in document order:
 
-1. Area-specific local-market headline.
-2. Area-specific Supporting Copy.
+1. The canonical Lucide `House` icon.
+2. Area-specific local-market headline.
+3. Area-specific Supporting Copy.
 
 Both content roles are dynamic Area Page content. Each future Area Page provides its own approved area-specific values while preserving the same content roles.
 
@@ -1467,11 +1468,15 @@ For the current Cleveland Area Page:
 
 ### Component and Semantics
 
+* The `House` icon uses the documented `Icon Container` Component at its Large size.
 * The local-market headline uses `H3` semantics.
 * The Supporting Copy uses paragraph semantics.
 
 ### Visual Design
 
+* The complete composition uses global `Surface`, the global `Medium` Radius (`12px`), no Border, and no Shadow.
+* A decorative dot field occupies the top-right `48%` of the surface width and `42%` of its height. It uses `1px` global `Brand Green` dots at `28%` opacity on a `10px × 10px` repeat and fades from full visibility near the top-right toward transparency at `78%` of the diagonal toward the Card interior.
+* The decorative dot field remains behind the content and does not reduce foreground readability.
 * The local-market headline uses the global `H3` typography.
 * The Supporting Copy uses the global `Body` typography.
 
@@ -1479,10 +1484,16 @@ For the current Cleveland Area Page:
 
 * On Desktop and Tablet, occupies the right area.
 * All content is left-aligned.
+* The complete composition uses `L` (`32px`) internal padding on Desktop and Tablet and `M` (`24px`) on Mobile.
 
 ### Spacing
 
+* `M` (`24px`) separates the `Icon Container` from the local-market headline across all Breakpoints.
 * `M` (`24px`) separates the local-market headline from the Supporting Copy across all Breakpoints.
+
+### Accessibility
+
+* The `House` icon and dot field are decorative because they add no information beyond the visible local-market content.
 
 # FAQ
 

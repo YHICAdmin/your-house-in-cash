@@ -9,6 +9,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { SectionLabel } from "@/components/ui/section-label";
+import { IconContainer } from "@/components/ui/icon-container";
 import { TextLink } from "@/components/ui/text-link";
 import {
   getAreaPagePath,
@@ -182,6 +183,12 @@ export function AreaLocal({ area }: AreaLocalProps) {
           </div>
 
           <div className={styles.localMarket}>
+            <IconContainer
+              className={styles.marketIcon}
+              icon={House}
+              size="large"
+              aria-hidden="true"
+            />
             <h3 className={`${styles.marketHeading} text-heading-3`}>
               {area.localMarket.headline}
             </h3>
