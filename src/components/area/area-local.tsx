@@ -26,7 +26,6 @@ type StatisticCard = {
   background: "blue" | "navy" | "purple" | "turquoise";
   icon: LucideIcon;
   label: string;
-  size: "short" | "tall";
   supportingCopy: string;
   value: string;
 };
@@ -40,7 +39,6 @@ export function AreaLocal({ area }: AreaLocalProps) {
       value: area.statistics.medianSalePrice,
       icon: BadgeDollarSign,
       background: "purple",
-      size: "tall",
       supportingCopy:
         "See what homes are selling for across Cleveland and get a quick sense of the local market.",
     },
@@ -49,7 +47,6 @@ export function AreaLocal({ area }: AreaLocalProps) {
       value: area.statistics.homesSold,
       icon: House,
       background: "navy",
-      size: "short",
       supportingCopy: "Recent sales activity across Cleveland.",
     },
     {
@@ -57,7 +54,6 @@ export function AreaLocal({ area }: AreaLocalProps) {
       value: area.statistics.medianPricePerSquareFoot,
       icon: Ruler,
       background: "turquoise",
-      size: "short",
       supportingCopy: "Compare Cleveland home values by square foot.",
     },
     {
@@ -65,7 +61,6 @@ export function AreaLocal({ area }: AreaLocalProps) {
       value: area.statistics.medianDaysOnMarket,
       icon: CalendarDays,
       background: "blue",
-      size: "tall",
       supportingCopy:
         "See how long Cleveland homes typically stay on the market before selling.",
     },
@@ -119,7 +114,7 @@ export function AreaLocal({ area }: AreaLocalProps) {
                     return (
                       <li
                         key={statistic.label}
-                        className={`${styles.statisticCard} ${styles[statistic.background]} ${styles[statistic.size]}`}
+                        className={`${styles.statisticCard} ${styles[statistic.background]}`}
                       >
                         <div className={styles.statisticTopRow}>
                           <Icon aria-hidden="true" size={20} />

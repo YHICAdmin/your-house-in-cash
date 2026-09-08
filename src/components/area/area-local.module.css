@@ -125,14 +125,6 @@
   margin: var(--spacing-xs) 0 0;
 }
 
-.short {
-  min-height: 192px;
-}
-
-.tall {
-  min-height: 256px;
-}
-
 .purple {
   background: #9966ff;
   color: var(--color-text-primary);
@@ -288,7 +280,18 @@
 
 @media (min-width: 1200px) {
   .leftFlow {
+    display: grid;
+    grid-column: 1 / span 6;
+    grid-template-columns: subgrid;
+  }
+
+  .intro,
+  .map {
     grid-column: 1 / span 5;
+  }
+
+  .statistics {
+    grid-column: 1 / -1;
   }
 
   .rightFlow {

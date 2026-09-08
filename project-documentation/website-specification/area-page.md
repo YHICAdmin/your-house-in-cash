@@ -1150,8 +1150,9 @@ On Desktop and Tablet, the left-area elements form one top-to-bottom content flo
 
 ### Desktop
 
-* The left area occupies Grid Columns `1–5`.
-* Grid Column `6` remains intentionally empty as composition whitespace between the two content flows.
+* The Section Intro and Local Map occupy Grid Columns `1–5`.
+* Local Statistics occupies Grid Columns `1–6`.
+* Grid Column `6` remains intentionally empty alongside the Section Intro and Local Map as composition whitespace between the upper portions of the two content flows.
 * The right area occupies Grid Columns `7–12`.
 
 ### Tablet
@@ -1326,18 +1327,19 @@ For the current Cleveland Area Page:
 
 ### Dimensions and Alignment
 
-* On Desktop and Tablet, the complete composition remains within the left area.
+* On Desktop, the complete composition occupies Grid Columns `1–6`; each of its two equal-width Card columns spans three Grid columns.
+* On Tablet, the complete composition remains within the left area across Grid Columns `1–4`.
+* On Mobile, the complete composition occupies the complete available Content Grid width.
 * Across all Breakpoints, the composition uses two equal-width columns.
-* The left column forms an independent top-to-bottom Card flow containing `Median Sale Price` as the taller Card followed by `Homes Sold` as the shorter Card.
-* The right column forms an independent top-to-bottom Card flow containing `Median Price per Sq. Ft.` as the shorter Card followed by `Median Days on Market` as the taller Card.
+* The left column forms an independent top-to-bottom Card flow containing `Median Sale Price` followed by `Homes Sold`.
+* The right column forms an independent top-to-bottom Card flow containing `Median Price per Sq. Ft.` followed by `Median Days on Market`.
 * A Card's height in one column does not determine the vertical position of either Card in the other column.
 * No Statistics Card spans both columns.
 * On Desktop and Tablet, the icon and statistic value form a horizontal row and are vertically center-aligned within each Card.
 * On Mobile, the icon appears above the statistic value in a vertical flow, and both are left-aligned.
 * On Desktop and Tablet, each Statistics Card uses `M` (`24px`) internal padding on all sides.
 * On Mobile, each Statistics Card uses `S` (`16px`) internal padding on all sides.
-* Across all Breakpoints, the shorter Cards use a `192px` minimum height and the taller Cards use a `256px` minimum height.
-* Statistics Cards may grow beyond their minimum height when their content requires additional space.
+* Across all Breakpoints, Statistics Card height is content-driven; no fixed height or minimum height is specified.
 
 ### Spacing
 
