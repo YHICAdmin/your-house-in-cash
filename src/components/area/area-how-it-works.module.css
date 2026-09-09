@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: var(--spacing-s);
+  margin-bottom: var(--spacing-l);
 }
 
 .heading {
@@ -121,7 +121,7 @@
 
 @media (min-width: 768px) {
   .intro {
-    margin-bottom: var(--spacing-m);
+    margin-bottom: var(--spacing-xl);
   }
 
   .mobileProcessList {
@@ -144,16 +144,16 @@
   }
 
   .stepTextFlow {
-    padding-left: calc(2px + var(--spacing-xs));
+    padding-left: 0;
   }
 
   .activeIndicator {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: calc(((14px * 1.5) - 16px) / 2);
+    left: calc(-1 * var(--layout-grid-inset));
     display: block;
-    width: 2px;
-    height: var(--spacing-m);
+    width: 1px;
+    height: var(--spacing-s);
     background: transparent;
   }
 

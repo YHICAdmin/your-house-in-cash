@@ -957,8 +957,8 @@ Contains, in document order:
 
 ### Spacing After
 
-* `M` (`24px`) on Desktop and Tablet.
-* `S` (`16px`) on Mobile.
+* `XL` (`48px`) on Desktop and Tablet.
+* `L` (`32px`) on Mobile.
 
 ## Interactive Process Composition
 
@@ -1010,14 +1010,14 @@ The Process Steps area contains exactly three Steps in this order:
 * Within each Step, the Step number appears above the Step Title and Body Copy.
 * The Step Title and Body Copy form a vertical text flow.
 * Each Step number uses `48px × 48px` dimensions and the global `Pill` Radius.
-* On Desktop and Tablet, the active-Step indicator uses `2px × 24px` dimensions, appears to the left of the Step text flow, and begins at the top edge of the Step Title.
-* On Desktop and Tablet, the indicator's position is reserved consistently across all Steps so changing the active Step does not shift the Step content.
+* On Desktop and Tablet, the active-Step indicator uses `1px × 16px` dimensions and sits directly on the left outer System Line.
+* The indicator is vertically centered against the Step Title's `21px` line box.
+* The indicator does not occupy layout space, so changing the active Step does not shift the Step content.
 * On Mobile, the indicator is not rendered and does not reserve layout space.
 
 #### Spacing
 
 * `S` (`16px`) separates the Step number from the Step text flow.
-* `XS` (`8px`) separates the active-Step indicator from the Step text flow.
 * `S` (`16px`) separates the Step Title from the Body Copy.
 * On Desktop and Tablet, `L` (`32px`) separates adjacent Steps.
 
