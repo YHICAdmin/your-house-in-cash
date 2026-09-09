@@ -27,7 +27,7 @@ Provide the seller with a clear path to begin the conversion process.
 ### Tablet
 
 * The content area occupies all 8 columns.
-* The media area occupies all 8 columns.
+* The media area occupies Grid Columns `2–7` and is horizontally centered within the Tablet Grid.
 * The media area appears below the content area with a 64px gap.
 
 ### Mobile
@@ -212,7 +212,7 @@ Contains, in document order:
 
 ### Dimensions and Alignment
 
-* The complete image mosaic fills the available Grid Columns `8–12` media area and preserves a `541:328` Aspect Ratio.
+* The complete image mosaic fills its allocated media area and preserves a `541:328` Aspect Ratio.
 * The Left Image is positioned on the left, occupies `50.0924%` of the mosaic width, and spans `100%` of its height.
 * The Top-Right Image is positioned to the right of the Left Image, occupies `46.2107%` of the mosaic width and `46.9512%` of its height, and aligns with the mosaic's top edge.
 * The Bottom-Right Image is positioned directly beneath the Top-Right Image, uses the same proportions, and aligns with the mosaic's bottom edge.
