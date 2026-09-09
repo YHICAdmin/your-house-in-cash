@@ -1,0 +1,36 @@
+<svg width="540" height="490" viewBox="0 0 540 490" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="surface-shadow" x="44" y="48" width="452" height="410" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#101114" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect width="540" height="490" fill="#FFFFFF"/>
+  <g filter="url(#surface-shadow)">
+    <rect x="64" y="64" width="412" height="362" rx="12" fill="#FFFFFF"/>
+    <rect x="64.5" y="64.5" width="411" height="361" rx="11.5" stroke="#E4E7E4"/>
+  </g>
+  <circle cx="104" cy="104" r="20" fill="#EAF3EC"/>
+  <path d="M94 105.5 104 97l10 8.5V116H97v-10.5" stroke="#2C6B3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M101 116v-7h6v7" stroke="#2C6B3D" stroke-width="2" stroke-linejoin="round"/>
+  <text x="136" y="101" fill="#101114" font-family="Arial, sans-serif" font-size="17" font-weight="700">Tell us about your house</text>
+  <text x="136" y="120" fill="#555B63" font-family="Arial, sans-serif" font-size="12">A few details help us understand the property.</text>
+  <line x1="88" y1="145.5" x2="452" y2="145.5" stroke="#E4E7E4"/>
+  <text x="88" y="171" fill="#101114" font-family="Arial, sans-serif" font-size="12" font-weight="600">Property address</text>
+  <rect x="88.5" y="183.5" width="363" height="44" rx="8" fill="#FFFFFF" stroke="#E4E7E4"/>
+  <circle cx="108" cy="205.5" r="5" stroke="#4A8755" stroke-width="1.5"/>
+  <path d="M108 210.5c4-4 6-7 6-10a6 6 0 1 0-12 0c0 3 2 6 6 10Z" stroke="#4A8755" stroke-width="1.5"/>
+  <text x="126" y="210" fill="#555B63" font-family="Arial, sans-serif" font-size="13">123 Main Street</text>
+  <text x="88" y="254" fill="#101114" font-family="Arial, sans-serif" font-size="12" font-weight="600">Property condition</text>
+  <rect x="88.5" y="266.5" width="174" height="42" rx="8" fill="#FFFFFF" stroke="#E4E7E4"/>
+  <circle cx="108" cy="287.5" r="7" stroke="#777D85" stroke-width="1.5"/>
+  <text x="123" y="292" fill="#555B63" font-family="Arial, sans-serif" font-size="12">Move-in ready</text>
+  <rect x="277.5" y="266.5" width="174" height="42" rx="8" fill="#EAF3EC" stroke="#4A8755"/>
+  <circle cx="297" cy="287.5" r="7" fill="#4A8755"/>
+  <path d="m293.5 287.5 2.4 2.4 4.7-5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="312" y="292" fill="#2C6B3D" font-family="Arial, sans-serif" font-size="12" font-weight="600">Needs some work</text>
+  <text x="88" y="334" fill="#101114" font-family="Arial, sans-serif" font-size="12" font-weight="600">Contact information</text>
+  <rect x="88.5" y="346.5" width="222" height="44" rx="8" fill="#FFFFFF" stroke="#E4E7E4"/>
+  <text x="106" y="373" fill="#777D85" font-family="Arial, sans-serif" font-size="13">Email or phone number</text>
+  <rect x="322" y="346" width="130" height="45" rx="8" fill="#4A8755"/>
+  <text x="387" y="373" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="13" font-weight="700">Continue</text>
+</svg>

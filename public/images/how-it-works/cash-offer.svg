@@ -1,0 +1,34 @@
+<svg width="540" height="490" viewBox="0 0 540 490" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="surface-shadow" x="44" y="48" width="452" height="410" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#101114" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect width="540" height="490" fill="#FFFFFF"/>
+  <g filter="url(#surface-shadow)">
+    <rect x="64" y="64" width="412" height="362" rx="12" fill="#FFFFFF"/>
+    <rect x="64.5" y="64.5" width="411" height="361" rx="11.5" stroke="#E4E7E4"/>
+  </g>
+  <circle cx="104" cy="104" r="20" fill="#EAF3EC"/>
+  <path d="M95 99.5h18v13H95z" stroke="#2C6B3D" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M98 99.5v-3h12v3M100 106h8" stroke="#2C6B3D" stroke-width="2" stroke-linecap="round"/>
+  <text x="136" y="101" fill="#101114" font-family="Arial, sans-serif" font-size="17" font-weight="700">Your cash offer is ready</text>
+  <text x="136" y="120" fill="#555B63" font-family="Arial, sans-serif" font-size="12">Review the simple offer summary below.</text>
+  <line x1="88" y1="145.5" x2="452" y2="145.5" stroke="#E4E7E4"/>
+  <text x="88" y="174" fill="#555B63" font-family="Arial, sans-serif" font-size="12" font-weight="600">CASH OFFER</text>
+  <text x="88" y="219" fill="#101114" font-family="Arial, sans-serif" font-size="38" font-weight="700">$XXX,XXX</text>
+  <rect x="337" y="176" width="115" height="28" rx="14" fill="#EAF3EC"/>
+  <circle cx="354" cy="190" r="7" fill="#4A8755"/>
+  <path d="m350.5 190 2.4 2.4 4.7-5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="367" y="194" fill="#2C6B3D" font-family="Arial, sans-serif" font-size="11" font-weight="700">No obligation</text>
+  <rect x="88.5" y="242.5" width="363" height="51" rx="8" fill="#FFFFFF" stroke="#E4E7E4"/>
+  <circle cx="111" cy="268" r="10" fill="#EAF3EC"/>
+  <path d="m106.5 268 3 3 6-6" stroke="#2C6B3D" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="133" y="272" fill="#101114" font-family="Arial, sans-serif" font-size="13" font-weight="600">No agent fees</text>
+  <rect x="88.5" y="303.5" width="363" height="51" rx="8" fill="#FFFFFF" stroke="#E4E7E4"/>
+  <circle cx="111" cy="329" r="10" fill="#EAF3EC"/>
+  <path d="m106.5 329 3 3 6-6" stroke="#2C6B3D" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="133" y="333" fill="#101114" font-family="Arial, sans-serif" font-size="13" font-weight="600">No repairs required</text>
+  <rect x="88" y="370" width="364" height="40" rx="8" fill="#4A8755"/>
+  <text x="270" y="395" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="13" font-weight="700">Review offer</text>
+</svg>

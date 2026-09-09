@@ -960,141 +960,158 @@ Contains, in document order:
 * `M` (`24px`) on Desktop and Tablet.
 * `S` (`16px`) on Mobile.
 
-## Process Cards
+## Interactive Process Composition
 
-### Composition
+### Layout
 
-* The Section contains exactly three primary process Cards in this order: Card 1, Card 2, and Card 3.
-* Each Card contains, in document order, a Top Meta Row, Step Title, and Body Copy.
+* The composition contains two coordinated areas: a Process Steps area on the left and a Step Content area on the right.
+* On Desktop and Tablet, the Process Steps area forms one top-to-bottom flow and the Step Content area changes in coordination with the active Process Step.
+* On Desktop, the Process Steps area occupies Grid Columns `1–5`, Grid Column `6` remains intentionally empty, and the Step Content area occupies Grid Columns `7–12`.
+* On Tablet, the Process Steps area occupies Grid Columns `1–4` and the Step Content area occupies Grid Columns `5–8`.
+* On Mobile, the composition forms one full-width flow containing each Step immediately followed by its corresponding Step Content, in canonical Step order.
+* Each Step Content uses its approved repository-owned SVG illustration.
 
-### Content
+### Spacing
 
-1. Card 1: Step number `01`; eyebrow `A FEW MINUTES`; title `Tell Us About Your House`; Body Copy: `We take the time to understand your situation, learn about your property, and discuss your needs. You do not need to prepare the house, make repairs, or have every answer ready. We just want to understand what is going on and what would make a sale work for you.`
-2. Card 2: Step number `02`; eyebrow `NO OBLIGATION`; title `Get Your Cash Offer`; Body Copy: `We review the information you shared, take a closer look at the property, and put together a fair, no-obligation cash offer. We explain the offer clearly so you can decide whether it works for your situation. There are no fees and no pressure to move forward.`
-3. Card 3: Step number `03`; eyebrow `YOUR TIMELINE`; title `Choose Your Closing Date`; Body Copy: `If the offer works for you, you choose when you want to close. Whether you need to move quickly or need additional time, we work around your schedule and handle the details needed to complete the sale. Once closing is complete, you can move forward on your timeline.`
+* On Mobile, `S` (`16px`) separates each Step from its corresponding Step Content, and `L` (`32px`) separates one complete Step-and-content pair from the next.
 
-### Component and Semantics
+### Process Steps
 
-* The Card collection uses ordered-list semantics, and each Card uses list-item semantics.
+#### Content
+
+The Process Steps area contains exactly three Steps in this order:
+
+1. Step number `01`; title `Tell Us About Your House`; Body Copy: `Tell us about your property and situation. No repairs or preparation are needed.`
+2. Step number `02`; title `Get Your Cash Offer`; Body Copy: `We’ll review the details and present a fair cash offer with no fees or obligation.`
+3. Step number `03`; title `Choose Your Closing Date`; Body Copy: `Choose the closing date that works for you, and we’ll handle the remaining details.`
+
+#### Component and Semantics
+
+* The Step collection uses ordered-list semantics, and each Step uses list-item semantics.
+* On Desktop and Tablet, each complete Step is an interactive control that activates its corresponding Step Content.
 * The Step Title uses `H3` semantics.
 * Each Step number is plain text within a local circular treatment and does not use the `Icon Container` Component or icon semantics.
 * The visible Step number is decorative for assistive technologies because the ordered-list semantics communicate the same sequence.
 
-### Visual Design
+#### Visual Design
 
-* All three Cards use the Section-specific background color `#123527`.
-* All three Cards use the global `Large` Radius (`16px`).
-* The Cards do not use a Border, Shadow, photograph, Gradient, or other decorative treatment.
-* The Step number uses the global `H4` typography, the Section-specific `#123527` color, and a Brand Green Light circular background.
-* The eyebrow uses the global `Label` typography, uppercase content, and Brand Green Light color.
-* The Step Title uses the global `H4` typography and `#FFFFFF` color.
-* The Body Copy uses the global `Body Small` typography and Brand Green Light color.
+* The Steps use an open presentation without a Card background, Border, Radius, or Shadow.
+* On Desktop and Tablet, one Step is visually active at a time.
+* The active Step number uses Brand Green Dark text on a Brand Green Light circular background. A Brand Green vertical indicator appears beside the active Step content.
+* Inactive Step numbers use Text Secondary on a Background Neutral circular background.
+* On Mobile, all Step numbers use the inactive neutral treatment, and the Steps do not use active or inactive visual states.
+* The Step Title uses the local `14px / 600 / 1.5` typography treatment with the default letter spacing and Text Primary color across all Breakpoints.
+* The Body Copy uses the global `Body Small` typography and Text Secondary color.
 
-### Dimensions and Alignment
+#### Dimensions and Alignment
 
-* Each Process Card aligns with the canonical Grid content edges within its System Line division and inherits the applicable global Grid and System Line geometry at each Breakpoint.
-* The Card geometry derives directly from the global content Grid and a `M` (`24px`) horizontal Card gap without per-Card positions, widths, margins, or corrections.
-* Each Card uses `M` (`24px`) internal padding on all sides across all Breakpoints.
-* All Card content is left-aligned.
-* The Step number and eyebrow form one horizontal Top Meta Row, align to opposite sides of the available Card content width, and align vertically at the top.
-* The Step number's circular treatment uses `48px × 48px` dimensions and the global `Pill` Radius across all Breakpoints.
+* All Step content is left-aligned.
+* On Desktop and Tablet, each Step control spans the complete available width of the Process Steps area.
+* Within each Step, the Step number appears above the Step Title and Body Copy.
+* The Step Title and Body Copy form a vertical text flow.
+* Each Step number uses `48px × 48px` dimensions and the global `Pill` Radius.
+* On Desktop and Tablet, the active-Step indicator uses `2px × 24px` dimensions, appears to the left of the Step text flow, and begins at the top edge of the Step Title.
+* On Desktop and Tablet, the indicator's position is reserved consistently across all Steps so changing the active Step does not shift the Step content.
+* On Mobile, the indicator is not rendered and does not reserve layout space.
 
-### Spacing
+#### Spacing
 
-* `L` (`32px`) separates the Top Meta Row from the Step Title.
+* `S` (`16px`) separates the Step number from the Step text flow.
+* `XS` (`8px`) separates the active-Step indicator from the Step text flow.
 * `S` (`16px`) separates the Step Title from the Body Copy.
+* On Desktop and Tablet, `L` (`32px`) separates adjacent Steps.
 
-#### Desktop
+#### Interaction
 
-* The three Cards form one row.
-* Card 1 occupies the first System Line division, between the left outer System Line and the first internal System Line.
-* Card 2 occupies the second System Line division, between the first and second internal System Lines.
-* Card 3 occupies the third System Line division, between the second and third internal System Lines.
-* All three Cards have a minimum height of `360px` and may grow when future content requires additional height.
+* The following interaction model applies on Desktop and Tablet.
+* Each Step control uses `cursor: pointer`.
+* When an inactive Step is hovered, its Step number and Step Title use Brand Green Dark while the number's Background Neutral circle remains unchanged.
+* Step color changes use a `150ms ease` transition.
+* The active Step retains its active visual treatment when hovered.
+* Step `01` is active when the composition first loads.
+* The active Step advances automatically in the sequence `01` to `02` to `03`, then returns to `01`.
+* Automatic advancement occurs every `7 seconds`.
+* Activating a Step manually makes it the active Step, displays its corresponding Step Content, and stops automatic advancement for the remainder of the current page view.
+* Each automatic or manual Step change replaces the content displayed in the Step Content area.
+* On Desktop and Tablet, automatic and manual illustration changes use a `300ms ease` crossfade in which the outgoing illustration fades out and the incoming illustration fades in.
+* The transition does not slide, scale, or otherwise move the illustrations spatially.
+* Automatic advancement pauses while the pointer is over the Interactive Process Composition, while keyboard focus is within it, and while the document is not visible. It resumes when the applicable pause condition ends unless the user has activated a Step manually.
+* When `prefers-reduced-motion: reduce` applies, automatic advancement is disabled, Step `01` remains active until the user selects another Step, and manual illustration changes occur immediately without animation.
+* On Mobile, all three Steps and their corresponding Step Content are displayed simultaneously and the composition has no automatic advancement, active Step, or Step-selection interaction.
 
-#### Tablet
+#### Accessibility
 
-* Card 1 and Card 2 form the first row, occupy one System Line division each, and use equal widths.
-* Card 3 forms the second row and occupies its left System Line division only.
-* Card 1 and Card 2 have a minimum height of `320px`; Card 3 has a minimum height of `360px`. Each Card may grow when future content requires additional height.
-* `S` (`16px`) separates the two Card rows.
+* On Desktop and Tablet, each Step control uses native button semantics and is keyboard operable.
+* Each Step control inherits the global `:focus-visible` treatment around its complete interactive area; no local focus treatment overrides it.
+* On Desktop and Tablet, the active Step is exposed programmatically.
+* On Desktop and Tablet, the Step controls and Step Content use an accessible relationship so the active control identifies the content it displays.
+* The active-Step indicator is decorative and is not exposed to assistive technologies.
+* Step changes do not trigger live announcements.
+* On Mobile, each Step and its corresponding Step Content form one non-interactive semantic group within the ordered list.
 
-#### Mobile
+### Step Content
 
-* Card 1, Card 2, and Card 3 form one vertical stack in that order.
-* All three Cards span the complete Mobile Grid content width.
-* All three Cards have a minimum height of `220px` and may grow when their content requires additional height.
-* `S` (`16px`) separates adjacent Cards.
+#### Content
 
-## Closing Visual
+* On Desktop and Tablet, the area displays content corresponding to the active Process Step.
+* On Mobile, each Step Content instance appears directly after its corresponding Process Step.
+* Step `01` uses `/images/how-it-works/property-form.svg`. The illustrated form contains:
+  1. Heading: `Tell us about your house`.
+  2. Field label: `Property address`.
+  3. Property-condition choices: `Move-in ready` and `Needs some work`.
+  4. Field label: `Contact information`.
+  5. Visual action label: `Continue`.
+* Step `02` uses `/images/how-it-works/cash-offer.svg`. The illustrated offer contains:
+  1. Heading: `Your cash offer is ready`.
+  2. Clearly illustrative amount: `$XXX,XXX`.
+  3. Status label: `No obligation`.
+  4. Reassurance rows: `No agent fees` and `No repairs required`.
+  5. Visual action label: `Review offer`.
+* Step `03` uses `/images/how-it-works/closing-calendar.svg`. The illustrated calendar contains:
+  1. Heading: `Choose your closing date`.
+  2. A generic calendar without a fixed month or year.
+  3. One date selected using Brand Green emphasis.
+  4. Confirmation text: `Closing date selected`.
+  5. Visual action label: `Confirm date`.
+* The illustration content is fixed and reused across Area Pages; it does not vary by Area.
 
-### Content
+#### Component and Semantics
 
-* Uses the canonical photograph `/images/how-it-works/sold.png`, showing a homeowner holding house keys in front of the sold property.
-* Contains one floating Status Card with, in document order:
-  1. Canonical Lucide `CircleCheck` icon.
-  2. Eyebrow: `READY TO CLOSE`.
-  3. Status message: `On your timeline`.
+* Each Step Content is a static SVG image rather than an interactive form, offer interface, or calendar.
+* The illustrations are decorative because the corresponding Process Step provides the complete meaningful content; each uses empty alternative text.
 
-### Component and Semantics
+#### Visual Design
 
-* The Closing Visual is a separate visual payoff after the three Process Cards and is not a fourth Step.
-* The status Card is informational and non-interactive.
-* The status icon uses the documented `Icon Container` Component at its Default size.
+* The three illustrations use one cohesive, Stripe-inspired visual language without reproducing Stripe branding, logos, or proprietary interface content.
+* Each illustration uses a global Surface white canvas with `2XL` (`64px`) internal Padding on all sides.
+* One primary illustrated interface surface is centered within each canvas and remains within its bounds.
+* The primary illustrated interface surface uses global Surface, the global Medium Radius (`12px`), and the global Subtle Shadow.
+* Illustrated fields and internal regions use the global `1px` Border and global Small Radius (`8px`).
+* Illustrated primary text uses Text Primary, supporting text uses Text Secondary, and actions and selected states use Brand Green with Brand Green Light where a supporting accent surface is required.
+* The interface treatment remains visually lightweight and does not resemble a photographic scene.
+* All meaningful Step information remains in the adjacent Process Step; text or controls depicted within an illustration are visual details and do not introduce additional product information or interaction.
+* The Step Content does not add an outer Border, Shadow, or Radius; the white canvas, internal whitespace, rounded interface surfaces, and subtle depth are rendered within each SVG.
 
-### Visual Design
+#### Dimensions and Alignment
 
-* The photograph fills the complete Closing Visual without distortion and may crop as needed, with its focal placement centered to preserve the homeowner, keys, and relevant sold-property context.
-* The Closing Visual uses the global `Large` Radius (`16px`) and clips the photograph to that Radius.
-* The floating Status Card uses the global Surface background, Medium Radius (`12px`), and Floating Shadow.
-* The status eyebrow uses the global `Label` typography and Brand Green Dark color.
-* The status message uses the global `Body Small` typography and Text Primary color.
+* On Desktop and Tablet, the Step Content fills its allocated Grid area.
+* On Mobile, each Step Content instance fills the complete available Content Grid width.
+* All three SVG illustrations use a `540 × 490` `viewBox` and a shared `54:49` Aspect Ratio.
+* Each illustration uses `100%` of the available Step Content width, and its rendered height derives from the shared Aspect Ratio.
+* The Step Content preserves the same geometry when its displayed illustration changes.
+* On Desktop and Tablet, the top edge of the Step Content aligns with the top edge of the Process Steps area.
+* The Step Content remains top-aligned and does not stretch or vertically center when the Process Steps area is taller.
 
-### Dimensions and Alignment
+#### Responsive Behavior
 
-* The Closing Visual uses the same responsive System-Line alignment model as the Process Cards and Review Cards.
-* The floating Status Card is positioned at the bottom-right of the Closing Visual with an `S` (`16px`) inset from both edges.
-* The Status Card uses `S` (`16px`) internal padding, and `XS` (`8px`) separates the Icon Container from the status text group.
-* The status text group is left-aligned, and its two text lines form a vertical stack.
+* Desktop and Tablet use one shared Step Content area whose displayed content changes with the active Step.
+* Mobile uses three static Step Content instances in canonical Step order.
 
-#### Desktop
+#### Technical Requirements
 
-* The Closing Visual occupies the fourth System Line division, directly after Card 3 in the same row.
-* It uses the same `360px` minimum height as the three Process Cards and may grow with its row.
-
-#### Tablet
-
-* The Closing Visual occupies the right System Line division of the second row, directly beside Card 3.
-* It uses the same `360px` minimum height as Card 3 and may grow with its row.
-
-#### Mobile
-
-* The Closing Visual appears after Card 3 in the vertical stack.
-* It uses the same width, horizontal alignment, `220px` minimum height, and `S` (`16px`) vertical separation as the Process Cards.
-
-### Spacing After
-
-* `M` (`24px`) separates the complete process composition from the Section CTA on Desktop and Tablet.
-* `S` (`16px`) separates the complete process composition from the Section CTA on Mobile.
-
-### Accessibility
-
-* The photograph is decorative because the Step 3 copy and visible Status Card communicate the completed-sale and customer-timeline meaning; it uses empty alternative text.
-* The `CircleCheck` icon is decorative because the visible Status Card text communicates the same completion meaning.
-
-## Section CTA
-
-### Content
-
-* Label: `Get My Cash Offer`.
-
-### Component and Semantics
-
-* Uses the shared `Button` Component with its `conversion` variant and link semantics.
-
-### Interaction
-
-* Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
+* The three illustrations are repository-owned SVG assets loaded as images.
+* Each SVG preserves its approved `540 × 490` coordinate system.
+* The illustrations do not require client-side form controls, embedded third-party interfaces, or external runtime assets.
 
 # Local / Area Section
 
