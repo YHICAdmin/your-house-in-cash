@@ -1,4 +1,5 @@
-import { House } from "lucide-react";
+import { FileText, House, ListChecks } from "lucide-react";
+import { IconContainer } from "@/components/ui/icon-container";
 import { SectionLabel } from "@/components/ui/section-label";
 import { SituationExplorer } from "./situation-explorer";
 import styles from "./area-situations.module.css";
@@ -26,10 +27,38 @@ export function AreaSituations() {
           Every homeowner&apos;s situation is different. Choose what best
           describes yours to see how we can help.
         </p>
-        <SituationExplorer
-          descriptionId={descriptionId}
-          headingId={headingId}
-        />
+
+        <ul className={styles.supportingPoints}>
+          <li className={styles.supportingPoint}>
+            <IconContainer icon={ListChecks} aria-hidden="true" />
+            <h3 className={styles.pointHeading}>
+              What Can Affect a Home Sale
+            </h3>
+            <p className={`${styles.pointCopy} text-body`}>
+              Property condition, ownership, occupancy, liens, and important
+              deadlines can all influence the steps required before a home can
+              be sold.
+            </p>
+          </li>
+          <li className={styles.supportingPoint}>
+            <IconContainer icon={FileText} aria-hidden="true" />
+            <h3 className={styles.pointHeading}>
+              Information Worth Gathering
+            </h3>
+            <p className={`${styles.pointCopy} text-body`}>
+              Documents related to ownership, mortgages, property taxes,
+              repairs, tenants, and timing can help clarify the available
+              options and next steps.
+            </p>
+          </li>
+        </ul>
+
+        <div className={styles.explorerColumn}>
+          <SituationExplorer
+            descriptionId={descriptionId}
+            headingId={headingId}
+          />
+        </div>
       </div>
     </section>
   );

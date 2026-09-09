@@ -288,11 +288,22 @@ Provide entry points to dedicated Situation Pages for each documented situation.
 
 ## Layout
 
-On Desktop, the main content area:
+The Section Intro appears above the Section's main content composition.
 
-* Spans the complete Desktop Grid from Column `1` through Column `12`.
-* Uses the second System Line from the left to separate the two areas between Grid Columns `3` and `4`.
-* Places the Situation Selector and Selected Situation Content in one content-driven row whose two areas share the same top and bottom edges.
+On Desktop and Tablet, the main content composition uses two equal-width areas that form independent top-to-bottom flows:
+
+* On Desktop, the left area occupies Grid Columns `1–5`, Grid Column `6` remains intentionally empty, and the right area occupies Grid Columns `7–12`.
+* On Tablet, the left area occupies Grid Columns `1–4`, and the right area occupies Grid Columns `5–8`.
+* The left area contains the Supporting Points.
+* The right area contains the Situation Selector, Selected Situation Content, and Contact Us Option in that order.
+* The top edges of the left- and right-area flows align.
+
+On Mobile, the main content composition forms one full-width flow in this order:
+
+1. Supporting Points.
+2. Situation Selector.
+3. Selected Situation Content.
+4. Contact Us Option.
 
 ## Section Intro
 
@@ -314,6 +325,10 @@ Contains, in document order:
 
 * The Supporting Copy uses the global `Body Large` typography.
 
+### Dimensions and Alignment
+
+* Spans the complete Content Grid width across all Breakpoints: Grid Columns `1–12` on Desktop, Grid Columns `1–8` on Tablet, and the complete available Content Grid width on Mobile.
+
 ### Spacing
 
 * `16px` (`S`) separates the Section Label from the Primary Headline across all Breakpoints.
@@ -321,8 +336,61 @@ Contains, in document order:
 
 ### Spacing After
 
-* `48px` (`XL`) on Desktop and Tablet.
-* `32px` (`L`) on Mobile.
+* `64px` (`2XL`) on Desktop and Tablet.
+* `48px` (`XL`) on Mobile.
+
+## Supporting Points
+
+### Content
+
+* Contains exactly two informational points that provide additional context about how the company can help homeowners in the documented situations.
+* Each point contains, in document and visual order:
+  1. Icon.
+  2. Short heading.
+  3. Supporting paragraph.
+* Uses the following points in canonical order:
+  1. `What Can Affect a Home Sale`:
+     * Uses the canonical Lucide `ListChecks` icon.
+     * Supporting Copy: `Property condition, ownership, occupancy, liens, and important deadlines can all influence the steps required before a home can be sold.`
+  2. `Information Worth Gathering`:
+     * Uses the canonical Lucide `FileText` icon.
+     * Supporting Copy: `Documents related to ownership, mortgages, property taxes, repairs, tenants, and timing can help clarify the available options and next steps.`
+
+### Component and Semantics
+
+* The two points form one semantic unordered list, and each point forms one list item.
+* Each icon uses the documented `Icon Container` Component at its Default size.
+* Each point heading uses `H3` semantics.
+* Each supporting paragraph uses paragraph semantics.
+
+### Visual Design
+
+* Each point heading uses local `16px / 700 / 1.25` typography with the global headline letter-spacing treatment.
+* Each supporting paragraph uses the global `Body` typography.
+* The points remain visually open and transparent, without a Card, background, Border, Radius, or Shadow.
+* Each point heading is accompanied by a decorative `1px` wide, `15px` high vertical separator in global `Brand Green`; the separator sits on the left System Line and begins at the heading's top edge.
+
+### Dimensions and Alignment
+
+* Uses the complete width of the left area on Desktop and Tablet.
+* Uses the complete available content width on Mobile.
+* Each icon, heading, and supporting paragraph form a left-aligned vertical content flow.
+
+### Spacing
+
+* `24px` (`M`) separates each `Icon Container` from its point heading across all Breakpoints.
+* `16px` (`S`) separates each point heading from its supporting paragraph across all Breakpoints.
+* `32px` (`L`) separates the two complete points across all Breakpoints.
+
+### Spacing After
+
+* On Mobile, `32px` (`L`) separates the complete Supporting Points composition from the Situation Selector.
+* No Spacing After relationship applies on Desktop or Tablet because the Supporting Points and Situation Selector belong to separate parallel flows.
+
+### Accessibility
+
+* The icons are decorative because the adjacent visible headings communicate each point's identity.
+* The vertical separators are decorative.
 
 ## Situation Selector
 
@@ -349,6 +417,7 @@ Contains, in document order:
 ### Visual Design
 
 * Across all Breakpoints, the Situation Selector remains visually open and transparent, without a surrounding Card, background, Border, Radius, or Shadow.
+* A subtle right-edge fade using the owning Section's background color overlays the final `24px` (`M`) of the carousel viewport whenever additional options remain beyond the visible area.
 * Each option uses the global `Body` typography and `Text Primary` color.
 * The default state does not use a background, Border, Divider, Radius, or Shadow.
 * Across all Breakpoints, the selected option uses Brand Green Dark text at `600` font weight.
@@ -359,23 +428,27 @@ Contains, in document order:
 
 ### Dimensions and Alignment
 
-* On Desktop, occupies Grid Columns `1–3`.
+* Uses the complete width of the right area on Desktop and Tablet.
+* Uses the complete available content width on Mobile.
 * Text is left-aligned.
-* Each option has a minimum interactive height of `48px`, with `8px` vertical and `16px` horizontal internal padding.
+* Each option has a minimum interactive height of `48px`, with `8px` (`XS`) vertical and horizontal internal padding.
 * The indicator follows the rendered option text width only, excluding the option's padding and available row width.
 * The indicator appears `4px` below the text.
 * The indicator's geometry remains unchanged across all Breakpoints.
 
 ### Spacing After
 
-* On Tablet, `48px` (`XL`) separates the Situation Selector from the Selected Situation Content.
-* On Mobile, `32px` (`L`) separates the Situation Selector from the Selected Situation Content.
+* `24px` (`M`) separates the Situation Selector from the Selected Situation Content across all Breakpoints.
 
 ### Interaction
 
 * Selecting an option updates the Selected Situation Content within the Section and keeps keyboard focus on the selected option.
 * `Enter` or `Space` selects the focused option.
 * A pointer cursor is displayed when a pointing device hovers over an option.
+* Users can move through the overflowed carousel using touch swipe, trackpad scrolling, or pointer dragging.
+* The carousel viewport uses a `grab` cursor where it is draggable and a `grabbing` cursor during pointer dragging; the options retain their pointer cursor.
+* When keyboard focus reaches an option outside the visible carousel viewport, that option scrolls into view.
+* The carousel does not use separate previous or next controls.
 
 ### Accessibility
 
@@ -389,13 +462,10 @@ Contains, in document order:
 
 ### Responsive Behavior
 
-* On Tablet and Mobile, uses the available content width.
-* On Desktop, displays all situation options simultaneously in a vertical Selector.
-* On Tablet and Mobile, displays the situation options in one manually scrollable horizontal strip above the Selected Situation Content.
-* When additional options extend beyond the visible Tablet or Mobile area, part of the next option remains visible to indicate horizontal continuation.
-* The Tablet and Mobile strip does not advance automatically.
-* On Desktop, each option uses its content-based width, with an `8px` (`XS`) vertical gap between options.
-* On Tablet and Mobile, each option uses its content-based width, with an `8px` (`XS`) gap between options in the horizontal strip.
+* Across all Breakpoints, displays the situation options as one manually scrollable horizontal carousel above the Selected Situation Content.
+* When additional options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
+* The carousel does not advance automatically.
+* Each option uses its content-based width, with an `8px` (`XS`) gap between options.
 
 ## Selected Situation Content
 
@@ -407,26 +477,38 @@ Contains, in document order:
 
 ### Visual Design
 
-* Uses Background Soft with the global Medium Radius and no Border or Shadow.
+* Uses the global `Surface` background with the global Medium Radius and Floating Shadow, without a Border.
 
 ### Dimensions and Alignment
 
-* On Desktop, occupies Grid Columns `4–12`.
-* On Desktop and Tablet, the Situation Image occupies the left `4/9` of the panel and the remaining content occupies the right `5/9`.
+* Uses the complete width of the right area on Desktop and Tablet.
+* Uses the complete available content width on Mobile.
 * The content area uses `32px` (`L`) internal padding on Desktop and Tablet and `24px` (`M`) on Mobile.
+
+### Spacing After
+
+* `48px` (`XL`) separates the Selected Situation Content from the Contact Us Option across all Breakpoints.
 
 ### Responsive Behavior
 
-* On Tablet and Mobile, uses the available content width.
-* On Desktop and Tablet, presents the Situation Image on the left and the selected situation heading, Situation Explanation, Situation Benefits, and Situation CTA vertically on the right in that order.
-* On Mobile, presents the Situation Image first, followed by the selected situation heading, Situation Explanation, Situation Benefits, and Situation CTA in one vertical composition.
+* Across all Breakpoints, presents the selected situation heading, Situation Explanation, and Situation CTA in one vertical composition in that order.
 * On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
 
 ### Selected Situation Heading
 
 #### Content
 
-* Displays the currently selected situation name.
+* Displays the contextual heading associated with the currently selected situation:
+  1. `Foreclosure`: `Understanding Your Timeline Before Foreclosure`.
+  2. `Inherited Property`: `What to Consider With an Inherited Property`.
+  3. `Tired Landlord`: `When Landlord Responsibilities Become Unsustainable`.
+  4. `Major Repairs`: `Selling a Home That Needs Major Repairs`.
+  5. `Vacant Property`: `Managing the Costs of a Vacant Property`.
+  6. `Problem Tenants`: `What to Consider When Tenants Are Involved`.
+  7. `Relocation`: `Coordinating a Home Sale With Relocation`.
+  8. `Divorce`: `Handling a Property During Divorce`.
+  9. `Behind on Property Taxes`: `Understanding Delinquent Property Taxes`.
+  10. `Code Violations`: `Selling a Home With Code Violations`.
 
 #### Component and Semantics
 
@@ -435,36 +517,6 @@ Contains, in document order:
 #### Spacing After
 
 * `24px` (`M`) across all Breakpoints.
-
-### Situation Image
-
-#### Content
-
-* Uses the following temporary asset for each situation:
-  1. `Foreclosure`: `/images/situations/foreclosure.webp`.
-  2. `Inherited Property`: `/images/situations/inherited-property.webp`.
-  3. `Tired Landlord`: `/images/situations/tired-landlord.webp`.
-  4. `Major Repairs`: `/images/situations/major-repairs.webp`.
-  5. `Vacant Property`: `/images/situations/vacant-property.webp`.
-  6. `Problem Tenants`: `/images/situations/problem-tenants.webp`.
-  7. `Relocation`: `/images/situations/relocation.webp`.
-  8. `Divorce`: `/images/situations/divorce.webp`.
-  9. `Behind on Property Taxes`: `/images/situations/behind-on-property-taxes.webp`.
-  10. `Code Violations`: `/images/situations/code-violations.webp`.
-* Final images will replace the temporary assets at the same paths and preserve the same dimensions, Aspect Ratio, and rendering behavior.
-
-#### Visual Design
-
-* Each temporary asset is `1200 × 675px` with a `16:9` Aspect Ratio.
-
-#### Accessibility
-
-* All Situation Images are decorative.
-
-#### Responsive Behavior
-
-* On Desktop and Tablet, fills the complete height of the panel's left area and crops as needed without stretching or distortion; the primary subject remains visible wherever possible.
-* On Mobile, spans the panel width and preserves its `16:9` Aspect Ratio without distortion.
 
 ### Situation Explanation
 
@@ -493,76 +545,6 @@ Contains, in document order:
 #### Spacing After
 
 * `32px` (`L`) across all Breakpoints.
-
-### Situation Benefits
-
-#### Content
-
-* Uses the following benefits for each situation:
-  1. `Foreclosure`:
-     * `Sell without making repairs`.
-     * `Choose a flexible closing date`.
-     * `Avoid a traditional listing`.
-  2. `Inherited Property`:
-     * `Sell the inherited property as-is`.
-     * `Leave unwanted belongings behind`.
-     * `Simplify the sale process`.
-  3. `Tired Landlord`:
-     * `Sell an occupied or vacant rental`.
-     * `Skip repairs and another listing`.
-     * `Choose a timeline that works for you`.
-  4. `Major Repairs`:
-     * `Sell without completing repairs`.
-     * `Skip cleaning and staging`.
-     * `Avoid traditional buyer financing`.
-  5. `Vacant Property`:
-     * `Reduce ongoing holding costs`.
-     * `Sell without preparing the property`.
-     * `Choose a flexible closing date`.
-  6. `Problem Tenants`:
-     * `Sell the property in its current condition`.
-     * `Discuss options for an occupied property`.
-     * `Avoid another traditional listing`.
-  7. `Relocation`:
-     * `Choose a closing date around your move`.
-     * `Skip repairs and staging`.
-     * `Coordinate the sale after relocating`.
-  8. `Divorce`:
-     * `Use a simple, discreet sale process`.
-     * `Choose a flexible timeline`.
-     * `Sell the property as-is`.
-  9. `Behind on Property Taxes`:
-     * `Sell the property as-is`.
-     * `Avoid preparing for a traditional listing`.
-     * `Choose a closing date that fits your situation`.
-  10. `Code Violations`:
-      * `Sell with existing code violations`.
-      * `Avoid completing repairs before the sale`.
-      * `Use a straightforward sale process`.
-
-#### Component and Semantics
-
-* Uses one semantic unordered list whose three items appear in the documented order.
-* Each list item includes the canonical Lucide `Check` icon using the documented `Icon Container` Component.
-
-#### Visual Design
-
-* Each item uses the global `Body` typography and `Text Primary` color.
-* The gap between each `Icon Container` and its text is `12px`.
-* The vertical gap between items is `16px` (`S`).
-* The `Icon Container` and text are vertically center-aligned within each benefit item.
-
-#### Spacing After
-
-* `32px` (`L`) across all Breakpoints.
-
-#### Accessibility
-
-* The icons are decorative.
-
-#### Responsive Behavior
-
-* The list remains vertical across all Breakpoints.
 
 ### Situation CTA
 
@@ -608,14 +590,10 @@ Contains, in document order:
 
 ### Dimensions and Alignment
 
-* At every Breakpoint, occupies a separate row using the complete available content width.
-* On Desktop, occupies Grid Columns `1–12`.
+* Uses the complete width of the right area on Desktop and Tablet.
+* Uses the complete available content width on Mobile.
 * The `Icon Container` appears before the sentence with a `12px` gap and is vertically centered with it.
 * The sentence is left-aligned.
-
-### Spacing Before
-
-* `48px` (`XL`) across all Breakpoints.
 
 ### Interaction
 

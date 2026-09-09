@@ -21,21 +21,96 @@
 }
 
 .supportingCopy {
-  margin: 0 0 var(--spacing-l);
+  margin: 0 0 var(--spacing-xl);
   color: var(--color-text-secondary);
+}
+
+.supportingPoints {
+  display: flex;
+  min-width: 0;
+  grid-column: 1 / -1;
+  flex-direction: column;
+  gap: var(--spacing-l);
+  margin: 0 0 var(--spacing-l);
+  padding: 0;
+  list-style: none;
+}
+
+.supportingPoint {
+  min-width: 0;
+}
+
+.pointHeading {
+  position: relative;
+  margin: var(--spacing-m) 0 var(--spacing-s);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.pointHeading::before {
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--layout-grid-inset));
+  width: 1px;
+  height: 15px;
+  background: var(--color-brand);
+  content: "";
+}
+
+.pointCopy {
+  margin: 0;
+}
+
+.explorerColumn {
+  min-width: 0;
+  grid-column: 1 / -1;
+}
+
+.selectorViewport {
+  position: relative;
+  min-width: 0;
+  margin: -5px -5px calc(var(--spacing-m) - 5px);
+}
+
+.selectorViewport::after {
+  position: absolute;
+  z-index: 1;
+  inset-block: 0;
+  right: 0;
+  width: var(--spacing-m);
+  background: linear-gradient(to right, transparent, var(--color-background));
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease;
+}
+
+.hasOverflowAfter::after {
+  opacity: 1;
 }
 
 .selector {
   display: flex;
   min-width: 0;
-  grid-column: 1 / -1;
   flex-wrap: nowrap;
   gap: var(--spacing-xs);
-  margin: -5px -5px calc(var(--spacing-l) - 5px);
   padding: 5px;
   overflow-x: auto;
+  cursor: grab;
   overscroll-behavior-inline: contain;
   scroll-padding-inline: 5px;
+  scrollbar-width: none;
+}
+
+.selector::-webkit-scrollbar {
+  display: none;
+}
+
+.dragging,
+.dragging .option {
+  cursor: grabbing;
 }
 
 .option {
@@ -45,7 +120,7 @@
   flex: 0 0 auto;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--spacing-xs) var(--spacing-s);
+  padding: var(--spacing-xs);
   border: 0;
   border-radius: 0;
   background: none;
@@ -85,19 +160,9 @@
 
 .selectedContent {
   min-width: 0;
-  grid-column: 1 / -1;
   border-radius: var(--radius-medium);
-  background: var(--color-background-soft);
-}
-
-.situationImage {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: center;
-  border-radius: var(--radius-medium) var(--radius-medium) 0 0;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-floating);
 }
 
 .situationDetails {
@@ -112,26 +177,9 @@
   margin: 0 0 var(--spacing-l);
 }
 
-.benefits {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-s);
-  margin: 0 0 var(--spacing-l);
-  padding: 0;
-  color: var(--color-text-primary);
-  list-style: none;
-}
-
-.benefits li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
 .contactOption {
   display: flex;
   min-width: 0;
-  grid-column: 1 / -1;
   align-items: center;
   gap: 12px;
   margin-top: var(--spacing-xl);
@@ -146,22 +194,18 @@
 
 @media (min-width: 768px) {
   .supportingCopy {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
   }
 
-  .selector {
-    margin-bottom: calc(var(--spacing-xl) - 5px);
+  .supportingPoints {
+    grid-column: 1 / span 4;
+    align-self: start;
+    margin-bottom: 0;
   }
 
-  .selectedContent {
-    display: grid;
-    grid-template-columns: minmax(0, 4fr) minmax(0, 5fr);
-  }
-
-  .situationImage {
-    height: 100%;
-    aspect-ratio: auto;
-    border-radius: var(--radius-medium) 0 0 var(--radius-medium);
+  .explorerColumn {
+    grid-column: 5 / -1;
+    align-self: start;
   }
 
   .situationDetails {
@@ -170,22 +214,11 @@
 }
 
 @media (min-width: 1200px) {
-  .selector {
-    display: flex;
-    grid-column: 1 / span 3;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-    margin: 0;
-    padding: 3px;
-    overflow: visible;
-    scroll-padding-inline: 3px;
+  .supportingPoints {
+    grid-column: 1 / span 5;
   }
 
-  .selectedContent {
-    grid-column: 4 / -1;
-  }
-
-  .contactOption {
-    grid-column: 1 / -1;
+  .explorerColumn {
+    grid-column: 7 / -1;
   }
 }
