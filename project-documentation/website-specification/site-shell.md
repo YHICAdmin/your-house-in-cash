@@ -299,8 +299,10 @@ No Footer-specific technical specifications are currently defined. Global typogr
 
 ### Content
 
-- Contact details.
-- Location / service area.
+- Label: **Call Us**.
+- Phone number: `216-111-1111`.
+- The phone number uses link semantics and navigates to `tel:2161111111`.
+- Service-area text: **Serving Northeast Ohio**.
 
 ## Footer Bottom Row
 

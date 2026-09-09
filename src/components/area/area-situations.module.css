@@ -50,6 +50,7 @@
   border-radius: 0;
   background: none;
   color: var(--color-text-primary);
+  cursor: pointer;
   font-weight: 400;
   text-align: left;
   box-shadow: none;

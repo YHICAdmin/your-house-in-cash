@@ -375,6 +375,7 @@ Contains, in document order:
 
 * Selecting an option updates the Selected Situation Content within the Section and keeps keyboard focus on the selected option.
 * `Enter` or `Space` selects the focused option.
+* A pointer cursor is displayed when a pointing device hovers over an option.
 
 ### Accessibility
 
