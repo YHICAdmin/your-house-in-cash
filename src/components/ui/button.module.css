@@ -38,3 +38,16 @@
 .button:disabled:active {
   transform: none;
 }
+
+.conversion {
+  min-height: 64px;
+  width: 100%;
+  padding-inline: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .conversion {
+    width: 60%;
+    max-width: 360px;
+  }
+}

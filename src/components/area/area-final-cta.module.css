@@ -5,19 +5,17 @@
 .composition {
   display: flex;
   width: 100%;
-  max-width: 720px;
   grid-column: 1 / -1;
   flex-direction: column;
-  align-items: center;
-  margin-inline: auto;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .intro {
   display: flex;
   width: 100%;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: var(--spacing-l);
 }
 
@@ -33,4 +31,16 @@
 
 .reassurance {
   margin-top: var(--spacing-xs);
+}
+
+@media (min-width: 768px) {
+  .composition {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (min-width: 1200px) {
+  .composition {
+    grid-column: 1 / span 6;
+  }
 }

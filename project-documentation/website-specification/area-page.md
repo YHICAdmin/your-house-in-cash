@@ -118,13 +118,8 @@ Contains, in document order:
 
 ### Component and Semantics
 
-* Uses the documented `Button` Component.
+* Uses the documented `Button` Component with its `conversion` variant.
 * Renders with anchor semantics because it navigates to a separate route.
-
-### Dimensions and Alignment
-
-* Minimum height: `64px`.
-* Horizontal internal padding: `48px` (`XL`).
 
 ### Spacing After
 
@@ -133,11 +128,6 @@ Contains, in document order:
 ### Interaction
 
 * Navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
-
-### Responsive Behavior
-
-* On Mobile, uses `100%` of the available content width.
-* On Tablet and Desktop, uses `60%` of the available content width, up to a maximum width of `360px`.
 
 ## Supporting Microcopy
 
@@ -1099,7 +1089,7 @@ Contains, in document order:
 
 ### Component and Semantics
 
-* Uses the shared `Button` Component with link semantics.
+* Uses the shared `Button` Component with its `conversion` variant and link semantics.
 
 ### Interaction
 
@@ -1592,10 +1582,10 @@ At this stage, the user has already received the necessary information throughou
 
 ## Layout
 
-- The Section Intro, Primary CTA, and Reassurance Row form one centered, focused composition.
-- On Desktop and Tablet, the complete composition uses `100%` of the available width up to a maximum width of `720px` and is centered horizontally.
-- On Mobile, the complete composition uses the full available Content Container width.
-- The centered content is not constrained by the internal System Lines.
+- The Section Intro, Primary CTA, and Reassurance Row form one left-aligned composition.
+- On Desktop, the complete composition occupies Grid Columns `1–6`.
+- On Tablet, the complete composition occupies Grid Columns `1–4`.
+- On Mobile, the complete composition occupies the full available Content Grid width.
 
 ## Section Intro
 
@@ -1622,7 +1612,7 @@ Contains, in document order:
 
 ### Dimensions and Alignment
 
-- The complete Section Intro is center-aligned.
+- The complete Section Intro is left-aligned.
 
 ### Spacing
 
@@ -1641,7 +1631,7 @@ Contains, in document order:
 
 ### Component and Semantics
 
-- Uses the documented **Button** Component.
+- Uses the documented **Button** Component with its `conversion` variant.
 
 ### Spacing After
 
@@ -1667,4 +1657,4 @@ Contains, in document order:
 
 ## Responsive Behavior
 
-- The centered hierarchy of the Section Intro, Primary CTA, and Reassurance Row is preserved across Breakpoints.
+- The left-aligned hierarchy of the Section Intro, Primary CTA, and Reassurance Row is preserved across Breakpoints.

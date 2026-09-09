@@ -94,7 +94,9 @@ export function AreaHowItWorks() {
         </div>
 
         <div className={styles.cta}>
-          <Button href="/get-cash-offer">Get My Cash Offer</Button>
+          <Button href="/get-cash-offer" variant="conversion">
+            Get My Cash Offer
+          </Button>
         </div>
       </div>
     </section>

@@ -88,6 +88,16 @@ A generic Component for actions displayed as a button. It can use the appropriat
 - Width: content by default
 - Border/Shadow: none
 
+### Conversion Variant
+
+The `conversion` variant is used for the primary conversion CTA in the Area Hero, How It Works, and Final CTA.
+
+- Min-height: 64px
+- Horizontal padding: `XL` (`48px`)
+- Mobile width: 100% of the available content width
+- Tablet and Desktop width: 60% of the available content width, up to a maximum width of 360px
+- All other visual, semantic, interaction, and accessibility properties inherit from the default Button.
+
 ### States
 
 - Hover: background Brand Green Dark
@@ -99,7 +109,7 @@ A generic Component for actions displayed as a button. It can use the appropriat
 
 ### Configurable
 
-Label, icon, icon position, width and exceptional text-size overrides.
+Label, icon, icon position, width, variant and exceptional text-size overrides.
 
 The documented visual and interaction properties define the Button defaults. A consuming element or Section specification may explicitly override individual Button properties; all properties not explicitly overridden continue to inherit from the shared Button.
 

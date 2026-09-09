@@ -38,7 +38,7 @@ export function AreaHero({ city }: AreaHeroProps) {
             traditional sale.
           </p>
           <div className={styles.ctaGroup}>
-            <Button className={styles.heroCta} href="/get-cash-offer">
+            <Button href="/get-cash-offer" variant="conversion">
               Get My Cash Offer
             </Button>
             <p className={`${styles.microcopy} text-body-small`}>

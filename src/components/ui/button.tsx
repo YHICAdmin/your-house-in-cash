@@ -8,6 +8,7 @@ import styles from "./button.module.css";
 type SharedButtonProps = {
   children: ReactNode;
   className?: string;
+  variant?: "conversion" | "default";
 };
 
 type LinkButtonProps = SharedButtonProps &
@@ -22,11 +23,16 @@ type NativeButtonProps = SharedButtonProps &
 
 type ButtonProps = LinkButtonProps | NativeButtonProps;
 
-export function Button(props: ButtonProps) {
-  const buttonClassName = `${styles.button}${props.className ? ` ${props.className}` : ""}`;
+export function Button({
+  children,
+  className,
+  variant = "default",
+  ...props
+}: ButtonProps) {
+  const buttonClassName = `${styles.button}${variant === "conversion" ? ` ${styles.conversion}` : ""}${className ? ` ${className}` : ""}`;
 
   if (props.href !== undefined) {
-    const { children, href, ...linkProps } = props;
+    const { href, ...linkProps } = props;
 
     return (
       <a {...linkProps} className={buttonClassName} href={href}>
@@ -35,7 +41,7 @@ export function Button(props: ButtonProps) {
     );
   }
 
-  const { children, type = "button", ...buttonProps } = props;
+  const { type = "button", ...buttonProps } = props;
 
   return (
     <button {...buttonProps} className={buttonClassName} type={type}>

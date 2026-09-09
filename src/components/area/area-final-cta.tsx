@@ -28,7 +28,9 @@ export function AreaFinalCta({ areaName }: AreaFinalCtaProps) {
             </p>
           </div>
 
-          <Button href="/get-cash-offer">Get My Cash Offer</Button>
+          <Button href="/get-cash-offer" variant="conversion">
+            Get My Cash Offer
+          </Button>
           <p className={`${styles.reassurance} text-body-small`}>
             100% free. No obligation.
           </p>
