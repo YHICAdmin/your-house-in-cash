@@ -1655,6 +1655,10 @@ Contains, in document order:
 
 - Uses the global `Body Small` typography.
 
+### Dimensions and Alignment
+
+- Horizontally centered relative to the Primary CTA rather than the complete Final CTA composition.
+
 ## Responsive Behavior
 
 - The left-aligned hierarchy of the Section Intro, Primary CTA, and Reassurance Row is preserved across Breakpoints.

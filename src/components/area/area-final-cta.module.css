@@ -30,12 +30,19 @@
 }
 
 .reassurance {
+  width: 100%;
   margin-top: var(--spacing-xs);
+  text-align: center;
 }
 
 @media (min-width: 768px) {
   .composition {
     grid-column: 1 / span 4;
+  }
+
+  .reassurance {
+    width: 60%;
+    max-width: 360px;
   }
 }
 
