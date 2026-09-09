@@ -243,20 +243,16 @@ Provide clear, accessible navigation.
 
 Provide secondary navigation, company information, legal information, and contact details in a clear and unobtrusive way, while creating a structured conclusion to the page.
 
-## Structure
+## Layout
 
-The Footer is divided into several content areas:
+The Footer is divided into Company, Navigation, Legal, and Contact content areas.
 
-- **Company** — Logo and short company description.
-- **Navigation** — Primary navigation and company links.
-- **Legal**
-  - Privacy Policy
-  - Terms of Service
-- **Contact** — Contact details and location / service area.
+- The outer System Lines bound the Footer content, using the globally defined content padding.
+- On Desktop, Company occupies Grid Columns `1–3`, Navigation occupies Grid Columns `4–6`, Legal occupies Grid Columns `7–9`, and Contact occupies Grid Columns `10–12`.
+- Internal System Lines serve as alignment axes between content areas; each visual area does not need to be fully occupied.
+- On Desktop, the Footer Bottom Row spans Grid Columns `1–12` across all four visual areas.
 
-A separate bottom row contains the copyright notice and any additional secondary information.
-
-## Visual Direction
+## Visual Design
 
 - Clean, minimal, and spacious.
 - Maintain a clear but understated typographic hierarchy.
@@ -265,13 +261,9 @@ A separate bottom row contains the copyright notice and any additional secondary
 - Preserve generous whitespace.
 - Do not add elements solely to fill available space.
 
-## Behavior
+## Interaction
 
 No specific interactive behavior is currently defined beyond standard link behavior.
-
-## Technical Specifications
-
-No Footer-specific technical specifications are currently defined. Global typography, spacing, color, container, and component rules apply unless explicitly overridden.
 
 ## Responsive Behavior
 
@@ -279,9 +271,40 @@ The Footer should adapt its multi-column structure to smaller viewports while pr
 
 The exact Tablet and Mobile layout is not currently specified.
 
-## Line System
+## Technical Requirements
 
-- The outer System Lines bound the Footer content, using the globally defined content padding.
-- On Desktop, the four visual areas may be used as the basis for organizing **Company / Navigation / Legal / Contact**.
-- Internal System Lines serve as alignment axes between content areas; each visual area does not need to be fully occupied.
-- The bottom copyright row may span the full content width across all four visual areas.
+No Footer-specific technical specifications are currently defined. Global typography, spacing, color, container, and component rules apply unless explicitly overridden.
+
+## Company
+
+### Content
+
+- Logo.
+- Company description: **We buy houses as-is throughout Northeast Ohio and provide straightforward cash offers without repairs, showings, or agent fees.**
+
+## Navigation
+
+### Content
+
+- Contains the complete `Shared Navigation Links` inventory in its canonical order and with the canonical destinations defined under `Header → Navigation → Content`.
+
+## Legal
+
+### Content
+
+- `Privacy Policy` — `/privacy-policy`.
+- `Terms of Service` — `/terms-of-service`.
+
+## Contact
+
+### Content
+
+- Contact details.
+- Location / service area.
+
+## Footer Bottom Row
+
+### Content
+
+- Copyright notice.
+- Any additional secondary information.
