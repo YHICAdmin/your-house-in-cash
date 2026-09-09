@@ -1,4 +1,6 @@
+import { CalendarCheck, House } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { IconContainer } from "@/components/ui/icon-container";
 import { SectionLabel } from "@/components/ui/section-label";
 import styles from "./area-final-cta.module.css";
 
@@ -35,6 +37,29 @@ export function AreaFinalCta({ areaName }: AreaFinalCtaProps) {
             100% free. No obligation.
           </p>
         </div>
+
+        <ul className={styles.benefits}>
+          <li className={styles.benefit}>
+            <IconContainer icon={House} aria-hidden="true" />
+            <h3 className={`${styles.benefitHeading} text-heading-4`}>
+              Sell As-Is
+            </h3>
+            <p className={`${styles.benefitCopy} text-body`}>
+              Skip repairs, cleaning, and staging. We buy your house in its
+              current condition.
+            </p>
+          </li>
+          <li className={styles.benefit}>
+            <IconContainer icon={CalendarCheck} aria-hidden="true" />
+            <h3 className={`${styles.benefitHeading} text-heading-4`}>
+              Close on Your Timeline
+            </h3>
+            <p className={`${styles.benefitCopy} text-body`}>
+              Choose the closing date that works for you, whether you need to
+              move quickly or need more time.
+            </p>
+          </li>
+        </ul>
       </div>
     </section>
   );

@@ -1583,9 +1583,10 @@ At this stage, the user has already received the necessary information throughou
 ## Layout
 
 - The Section Intro, Primary CTA, and Reassurance Row form one left-aligned composition.
-- On Desktop, the complete composition occupies Grid Columns `1–6`.
-- On Tablet, the complete composition occupies Grid Columns `1–4`.
-- On Mobile, the complete composition occupies the full available Content Grid width.
+- On Desktop, the CTA composition occupies Grid Columns `1–6`; the Supporting Benefits occupy Grid Columns `7–12`, with each benefit occupying three columns.
+- On Tablet, the CTA composition occupies Grid Columns `1–4`; the Supporting Benefits occupy Grid Columns `5–8`, with each benefit occupying two columns.
+- On Desktop and Tablet, the CTA composition and Supporting Benefits form parallel left- and right-area content flows whose top edges align.
+- On Mobile, the CTA composition occupies the full available Content Grid width, followed by the Supporting Benefits in canonical document order.
 
 ## Section Intro
 
@@ -1658,6 +1659,55 @@ Contains, in document order:
 ### Dimensions and Alignment
 
 - Horizontally centered relative to the Primary CTA rather than the complete Final CTA composition.
+
+### Spacing After
+
+- On Mobile, `L` (`32px`) separates the Reassurance Row from the Supporting Benefits.
+
+## Supporting Benefits
+
+### Content
+
+Contains exactly two benefits in this canonical order:
+
+1. `House` icon; heading **Sell As-Is**; Supporting Copy: **Skip repairs, cleaning, and staging. We buy your house in its current condition.**
+2. `CalendarCheck` icon; heading **Close on Your Timeline**; Supporting Copy: **Choose the closing date that works for you, whether you need to move quickly or need more time.**
+
+The Supporting Benefits are shared across Area Pages and do not vary by location.
+
+### Component and Semantics
+
+- The benefits use one semantic unordered list with one list item per benefit.
+- Each icon uses the documented `Icon Container` Component at its Default size.
+- Each benefit heading uses `H3` semantics.
+- Each Supporting Copy uses paragraph semantics.
+
+### Visual Design
+
+- Each benefit heading uses the global `H4` typography.
+- Each Supporting Copy uses the global `Body` typography.
+- The benefits remain visually open without a Card, background, Border, Radius, or Shadow.
+- On Desktop and Tablet, each benefit is preceded by a `1px` global `Brand Green` vertical separator that begins at the top and uses a fixed `15px` height; the first separator sits between the CTA composition and the first benefit, and the second sits between the two benefits.
+
+### Dimensions and Alignment
+
+- The benefits are left-aligned.
+- On Desktop and Tablet, each icon, heading, and Supporting Copy form a vertical content flow in that order.
+
+### Spacing
+
+- `M` (`24px`) separates each `Icon Container` from its benefit heading across all Breakpoints.
+- `S` (`16px`) separates each benefit heading from its Supporting Copy across all Breakpoints.
+
+### Accessibility
+
+- The `House` and `CalendarCheck` icons are decorative because their adjacent visible headings communicate the same benefit meaning.
+- The separators are decorative.
+
+### Responsive Behavior
+
+- On Mobile, the two benefits form one full-width vertical flow in canonical order with an `L` (`32px`) gap.
+- The vertical separators are not displayed on Mobile.
 
 ## Responsive Behavior
 
