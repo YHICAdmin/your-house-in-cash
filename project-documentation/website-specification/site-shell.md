@@ -243,70 +243,193 @@ Provide clear, accessible navigation.
 
 Provide secondary navigation, company information, legal information, and contact details in a clear and unobtrusive way, while creating a structured conclusion to the page.
 
+## Component and Semantics
+
+- Uses native `footer` landmark semantics.
+- The shared Footer appears once on every page, after the page's main content, and is owned by the root Site Shell rather than by an individual Page or Section.
+
 ## Layout
 
 The Footer is divided into Company, Navigation, Legal, and Contact content areas.
 
 - The outer System Lines bound the Footer content, using the globally defined content padding.
-- On Desktop, Company occupies Grid Columns `1–3`, Navigation occupies Grid Columns `4–6`, Legal occupies Grid Columns `7–9`, and Contact occupies Grid Columns `10–12`.
-- Internal System Lines serve as alignment axes between content areas; each visual area does not need to be fully occupied.
-- On Desktop, the Footer Bottom Row spans Grid Columns `1–12` across all four visual areas.
+- Internal System Lines serve as alignment axes between content areas.
+
+### Desktop
+
+- Company occupies Grid Columns `1–3`, Navigation occupies Grid Columns `4–6`, Legal occupies Grid Columns `7–9`, and Contact occupies Grid Columns `10–12`.
+- Company, Navigation, Legal, and Contact are top-aligned within one shared Grid row.
+- The Footer Bottom Row spans Grid Columns `1–12` across all four visual areas.
+
+### Tablet
+
+- Company occupies Grid Columns `1–4` and Navigation occupies Grid Columns `5–8` in the first row.
+- Legal occupies Grid Columns `1–4` and Contact occupies Grid Columns `5–8` in the second row.
+- The two content areas within each row are top-aligned.
+- The Footer Bottom Row spans Grid Columns `1–8`.
+
+### Mobile
+
+- Company, Navigation, Legal, Contact, and the Footer Bottom Row each occupy Grid Columns `1–4` in one full-width flow and preserve that canonical document order.
 
 ## Visual Design
 
-- Clean, minimal, and spacious.
-- Maintain a clear but understated typographic hierarchy.
-- Navigation links and contact information should not compete visually with the Final CTA above.
-- Use subtle separators only when necessary.
-- Preserve generous whitespace.
-- Do not add elements solely to fill available space.
+- Uses the global `Background` color (`#FFFFFF`).
+- Uses no top Border or Shadow; the transition from the Final CTA's `Background Soft` surface to the Footer's white Background provides the visual separation.
 
-## Interaction
+## Spacing
 
-No specific interactive behavior is currently defined beyond standard link behavior.
-
-## Responsive Behavior
-
-The Footer should adapt its multi-column structure to smaller viewports while preserving clear content grouping and hierarchy.
-
-The exact Tablet and Mobile layout is not currently specified.
-
-## Technical Requirements
-
-No Footer-specific technical specifications are currently defined. Global typography, spacing, color, container, and component rules apply unless explicitly overridden.
+- On Tablet, `XL` (`48px`) separates the first content-area row from the second content-area row.
+- On Mobile, `XL` (`48px`) separates adjacent Company, Navigation, Legal, and Contact content areas.
+- Across all Breakpoints, `XL` (`48px`) separates the complete upper content-area composition from the Footer Bottom Row Divider.
 
 ## Company
 
 ### Content
 
-- Logo.
+- Displays the company Logo using `/brand/Logo.svg`.
+- The Logo remains unchanged across Area Pages.
 - Company description: **We buy houses as-is throughout Northeast Ohio and provide straightforward cash offers without repairs, showings, or agent fees.**
+
+### Component and Semantics
+
+- The complete Logo uses link semantics and navigates to the canonical homepage at `/`.
+- The Company description uses paragraph semantics.
+
+### Visual Design
+
+- The Company description uses the global `Body` typography and `Text Secondary` color.
+
+### Dimensions and Alignment
+
+- The Logo preserves its original Aspect Ratio without cropping or distortion.
+- The Logo height is `56px` on Desktop, `48px` on Tablet, and `44px` on Mobile; its width is derived from its original Aspect Ratio.
+- The Logo and Company description form one left-aligned vertical content flow in that order.
+
+### Spacing
+
+- `M` (`24px`) separates the Logo from the Company description across all Breakpoints.
+
+### Accessibility
+
+- The Logo link's accessible name is `Your House in Cash home`.
 
 ## Navigation
 
 ### Content
 
+- Heading: **Explore**.
 - Contains the complete `Shared Navigation Links` inventory in its canonical order and with the canonical destinations defined under `Header → Navigation → Content`.
+
+### Component and Semantics
+
+- The Navigation area uses navigation landmark semantics.
+- The heading uses `H2` semantics.
+- The Shared Navigation Links use one semantic unordered list with one list item per link.
+- Each link uses the documented `Text Link` Component with link semantics.
+
+### Visual Design
+
+- The heading uses the global `H4` typography.
+- The link list retains its semantic list structure without visible markers or default list margin or padding.
+
+### Dimensions and Alignment
+
+- The links form one left-aligned vertical content flow in canonical order.
+
+### Spacing
+
+- `M` (`24px`) separates the heading from the link list across all Breakpoints.
+- `S` (`16px`) separates adjacent links across all Breakpoints.
+
+### Accessibility
+
+- The visible **Explore** heading provides the Navigation landmark's accessible name.
 
 ## Legal
 
 ### Content
 
+- Heading: **Legal**.
 - `Privacy Policy` — `/privacy-policy`.
 - `Terms of Service` — `/terms-of-service`.
+
+### Component and Semantics
+
+- The heading uses `H2` semantics.
+- The Legal links use one semantic unordered list with one list item per link.
+- Each link uses the documented `Text Link` Component with link semantics.
+
+### Visual Design
+
+- The heading uses the global `H4` typography.
+- The Legal link list retains its semantic list structure without visible markers or default list margin or padding.
+
+### Dimensions and Alignment
+
+- The Legal links form one left-aligned vertical content flow in canonical order.
+
+### Spacing
+
+- `M` (`24px`) separates the heading from the Legal link list across all Breakpoints.
+- `S` (`16px`) separates the two Legal links across all Breakpoints.
 
 ## Contact
 
 ### Content
 
+- Heading: **Contact**.
 - Label: **Call Us**.
 - Phone number: `216-111-1111`.
 - The phone number uses link semantics and navigates to `tel:2161111111`.
 - Service-area text: **Serving Northeast Ohio**.
 
+### Component and Semantics
+
+- The heading uses `H2` semantics.
+- The phone number uses the documented `Text Link` Component.
+- The service-area text uses paragraph semantics.
+
+### Visual Design
+
+- The heading uses the global `H4` typography.
+- The **Call Us** label uses the global `Label` typography.
+- The service-area text uses the global `Body Small` typography and `Text Secondary` color.
+
+### Dimensions and Alignment
+
+- The heading, **Call Us** label, phone number, and service-area text form one left-aligned vertical content flow in that order.
+
+### Spacing
+
+- `M` (`24px`) separates the heading from the **Call Us** label across all Breakpoints.
+- `XS` (`8px`) separates the **Call Us** label from the phone number across all Breakpoints.
+- `S` (`16px`) separates the phone number from the service-area text across all Breakpoints.
+
 ## Footer Bottom Row
 
 ### Content
 
-- Copyright notice.
-- Any additional secondary information.
+- Copyright notice: **© {Current Year} Your House in Cash. All rights reserved.**
+- `{Current Year}` is generated dynamically from the current calendar year.
+
+### Component and Semantics
+
+- The copyright notice uses paragraph semantics.
+
+### Visual Design
+
+- The copyright notice uses the global `Body Small` typography and `Text Muted` color.
+- A full-width Divider above the copyright notice uses the global default `1px` solid Border treatment and `Border` color (`#E4E7E4`).
+
+### Dimensions and Alignment
+
+- The copyright notice is left-aligned.
+
+### Spacing
+
+- `M` (`24px`) separates the Divider from the copyright notice across all Breakpoints.
+
+### Accessibility
+
+- The Divider is decorative and does not create a semantic boundary.
