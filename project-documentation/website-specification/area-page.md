@@ -6,26 +6,6 @@ The primary goal is to generate leads from motivated home sellers.
 
 Secondary goals are to build trust, demonstrate a local presence, and support organic and local search visibility.
 
-**Page Structure**
-
-1. Header
-2. Hero
-3. Situations
-4. Reviews
-5. How It Works
-6. Cleveland / Local Section
-7. FAQ
-8. Final CTA
-9. Footer
-
-**Visual Direction**
-
-Clean, modern, and spacious, with strong typography and clear visual hierarchy. Use generous whitespace to create the feel of a trustworthy local business rather than a generic cash-buyer website.
-
-Visual elements and gradients may be used to create character and atmosphere, but should not compete with the content. Media should support the message while remaining secondary in the visual hierarchy.
-
-Sections may use different compositions as long as a cohesive visual language is maintained throughout the website.
-
 # Hero
 
 ## Purpose
