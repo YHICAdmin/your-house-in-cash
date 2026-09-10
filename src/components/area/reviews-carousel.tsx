@@ -92,6 +92,53 @@ type ReviewsCarouselProps = {
   headingId: string;
 };
 
+type ReviewTextProps = {
+  text: string;
+};
+
+function ReviewText({ text }: ReviewTextProps) {
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+
+  useLayoutEffect(() => {
+    const element = textRef.current;
+
+    if (!element) {
+      return;
+    }
+
+    let isActive = true;
+
+    const updateOverflow = () => {
+      if (isActive) {
+        setIsOverflowing(element.scrollHeight > element.clientHeight + 1);
+      }
+    };
+
+    updateOverflow();
+
+    const observer = new ResizeObserver(updateOverflow);
+    observer.observe(element);
+    document.fonts.ready.then(updateOverflow);
+
+    return () => {
+      isActive = false;
+      observer.disconnect();
+    };
+  }, [text]);
+
+  return (
+    <p
+      ref={textRef}
+      className={`${styles.reviewText} text-body ${
+        isOverflowing ? styles.reviewTextOverflowing : ""
+      }`}
+    >
+      {text}
+    </p>
+  );
+}
+
 function getVisibleCount() {
   if (window.matchMedia("(min-width: 1200px)").matches) {
     return 4;
@@ -193,9 +240,7 @@ export function ReviewsCarousel({ headingId }: ReviewsCarouselProps) {
                   />
                 </div>
                 <blockquote className={styles.reviewQuote}>
-                  <p className={`${styles.reviewText} text-body`}>
-                    {review.text}
-                  </p>
+                  <ReviewText text={review.text} />
                 </blockquote>
                 <figcaption className={styles.cardBottomRow}>
                   <span className={styles.attribution}>

@@ -142,11 +142,24 @@
 }
 
 .reviewText {
-  display: -webkit-box;
+  height: 6lh;
   overflow: hidden;
   color: var(--color-text-primary);
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+}
+
+.reviewTextOverflowing {
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 calc(100% - 1lh),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 calc(100% - 1lh),
+    transparent 100%
+  );
 }
 
 .cardBottomRow {

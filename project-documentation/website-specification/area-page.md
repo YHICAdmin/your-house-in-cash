@@ -811,7 +811,10 @@ Contains, in document order:
 * Each Review Card aligns with the canonical Grid content edges within its System Line division and inherits the applicable global Grid and System Line geometry at each Breakpoint.
 * All Review Cards use a uniform fixed height of `320px` across all Breakpoints.
 * The top row spans the available card width, with the five-star rating aligned left and the `Quote` icon aligned right; both are vertically center-aligned.
-* Review Text displays a maximum of four lines across all Breakpoints and truncates overflow with an ellipsis (`…`).
+* Review Text occupies a uniform six-line text region across all Breakpoints.
+* When the rendered Review Text exceeds the six-line region, the final visible line fades over `1lh` into the Card background and the remaining overflow stays hidden.
+* When the complete Review Text fits within the six-line region, no fade is applied.
+* Review Text displays no truncation ellipsis and provides no `Read more` control.
 * The bottom row spans the available card width and remains positioned toward the bottom of the Review Card consistently across cards.
 * Within the bottom row, Customer Attribution aligns left and Review Source aligns right; both groups are vertically center-aligned.
 * Customer portraits use `48px × 48px` dimensions, a `1:1` Aspect Ratio, and the global `Pill` Radius across all Breakpoints.
