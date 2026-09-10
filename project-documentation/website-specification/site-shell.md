@@ -243,10 +243,6 @@ Provide clear, accessible navigation.
 
 Provide secondary navigation, company information, legal information, and contact details in a clear and unobtrusive way, while creating a structured conclusion to the page.
 
-## Component and Semantics
-
-- Uses native `footer` landmark semantics.
-
 ## Layout
 
 The Footer is divided into Company, Navigation, Legal, and Contact content areas.
@@ -271,17 +267,21 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 
 - Company, Navigation, Legal, Contact, and the Footer Bottom Row each occupy Grid Columns `1–4` in one full-width flow and preserve that canonical document order.
 
-## Visual Design
+### Visual Design
 
 - Uses the global `Background` color (`#FFFFFF`).
 - Uses no top Border or Shadow; the transition from the Final CTA's `Background Soft` surface to the Footer's white Background provides the visual separation.
 - All Footer text links, including Navigation, Legal, and the phone number, use font weight `400` as a Footer-specific override of the `Text Link` Component.
 
-## Spacing
+### Spacing
 
 - On Tablet, `XL` (`48px`) separates the first content-area row from the second content-area row.
 - On Mobile, `XL` (`48px`) separates adjacent Company, Navigation, Legal, and Contact content areas.
 - Across all Breakpoints, `XL` (`48px`) separates the complete upper content-area composition from the Footer Bottom Row Divider.
+
+## Component and Semantics
+
+- Uses native `footer` landmark semantics.
 
 ## Company
 
@@ -521,21 +521,28 @@ Provide brand identification, a link to the homepage, and direct phone contact w
 
 Provide access to essential legal information while keeping attention on the page's primary task.
 
+## Layout
+
+* Contains only the Legal Links.
+
+## Component and Semantics
+
+* Uses native `footer` semantics.
+
 ## Legal Links
 
 ### Content
 
 * `Privacy Policy` — `/privacy-policy`.
 * `Terms of Service` — `/terms-of-service`.
-* Uses only these necessary legal links; the full marketing Footer is not displayed.
 
 ### Component and Semantics
 
-* The Minimal Footer uses native `footer` semantics. Each legal link uses the documented `Text Link` Component.
+* Each legal link uses the documented `Text Link` Component.
 
 ### Dimensions and Alignment
 
-* Appears below the page's main content. Links form a compact row that can wrap on narrow screens.
+* Links form a compact row that can wrap on narrow screens.
 
 ### Spacing
 

@@ -933,6 +933,20 @@ Contains, in document order:
 
 Present the home-selling process as a simple, clear three-step experience and guide the user toward requesting a cash offer.
 
+## Layout
+
+The Process Steps and Step Content areas together form the Interactive Process Composition.
+
+* The composition contains two coordinated areas: a Process Steps area on the left and a Step Content area on the right.
+* On Desktop and Tablet, the Process Steps area forms one top-to-bottom flow and the Step Content area changes in coordination with the active Process Step.
+* On Desktop, the Process Steps area occupies Grid Columns `1–5`, Grid Column `6` remains intentionally empty, and the Step Content area occupies Grid Columns `7–12`.
+* On Tablet, the Process Steps area occupies Grid Columns `1–4` and the Step Content area occupies Grid Columns `5–8`.
+* On Mobile, the composition forms one full-width flow containing each Step immediately followed by its corresponding Step Content, in canonical Step order.
+
+### Spacing
+
+* On Mobile, `S` (`16px`) separates each Step from its corresponding Step Content, and `L` (`32px`) separates one complete Step-and-content pair from the next.
+
 ## Section Intro
 
 ### Content
@@ -968,23 +982,9 @@ Contains, in document order:
 * `XL` (`48px`) on Desktop and Tablet.
 * `L` (`32px`) on Mobile.
 
-## Interactive Process Composition
+## Process Steps
 
-### Layout
-
-* The composition contains two coordinated areas: a Process Steps area on the left and a Step Content area on the right.
-* On Desktop and Tablet, the Process Steps area forms one top-to-bottom flow and the Step Content area changes in coordination with the active Process Step.
-* On Desktop, the Process Steps area occupies Grid Columns `1–5`, Grid Column `6` remains intentionally empty, and the Step Content area occupies Grid Columns `7–12`.
-* On Tablet, the Process Steps area occupies Grid Columns `1–4` and the Step Content area occupies Grid Columns `5–8`.
-* On Mobile, the composition forms one full-width flow containing each Step immediately followed by its corresponding Step Content, in canonical Step order.
-
-### Spacing
-
-* On Mobile, `S` (`16px`) separates each Step from its corresponding Step Content, and `L` (`32px`) separates one complete Step-and-content pair from the next.
-
-### Process Steps
-
-#### Content
+### Content
 
 The Process Steps area contains exactly three Steps in this order:
 
@@ -992,14 +992,14 @@ The Process Steps area contains exactly three Steps in this order:
 2. Step number `02`; title `Get Your Cash Offer`; Body Copy: `We’ll review the details and present a fair cash offer with no fees or obligation.`
 3. Step number `03`; title `Choose Your Closing Date`; Body Copy: `Choose the closing date that works for you, and we’ll handle the remaining details.`
 
-#### Component and Semantics
+### Component and Semantics
 
 * The Step collection uses ordered-list semantics, and each Step uses list-item semantics.
 * On Desktop and Tablet, each complete Step uses native button semantics and activates its corresponding Step Content.
 * The Step Title uses `H3` semantics.
 * Each Step number is plain text within a local circular treatment and does not use the `Icon Container` Component or icon semantics.
 
-#### Visual Design
+### Visual Design
 
 * The Steps use an open presentation without a Card background, Border, Radius, or Shadow.
 * On Desktop and Tablet, one Step is visually active at a time.
@@ -1010,7 +1010,7 @@ The Process Steps area contains exactly three Steps in this order:
 * The Step Title uses the local `16px / 600 / 1.5` typography treatment with the default letter spacing and Text Primary color across all Breakpoints.
 * The Body Copy uses the global `Body` typography and Text Secondary color.
 
-#### Dimensions and Alignment
+### Dimensions and Alignment
 
 * All Step content is left-aligned.
 * On Desktop and Tablet, each Step control spans the complete available width of the Process Steps area.
@@ -1022,13 +1022,13 @@ The Process Steps area contains exactly three Steps in this order:
 * The indicator does not occupy layout space, so changing the active Step does not shift the Step content.
 * On Mobile, the indicator is not rendered and does not reserve layout space.
 
-#### Spacing
+### Spacing
 
 * `S` (`16px`) separates the Step number from the Step text flow.
 * `S` (`16px`) separates the Step Title from the Body Copy.
 * On Desktop and Tablet, `L` (`32px`) separates adjacent Steps.
 
-#### Interaction
+### Interaction
 
 * The following interaction model applies on Desktop and Tablet.
 * Each Step control uses `cursor: pointer`.
@@ -1046,7 +1046,7 @@ The Process Steps area contains exactly three Steps in this order:
 * When `prefers-reduced-motion: reduce` applies, automatic advancement is disabled, Step `01` remains active until the user selects another Step, and manual illustration changes occur immediately without animation.
 * On Mobile, all three Steps and their corresponding Step Content are displayed simultaneously and the composition has no automatic advancement, active Step, or Step-selection interaction.
 
-#### Accessibility
+### Accessibility
 
 * The visible Step number is decorative for assistive technologies because the ordered-list semantics communicate the same sequence.
 * On Desktop and Tablet, the active Step is exposed programmatically.
@@ -1055,9 +1055,9 @@ The Process Steps area contains exactly three Steps in this order:
 * Step changes do not trigger live announcements.
 * On Mobile, each Step and its corresponding Step Content form one non-interactive semantic group within the ordered list.
 
-### Step Content
+## Step Content
 
-#### Content
+### Content
 
 * On Desktop and Tablet, the area displays content corresponding to the active Process Step.
 * Step `01` uses `/images/how-it-works/property-form.svg`. The illustrated form contains:
@@ -1080,11 +1080,11 @@ The Process Steps area contains exactly three Steps in this order:
   5. Visual action label: `Confirm date`.
 * The illustration content is fixed and reused across Area Pages; it does not vary by Area.
 
-#### Component and Semantics
+### Component and Semantics
 
 * Each Step Content is a static SVG image rather than an interactive form, offer interface, or calendar.
 
-#### Visual Design
+### Visual Design
 
 * The three illustrations use one cohesive, Stripe-inspired visual language without reproducing Stripe branding, logos, or proprietary interface content.
 * Each illustration uses a global Surface white canvas with `2XL` (`64px`) internal Padding on all sides.
@@ -1095,7 +1095,7 @@ The Process Steps area contains exactly three Steps in this order:
 * The interface treatment remains visually lightweight and does not resemble a photographic scene.
 * The Step Content does not add an outer Border, Shadow, or Radius; the white canvas, internal whitespace, rounded interface surfaces, and subtle depth are rendered within each SVG.
 
-#### Dimensions and Alignment
+### Dimensions and Alignment
 
 * On Desktop and Tablet, the Step Content fills its allocated Grid area.
 * On Mobile, each Step Content instance fills the complete available Content Grid width.
@@ -1105,12 +1105,12 @@ The Process Steps area contains exactly three Steps in this order:
 * On Desktop and Tablet, the top edge of the Step Content aligns with the top edge of the Process Steps area.
 * The Step Content remains top-aligned and does not stretch or vertically center when the Process Steps area is taller.
 
-#### Accessibility
+### Accessibility
 
 * The illustrations are decorative because the corresponding Process Step provides the complete meaningful content.
 * All meaningful Step information remains in the adjacent Process Step; text or controls depicted within an illustration are visual details and do not introduce additional product information or interaction.
 
-#### Technical Requirements
+### Technical Requirements
 
 * The three illustrations are repository-owned SVG assets loaded as images.
 * Each SVG preserves its approved `540 × 490` coordinate system.

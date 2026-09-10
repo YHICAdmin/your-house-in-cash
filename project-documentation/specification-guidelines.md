@@ -190,7 +190,7 @@ This rule applies to future specification work. It does not authorize retrospect
 
 ### Section Structure and Ownership
 
-Every Section specification uses three required subsections in this order: `Purpose`, `Layout`, and `Elements`. Shared Header and Footer specifications follow the same structure, describing their reusable role.
+Every Section specification begins with `Purpose`, followed by `Layout`, then the named element subsections in their canonical order. Shared Header and Footer specifications follow the same structure, describing their reusable role. `Elements` refers to this sequence of element subsections, not to a literal heading or an additional nesting level.
 
 #### Purpose
 
@@ -210,11 +210,13 @@ Document only locally required decisions under the global inheritance rule. Do n
 
 #### Elements
 
-Contains the specifications of the Section's primary elements as named subsections, in their canonical element order. Each element owns its content and its individual design, placement, spacing, behavior, and other applicable requirements according to `Element Specification Structure and Ownership` below. Shared composition requirements remain in `Layout` rather than being repeated in the participating elements.
+Write each primary element as a named subsection directly under the Section, at the same heading level as `Purpose` and `Layout`. Do not add an `Elements` heading. For example, a Header may contain `Purpose`, `Layout`, `Logo`, `Navigation`, `Phone Contact`, and `Header CTA` as sibling subsections, in that order.
+
+Each element owns its content and its individual design, placement, spacing, behavior, and other applicable requirements according to `Element Specification Structure and Ownership` below. Shared composition requirements remain in `Layout` rather than being repeated in the participating elements.
 
 #### Additional Section Subsections
 
-Additional Section-level subsections require explicit user approval before they are added. If a necessary Section-wide requirement cannot be clearly owned by `Purpose`, `Layout`, or an element, propose a precisely named additional subsection and explain why the standard structure is insufficient. Add it only after approval, and document the requirement once.
+Section-level subsections other than `Purpose`, `Layout`, and the named elements require explicit user approval before they are added. If a necessary Section-wide requirement cannot be clearly owned by `Purpose`, `Layout`, or an element, propose a precisely named additional subsection and explain why the standard structure is insufficient. Add it only after approval, and document the requirement once.
 
 ### Element Specification Structure and Ownership
 
