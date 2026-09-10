@@ -246,7 +246,6 @@ Provide secondary navigation, company information, legal information, and contac
 ## Component and Semantics
 
 - Uses native `footer` landmark semantics.
-- The shared Footer appears once on every page, after the page's main content, and is owned by the root Site Shell rather than by an individual Page or Section.
 
 ## Layout
 
@@ -453,3 +452,67 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 
 - The Divider is decorative and does not create a semantic boundary.
 - Each social image uses its platform name as alternative text, providing the link's accessible name. Links use the global keyboard focus-visible treatment.
+
+# Conversion Header
+
+## Logo
+
+### Content
+
+* Uses the company Logo at `/brand/Logo.svg`.
+
+### Component and Semantics
+
+* The complete Logo links to the canonical homepage at `/`.
+
+### Dimensions and Alignment
+
+* Positioned on the left and preserves its original Aspect Ratio.
+* Reuses the approved Header Logo heights: Desktop `56px`, Tablet `48px`, Mobile `44px`.
+
+### Accessibility
+
+* The Logo link's accessible name is `Your House in Cash home`.
+
+## Phone Contact
+
+### Content
+
+* Uses the phone number and `tel:` destination defined in [Site Shell → Phone Contact](#phone-contact).
+* A short supporting message accompanies the number. Direction: `Talk to a real person`; final wording is TBD.
+
+### Component and Semantics
+
+* The phone number uses the documented `Text Link` Component with telephone link semantics.
+
+### Dimensions and Alignment
+
+* Positioned on the right, opposite the Logo.
+* The Conversion Header contains no primary navigation, menu control, or additional CTA.
+
+### Responsive Behavior
+
+* Retains the Logo and phone contact at all Breakpoints. The supporting message may wrap within the contact group on narrow screens.
+* Header height, sticky behavior, separation treatment, and exact internal spacing are TBD; the full marketing Header's behavior is not automatically assigned to this reduced variant.
+
+# Conversion Footer
+
+## Legal Links
+
+### Content
+
+* `Privacy Policy` — `/privacy-policy`.
+* `Terms of Service` — `/terms-of-service`.
+* Uses only these necessary legal links; the full marketing Footer is not displayed.
+
+### Component and Semantics
+
+* The Conversion Footer uses native `footer` semantics. Each legal link uses the documented `Text Link` Component.
+
+### Dimensions and Alignment
+
+* Appears below the page's main content. Links form a compact row that can wrap on narrow screens.
+
+### Spacing
+
+* `S` (`16px`) separates the legal links; wrapped rows use an `XS` (`8px`) gap.
