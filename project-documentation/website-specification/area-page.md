@@ -361,7 +361,7 @@ Contains, in document order:
 * Each point heading uses local `16px / 700 / 1.25` typography with the global headline letter-spacing treatment.
 * Each supporting paragraph uses the global `Body` typography.
 * The points remain visually open and transparent, without a Card, background, Border, Radius, or Shadow.
-* Each point heading is accompanied by a decorative `1px` wide, `15px` high vertical separator in global `Brand Green`; the separator sits on the left System Line and begins at the heading's top edge.
+* Each point heading is accompanied by a decorative `1px` wide vertical separator in global `Brand Green`; the separator sits on the left System Line, begins at the heading's top edge, and matches the heading's `20px` line-box height.
 
 ### Dimensions and Alignment
 
@@ -1136,17 +1136,18 @@ The Section:
 
 ## Layout
 
-On Desktop and Tablet, the left-area elements form one top-to-bottom content flow and the right-area elements form a separate top-to-bottom content flow; the two flows appear in parallel within their allocated Grid columns.
+On Desktop and Tablet, the Section Intro spans the complete available Content Grid width above the left and right areas. Beneath it, the left-area elements form one top-to-bottom content flow and the right-area elements form a separate top-to-bottom content flow; the two flows begin from the same baseline and appear in parallel within their allocated Grid columns.
 
 ### Desktop
 
-* The Section Intro and Local Map occupy Grid Columns `1–5`.
-* Local Statistics occupies Grid Columns `1–6`.
-* Grid Column `6` remains intentionally empty alongside the Section Intro and Local Map as composition whitespace between the upper portions of the two content flows.
+* The Section Intro occupies Grid Columns `1–12`.
+* The left area occupies Grid Columns `1–5`.
+* Grid Column `6` remains intentionally empty as composition whitespace between the two content flows.
 * The right area occupies Grid Columns `7–12`.
 
 ### Tablet
 
+* The Section Intro occupies Grid Columns `1–8`.
 * The left area occupies Grid Columns `1–4`.
 * The right area occupies Grid Columns `5–8`.
 
@@ -1186,7 +1187,7 @@ For the current Cleveland Area Page:
 ### Dimensions and Alignment
 
 * All Section Intro content is left-aligned.
-* On Desktop and Tablet, the Section Intro occupies the left area.
+* The Section Intro occupies the complete available Content Grid width across all Breakpoints.
 
 ### Spacing
 
@@ -1317,7 +1318,7 @@ For the current Cleveland Area Page:
 
 ### Dimensions and Alignment
 
-* On Desktop, the complete composition occupies Grid Columns `1–6`; each of its two equal-width Card columns spans three Grid columns.
+* On Desktop, the complete composition remains within the left area across Grid Columns `1–5`.
 * On Tablet, the complete composition remains within the left area across Grid Columns `1–4`.
 * On Mobile, the complete composition occupies the complete available Content Grid width.
 * Across all Breakpoints, the composition uses two equal-width columns.
@@ -1480,32 +1481,26 @@ The headline, content-group headings, and Supporting Copy are shared across Area
 * The local-market headline uses the global `H3` typography.
 * Each content-group heading uses a local `16px` font size, `600` weight, and `1.25` line height while retaining the global `H4` letter spacing.
 * Each Supporting Copy uses the global `Body` typography.
-* On Desktop and Tablet, a `1px` global `Brand Green` vertical separator begins at the top between the two content groups and uses a fixed `15px` height.
-* On Desktop, the global dashed System Line treatment continues through the complete height of the surface between the two content columns. The short Brand Green separator overlays the top of that line.
+* On Desktop, the global dashed System Line treatment continues through the complete height of the surface at its center.
 
 ### Dimensions and Alignment
 
 * On Desktop and Tablet, occupies the right area.
 * All content is left-aligned.
 * The complete composition uses `L` (`32px`) internal padding on Desktop and Tablet and `M` (`24px`) on Mobile.
-* On Desktop and Tablet, the two content groups form two equal-width columns.
-* On Desktop, the separator and continued System Line align with the System Line between Grid Columns `9` and `10`; on Tablet, the separator remains centered between the two content columns.
+* Across all Breakpoints, the two content groups form one vertical flow in canonical order.
+* On Desktop, the continued System Line aligns with the System Line between Grid Columns `9` and `10`.
 
 ### Spacing
 
 * `M` (`24px`) separates the `Icon Container` from the local-market headline across all Breakpoints.
 * `M` (`24px`) separates the local-market headline from the content groups across all Breakpoints.
 * `S` (`16px`) separates each content-group heading from its Supporting Copy across all Breakpoints.
-* On Desktop and Tablet, an `M` (`24px`) horizontal gap separates the two content groups.
-* On Mobile, an `L` (`32px`) vertical gap separates the two content groups.
-
-### Responsive Behavior
-
-* On Mobile, the two content groups form one vertical flow and the separator is not displayed.
+* `L` (`32px`) separates the two content groups across all Breakpoints.
 
 ### Accessibility
 
-* The `House` icon, dot field, and separator are decorative because they add no information beyond the visible local-market content.
+* The `House` icon and dot field are decorative because they add no information beyond the visible local-market content.
 
 # FAQ
 
