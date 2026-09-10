@@ -290,7 +290,7 @@ Provide entry points to dedicated Situation Pages for each documented situation.
 
 The Section Intro appears above the Section's main content composition.
 
-On Desktop and Tablet, the main content composition uses two equal-width areas that form independent top-to-bottom flows:
+On Desktop and Tablet, the main content composition uses two allocated areas that form independent top-to-bottom flows:
 
 * On Desktop, the left area occupies Grid Columns `1–5`, Grid Column `6` remains intentionally empty, and the right area occupies Grid Columns `7–12`.
 * On Tablet, the left area occupies Grid Columns `1–4`, and the right area occupies Grid Columns `5–8`.
@@ -418,6 +418,8 @@ Contains, in document order:
 
 * Across all Breakpoints, the Situation Selector remains visually open and transparent, without a surrounding Card, background, Border, Radius, or Shadow.
 * A subtle right-edge fade using the owning Section's background color overlays the final `24px` (`M`) of the carousel viewport whenever additional options remain beyond the visible area.
+* The fade uses the established `150ms ease` opacity transition.
+* The carousel does not display a persistent scrollbar.
 * Each option uses the global `Body` typography and `Text Primary` color.
 * The default state does not use a background, Border, Divider, Radius, or Shadow.
 * Across all Breakpoints, the selected option uses Brand Green Dark text at `600` font weight.
@@ -458,7 +460,7 @@ Contains, in document order:
 * The selected state is communicated to assistive technologies.
 * Selected Situation Content updates are announced politely without interrupting other assistive-technology output.
 * Update announcement template: `[Situation] details are now available.`
-* Keyboard focus remains visible when navigating the Mobile strip.
+* Keyboard focus remains visible when navigating the carousel across all Breakpoints.
 
 ### Responsive Behavior
 
@@ -918,6 +920,7 @@ Contains, in document order:
 
 * The Section Label uses the shared `Section Label` Component.
 * The Primary Headline uses `H2` semantics.
+* The Supporting Copy uses paragraph semantics.
 
 ### Visual Design
 
@@ -978,6 +981,7 @@ The Process Steps area contains exactly three Steps in this order:
 * The active Step number uses Brand Green Dark text on a Brand Green Light circular background. A Brand Green vertical indicator appears beside the active Step content.
 * Inactive Step numbers use Text Secondary on a Background Neutral circular background.
 * On Mobile, all Step numbers use the inactive neutral treatment, and the Steps do not use active or inactive visual states.
+* Each Step number uses the global `H4` typography.
 * The Step Title uses the local `14px / 600 / 1.5` typography treatment with the default letter spacing and Text Primary color across all Breakpoints.
 * The Body Copy uses the global `Body Small` typography and Text Secondary color.
 
@@ -1063,7 +1067,7 @@ The Process Steps area contains exactly three Steps in this order:
 * The three illustrations use one cohesive, Stripe-inspired visual language without reproducing Stripe branding, logos, or proprietary interface content.
 * Each illustration uses a global Surface white canvas with `2XL` (`64px`) internal Padding on all sides.
 * One primary illustrated interface surface is centered within each canvas and remains within its bounds.
-* The primary illustrated interface surface uses global Surface, the global Medium Radius (`12px`), and the global Subtle Shadow.
+* The primary illustrated interface surface uses global Surface, the global Medium Radius (`12px`), and a local SVG drop shadow with `dx="0"`, `dy="16"`, `stdDeviation="14"`, `#101114` color, and `10%` opacity.
 * Illustrated fields and internal regions use the global `1px` Border and global Small Radius (`8px`).
 * Illustrated primary text uses Text Primary, supporting text uses Text Secondary, and actions and selected states use Brand Green with Brand Green Light where a supporting accent surface is required.
 * The interface treatment remains visually lightweight and does not resemble a photographic scene.

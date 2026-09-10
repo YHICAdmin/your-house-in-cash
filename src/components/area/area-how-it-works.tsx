@@ -53,7 +53,9 @@ function ProcessStep({
       </span>
       <span className={styles.stepTextFlow}>
         <span className={styles.activeIndicator} aria-hidden="true" />
-        <span className={styles.stepTitle}>{step.title}</span>
+        <span className={styles.stepTitle} role="heading" aria-level={3}>
+          {step.title}
+        </span>
         <span className={styles.stepBody + " text-body-small"}>
           {step.body}
         </span>
