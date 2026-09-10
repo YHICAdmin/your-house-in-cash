@@ -84,116 +84,112 @@ export function AreaLocal({ area }: AreaLocalProps) {
           </p>
         </div>
 
-        <div className={styles.leftFlow}>
-          <div className={styles.map}>
-            <div className={styles.mapFrame}>
-              <LocalMap
-                areaName={area.city}
-                embedUrl={area.googleMapsEmbedUrl}
-              />
-            </div>
-            <p className={`${styles.mapNote} text-body-small`}>
-              <Info aria-hidden="true" size={16} />
-              <span>
-                We buy houses throughout {area.city} and nearby cities.
-              </span>
-            </p>
+        <div className={styles.map}>
+          <div className={styles.mapFrame}>
+            <LocalMap
+              areaName={area.city}
+              embedUrl={area.googleMapsEmbedUrl}
+            />
           </div>
+          <p className={`${styles.mapNote} text-body-small`}>
+            <Info aria-hidden="true" size={16} />
+            <span>
+              We buy houses throughout {area.city} and nearby cities.
+            </span>
+          </p>
+        </div>
 
-          <div className={styles.statistics}>
-            <h3 className={`${styles.statisticsHeading} text-heading-3`}>
-              {area.city} at a Glance
-            </h3>
+        <div className={styles.nearbyAreas}>
+          <h3 className={`${styles.nearbyHeading} text-heading-3`}>
+            CITIES WE KNOW.
+            <br />
+            MARKET WE BUY IN.
+          </h3>
 
-            <div className={styles.statisticColumns}>
-              {statisticColumns.map((column, columnIndex) => (
-                <ul key={columnIndex} className={styles.statisticColumn}>
-                  {column.map((statistic) => {
-                    const Icon = statistic.icon;
+          <ul className={styles.nearbyGrid}>
+            {area.nearbyCities.map((city) => (
+              <li key={city.slug}>
+                <a
+                  className={`${styles.nearbyLink} text-body`}
+                  href={getAreaPagePath(city.slug)}
+                >
+                  <MapPin aria-hidden="true" size={20} />
+                  <span>{city.name}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
 
-                    return (
-                      <li
-                        key={statistic.label}
-                        className={`${styles.statisticCard} ${styles[statistic.background]}`}
-                      >
-                        <div className={styles.statisticTopRow}>
-                          <Icon aria-hidden="true" size={20} />
-                          <span
-                            className={`${styles.statisticValue} text-heading-3`}
-                          >
-                            {statistic.value}
-                          </span>
-                        </div>
-                        <span className={`${styles.statisticLabel} text-body`}>
-                          {statistic.label}
-                        </span>
-                        <p
-                          className={`${styles.statisticSupportingCopy} text-body-small`}
+          <TextLink href="/areas-we-buy-in">
+            See all areas we buy in
+            <ArrowRight aria-hidden="true" size={20} />
+          </TextLink>
+        </div>
+
+        <div className={styles.statistics}>
+          <h3 className={`${styles.statisticsHeading} text-heading-3`}>
+            {area.city} at a Glance
+          </h3>
+
+          <div className={styles.statisticColumns}>
+            {statisticColumns.map((column, columnIndex) => (
+              <ul key={columnIndex} className={styles.statisticColumn}>
+                {column.map((statistic) => {
+                  const Icon = statistic.icon;
+
+                  return (
+                    <li
+                      key={statistic.label}
+                      className={`${styles.statisticCard} ${styles[statistic.background]}`}
+                    >
+                      <div className={styles.statisticTopRow}>
+                        <Icon aria-hidden="true" size={20} />
+                        <span
+                          className={`${styles.statisticValue} text-heading-3`}
                         >
-                          {statistic.supportingCopy}
-                        </p>
-                      </li>
-                    );
-                  })}
-                </ul>
-              ))}
-            </div>
-
-            <p className={`${styles.dataSources} text-body-small`}>
-              Data from{" "}
-              <TextLink href={area.statistics.sourceUrl}>
-                {area.statistics.sourceName}
-              </TextLink>{" "}
-              · Updated {area.statistics.dataPeriod}
-            </p>
+                          {statistic.value}
+                        </span>
+                      </div>
+                      <span className={`${styles.statisticLabel} text-body`}>
+                        {statistic.label}
+                      </span>
+                      <p
+                        className={`${styles.statisticSupportingCopy} text-body-small`}
+                      >
+                        {statistic.supportingCopy}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            ))}
           </div>
+
+          <p className={`${styles.dataSources} text-body-small`}>
+            Data from{" "}
+            <TextLink href={area.statistics.sourceUrl}>
+              {area.statistics.sourceName}
+            </TextLink>{" "}
+            · Updated {area.statistics.dataPeriod}
+          </p>
         </div>
 
-        <div className={styles.rightFlow}>
-          <div className={styles.nearbyAreas}>
-            <h3 className={`${styles.nearbyHeading} text-heading-3`}>
-              CITIES WE KNOW.
+        <figure className={styles.localMarket}>
+          <div className={styles.marketPhotoFrame}>
+            <Image
+              className={styles.marketPhoto}
+              src={area.localPhoto.src}
+              alt={area.localPhoto.alt}
+              fill
+              sizes="(min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw"
+            />
+            <h3 className={`${styles.marketHeading} text-body`}>
+              Local Knowledge.
               <br />
-              MARKET WE BUY IN.
+              Straightforward Offers.
             </h3>
-
-            <ul className={styles.nearbyGrid}>
-              {area.nearbyCities.map((city) => (
-                <li key={city.slug}>
-                  <a
-                    className={`${styles.nearbyLink} text-body`}
-                    href={getAreaPagePath(city.slug)}
-                  >
-                    <MapPin aria-hidden="true" size={20} />
-                    <span>{city.name}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-
-            <TextLink href="/areas-we-buy-in">
-              See all areas we buy in
-              <ArrowRight aria-hidden="true" size={20} />
-            </TextLink>
           </div>
-
-          <figure className={styles.localMarket}>
-            <div className={styles.marketPhotoFrame}>
-              <Image
-                className={styles.marketPhoto}
-                src={area.localPhoto.src}
-                alt={area.localPhoto.alt}
-                fill
-                sizes="(min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw"
-              />
-              <h3 className={`${styles.marketHeading} text-body`}>
-                Local Knowledge.
-                <br />
-                Straightforward Offers.
-              </h3>
-            </div>
-          </figure>
-        </div>
+        </figure>
       </div>
     </section>
   );

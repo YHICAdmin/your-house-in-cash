@@ -1155,7 +1155,8 @@ On Desktop and Tablet, the Section Intro spans the complete available Content Gr
 ### Mobile
 
 * The left and right areas collapse into one column spanning the complete available Content Grid width.
-* Elements retain canonical document order: all left-area elements from top to bottom, followed by all right-area elements from top to bottom.
+* Canonical document and Mobile visual order: Section Intro, Local Map (including its information note), Nearby Areas, Local Statistics (including Data Sources), Local Market Content (the house photograph).
+* This order also defines screen-reader and keyboard traversal. Desktop and Tablet retain their existing two-column visual composition through explicit Grid placement, without duplicate content or JavaScript reordering.
 
 ## Section Intro
 
@@ -1373,7 +1374,7 @@ For the current Cleveland Area Page:
 
 ### Spacing After
 
-* On Mobile, `L` (`32px`) separates the complete Local Statistics composition from Nearby Areas.
+* On Mobile, `L` (`32px`) separates the complete Local Statistics composition from Local Market Content.
 
 ## Nearby Areas
 
@@ -1429,7 +1430,8 @@ For the current Cleveland Area Page:
 
 ### Spacing After
 
-* `XL` (`48px`) separates the complete Nearby Areas composition from Local Market Content across all Breakpoints.
+* On Desktop and Tablet, `XL` (`48px`) separates the complete Nearby Areas composition from Local Market Content.
+* On Mobile, `XL` (`48px`) separates the complete Nearby Areas composition from Local Statistics. Nearby Areas follows the complete Local Map with its documented `M` (`24px`) spacing.
 
 ### Interaction
 
@@ -1476,14 +1478,14 @@ For the current Cleveland Area Page:
 
 ### Dimensions and Alignment
 
-* Occupies the full width of the existing right area, directly after Nearby Areas, replacing the former Card.
-* On Desktop, both content columns stretch within their shared Grid row. Left-column content remains top-aligned at its documented spacing; the photograph fills the remaining right-column height without JavaScript measurement.
+* On Desktop and Tablet, occupies the full width of the right area, visually directly after Nearby Areas. On Mobile, follows Local Statistics.
+* On Desktop, the photograph stretches to the bottom of the Local Statistics composition. Left-column content remains top-aligned at its documented spacing; explicit Grid placement preserves the independent column flows without JavaScript measurement.
 * The compact, content-sized overlay sits inside the lower-left corner of the photograph. It preserves the two-line headline where space permits and wraps naturally at narrow widths.
 * On Mobile, uses its independent `4:3` ratio and retains the overlay placement within the canonical document flow.
 
 ### Spacing
 
-* The existing `XL` (`48px`) gap after Nearby Areas is retained.
+* On Desktop and Tablet, the existing `XL` (`48px`) gap after Nearby Areas is retained. On Mobile, `L` (`32px`) separates Local Statistics from the photograph.
 * The overlay uses `S` (`16px`) internal Padding and `S` insets from the left and bottom image edges. It also preserves at least `S` clearance from the right edge.
 
 ### Accessibility and Image Use

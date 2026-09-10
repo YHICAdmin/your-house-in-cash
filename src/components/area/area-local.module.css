@@ -6,12 +6,12 @@
   row-gap: 0;
 }
 
-.leftFlow,
-.rightFlow {
-  display: flex;
+.map,
+.nearbyAreas,
+.statistics,
+.localMarket {
   min-width: 0;
   grid-column: 1 / -1;
-  flex-direction: column;
 }
 
 .intro {
@@ -222,11 +222,38 @@
 }
 
 @media (min-width: 768px) {
-  .leftFlow {
+  .layout {
+    /* The flexible middle track preserves the staggered column flows. */
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+  }
+
+  .map {
+    grid-row: 2 / 4;
+    align-self: start;
+  }
+
+  .statistics {
+    grid-row: 4;
+    align-self: start;
+  }
+
+  .map,
+  .statistics {
     grid-column: 1 / span 4;
   }
 
-  .rightFlow {
+  .nearbyAreas {
+    grid-row: 2;
+    align-self: start;
+  }
+
+  .localMarket {
+    grid-row: 3 / 5;
+    align-self: start;
+  }
+
+  .nearbyAreas,
+  .localMarket {
     grid-column: 5 / span 4;
   }
 
@@ -263,30 +290,20 @@
 }
 
 @media (min-width: 1200px) {
-  .leftFlow {
-    display: grid;
-    align-content: start;
-    grid-column: 1 / span 5;
-    grid-template-columns: subgrid;
-  }
-
-  .map {
-    grid-column: 1 / span 5;
-  }
-
+  .map,
   .statistics {
-    grid-column: 1 / -1;
+    grid-column: 1 / span 5;
   }
 
-  .rightFlow {
-    display: grid;
+  .nearbyAreas,
+  .localMarket {
     grid-column: 7 / span 6;
-    grid-template-rows: auto minmax(0, 1fr);
   }
 
   .localMarket {
     display: grid;
     min-height: 0;
+    align-self: stretch;
     grid-template-rows: minmax(0, 1fr);
   }
 
