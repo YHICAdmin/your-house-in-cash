@@ -288,22 +288,15 @@ Provide entry points to dedicated Situation Pages for each documented situation.
 
 ## Layout
 
-The Section Intro appears above the Section's main content composition.
-
 On Desktop and Tablet, the main content composition uses two allocated areas that form independent top-to-bottom flows:
 
 * On Desktop, the left area occupies Grid Columns `1–5`, Grid Column `6` remains intentionally empty, and the right area occupies Grid Columns `7–12`.
 * On Tablet, the left area occupies Grid Columns `1–4`, and the right area occupies Grid Columns `5–8`.
 * The left area contains the Supporting Points.
-* The right area contains the Situation Selector, Selected Situation Content, and Contact Us Option in that order.
+* The right area contains the Situation Selector, Selected Situation Content, and Contact Us Option.
 * The top edges of the left- and right-area flows align.
 
-On Mobile, the main content composition forms one full-width flow in this order:
-
-1. Supporting Points.
-2. Situation Selector.
-3. Selected Situation Content.
-4. Contact Us Option.
+On Mobile, the main content composition forms one full-width flow in canonical element order.
 
 ## Section Intro
 
@@ -343,7 +336,7 @@ Contains, in document order:
 
 ### Content
 
-* Contains exactly two informational points that provide additional context about how the company can help homeowners in the documented situations.
+* Contains informational points that provide additional context about how the company can help homeowners in the documented situations.
 * Each point contains, in document and visual order:
   1. Icon.
   2. Short heading.
@@ -464,8 +457,7 @@ Contains, in document order:
 
 ### Responsive Behavior
 
-* Across all Breakpoints, displays the situation options as one manually scrollable horizontal carousel above the Selected Situation Content.
-* When additional options extend beyond the visible area, part of the next option remains visible to indicate horizontal continuation.
+* Across all Breakpoints, displays the situation options as one manually scrollable horizontal carousel.
 * The carousel does not advance automatically.
 * Each option uses its content-based width, with an `8px` (`XS`) gap between options.
 
@@ -486,6 +478,7 @@ Contains, in document order:
 * Uses the complete width of the right area on Desktop and Tablet.
 * Uses the complete available content width on Mobile.
 * The content area uses `32px` (`L`) internal padding on Desktop and Tablet and `24px` (`M`) on Mobile.
+* The Selected Situation Heading, Situation Explanation, and Situation CTA form a vertical content flow across all Breakpoints.
 
 ### Spacing After
 
@@ -493,7 +486,6 @@ Contains, in document order:
 
 ### Responsive Behavior
 
-* Across all Breakpoints, presents the selected situation heading, Situation Explanation, and Situation CTA in one vertical composition in that order.
 * On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
 
 ### Selected Situation Heading
@@ -568,7 +560,7 @@ Contains, in document order:
 
 #### Component and Semantics
 
-* Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
+* Uses the documented `Text Link` Component.
 * Uses link semantics.
 
 ## Contact Us Option
@@ -581,7 +573,7 @@ Contains, in document order:
 
 ### Component and Semantics
 
-* Uses the documented `Text Link` Component and inherits its approved visual styling, interaction states, and accessibility behavior.
+* Uses the documented `Text Link` Component.
 * The `MessageCircle` icon uses the documented `Icon Container` Component.
 * `Contact us` uses link semantics.
 
@@ -594,7 +586,7 @@ Contains, in document order:
 
 * Uses the complete width of the right area on Desktop and Tablet.
 * Uses the complete available content width on Mobile.
-* The `Icon Container` appears before the sentence with a `12px` gap and is vertically centered with it.
+* A `12px` gap separates the `Icon Container` and sentence, which are vertically center-aligned.
 * The sentence is left-aligned.
 
 ### Interaction
