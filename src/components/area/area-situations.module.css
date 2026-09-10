@@ -119,7 +119,7 @@
   flex: 0 0 auto;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--spacing-xs);
+  padding: 0;
   border: 0;
   border-radius: 0;
   background: none;
@@ -135,20 +135,18 @@
   width: fit-content;
   flex-direction: column;
   align-items: flex-start;
+  padding: 6px 12px;
   white-space: nowrap;
 }
 
 .selectedOption {
-  color: var(--color-brand-dark);
+  color: var(--color-surface);
   font-weight: 600;
 }
 
-.selectedOption .optionLabel::after {
-  width: 100%;
-  height: 2px;
-  margin-top: 4px;
-  background: currentcolor;
-  content: "";
+.selectedOption .optionLabel {
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-dark);
 }
 
 @media (hover: hover) {
@@ -166,6 +164,10 @@
 
 .situationDetails {
   padding: var(--spacing-m);
+}
+
+.situationIcon {
+  margin-bottom: var(--spacing-m);
 }
 
 .situationHeading {

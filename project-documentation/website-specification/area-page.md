@@ -415,21 +415,17 @@ Contains, in document order:
 * The carousel does not display a persistent scrollbar.
 * Each option uses the global `Body` typography and `Text Primary` color.
 * The default state does not use a background, Border, Divider, Radius, or Shadow.
-* Across all Breakpoints, the selected option uses Brand Green Dark text at `600` font weight.
-* A persistent `2px` solid Brand Green Dark indicator appears beneath the selected option.
-* The selected option does not use a background, Card treatment, Radius, or Shadow.
+* Across all Breakpoints, the selected option's visible label uses global Surface text at `600` font weight on a Brand Green Dark background with the global Pill Radius, without a Border or Shadow.
 * When an unselected option is hovered, its text changes to Brand Green Dark while its font weight remains unchanged.
-* Hovering an unselected option does not display the persistent selected indicator or add a background, Card treatment, Radius, or Shadow.
+* Hovering an unselected option does not add a background, Border, Radius, or Shadow.
 
 ### Dimensions and Alignment
 
 * Uses the complete width of the right area on Desktop and Tablet.
 * Uses the complete available content width on Mobile.
 * Text is left-aligned.
-* Each option has a minimum interactive height of `48px`, with `8px` (`XS`) vertical and horizontal internal padding.
-* The indicator follows the rendered option text width only, excluding the option's padding and available row width.
-* The indicator appears `4px` below the text.
-* The indicator's geometry remains unchanged across all Breakpoints.
+* Each option has a minimum interactive height of `48px`.
+* Each option's visible label uses `6px` vertical and `12px` horizontal internal padding so the selected pill remains compact within the larger interactive target.
 
 ### Spacing After
 
@@ -478,7 +474,7 @@ Contains, in document order:
 * Uses the complete width of the right area on Desktop and Tablet.
 * Uses the complete available content width on Mobile.
 * The content area uses `32px` (`L`) internal padding on Desktop and Tablet and `24px` (`M`) on Mobile.
-* The Selected Situation Heading, Situation Explanation, and Situation CTA form a vertical content flow across all Breakpoints.
+* The Situation Icon, Selected Situation Heading, Situation Explanation, and Situation CTA form a vertical content flow across all Breakpoints.
 
 ### Spacing After
 
@@ -487,6 +483,34 @@ Contains, in document order:
 ### Responsive Behavior
 
 * On Mobile, remains a stationary content area and does not participate in the Selector's horizontal scrolling.
+
+### Situation Icon
+
+#### Content
+
+* Uses the following canonical Lucide icon for each situation:
+  1. `Foreclosure`: `Gavel`.
+  2. `Inherited Property`: `ScrollText`.
+  3. `Tired Landlord`: `Building2`.
+  4. `Major Repairs`: `Hammer`.
+  5. `Vacant Property`: `House`.
+  6. `Problem Tenants`: `Users`.
+  7. `Relocation`: `Truck`.
+  8. `Divorce`: `Scale`.
+  9. `Behind on Property Taxes`: `ReceiptText`.
+  10. `Code Violations`: `ClipboardX`.
+
+#### Component and Semantics
+
+* Uses the documented `Icon Container` Component at its Default `40px` size with the global Medium `20px` icon size.
+
+#### Spacing After
+
+* `24px` (`M`) across all Breakpoints.
+
+#### Accessibility
+
+* The icon is decorative because the adjacent Selected Situation Heading communicates the situation identity.
 
 ### Selected Situation Heading
 
@@ -507,6 +531,10 @@ Contains, in document order:
 #### Component and Semantics
 
 * Serves as the Selected Situation Content's semantic `H3`.
+
+#### Visual Design
+
+* Uses the global `H4` typography: `24px` on Desktop, `22px` on Tablet, and `20px` on Mobile.
 
 #### Spacing After
 
@@ -534,7 +562,7 @@ Contains, in document order:
 
 #### Visual Design
 
-* Uses the global `Body Large` typography.
+* Uses the global `Body` typography at `16px` across all Breakpoints.
 
 #### Spacing After
 
@@ -545,6 +573,7 @@ Contains, in document order:
 #### Content
 
 * Visible label template: `Learn More About [Situation]`.
+* Includes the canonical Lucide `ArrowRight` icon after the visible label.
 * Uses the following destination for each situation:
   1. `Foreclosure`: `/situations/foreclosure`.
   2. `Inherited Property`: `/situations/inherited-property`.
@@ -562,6 +591,10 @@ Contains, in document order:
 
 * Uses the documented `Text Link` Component.
 * Uses link semantics.
+
+#### Accessibility
+
+* The `ArrowRight` icon is decorative because the visible link label communicates the complete destination.
 
 ## Contact Us Option
 

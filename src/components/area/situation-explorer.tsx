@@ -1,6 +1,20 @@
 "use client";
 
-import { MessageCircle } from "lucide-react";
+import {
+  ArrowRight,
+  Building2,
+  ClipboardX,
+  Gavel,
+  Hammer,
+  House,
+  MessageCircle,
+  ReceiptText,
+  Scale,
+  ScrollText,
+  Truck,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
 import {
   useEffect,
   useRef,
@@ -14,6 +28,7 @@ import styles from "./area-situations.module.css";
 type Situation = {
   explanation: string;
   heading: string;
+  icon: LucideIcon;
   label: string;
   slug: string;
 };
@@ -22,6 +37,7 @@ const situations = [
   {
     label: "Foreclosure",
     slug: "foreclosure",
+    icon: Gavel,
     heading: "Understanding Your Timeline Before Foreclosure",
     explanation:
       "Facing foreclosure can feel overwhelming. We offer a straightforward way to sell your house as-is and work around your timeline.",
@@ -29,6 +45,7 @@ const situations = [
   {
     label: "Inherited Property",
     slug: "inherited-property",
+    icon: ScrollText,
     heading: "What to Consider With an Inherited Property",
     explanation:
       "An inherited property can bring repairs, belongings, and decisions you did not plan for. We make it easier to sell as-is without preparing the house for the traditional market.",
@@ -36,6 +53,7 @@ const situations = [
   {
     label: "Tired Landlord",
     slug: "tired-landlord",
+    icon: Building2,
     heading: "When Landlord Responsibilities Become Unsustainable",
     explanation:
       "Managing tenants, maintenance, and ongoing expenses can become exhausting. We buy rental properties as-is so you can move on without another traditional listing.",
@@ -43,6 +61,7 @@ const situations = [
   {
     label: "Major Repairs",
     slug: "major-repairs",
+    icon: Hammer,
     heading: "Selling a Home That Needs Major Repairs",
     explanation:
       "A house that needs major repairs can be difficult to sell traditionally. We buy properties as-is, so you can sell without completing the repairs first.",
@@ -50,6 +69,7 @@ const situations = [
   {
     label: "Vacant Property",
     slug: "vacant-property",
+    icon: House,
     heading: "Managing the Costs of a Vacant Property",
     explanation:
       "A vacant house can create ongoing costs, maintenance, and security concerns. We provide a straightforward way to sell it as-is.",
@@ -57,6 +77,7 @@ const situations = [
   {
     label: "Problem Tenants",
     slug: "problem-tenants",
+    icon: Users,
     heading: "What to Consider When Tenants Are Involved",
     explanation:
       "Selling a property with tenant issues can feel complicated. We can evaluate the property as-is and discuss a sale that fits its current occupancy situation.",
@@ -64,6 +85,7 @@ const situations = [
   {
     label: "Relocation",
     slug: "relocation",
+    icon: Truck,
     heading: "Coordinating a Home Sale With Relocation",
     explanation:
       "When you need to relocate, timing matters. We offer a flexible, straightforward sale without requiring you to prepare the house for the market.",
@@ -71,6 +93,7 @@ const situations = [
   {
     label: "Divorce",
     slug: "divorce",
+    icon: Scale,
     heading: "Handling a Property During Divorce",
     explanation:
       "Selling a house during a divorce can add stress to an already difficult transition. We provide a simple and discreet way to sell the property as-is.",
@@ -78,6 +101,7 @@ const situations = [
   {
     label: "Behind on Property Taxes",
     slug: "behind-on-property-taxes",
+    icon: ReceiptText,
     heading: "Understanding Delinquent Property Taxes",
     explanation:
       "Falling behind on property taxes can create increasing pressure. We offer a straightforward as-is sale so you can explore your next step.",
@@ -85,6 +109,7 @@ const situations = [
   {
     label: "Code Violations",
     slug: "code-violations",
+    icon: ClipboardX,
     heading: "Selling a Home With Code Violations",
     explanation:
       "Code violations can make repairs and a traditional listing more difficult. We buy houses as-is, including properties with unresolved violations.",
@@ -250,14 +275,20 @@ export function SituationExplorer({
         aria-labelledby={`situation-option-${selected.slug}`}
       >
         <div className={styles.situationDetails}>
-          <h3 className={`${styles.situationHeading} text-heading-3`}>
+          <IconContainer
+            className={styles.situationIcon}
+            icon={selected.icon}
+            aria-hidden="true"
+          />
+          <h3 className={`${styles.situationHeading} text-heading-4`}>
             {selected.heading}
           </h3>
-          <p className={`${styles.explanation} text-body-large`}>
+          <p className={`${styles.explanation} text-body`}>
             {selected.explanation}
           </p>
           <TextLink href={`/situations/${selected.slug}`}>
             Learn More About {selected.label}
+            <ArrowRight aria-hidden="true" size={20} />
           </TextLink>
         </div>
       </div>
