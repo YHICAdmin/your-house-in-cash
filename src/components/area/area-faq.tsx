@@ -1,4 +1,6 @@
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { Accordion, type AccordionItem } from "@/components/ui/accordion";
+import { IconContainer } from "@/components/ui/icon-container";
 import { SectionLabel } from "@/components/ui/section-label";
 import { TextLink } from "@/components/ui/text-link";
 import styles from "./area-faq.module.css";
@@ -57,9 +59,21 @@ export function AreaFaq() {
             </p>
           </div>
 
-          <TextLink className={styles.contactLink} href="/contact">
-            Contact us
-          </TextLink>
+          <div className={styles.contact}>
+            <IconContainer icon={MessageCircle} aria-hidden="true" />
+            <div className={styles.contactCopy}>
+              <p className={`${styles.contactTitle} text-body`}>
+                <strong>Still have a question?</strong>
+              </p>
+              <p className={`${styles.contactDescription} text-body-small`}>
+                Can’t find what you’re looking for?
+              </p>
+              <TextLink className={styles.contactLink} href="/contact">
+                Contact us
+                <ArrowRight size={16} aria-hidden="true" focusable="false" />
+              </TextLink>
+            </div>
+          </div>
         </div>
 
         <div className={styles.accordionColumn}>

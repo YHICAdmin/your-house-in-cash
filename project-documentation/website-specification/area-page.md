@@ -1549,11 +1549,24 @@ Contains, in document order:
 
 ### Content
 
-- **Contact us** for users who did not find the answer they were looking for.
+- Decorative `MessageCircle` icon to the left of a compact text block containing:
+  - **Still have a question?**
+  - **Can’t find what you’re looking for?**
+  - **Contact us** with a trailing right arrow.
 
 ### Component and Semantics
 
-- Uses the documented `Text Link` Component with link semantics.
+- Uses the default documented `Icon Container` with a `20px` icon inside a `40px` Brand Green Light circle. The icon is decorative and hidden from assistive technology.
+- The title uses paragraph semantics with strong emphasis; the supporting copy uses paragraph semantics.
+- The action uses the documented `Text Link` Component with link semantics and a decorative `16px` `ArrowRight` icon.
+
+### Visual Design and Internal Spacing
+
+- Remains part of the FAQ's left flow, without a Card, enclosing background, Border, Shadow, or internal Padding.
+- The icon and text block remain horizontally arranged and vertically centered across Breakpoints, separated by `S` (`16px`). The text block can wrap naturally.
+- The text block stacks its three lines with `XS` (`8px`) gaps.
+- The title uses `Body` typography at weight `600`; supporting copy uses `Body Small` and Text Secondary.
+- The Text Link uses Brand Green Dark as a Section-specific default color override and retains its documented active color.
 
 ### Spacing After
 

@@ -31,8 +31,40 @@
   color: var(--color-text-secondary);
 }
 
-.contactLink {
+.contact {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
   margin-top: var(--spacing-m);
+}
+
+.contactCopy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+}
+
+.contactTitle,
+.contactDescription {
+  margin: 0;
+}
+
+.contactTitle strong {
+  font-weight: 600;
+}
+
+.contactDescription {
+  color: var(--color-text-secondary);
+}
+
+.contactCopy .contactLink {
+  color: var(--color-brand-dark);
+}
+
+.contactCopy .contactLink:active {
+  color: #245a33;
 }
 
 @media (min-width: 768px) {
