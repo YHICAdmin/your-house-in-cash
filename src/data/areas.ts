@@ -16,6 +16,15 @@ export type AreaStatistics = {
 export type AreaPageData = {
   city: string;
   googleMapsEmbedUrl: string;
+  localPhoto: {
+    src: string;
+    alt: string;
+    photographer: string;
+    sourceUrl: string;
+    title: string;
+    license: string;
+    licenseUrl: string;
+  };
   intro: {
     headline: string;
     supportingCopy: string;
@@ -39,6 +48,15 @@ export function getAreaPagePath(citySlug: string) {
 export const clevelandArea = {
   city: "Cleveland",
   slug: "cleveland",
+  localPhoto: {
+    src: "/images/local-area/cleveland-east-boulevard.jpg",
+    alt: "Brick house with a front porch and lawn in Cleveland’s East Boulevard Historic District, Glenville",
+    photographer: "Warren LeMay",
+    sourceUrl: "https://www.flickr.com/photos/warrenlemay/28439607087/",
+    title: "East Boulevard Historic District, Glenville, Cleveland, OH",
+    license: "CC0 1.0",
+    licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+  },
   googleMapsEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191251.91240052145!2d-81.70586405!3d41.497532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef2ee3686b2d%3A0xed04cb55f7621842!2sCleveland%2C%20OH%2C%20USA!5e0!3m2!1sen!2sil!4v1788783140965!5m2!1sen!2sil",
   intro: {

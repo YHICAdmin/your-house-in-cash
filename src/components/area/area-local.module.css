@@ -27,8 +27,7 @@
   margin: var(--spacing-s) 0 var(--spacing-m);
 }
 
-.introCopy,
-.marketCopy {
+.introCopy {
   margin: 0;
   color: var(--color-text-secondary);
 }
@@ -195,65 +194,31 @@
   color: #245a33;
 }
 
-.marketHeading {
-  position: relative;
-  z-index: 1;
-  margin: 0 0 var(--spacing-m);
-}
-
-.marketColumns {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: var(--spacing-l);
-}
-
-.marketColumn {
-  min-width: 0;
-}
-
-.marketSubheading {
-  margin: 0 0 var(--spacing-s);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.25;
-}
-
-.marketCopy {
-  text-align: left;
-}
-
 .localMarket {
+  margin: 0;
+}
+
+.marketPhotoFrame {
   position: relative;
-  isolation: isolate;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
-  padding: var(--spacing-m);
   border-radius: var(--radius-medium);
-  background: var(--color-surface);
 }
 
-.localMarket::after {
+.marketPhoto {
+  object-fit: cover;
+}
+
+.marketHeading {
   position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  width: 48%;
-  height: 42%;
-  background-image: radial-gradient(
-    circle,
-    rgb(74 135 85 / 28%) 1px,
-    transparent 1.5px
-  );
-  background-size: 10px 10px;
-  content: "";
-  mask-image: linear-gradient(to bottom left, #000 8%, transparent 78%);
-}
-
-.marketIcon {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  margin-bottom: var(--spacing-m);
+  left: var(--spacing-s);
+  bottom: var(--spacing-s);
+  max-width: calc(100% - var(--spacing-l));
+  margin: 0;
+  padding: var(--spacing-s);
+  border-radius: var(--radius-small);
+  background: var(--color-surface);
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {
@@ -295,15 +260,12 @@
     align-items: center;
   }
 
-  .localMarket {
-    padding: var(--spacing-l);
-  }
-
 }
 
 @media (min-width: 1200px) {
   .leftFlow {
     display: grid;
+    align-content: start;
     grid-column: 1 / span 5;
     grid-template-columns: subgrid;
   }
@@ -317,23 +279,19 @@
   }
 
   .rightFlow {
+    display: grid;
     grid-column: 7 / span 6;
+    grid-template-rows: auto minmax(0, 1fr);
   }
 
-  .localMarket::before {
-    position: absolute;
-    z-index: 0;
-    inset-block: 0;
-    left: 50%;
-    width: 1px;
-    background: repeating-linear-gradient(
-      to bottom,
-      var(--system-line-color, var(--color-line)) 0 4px,
-      transparent 4px 8px
-    );
-    pointer-events: none;
-    content: "";
-    transform: translateX(-0.5px);
+  .localMarket {
+    display: grid;
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .marketPhotoFrame {
+    aspect-ratio: auto;
   }
 
   .map {

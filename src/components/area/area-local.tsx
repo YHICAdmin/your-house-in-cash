@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ArrowRight,
   BadgeDollarSign,
@@ -9,7 +10,6 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { SectionLabel } from "@/components/ui/section-label";
-import { IconContainer } from "@/components/ui/icon-container";
 import { TextLink } from "@/components/ui/text-link";
 import {
   getAreaPagePath,
@@ -177,45 +177,22 @@ export function AreaLocal({ area }: AreaLocalProps) {
             </TextLink>
           </div>
 
-          <div className={styles.localMarket}>
-            <IconContainer
-              className={styles.marketIcon}
-              icon={House}
-              size="large"
-              aria-hidden="true"
-            />
-            <h3 className={`${styles.marketHeading} text-heading-3`}>
-              Local Knowledge.
-              <br />
-              Straightforward Offers.
-            </h3>
-            <div className={styles.marketColumns}>
-              <div className={styles.marketColumn}>
-                <h4 className={`${styles.marketSubheading} text-heading-4`}>
-                  Every Home Is Different
-                </h4>
-                <p className={`${styles.marketCopy} text-body`}>
-                  No two properties have the same condition, layout, or repair
-                  needs. We look at the home as it stands today, including any
-                  updates it may need and practical factors that could affect
-                  the sale. This helps us prepare a cash offer based on the
-                  property itself—not a one-size-fits-all estimate.
-                </p>
-              </div>
-              <div className={styles.marketColumn}>
-                <h4 className={`${styles.marketSubheading} text-heading-4`}>
-                  Every Market Is Different
-                </h4>
-                <p className={`${styles.marketCopy} text-body`}>
-                  Home values can vary from one area to another and change over
-                  time. We consider recent sales, local buyer demand, and how
-                  similar properties are performing in the surrounding market.
-                  This broader context helps us understand where the home fits
-                  before making a straightforward cash offer.
-                </p>
-              </div>
+          <figure className={styles.localMarket}>
+            <div className={styles.marketPhotoFrame}>
+              <Image
+                className={styles.marketPhoto}
+                src={area.localPhoto.src}
+                alt={area.localPhoto.alt}
+                fill
+                sizes="(min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw"
+              />
+              <h3 className={`${styles.marketHeading} text-body`}>
+                Local Knowledge.
+                <br />
+                Straightforward Offers.
+              </h3>
             </div>
-          </div>
+          </figure>
         </div>
       </div>
     </section>

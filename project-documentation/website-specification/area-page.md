@@ -1455,57 +1455,42 @@ For the current Cleveland Area Page:
 
 ### Content
 
-Contains, in document order:
-
-1. The canonical Lucide `House` icon.
-2. Shared local-market headline, preserving the intentional line break:
-   * Line 1: `Local Knowledge.`
-   * Line 2: `Straightforward Offers.`
-3. Two content groups:
-   * Group 1:
-     * Heading: `Every Home Is Different`
-     * Supporting Copy: `No two properties have the same condition, layout, or repair needs. We look at the home as it stands today, including any updates it may need and practical factors that could affect the sale. This helps us prepare a cash offer based on the property itself—not a one-size-fits-all estimate.`
-   * Group 2:
-     * Heading: `Every Market Is Different`
-     * Supporting Copy: `Home values can vary from one area to another and change over time. We consider recent sales, local buyer demand, and how similar properties are performing in the surrounding market. This broader context helps us understand where the home fits before making a straightforward cash offer.`
-
-The headline, content-group headings, and Supporting Copy are shared across Area Pages and do not vary by city.
+* A real local residential photograph replaces the former text Card, House icon, dot field, and two explanatory content groups.
+* A compact white overlay retains the shared headline on two lines: **Local Knowledge.** followed by **Straightforward Offers.**
+* The repository-owned Area dataset supplies the photograph, descriptive alternative text, title, photographer, source URL, and license for each Area Page.
+* For Cleveland, use **East Boulevard Historic District, Glenville, Cleveland, OH**, photographed by **Warren LeMay**. The image illustrates an actual Cleveland neighborhood; it is not presented as a company-owned property or completed purchase.
+* Local asset: `/images/local-area/cleveland-east-boulevard.jpg` (1024 by 768 pixels).
+* Source and verified license record: https://www.flickr.com/photos/warrenlemay/28439607087/
+* License: **CC0 1.0**, https://creativecommons.org/publicdomain/zero/1.0/ (verified 10 September 2026). Visible attribution is not required; source and license information remain in the Area dataset and project documentation.
 
 ### Component and Semantics
 
-* The `House` icon uses the documented `Icon Container` Component at its Large size.
-* The local-market headline uses `H3` semantics.
-* Each content-group heading uses `H4` semantics.
-* Each Supporting Copy uses paragraph semantics.
+* Uses a `figure` containing the photograph and overlaid `H3` headline, without a visible credit or license row.
 
 ### Visual Design
 
-* The complete composition uses global `Surface`, the global `Medium` Radius (`12px`), no Border, and no Shadow.
-* A decorative dot field occupies the top-right `48%` of the surface width and `42%` of its height. It uses `1px` global `Brand Green` dots at `28%` opacity on a `10px × 10px` repeat and fades from full visibility near the top-right toward transparency at `78%` of the diagonal toward the Card interior.
-* The decorative dot field remains behind the content and does not reduce foreground readability.
-* The local-market headline uses the global `H3` typography.
-* Each content-group heading uses a local `16px` font size, `600` weight, and `1.25` line height while retaining the global `H4` letter spacing.
-* Each Supporting Copy uses the global `Body` typography.
-* On Desktop, the global dashed System Line treatment continues through the complete height of the surface at its center.
+* On Mobile and Tablet, the image frame uses a `4:3` Aspect Ratio. On Desktop, its height fills the available space below Nearby Areas, aligning its bottom with the left column's Local Statistics content. The photo's intrinsic aspect ratio does not determine Desktop row height.
+* The image frame uses global Medium Radius (`12px`), no Border, and no Shadow. The photograph fills the frame with `object-fit: cover` and centered positioning, allowing a taller Desktop crop without distortion.
+* The overlay uses global Surface, Small Radius (`8px`), no Border or Shadow, and global Body typography at weight `600` with Text Primary color.
+* The photograph remains above the global System Lines; no additional System Line is drawn through it.
 
 ### Dimensions and Alignment
 
-* On Desktop and Tablet, occupies the right area.
-* All content is left-aligned.
-* The complete composition uses `L` (`32px`) internal padding on Desktop and Tablet and `M` (`24px`) on Mobile.
-* Across all Breakpoints, the two content groups form one vertical flow in canonical order.
-* On Desktop, the continued System Line aligns with the System Line between Grid Columns `9` and `10`.
+* Occupies the full width of the existing right area, directly after Nearby Areas, replacing the former Card.
+* On Desktop, both content columns stretch within their shared Grid row. Left-column content remains top-aligned at its documented spacing; the photograph fills the remaining right-column height without JavaScript measurement.
+* The compact, content-sized overlay sits inside the lower-left corner of the photograph. It preserves the two-line headline where space permits and wraps naturally at narrow widths.
+* On Mobile, uses its independent `4:3` ratio and retains the overlay placement within the canonical document flow.
 
 ### Spacing
 
-* `M` (`24px`) separates the `Icon Container` from the local-market headline across all Breakpoints.
-* `M` (`24px`) separates the local-market headline from the content groups across all Breakpoints.
-* `S` (`16px`) separates each content-group heading from its Supporting Copy across all Breakpoints.
-* `L` (`32px`) separates the two content groups across all Breakpoints.
+* The existing `XL` (`48px`) gap after Nearby Areas is retained.
+* The overlay uses `S` (`16px`) internal Padding and `S` insets from the left and bottom image edges. It also preserves at least `S` clearance from the right edge.
 
-### Accessibility
+### Accessibility and Image Use
 
-* The `House` icon and dot field are decorative because they add no information beyond the visible local-market content.
+* The photograph is informative and uses descriptive alternative text from the Area dataset.
+* The image and headline are not links.
+* Only photographs verified as Cleveland or Northeast Ohio may be used here. Any replacement must permit commercial use without visible attribution; verify and document its source and license before removing any required credit.
 
 # FAQ
 
