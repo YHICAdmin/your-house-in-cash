@@ -16,7 +16,7 @@
   <text x="136" y="120" fill="#555B63" font-family="Arial, sans-serif" font-size="12">Review the simple offer summary below.</text>
   <line x1="88" y1="145.5" x2="452" y2="145.5" stroke="#E4E7E4"/>
   <text x="88" y="174" fill="#555B63" font-family="Arial, sans-serif" font-size="12" font-weight="600">CASH OFFER</text>
-  <text x="88" y="219" fill="#101114" font-family="Arial, sans-serif" font-size="38" font-weight="700">$XXX,XXX</text>
+  <text x="88" y="219" fill="#101114" font-family="Arial, sans-serif" font-size="38" font-weight="700">$172,541</text>
   <rect x="337" y="176" width="115" height="28" rx="14" fill="#EAF3EC"/>
   <circle cx="354" cy="190" r="7" fill="#4A8755"/>
   <path d="m350.5 190 2.4 2.4 4.7-5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

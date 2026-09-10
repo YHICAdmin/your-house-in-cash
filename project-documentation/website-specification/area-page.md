@@ -1008,8 +1008,8 @@ The Process Steps area contains exactly three Steps in this order:
 * Inactive Step numbers use Text Secondary on a Background Neutral circular background.
 * On Mobile, all Step numbers use the inactive neutral treatment, and the Steps do not use active or inactive visual states.
 * Each Step number uses the global `H4` typography.
-* The Step Title uses the local `14px / 600 / 1.5` typography treatment with the default letter spacing and Text Primary color across all Breakpoints.
-* The Body Copy uses the global `Body Small` typography and Text Secondary color.
+* The Step Title uses the local `16px / 600 / 1.5` typography treatment with the default letter spacing and Text Primary color across all Breakpoints.
+* The Body Copy uses the global `Body` typography and Text Secondary color.
 
 #### Dimensions and Alignment
 
@@ -1019,7 +1019,7 @@ The Process Steps area contains exactly three Steps in this order:
 * The Step Title and Body Copy form a vertical text flow.
 * Each Step number uses `48px × 48px` dimensions and the global `Pill` Radius.
 * On Desktop and Tablet, the active-Step indicator uses `1px × 16px` dimensions and sits directly on the left outer System Line.
-* The indicator is vertically centered against the Step Title's `21px` line box.
+* The indicator is vertically centered against the Step Title's `24px` line box.
 * The indicator does not occupy layout space, so changing the active Step does not shift the Step content.
 * On Mobile, the indicator is not rendered and does not reserve layout space.
 
@@ -1071,7 +1071,7 @@ The Process Steps area contains exactly three Steps in this order:
   5. Visual action label: `Continue`.
 * Step `02` uses `/images/how-it-works/cash-offer.svg`. The illustrated offer contains:
   1. Heading: `Your cash offer is ready`.
-  2. Clearly illustrative amount: `$XXX,XXX`.
+  2. Clearly illustrative amount: `$172,541`.
   3. Status label: `No obligation`.
   4. Reassurance rows: `No agent fees` and `No repairs required`.
   5. Visual action label: `Review offer`.

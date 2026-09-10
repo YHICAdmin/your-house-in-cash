@@ -56,7 +56,7 @@ function ProcessStep({
         <span className={styles.stepTitle} role="heading" aria-level={3}>
           {step.title}
         </span>
-        <span className={styles.stepBody + " text-body-small"}>
+        <span className={styles.stepBody + " text-body"}>
           {step.body}
         </span>
       </span>
