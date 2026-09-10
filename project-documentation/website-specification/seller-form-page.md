@@ -32,6 +32,10 @@ Uses the shared [Minimal Header](site-shell.md#minimal-header) defined in the Si
 
 # Main Form Area
 
+## Purpose
+
+Guide sellers through submitting their contact and property details to request a cash offer, keeping the process focused and confirming that their information has been received.
+
 ## Page Background
 
 ### Content

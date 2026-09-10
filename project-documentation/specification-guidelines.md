@@ -188,6 +188,12 @@ Component assignments and local classifications remain documented when they are 
 
 This rule applies to future specification work. It does not authorize retrospective cleanup of existing specifications.
 
+### Section Purpose
+
+Every Section specification must begin with a `Purpose` subsection. Briefly state what the Section helps the user accomplish or understand and why it belongs on the page. Shared Header and Footer specifications follow the same requirement, describing their reusable role.
+
+Purpose establishes the intent against which content, design, and implementation decisions can be assessed. It does not repeat the Section's element inventory or prescribe its Layout.
+
 ### Element Order and Structural Subsections
 
 Within a Section specification, the documented order of its primary element subsections establishes their canonical element order. Do not use a `Structure`, `Layout`, or equivalent subsection solely to restate that sequence. Retain such a subsection only when it defines an additional multi-element relationship, such as grouping, nesting, parallel composition, responsive arrangement, conditional presence, or an approved difference between document and visual order.

@@ -455,6 +455,10 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 
 # Minimal Header
 
+## Purpose
+
+Provide brand identification, a link to the homepage, and direct phone contact while keeping attention on the page's primary task.
+
 ## Layout
 
 * Uses the global `Background` color.
@@ -512,6 +516,10 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 * The supporting message may wrap within the contact group on narrow screens.
 
 # Minimal Footer
+
+## Purpose
+
+Provide access to essential legal information while keeping attention on the page's primary task.
 
 ## Legal Links
 
