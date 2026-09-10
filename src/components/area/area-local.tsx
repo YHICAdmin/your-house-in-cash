@@ -74,17 +74,17 @@ export function AreaLocal({ area }: AreaLocalProps) {
       aria-labelledby={headingId}
     >
       <div className={`${styles.layout} content-grid`}>
-        <div className={styles.leftFlow}>
-          <div className={styles.intro}>
-            <SectionLabel icon={MapPin}>LOCAL EXPERTISE</SectionLabel>
-            <h2 id={headingId} className={`${styles.heading} text-heading-2`}>
-              {area.intro.headline}
-            </h2>
-            <p className={`${styles.introCopy} text-body-large`}>
-              {area.intro.supportingCopy}
-            </p>
-          </div>
+        <div className={styles.intro}>
+          <SectionLabel icon={MapPin}>LOCAL EXPERTISE</SectionLabel>
+          <h2 id={headingId} className={`${styles.heading} text-heading-2`}>
+            {area.intro.headline}
+          </h2>
+          <p className={`${styles.introCopy} text-body-large`}>
+            {area.intro.supportingCopy}
+          </p>
+        </div>
 
+        <div className={styles.leftFlow}>
           <div className={styles.map}>
             <div className={styles.mapFrame}>
               <LocalMap
