@@ -6,6 +6,13 @@ The primary goal is to generate leads from motivated home sellers.
 
 Secondary goals are to build trust, demonstrate a local presence, and support organic and local search visibility.
 
+## Area Page Routing
+
+* Every Area Page uses the canonical route pattern `/sell-your-house-fast-as-is-{city-slug}`.
+* Each Area Page's canonical city slug is supplied by the canonical Area dataset, and its route is derived from that slug rather than stored as an independently authored URL.
+* The current Cleveland Area Page uses the canonical slug `cleveland` and route `/sell-your-house-fast-as-is-cleveland`.
+* `/areas-we-buy-in` remains the broader service-area inventory route and is not the parent path for individual Area Pages.
+
 # Hero
 
 ## Purpose
@@ -1128,13 +1135,6 @@ The Section:
 * Provides useful information about the specific area.
 * Highlights nearby cities where the company buys houses.
 
-## Area Page Routing
-
-* Every Area Page uses the canonical route pattern `/sell-your-house-fast-as-is-{city-slug}`.
-* Each Area Page's canonical city slug is supplied by the canonical Area dataset, and its route is derived from that slug rather than stored as an independently authored URL.
-* The current Cleveland Area Page uses the canonical slug `cleveland` and route `/sell-your-house-fast-as-is-cleveland`.
-* `/areas-we-buy-in` remains the broader service-area inventory route and is not the parent path for individual Area Pages.
-
 ## Layout
 
 On Desktop and Tablet, the Section Intro spans the complete available Content Grid width above the left and right areas. Beneath it, the left-area elements form one top-to-bottom content flow and the right-area elements form a separate top-to-bottom content flow; the two flows begin from the same baseline and appear in parallel within their allocated Grid columns.
@@ -1603,6 +1603,7 @@ At this stage, the user has already received the necessary information throughou
 
 ## Layout
 
+- The left-aligned hierarchy of the Section Intro, Primary CTA, and Reassurance Row is preserved across Breakpoints.
 - The Section Intro, Primary CTA, and Reassurance Row form one left-aligned composition.
 - On Desktop, the CTA composition occupies Grid Columns `1–6`; the Supporting Benefits occupy Grid Columns `7–12`, with each benefit occupying three columns.
 - On Tablet, the CTA composition occupies Grid Columns `1–4`; the Supporting Benefits occupy Grid Columns `5–8`, with each benefit occupying two columns.
@@ -1729,7 +1730,3 @@ The Supporting Benefits are shared across Area Pages and do not vary by location
 
 - On Mobile, the two benefits form one full-width vertical flow in canonical order with an `L` (`32px`) gap.
 - The vertical separators are not displayed on Mobile.
-
-## Responsive Behavior
-
-- The left-aligned hierarchy of the Section Intro, Primary CTA, and Reassurance Row is preserved across Breakpoints.
