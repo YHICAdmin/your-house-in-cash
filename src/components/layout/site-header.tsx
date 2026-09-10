@@ -5,16 +5,8 @@ import Link from "next/link";
 import { Phone as PhoneIcon } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { navigationItems } from "@/data/navigation";
 import styles from "./site-header.module.css";
-
-const navigationItems = [
-  { label: "How It Works", href: "/how-it-works" },
-  { label: "Situations", href: "/situations" },
-  { label: "Areas We Buy In", href: "/areas-we-buy-in" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "FAQ", href: "/faq" },
-  { label: "About Us", href: "/about-us" },
-];
 
 const closeDuration = 180;
 const phoneNumber = "216-111-1111";

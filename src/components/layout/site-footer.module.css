@@ -1,0 +1,107 @@
+.footer {
+  background: var(--color-background);
+}
+
+.footer a {
+  font-weight: 400;
+}
+
+.layout {
+  align-items: start;
+  row-gap: var(--spacing-xl);
+}
+
+.company,
+.navigation,
+.legal,
+.contact,
+.bottomRow {
+  min-width: 0;
+  grid-column: 1 / -1;
+}
+
+.logoLink {
+  display: block;
+  width: fit-content;
+}
+
+.logo {
+  width: auto;
+  height: 44px;
+}
+
+.description {
+  margin: var(--spacing-m) 0 0;
+  color: var(--color-text-secondary);
+}
+
+.heading {
+  margin: 0 0 var(--spacing-m);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-s);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.callLabel {
+  margin: 0 0 var(--spacing-xs);
+}
+
+.serviceArea {
+  margin: var(--spacing-s) 0 0;
+  color: var(--color-text-secondary);
+}
+
+.bottomRow {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-m);
+  color: var(--color-text-muted);
+}
+
+.bottomRow p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .company,
+  .legal {
+    grid-column: 1 / span 4;
+  }
+
+  .navigation,
+  .contact {
+    grid-column: 5 / span 4;
+  }
+
+  .logo {
+    height: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .company {
+    grid-column: 1 / span 3;
+  }
+
+  .navigation {
+    grid-column: 4 / span 3;
+  }
+
+  .legal {
+    grid-column: 7 / span 3;
+  }
+
+  .contact {
+    grid-column: 10 / span 3;
+  }
+
+  .logo {
+    height: 56px;
+  }
+}
