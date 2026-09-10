@@ -1705,10 +1705,10 @@ The Supporting Benefits are shared across Area Pages and do not vary by location
 
 ### Visual Design
 
-- Each benefit heading uses the global `H4` typography.
+- Each benefit heading uses a local `16px / 600 / 1.25` typography treatment.
 - Each Supporting Copy uses the global `Body` typography.
 - The benefits remain visually open without a Card, background, Border, Radius, or Shadow.
-- On Desktop and Tablet, each benefit is preceded by a `1px` global `Brand Green` vertical separator that begins at the top and uses a fixed `15px` height; the first separator sits between the CTA composition and the first benefit, and the second sits between the two benefits.
+- On Desktop and Tablet, each benefit is preceded by a `1px` global `Brand Green` vertical separator aligned with the top of its heading and matching the heading's `20px` line-box height; the first separator sits between the CTA composition and the first benefit, and the second sits between the two benefits.
 
 ### Dimensions and Alignment
 
