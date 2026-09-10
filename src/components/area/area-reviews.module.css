@@ -174,14 +174,16 @@
 }
 
 .reviewSource {
+  width: 32px;
+  height: 32px;
   flex: 0 0 auto;
-  gap: var(--spacing-xs);
+  justify-content: flex-end;
   color: var(--color-text-muted);
 }
 
 .sourceMark {
   width: auto;
-  height: var(--icon-medium);
+  height: auto;
   flex: 0 0 auto;
 }
 

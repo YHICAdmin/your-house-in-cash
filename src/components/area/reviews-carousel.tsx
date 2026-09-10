@@ -10,23 +10,23 @@ const reviews = [
     name: "Customer Name 01",
     portrait: "/images/reviewers/reviewer-01.png",
     source: "Google",
-    sourceMark: "/images/review-platforms/google-temporary.svg",
-    sourceMarkWidth: 20,
+    sourceMark: "/images/review-platforms/google-g-full-color.png",
+    sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Customer Name 02",
     portrait: "/images/reviewers/reviewer-02.png",
     source: "Facebook",
-    sourceMark: "/images/review-platforms/facebook-temporary.svg",
-    sourceMarkWidth: 20,
+    sourceMark: "/images/review-platforms/facebook-f-logo.png",
+    sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
   },
   {
     name: "Customer Name 03",
     portrait: "/images/reviewers/reviewer-03.png",
     source: "BBB",
-    sourceMark: "/images/review-platforms/bbb-temporary.svg",
+    sourceMark: "/images/review-platforms/bbb-mark-logo.png",
     sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
   },
@@ -34,23 +34,23 @@ const reviews = [
     name: "Customer Name 04",
     portrait: "/images/reviewers/reviewer-04.png",
     source: "Google",
-    sourceMark: "/images/review-platforms/google-temporary.svg",
-    sourceMarkWidth: 20,
+    sourceMark: "/images/review-platforms/google-g-full-color.png",
+    sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
   },
   {
     name: "Customer Name 05",
     portrait: "/images/reviewers/reviewer-01.png",
     source: "Facebook",
-    sourceMark: "/images/review-platforms/facebook-temporary.svg",
-    sourceMarkWidth: 20,
+    sourceMark: "/images/review-platforms/facebook-f-logo.png",
+    sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
   },
   {
     name: "Customer Name 06",
     portrait: "/images/reviewers/reviewer-02.png",
     source: "BBB",
-    sourceMark: "/images/review-platforms/bbb-temporary.svg",
+    sourceMark: "/images/review-platforms/bbb-mark-logo.png",
     sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum donec ullamcorper nulla non metus.",
   },
@@ -58,23 +58,23 @@ const reviews = [
     name: "Customer Name 07",
     portrait: "/images/reviewers/reviewer-03.png",
     source: "Google",
-    sourceMark: "/images/review-platforms/google-temporary.svg",
-    sourceMarkWidth: 20,
+    sourceMark: "/images/review-platforms/google-g-full-color.png",
+    sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.",
   },
   {
     name: "Customer Name 08",
     portrait: "/images/reviewers/reviewer-04.png",
     source: "Facebook",
-    sourceMark: "/images/review-platforms/facebook-temporary.svg",
-    sourceMarkWidth: 20,
+    sourceMark: "/images/review-platforms/facebook-f-logo.png",
+    sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.",
   },
   {
     name: "Customer Name 09",
     portrait: "/images/reviewers/reviewer-01.png",
     source: "BBB",
-    sourceMark: "/images/review-platforms/bbb-temporary.svg",
+    sourceMark: "/images/review-platforms/bbb-mark-logo.png",
     sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
   },
@@ -82,8 +82,8 @@ const reviews = [
     name: "Customer Name 10",
     portrait: "/images/reviewers/reviewer-02.png",
     source: "Google",
-    sourceMark: "/images/review-platforms/google-temporary.svg",
-    sourceMarkWidth: 20,
+    sourceMark: "/images/review-platforms/google-g-full-color.png",
+    sourceMarkWidth: 32,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.",
   },
 ] as const;
@@ -193,7 +193,7 @@ export function ReviewsCarousel({ headingId }: ReviewsCarouselProps) {
                   />
                 </div>
                 <blockquote className={styles.reviewQuote}>
-                  <p className={`${styles.reviewText} text-body-large`}>
+                  <p className={`${styles.reviewText} text-body`}>
                     {review.text}
                   </p>
                 </blockquote>
@@ -216,9 +216,9 @@ export function ReviewsCarousel({ headingId }: ReviewsCarouselProps) {
                       src={review.sourceMark}
                       alt=""
                       width={review.sourceMarkWidth}
-                      height={20}
+                      height={review.sourceMarkWidth}
                     />
-                    <span>{review.source}</span>
+                    <span className="visually-hidden">{review.source}</span>
                   </span>
                 </figcaption>
               </figure>

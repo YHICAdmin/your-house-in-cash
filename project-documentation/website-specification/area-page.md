@@ -770,9 +770,9 @@ Contains, in document order:
   * Review text.
   * Bottom row containing:
     * Customer attribution with a circular customer portrait and Customer Name.
-    * Review Source with the source platform mark and visible platform name.
+    * Review Source with the source platform mark.
 * Customer portraits use different temporary representative reviewer images during development and are replaced when approved reviewer assets are available.
-* Review Source uses the official identity mark for Google, Facebook, BBB, or another documented source when an approved asset is available. A temporary representative platform asset may be used during development until the approved asset is available.
+* Review Source uses the approved official identity mark for Google, Facebook, BBB, or another documented source.
 * Uses the following temporary content in canonical display order for layout testing:
   1. Customer name: `Customer Name 01`; source: `Google`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`
   2. Customer name: `Customer Name 02`; source: `Facebook`; review text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`
@@ -801,9 +801,8 @@ Contains, in document order:
 * Each Review Card uses the global `Large` Radius.
 * The five-star rating uses exactly five filled canonical Lucide `Star` icons at the global Medium Icon size (`20px`) with Brand Green Dark fill.
 * The `Quote` icon uses the global Medium Icon size (`20px`) and Brand Green Light color.
-* The review text uses the global `Body Large` typography and `Text Primary` color.
+* The review text uses the global `Body` typography and `Text Primary` color.
 * The customer name uses the global `Body` typography and `Text Primary` color.
-* The review source uses the global `Body Small` typography and `Text Muted` color.
 * Customer portraits fill their circular crop without distortion.
 
 #### Dimensions and Alignment
@@ -816,7 +815,7 @@ Contains, in document order:
 * The bottom row spans the available card width and remains positioned toward the bottom of the Review Card consistently across cards.
 * Within the bottom row, Customer Attribution aligns left and Review Source aligns right; both groups are vertically center-aligned.
 * Customer portraits use `48px × 48px` dimensions, a `1:1` Aspect Ratio, and the global `Pill` Radius across all Breakpoints.
-* Review Source marks use a `20px` height and automatic width that preserves the asset's Aspect Ratio across all Breakpoints.
+* Review Source marks use `32px × 32px` dimensions across all Breakpoints.
 
 #### Spacing
 
@@ -824,7 +823,6 @@ Contains, in document order:
 * `M` (`24px`) separates the top row from the Review Text.
 * At least `M` (`24px`) separates the Review Text from the bottom row; any additional available space remains above the bottom row.
 * `XS` (`8px`) separates the customer portrait from the Customer Name.
-* `XS` (`8px`) separates the source platform mark from the visible platform name.
 * `S` (`16px`) separates Customer Attribution from Review Source within the bottom row.
 * These spacing values remain unchanged across all Breakpoints.
 
@@ -832,7 +830,7 @@ Contains, in document order:
 
 * The five-star rating is communicated as `5 out of 5 stars`; the individual `Star` icons are decorative.
 * Customer portraits are decorative; the Customer Name communicates the reviewer identity.
-* Review-platform marks are decorative; the visible platform name communicates the review source.
+* Review-platform marks are decorative; a visually hidden platform name communicates the review source.
 * The `Quote` icon is decorative.
 
 ### Carousel Controls
