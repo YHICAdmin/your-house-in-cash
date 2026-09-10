@@ -8,7 +8,7 @@ Provide a focused conversion flow for homeowners requesting a cash offer. Collec
 
 This specification records the approved design direction and flow. Explicitly unresolved decisions are marked **TBD** and must be resolved before implementing the affected behavior or treatment. This document does not authorize implementation.
 
-The page inherits the applicable Visual Design System, Component Library, Accessibility, and Implementation Guidelines. It uses the shared Conversion Header and Conversion Footer defined in the [Site Shell](site-shell.md) specification.
+The page inherits the applicable Visual Design System, Component Library, Accessibility, and Implementation Guidelines. It uses the shared Minimal Header and Minimal Footer defined in the [Site Shell](site-shell.md) specification.
 
 ## Route and Page Ownership
 
@@ -21,14 +21,14 @@ The page inherits the applicable Visual Design System, Component Library, Access
 
 * One large, horizontally centered Form Card is the primary element, with an abstract brand background surrounding it.
 * Do not use a `5–1–6` composition, a two-column content composition, an additional Sidebar, or marketing Cards around the form.
-* The Conversion Header, main form area, and Conversion Footer form the page's vertical flow.
+* The Minimal Header, main form area, and Minimal Footer form the page's vertical flow.
 * The same Card container is retained throughout both steps and Success State. Its width and placement remain stable while its contents change.
 * A fixed Card height is not required. Exact width, vertical placement, and treatment of height changes are TBD.
 * At narrower Breakpoints, the Card fits within the available page width and global page padding. Form fields remain in one vertical column.
 
-# Conversion Header
+# Minimal Header
 
-Uses the shared [Conversion Header](site-shell.md#conversion-header) defined in the Site Shell specification.
+Uses the shared [Minimal Header](site-shell.md#minimal-header) defined in the Site Shell specification.
 
 # Main Form Area
 
@@ -185,12 +185,10 @@ Uses the shared [Conversion Header](site-shell.md#conversion-header) defined in 
 * No separate Thank You Page or route is introduced.
 * Exact transition into Success State and any post-completion actions remain TBD.
 
-# Conversion Footer
+# Minimal Footer
 
-Uses the shared [Conversion Footer](site-shell.md#conversion-footer) defined in the Site Shell specification.
+Uses the shared [Minimal Footer](site-shell.md#minimal-footer) defined in the Site Shell specification.
 
 # Decisions Still Required Before Implementation
 
 The TBD items above remain intentionally unresolved. They cover the missing reference and final geometry, form/control design and validation, final unapproved copy, Step 2 choices and completion behavior, persistence and failure/recovery handling, and accessible state transitions. No placeholder implementation, additional services, or assumptions about these decisions are authorized by this specification.
-
-Unresolved shared Conversion Header decisions are recorded in [Site Shell → Conversion Header](site-shell.md#conversion-header) and must also be resolved before implementing that component.

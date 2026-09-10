@@ -453,7 +453,16 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 - The Divider is decorative and does not create a semantic boundary.
 - Each social image uses its platform name as alternative text, providing the link's accessible name. Links use the global keyboard focus-visible treatment.
 
-# Conversion Header
+# Minimal Header
+
+## Layout
+
+* Uses the global `Background` color.
+* Uses the bottom-border treatment defined for the [Header's default state](#layout).
+* Uses the global [Line System](../visual-design-system.md#line-system); internal lines do not dictate element placement.
+* Height: `80px` on Desktop, `72px` on Tablet, and `64px` on Mobile.
+* All Header content is vertically centered.
+* The Minimal Header contains no primary navigation, menu control, or additional CTA.
 
 ## Logo
 
@@ -479,23 +488,30 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 ### Content
 
 * Uses the phone number and `tel:` destination defined in [Site Shell → Phone Contact](#phone-contact).
-* A short supporting message accompanies the number. Direction: `Talk to a real person`; final wording is TBD.
+* Supporting message: `Talk to a real person`.
 
 ### Component and Semantics
 
 * The phone number uses the documented `Text Link` Component with telephone link semantics.
 
+### Visual Design
+
+* The supporting message uses global `Body Small` typography and `Text Secondary` color.
+
 ### Dimensions and Alignment
 
 * Positioned on the right, opposite the Logo.
-* The Conversion Header contains no primary navigation, menu control, or additional CTA.
+* At all Breakpoints, the supporting message appears above the phone number, with both aligned to the right.
+
+### Spacing
+
+* `XS` (`8px`) separates the supporting message from the phone number at all Breakpoints.
 
 ### Responsive Behavior
 
-* Retains the Logo and phone contact at all Breakpoints. The supporting message may wrap within the contact group on narrow screens.
-* Header height, sticky behavior, separation treatment, and exact internal spacing are TBD; the full marketing Header's behavior is not automatically assigned to this reduced variant.
+* The supporting message may wrap within the contact group on narrow screens.
 
-# Conversion Footer
+# Minimal Footer
 
 ## Legal Links
 
@@ -507,7 +523,7 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 
 ### Component and Semantics
 
-* The Conversion Footer uses native `footer` semantics. Each legal link uses the documented `Text Link` Component.
+* The Minimal Footer uses native `footer` semantics. Each legal link uses the documented `Text Link` Component.
 
 ### Dimensions and Alignment
 
