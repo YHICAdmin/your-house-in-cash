@@ -53,12 +53,28 @@
   margin: 0 0 var(--spacing-xs);
 }
 
-.serviceArea {
+.contact .email {
+  display: block;
+  max-width: 100%;
+  margin-top: var(--spacing-s);
+  overflow-wrap: anywhere;
+}
+
+.address {
+  font-style: normal;
+}
+
+.serviceArea,
+.address {
   margin: var(--spacing-s) 0 0;
   color: var(--color-text-secondary);
 }
 
 .bottomRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-s);
   border-top: 1px solid var(--color-border);
   padding-top: var(--spacing-m);
   color: var(--color-text-muted);
@@ -68,7 +84,27 @@
   margin: 0;
 }
 
+.socialPlatforms {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--spacing-s);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socialLink {
+  display: inline-flex;
+}
+
 @media (min-width: 768px) {
+  .bottomRow {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .company,
   .legal {
     grid-column: 1 / span 4;

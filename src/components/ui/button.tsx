@@ -4,6 +4,7 @@ import type {
   ReactNode,
 } from "react";
 import styles from "./button.module.css";
+import { getExternalLinkProps } from "@/lib/link-target";
 
 type SharedButtonProps = {
   children: ReactNode;
@@ -35,7 +36,7 @@ export function Button({
     const { href, ...linkProps } = props;
 
     return (
-      <a {...linkProps} className={buttonClassName} href={href}>
+      <a {...linkProps} {...getExternalLinkProps(href)} className={buttonClassName} href={href}>
         {children}
       </a>
     );

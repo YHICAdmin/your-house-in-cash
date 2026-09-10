@@ -383,12 +383,16 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 - Label: **Call Us**.
 - Phone number: `216-111-1111`.
 - The phone number uses link semantics and navigates to `tel:2161111111`.
+- Email: `info@yourhousesincash.com`, linked to `mailto:info@yourhousesincash.com`.
+- Physical address: **6545 Market Avenue North, North Canton, OH 44720**.
 - Service-area text: **Serving Northeast Ohio**.
 
 ### Component and Semantics
 
 - The heading uses `H2` semantics.
 - The phone number uses the documented `Text Link` Component.
+- The email uses the documented `Text Link` Component with the Footer's regular font weight (`400`).
+- The physical address uses `address` semantics, with the street on the first line and city, state, and ZIP on the second line.
 - The service-area text uses paragraph semantics.
 
 ### Visual Design
@@ -396,16 +400,17 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 - The heading uses the global `H4` typography.
 - The **Call Us** label uses the global `Label` typography.
 - The service-area text uses the global `Body Small` typography and `Text Secondary` color.
+- The physical address uses `Body Small`, Text Secondary, and normal (non-italic) font style.
 
 ### Dimensions and Alignment
 
-- The heading, **Call Us** label, phone number, and service-area text form one left-aligned vertical content flow in that order.
+- The heading, **Call Us** label, phone number, email, physical address, and service-area text form one left-aligned vertical content flow in that order. The email wraps when needed to remain within the column.
 
 ### Spacing
 
 - `M` (`24px`) separates the heading from the **Call Us** label across all Breakpoints.
 - `XS` (`8px`) separates the **Call Us** label from the phone number across all Breakpoints.
-- `S` (`16px`) separates the phone number from the service-area text across all Breakpoints.
+- `S` (`16px`) separates the phone number, email, physical address, and service-area text from each adjacent item across all Breakpoints.
 
 ## Footer Bottom Row
 
@@ -413,24 +418,38 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 
 - Copyright notice: **© {Current Year} Your House in Cash. All rights reserved.**
 - `{Current Year}` is generated dynamically from the current calendar year.
+- Social identity marks link to the following profiles in this order:
+  - Facebook: `https://www.facebook.com/yourhouseincash?utm_source=chatgpt.com`
+  - Instagram: `https://www.instagram.com/yourhouseincash/?utm_source=chatgpt.com`
+  - LinkedIn: `https://www.linkedin.com/company/your-house-in-cash?utm_source=chatgpt.com`
+  - YouTube: `https://youtube.com/@yourhouseincash?utm_source=chatgpt.com`
+  - TikTok: `https://www.tiktok.com/@yourhouseincash?utm_source=chatgpt.com`
+- X is omitted until its handle is approved.
 
 ### Component and Semantics
 
 - The copyright notice uses paragraph semantics.
+- Social identity marks use a semantic unordered list named `Social media` and local SVG images from `/images/social-platforms/`.
+- Each mark uses native link semantics and opens the supplied profile URL in a new tab, following the global [Link Destinations](../implementation-guidelines.md#link-destinations) rule (`target="_blank"`, `rel="noopener noreferrer"`).
 
 ### Visual Design
 
 - The copyright notice uses the global `Body Small` typography and `Text Muted` color.
+- Social identity marks are monochrome, `20px × 20px`, with no enclosing background, Border, or Shadow.
 - A full-width Divider above the copyright notice uses the global default `1px` solid Border treatment and `Border` color (`#E4E7E4`).
 
 ### Dimensions and Alignment
 
 - The copyright notice is left-aligned.
+- On Desktop and Tablet, the social marks are right-aligned in the same row as the copyright notice, with both groups vertically centered.
+- On Mobile, the social marks follow the copyright notice on a separate left-aligned row.
 
 ### Spacing
 
 - `M` (`24px`) separates the Divider from the copyright notice across all Breakpoints.
+- `S` (`16px`) separates adjacent social marks and is the minimum gap between the copyright and social groups.
 
 ### Accessibility
 
 - The Divider is decorative and does not create a semantic boundary.
+- Each social image uses its platform name as alternative text, providing the link's accessible name. Links use the global keyboard focus-visible treatment.

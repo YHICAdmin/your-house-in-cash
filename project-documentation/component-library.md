@@ -77,6 +77,13 @@ A Component for displaying multiple content items that can be expanded and colla
 
 A generic Component for actions displayed as a button. It can use the appropriate semantic element depending on the action.
 
+### Link Navigation
+
+- When rendered as a link, follows the global [Link Destinations](implementation-guidelines.md#link-destinations) rule: external web destinations open in a new tab; internal destinations open in the current tab.
+- Telephone, email, and fragment destinations retain their native behavior. Native button actions are unaffected.
+
+### Visual Style
+
 - Font: Inter / 16px / 600 / 1
 - Background: #101114
 - Text/Icon: #FFFFFF
@@ -196,6 +203,14 @@ All other visual properties remain consistent across instances.
 ## Text Link
 
 A generic Component for actions or navigation displayed as text rather than as a button.
+
+### Link Navigation
+
+- Follows the global [Link Destinations](implementation-guidelines.md#link-destinations) rule across all consuming Sections and Breakpoints.
+- External web destinations always open in a new tab with `target="_blank"` and `rel="noopener noreferrer"`.
+- Internal destinations open in the current tab; telephone, email, and fragment destinations retain their native behavior.
+
+### Visual Style
 
 - Font: Inter / 16px / 600 / 1.5
 - Color: #101114

@@ -2,7 +2,36 @@ import Image from "next/image";
 import Link from "next/link";
 import { TextLink } from "@/components/ui/text-link";
 import { navigationItems } from "@/data/navigation";
+import { getExternalLinkProps } from "@/lib/link-target";
 import styles from "./site-footer.module.css";
+
+const socialPlatforms = [
+  {
+    name: "Facebook",
+    icon: "facebook",
+    href: "https://www.facebook.com/yourhouseincash?utm_source=chatgpt.com",
+  },
+  {
+    name: "Instagram",
+    icon: "instagram",
+    href: "https://www.instagram.com/yourhouseincash/?utm_source=chatgpt.com",
+  },
+  {
+    name: "LinkedIn",
+    icon: "linkedin",
+    href: "https://www.linkedin.com/company/your-house-in-cash?utm_source=chatgpt.com",
+  },
+  {
+    name: "YouTube",
+    icon: "youtube",
+    href: "https://youtube.com/@yourhouseincash?utm_source=chatgpt.com",
+  },
+  {
+    name: "TikTok",
+    icon: "tiktok",
+    href: "https://www.tiktok.com/@yourhouseincash?utm_source=chatgpt.com",
+  },
+] as const;
 
 export function SiteFooter() {
   return (
@@ -49,6 +78,13 @@ export function SiteFooter() {
           <h2 className={`${styles.heading} text-heading-4`}>Contact</h2>
           <p className={`${styles.callLabel} text-label`}>Call Us</p>
           <TextLink href="tel:2161111111">216-111-1111</TextLink>
+          <TextLink className={styles.email} href="mailto:info@yourhousesincash.com">
+            info@yourhousesincash.com
+          </TextLink>
+          <address className={`${styles.address} text-body-small`}>
+            6545 Market Avenue North<br />
+            North Canton, OH 44720
+          </address>
           <p className={`${styles.serviceArea} text-body-small`}>
             Serving Northeast Ohio
           </p>
@@ -58,6 +94,24 @@ export function SiteFooter() {
           <p className="text-body-small">
             © {new Date().getFullYear()} Your House in Cash. All rights reserved.
           </p>
+          <ul className={styles.socialPlatforms} aria-label="Social media">
+            {socialPlatforms.map((platform) => (
+              <li key={platform.icon}>
+                <a
+                  className={styles.socialLink}
+                  href={platform.href}
+                  {...getExternalLinkProps(platform.href)}
+                >
+                  <Image
+                    src={`/images/social-platforms/${platform.icon}.svg`}
+                    alt={platform.name}
+                    width={20}
+                    height={20}
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>

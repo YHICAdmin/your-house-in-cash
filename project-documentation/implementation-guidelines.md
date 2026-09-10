@@ -1,3 +1,11 @@
+## Link Destinations
+
+- Internal site navigation uses relative URLs and opens in the current tab.
+- External web destinations (`http://`, `https://`, or protocol-relative `//` URLs) always use `target="_blank"` and `rel="noopener noreferrer"`.
+- Telephone (`tel:`), email (`mailto:`), and in-page fragment links retain their native behavior.
+- `Text Link`, link-style `Button`, and external native anchors share the `getExternalLinkProps` implementation in `src/lib/link-target.ts`.
+- This rule applies to site-owned navigation links, not embedded third-party interfaces such as Google Maps.
+
 ## Element Order
 
 Elements within each Section must be implemented in the order in which they are documented. The documented element order determines DOM order unless an approved exception is explicitly defined in the relevant Section or Element specification.

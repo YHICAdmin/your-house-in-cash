@@ -914,6 +914,7 @@ Contains, in document order:
 ### Interaction
 
 * The Reviews Link leads to the official Google Business Profile; exact URL pending.
+* The Reviews Link opens in a new tab, following the global [Link Destinations](../implementation-guidelines.md#link-destinations) rule for external web destinations.
 
 ### Accessibility
 
@@ -1361,6 +1362,10 @@ For the current Cleveland Area Page:
 
 * Data Sources uses paragraph semantics.
 * `Redfin` uses the documented `Text Link` Component with link semantics.
+
+#### Interaction
+
+* Activating `Redfin` opens the current Area Page's source destination in a new tab, following the global [Link Destinations](../implementation-guidelines.md#link-destinations) rule for external web destinations.
 
 #### Visual Design
 
