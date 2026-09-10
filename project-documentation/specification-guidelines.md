@@ -188,15 +188,33 @@ Component assignments and local classifications remain documented when they are 
 
 This rule applies to future specification work. It does not authorize retrospective cleanup of existing specifications.
 
-### Section Purpose
+### Section Structure and Ownership
 
-Every Section specification must begin with a `Purpose` subsection. Briefly state what the Section helps the user accomplish or understand and why it belongs on the page. Shared Header and Footer specifications follow the same requirement, describing their reusable role.
+Every Section specification uses three required subsections in this order: `Purpose`, `Layout`, and `Elements`. Shared Header and Footer specifications follow the same structure, describing their reusable role.
 
-Purpose establishes the intent against which content, design, and implementation decisions can be assessed. It does not repeat the Section's element inventory or prescribe its Layout.
+#### Purpose
 
-### Element Order and Structural Subsections
+Briefly state what the Section helps the user accomplish or understand and why it belongs on the page. Purpose establishes the intent against which content, design, and implementation decisions can be assessed. It does not repeat the element inventory or prescribe the Layout.
 
-Within a Section specification, the documented order of its primary element subsections establishes their canonical element order. Do not use a `Structure`, `Layout`, or equivalent subsection solely to restate that sequence. Retain such a subsection only when it defines an additional multi-element relationship, such as grouping, nesting, parallel composition, responsive arrangement, conditional presence, or an approved difference between document and visual order.
+#### Layout
+
+Define how the Section is composed, presented, and behaves as a whole. Layout owns:
+
+- Overall composition: content areas, Grid allocation, grouping, nesting, parallel flows, and relationships among elements.
+- Section dimensions, alignment, and spacing owned by the Section rather than by an individual element.
+- The Section's visual shell: background treatments, borders, shadows, and its relationship to the global Line System.
+- Responsive changes to the overall composition, including explicitly approved differences between document and visual order.
+- Behavior of the Section's shell, such as sticky positioning or changes to its appearance during scrolling.
+
+Document only locally required decisions under the global inheritance rule. Do not repeat individual element properties or the canonical element sequence. Keep the `Layout` heading when no local requirements are needed, without adding filler or restating global defaults.
+
+#### Elements
+
+Contains the specifications of the Section's primary elements as named subsections, in their canonical element order. Each element owns its content and its individual design, placement, spacing, behavior, and other applicable requirements according to `Element Specification Structure and Ownership` below. Shared composition requirements remain in `Layout` rather than being repeated in the participating elements.
+
+#### Additional Section Subsections
+
+Additional Section-level subsections require explicit user approval before they are added. If a necessary Section-wide requirement cannot be clearly owned by `Purpose`, `Layout`, or an element, propose a precisely named additional subsection and explain why the standard structure is insufficient. Add it only after approval, and document the requirement once.
 
 ### Element Specification Structure and Ownership
 
@@ -225,8 +243,6 @@ Omit subsections that have nothing to own. Document each requirement once under 
 - `Accessibility` owns content-dependent accessibility requirements and approved local exceptions.
 - `Responsive Behavior` owns Breakpoint-specific changes not owned more precisely by another subsection.
 - `Technical Requirements` owns required architecture, APIs, services, configuration, data acquisition, and other technical prerequisites.
-
-Section-level `Layout` owns only genuine relationships among multiple primary elements that cannot be owned by one element, including shared Grid composition, parallel flows, and multi-element grouping. It does not duplicate individual element placement or properties.
 
 Content that exists solely to support, qualify, attribute, or complete another primary element may be nested under that element. Visual proximity alone does not justify nesting; an element with an independent purpose, placement, responsive composition, or interaction remains a primary element. Nested elements follow the same applicable subsection structure.
 
