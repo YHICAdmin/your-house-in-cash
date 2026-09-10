@@ -1201,8 +1201,8 @@ For the current Cleveland Area Page:
 
 ### Spacing After
 
-* `M` (`24px`) on Desktop and Tablet.
-* `S` (`16px`) on Mobile.
+* `L` (`32px`) on Desktop and Tablet.
+* `M` (`24px`) on Mobile.
 
 ## Local Map
 
@@ -1403,7 +1403,8 @@ For the current Cleveland Area Page:
 
 ### Visual Design
 
-* The heading uses the same local typography and visual treatment as the Local Statistics headline: `18px`, `700` weight, the global `H3` line height and letter spacing, uppercase presentation, and global `Brand Green Dark`.
+* The heading uses the same local typography and visual treatment as the Local Statistics headline: `18px`, `700` weight, the global `H3` letter spacing, uppercase presentation, and global `Brand Green Dark`.
+* The heading uses a local `1.4` line height to provide clear separation between its two intentional lines.
 * The nearby-city collection uses a visual grid of `MapPin`-and-city-name links.
 * The semantic list has no visible list markers.
 * Each complete linked entry remains visually open and does not use a background, Border, Shadow, or surrounding Card surface.
@@ -1428,7 +1429,7 @@ For the current Cleveland Area Page:
 
 ### Spacing After
 
-* `L` (`32px`) separates the complete Nearby Areas composition from Local Market Content across all Breakpoints.
+* `XL` (`48px`) separates the complete Nearby Areas composition from Local Market Content across all Breakpoints.
 
 ### Interaction
 

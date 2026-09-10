@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: var(--spacing-s);
+  margin-bottom: var(--spacing-m);
 }
 
 .heading {
@@ -72,6 +72,10 @@
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.nearbyHeading {
+  line-height: 1.4;
 }
 
 .statisticColumns {
@@ -151,7 +155,7 @@
 }
 
 .nearbyAreas {
-  margin-bottom: var(--spacing-l);
+  margin-bottom: var(--spacing-xl);
 }
 
 .nearbyGrid {
@@ -260,7 +264,7 @@
   }
 
   .intro {
-    margin-bottom: var(--spacing-m);
+    margin-bottom: var(--spacing-l);
   }
 
   .map {
