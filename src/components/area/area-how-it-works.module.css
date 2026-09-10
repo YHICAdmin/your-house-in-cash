@@ -74,7 +74,9 @@
   border-radius: var(--radius-pill);
   background: var(--color-background-neutral);
   color: var(--color-text-secondary);
-  transition: color 150ms ease;
+  transition:
+    color 150ms ease,
+    background-color 150ms ease;
 }
 
 .stepTextFlow {
@@ -155,6 +157,7 @@
     width: 1px;
     height: var(--spacing-s);
     background: transparent;
+    transition: background-color 150ms ease;
   }
 
   .stepButton[aria-pressed="true"] .activeIndicator {
@@ -189,6 +192,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .illustration,
+  .activeIndicator,
   .stepNumber,
   .stepTitle {
     transition: none;

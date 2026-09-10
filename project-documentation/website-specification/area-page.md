@@ -976,7 +976,6 @@ Contains, in document order:
 * On Desktop, the Process Steps area occupies Grid Columns `1–5`, Grid Column `6` remains intentionally empty, and the Step Content area occupies Grid Columns `7–12`.
 * On Tablet, the Process Steps area occupies Grid Columns `1–4` and the Step Content area occupies Grid Columns `5–8`.
 * On Mobile, the composition forms one full-width flow containing each Step immediately followed by its corresponding Step Content, in canonical Step order.
-* Each Step Content uses its approved repository-owned SVG illustration.
 
 ### Spacing
 
@@ -995,10 +994,9 @@ The Process Steps area contains exactly three Steps in this order:
 #### Component and Semantics
 
 * The Step collection uses ordered-list semantics, and each Step uses list-item semantics.
-* On Desktop and Tablet, each complete Step is an interactive control that activates its corresponding Step Content.
+* On Desktop and Tablet, each complete Step uses native button semantics and activates its corresponding Step Content.
 * The Step Title uses `H3` semantics.
 * Each Step number is plain text within a local circular treatment and does not use the `Icon Container` Component or icon semantics.
-* The visible Step number is decorative for assistive technologies because the ordered-list semantics communicate the same sequence.
 
 #### Visual Design
 
@@ -1049,8 +1047,7 @@ The Process Steps area contains exactly three Steps in this order:
 
 #### Accessibility
 
-* On Desktop and Tablet, each Step control uses native button semantics and is keyboard operable.
-* Each Step control inherits the global `:focus-visible` treatment around its complete interactive area; no local focus treatment overrides it.
+* The visible Step number is decorative for assistive technologies because the ordered-list semantics communicate the same sequence.
 * On Desktop and Tablet, the active Step is exposed programmatically.
 * On Desktop and Tablet, the Step controls and Step Content use an accessible relationship so the active control identifies the content it displays.
 * The active-Step indicator is decorative and is not exposed to assistive technologies.
@@ -1062,7 +1059,6 @@ The Process Steps area contains exactly three Steps in this order:
 #### Content
 
 * On Desktop and Tablet, the area displays content corresponding to the active Process Step.
-* On Mobile, each Step Content instance appears directly after its corresponding Process Step.
 * Step `01` uses `/images/how-it-works/property-form.svg`. The illustrated form contains:
   1. Heading: `Tell us about your house`.
   2. Field label: `Property address`.
@@ -1086,7 +1082,6 @@ The Process Steps area contains exactly three Steps in this order:
 #### Component and Semantics
 
 * Each Step Content is a static SVG image rather than an interactive form, offer interface, or calendar.
-* The illustrations are decorative because the corresponding Process Step provides the complete meaningful content; each uses empty alternative text.
 
 #### Visual Design
 
@@ -1097,7 +1092,6 @@ The Process Steps area contains exactly three Steps in this order:
 * Illustrated fields and internal regions use the global `1px` Border and global Small Radius (`8px`).
 * Illustrated primary text uses Text Primary, supporting text uses Text Secondary, and actions and selected states use Brand Green with Brand Green Light where a supporting accent surface is required.
 * The interface treatment remains visually lightweight and does not resemble a photographic scene.
-* All meaningful Step information remains in the adjacent Process Step; text or controls depicted within an illustration are visual details and do not introduce additional product information or interaction.
 * The Step Content does not add an outer Border, Shadow, or Radius; the white canvas, internal whitespace, rounded interface surfaces, and subtle depth are rendered within each SVG.
 
 #### Dimensions and Alignment
@@ -1110,10 +1104,10 @@ The Process Steps area contains exactly three Steps in this order:
 * On Desktop and Tablet, the top edge of the Step Content aligns with the top edge of the Process Steps area.
 * The Step Content remains top-aligned and does not stretch or vertically center when the Process Steps area is taller.
 
-#### Responsive Behavior
+#### Accessibility
 
-* Desktop and Tablet use one shared Step Content area whose displayed content changes with the active Step.
-* Mobile uses three static Step Content instances in canonical Step order.
+* The illustrations are decorative because the corresponding Process Step provides the complete meaningful content.
+* All meaningful Step information remains in the adjacent Process Step; text or controls depicted within an illustration are visual details and do not introduce additional product information or interaction.
 
 #### Technical Requirements
 

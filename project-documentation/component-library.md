@@ -90,7 +90,7 @@ A generic Component for actions displayed as a button. It can use the appropriat
 
 ### Conversion Variant
 
-The `conversion` variant is used for the primary conversion CTA in the Area Hero, How It Works, and Final CTA.
+The `conversion` variant is used for the primary conversion CTA in the Area Hero and Final CTA.
 
 - Min-height: 64px
 - Horizontal padding: `XL` (`48px`)

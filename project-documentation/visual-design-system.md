@@ -274,7 +274,7 @@ Remains dark / near-black by default.
 
 Used for the website’s primary conversion actions.
 
-Appears consistently in areas such as the Header, Hero, How It Works, and Final CTA.
+Appears consistently in areas such as the Header, Hero, and Final CTA.
 
 ### Secondary Actions
 
