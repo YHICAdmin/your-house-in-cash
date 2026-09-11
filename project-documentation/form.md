@@ -11,6 +11,7 @@ Design tokens and accessibility requirements inherit from the [Visual Design Sys
 ## Visual Design
 
 * Single-line inputs and multiline text fields use the global `Surface` background and default `Border` treatment.
+* Single-line inputs and multiline text fields use the global `Small` Radius (`8px`).
 
 ## Dimensions and Alignment
 
@@ -31,14 +32,26 @@ Design tokens and accessibility requirements inherit from the [Visual Design Sys
 ## Component and Semantics
 
 * Single-selection groups use native radio controls. Multiple-selection groups use native checkbox controls.
+* Each choice group uses a `fieldset`, with its visible question as the `legend` identifying the group.
 
 ## Visual Design
 
 * Choice options have a bordered, clickable presentation. Unselected options use the global `Surface` background and default `Border` treatment.
+* Choice-option containers use the global `Small` Radius (`8px`).
 * Selected options use `Brand Green` for the border and `Brand Green Light` for the background, retaining the default border thickness and style.
+* Hovering an unselected, enabled choice option changes its border color to `Brand Green` while retaining the global `Surface` background.
 * Each option displays a visible radio or checkbox indicator reflecting its checked state, so selection is not communicated by color alone.
 
 # Validation Feedback
+
+## Visual Design
+
+* While a field displays a validation error, its border uses the global `Error` color, retaining its specified thickness and style.
+* The corresponding error message below the field uses the global `Error` color.
+
+## Dimensions and Alignment
+
+* When a field has supporting guidance, keep that guidance visible while an error is displayed and place the error message below it.
 
 ## Interaction
 
@@ -48,12 +61,24 @@ Design tokens and accessibility requirements inherit from the [Visual Design Sys
 ## Accessibility
 
 * When submission encounters validation errors, move keyboard focus to the first invalid field in the page's documented field order.
+* While a field displays a validation error, set `aria-invalid="true"` on its control and include the error message's ID in the control's `aria-describedby`, preserving any existing references to supporting text.
+* When the error clears, remove its reference from `aria-describedby` and clear the invalid state. Preserve references to any remaining supporting text.
 
 # Submission State
+
+## Visual Design
+
+* Save-failure messages use the global `Error` color.
+* While a save request is pending, text fields and choice controls retain their existing colors, opacity, and legibility, including selected states, without additional dimming. The submit action communicates the pending state using the page-defined saving label.
+
+## Dimensions and Alignment
+
+* While displaying its saving label, the activated submission control retains at least its width immediately before the label changed. It may grow if needed to accommodate the saving label.
 
 ## Interaction
 
 * Fields and choice controls cannot be edited while a save request is pending. Preserve their displayed values and restore editing if the save fails.
+* Clear any previous save-failure message when a new save request begins. Display the applicable failure message again only if that request fails.
 
 ## Accessibility
 
