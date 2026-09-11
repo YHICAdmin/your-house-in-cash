@@ -2,7 +2,7 @@
 
 Define shared form controls, their presentation, and common validation and submission behavior. These defaults apply to forms unless the consuming page specifies an approved override.
 
-Each page defines its field inventory and order, labels, choice options, required status, value-validation rules, messages, composition, steps, and submission destination.
+Each page defines its field inventory and order, visible labels or questions, supporting guidance where needed, choice options, required status, value-validation rules, messages including error-message wording, composition, steps, and submission destination.
 
 Design tokens and accessibility requirements inherit from the [Visual Design System](visual-design-system.md) and [Accessibility](accessibility.md). Form controls are defined here; actions use the existing [Button](component-library.md#button) and [Text Link](component-library.md#text-link) contracts when assigned by the page.
 
@@ -13,10 +13,6 @@ Design tokens and accessibility requirements inherit from the [Visual Design Sys
 Provide the shared foundation for identifying a field, presenting guidance and validation feedback, and exposing that information accessibly.
 
 All field types below inherit these rules. Each type defines the semantic element that owns its label, guidance, and errors.
-
-## Content
-
-* The consuming page defines the visible label or question, supporting guidance where needed, required status, and error-message wording.
 
 ## Visual Design
 
@@ -67,7 +63,7 @@ Inherits [Field](#field).
 
 ## Accessibility
 
-* When a text field has visible supporting guidance, include the guidance element's ID in the control's `aria-describedby`, preserving any applicable error-message reference.
+* The input control is the semantic owner for the inherited supporting-guidance association.
 * While a text field displays a validation error, set `aria-invalid="true"` on its control and include the error message's ID in the control's `aria-describedby`, preserving any existing references to supporting text.
 
 # Textarea
@@ -80,7 +76,7 @@ Inherits [Text Field](#text-field), replacing its single-line control with a mul
 
 ## Component and Semantics
 
-* Uses a native `textarea`, with its visible `label` associated through matching `for` and `id` values.
+* Uses a native `textarea`.
 
 ## Dimensions and Alignment
 
@@ -124,7 +120,8 @@ Collect a United States phone number with readable formatting and a normalized s
 
 ## Technical Requirements
 
-* Validate the normalized phone number under the United States numbering-region rule and submit it as a ten-digit string, without hyphens, spaces, parentheses, or a `+1` prefix. Display formatting is not part of the submitted value.
+* Submit the normalized phone number as a ten-digit string, without hyphens, spaces, parentheses, or a `+1` prefix. Display formatting is not part of the submitted value.
+* Uses the approved [Phone Number Validation library](external-libraries.md#phone-number-validation).
 
 # Address Field
 
@@ -183,7 +180,7 @@ Inherits [Field](#field).
 
 ## Accessibility
 
-* When a choice group has visible supporting guidance, include the guidance element's ID in the group's `fieldset` `aria-describedby`, preserving any applicable error-message reference.
+* The group's `fieldset` is the semantic owner for the inherited supporting-guidance association.
 * While a choice group displays a validation error, set `aria-invalid="true"` on its `fieldset` and include the group error message's ID in the fieldset's `aria-describedby`, preserving any existing references to group guidance.
 
 # Submission State

@@ -1218,10 +1218,8 @@ For the current Cleveland Area Page:
 
 ### Visual Design
 
-* Google Maps owns the embedded Map's internal presentation, labels, controls, and geographic detail.
 * The Map container uses the global `Medium` Radius (`12px`) and clips the Google Map content to that Radius.
 * The Map uses no Border or Shadow; the Map surface provides its separation from the surrounding Section background.
-* Required Google Maps branding and attribution remain visible and unmodified.
 * The information note uses global `Body Small` typography and global `Text Secondary` for both its icon and text.
 * The information note remains visually open without a background, Border, Shadow, or separate surface.
 
@@ -1246,20 +1244,14 @@ For the current Cleveland Area Page:
 * `L` (`32px`) on Tablet.
 * `M` (`24px`) on Mobile.
 
-### Interaction
-
-* The Map remains interactive through the native embedded Google Maps experience.
-* Google Maps owns the embedded controls and interaction behavior; the Section adds no custom JavaScript Map interaction layer.
-
 ### Accessibility
 
 * The iframe title is `Interactive map of {Area Name}`, generated dynamically from the current Area Page data.
-* Google Maps' embedded accessible interface remains unmodified.
 * The `Info` icon is decorative because the adjacent note text communicates the complete information; the icon is hidden from assistive technologies and does not receive an accessible name.
 
 ### Technical Requirements
 
-* Each Area Page's embed URL is generated through Google Maps' standard Share or embed map workflow and stored in the canonical Area dataset.
+* Uses the approved [Google Maps Embed service](../external-libraries.md#google-maps-embed), following its embedding, interaction, branding, and accessibility requirements. Each Area Page's embed URL is stored in the canonical Area dataset.
 * The iframe uses lazy loading and the `strict-origin-when-cross-origin` referrer policy.
 
 ## Local Statistics

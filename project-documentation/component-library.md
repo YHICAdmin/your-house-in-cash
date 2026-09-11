@@ -290,7 +290,7 @@ Help users find a United States address through Geoapify suggestions while retai
 
 ### Content
 
-* Address-autocomplete attribution: `Powered by Geoapify`, with `Geoapify` linking to `https://www.geoapify.com/`.
+* Uses the attribution text and destination defined by the approved [Address Autocomplete Service](external-libraries.md#address-autocomplete-service).
 * Address-autocomplete empty-results message: `No matching addresses. You can enter the address manually.`
 * Address-autocomplete loading message: `Searching addresses…`.
 
@@ -320,6 +320,4 @@ Help users find a United States address through Geoapify suggestions while retai
 
 ### Technical Requirements
 
-* Address autocomplete uses [Geoapify Address Autocomplete API](https://apidocs.geoapify.com/docs/geocoding/address-autocomplete/), with suggestions restricted to the United States.
-* The Geoapify Free plan requires visible attribution linking to Geoapify, following its [plan requirements](https://www.geoapify.com/pricing/).
-* The Geoapify development API key is configured in the Git-ignored `.env.local` as `NEXT_PUBLIC_GEOAPIFY_API_KEY` for browser-side autocomplete requests. A test request with the `http://localhost:3000` Origin returned HTTP `200` and five suggestions. UI integration and browser verification remain pending implementation; add the production site's origin to the key's allowed origins before launch.
+* Uses the approved [Address Autocomplete Service](external-libraries.md#address-autocomplete-service) and its API-key configuration and attribution requirements.
