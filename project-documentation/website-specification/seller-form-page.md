@@ -6,41 +6,6 @@ Provide a focused conversion flow for homeowners requesting a cash offer. Collec
 
 * Canonical route: `/get-cash-offer`.
 
-# Layout
-
-* The Minimal Header, main form area, and Minimal Footer form the page's vertical flow.
-* One large, horizontally centered Form Card is the primary element, with an abstract brand background surrounding it.
-* The Form Card begins after the main form area's inherited global Section top padding, measured from the bottom of the Minimal Header.
-* Do not use a `5–1–6` composition, a two-column content composition, an additional Sidebar, or marketing Cards around the form.
-
-## Page Background
-
-### Content
-
-* Composition reference: the Stripe form-page screenshot supplied by the user, `Screenshot 2026-09-11 090850.png`. It guides the composition; colors use the site's established brand palette.
-* A broad, curved graphic ribbon enters from the top of the main form area, passes behind the Form Card, and continues down its right side.
-* No house photography, literal house illustration, promotional Cards, or additional Sidebar.
-
-### Visual Design
-
-* Uses the established brand greens, with soft transitions to light green and the global white `Background`. Generous white space surrounds the ribbon.
-* The graphic is confined to the main form area. The Minimal Header retains its approved white background.
-* Uses the global Line System and its layering rules.
-* Exact ribbon geometry, gradient stops, and opacity remain TBD.
-
-### Accessibility
-
-* The abstract graphics are decorative and non-interactive.
-
-### Responsive Behavior
-
-* On Tablet, the ribbon retains the Desktop composition, scaled to the available width: it enters from the top, passes behind the Form Card, and continues down its right side.
-* On Mobile, portions of the ribbon remain visible above and to the right of the Form Card. The graphic is clipped at the viewport edges without introducing horizontal scrolling.
-
-### Technical Requirements
-
-* The ribbon is a repository-owned SVG asset with gradients.
-
 # Header and Footer
 
 * Uses the shared [Minimal Header](site-shell.md#minimal-header).
@@ -53,6 +18,30 @@ Provide a focused conversion flow for homeowners requesting a cash offer. Collec
 Guide sellers through submitting their contact and property details to request a cash offer, keeping the process focused and confirming that their information has been received.
 
 ## Layout
+
+* One large, horizontally centered Form Card is the primary element, with an abstract brand background surrounding it.
+* The Form Card begins after the main form area's inherited global Section top padding, measured from the bottom of the Minimal Header.
+* Do not use a `5–1–6` composition, a two-column content composition, an additional Sidebar, or marketing Cards around the form.
+
+### Page Background
+
+* Composition reference: the Stripe form-page screenshot supplied by the user, `Screenshot 2026-09-11 090850.png`. It guides the composition; colors use the site's established brand palette.
+* A broad, curved graphic ribbon enters from the top of the main form area, passes behind the Form Card, and continues down its right side.
+* No house photography, literal house illustration, promotional Cards, or additional Sidebar.
+
+* Uses the established brand greens, with soft transitions to light green and the global white `Background`. Generous white space surrounds the ribbon.
+* The graphic is confined to the main form area. The Minimal Header retains its approved white background.
+* Uses the global Line System and its layering rules.
+* Exact ribbon geometry, gradient stops, and opacity remain TBD.
+
+#### Responsive Behavior
+
+* On Tablet, the ribbon retains the Desktop composition, scaled to the available width: it enters from the top, passes behind the Form Card, and continues down its right side.
+* On Mobile, portions of the ribbon remain visible above and to the right of the Form Card. The graphic is clipped at the viewport edges without introducing horizontal scrolling.
+
+#### Technical Requirements
+
+* The ribbon is a repository-owned SVG asset with gradients.
 
 ## Form Card
 
@@ -67,10 +56,13 @@ Guide sellers through submitting their contact and property details to request a
 * Uses opaque white global `Surface`, global `Medium` Radius (`12px`), and subtle separation from the background. The Card renders above the ribbon so the graphic does not interfere with form readability.
 * Uses the global `Floating` Shadow for separation from the background.
 * State headings use global `H2` typography while retaining `H1` semantics. Supporting copy uses global `Body` typography and `Text Secondary`.
+* Text inputs and the optional multiline text field use the global `Surface` background and default `Border` treatment.
 
 ### Dimensions and Alignment
 
 * Uses a single vertical content flow.
+* Each text input and the optional multiline text field have a persistent visible label above the control.
+* Single-line text inputs have a minimum height of `48px` at all Breakpoints.
 * Width: `100%` of the available width, up to a maximum of `640px`, while preserving global page padding.
 * The same Card container is retained for Step 1, Step 2, and Success State, with stable width and placement while its contents change. Its top edge remains at the same position within the main form area throughout the flow.
 * Card height is determined by the content of the current state. The Card grows or shrinks downward while its top edge remains in place.
@@ -78,7 +70,7 @@ Guide sellers through submitting their contact and property details to request a
 ### Spacing
 
 * Internal Padding: `XL` (`48px`) on Desktop and Tablet; `L` (`32px`) on Mobile.
-* `M` (`24px`) separates Progress from the active state's heading.
+* In Step 1, `M` (`24px`) separates Progress from the heading at all Breakpoints.
 * `S` (`16px`) separates a heading from its supporting copy where present.
 * `L` (`32px`) separates the step introduction from its fields.
 * `M` (`24px`) separates adjacent field or question groups; `XS` (`8px`) separates a visible field label from its control.
@@ -90,11 +82,13 @@ Guide sellers through submitting their contact and property details to request a
 * The Step 1-to-Step 2 transition combines a fade with `16px` of horizontal movement over `200ms`, using `ease-out`. The outgoing content moves left and fades out; the incoming content enters from the right and fades in.
 * When `prefers-reduced-motion: reduce` applies, the content is replaced immediately without animation.
 * Do not use a step transition to indicate success before the required save has succeeded.
+* In both form steps, fields and choice controls cannot be edited while a save request is pending. Preserve their displayed values and restore editing if the save fails.
 
 ### Accessibility
 
+* Text inputs and the optional multiline text field use the global [Focus-Visible Treatment](../accessibility.md#focus-visible-treatment).
 * After a transition between form steps completes, move keyboard focus to the new step's heading. When reduced motion is preferred, move focus after the content is replaced immediately.
-* Validation feedback, save-status announcements, and Progress state semantics remain TBD before implementation.
+* In both steps, announce `Saving…` and the applicable save-failure message to screen readers without moving focus.
 
 ### Responsive Behavior
 
@@ -106,6 +100,10 @@ Guide sellers through submitting their contact and property details to request a
 
 * Two steps, in order: `Your details` → `About the house`.
 
+### Component and Semantics
+
+* Uses ordered-list semantics, with each step represented as a list item.
+
 ### Visual Design
 
 * Minimal treatment at the top of the Card, using global `Body Small` typography.
@@ -114,8 +112,12 @@ Guide sellers through submitting their contact and property details to request a
 ### Interaction
 
 * Displays Step 1 as active initially and Step 2 as active after the basic lead has been saved and the second step is displayed.
-* Clickable step navigation is not specified.
+* The Progress indicator is informational only; its steps are not clickable.
 * The Progress indicator is hidden in Success State.
+
+### Accessibility
+
+* The current step is marked with `aria-current="step"`.
 
 ## Step 1 — Your Details
 
@@ -129,16 +131,38 @@ Guide sellers through submitting their contact and property details to request a
   3. `Phone Number`
   4. `Email Address`
 * Primary action: `Continue`.
-* A small reassurance line below the action communicates privacy/security and no obligation. Final wording is TBD and must reflect the actual handling of submitted information.
+* Save-failure message near the primary action: `We couldn’t save your details. Please try again.`
+* Reassurance line below the primary action: `Your information stays private. No obligation.`
+* Property Address guidance asks for a complete address: street, city, state, and ZIP code.
+* Address-autocomplete attribution: `Powered by Geoapify`, with `Geoapify` linking to `https://www.geoapify.com/`.
+* Required-field error messages:
+  * Property Address: `Please enter the property address.`
+  * Your Name: `Please enter your name.`
+  * Phone Number: `Please enter your phone number.`
+  * Email Address: `Please enter your email address.`
+* Invalid-value error messages for non-empty fields:
+  * Phone Number: `Please enter a valid US phone number.`
+  * Email Address: `Please enter a valid email address.`
 
 ### Component and Semantics
 
 * The primary action uses the documented `Button` Component with native submit-button semantics.
-* Each field has its visible label. Required/optional status, validation rules, name structure, and address-entry behavior are TBD.
+* Each field has its visible label. Property Address, Your Name, Phone Number, and Email Address are all required.
+* `Your Name` is a single full-name field.
+* `Phone Number` accepts United States phone numbers only.
+* `Your Name` is valid when non-empty after trimming leading and trailing whitespace. It does not require two words or restrict the language or script used.
+* `Email Address` is validated for basic email-address syntax after trimming leading and trailing whitespace. No email verification code is sent as part of this flow.
+* A manually entered `Property Address` is valid when non-empty after trimming leading and trailing whitespace; a match in the autocomplete address database is not required.
+* Phone Number validation accepts input with or without the `+1` prefix and allows spaces, hyphens, and parentheses. Normalize those formatting differences before validating that the number belongs to the United States numbering region; the country code alone does not establish validity.
+
+### Visual Design
+
+* Geoapify attribution uses global `Caption` typography and `Text Secondary` color, remaining visible and legible when the suggestions panel is open.
 
 ### Dimensions and Alignment
 
 * All four fields appear in one vertical column at every Breakpoint.
+* The Geoapify attribution appears below the address suggestions, within the suggestions panel.
 
 ### Spacing
 
@@ -147,18 +171,35 @@ Guide sellers through submitting their contact and property details to request a
 ### Interaction
 
 * Completing Step 1 saves the basic lead **before** advancing to Step 2.
+* Property Address offers address autocomplete and allows manual entry when the address cannot be found in the suggestions.
+* Autocomplete suggestions are restricted to addresses in the United States.
+* Manual entry uses the same Property Address field. Selecting an autocomplete suggestion is not required, and no additional address form is opened.
+* If address autocomplete is unavailable, keep the field usable for manual entry, preserve the entered value, and allow submission under the manual-address validation rule without showing an autocomplete-service error message.
 * Step 2 is displayed only after successful persistence has been confirmed; merely holding values in client memory does not satisfy this requirement.
-* If saving fails, the flow must not advance as though the lead were saved. Exact error copy, retry behavior, and loading treatment are TBD.
+* While the lead-save request is pending, the primary action displays `Saving…` and prevents repeated submission until the request completes.
+* If saving fails, remain on Step 1, preserve all entered values, show the save-failure message, and restore the primary action to `Continue` so the seller can retry.
+* Show field-validation errors below the corresponding field after it loses focus or when `Continue` is activated. Preserve all entered values when errors are displayed.
+* While a field displays a validation error, revalidate it as the seller types and remove the error as soon as the value is valid.
+
+### Accessibility
+
+* When `Continue` is activated with validation errors, move keyboard focus to the first invalid field in the documented field order.
 
 ### Technical Requirements
 
 * Lead destination, persistence service, submission contract, duplicate handling, and recovery behavior are TBD.
+* Address autocomplete uses [Geoapify Address Autocomplete API](https://apidocs.geoapify.com/docs/geocoding/address-autocomplete/), with suggestions restricted to the United States.
+* The Geoapify Free plan requires visible attribution linking to Geoapify, following its [plan requirements](https://www.geoapify.com/pricing/).
+* Geoapify account/API-key setup and integration remain pending implementation.
 * Step 2 information must be associated with the lead saved in Step 1 rather than treated as an unrelated lead. The association mechanism is TBD.
+* When Step 1 is revisited for editing, `Continue` saves the revised details to the same lead before returning to Step 2; it does not create a new lead.
 
 ## Step 2 — About the House
 
 ### Content
 
+* Heading: `Tell us a little more about the house`
+* Supporting copy: `These details help us understand your property. You can skip this step for now.`
 * Uses quick choices wherever possible to minimize typing.
 * Question groups, in canonical order:
   1. `Property Condition`
@@ -167,39 +208,75 @@ Guide sellers through submitting their contact and property details to request a
   4. `Selling Timeline`
   5. `Anything else you'd like us to know?` — optional free text.
 * Includes `Skip for now` as a secondary action.
-* Exact step heading, supporting copy if any, choice inventories, selection rules, and primary completion-action label are TBD.
+* Includes a small `Back` action for returning to Step 1 to edit the basic details.
+* Primary completion action: `Submit details`.
+* Save-failure message: `We couldn’t save these details. Please try again.`
+* `Property Condition` allows one selection from: `Move-in ready`, `Needs minor repairs`, `Needs major repairs`, `Not sure`.
+* `Occupancy` allows one selection from: `Owner-occupied`, `Tenant-occupied`, `Vacant`, `Other / Not sure`.
+* `Reason for Selling` allows multiple selections from: `Inherited property`, `Moving / Relocating`, `Financial difficulties`, `Too many repairs`, `Tired of being a landlord`, `Downsizing`, `Other`.
+* `Selling Timeline` allows one selection from: `As soon as possible`, `Within 1–3 months`, `Within 3–6 months`, `More than 6 months`, `Just exploring`.
+* All Step 2 questions are optional.
 
 ### Component and Semantics
 
-* Quick-selection controls must be specified once their options and single/multiple-selection behavior are approved.
+* Property Condition, Occupancy, and Selling Timeline use native radio controls for single selection. Reason for Selling uses native checkbox controls for multiple selection.
 * The optional free-text question uses a labeled multiline text input.
-* `Skip for now` is an in-page action, not navigation to another page. Its visual control treatment is TBD.
+* `Skip for now` uses the documented `Text Link` Component with native button semantics (`type="button"`) for the in-page action.
+* `Back` uses the documented `Text Link` Component with native button semantics (`type="button"`) for the in-page action.
+
+### Visual Design
+
+* Choice options have a bordered, clickable presentation. Unselected options use the global `Surface` background and default `Border` treatment.
+* Selected options use `Brand Green` for the border and `Brand Green Light` for the background, retaining the default border thickness and style.
+* Each choice option displays a visible radio indicator for single selection or checkbox indicator for multiple selection. The indicator reflects the checked state so selection is not communicated by color alone.
+
+### Dimensions and Alignment
+
+* `Back` appears between the Progress indicator and the Step 2 heading, aligned to the left.
+* `Skip for now` appears below `Submit details`.
+* The optional multiline text field initially displays three rows.
+* Within each question group, choice options use content-based widths and form rows that wrap to fit the available width at all Breakpoints.
+
+### Spacing
+
+* At all Breakpoints, `M` (`24px`) separates Progress from `Back`, and `S` (`16px`) separates `Back` from the Step 2 heading.
 
 ### Interaction
 
 * Completing Step 2 updates the saved lead with the additional information and shows Success State within the same Card.
+* The optional multiline text field can be resized vertically by the user.
+* While a Step 2 save request is pending, the activated completion action displays `Saving…`, and both `Submit details` and `Skip for now` prevent further submission until the request completes.
+* `Back` is unavailable while the Step 2 save request is pending. If saving fails, it becomes available again.
+* `Submit details` accepts partial answers; unanswered questions do not block completion.
 * `Skip for now` allows completion without supplying the additional details and leads to the same Success State, retaining the Step 1 lead.
-* Required/optional status of the choice groups, treatment of partially entered details when skipping, back/edit behavior, and save-failure handling are TBD.
+* `Back` returns to Step 1 with all previously entered values retained, including any Step 2 values. Those Step 2 values remain available when the seller continues forward again.
+* If answers have been entered, `Skip for now` saves them to the existing lead before displaying Success State. Show Success State only after that save succeeds.
+* If saving fails after `Submit details` or `Skip for now`, remain on Step 2, preserve all entered answers, show the save-failure message, and allow the seller to retry. Do not display Success State until the required save succeeds.
 
 ## Success State
 
 ### Content
 
-* Heading direction: `You're all set, {First Name}.`
-* Briefly confirms receipt, explains that the team will review the details, and says that the team will make contact. Final copy is TBD.
-* A phone number may be offered for someone who wants to speak immediately. Whether to include it and its accompanying wording remain TBD.
-* First-name derivation and the fallback when it cannot be derived are TBD.
+* Heading: `You're all set, {First Name}.`
+* Supporting copy: `We’ve received your details. Our team will review them and get in touch to discuss your property.`
+* Phone prompt: `Prefer to talk now?`
+* Uses the phone number and `tel:` destination defined in [Site Shell → Phone Contact](site-shell.md#phone-contact).
+* `{First Name}` uses the first word from the full-name field, ignoring leading and trailing whitespace. If no name is available, the heading is `You're all set.`.
 
 ### Component and Semantics
 
 * Replaces the form contents inside the same Card.
+* The phone number uses the documented `Text Link` Component with telephone link semantics.
+
+### Dimensions and Alignment
+
+* The phone prompt and phone link appear below the confirmation message.
 
 ### Interaction
 
 * No separate Thank You Page or route is introduced.
 * The transition into Success State uses a fade over `200ms` with `ease-out`.
 * When `prefers-reduced-motion: reduce` applies, Success State replaces the form immediately without animation.
-* Post-completion actions remain TBD.
 
 ### Accessibility
 
@@ -207,4 +284,10 @@ Guide sellers through submitting their contact and property details to request a
 
 # Decisions Still Required Before Implementation
 
-The TBD items above remain intentionally unresolved. They cover the final background treatment and responsive composition, form/control design and validation, final unapproved copy, Step 2 choices and completion behavior, persistence and failure/recovery handling, and accessible state transitions. No placeholder implementation, additional services, or assumptions about these decisions are authorized by this specification.
+The following decisions remain unresolved:
+
+* Page Background: exact ribbon geometry, gradient stops, and opacity.
+* Form controls: Input and quick-selection Component contracts, building on the local requirements already approved above.
+* Backend: lead destination, persistence service, submission contract, duplicate handling, recovery behavior, and the mechanism associating both steps with the same lead.
+
+No placeholder implementation, additional services, or assumptions about these decisions are authorized by this specification.
