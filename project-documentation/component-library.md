@@ -231,3 +231,95 @@ Content-width at every Breakpoint; does not automatically become a Button or ful
 ### Configurable
 
 Label, destination/action, icon and icon position.
+
+## Autocomplete
+
+### Purpose
+
+Help users find and select a value from suggestions as they type, both within forms and in standalone interfaces.
+
+### Content
+
+* The consuming use supplies the suggestion data source, display text, selected value, loading and empty-results messages, minimum query length, debounce delay, and maximum suggestion count.
+
+### Component and Semantics
+
+* Uses an editable input and a suggestions panel. The consuming use supplies the input's visible label and presentation; standalone use does not inherit form validation or submission behavior.
+
+### Visual Design
+
+* The suggestions panel uses the global `Surface` background, default `Border` treatment, and `Small` Radius (`8px`).
+* The active suggestion during keyboard navigation and a hovered suggestion use the global `Brand Green Light` background with `Text Primary` text.
+
+### Dimensions and Alignment
+
+* The suggestions panel appears below the input, matching its width and overlaying the following content without shifting the surrounding layout at any Breakpoint.
+* Suggestion text wraps onto multiple lines as needed to display its full content within the panel width at every Breakpoint, including Mobile.
+* Limit the panel's height to the available visible viewport space below the input, accounting for the on-screen keyboard on Mobile. Allow vertical scrolling in the suggestions area when needed and keep the active keyboard-navigated suggestion in view.
+
+### Interaction
+
+* Start a search only when the input meets the configured minimum length, after the configured debounce delay.
+* Whenever the user edits the input value, immediately clear the previous suggestions and active option, including during the debounce interval, so suggestions for the previous value cannot be selected.
+* When the input contains fewer characters than the configured minimum, close the suggestions panel and clear its suggestions and active option while preserving the remaining text. Cancel any scheduled search and ignore pending results for the previous value so they cannot reopen the panel.
+* When the suggestions open, no suggestion is active by default. The user explicitly navigates to a suggestion with the arrow keys or selects one by clicking or tapping it.
+* While suggestions are open, `ArrowDown` and `ArrowUp` navigate the suggestions. `Enter` selects the active suggestion without submitting the form. `Escape` closes the suggestions while preserving the text in the field.
+* Clicking or tapping outside the input and its suggestions panel closes the panel without selecting a suggestion or changing the entered value.
+* Returning focus to the input alone does not reopen the suggestions panel. Editing the input value triggers a new search under the existing minimum-length and debounce rules.
+* When a search completes successfully with no matching suggestions, display the empty-results message in the suggestions panel and keep manual entry available. The message is informational, not a selectable suggestion or validation error.
+* While a search is pending, display the loading message in the suggestions panel without blocking typing. The loading message is not a selectable suggestion.
+* Selecting a suggestion applies its configured value to the input, closes the panel, and leaves focus in the editable input. When no suggestion is active, Enter behavior belongs to the consuming use.
+* Tab follows the logical focus order. Moving focus outside the component closes the panel without selecting a suggestion or changing the entered value.
+
+### Accessibility
+
+* The input uses an editable `combobox` with `aria-autocomplete="list"`. Its `aria-expanded` value reflects whether the suggestions are open, and `aria-controls` references the suggestions list when it is displayed.
+* The suggestions list uses `listbox` semantics, with each suggestion represented as an `option` with a unique ID. Keyboard focus stays in the input while navigating suggestions; `aria-activedescendant` references the active option and is removed when no option is active or the list closes.
+* Announce the autocomplete loading and empty-results messages through a `role="status"` region without moving focus. The status region is separate from the `listbox` and its selectable options.
+
+### Technical Requirements
+
+* Display search results only when they belong to the latest search request and match the field's current value. Ignore responses from superseded requests so older results cannot replace current suggestions.
+* Once the user closes the suggestions panel, pending search responses must not reopen it. A subsequent input edit may start a new search under the documented search rules.
+
+## Address Autocomplete
+
+### Purpose
+
+Help users find a United States address through Geoapify suggestions while retaining manual entry.
+
+### Content
+
+* Address-autocomplete attribution: `Powered by Geoapify`, with `Geoapify` linking to `https://www.geoapify.com/`.
+* Address-autocomplete empty-results message: `No matching addresses. You can enter the address manually.`
+* Address-autocomplete loading message: `Searching addresses…`.
+
+### Component and Semantics
+
+* Uses [Autocomplete](#autocomplete), with the address-specific configuration below.
+
+### Visual Design
+
+* Geoapify attribution uses global `Caption` typography and `Text Secondary` color, remaining visible and legible when the suggestions panel is open.
+
+### Dimensions and Alignment
+
+* Within the inherited panel-height limit, reserve space for the attribution at the bottom and allocate the remaining height to the scrollable suggestions area.
+* The Geoapify attribution remains visible at the bottom of the suggestions panel, below and outside the scrollable suggestions area.
+
+### Interaction
+
+* Address offers address autocomplete and allows manual entry when the address cannot be found in the suggestions.
+* Autocomplete suggestions are restricted to addresses in the United States.
+* Display a maximum of five address suggestions at all Breakpoints.
+* Start address-autocomplete searches once the field contains at least three characters, waiting `300ms` after the most recent edit before sending a request.
+* Manual entry uses the same Address field. Selecting an autocomplete suggestion is not required, and no additional address form is opened.
+* The selected value applied by Autocomplete is the suggestion's full address.
+* While the suggestions panel is open, `Tab` from the Address field moves focus to the Geoapify attribution link and keeps the panel open. `Tab` from that link moves focus to the next focusable element and closes the panel. Neither action selects a suggestion or changes the entered address.
+* If address autocomplete is unavailable, keep the field usable for manual entry, preserve the entered value, and leave validation and submission to the consuming use without showing an autocomplete-service error message.
+
+### Technical Requirements
+
+* Address autocomplete uses [Geoapify Address Autocomplete API](https://apidocs.geoapify.com/docs/geocoding/address-autocomplete/), with suggestions restricted to the United States.
+* The Geoapify Free plan requires visible attribution linking to Geoapify, following its [plan requirements](https://www.geoapify.com/pricing/).
+* The Geoapify development API key is configured in the Git-ignored `.env.local` as `NEXT_PUBLIC_GEOAPIFY_API_KEY` for browser-side autocomplete requests. A test request with the `http://localhost:3000` Origin returned HTTP `200` and five suggestions. UI integration and browser verification remain pending implementation; add the production site's origin to the key's allowed origins before launch.

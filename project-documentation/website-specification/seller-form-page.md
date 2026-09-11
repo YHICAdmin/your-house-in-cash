@@ -142,7 +142,7 @@ Guide sellers through submitting their contact and property details to request a
 
 * The primary action uses the documented `Button` Component with native submit-button semantics.
 * Property Address, Your Name, Phone Number, and Email Address are all required.
-* `Your Name` is a single full-name field.
+* `Your Name` uses the shared [Text Field](../form.md#text-field) as a single full-name field.
 * `Phone Number` uses the shared [Phone Field](../form.md#phone-field).
 * `Email Address` uses the shared [Email Field](../form.md#email-field).
 * `Your Name` is valid when non-empty after trimming leading and trailing whitespace. It does not require two words or restrict the language or script used.
@@ -180,7 +180,7 @@ Guide sellers through submitting their contact and property details to request a
 
 #### Component and Semantics
 
-* Uses the shared [Address Autocomplete](../form.md#address-autocomplete) field.
+* Uses the shared [Address Field](../form.md#address-field).
 
 #### Dimensions and Alignment
 
@@ -215,7 +215,7 @@ Guide sellers through submitting their contact and property details to request a
 ### Component and Semantics
 
 * Property Condition, Occupancy, and Selling Timeline use the shared single-selection controls. Reason for Selling uses the shared multiple-selection controls.
-* The optional free-text question uses the shared multiline text field.
+* The optional free-text question uses the shared [Textarea](../form.md#textarea).
 * The optional free-text field has a maximum length of 2,000 characters, enforced with `maxlength="2000"`.
 * `Clear selection` uses the documented `Text Link` Component with native button semantics (`type="button"`).
 * `Skip for now` uses the documented `Text Link` Component with native button semantics (`type="button"`) for the in-page action.
