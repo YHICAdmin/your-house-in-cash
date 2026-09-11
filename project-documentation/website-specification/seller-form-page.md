@@ -32,7 +32,7 @@ Guide sellers through submitting their contact and property details to request a
 * The ribbon's gradient transitions from global `Brand Green` to `Brand Green Light` and then the white `Background`. Concentrate the strongest green to the right of the Form Card, with soft transitions and generous surrounding white space.
 * The graphic is confined to the main form area. The Minimal Header retains its approved white background.
 * Uses the global Line System and its layering rules.
-* Exact ribbon geometry, gradient stops, and opacity remain TBD.
+* Approved background reference: [SVG composition](../design-drafts/seller-form-background.svg) and [rendered preview](../design-drafts/seller-form-background.png). The SVG's ribbon paths, gradient definitions, and bottom-fade mask define the approved Desktop background geometry, color stops, and opacity. The form and shell shown in the preview provide context; their specifications remain authoritative for their implementation.
 
 #### Responsive Behavior
 
@@ -232,7 +232,7 @@ Guide sellers through submitting their contact and property details to request a
 
 * Address autocomplete uses [Geoapify Address Autocomplete API](https://apidocs.geoapify.com/docs/geocoding/address-autocomplete/), with suggestions restricted to the United States.
 * The Geoapify Free plan requires visible attribution linking to Geoapify, following its [plan requirements](https://www.geoapify.com/pricing/).
-* Geoapify account/API-key setup and integration remain pending implementation.
+* The Geoapify development API key is configured in the Git-ignored `.env.local` as `NEXT_PUBLIC_GEOAPIFY_API_KEY` for browser-side autocomplete requests. A test request with the `http://localhost:3000` Origin returned HTTP `200` and five suggestions. UI integration and browser verification remain pending implementation; add the production site's origin to the key's allowed origins before launch.
 * Display address-search results only when they belong to the latest search request and match the field's current value. Ignore responses from superseded requests so older results cannot replace current suggestions.
 * Once the seller closes the suggestions panel, pending search responses must not reopen it. A subsequent address edit may start a new search under the documented search rules.
 
@@ -338,7 +338,6 @@ Guide sellers through submitting their contact and property details to request a
 
 The following decisions remain unresolved:
 
-* Page Background: exact ribbon geometry, gradient stops, and opacity.
 * Backend: lead destination, persistence service, submission contract, duplicate handling, recovery behavior, and the mechanism associating both steps with the same lead.
 
 No placeholder implementation, additional services, or assumptions about these decisions are authorized by this specification.
