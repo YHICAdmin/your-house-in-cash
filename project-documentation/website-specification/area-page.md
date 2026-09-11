@@ -1,4 +1,4 @@
-**Purpose**
+# Purpose
 
 The primary page template for Cleveland and future city/area pages.
 
@@ -6,7 +6,7 @@ The primary goal is to generate leads from motivated home sellers.
 
 Secondary goals are to build trust, demonstrate a local presence, and support organic and local search visibility.
 
-## Area Page Routing
+# Area Page Routing
 
 * Every Area Page uses the canonical route pattern `/sell-your-house-fast-as-is-{city-slug}`.
 * Each Area Page's canonical city slug is supplied by the canonical Area dataset, and its route is derived from that slug rather than stored as an independently authored URL.

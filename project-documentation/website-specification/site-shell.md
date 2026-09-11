@@ -524,6 +524,7 @@ Provide access to essential legal information while keeping attention on the pag
 ## Layout
 
 * Contains only the Legal Links.
+* Vertical Padding: `M` (`24px`) at all Breakpoints, overriding the global Section vertical padding.
 
 ## Component and Semantics
 
@@ -539,6 +540,10 @@ Provide access to essential legal information while keeping attention on the pag
 ### Component and Semantics
 
 * Each legal link uses the documented `Text Link` Component.
+
+### Visual Design
+
+* Legal links use font weight `400` as a local override of the `Text Link` Component.
 
 ### Dimensions and Alignment
 
