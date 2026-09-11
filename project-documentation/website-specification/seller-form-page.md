@@ -49,20 +49,17 @@ Guide sellers through submitting their contact and property details to request a
 
 * Contains the Progress indicator and the currently displayed form step, or Success State without the Progress indicator.
 * Each form step uses native form semantics. The active state's primary heading uses `H1` semantics.
-* Input and quick-selection Component contracts are TBD; the existing Component Library does not yet define them.
+* Uses the shared [Form](../form.md) definitions for text fields, choice controls, validation feedback, and submission state.
 
 ### Visual Design
 
 * Uses opaque white global `Surface`, global `Medium` Radius (`12px`), and subtle separation from the background. The Card renders above the ribbon so the graphic does not interfere with form readability.
 * Uses the global `Floating` Shadow for separation from the background.
 * State headings use global `H2` typography while retaining `H1` semantics. Supporting copy uses global `Body` typography and `Text Secondary`.
-* Text inputs and the optional multiline text field use the global `Surface` background and default `Border` treatment.
 
 ### Dimensions and Alignment
 
 * Uses a single vertical content flow.
-* Each text input and the optional multiline text field have a persistent visible label above the control.
-* Single-line text inputs have a minimum height of `48px` at all Breakpoints.
 * Width: `100%` of the available width, up to a maximum of `640px`, while preserving global page padding.
 * The same Card container is retained for Step 1, Step 2, and Success State, with stable width and placement while its contents change. Its top edge remains at the same position within the main form area throughout the flow.
 * Card height is determined by the content of the current state. The Card grows or shrinks downward while its top edge remains in place.
@@ -73,7 +70,7 @@ Guide sellers through submitting their contact and property details to request a
 * In Step 1, `M` (`24px`) separates Progress from the heading at all Breakpoints.
 * `S` (`16px`) separates a heading from its supporting copy where present.
 * `L` (`32px`) separates the step introduction from its fields.
-* `M` (`24px`) separates adjacent field or question groups; `XS` (`8px`) separates a visible field label from its control.
+* `M` (`24px`) separates adjacent field or question groups.
 * `L` (`32px`) separates the final field from the primary action.
 
 ### Interaction
@@ -82,13 +79,10 @@ Guide sellers through submitting their contact and property details to request a
 * The Step 1-to-Step 2 transition combines a fade with `16px` of horizontal movement over `200ms`, using `ease-out`. The outgoing content moves left and fades out; the incoming content enters from the right and fades in.
 * When `prefers-reduced-motion: reduce` applies, the content is replaced immediately without animation.
 * Do not use a step transition to indicate success before the required save has succeeded.
-* In both form steps, fields and choice controls cannot be edited while a save request is pending. Preserve their displayed values and restore editing if the save fails.
 
 ### Accessibility
 
-* Text inputs and the optional multiline text field use the global [Focus-Visible Treatment](../accessibility.md#focus-visible-treatment).
 * After a transition between form steps completes, move keyboard focus to the new step's heading. When reduced motion is preferred, move focus after the content is replaced immediately.
-* In both steps, announce `Saving…` and the applicable save-failure message to screen readers without moving focus.
 
 ### Responsive Behavior
 
@@ -147,7 +141,7 @@ Guide sellers through submitting their contact and property details to request a
 ### Component and Semantics
 
 * The primary action uses the documented `Button` Component with native submit-button semantics.
-* Each field has its visible label. Property Address, Your Name, Phone Number, and Email Address are all required.
+* Property Address, Your Name, Phone Number, and Email Address are all required.
 * `Your Name` is a single full-name field.
 * `Phone Number` accepts United States phone numbers only.
 * `Your Name` is valid when non-empty after trimming leading and trailing whitespace. It does not require two words or restrict the language or script used.
@@ -178,12 +172,6 @@ Guide sellers through submitting their contact and property details to request a
 * Step 2 is displayed only after successful persistence has been confirmed; merely holding values in client memory does not satisfy this requirement.
 * While the lead-save request is pending, the primary action displays `Saving…` and prevents repeated submission until the request completes.
 * If saving fails, remain on Step 1, preserve all entered values, show the save-failure message, and restore the primary action to `Continue` so the seller can retry.
-* Show field-validation errors below the corresponding field after it loses focus or when `Continue` is activated. Preserve all entered values when errors are displayed.
-* While a field displays a validation error, revalidate it as the seller types and remove the error as soon as the value is valid.
-
-### Accessibility
-
-* When `Continue` is activated with validation errors, move keyboard focus to the first invalid field in the documented field order.
 
 ### Technical Requirements
 
@@ -219,22 +207,15 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Component and Semantics
 
-* Property Condition, Occupancy, and Selling Timeline use native radio controls for single selection. Reason for Selling uses native checkbox controls for multiple selection.
-* The optional free-text question uses a labeled multiline text input.
+* Property Condition, Occupancy, and Selling Timeline use the shared single-selection controls. Reason for Selling uses the shared multiple-selection controls.
+* The optional free-text question uses the shared multiline text field.
 * `Skip for now` uses the documented `Text Link` Component with native button semantics (`type="button"`) for the in-page action.
 * `Back` uses the documented `Text Link` Component with native button semantics (`type="button"`) for the in-page action.
-
-### Visual Design
-
-* Choice options have a bordered, clickable presentation. Unselected options use the global `Surface` background and default `Border` treatment.
-* Selected options use `Brand Green` for the border and `Brand Green Light` for the background, retaining the default border thickness and style.
-* Each choice option displays a visible radio indicator for single selection or checkbox indicator for multiple selection. The indicator reflects the checked state so selection is not communicated by color alone.
 
 ### Dimensions and Alignment
 
 * `Back` appears between the Progress indicator and the Step 2 heading, aligned to the left.
 * `Skip for now` appears below `Submit details`.
-* The optional multiline text field initially displays three rows.
 * Within each question group, choice options use content-based widths and form rows that wrap to fit the available width at all Breakpoints.
 
 ### Spacing
@@ -244,7 +225,6 @@ Guide sellers through submitting their contact and property details to request a
 ### Interaction
 
 * Completing Step 2 updates the saved lead with the additional information and shows Success State within the same Card.
-* The optional multiline text field can be resized vertically by the user.
 * While a Step 2 save request is pending, the activated completion action displays `Saving…`, and both `Submit details` and `Skip for now` prevent further submission until the request completes.
 * `Back` is unavailable while the Step 2 save request is pending. If saving fails, it becomes available again.
 * `Submit details` accepts partial answers; unanswered questions do not block completion.
@@ -287,7 +267,6 @@ Guide sellers through submitting their contact and property details to request a
 The following decisions remain unresolved:
 
 * Page Background: exact ribbon geometry, gradient stops, and opacity.
-* Form controls: Input and quick-selection Component contracts, building on the local requirements already approved above.
 * Backend: lead destination, persistence service, submission contract, duplicate handling, recovery behavior, and the mechanism associating both steps with the same lead.
 
 No placeholder implementation, additional services, or assumptions about these decisions are authorized by this specification.
