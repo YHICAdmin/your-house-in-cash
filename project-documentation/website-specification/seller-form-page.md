@@ -143,10 +143,9 @@ Guide sellers through submitting their contact and property details to request a
 * The primary action uses the documented `Button` Component with native submit-button semantics.
 * Property Address, Your Name, Phone Number, and Email Address are all required.
 * `Your Name` is a single full-name field.
-* `Phone Number` accepts United States phone numbers only.
+* `Phone Number` uses the shared [Phone Field](../form.md#phone-field).
+* `Email Address` uses the shared [Email Field](../form.md#email-field).
 * `Your Name` is valid when non-empty after trimming leading and trailing whitespace. It does not require two words or restrict the language or script used.
-* `Email Address` is validated for basic email-address syntax after trimming leading and trailing whitespace. No email verification code is sent as part of this flow.
-* Phone Number validation accepts input with or without the `+1` prefix and allows spaces, hyphens, and parentheses. Normalize those formatting differences before validating that the number belongs to the United States numbering region; the country code alone does not establish validity.
 
 ### Dimensions and Alignment
 
@@ -161,16 +160,14 @@ Guide sellers through submitting their contact and property details to request a
 ### Interaction
 
 * Completing Step 1 saves the basic lead **before** advancing to Step 2.
-* Format Phone Number progressively with hyphens as the seller types, using `216-555-1234` as the complete display format, without a `+1` prefix. Support pasting, deletion, and editing within the number while preserving the logical caret position. An entered or pasted `+1` prefix is normalized away before formatting.
 * Step 2 is displayed only after successful persistence has been confirmed; merely holding values in client memory does not satisfy this requirement.
-* While the lead-save request is pending, the primary action displays `Saving…` and prevents repeated submission until the request completes.
+* While the lead-save request is pending, the primary action displays `Saving…`.
 * If saving fails, remain on Step 1, preserve all entered values, show the save-failure message, and restore the primary action to `Continue` so the seller can retry.
 
 ### Technical Requirements
 
 * Lead destination, persistence service, submission contract, duplicate handling, and recovery behavior are TBD.
-* Enable browser autofill for contact details: `Your Name` uses `autocomplete="name"`, `Phone Number` uses `autocomplete="tel"`, and `Email Address` uses `autocomplete="email"`.
-* Validate the normalized phone number under the United States numbering-region rule and submit it as a ten-digit string, without hyphens, spaces, parentheses, or a `+1` prefix. Display formatting is not part of the submitted value.
+* `Your Name` uses `autocomplete="name"` for browser autofill.
 * Step 2 information must be associated with the lead saved in Step 1 rather than treated as an unrelated lead. The association mechanism is TBD.
 * When Step 1 is revisited for editing, `Continue` saves the revised details to the same lead before returning to Step 2; it does not create a new lead.
 
@@ -179,62 +176,15 @@ Guide sellers through submitting their contact and property details to request a
 #### Content
 
 * Property Address guidance: `Enter the street address, city, state, and ZIP code.`
-* Address-autocomplete attribution: `Powered by Geoapify`, with `Geoapify` linking to `https://www.geoapify.com/`.
-* Address-autocomplete empty-results message: `No matching addresses. You can enter the address manually.`
-* Address-autocomplete loading message: `Searching addresses…`.
 * Required-field error message: `Please enter the property address.`
 
 #### Component and Semantics
 
-* A manually entered `Property Address` is valid when non-empty after trimming leading and trailing whitespace; a match in the autocomplete address database is not required.
-
-#### Visual Design
-
-* Geoapify attribution uses global `Caption` typography and `Text Secondary` color, remaining visible and legible when the suggestions panel is open.
-* The address-suggestions panel uses the global `Surface` background, default `Border` treatment, and `Small` Radius (`8px`).
-* The active address suggestion during keyboard navigation and a hovered suggestion use the global `Brand Green Light` background with `Text Primary` text.
+* Uses the shared [Address Autocomplete](../form.md#address-autocomplete) field.
 
 #### Dimensions and Alignment
 
 * The Property Address guidance appears below the address field.
-* The address-suggestions panel appears below the Property Address control, matching its width and overlaying the following content without shifting the form layout at any Breakpoint.
-* Address-suggestion text wraps onto multiple lines as needed to display the full address within the panel width at every Breakpoint, including Mobile.
-* Limit the suggestions panel's height to the available visible viewport space below the address control, accounting for the on-screen keyboard on Mobile. Reserve space for the attribution at the bottom and allow vertical scrolling in the suggestions area when its content exceeds the remaining height. Keep the active keyboard-navigated suggestion in view.
-* The Geoapify attribution remains visible at the bottom of the suggestions panel, below and outside the scrollable suggestions area.
-
-#### Interaction
-
-* Property Address offers address autocomplete and allows manual entry when the address cannot be found in the suggestions.
-* Autocomplete suggestions are restricted to addresses in the United States.
-* Display a maximum of five address suggestions at all Breakpoints.
-* Start address-autocomplete searches once the field contains at least three characters, waiting `300ms` after the most recent edit before sending a request.
-* Whenever the seller edits the address, immediately clear the previous suggestions and active option, including during the debounce interval, so suggestions for the previous value cannot be selected.
-* When the address field contains fewer than three characters, close the suggestions panel and clear its suggestions and active option while preserving the remaining text. Cancel any scheduled search and ignore pending results for the previous value so they cannot reopen the panel.
-* Manual entry uses the same Property Address field. Selecting an autocomplete suggestion is not required, and no additional address form is opened.
-* When the address suggestions open, no suggestion is active by default. The seller explicitly navigates to a suggestion with the arrow keys or selects one by clicking or tapping it.
-* Selecting a suggestion fills the Property Address field with the suggestion's full address, closes the suggestions list, and leaves focus in the editable address field.
-* While address suggestions are open, `ArrowDown` and `ArrowUp` navigate the suggestions. `Enter` selects the active suggestion without submitting the form. `Escape` closes the suggestions while preserving the text in the field.
-* When the Property Address field has focus and no suggestion is active, `Enter` invokes `Continue` using the entered address, subject to the normal validation of all Step 1 fields.
-* While the suggestions panel is open, `Tab` from the Property Address field moves focus to the Geoapify attribution link and keeps the panel open. `Tab` from that link moves focus to the next field and closes the panel. Neither action selects a suggestion or changes the entered address.
-* Clicking or tapping outside the Property Address field and its suggestions panel closes the panel without selecting a suggestion or changing the entered address.
-* Returning focus to the Property Address field alone does not reopen the suggestions panel. Editing the address triggers a new search under the existing minimum-length and debounce rules.
-* If address autocomplete is unavailable, keep the field usable for manual entry, preserve the entered value, and allow submission under the manual-address validation rule without showing an autocomplete-service error message.
-* When an address search completes successfully with no matching suggestions, display the empty-results message in the suggestions panel and keep manual entry available. The message is informational, not a selectable suggestion or validation error.
-* While an address search is pending, display the loading message in the suggestions panel without blocking typing. The loading message is not a selectable suggestion.
-
-#### Accessibility
-
-* Property Address uses an editable `combobox` with `aria-autocomplete="list"`. Its `aria-expanded` value reflects whether the suggestions are open, and `aria-controls` references the suggestions list when it is displayed.
-* The suggestions list uses `listbox` semantics, with each suggestion represented as an `option` with a unique ID. Keyboard focus stays in the address input while navigating suggestions; `aria-activedescendant` references the active option and is removed when no option is active or the list closes.
-* Announce the address-autocomplete loading and empty-results messages through a `role="status"` region without moving focus. The status region is separate from the `listbox` and its selectable options.
-
-#### Technical Requirements
-
-* Address autocomplete uses [Geoapify Address Autocomplete API](https://apidocs.geoapify.com/docs/geocoding/address-autocomplete/), with suggestions restricted to the United States.
-* The Geoapify Free plan requires visible attribution linking to Geoapify, following its [plan requirements](https://www.geoapify.com/pricing/).
-* The Geoapify development API key is configured in the Git-ignored `.env.local` as `NEXT_PUBLIC_GEOAPIFY_API_KEY` for browser-side autocomplete requests. A test request with the `http://localhost:3000` Origin returned HTTP `200` and five suggestions. UI integration and browser verification remain pending implementation; add the production site's origin to the key's allowed origins before launch.
-* Display address-search results only when they belong to the latest search request and match the field's current value. Ignore responses from superseded requests so older results cannot replace current suggestions.
-* Once the seller closes the suggestions panel, pending search responses must not reopen it. A subsequent address edit may start a new search under the documented search rules.
 
 ## Step 2 — About the House
 
@@ -289,7 +239,7 @@ Guide sellers through submitting their contact and property details to request a
 ### Interaction
 
 * Completing Step 2 updates the saved lead with the additional information and shows Success State within the same Card.
-* While a Step 2 save request is pending, the activated completion action displays `Saving…`, and both `Submit details` and `Skip for now` prevent further submission until the request completes.
+* While a Step 2 save request is pending, the activated completion action (`Submit details` or `Skip for now`) displays `Saving…`.
 * `Back` is unavailable while the Step 2 save request is pending. If saving fails, it becomes available again.
 * `Submit details` accepts partial answers; unanswered questions do not block completion.
 * On first entering Step 2, all choice groups start with no options selected. Revisiting the step preserves the seller's previous selections.
