@@ -1,6 +1,8 @@
 .main { overflow-x: clip; min-height: calc(100svh - 64px); }
 .background { position: absolute; inset: 0; z-index: -2; overflow: hidden; pointer-events: none; }
-.ribbon { position: absolute; width: 100%; min-width: 48rem; height: auto; max-width: none; left: 50%; transform: translateX(-50%); top: 0; }
+.ribbon { position: absolute; width: 48rem; height: auto; max-width: none; left: calc(50% + var(--spacing-l)); transform: translateX(-50%); top: 0; }
+@media (min-width: 48rem) { .ribbon { width: max(100%, 60rem); left: calc(50% + var(--spacing-s)); } }
+@media (min-width: 75rem) { .ribbon { width: 100%; left: 50%; } }
 .card { position: relative; width: 100%; max-width: 640px; margin-inline: auto; padding: var(--spacing-l); border-radius: var(--radius-medium); background: var(--color-surface); box-shadow: var(--shadow-floating); }
 .progress { display: flex; align-items: center; gap: var(--spacing-xs); margin-bottom: var(--spacing-m); color: var(--color-text-muted); }
 .progress li[aria-current="step"] { color: var(--color-brand); }
@@ -15,4 +17,3 @@
 .successPhone { margin-top: var(--spacing-l); display: flex; flex-wrap: wrap; gap: var(--spacing-xs); align-items: baseline; }
 @media (min-width: 48rem) { .card { padding: var(--spacing-xl); } .primary { width: fit-content; } .main { min-height: calc(100svh - 72px); } }
 @media (min-width: 75rem) { .main { min-height: calc(100svh - 80px); } }
-

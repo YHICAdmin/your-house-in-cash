@@ -26,22 +26,24 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Page Background
 
-* Composition reference: the Stripe form-page screenshot supplied by the user, `Screenshot 2026-09-11 090850.png`. It guides the composition; colors use the site's established brand palette.
-* A broad, curved graphic ribbon enters from the top of the main form area, passes behind the Form Card, and continues down its right side.
+* An original broad, continuous ribbon composition uses the flowing, folded-ribbon principle of the supplied Stripe reference as inspiration.
+* The ribbon follows an S-shaped flow, entering from the top left of center, passing behind the Form Card, and continuing down its right side.
 
-* The ribbon's gradient transitions from global `Brand Green` to `Brand Green Light` and then the white `Background`. Concentrate the strongest green to the right of the Form Card, with soft transitions and generous surrounding white space.
+* Four layered paths define the ribbon body, dark fold, forward-facing surface, and broad highlight. Gradients use global `Brand Green`, `Brand Green Dark`, `Brand Green Light` as mint, and white `Background`, with a soft bottom fade. The strongest color remains outside the opaque Form Card.
 * The graphic is confined to the main form area. The Minimal Header retains its approved white background.
 * Uses the global Line System and its layering rules.
-* Approved background reference: [SVG composition](../design-drafts/seller-form-background.svg) and [rendered preview](../design-drafts/seller-form-background.png). The SVG's ribbon paths, gradient definitions, and bottom-fade mask define the approved Desktop background geometry, color stops, and opacity. The form and shell shown in the preview provide context; their specifications remain authoritative for their implementation.
+* The current [Ribbon SVG](../../public/brand/seller-form-background.svg) defines the background geometry, gradients, and fade mask, replacing the earlier design draft as the background source.
 
 #### Responsive Behavior
 
-* On Tablet, the ribbon retains the Desktop composition, scaled to the available width: it enters from the top, passes behind the Form Card, and continues down its right side.
-* On Mobile, portions of the ribbon remain visible above and to the right of the Form Card. The graphic is clipped at the viewport edges without introducing horizontal scrolling.
+* On Desktop, the SVG fills the main form area's width and is horizontally centered.
+* On Tablet, the SVG uses the larger of the available width and `960px`, with its center shifted right by `S` (`16px`).
+* On Mobile, the SVG uses a `768px` composition width with its center shifted right by `L` (`32px`), exposing the upper curve and the right-side continuation. The background container clips the overflowing artwork.
 
 #### Technical Requirements
 
-* The ribbon is a repository-owned SVG asset with gradients.
+* The ribbon is a static, repository-owned SVG with a `0 0 1440 1120` viewBox, four paths, linear gradients, and a fade mask.
+* Its decorative wrapper uses absolute positioning behind the Line System and foreground content, `aria-hidden="true"`, and `pointer-events: none`; the SVG image uses empty alternative text.
 
 ## Form Card
 
