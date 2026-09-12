@@ -16,7 +16,7 @@ Immediately confirm that the user has reached a page relevant to their specific 
 - **Left:** Primary Headline followed by Supporting Copy.
 - **Right:** One Primary Image.
 - On Desktop and Tablet, the text block and Primary Image are vertically centered relative to each other.
-- On Desktop, uses a `5–1–6` composition: the text occupies Grid Columns `1–5`, Column `6` remains empty, and the Primary Image occupies Columns `7–12`.
+- On Desktop, uses a `5–2–5` composition: the text occupies Grid Columns `1–5`, Columns `6–7` remain empty, and the Primary Image occupies Columns `8–12`.
 
 ### Responsive Behavior
 
@@ -33,11 +33,12 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 - Uses the global `Background Soft` (`#F7F9F7`) as its base, spanning the full viewport width.
 - The lower edge slopes downward from right to left: higher at the right viewport edge and lower at the left viewport edge, revealing the following section's global `Background` (`#FFFFFF`) below it.
-- The difference in height between the endpoints is `3XL` (`96px`) on Desktop, `2XL` (`64px`) on Tablet, and `L` (`32px`) on Mobile, within the Hero's lower padding.
-- Two simple, elongated rectangular accents sit near the lower-left edge, slightly rotated and partially overlapping. One uses `Brand Green` (`#4A8755`); the other uses `Brand Green Light` (`#EAF3EC`) as mint.
+- The lower-edge angle is `3deg` steeper than the baseline slope defined by an endpoint height difference of `3XL` (`96px`) on Desktop, `2XL` (`64px`) on Tablet, and `L` (`32px`) on Mobile. At viewport width `W`, the endpoint height difference is `W × tan(atan(baseline height / W) + 3deg)`. The left endpoint stays fixed while the right endpoint moves upward.
+- Two simple, elongated rectangular accents are anchored to the bottom of the Hero background, slightly rotated and partially overlapping. Position the group relative to the left outer System Line, with two thirds of its width extending outward to the left of that line and one third extending inward to the right. One uses `Brand Green` (`#4A8755`); the other uses `Brand Green Light` (`#EAF3EC`) as mint.
+- Account for the accents' rotation when positioning them vertically so their rectangular edges and corners remain intact at the Hero's bottom boundary.
 - The treatment is restrained and editorial. The accents occupy the lower whitespace, keeping the text and Primary Image visually dominant and unobstructed.
 - The background and accents are decorative only, containing no text, icons, or images. They inherit the global decorative-content and Line System layering requirements and do not affect content layout or interaction.
-- On Desktop, the diagonal and accents have their clearest presence. On Tablet, reduce their footprint and keep them near the lower-left edge. On Mobile, use a shallower diagonal and smaller accents positioned below the stacked content, clipping decorative overflow at the viewport edges.
+- On Desktop, the diagonal and accents have their clearest presence. On Tablet and Mobile, reduce the accents' footprint while retaining their bottom anchor and one-third extension inward from the left outer System Line. On Mobile, use a shallower diagonal and keep the accents below the stacked content, clipping decorative overflow at the viewport edges.
 
 ## Primary Headline
 

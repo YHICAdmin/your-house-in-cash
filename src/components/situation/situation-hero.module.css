@@ -4,22 +4,25 @@
 }
 
 .background {
+  --steeper-slope-depth: calc(100vw * tan(atan2(var(--slope-depth), 100vw) + 3deg));
   position: absolute;
   inset: 0;
   z-index: -2;
   background: var(--color-background-soft);
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--slope-depth)), 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--steeper-slope-depth)), 0 100%);
   pointer-events: none;
 }
 
 .accents {
+  --accent-width: calc(var(--spacing-3xl) * 2);
   position: absolute;
-  left: 0;
-  bottom: var(--spacing-m);
-  width: calc(var(--spacing-3xl) * 2);
+  left: calc((100% - var(--layout-content-width)) / 2);
+  bottom: calc(var(--accent-width) / 2 * sin(4deg));
+  width: var(--accent-width);
   height: var(--spacing-m);
   z-index: -2;
-  transform: rotate(-4deg);
+  transform: translateX(-66.666667%) rotate(-4deg);
+  transform-origin: center bottom;
   pointer-events: none;
 }
 
@@ -46,13 +49,13 @@
   .hero { --slope-depth: var(--spacing-2xl); }
   .content { grid-column: 1 / span 4; }
   .image { grid-column: 5 / span 4; }
-  .accents { width: calc(var(--spacing-3xl) * 2 + var(--spacing-xl)); height: var(--spacing-xl); }
+  .accents { --accent-width: calc(var(--spacing-3xl) * 2 + var(--spacing-xl)); height: var(--spacing-xl); }
   .accents span { height: var(--spacing-l); }
 }
 
 @media (min-width: 1200px) {
   .hero { --slope-depth: var(--spacing-3xl); }
   .content { grid-column: 1 / span 5; }
-  .image { grid-column: 7 / span 6; }
-  .accents { width: calc(var(--spacing-3xl) * 3); }
+  .image { grid-column: 8 / span 5; }
+  .accents { --accent-width: calc(var(--spacing-3xl) * 3); }
 }

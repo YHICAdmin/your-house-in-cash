@@ -12,7 +12,7 @@ export function SituationHero({ situation }: { situation: Situation }) {
         <p className={`text-body-large ${styles.copy}`}>{situation.supportingCopy}</p>
       </div>
       <Image className={styles.image} src={situation.image} alt={situation.imageAlt}
-        sizes="(min-width: 1440px) 600px, (min-width: 768px) 50vw, 100vw" priority />
+        sizes="(min-width: 1440px) 500px, (min-width: 1200px) 42vw, (min-width: 768px) 50vw, 100vw" priority />
     </div>
   </section>;
 }
