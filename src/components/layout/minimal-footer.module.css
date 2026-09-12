@@ -1,0 +1,9 @@
+.footer {
+  padding-block: var(--spacing-m);
+}
+
+ul.legal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: var(--spacing-xs);
+}

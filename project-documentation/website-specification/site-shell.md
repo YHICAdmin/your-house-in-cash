@@ -511,16 +511,28 @@ Provide brand identification, a link to the homepage, and direct phone contact w
 
 ## Purpose
 
-Provide access to essential legal information while keeping attention on the page's primary task.
+Provide essential legal information while keeping attention on the page's primary task and preserving the main Footer's visual identity.
 
 ## Layout
 
-* Contains only the Legal Links.
+* Uses the main Footer's white background, global Grid and System Lines, content inset, and regular-weight Text Links.
+* Consists of the main Footer Bottom Row composition: a full-width Divider, copyright on the left, and Legal Links on the right on Desktop and Tablet. On Mobile, Legal Links follow the copyright on a separate left-aligned row.
+* Reuses the main Footer Bottom Row alignment, Divider treatment, Divider-to-content spacing, and gap between content groups.
 * Vertical Padding: `M` (`24px`) at all Breakpoints, overriding the global Section vertical padding.
 
 ## Component and Semantics
 
 * Uses native `footer` semantics.
+
+## Copyright
+
+### Content
+
+* `© {Current Year} Your House in Cash. All rights reserved.`, using the current calendar year.
+
+### Component and Semantics
+
+* Reuses the main Footer copyright paragraph and its typography and color.
 
 ## Legal Links
 
@@ -531,16 +543,12 @@ Provide access to essential legal information while keeping attention on the pag
 
 ### Component and Semantics
 
-* Each legal link uses the documented `Text Link` Component.
-
-### Visual Design
-
-* Legal links use font weight `400` as a local override of the `Text Link` Component.
+* Uses a semantic list of Text Links, inheriting the main Footer's link styling.
 
 ### Dimensions and Alignment
 
-* Links form a compact row that can wrap on narrow screens.
+* Links form a horizontal row that wraps when needed.
 
 ### Spacing
 
-* `S` (`16px`) separates the legal links; wrapped rows use an `XS` (`8px`) gap.
+* `S` (`16px`) separates links; wrapped rows use `XS` (`8px`).
