@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { TextLink } from "@/components/ui/text-link";
 import styles from "./seller-form.module.css";
 
-// Render only after confirmed completion, never as a local submission fallback.
+// Render after confirmed completion, or in the explicitly labeled development demo.
 export function SellerSuccess({ name }: { name: string }) {
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => { heading.current?.focus(); }, []);
@@ -20,4 +20,3 @@ export function SellerSuccess({ name }: { name: string }) {
     </div>
   </div>;
 }
-

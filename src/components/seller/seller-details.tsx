@@ -10,7 +10,8 @@ import styles from "./seller-form.module.css";
 
 const order = ["address", "name", "phone", "email"] as const;
 type Key = typeof order[number];
-type Values = Record<Key, string>;
+export type SellerValues = Record<Key, string>;
+type Values = SellerValues;
 function validate(key: Key, value: string) {
   const trimmed = value.trim();
   if (!trimmed) return { address: "Please enter the property address.", name: "Please enter your name.", phone: "Please enter your phone number.", email: "Please enter your email address." }[key];
@@ -19,8 +20,11 @@ function validate(key: Key, value: string) {
   return "";
 }
 
-export function SellerDetails() {
-  const [values, setValues] = useState<Values>({ address: "", name: "", phone: "", email: "" });
+export function SellerDetails({ initialValues, onDemoContinue }: {
+  initialValues?: SellerValues;
+  onDemoContinue?: (values: SellerValues) => void;
+} = {}) {
+  const [values, setValues] = useState<Values>(initialValues ?? { address: "", name: "", phone: "", email: "" });
   const [errors, setErrors] = useState<Partial<Values>>({});
   const [failure, setFailure] = useState("");
   function change(key: Key, value: string) {
@@ -36,12 +40,15 @@ export function SellerDetails() {
     setErrors(next);
     const invalid = order.find(key => next[key]);
     if (invalid) { document.getElementById(invalid)?.focus(); return; }
-    // Persistence has not been specified. Keep the entered details on this step.
-    // Never claim the lead was saved or advance to the property step locally.
+    if (process.env.NODE_ENV === "development" && onDemoContinue) {
+      onDemoContinue(values);
+      return;
+    }
+    // Production stays on Step 1 until persistence is connected.
     setFailure("We couldn’t save your details. Please try again.");
   }}>
     <div className={styles.intro}>
-      <h1 className="text-heading-2">Let&apos;s get you started</h1>
+      <h1 className="text-heading-2" tabIndex={-1}>Let&apos;s get you started</h1>
       <p className="text-body">Tell us a few basic details about the house you&apos;d like to sell. It only takes about a minute.</p>
     </div>
     <div className={styles.fields}>

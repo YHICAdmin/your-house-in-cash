@@ -3,6 +3,7 @@ import { MinimalHeader } from "@/components/layout/minimal-header";
 import { MinimalFooter } from "@/components/layout/minimal-footer";
 import { SellerDetails } from "@/components/seller/seller-details";
 import { Progress } from "@/components/seller/progress";
+import { SellerFormDemo } from "@/components/seller/seller-form-demo";
 import styles from "@/components/seller/seller-form.module.css";
 
 export const metadata: Metadata = { title: "Get a Cash Offer | Your House in Cash" };
@@ -17,8 +18,10 @@ export default function SellerFormPage() {
     <main className={`system-lines-bg section-spacing ${styles.main}`}>
       <div className="content-inset">
         <div className={styles.card}>
-          <Progress step={1} />
-          <SellerDetails />
+          {process.env.NODE_ENV === "development" ? <SellerFormDemo /> : <>
+            <Progress step={1} />
+            <SellerDetails />
+          </>}
         </div>
       </div>
     </main>

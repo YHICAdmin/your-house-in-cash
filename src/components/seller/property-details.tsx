@@ -15,7 +15,7 @@ const questions = [
   { key: "timeline", label: "Selling Timeline", options: ["As soon as possible", "Within 1–3 months", "Within 3–6 months", "More than 6 months", "Just exploring"] },
 ] as const;
 
-// Presentation and editing only. Mount after confirmed persistence of Step 1.
+// Mount after confirmed persistence of Step 1, or in the development-only demo.
 export function PropertyDetails({ answers, onChange, onBack, onSubmit, onSkip, pending, failure }: {
   answers: PropertyAnswers; onChange: (answers: PropertyAnswers) => void;
   onBack: () => void; onSubmit: FormEventHandler<HTMLFormElement>; onSkip: () => void;
@@ -47,4 +47,3 @@ export function PropertyDetails({ answers, onChange, onBack, onSubmit, onSkip, p
     </div>
   </form>;
 }
-
