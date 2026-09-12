@@ -45,7 +45,16 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 ### Content
 
+- **Foreclosure:** `Understanding your options before foreclosure`.
 - **Inherited Property:** `What to know about inheriting a house`.
+- **Tired Landlord:** `When owning a rental no longer fits`.
+- **Major Repairs:** `What to consider when a house needs major repairs`.
+- **Vacant Property:** `What to do with a house that sits empty`.
+- **Problem Tenants:** `Navigating problems with a rental property`.
+- **Relocation:** `Planning what happens to your house when you move`.
+- **Divorce:** `Deciding what happens to a house during divorce`.
+- **Behind on Property Taxes:** `Understanding your options for unpaid property taxes`.
+- **Code Violations:** `What to know about property code violations`.
 
 ### Component and Semantics
 
@@ -64,7 +73,16 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 ### Content
 
+- **Foreclosure:** `Falling behind on mortgage payments can leave you unsure where to start. Explore the questions to ask about your loan, the foreclosure timeline, and the options to consider for your home.`
 - **Inherited Property:** `Inheriting a house can bring questions about the property, its upkeep, and what comes next. Explore the key considerations and your options for keeping, renting, or selling it.`
+- **Tired Landlord:** `Managing a rental takes time, money, and ongoing attention. Explore what to consider when weighing continued ownership, help with property management, or selling the property.`
+- **Major Repairs:** `A house that needs substantial work brings questions about cost, time, and where to begin. Explore how to assess the repairs and weigh renovating against selling the property in its current condition.`
+- **Vacant Property:** `An empty house still needs care, even when no one lives there. Explore the upkeep, security, and ongoing costs to consider as you decide whether to use, rent, or sell it.`
+- **Problem Tenants:** `Missed rent, property damage, or disagreements can make a rental difficult to manage. Explore the practical considerations around documentation, communication, and deciding whether to continue renting or sell.`
+- **Relocation:** `Moving brings decisions about both your next home and the one you leave behind. Explore how timing, ongoing costs, and managing a property from a distance can shape your plans.`
+- **Divorce:** `A shared home can be one of the most complex decisions during a separation. Explore the questions around ownership, mortgage payments, and whether one person keeps the house or you sell it.`
+- **Behind on Property Taxes:** `Unpaid property taxes can make it difficult to plan your next steps. Explore the questions to ask about your balance, available payment arrangements, and how the debt fits into plans for the property.`
+- **Code Violations:** `A code violation notice can raise questions about repairs, deadlines, and expense. Explore how to understand the cited issues and what to consider when deciding whether to repair or sell the property.`
 
 ### Component and Semantics
 
@@ -82,7 +100,16 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 ### Content
 
+- **Foreclosure:** [foreclosure-hero.jpg](assets/situations/foreclosure-hero.jpg).
 - **Inherited Property:** [inherited-property-hero.jpg](assets/situations/inherited-property-hero.jpg).
+- **Tired Landlord:** [tired-landlord-hero.jpg](assets/situations/tired-landlord-hero.jpg).
+- **Major Repairs:** [major-repairs-hero.jpg](assets/situations/major-repairs-hero.jpg).
+- **Vacant Property:** [vacant-property-hero.jpg](assets/situations/vacant-property-hero.jpg).
+- **Problem Tenants:** [problem-tenants-hero.jpg](assets/situations/problem-tenants-hero.jpg).
+- **Relocation:** [relocation-hero.jpg](assets/situations/relocation-hero.jpg).
+- **Divorce:** [divorce-hero.jpg](assets/situations/divorce-hero.jpg).
+- **Behind on Property Taxes:** [behind-on-property-taxes-hero.jpg](assets/situations/behind-on-property-taxes-hero.jpg).
+- **Code Violations:** [code-violations-hero.jpg](assets/situations/code-violations-hero.jpg).
 
 ### Visual Design
 
@@ -95,7 +122,16 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 ### Accessibility
 
+- **Foreclosure:** Alternative text: `Wooden model house and keys resting on a document`.
 - **Inherited Property:** Alternative text: `Bedroom with a four-poster bed, floral bedding, and a rocking chair`.
+- **Tired Landlord:** Alternative text: `Lease agreement with a pen and key on a dark table`.
+- **Major Repairs:** Alternative text: `Room under renovation with exposed masonry, a concrete mixer, and buckets`.
+- **Vacant Property:** Alternative text: `Empty room with a hardwood floor and a window, viewed through an open doorway`.
+- **Problem Tenants:** Alternative text: `Brass keys hanging from a ring against a wooden surface`.
+- **Relocation:** Alternative text: `Moving boxes beside covered furniture in a bright room`.
+- **Divorce:** Alternative text: `Two empty wooden chairs beside a small table with a vase`.
+- **Behind on Property Taxes:** Alternative text: `Hands reviewing documents with a pen and calculator at a desk`.
+- **Code Violations:** Alternative text: `Person wearing a hard hat checking an unfinished wall with a spirit level`.
 
 # Situation Content
 

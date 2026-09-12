@@ -1,5 +1,14 @@
 import type { StaticImageData } from "next/image";
+import foreclosureImage from "../../project-documentation/website-specification/assets/situations/foreclosure-hero.jpg";
 import inheritedPropertyImage from "../../project-documentation/website-specification/assets/situations/inherited-property-hero.jpg";
+import tiredLandlordImage from "../../project-documentation/website-specification/assets/situations/tired-landlord-hero.jpg";
+import majorRepairsImage from "../../project-documentation/website-specification/assets/situations/major-repairs-hero.jpg";
+import vacantPropertyImage from "../../project-documentation/website-specification/assets/situations/vacant-property-hero.jpg";
+import problemTenantsImage from "../../project-documentation/website-specification/assets/situations/problem-tenants-hero.jpg";
+import relocationImage from "../../project-documentation/website-specification/assets/situations/relocation-hero.jpg";
+import divorceImage from "../../project-documentation/website-specification/assets/situations/divorce-hero.jpg";
+import behindOnPropertyTaxesImage from "../../project-documentation/website-specification/assets/situations/behind-on-property-taxes-hero.jpg";
+import codeViolationsImage from "../../project-documentation/website-specification/assets/situations/code-violations-hero.jpg";
 
 export type Situation = {
   slug: string;
@@ -11,10 +20,73 @@ export type Situation = {
 
 export const situations: Situation[] = [
   {
+    slug: "foreclosure",
+    headline: "Understanding your options before foreclosure",
+    supportingCopy: "Falling behind on mortgage payments can leave you unsure where to start. Explore the questions to ask about your loan, the foreclosure timeline, and the options to consider for your home.",
+    image: foreclosureImage,
+    imageAlt: "Wooden model house and keys resting on a document",
+  },
+  {
     slug: "inherited-property",
     headline: "What to know about inheriting a house",
     supportingCopy: "Inheriting a house can bring questions about the property, its upkeep, and what comes next. Explore the key considerations and your options for keeping, renting, or selling it.",
     image: inheritedPropertyImage,
     imageAlt: "Bedroom with a four-poster bed, floral bedding, and a rocking chair",
+  },
+  {
+    slug: "tired-landlord",
+    headline: "When owning a rental no longer fits",
+    supportingCopy: "Managing a rental takes time, money, and ongoing attention. Explore what to consider when weighing continued ownership, help with property management, or selling the property.",
+    image: tiredLandlordImage,
+    imageAlt: "Lease agreement with a pen and key on a dark table",
+  },
+  {
+    slug: "major-repairs",
+    headline: "What to consider when a house needs major repairs",
+    supportingCopy: "A house that needs substantial work brings questions about cost, time, and where to begin. Explore how to assess the repairs and weigh renovating against selling the property in its current condition.",
+    image: majorRepairsImage,
+    imageAlt: "Room under renovation with exposed masonry, a concrete mixer, and buckets",
+  },
+  {
+    slug: "vacant-property",
+    headline: "What to do with a house that sits empty",
+    supportingCopy: "An empty house still needs care, even when no one lives there. Explore the upkeep, security, and ongoing costs to consider as you decide whether to use, rent, or sell it.",
+    image: vacantPropertyImage,
+    imageAlt: "Empty room with a hardwood floor and a window, viewed through an open doorway",
+  },
+  {
+    slug: "problem-tenants",
+    headline: "Navigating problems with a rental property",
+    supportingCopy: "Missed rent, property damage, or disagreements can make a rental difficult to manage. Explore the practical considerations around documentation, communication, and deciding whether to continue renting or sell.",
+    image: problemTenantsImage,
+    imageAlt: "Brass keys hanging from a ring against a wooden surface",
+  },
+  {
+    slug: "relocation",
+    headline: "Planning what happens to your house when you move",
+    supportingCopy: "Moving brings decisions about both your next home and the one you leave behind. Explore how timing, ongoing costs, and managing a property from a distance can shape your plans.",
+    image: relocationImage,
+    imageAlt: "Moving boxes beside covered furniture in a bright room",
+  },
+  {
+    slug: "divorce",
+    headline: "Deciding what happens to a house during divorce",
+    supportingCopy: "A shared home can be one of the most complex decisions during a separation. Explore the questions around ownership, mortgage payments, and whether one person keeps the house or you sell it.",
+    image: divorceImage,
+    imageAlt: "Two empty wooden chairs beside a small table with a vase",
+  },
+  {
+    slug: "behind-on-property-taxes",
+    headline: "Understanding your options for unpaid property taxes",
+    supportingCopy: "Unpaid property taxes can make it difficult to plan your next steps. Explore the questions to ask about your balance, available payment arrangements, and how the debt fits into plans for the property.",
+    image: behindOnPropertyTaxesImage,
+    imageAlt: "Hands reviewing documents with a pen and calculator at a desk",
+  },
+  {
+    slug: "code-violations",
+    headline: "What to know about property code violations",
+    supportingCopy: "A code violation notice can raise questions about repairs, deadlines, and expense. Explore how to understand the cited issues and what to consider when deciding whether to repair or sell the property.",
+    image: codeViolationsImage,
+    imageAlt: "Person wearing a hard hat checking an unfinished wall with a spirit level",
   },
 ];
