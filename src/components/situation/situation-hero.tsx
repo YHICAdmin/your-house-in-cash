@@ -5,7 +5,9 @@ import styles from "./situation-hero.module.css";
 export function SituationHero({ situation }: { situation: Situation }) {
   return <section className={`section-spacing system-lines-bg ${styles.hero}`}>
     <div className={styles.background} aria-hidden="true" />
-    <div className={styles.accents} aria-hidden="true"><span /><span /></div>
+    <div className={styles.accentBoundary} aria-hidden="true">
+      <div className={styles.accents}><span /><span /></div>
+    </div>
     <div className={`content-grid ${styles.layout}`}>
       <div className={styles.content}>
         <h1 className={`text-heading-2 ${styles.heading}`}>{situation.headline}</h1>

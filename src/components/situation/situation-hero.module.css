@@ -1,10 +1,13 @@
 .hero {
   --slope-depth: var(--spacing-l);
-  overflow: hidden;
+  --slope-angle: calc(atan2(var(--slope-depth), 100vw) + 3deg);
+  z-index: 1;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .background {
-  --steeper-slope-depth: calc(100vw * tan(atan2(var(--slope-depth), 100vw) + 3deg));
+  --steeper-slope-depth: calc(100vw * tan(var(--slope-angle)));
   position: absolute;
   inset: 0;
   z-index: -2;
@@ -13,23 +16,36 @@
   pointer-events: none;
 }
 
+.accentBoundary {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: -2;
+  transform: skewY(calc(-1 * var(--slope-angle)));
+  transform-origin: left top;
+  pointer-events: none;
+}
+
 .accents {
-  --accent-width: calc(var(--spacing-3xl) * 2);
+  --accent-width: calc(var(--spacing-3xl) * 2 + var(--spacing-xl));
   position: absolute;
   left: calc((100% - var(--layout-content-width)) / 2);
-  bottom: calc(var(--accent-width) / 2 * sin(4deg));
+  top: 0;
   width: var(--accent-width);
-  height: var(--spacing-m);
+  height: var(--spacing-xl);
   z-index: -2;
-  transform: translateX(-66.666667%) rotate(-4deg);
-  transform-origin: center bottom;
+  /* Cancel the anchor's shear so the accents stay true rectangles. */
+  transform: skewY(var(--slope-angle)) rotate(calc(-1 * var(--slope-angle))) translateX(-66.666667%);
+  transform-origin: left top;
   pointer-events: none;
 }
 
 .accents span {
   position: absolute;
   width: 80%;
-  height: var(--spacing-s);
+  height: var(--spacing-l);
   background: var(--color-brand-light);
 }
 
@@ -49,8 +65,6 @@
   .hero { --slope-depth: var(--spacing-2xl); }
   .content { grid-column: 1 / span 4; }
   .image { grid-column: 5 / span 4; }
-  .accents { --accent-width: calc(var(--spacing-3xl) * 2 + var(--spacing-xl)); height: var(--spacing-xl); }
-  .accents span { height: var(--spacing-l); }
 }
 
 @media (min-width: 1200px) {
