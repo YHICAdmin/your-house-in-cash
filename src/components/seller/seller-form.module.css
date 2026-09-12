@@ -1,6 +1,6 @@
 .main { overflow-x: clip; min-height: calc(100svh - 64px); }
 .background { position: absolute; inset: 0; z-index: -2; overflow: hidden; pointer-events: none; }
-.ribbon { position: absolute; width: 48rem; height: 100%; max-width: none; left: calc(50% + var(--spacing-l)); transform: translateX(-50%); top: 0; }
+.ribbon { position: absolute; width: 48rem; height: 100%; max-width: none; left: calc(50% + var(--spacing-l)); transform: translateX(-50%); top: 0; opacity: 0.4; }
 @media (min-width: 48rem) { .ribbon { width: max(100%, 60rem); left: calc(50% + var(--spacing-s)); } }
 @media (min-width: 75rem) { .ribbon { width: 100%; left: 50%; } }
 .card { position: relative; width: 100%; max-width: 640px; margin-inline: auto; padding: var(--spacing-l); border-radius: var(--radius-medium); background: var(--color-surface); box-shadow: var(--shadow-floating); }

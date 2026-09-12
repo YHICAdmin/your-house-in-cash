@@ -31,6 +31,7 @@ Guide sellers through submitting their contact and property details to request a
 * The ribbon follows an S-shaped flow, entering from the top left of center, passing behind the Form Card, and continuing down its right side.
 
 * Four layered paths define the ribbon body, dark fold, forward-facing surface, and broad highlight. Gradients use global `Brand Green`, `Brand Green Dark`, `Brand Green Light` as mint, and white `Background`, with a soft bottom fade. The strongest color remains outside the opaque Form Card.
+* The complete ribbon renders at `40%` opacity at all Breakpoints, softening its presence against the white page background while preserving its layered folds.
 * One shared page wrapper contains the ribbon behind the Minimal Header, main form area, and Minimal Footer. Its height follows the complete page, with a gentle fade behind the Footer and the opaque Form Card above it.
 * Uses the global Line System and its layering rules.
 * The current [Ribbon SVG](../../public/brand/seller-form-background.svg) defines the background geometry, gradients, and fade mask, replacing the earlier design draft as the background source.
