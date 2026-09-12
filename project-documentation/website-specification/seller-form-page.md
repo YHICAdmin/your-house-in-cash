@@ -10,6 +10,7 @@ Provide a focused conversion flow for homeowners requesting a cash offer. Collec
 
 * Uses the shared [Minimal Header](site-shell.md#minimal-header).
 * Uses the shared [Minimal Footer](site-shell.md#minimal-footer).
+* On this page, the Minimal Header and Minimal Footer use transparent backgrounds so the shared page ribbon continues behind them. Their foreground content and System Lines retain their shared styling.
 
 # Main Form Area
 
@@ -30,15 +31,16 @@ Guide sellers through submitting their contact and property details to request a
 * The ribbon follows an S-shaped flow, entering from the top left of center, passing behind the Form Card, and continuing down its right side.
 
 * Four layered paths define the ribbon body, dark fold, forward-facing surface, and broad highlight. Gradients use global `Brand Green`, `Brand Green Dark`, `Brand Green Light` as mint, and white `Background`, with a soft bottom fade. The strongest color remains outside the opaque Form Card.
-* The graphic is confined to the main form area. The Minimal Header retains its approved white background.
+* One shared page wrapper contains the ribbon behind the Minimal Header, main form area, and Minimal Footer. Its height follows the complete page, with a gentle fade behind the Footer and the opaque Form Card above it.
 * Uses the global Line System and its layering rules.
 * The current [Ribbon SVG](../../public/brand/seller-form-background.svg) defines the background geometry, gradients, and fade mask, replacing the earlier design draft as the background source.
 
 #### Responsive Behavior
 
-* On Desktop, the SVG fills the main form area's width and is horizontally centered.
+* On Desktop, the SVG fills the page wrapper's width and is horizontally centered.
 * On Tablet, the SVG uses the larger of the available width and `960px`, with its center shifted right by `S` (`16px`).
 * On Mobile, the SVG uses a `768px` composition width with its center shifted right by `L` (`32px`), exposing the upper curve and the right-side continuation. The background container clips the overflowing artwork.
+* At every Breakpoint, the SVG fills the page wrapper's height, scaling its curve to the page dimensions with `preserveAspectRatio="none"`.
 
 #### Technical Requirements
 

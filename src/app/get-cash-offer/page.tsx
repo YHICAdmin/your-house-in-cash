@@ -8,14 +8,13 @@ import styles from "@/components/seller/seller-form.module.css";
 export const metadata: Metadata = { title: "Get a Cash Offer | Your House in Cash" };
 
 export default function SellerFormPage() {
-  return <>
-    <MinimalHeader />
-    <main className={`system-lines-bg section-spacing ${styles.main}`}>
+  return <div className={styles.page}>
       <div className={styles.background} aria-hidden="true">
-        {/* Approved ribbon geometry, separated from the reference's sample form. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className={styles.ribbon} src="/brand/seller-form-background.svg" alt="" />
       </div>
+    <MinimalHeader />
+    <main className={`system-lines-bg section-spacing ${styles.main}`}>
       <div className="content-inset">
         <div className={styles.card}>
           <Progress step={1} />
@@ -24,6 +23,5 @@ export default function SellerFormPage() {
       </div>
     </main>
     <MinimalFooter />
-  </>;
+  </div>;
 }
-
