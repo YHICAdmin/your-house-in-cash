@@ -16,7 +16,15 @@ All field types below inherit these rules. Each type defines the semantic elemen
 
 ## Visual Design
 
+* Field labels and choice-group questions use global `Label` typography at all Breakpoints and the global `Text Primary` color.
+* Supporting guidance and validation error messages use global `Body Small` typography at all Breakpoints.
+* Supporting guidance uses the global `Text Secondary` color.
 * Validation error messages use the global `Error` color.
+
+## Spacing
+
+* Supporting guidance is separated from adjacent elements within its field or choice group by `XS` (`8px`) at all Breakpoints, whether placed beside a label or stacked vertically. Its placement remains defined by the consuming page.
+* A validation error message is separated from the preceding element by `XS` (`8px`) at all Breakpoints. When guidance precedes the error, apply this gap between the guidance and error without adding another gap from the control.
 
 ## Validation
 
@@ -44,6 +52,8 @@ Inherits [Field](#field).
 ## Visual Design
 
 * Uses the global `Surface` background, default `Border` treatment, and global `Small` Radius (`8px`).
+* Entered text and placeholders use global `Body` typography at all Breakpoints.
+* Entered text uses the global `Text Primary` color; placeholders use the global `Text Secondary` color.
 * While a text field displays a validation error, its border uses the global `Error` color, retaining its specified thickness and style.
 
 ## Dimensions and Alignment
@@ -55,6 +65,7 @@ Inherits [Field](#field).
 ## Spacing
 
 * `XS` (`8px`) separates a visible field label from its control at all Breakpoints.
+* Control padding is `XS` (`8px`) vertically and `S` (`16px`) horizontally at all Breakpoints.
 
 ## Validation
 
@@ -94,7 +105,7 @@ Collect an email address and validate its format.
 
 ## Component and Semantics
 
-* Uses the shared [Text Field](#text-field) single-line control with `autocomplete="email"`.
+* Uses the shared [Text Field](#text-field) single-line control with `type="email"` and `autocomplete="email"`.
 
 ## Validation
 
@@ -108,7 +119,7 @@ Collect a United States phone number with readable formatting and a normalized s
 
 ## Component and Semantics
 
-* Uses the shared [Text Field](#text-field) single-line control with `autocomplete="tel"` and accepts United States phone numbers only.
+* Uses the shared [Text Field](#text-field) single-line control with `type="tel"` and `autocomplete="tel"` and accepts United States phone numbers only.
 
 ## Validation
 
@@ -159,6 +170,7 @@ Inherits [Field](#field).
 ## Visual Design
 
 * Choice options have a bordered, clickable presentation. Unselected options use the global `Surface` background and default `Border` treatment.
+* Choice-option text uses global `Body` typography at all Breakpoints and the global `Text Primary` color; the group question inherits Field's label typography.
 * Choice-option containers use the global `Small` Radius (`8px`).
 * Selected options use `Brand Green` for the border and `Brand Green Light` for the background, retaining the default border thickness and style.
 * Hovering an unselected, enabled choice option changes its border color to `Brand Green` while retaining the global `Surface` background.
@@ -168,6 +180,12 @@ Inherits [Field](#field).
 ## Dimensions and Alignment
 
 * A choice group displays one group-level validation error message below all of its options, rather than repeating the message for individual options.
+
+## Spacing
+
+* Each option container uses `XS` (`8px`) vertical padding and `S` (`16px`) horizontal padding at all Breakpoints.
+* `XS` (`8px`) separates the radio or checkbox indicator from its option text at all Breakpoints.
+* `XS` (`8px`) separates adjacent options, including wrapped rows, at all Breakpoints. The consuming page defines the options' arrangement.
 
 ## Validation
 
@@ -181,6 +199,7 @@ Inherits [Field](#field).
 ## Accessibility
 
 * The group's `fieldset` is the semantic owner for the inherited supporting-guidance association.
+* When a native radio or checkbox has visible focus, apply the global [Focus-Visible Treatment](accessibility.md#focus-visible-treatment) around its full option container instead of a separate outline around the indicator. Keyboard focus remains on the native control; the container does not become an additional tab stop.
 * While a choice group displays a validation error, set `aria-invalid="true"` on its `fieldset` and include the group error message's ID in the fieldset's `aria-describedby`, preserving any existing references to group guidance.
 
 # Submission State
@@ -191,7 +210,7 @@ Inherits [Field](#field).
 
 ## Visual Design
 
-* Save-failure messages use the global `Error` color.
+* Save-failure messages use global `Body Small` typography at all Breakpoints and the global `Error` color.
 * While a save request is pending, text fields and choice controls retain their existing colors, opacity, and legibility, including selected states, without additional dimming. The submit action communicates the pending state using the page-defined saving label.
 
 ## Dimensions and Alignment
