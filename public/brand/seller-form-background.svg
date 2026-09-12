@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 80 1440 976"><defs>
+    <linearGradient id="ribbon" gradientUnits="userSpaceOnUse" x1="560" y1="330" x2="1210" y2="420">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.35" stop-color="#EAF3EC"/>
+      <stop offset="0.72" stop-color="#4A8755"/>
+      <stop offset="0.86" stop-color="#EAF3EC"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="0" x2="1" y1="0" y2="0">
+      <stop stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.7" stop-color="#EAF3EC" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.6" stop-color="white"/>
+      <stop offset="1" stop-color="black"/>
+    </linearGradient>
+    <mask id="bottomFade"><rect x="0" y="80" width="1440" height="976" fill="url(#fade)"/></mask>
+    <clipPath id="main"><rect y="80" width="1440" height="976"/></clipPath>
+    <filter id="shadow" x="-20%" y="-15%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#101114" flood-opacity="0.08"/></filter>
+  </defs><g clip-path="url(#main)" mask="url(#bottomFade)">
+    <path d="M 410,80 L 940,80 C 1000,215 970,320 1100,454 C 1210,572 1338,724 1380,1056 L 1050,1056 C 1110,816 1050,665 909,535 C 749,389 551,270 410,80 Z" fill="url(#ribbon)"/>
+    <path d="M 685,80 C 801,285 891,342 1053,512 C 1185,650 1250,825 1220,1056 L 1302,1056 C 1296,805 1206,628 1082,491 C 933,326 877,202 841,80 Z" fill="url(#fold)"/>
+  </g></svg>

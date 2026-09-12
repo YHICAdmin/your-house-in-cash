@@ -11,6 +11,7 @@
   --color-text-secondary: #555b63;
   --color-text-muted: #777d85;
   --color-border: #e4e7e4;
+  --color-error: #b42318;
   --color-line: #eceef4;
   --color-brand-dark: #2c6b3d;
   --color-brand: #4a8755;
@@ -150,7 +151,8 @@
     font: inherit;
   }
 
-  :focus-visible {
+  :focus-visible,
+  .focus-container:has(:focus-visible) {
     outline: 2px solid var(--color-brand-dark);
     outline-offset: 3px;
   }
