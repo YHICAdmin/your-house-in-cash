@@ -4,7 +4,6 @@ import { useRef, useState } from "react";
 import { SellerDetails, type SellerValues } from "./seller-details";
 import { PropertyDetails, type PropertyAnswers } from "./property-details";
 import { SellerSuccess } from "./seller-success";
-import { Progress } from "./progress";
 import styles from "./seller-form.module.css";
 
 export function SellerFormDemo() {
@@ -42,7 +41,6 @@ export function SellerFormDemo() {
 
   return <>
     <p className={`text-body-small ${styles.demoNotice}`}>Demo mode — details are not sent or saved. Refresh to reset.</p>
-    {step === 2 && <Progress step={2} />}
     <div ref={content}>
       {step === 1 && <SellerDetails initialValues={details} onDemoContinue={values => {
         setDetails(values);

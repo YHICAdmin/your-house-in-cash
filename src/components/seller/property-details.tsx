@@ -29,8 +29,9 @@ export function PropertyDetails({ name, answers, onChange, onBack, onSubmit, onS
   }}>
     <TextLink className={styles.back} disabled={!!pending} onClick={onBack}>Back</TextLink>
     <div className={styles.intro}>
-      <h1 className="text-heading-2" tabIndex={-1}>{firstName ? `Thanks, ${firstName}. Want to add a few details?` : "Thanks. Want to add a few details?"}</h1>
-      <p className="text-body">These details help us understand your property. All questions are optional—answer what you can or skip this step.</p>
+      <h1 className="text-heading-2" tabIndex={-1}>{firstName ? `Thanks, ${firstName}!` : "Thanks!"}</h1>
+      <p className="text-body">Your request has been received. Add a few optional details to help us understand your property.</p>
+      <TextLink className={styles.skip} disabled={!!pending} onClick={onSkip}>{pending === "skip" ? "Saving…" : "Skip for now"}</TextLink>
     </div>
     <div className={styles.fields}>
       {questions.map(question => <ChoiceGroup key={question.key} name={question.key} question={question.label}
@@ -44,7 +45,7 @@ export function PropertyDetails({ name, answers, onChange, onBack, onSubmit, onS
     <div className={styles.actions}>
       {failure && <p className={`text-body-small ${styles.error}`}>{failure}</p>}
       <Button type="submit" className={styles.primary} disabled={!!pending}>{pending === "submit" ? "Saving…" : "Submit details"}</Button>
-      <TextLink disabled={!!pending} onClick={onSkip}>{pending === "skip" ? "Saving…" : "Skip for now"}</TextLink>
+
       <span role="status" className="visually-hidden">{pending ? "Saving…" : failure}</span>
     </div>
   </form>;

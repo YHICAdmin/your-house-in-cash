@@ -52,7 +52,7 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Component and Semantics
 
-* Contains the currently displayed form step or Success State. Progress appears with Step 2.
+* Contains the currently displayed form step or Success State.
 * Each form step uses native form semantics. The active state's primary heading uses `H1` semantics.
 * Uses the shared [Form](../form.md) definitions for text fields, choice controls, validation feedback, and submission state.
 
@@ -89,31 +89,6 @@ Guide sellers through submitting their contact and property details to request a
 ### Accessibility
 
 * After a transition between form steps completes, move keyboard focus to the new step's heading. When reduced motion is preferred, move focus after the content is replaced immediately.
-
-## Progress
-
-### Content
-
-* Two steps, in order: `Your details` → `About the house`.
-
-### Component and Semantics
-
-* Uses ordered-list semantics, with each step represented as a list item.
-
-### Visual Design
-
-* Minimal treatment at the top of the Card, using global `Body Small` typography.
-* The active step uses `Brand Green`; the inactive step uses neutral `Text Muted`.
-
-### Interaction
-
-* Appears when Step 2 is displayed after the basic lead has been saved, with Step 2 active. Step 1 presents the initial request as a standalone form.
-* The Progress indicator is informational only; its steps are not clickable.
-* The Progress indicator is hidden in Success State.
-
-### Accessibility
-
-* The current step is marked with `aria-current="step"`.
 
 ## Step 1 — Your Details
 
@@ -189,9 +164,9 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Content
 
-* Heading: `Thanks, {First Name}. Want to add a few details?`
-* `{First Name}` uses the first word of the trimmed full name. If unavailable, use `Thanks. Want to add a few details?`.
-* Supporting copy: `These details help us understand your property. All questions are optional—answer what you can or skip this step.`
+* Heading: `Thanks, {First Name}!`
+* `{First Name}` uses the first word of the trimmed full name. If unavailable, use `Thanks!`.
+* Supporting copy: `Your request has been received. Add a few optional details to help us understand your property.`
 * Uses quick choices wherever possible to minimize typing.
 * Question groups, in canonical order:
   1. `Property Condition`
@@ -223,8 +198,8 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Dimensions and Alignment
 
-* `Back` appears between the Progress indicator and the Step 2 heading, aligned to the left.
-* `Skip for now` appears below `Submit details`.
+* `Back` appears above the Step 2 heading, aligned to the left.
+* `Skip for now` appears below the supporting copy, before the property questions.
 * `Submit details` uses the full available content width on Mobile and content-based width on Tablet and Desktop.
 * The Step 2 save-failure message appears above `Submit details`, whether saving was triggered by `Submit details` or `Skip for now`.
 * The `Reason for Selling` guidance appears below the question and above its choice options.
@@ -233,7 +208,7 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Spacing
 
-* At all Breakpoints, `M` (`24px`) separates Progress from `Back`, and `S` (`16px`) separates `Back` from the Step 2 heading.
+* At all Breakpoints, `S` (`16px`) separates `Back` from the Step 2 heading and the supporting copy from `Skip for now`. The complete introduction retains its shared spacing before the fields.
 
 ### Interaction
 

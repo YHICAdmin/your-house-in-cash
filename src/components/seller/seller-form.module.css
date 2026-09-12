@@ -4,8 +4,7 @@
 @media (min-width: 48rem) { .ribbon { width: max(100%, 60rem); left: calc(50% + var(--spacing-s)); } }
 @media (min-width: 75rem) { .ribbon { width: 100%; left: 50%; } }
 .card { position: relative; width: 100%; max-width: 640px; margin-inline: auto; padding: var(--spacing-l); border-radius: var(--radius-medium); background: var(--color-surface); box-shadow: var(--shadow-floating); }
-.progress { display: flex; align-items: center; gap: var(--spacing-xs); margin-bottom: var(--spacing-m); color: var(--color-text-muted); }
-.progress li[aria-current="step"] { color: var(--color-brand); }
+.skip { margin-top: var(--spacing-s); }
 .intro { margin-bottom: var(--spacing-l); }
 .intro p { margin-top: var(--spacing-s); color: var(--color-text-secondary); }
 .fields { display: flex; flex-direction: column; gap: var(--spacing-m); }
