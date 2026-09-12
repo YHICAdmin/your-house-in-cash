@@ -69,6 +69,9 @@
 }
 
 .selector {
+  --fade-left: 0px;
+  --fade-right: 0px;
+  mask-image: linear-gradient(to right, transparent, #000 var(--fade-left), #000 calc(100% - var(--fade-right)), transparent);
   display: flex;
   min-width: 0;
   flex-wrap: nowrap;
@@ -84,6 +87,18 @@
 
 .selector::-webkit-scrollbar {
   display: none;
+}
+
+.selector[data-fade-left="true"] {
+  --fade-left: var(--spacing-s);
+}
+
+.selector[data-fade-right="true"] {
+  --fade-right: var(--spacing-s);
+}
+
+.selector:has(:focus-visible) {
+  mask-image: none;
 }
 
 .dragging {

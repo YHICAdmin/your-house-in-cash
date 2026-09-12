@@ -16,6 +16,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import {
+  useEffect,
   useRef,
   useState,
   type PointerEvent as ReactPointerEvent,
@@ -165,6 +166,28 @@ export function SituationExplorer({
   const [announcement, setAnnouncement] = useState("");
   const [isDragging, setIsDragging] = useState(false);
   const selectorRef = useRef<HTMLDivElement>(null);
+  const [scrollEdges, setScrollEdges] = useState({ left: false, right: false });
+
+  useEffect(() => {
+    const selector = selectorRef.current;
+    if (!selector) return;
+
+    const updateEdges = () => {
+      const left = selector.scrollLeft > 1;
+      const right = selector.scrollWidth - selector.clientWidth - selector.scrollLeft > 1;
+      setScrollEdges(previous => previous.left === left && previous.right === right
+        ? previous : { left, right });
+    };
+    const observer = new ResizeObserver(updateEdges);
+    observer.observe(selector);
+    for (const option of selector.children) observer.observe(option);
+    selector.addEventListener("scroll", updateEdges, { passive: true });
+    updateEdges();
+    return () => {
+      observer.disconnect();
+      selector.removeEventListener("scroll", updateEdges);
+    };
+  }, []);
   const dragStateRef = useRef({
     moved: false,
     pointerId: -1,
@@ -235,6 +258,8 @@ export function SituationExplorer({
     <>
         <div
           ref={selectorRef}
+          data-fade-left={scrollEdges.left}
+          data-fade-right={scrollEdges.right}
           className={`${styles.selector}${isDragging ? ` ${styles.dragging}` : ""}`}
           role="group"
           aria-describedby={descriptionId}

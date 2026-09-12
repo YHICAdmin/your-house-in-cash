@@ -424,6 +424,7 @@ Contains, in document order:
 * The row and its options use no Card, Border, Divider, or Shadow. Background and Radius apply only to the selected label.
 * The selected option's visible label uses global Surface text at `600` font weight on a Brand Green Dark background with the global Pill Radius.
 * Hovering an unselected option changes only its text color to Brand Green Dark.
+* A subtle `16px` (`S`) fade blends each overflowing edge into the background. It appears on the right when more content is available to the right, and on the left when content can be scrolled back into view. It updates on scrolling and resizing. During visible keyboard focus, the row remains fully opaque to preserve the focus indicator.
 
 ### Dimensions and Alignment
 
