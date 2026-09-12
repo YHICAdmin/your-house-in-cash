@@ -1,7 +1,6 @@
 .header { height: 64px; background: var(--color-background); border-bottom: 1px dashed var(--color-line); }
 .inner { display: flex; align-items: center; justify-content: space-between; height: 100%; gap: var(--spacing-s); }
 .logo { height: 44px; width: auto; }
-.contact { display: flex; flex-direction: column; align-items: flex-end; gap: var(--spacing-xs); text-align: right; color: var(--color-text-secondary); }
 .footer { padding-block: var(--spacing-m); }
 .legal { display: flex; flex-wrap: wrap; gap: var(--spacing-xs) var(--spacing-s); }
 .legal a { font-weight: 400; }

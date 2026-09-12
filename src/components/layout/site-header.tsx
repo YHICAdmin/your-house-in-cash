@@ -2,36 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Phone as PhoneIcon } from "lucide-react";
+import { PhoneContact } from "./phone-contact";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { navigationItems } from "@/data/navigation";
 import styles from "./site-header.module.css";
 
 const closeDuration = 180;
-const phoneNumber = "216-111-1111";
-const phoneHref = "tel:2161111111";
-
-type PhoneContactProps = {
-  placement: "header" | "menu";
-};
-
-function PhoneContact({ placement }: PhoneContactProps) {
-  return (
-    <a
-      className={`${styles.phoneContact} ${
-        placement === "header" ? styles.headerPhoneContact : styles.menuPhoneContact
-      }`}
-      href={phoneHref}
-    >
-      <PhoneIcon className={styles.phoneIcon} aria-hidden="true" />
-      <span className="text-body-small">Call Us</span>
-      <span className={styles.phoneDivider} aria-hidden="true" />
-      <span className="text-body">{phoneNumber}</span>
-    </a>
-  );
-}
-
 export function SiteHeader() {
   const [isMenuRendered, setIsMenuRendered] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -208,7 +185,7 @@ export function SiteHeader() {
         </nav>
 
         <div className={styles.actions}>
-          <PhoneContact placement="header" />
+          <div className={styles.headerPhoneContact}><PhoneContact /></div>
           <span className={styles.headerCta}>
             <Button href="/get-cash-offer">Get My Cash Offer</Button>
           </span>
@@ -253,7 +230,7 @@ export function SiteHeader() {
                 </Link>
               ))}
             </nav>
-            <PhoneContact placement="menu" />
+            <PhoneContact className={styles.menuPhoneContact} />
             <div className={`${styles.menuCta} content-inset`}>
               <Button href="/get-cash-offer">Get My Cash Offer</Button>
             </div>

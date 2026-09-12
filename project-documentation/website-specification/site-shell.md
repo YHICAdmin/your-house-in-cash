@@ -491,29 +491,21 @@ Provide brand identification, a link to the homepage, and direct phone contact w
 
 ### Content
 
-* Uses the phone number and `tel:` destination defined in [Site Shell → Phone Contact](#phone-contact).
-* Supporting message: `Talk to a real person`.
+* Uses the regular Header's [Phone Contact](#phone-contact), with the label `Still have questions?` and the same phone number, icon, and Divider.
 
 ### Component and Semantics
 
-* The phone number uses the documented `Text Link` Component with telephone link semantics.
-
-### Visual Design
-
-* The supporting message uses global `Body Small` typography and `Text Secondary` color.
+* Reuses the regular Header's complete Phone Contact link, visual design, internal spacing, and accessibility definitions.
 
 ### Dimensions and Alignment
 
 * Positioned on the right, opposite the Logo.
-* At all Breakpoints, the supporting message appears above the phone number, with both aligned to the right.
-
-### Spacing
-
-* `XS` (`8px`) separates the supporting message from the phone number at all Breakpoints.
 
 ### Responsive Behavior
 
-* The supporting message may wrap within the contact group on narrow screens.
+* The complete Phone Contact remains visible in the Minimal Header at all Breakpoints.
+* The icon, label, Divider, and phone number form one horizontal row at all Breakpoints.
+* On Mobile, the label is shortened to `Questions?`. Desktop and Tablet retain `Still have questions?`.
 
 # Minimal Footer
 
