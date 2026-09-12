@@ -1,0 +1,24 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { situations } from "@/data/situations";
+import { SituationHero } from "@/components/situation/situation-hero";
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return situations.map(({ slug }) => ({ slug }));
+}
+
+function getSituation(slug: string) {
+  return situations.find(situation => situation.slug === slug) ?? notFound();
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const situation = getSituation((await params).slug);
+  return { title: `${situation.headline} | Your House in Cash`, description: situation.supportingCopy };
+}
+
+export default async function SituationPage({ params }: { params: Promise<{ slug: string }> }) {
+  const situation = getSituation((await params).slug);
+  return <main><SituationHero situation={situation} /></main>;
+}
