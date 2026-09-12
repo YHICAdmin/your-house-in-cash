@@ -20,14 +20,14 @@ Guide sellers through submitting their contact and property details to request a
 ## Layout
 
 * One large, horizontally centered Form Card is the primary element, with an abstract brand background surrounding it.
+* The Form Card's content follows one vertical column at all Breakpoints, including the fields in Step 1 and question groups in Step 2.
+* Within each Step 2 question group, choice options use content-based widths and form rows that wrap to fit the available width at all Breakpoints.
 * The Form Card begins after the main form area's inherited global Section top padding, measured from the bottom of the Minimal Header.
-* Do not use a `5–1–6` composition, a two-column content composition, an additional Sidebar, or marketing Cards around the form.
 
 ### Page Background
 
 * Composition reference: the Stripe form-page screenshot supplied by the user, `Screenshot 2026-09-11 090850.png`. It guides the composition; colors use the site's established brand palette.
 * A broad, curved graphic ribbon enters from the top of the main form area, passes behind the Form Card, and continues down its right side.
-* No house photography, literal house illustration, promotional Cards, or additional Sidebar.
 
 * The ribbon's gradient transitions from global `Brand Green` to `Brand Green Light` and then the white `Background`. Concentrate the strongest green to the right of the Form Card, with soft transitions and generous surrounding white space.
 * The graphic is confined to the main form area. The Minimal Header retains its approved white background.
@@ -47,7 +47,7 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Component and Semantics
 
-* Contains the Progress indicator and the currently displayed form step, or Success State without the Progress indicator.
+* Contains the Progress indicator and the currently displayed form step, or Success State.
 * Each form step uses native form semantics. The active state's primary heading uses `H1` semantics.
 * Uses the shared [Form](../form.md) definitions for text fields, choice controls, validation feedback, and submission state.
 
@@ -55,14 +55,13 @@ Guide sellers through submitting their contact and property details to request a
 
 * Uses opaque white global `Surface`, global `Medium` Radius (`12px`), and subtle separation from the background. The Card renders above the ribbon so the graphic does not interfere with form readability.
 * Uses the global `Floating` Shadow for separation from the background.
-* State headings use global `H2` typography while retaining `H1` semantics. Supporting copy uses global `Body` typography and `Text Secondary`.
+* State headings use global `H2` typography. Supporting copy uses global `Body` typography and `Text Secondary`.
 
 ### Dimensions and Alignment
 
-* Uses a single vertical content flow.
 * Width: `100%` of the available width, up to a maximum of `640px`, while preserving global page padding.
 * The same Card container is retained for Step 1, Step 2, and Success State, with stable width and placement while its contents change. Its top edge remains at the same position within the main form area throughout the flow.
-* Card height is determined by the content of the current state. The Card grows or shrinks downward while its top edge remains in place.
+* Card height is determined by the content of the current state. The Card grows or shrinks downward.
 
 ### Spacing
 
@@ -85,10 +84,6 @@ Guide sellers through submitting their contact and property details to request a
 ### Accessibility
 
 * After a transition between form steps completes, move keyboard focus to the new step's heading. When reduced motion is preferred, move focus after the content is replaced immediately.
-
-### Responsive Behavior
-
-* At narrower Breakpoints, the Card fits within the available page width and global page padding. Form fields remain in one vertical column.
 
 ## Progress
 
@@ -149,7 +144,6 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Dimensions and Alignment
 
-* All four fields appear in one vertical column at every Breakpoint.
 * The Step 1 save-failure message appears above `Continue`.
 * `Continue` uses the full available content width on Mobile and content-based width on Tablet and Desktop.
 
@@ -166,9 +160,9 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Technical Requirements
 
-* Lead destination, persistence service, submission contract, duplicate handling, and recovery behavior are TBD.
+* Open backend decisions are listed under [Decisions Still Required Before Implementation](#decisions-still-required-before-implementation).
 * `Your Name` uses `autocomplete="name"` for browser autofill.
-* Step 2 information must be associated with the lead saved in Step 1 rather than treated as an unrelated lead. The association mechanism is TBD.
+* Step 2 information must be associated with the lead saved in Step 1 rather than treated as an unrelated lead.
 * When Step 1 is revisited for editing, `Continue` saves the revised details to the same lead before returning to Step 2; it does not create a new lead.
 
 ### Property Address
@@ -227,7 +221,6 @@ Guide sellers through submitting their contact and property details to request a
 * `Skip for now` appears below `Submit details`.
 * `Submit details` uses the full available content width on Mobile and content-based width on Tablet and Desktop.
 * The Step 2 save-failure message appears above `Submit details`, whether saving was triggered by `Submit details` or `Skip for now`.
-* Within each question group, choice options use content-based widths and form rows that wrap to fit the available width at all Breakpoints.
 * The `Reason for Selling` guidance appears below the question and above its choice options.
 * The free-text length guidance appears beside the `Anything else you'd like us to know?` label and wraps below it when space is insufficient.
 * `Clear selection` appears below the options of its single-selection group, aligned to the left.
@@ -238,7 +231,7 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Interaction
 
-* Completing Step 2 updates the saved lead with the additional information and shows Success State within the same Card.
+* Completing Step 2 updates the saved lead with the additional information and shows Success State.
 * While a Step 2 save request is pending, the activated completion action (`Submit details` or `Skip for now`) displays `Saving…`.
 * `Back` is unavailable while the Step 2 save request is pending. If saving fails, it becomes available again.
 * `Submit details` accepts partial answers; unanswered questions do not block completion.
@@ -267,7 +260,6 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Component and Semantics
 
-* Replaces the form contents inside the same Card.
 * The phone number uses the documented `Text Link` Component with telephone link semantics.
 
 ### Dimensions and Alignment
@@ -276,7 +268,6 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Interaction
 
-* No separate Thank You Page or route is introduced.
 * The transition into Success State uses a fade over `200ms` with `ease-out`.
 * When `prefers-reduced-motion: reduce` applies, Success State replaces the form immediately without animation.
 

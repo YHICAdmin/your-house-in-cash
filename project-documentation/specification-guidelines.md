@@ -180,6 +180,12 @@ This authority applies to future specification work and to new unresolved decora
 
 ## How to Write Specifications
 
+### Positive Requirements and Negative Constraints
+
+Specifications describe what is to be built: the required content, composition, and behavior. Describe the intended result rather than enumerating excluded alternatives or elements outside its scope.
+
+A negative constraint is appropriate only when it prevents a concrete misinterpretation of an existing requirement that the positive description does not resolve. Before adding any negative constraint, request explicit user approval, presenting the proposed wording and explaining the ambiguity it addresses.
+
 ### Global Inheritance and Local Ownership
 
 Local specifications document only requirements that establish local content, ownership, classification, relationships, overrides, extensions, or exceptions. A requirement fully established by an applicable global rule or shared Component is inherited and is not restated locally.
@@ -200,13 +206,18 @@ Briefly state what the Section helps the user accomplish or understand and why i
 
 Define how the Section is composed, presented, and behaves as a whole. Layout owns:
 
-- Overall composition: content areas, Grid allocation, grouping, nesting, parallel flows, and relationships among elements.
+- Overall composition: the Section's columns or content areas, their Grid allocation, and their arrangement relative to one another.
+- Element placement within that composition: which named elements belong to each column or content area and their spatial relationships, such as stacking or side-by-side placement.
 - Section dimensions, alignment, and spacing owned by the Section rather than by an individual element.
 - The Section's visual shell: background treatments, borders, shadows, and its relationship to the global Line System.
 - Responsive changes to the overall composition, including explicitly approved differences between document and visual order.
 - Behavior of the Section's shell, such as sticky positioning or changes to its appearance during scrolling.
 
-Document only locally required decisions under the global inheritance rule. Do not repeat individual element properties or the canonical element sequence. Keep the `Layout` heading when no local requirements are needed, without adding filler or restating global defaults.
+Document only locally required decisions under the global inheritance rule. Naming elements in `Layout` establishes their placement within the composition; their definitions remain in their own subsections. Each composition requirement is documented once at the level that owns it.
+
+An element's internal arrangement belongs to that element's applicable subsections, and shared Component internals remain in the Component specification. For example, `Layout` assigns a map and statistics to the left column and a city list and image to the right column; the arrangement of choice options within a form question belongs to the form element containing that question.
+
+Keep the `Layout` heading when no local requirements are needed, without adding filler or restating global defaults.
 
 #### Elements
 
