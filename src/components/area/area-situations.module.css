@@ -68,63 +68,12 @@
   grid-column: 1 / -1;
 }
 
-.selectorViewport {
-  position: relative;
-  min-width: 0;
-  margin-bottom: var(--spacing-s);
-  padding-inline: var(--spacing-l);
-}
-
-.selectorViewport::after,
-.selectorViewport::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  width: var(--spacing-l);
-  background: linear-gradient(to right, transparent, var(--color-background));
-  content: "";
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 150ms ease;
-}
-
-.selectorViewport::after { right: calc(var(--spacing-l) + var(--preview-inset, 0px)); }
-.selectorViewport::before {
-  left: var(--spacing-l);
-  transform: rotate(180deg);
-}
-
-.hasOverflowBefore::before { opacity: 1; }
-
-.scrollControl {
-  position: absolute;
-  top: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--spacing-l);
-  height: 48px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--color-text-secondary);
-  cursor: pointer;
-}
-
-.previousControl { left: 0; }
-.nextControl { right: var(--preview-inset, 0px); }
-.scrollControl:disabled { visibility: hidden; }
-
-.hasOverflowAfter::after {
-  opacity: 1;
-}
-
 .selector {
   display: flex;
   min-width: 0;
   flex-wrap: nowrap;
   gap: var(--spacing-xs);
+  margin: -5px -5px calc(var(--spacing-xs) - 5px);
   padding: 5px;
   overflow-x: auto;
   cursor: grab;

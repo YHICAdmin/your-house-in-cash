@@ -3,8 +3,6 @@
 import {
   ArrowRight,
   Building2,
-  ChevronLeft,
-  ChevronRight,
   ClipboardX,
   Gavel,
   Hammer,
@@ -18,7 +16,6 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import {
-  useEffect,
   useRef,
   useState,
   type PointerEvent as ReactPointerEvent,
@@ -131,8 +128,6 @@ export function SituationExplorer({
 }: SituationExplorerProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [announcement, setAnnouncement] = useState("");
-  const [hasOverflowAfter, setHasOverflowAfter] = useState(false);
-  const [hasOverflowBefore, setHasOverflowBefore] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const selectorRef = useRef<HTMLDivElement>(null);
   const dragStateRef = useRef({
@@ -144,62 +139,11 @@ export function SituationExplorer({
   const suppressClickRef = useRef(false);
   const selected = situations[selectedIndex];
 
-  useEffect(() => {
-    const selector = selectorRef.current;
-    if (!selector) return;
-
-    const updateOverflow = () => {
-      const remaining = selector.scrollWidth - selector.clientWidth - selector.scrollLeft;
-      setHasOverflowAfter(remaining > 1);
-      setHasOverflowBefore(selector.scrollLeft > 1);
-    };
-
-    updateOverflow();
-
-    const sizeSelector = () => {
-      selector.style.width = "";
-      const available = selector.clientWidth;
-      const options = Array.from(selector.children) as HTMLElement[];
-      const start = options[0]?.offsetLeft ?? 0;
-      const edgeIndex = options.findIndex((option) =>
-        option.offsetLeft - start + option.offsetWidth >= available - 24
-      );
-      const candidate = options[edgeIndex];
-      const edgeOption = candidate && candidate.offsetLeft - start > available - 48
-        ? options[Math.max(0, edgeIndex - 1)] : candidate;
-      if (edgeOption && selector.scrollWidth > available) {
-        // End inside a label so the initial view deliberately previews another option.
-        selector.style.width = `${Math.min(available, edgeOption.offsetLeft - start + edgeOption.offsetWidth / 2)}px`;
-      }
-      selector.parentElement?.style.setProperty("--preview-inset", `${available - selector.clientWidth}px`);
-      updateOverflow();
-    };
-    sizeSelector();
-    void document.fonts.ready.then(sizeSelector);
-    const observer = new ResizeObserver(sizeSelector);
-    observer.observe(selector.parentElement!);
-    selector.addEventListener("scroll", updateOverflow, { passive: true });
-
-    return () => {
-      observer.disconnect();
-      selector.removeEventListener("scroll", updateOverflow);
-    };
-  }, []);
-
   function selectSituation(index: number) {
     if (index === selectedIndex) return;
 
     setSelectedIndex(index);
     setAnnouncement(`${situations[index].label} details are now available.`);
-  }
-
-  function scrollSelector(direction: number) {
-    const selector = selectorRef.current;
-    if (!selector) return;
-    selector.scrollBy({
-      left: direction * selector.clientWidth * 0.75,
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-    });
   }
 
   function handlePointerDown(event: ReactPointerEvent<HTMLDivElement>) {
@@ -254,14 +198,6 @@ export function SituationExplorer({
 
   return (
     <>
-      <div
-        className={`${styles.selectorViewport}${hasOverflowAfter ? ` ${styles.hasOverflowAfter}` : ""}${hasOverflowBefore ? ` ${styles.hasOverflowBefore}` : ""}`}
-      >
-        <button type="button" className={`${styles.scrollControl} ${styles.previousControl}`}
-          aria-label="Previous situations" disabled={!hasOverflowBefore}
-          onClick={() => scrollSelector(-1)}>
-          <ChevronLeft size={16} aria-hidden="true" />
-        </button>
         <div
           ref={selectorRef}
           className={`${styles.selector}${isDragging ? ` ${styles.dragging}` : ""}`}
@@ -290,7 +226,12 @@ export function SituationExplorer({
                 type="button"
                 aria-controls={selectedContentId}
                 aria-pressed={isSelected}
-                onClick={() => selectSituation(index)}
+                onClick={(event) => {
+                  selectSituation(index);
+                  event.currentTarget.scrollIntoView({
+                    behavior: "auto", block: "nearest", inline: "nearest",
+                  });
+                }}
                 onFocus={(event) =>
                   event.currentTarget.scrollIntoView({
                     behavior: "auto",
@@ -304,12 +245,7 @@ export function SituationExplorer({
             );
           })}
         </div>
-        <button type="button" className={`${styles.scrollControl} ${styles.nextControl}`}
-          aria-label="Next situations" disabled={!hasOverflowAfter}
-          onClick={() => scrollSelector(1)}>
-          <ChevronRight size={16} aria-hidden="true" />
-        </button>
-      </div>
+
 
       <div
         id={selectedContentId}
