@@ -227,18 +227,22 @@ export function SituationExplorer({
                 aria-controls={selectedContentId}
                 aria-pressed={isSelected}
                 onClick={(event) => {
+                  const option = event.currentTarget;
                   selectSituation(index);
-                  event.currentTarget.scrollIntoView({
-                    behavior: "auto", block: "nearest", inline: "nearest",
+                  requestAnimationFrame(() => {
+                    option.scrollIntoView({
+                      behavior: "auto", block: "nearest", inline: "nearest",
+                    });
                   });
                 }}
-                onFocus={(event) =>
+                onFocus={(event) => {
+                  if (!event.currentTarget.matches(":focus-visible")) return;
                   event.currentTarget.scrollIntoView({
                     behavior: "auto",
                     block: "nearest",
                     inline: "nearest",
-                  })
-                }
+                  });
+                }}
               >
                 <span className={styles.optionLabel}>{situation.label}</span>
               </button>

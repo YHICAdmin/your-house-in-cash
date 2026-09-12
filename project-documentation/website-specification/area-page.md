@@ -416,22 +416,26 @@ Contains, in document order:
 
 ### Visual Design
 
-* Across all Breakpoints, the Situation Selector remains visually open and transparent, without a surrounding Card, background, Border, Radius, or Shadow.
+* Across all Breakpoints, the Situation Selector presents an open, transparent row of options.
 * The carousel does not display a persistent scrollbar.
 * Each option uses `14px / 400 / 1.5` typography and `Text Primary` color across all Breakpoints.
-* The default state does not use a background, Border, Divider, Radius, or Shadow.
-* Across all Breakpoints, the selected option's visible label uses global Surface text at `600` font weight on a Brand Green Dark background with the global Pill Radius, without a Border or Shadow.
-* When an unselected option is hovered, its text changes to Brand Green Dark while its font weight remains unchanged.
-* Hovering an unselected option does not add a background, Border, Radius, or Shadow.
+* The row and its options use no Card, Border, Divider, or Shadow. Background and Radius apply only to the selected label.
+* The selected option's visible label uses global Surface text at `600` font weight on a Brand Green Dark background with the global Pill Radius.
+* Hovering an unselected option changes only its text color to Brand Green Dark.
 
 ### Dimensions and Alignment
 
-* Uses the complete width of the right area on Desktop and Tablet.
-* Uses the complete available content width on Mobile.
-* The first option aligns with the left edge of the content area. The list uses the full available width; overflowing labels are naturally clipped at its edges as the user scrolls.
+* The selector fills the width of its content area across all Breakpoints.
+* The first option aligns with the left edge of the content area.
+* Overflowing labels are naturally clipped at the list's edges as the user scrolls.
 * Text is left-aligned.
+* Each option uses its content-based width across all Breakpoints.
 * Each option has a minimum interactive height of `48px`.
 * Each option's visible label uses `6px` vertical and `12px` horizontal internal padding so the selected pill remains compact within the larger interactive target.
+
+### Spacing
+
+* An `8px` (`XS`) gap separates options across all Breakpoints.
 
 ### Spacing After
 
@@ -441,10 +445,11 @@ Contains, in document order:
 
 * Selecting an option updates the Selected Situation Content within the Section and keeps keyboard focus on the selected option.
 * `Enter` or `Space` selects the focused option.
-* A pointer cursor is displayed when a pointing device hovers over an option.
 * Users can move through the overflowed carousel using touch swipe, trackpad scrolling, or pointer dragging.
 * The carousel viewport uses a `grab` cursor where it is draggable and a `grabbing` cursor during pointer dragging; the options retain their pointer cursor.
-* Selecting or focusing a partially visible option scrolls it fully into view using the nearest edge.
+* Clicking or tapping an option selects it first, then reveals the complete selected label using the nearest edge after its selected styling is applied.
+* Keyboard focus reveals a partially visible option immediately using the nearest edge. Pointer focus leaves this reveal to the completed selection.
+* Dragging scrolls the list while preserving the selected situation.
 
 ### Accessibility
 
@@ -460,7 +465,6 @@ Contains, in document order:
 
 * Across all Breakpoints, displays the situation options as one manually scrollable horizontal carousel.
 * The carousel does not advance automatically.
-* Each option uses its content-based width, with an `8px` (`XS`) gap between options.
 
 ## Selected Situation Content
 
