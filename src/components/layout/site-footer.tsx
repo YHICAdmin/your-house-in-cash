@@ -9,27 +9,32 @@ const socialPlatforms = [
   {
     name: "Facebook",
     icon: "facebook",
-    href: "https://www.facebook.com/yourhouseincash?utm_source=chatgpt.com",
+    href: "https://www.facebook.com/yourhouseincash",
   },
   {
     name: "Instagram",
     icon: "instagram",
-    href: "https://www.instagram.com/yourhouseincash/?utm_source=chatgpt.com",
+    href: "https://www.instagram.com/yourhouseincash/",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    href: "https://www.linkedin.com/company/your-house-in-cash?utm_source=chatgpt.com",
+    href: "https://www.linkedin.com/company/your-house-in-cash",
   },
   {
     name: "YouTube",
     icon: "youtube",
-    href: "https://youtube.com/@yourhouseincash?utm_source=chatgpt.com",
+    href: "https://youtube.com/@yourhouseincash",
   },
   {
     name: "TikTok",
     icon: "tiktok",
-    href: "https://www.tiktok.com/@yourhouseincash?utm_source=chatgpt.com",
+    href: "https://www.tiktok.com/@yourhouseincash",
+  },
+  {
+    name: "X",
+    icon: "x",
+    href: "https://x.com/yourhouseincash/",
   },
 ] as const;
 

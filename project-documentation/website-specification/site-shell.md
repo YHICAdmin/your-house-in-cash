@@ -418,12 +418,12 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 - Copyright notice: **© {Current Year} Your House in Cash. All rights reserved.**
 - `{Current Year}` is generated dynamically from the current calendar year.
 - Social identity marks link to the following profiles in this order:
-  - Facebook: `https://www.facebook.com/yourhouseincash?utm_source=chatgpt.com`
-  - Instagram: `https://www.instagram.com/yourhouseincash/?utm_source=chatgpt.com`
-  - LinkedIn: `https://www.linkedin.com/company/your-house-in-cash?utm_source=chatgpt.com`
-  - YouTube: `https://youtube.com/@yourhouseincash?utm_source=chatgpt.com`
-  - TikTok: `https://www.tiktok.com/@yourhouseincash?utm_source=chatgpt.com`
-- X is omitted until its handle is approved.
+  - Facebook: `https://www.facebook.com/yourhouseincash`
+  - Instagram: `https://www.instagram.com/yourhouseincash/`
+  - LinkedIn: `https://www.linkedin.com/company/your-house-in-cash`
+  - YouTube: `https://youtube.com/@yourhouseincash`
+  - TikTok: `https://www.tiktok.com/@yourhouseincash`
+  - X: `https://x.com/yourhouseincash/`
 
 ### Component and Semantics
 
