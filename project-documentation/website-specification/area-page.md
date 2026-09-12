@@ -398,15 +398,17 @@ Contains, in document order:
 
 * Contains the following options in canonical order:
   1. `Foreclosure`.
-  2. `Inherited Property`.
+  2. `Inherited House`.
   3. `Tired Landlord`.
   4. `Major Repairs`.
   5. `Vacant Property`.
   6. `Problem Tenants`.
   7. `Relocation`.
   8. `Divorce`.
-  9. `Behind on Property Taxes`.
+  9. `Unpaid Property Taxes`.
   10. `Code Violations`.
+
+* `Inherited House` is the selector label for `Inherited Property`; `Unpaid Property Taxes` is the selector label for `Behind on Property Taxes`. The corresponding content and link definitions below use the original situation names.
 
 ### Component and Semantics
 
@@ -447,7 +449,10 @@ Contains, in document order:
 * `Enter` or `Space` selects the focused option.
 * Users can move through the overflowed carousel using touch swipe, trackpad scrolling, or pointer dragging.
 * The carousel viewport uses a `grab` cursor where it is draggable and a `grabbing` cursor during pointer dragging; the options retain their pointer cursor.
-* Clicking or tapping an option selects it first, then reveals the complete selected label using the nearest edge after its selected styling is applied.
+* After a selection changes and its selected styling is applied, reveal the selected option together with its immediate neighbor in the direction of progression. Determine direction by comparing the new selection's position with the previous selection: a later option progresses right, and an earlier option progresses left.
+* Scroll only as far as needed to reveal both options. When both are already fully visible, preserve the current scroll position.
+* When the available width cannot accommodate both options, prioritize the complete selected label and reveal as much of the neighbor in the direction of progression as fits.
+* At a list endpoint with no further neighbor in the direction of progression, reveal the selected option in full using the nearest edge.
 * Keyboard focus reveals a partially visible option immediately using the nearest edge. Pointer focus leaves this reveal to the completed selection.
 * Dragging scrolls the list while preserving the selected situation.
 

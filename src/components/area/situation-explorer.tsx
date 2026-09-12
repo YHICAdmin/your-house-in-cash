@@ -29,6 +29,7 @@ type Situation = {
   heading: string;
   icon: LucideIcon;
   label: string;
+  selectorLabel?: string;
   slug: string;
 };
 
@@ -43,6 +44,7 @@ const situations = [
   },
   {
     label: "Inherited Property",
+    selectorLabel: "Inherited House",
     slug: "inherited-property",
     icon: ScrollText,
     heading: "What to Consider With an Inherited Property",
@@ -99,6 +101,7 @@ const situations = [
   },
   {
     label: "Behind on Property Taxes",
+    selectorLabel: "Unpaid Property Taxes",
     slug: "behind-on-property-taxes",
     icon: ReceiptText,
     heading: "Understanding Delinquent Property Taxes",
@@ -122,6 +125,38 @@ type SituationExplorerProps = {
 
 const selectedContentId = "selected-situation-content";
 
+function getSelectorLabel(situation: Situation) {
+  return situation.selectorLabel ?? situation.label;
+}
+
+function revealSelection(
+  selector: HTMLDivElement,
+  option: HTMLButtonElement,
+  direction: number,
+) {
+  const neighbor = direction > 0 ? option.nextElementSibling
+    : direction < 0 ? option.previousElementSibling : null;
+  const viewport = selector.getBoundingClientRect();
+  const padding = getComputedStyle(selector);
+  const left = viewport.left + parseFloat(padding.paddingLeft);
+  const right = viewport.right - parseFloat(padding.paddingRight);
+  const selectedBounds = option.getBoundingClientRect();
+  const neighborBounds = neighbor?.getBoundingClientRect() ?? selectedBounds;
+  const start = Math.min(selectedBounds.left, neighborBounds.left);
+  const end = Math.max(selectedBounds.right, neighborBounds.right);
+  let delta = 0;
+
+  if (end - start <= right - left) {
+    if (start < left) delta = start - left;
+    else if (end > right) delta = end - right;
+  } else {
+    // Keep the selection whole and devote the remaining space to its neighbor.
+    delta = direction < 0 ? selectedBounds.right - right : selectedBounds.left - left;
+  }
+
+  if (delta !== 0) selector.scrollBy({ left: delta, behavior: "instant" });
+}
+
 export function SituationExplorer({
   descriptionId,
   headingId,
@@ -143,7 +178,7 @@ export function SituationExplorer({
     if (index === selectedIndex) return;
 
     setSelectedIndex(index);
-    setAnnouncement(`${situations[index].label} details are now available.`);
+    setAnnouncement(`${getSelectorLabel(situations[index])} details are now available.`);
   }
 
   function handlePointerDown(event: ReactPointerEvent<HTMLDivElement>) {
@@ -228,11 +263,13 @@ export function SituationExplorer({
                 aria-pressed={isSelected}
                 onClick={(event) => {
                   const option = event.currentTarget;
+                  const direction = Math.sign(index - selectedIndex);
                   selectSituation(index);
                   requestAnimationFrame(() => {
-                    option.scrollIntoView({
-                      behavior: "auto", block: "nearest", inline: "nearest",
-                    });
+                    const selector = selectorRef.current;
+                    if (selector && option.isConnected) {
+                      revealSelection(selector, option, direction);
+                    }
                   });
                 }}
                 onFocus={(event) => {
@@ -244,7 +281,7 @@ export function SituationExplorer({
                   });
                 }}
               >
-                <span className={styles.optionLabel}>{situation.label}</span>
+                <span className={styles.optionLabel}>{getSelectorLabel(situation)}</span>
               </button>
             );
           })}
