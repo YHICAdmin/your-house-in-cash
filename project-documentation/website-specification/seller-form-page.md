@@ -52,7 +52,7 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Component and Semantics
 
-* Contains the Progress indicator and the currently displayed form step, or Success State.
+* Contains the currently displayed form step or Success State. Progress appears with Step 2.
 * Each form step uses native form semantics. The active state's primary heading uses `H1` semantics.
 * Uses the shared [Form](../form.md) definitions for text fields, choice controls, validation feedback, and submission state.
 
@@ -71,7 +71,7 @@ Guide sellers through submitting their contact and property details to request a
 ### Spacing
 
 * Internal Padding: `XL` (`48px`) on Desktop and Tablet; `L` (`32px`) on Mobile.
-* In Step 1, `M` (`24px`) separates Progress from the heading at all Breakpoints.
+* Step 1 begins with its heading.
 * `S` (`16px`) separates a heading from its supporting copy where present.
 * `L` (`32px`) separates the step introduction from its fields.
 * `M` (`24px`) separates adjacent field or question groups.
@@ -107,7 +107,7 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Interaction
 
-* Displays Step 1 as active initially and Step 2 as active after the basic lead has been saved and the second step is displayed.
+* Appears when Step 2 is displayed after the basic lead has been saved, with Step 2 active. Step 1 presents the initial request as a standalone form.
 * The Progress indicator is informational only; its steps are not clickable.
 * The Progress indicator is hidden in Success State.
 
@@ -126,7 +126,7 @@ Guide sellers through submitting their contact and property details to request a
   2. `Your Name`
   3. `Phone Number`
   4. `Email Address`
-* Primary action: `Continue`.
+* Primary action: `Get My Cash Offer`.
 * Phone Number placeholder: `e.g. 216-555-1234`.
 * Save-failure message: `We couldn’t save your details. Please try again.`
 * Reassurance line below the primary action: `Your information stays private.`
@@ -149,26 +149,26 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Dimensions and Alignment
 
-* The Step 1 save-failure message appears above `Continue`.
-* `Continue` uses the full available field width at all Breakpoints. The reassurance line is centered beneath it.
+* The Step 1 save-failure message appears above `Get My Cash Offer`.
+* `Get My Cash Offer` uses the full available field width at all Breakpoints. The reassurance line is centered beneath it.
 
 ### Spacing
 
-* `XS` (`8px`) separates `Continue` from the reassurance line.
+* `XS` (`8px`) separates `Get My Cash Offer` from the reassurance line.
 
 ### Interaction
 
 * Completing Step 1 saves the basic lead **before** advancing to Step 2.
 * Step 2 is displayed only after successful persistence has been confirmed; merely holding values in client memory does not satisfy this requirement.
 * While the lead-save request is pending, the primary action displays `Saving…`.
-* If saving fails, remain on Step 1, preserve all entered values, show the save-failure message, and restore the primary action to `Continue` so the seller can retry.
+* If saving fails, remain on Step 1, preserve all entered values, show the save-failure message, and restore the primary action to `Get My Cash Offer` so the seller can retry.
 
 ### Technical Requirements
 
 * Open backend decisions are listed under [Decisions Still Required Before Implementation](#decisions-still-required-before-implementation).
 * `Your Name` uses `autocomplete="name"` for browser autofill.
 * Step 2 information must be associated with the lead saved in Step 1 rather than treated as an unrelated lead.
-* When Step 1 is revisited for editing, `Continue` saves the revised details to the same lead before returning to Step 2; it does not create a new lead.
+* When Step 1 is revisited for editing, `Get My Cash Offer` saves the revised details to the same lead before returning to Step 2; it does not create a new lead.
 
 ### Property Address
 
@@ -189,7 +189,8 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Content
 
-* Heading: `Tell us a little more about the house`
+* Heading: `Thanks, {First Name}. Want to add a few details?`
+* `{First Name}` uses the first word of the trimmed full name. If unavailable, use `Thanks. Want to add a few details?`.
 * Supporting copy: `These details help us understand your property. All questions are optional—answer what you can or skip this step.`
 * Uses quick choices wherever possible to minimize typing.
 * Question groups, in canonical order:

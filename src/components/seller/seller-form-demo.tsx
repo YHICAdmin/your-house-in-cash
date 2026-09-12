@@ -42,13 +42,13 @@ export function SellerFormDemo() {
 
   return <>
     <p className={`text-body-small ${styles.demoNotice}`}>Demo mode — details are not sent or saved. Refresh to reset.</p>
-    {step !== "success" && <Progress step={step} />}
+    {step === 2 && <Progress step={2} />}
     <div ref={content}>
       {step === 1 && <SellerDetails initialValues={details} onDemoContinue={values => {
         setDetails(values);
         void move(2);
       }} />}
-      {step === 2 && <PropertyDetails answers={answers} onChange={setAnswers}
+      {step === 2 && <PropertyDetails name={details?.name} answers={answers} onChange={setAnswers}
         onBack={() => { void move(1); }} onSubmit={() => { void move("success"); }} onSkip={() => { void move("success"); }} />}
       {step === "success" && <SellerSuccess name={details?.name ?? ""} />}
     </div>

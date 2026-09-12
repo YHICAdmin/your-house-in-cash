@@ -64,7 +64,7 @@ export function SellerDetails({ initialValues, onDemoContinue }: {
     </div>
     <div className={styles.actions}>
       {failure && <p className={`text-body-small ${styles.error}`}>{failure}</p>}
-      <Button className={styles.continueButton} type="submit">Continue</Button>
+      <Button className={styles.continueButton} type="submit">Get My Cash Offer</Button>
       <p className={`text-body-small ${styles.reassurance}`}>Your information stays private.</p>
       <span role="status" className="visually-hidden">{failure}</span>
     </div>

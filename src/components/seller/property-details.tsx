@@ -16,18 +16,20 @@ const questions = [
 ] as const;
 
 // Mount after confirmed persistence of Step 1, or in the development-only demo.
-export function PropertyDetails({ answers, onChange, onBack, onSubmit, onSkip, pending, failure }: {
+export function PropertyDetails({ name, answers, onChange, onBack, onSubmit, onSkip, pending, failure }: {
+  name?: string;
   answers: PropertyAnswers; onChange: (answers: PropertyAnswers) => void;
   onBack: () => void; onSubmit: FormEventHandler<HTMLFormElement>; onSkip: () => void;
   pending?: "submit" | "skip"; failure?: string;
 }) {
+  const firstName = name?.trim().split(/\s+/)[0];
   return <form noValidate onSubmit={event => {
     event.preventDefault();
     if (!pending) onSubmit(event);
   }}>
     <TextLink className={styles.back} disabled={!!pending} onClick={onBack}>Back</TextLink>
     <div className={styles.intro}>
-      <h1 className="text-heading-2" tabIndex={-1}>Tell us a little more about the house</h1>
+      <h1 className="text-heading-2" tabIndex={-1}>{firstName ? `Thanks, ${firstName}. Want to add a few details?` : "Thanks. Want to add a few details?"}</h1>
       <p className="text-body">These details help us understand your property. All questions are optional—answer what you can or skip this step.</p>
     </div>
     <div className={styles.fields}>
