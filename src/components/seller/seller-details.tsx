@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { LockKeyhole } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TextField } from "@/components/form/field";
 import { PhoneField } from "@/components/form/phone-field";
@@ -65,7 +66,7 @@ export function SellerDetails({ initialValues, onDemoContinue }: {
     <div className={styles.actions}>
       {failure && <p className={`text-body-small ${styles.error}`}>{failure}</p>}
       <Button className={styles.continueButton} type="submit">Get My Cash Offer</Button>
-      <p className={`text-body-small ${styles.reassurance}`}>Your information stays private.</p>
+      <p className={`text-body-small ${styles.reassurance}`}><LockKeyhole size={16} aria-hidden="true" /><span>Your information stays private</span></p>
       <span role="status" className="visually-hidden">{failure}</span>
     </div>
   </form>;

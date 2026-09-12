@@ -104,7 +104,7 @@ Guide sellers through submitting their contact and property details to request a
 * Primary action: `Get My Cash Offer`.
 * Phone Number placeholder: `e.g. 216-555-1234`.
 * Save-failure message: `We couldn’t save your details. Please try again.`
-* Reassurance line below the primary action: `Your information stays private.`
+* Reassurance line below the primary action: `Your information stays private`, preceded by a decorative Lucide `LockKeyhole` icon.
 * Required-field error messages:
   * Your Name: `Please enter your name.`
   * Phone Number: `Please enter your phone number.`
@@ -125,7 +125,7 @@ Guide sellers through submitting their contact and property details to request a
 ### Dimensions and Alignment
 
 * The Step 1 save-failure message appears above `Get My Cash Offer`.
-* `Get My Cash Offer` uses the full available field width at all Breakpoints. The reassurance line is centered beneath it.
+* `Get My Cash Offer` uses the full available field width at all Breakpoints. The reassurance icon and text form one horizontally centered group beneath it, vertically center-aligned with an `XS` (`8px`) gap. The icon uses the global Small Icon size (`16px`) and inherits the reassurance text color.
 
 ### Spacing
 
