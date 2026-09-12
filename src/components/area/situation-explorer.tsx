@@ -257,7 +257,7 @@ export function SituationExplorer({
               <button
                 key={situation.slug}
                 id={`situation-option-${situation.slug}`}
-                className={`${styles.option}${isSelected ? ` ${styles.selectedOption}` : ""}`}
+                className={`text-body-small ${styles.option}${isSelected ? ` ${styles.selectedOption}` : ""}`}
                 type="button"
                 aria-controls={selectedContentId}
                 aria-pressed={isSelected}

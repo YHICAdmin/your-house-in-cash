@@ -420,7 +420,7 @@ Contains, in document order:
 
 * Across all Breakpoints, the Situation Selector presents an open, transparent row of options.
 * The carousel does not display a persistent scrollbar.
-* Each option uses `14px / 400 / 1.5` typography and `Text Primary` color across all Breakpoints.
+* Each option uses the global `Body Small` typography and `Text Primary` color across all Breakpoints.
 * The row and its options use no Card, Border, Divider, or Shadow. Background and Radius apply only to the selected label.
 * The selected option's visible label uses global Surface text at `600` font weight on a Brand Green Dark background with the global Pill Radius.
 * Hovering an unselected option changes only its text color to Brand Green Dark.
@@ -464,7 +464,6 @@ Contains, in document order:
 * The selected state is communicated to assistive technologies.
 * Selected Situation Content updates are announced politely without interrupting other assistive-technology output.
 * Update announcement template: `[Situation] details are now available.`
-* Keyboard focus remains visible when navigating the carousel across all Breakpoints.
 
 ### Responsive Behavior
 
