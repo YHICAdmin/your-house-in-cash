@@ -71,21 +71,50 @@
 .selectorViewport {
   position: relative;
   min-width: 0;
-  margin: -5px -5px calc(var(--spacing-m) - 5px);
+  margin-bottom: var(--spacing-s);
+  padding-inline: var(--spacing-l);
 }
 
-.selectorViewport::after {
+.selectorViewport::after,
+.selectorViewport::before {
   position: absolute;
+  top: 0;
+  bottom: 0;
   z-index: 1;
-  inset-block: 0;
-  right: 0;
-  width: var(--spacing-m);
+  width: var(--spacing-l);
   background: linear-gradient(to right, transparent, var(--color-background));
   content: "";
   opacity: 0;
   pointer-events: none;
   transition: opacity 150ms ease;
 }
+
+.selectorViewport::after { right: calc(var(--spacing-l) + var(--preview-inset, 0px)); }
+.selectorViewport::before {
+  left: var(--spacing-l);
+  transform: rotate(180deg);
+}
+
+.hasOverflowBefore::before { opacity: 1; }
+
+.scrollControl {
+  position: absolute;
+  top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-l);
+  height: 48px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.previousControl { left: 0; }
+.nextControl { right: var(--preview-inset, 0px); }
+.scrollControl:disabled { visibility: hidden; }
 
 .hasOverflowAfter::after {
   opacity: 1;
@@ -126,6 +155,9 @@
   color: var(--color-text-primary);
   cursor: pointer;
   font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  user-select: none;
   text-align: left;
   box-shadow: none;
 }

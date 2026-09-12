@@ -417,10 +417,11 @@ Contains, in document order:
 ### Visual Design
 
 * Across all Breakpoints, the Situation Selector remains visually open and transparent, without a surrounding Card, background, Border, Radius, or Shadow.
-* A subtle right-edge fade using the owning Section's background color overlays the final `24px` (`M`) of the carousel viewport whenever additional options remain beyond the visible area.
+* A subtle right-edge fade using the owning Section's background color overlays the final `32px` (`L`) of the carousel viewport whenever additional options remain beyond the visible area. A mirrored left-edge fade appears when scrolling back is available.
 * The fade uses the established `150ms ease` opacity transition.
 * The carousel does not display a persistent scrollbar.
-* Each option uses the global `Body` typography and `Text Primary` color.
+* Each option uses `14px / 400 / 1.5` typography and `Text Primary` color across all Breakpoints.
+* The scroll controls use small `16px` Lucide `ChevronRight` and `ChevronLeft` icons in `Text Secondary`, on a transparent background.
 * The default state does not use a background, Border, Divider, Radius, or Shadow.
 * Across all Breakpoints, the selected option's visible label uses global Surface text at `600` font weight on a Brand Green Dark background with the global Pill Radius, without a Border or Shadow.
 * When an unselected option is hovered, its text changes to Brand Green Dark while its font weight remains unchanged.
@@ -433,10 +434,12 @@ Contains, in document order:
 * Text is left-aligned.
 * Each option has a minimum interactive height of `48px`.
 * Each option's visible label uses `6px` vertical and `12px` horizontal internal padding so the selected pill remains compact within the larger interactive target.
+* Reserve `32px` (`L`) at each side for a scroll control with a `32px` by `48px` interactive area.
+* Size the visible options area to deliberately reveal part of another label at the right edge in the initial view. Adapt this preview to the available width and actual label widths.
 
 ### Spacing After
 
-* `24px` (`M`) separates the Situation Selector from the Selected Situation Content across all Breakpoints.
+* `16px` (`S`) separates the Situation Selector from the Selected Situation Content across all Breakpoints.
 
 ### Interaction
 
@@ -446,7 +449,9 @@ Contains, in document order:
 * Users can move through the overflowed carousel using touch swipe, trackpad scrolling, or pointer dragging.
 * The carousel viewport uses a `grab` cursor where it is draggable and a `grabbing` cursor during pointer dragging; the options retain their pointer cursor.
 * When keyboard focus reaches an option outside the visible carousel viewport, that option scrolls into view.
-* The carousel does not use separate previous or next controls.
+* The right scroll control appears while more options remain to the right; the left control appears while scrolling back is available. At each end, the corresponding control becomes hidden and disabled while its reserved space is retained.
+* Each scroll-control activation moves the list by `75%` of its visible width in the corresponding direction, preserving the selected situation.
+* Scroll-control navigation uses smooth scrolling, or immediate scrolling when reduced motion is preferred.
 
 ### Accessibility
 
@@ -457,6 +462,7 @@ Contains, in document order:
 * Selected Situation Content updates are announced politely without interrupting other assistive-technology output.
 * Update announcement template: `[Situation] details are now available.`
 * Keyboard focus remains visible when navigating the carousel across all Breakpoints.
+* The scroll controls use native buttons with accessible names `Next situations` and `Previous situations`; their icons are decorative.
 
 ### Responsive Behavior
 
