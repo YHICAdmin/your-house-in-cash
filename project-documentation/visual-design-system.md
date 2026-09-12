@@ -207,6 +207,7 @@ Whitespace is an intentional part of the composition. It should not be filled or
 * **Text Primary:** #101114 · Headlines and primary text
 * **Text Secondary:** #555B63 · Supporting copy
 * **Text Muted:** #777D85 · Microcopy / metadata
+* **Text Placeholder:** #6B7179 · Field placeholder text at full opacity; contrast approximately 4.93:1 against the white Surface.
 * **Border:** #E4E7E4 · Cards and dividers
 * **Error:** #B42318 · Error messages and invalid-field borders
 * **Line System:** #ECEEF4 · Visual lines used by the Line System · 1px thickness · Outer lines are solid and internal lines are dashed · Remains subtle and visually secondary to the content

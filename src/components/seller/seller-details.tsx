@@ -57,15 +57,15 @@ export function SellerDetails({ initialValues, onDemoContinue }: {
         error={errors.address} guidance="Enter the street address, city, state, and ZIP code." />
       <TextField id="name" name="name" label="Your Name" required autoComplete="name"
         value={values.name} onChange={event => change("name", event.target.value)} onBlur={() => blur("name")} error={errors.name} />
-      <PhoneField id="phone" name="phone" label="Phone Number" required placeholder="216-555-1234"
+      <PhoneField id="phone" name="phone" label="Phone Number" required placeholder="e.g. 216-555-1234"
         value={values.phone} onValueChange={value => change("phone", value)} onBlur={() => blur("phone")} error={errors.phone} />
       <TextField id="email" name="email" label="Email Address" type="email" required autoComplete="email"
         value={values.email} onChange={event => change("email", event.target.value)} onBlur={() => blur("email")} error={errors.email} />
     </div>
     <div className={styles.actions}>
       {failure && <p className={`text-body-small ${styles.error}`}>{failure}</p>}
-      <Button className={styles.primary} type="submit">Continue</Button>
-      <p className={`text-body-small ${styles.reassurance}`}>Your information stays private. No obligation.</p>
+      <Button className={styles.continueButton} type="submit">Continue</Button>
+      <p className={`text-body-small ${styles.reassurance}`}>Your information stays private.</p>
       <span role="status" className="visually-hidden">{failure}</span>
     </div>
   </form>;

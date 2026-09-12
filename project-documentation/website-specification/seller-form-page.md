@@ -127,9 +127,9 @@ Guide sellers through submitting their contact and property details to request a
   3. `Phone Number`
   4. `Email Address`
 * Primary action: `Continue`.
-* Phone Number placeholder: `216-555-1234`.
+* Phone Number placeholder: `e.g. 216-555-1234`.
 * Save-failure message: `We couldn’t save your details. Please try again.`
-* Reassurance line below the primary action: `Your information stays private. No obligation.`
+* Reassurance line below the primary action: `Your information stays private.`
 * Required-field error messages:
   * Your Name: `Please enter your name.`
   * Phone Number: `Please enter your phone number.`
@@ -150,7 +150,7 @@ Guide sellers through submitting their contact and property details to request a
 ### Dimensions and Alignment
 
 * The Step 1 save-failure message appears above `Continue`.
-* `Continue` uses the full available content width on Mobile and content-based width on Tablet and Desktop.
+* `Continue` uses the full available field width at all Breakpoints. The reassurance line is centered beneath it.
 
 ### Spacing
 

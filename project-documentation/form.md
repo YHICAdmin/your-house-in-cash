@@ -53,7 +53,7 @@ Inherits [Field](#field).
 
 * Uses the global `Surface` background, default `Border` treatment, and global `Small` Radius (`8px`).
 * Entered text and placeholders use global `Body` typography at all Breakpoints.
-* Entered text uses the global `Text Primary` color; placeholders use the global `Text Secondary` color.
+* Entered text uses the global `Text Primary` color; placeholders use the global `Text Placeholder` color at full opacity.
 * While a text field displays a validation error, its border uses the global `Error` color, retaining its specified thickness and style.
 
 ## Dimensions and Alignment
