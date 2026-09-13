@@ -139,57 +139,81 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 Present in-depth, situation-specific content in a clear and readable format, while allowing users to navigate quickly between the key questions and topics on the page.
 
-## Content
+## Layout
+
+- On Desktop, uses a `3–1–8` composition: the Sidebar occupies Grid Columns `1–3`, Column `4` remains empty, and the Article occupies Grid Columns `5–12`.
+- The section uses a white background.
+
+### Responsive Behavior
+
+- On Tablet and Mobile, the Sidebar appears above the Article in a single vertical flow.
+- On Tablet, both elements occupy Grid Columns `1–8`; on Mobile, both occupy Grid Columns `1–4`.
+
+### Line System
+
+- On Desktop, the left internal System Line integrates with the Sidebar and serves as a navigation indicator. At the active item, the relevant portion of the line changes to Brand Green.
+
+## Sidebar
+
+### Content
+
+- Navigation entries use the Article content file's top-level (`#`) section headings verbatim and in document order. The heading text is maintained in the article content file.
+
+### Component and Semantics
+
+- Uses a navigation landmark containing a list of anchor links.
+
+### Visual Design
+
+- Minimal and text-based.
+- Entries use global `Body Small` typography and `Text Primary`. The active entry uses `Brand Green` across all Breakpoints.
+- Long entry labels wrap within the Sidebar width.
+
+### Spacing
+
+- `S` (`16px`) separates navigation entries at all Breakpoints.
+
+### Spacing After
+
+- On Tablet and Mobile, `L` (`32px`) separates the Sidebar from the Article.
+
+### Interaction
+
+- Each navigation item acts as an anchor to its corresponding question / topic in the Article.
+- The active item follows the user's current position within the page.
+
+- On Desktop, the Sidebar remains sticky within the Situation Content area when its full height fits between the Header and the bottom of the viewport, allowing `M` (`24px`) below the Header and `M` (`24px`) above the viewport bottom. Its sticky top offset is the Header height plus `M` (`24px`).
+- When the Sidebar exceeds that available height, it scrolls with the page in normal document flow so every navigation entry remains reachable. Reevaluate the fit when the viewport or Sidebar dimensions change.
+
+### Responsive Behavior
+
+- On Tablet and Mobile, navigation is presented as a visible table-of-contents list. The Sidebar scrolls with the page in normal document flow.
+
+## Article
+
+### Content
 
 - **Inherited Property:** [Article content](content/situations/inherited-property.md), including its headings, body copy, and source references.
+- Render the elements present in the linked article content file, in their document order.
 
-- Sidebar containing a list of questions / topics covered on the page.
-- Main content area containing a continuous sequence of questions and answers.
-- The number, order, and wording of questions are determined during the content-writing stage for each Situation Page.
-- Answers may include paragraphs, lists, images, callouts, and other relevant elements as needed.
-- A small contact CTA appears at the bottom of the Sidebar.
-- The main content area does not use a fixed Section structure.
+### Component and Semantics
 
-## Structure
+- Uses an `article` element. Content-file `#` headings render as `h2`, and `##` headings render as `h3`, preserving the article hierarchy below the Hero's `h1`.
+- Paragraphs, lists, quotations, emphasis, and source links retain their corresponding native HTML semantics.
 
-- The section is divided into a narrow Sidebar and a wider main content area.
-- The Sidebar contains the page navigation and contact CTA.
-- The main content area contains the complete sequence of questions and answers.
-- Content elements such as images and callouts are incorporated only when justified by the content.
+### Visual Design
 
-## Visual Direction
+- Main article headings use global `H3` typography; subsection headings use global `H4` typography. Their content follows directly below.
+- Opening paragraphs use global `Body Large`; subsequent paragraphs, list items, and quotations use global `Body`. Text uses `Text Primary`.
 
-- The section uses a white background.
-- The Sidebar is minimal and text-based, without circles or additional navigation indicators.
-- The active Sidebar item receives subtle emphasis using the Brand color.
-- Question headings are large and prominent, with their answers positioned directly below.
-- Do not use divider lines between questions and answers.
-- Maintain generous whitespace between questions.
-- Images and additional visual elements are included only when the content justifies them.
+### Dimensions and Alignment
 
-## Behavior
-
-- Each Sidebar item acts as an anchor to its corresponding question / topic.
-- On Desktop, the Sidebar remains sticky while the user scrolls through the Situation Content area.
-- The active Sidebar item receives subtle visual emphasis based on the user's current position within the page.
-
-## Technical Specifications
-
-No additional Situation Content-specific technical specifications are currently defined. Global typography, spacing, component, color, and layout rules apply unless explicitly overridden below.
-
-## Responsive Behavior
-
-No specific Tablet or Mobile behavior is currently defined for the Sidebar navigation.
-
-The Desktop sticky Sidebar behavior applies only to Desktop. The exact navigation treatment, content ordering, and Sidebar behavior for Tablet and Mobile remain to be defined.
-
-## Line System
-
-- The responsive Line System remains visible throughout the section.
-- The left internal System Line integrates with the Sidebar and serves as a navigation indicator. At the active item, the relevant portion of the line changes to Brand Green.
-- The right outer System Line bounds the main content area.
-- Text content maintains the globally defined padding from the right outer System Line.
 - Images and media may extend to the right outer System Line and terminate directly on it.
+
+### Spacing
+
+- At all Breakpoints, `XL` (`48px`) separates major article sections, including the opening text from the first section; `L` (`32px`) precedes subsection headings within a section.
+- `S` (`16px`) separates headings from their content and consecutive prose blocks, lists, or quotations. `XS` (`8px`) separates list items.
 
 # Final CTA
 
