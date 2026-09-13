@@ -1,14 +1,14 @@
 import type { StaticImageData } from "next/image";
-import foreclosureImage from "../../project-documentation/website-specification/assets/situations/foreclosure-hero.jpg";
-import inheritedPropertyImage from "../../project-documentation/website-specification/assets/situations/inherited-property-hero.jpg";
-import tiredLandlordImage from "../../project-documentation/website-specification/assets/situations/tired-landlord-hero.jpg";
-import majorRepairsImage from "../../project-documentation/website-specification/assets/situations/major-repairs-hero.jpg";
-import vacantPropertyImage from "../../project-documentation/website-specification/assets/situations/vacant-property-hero.jpg";
-import problemTenantsImage from "../../project-documentation/website-specification/assets/situations/problem-tenants-hero.jpg";
-import relocationImage from "../../project-documentation/website-specification/assets/situations/relocation-hero.jpg";
-import divorceImage from "../../project-documentation/website-specification/assets/situations/divorce-hero.jpg";
-import behindOnPropertyTaxesImage from "../../project-documentation/website-specification/assets/situations/behind-on-property-taxes-hero.jpg";
-import codeViolationsImage from "../../project-documentation/website-specification/assets/situations/code-violations-hero.jpg";
+import foreclosureImage from "../../public/images/situations/foreclosure-hero.jpg";
+import inheritedPropertyImage from "../../public/images/situations/inherited-property-hero.jpg";
+import tiredLandlordImage from "../../public/images/situations/tired-landlord-hero.jpg";
+import majorRepairsImage from "../../public/images/situations/major-repairs-hero.jpg";
+import vacantPropertyImage from "../../public/images/situations/vacant-property-hero.jpg";
+import problemTenantsImage from "../../public/images/situations/problem-tenants-hero.jpg";
+import relocationImage from "../../public/images/situations/relocation-hero.jpg";
+import divorceImage from "../../public/images/situations/divorce-hero.jpg";
+import behindOnPropertyTaxesImage from "../../public/images/situations/behind-on-property-taxes-hero.jpg";
+import codeViolationsImage from "../../public/images/situations/code-violations-hero.jpg";
 
 export type Situation = {
   slug: string;

@@ -100,16 +100,16 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 ### Content
 
-- **Foreclosure:** [foreclosure-hero.jpg](assets/situations/foreclosure-hero.jpg).
-- **Inherited Property:** [inherited-property-hero.jpg](assets/situations/inherited-property-hero.jpg).
-- **Tired Landlord:** [tired-landlord-hero.jpg](assets/situations/tired-landlord-hero.jpg).
-- **Major Repairs:** [major-repairs-hero.jpg](assets/situations/major-repairs-hero.jpg).
-- **Vacant Property:** [vacant-property-hero.jpg](assets/situations/vacant-property-hero.jpg).
-- **Problem Tenants:** [problem-tenants-hero.jpg](assets/situations/problem-tenants-hero.jpg).
-- **Relocation:** [relocation-hero.jpg](assets/situations/relocation-hero.jpg).
-- **Divorce:** [divorce-hero.jpg](assets/situations/divorce-hero.jpg).
-- **Behind on Property Taxes:** [behind-on-property-taxes-hero.jpg](assets/situations/behind-on-property-taxes-hero.jpg).
-- **Code Violations:** [code-violations-hero.jpg](assets/situations/code-violations-hero.jpg).
+- **Foreclosure:** [foreclosure-hero.jpg](../../public/images/situations/foreclosure-hero.jpg).
+- **Inherited Property:** [inherited-property-hero.jpg](../../public/images/situations/inherited-property-hero.jpg).
+- **Tired Landlord:** [tired-landlord-hero.jpg](../../public/images/situations/tired-landlord-hero.jpg).
+- **Major Repairs:** [major-repairs-hero.jpg](../../public/images/situations/major-repairs-hero.jpg).
+- **Vacant Property:** [vacant-property-hero.jpg](../../public/images/situations/vacant-property-hero.jpg).
+- **Problem Tenants:** [problem-tenants-hero.jpg](../../public/images/situations/problem-tenants-hero.jpg).
+- **Relocation:** [relocation-hero.jpg](../../public/images/situations/relocation-hero.jpg).
+- **Divorce:** [divorce-hero.jpg](../../public/images/situations/divorce-hero.jpg).
+- **Behind on Property Taxes:** [behind-on-property-taxes-hero.jpg](../../public/images/situations/behind-on-property-taxes-hero.jpg).
+- **Code Violations:** [code-violations-hero.jpg](../../public/images/situations/code-violations-hero.jpg).
 
 ### Visual Design
 
@@ -140,6 +140,8 @@ Immediately confirm that the user has reached a page relevant to their specific 
 Present in-depth, situation-specific content in a clear and readable format, while allowing users to navigate quickly between the key questions and topics on the page.
 
 ## Content
+
+- **Inherited Property:** [Article content](content/situations/inherited-property.md), including its headings, body copy, and source references.
 
 - Sidebar containing a list of questions / topics covered on the page.
 - Main content area containing a continuous sequence of questions and answers.
