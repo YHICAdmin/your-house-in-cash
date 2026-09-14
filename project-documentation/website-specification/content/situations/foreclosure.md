@@ -78,7 +78,7 @@ That tells you much more about what matters next.
 
 ## If You Can Still Keep the House, Start There
 
-Assume for a moment that you want to stay in your home.
+If your goal is to keep the house, that should be the first option you explore.
 
 Then the next question isn't:
 
@@ -242,7 +242,7 @@ The question is:
 
 If you've worked through the earlier options and keeping the house no longer looks realistic, this is where we can actually help.
 
-Your House in Cash can evaluate the property in its current condition and provide a **no-obligation as-is cash offer**.
+Your House in Cash can evaluate the property in its current condition and provide a **[no-obligation as-is cash offer](/get-cash-offer)**.
 
 That offer is not an appraisal or a claim about the home's full market value.
 
