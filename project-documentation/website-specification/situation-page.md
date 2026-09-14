@@ -312,3 +312,11 @@ Answer practical, situation-specific questions that complement the Article and h
 ## Content
 
 - **Inherited Property:** [Final CTA content](content/situations/inherited-property.md#final-cta), including the Section Label, Primary Headline, Supporting Copy, Primary CTA label and destination, Reassurance Row, and two Supporting Benefits in document order.
+
+# Footer
+
+- Uses the [shared Footer](shared-sections.md#footer).
+
+## Visual Design
+
+- Uses the global `Background Soft` (`#F7F9F7`) across all Breakpoints, matching the Hero's base background color.

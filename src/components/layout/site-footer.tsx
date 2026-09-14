@@ -38,9 +38,11 @@ const socialPlatforms = [
   },
 ] as const;
 
-export function SiteFooter() {
+export function SiteFooter({ background = "default" }: {
+  background?: "default" | "soft" | "neutral";
+}) {
   return (
-    <footer className={`${styles.footer} section-spacing system-lines-bg`}>
+    <footer className={`${styles.footer} section-spacing system-lines-bg`} data-background={background}>
       <div className={`${styles.layout} content-grid`}>
         <div className={styles.company}>
           <Link className={styles.logoLink} href="/" aria-label="Your House in Cash home">

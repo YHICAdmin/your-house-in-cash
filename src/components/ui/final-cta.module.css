@@ -5,6 +5,10 @@
   background: var(--color-background);
 }
 
+.layout {
+  row-gap: 0;
+}
+
 .composition {
   display: flex;
   width: 100%;

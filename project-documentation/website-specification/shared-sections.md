@@ -269,8 +269,8 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 
 ### Visual Design
 
-- Uses the global `Background` color (`#FFFFFF`).
-- Uses no top Border or Shadow; the transition from the Final CTA's `Background Soft` surface to the Footer's white Background provides the visual separation.
+- Uses the global `Background` (`#FFFFFF`) by default. The consuming page may override it with an approved global Background System color; only the override is documented locally.
+- Uses no top Border or Shadow.
 - All Footer text links, including Navigation, Legal, and the phone number, use font weight `400` as a Footer-specific override of the `Text Link` Component.
 
 ### Spacing

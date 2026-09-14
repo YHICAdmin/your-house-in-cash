@@ -20,7 +20,7 @@ export function FinalCta({ content, background = "default" }: {
 }) {
   return (
     <section className={`${styles.section} section-spacing system-lines-bg`} data-background={background} aria-labelledby="final-cta-heading">
-      <div className="content-grid">
+      <div className={`${styles.layout} content-grid`}>
         <div className={styles.composition}>
           <div className={styles.intro}>
             <SectionLabel>{content.label}</SectionLabel>

@@ -2,6 +2,14 @@
   background: var(--color-background);
 }
 
+.footer[data-background="soft"] {
+  background: var(--color-background-soft);
+}
+
+.footer[data-background="neutral"] {
+  background: var(--color-background-neutral);
+}
+
 .footer a {
   font-weight: 400;
 }

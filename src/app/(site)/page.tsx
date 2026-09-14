@@ -7,9 +7,11 @@ import { AreaLocal } from "@/components/area/area-local";
 import { AreaReviews } from "@/components/area/area-reviews";
 import { AreaSituations } from "@/components/area/area-situations";
 import { clevelandArea } from "@/data/areas";
+import { SiteFooter } from "@/components/layout/site-footer";
 
 export default function Home() {
   return (
+    <>
     <main>
       <AreaIntroTransition hero={<AreaHero city="Cleveland" />}>
         <AreaSituations />
@@ -20,5 +22,7 @@ export default function Home() {
       <AreaFaq />
       <AreaFinalCta areaName={clevelandArea.city} />
     </main>
+    <SiteFooter />
+    </>
   );
 }
