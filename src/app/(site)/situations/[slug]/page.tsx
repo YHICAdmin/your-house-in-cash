@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { situations } from "@/data/situations";
 import { SituationHero } from "@/components/situation/situation-hero";
+import { SituationContent } from "@/components/situation/situation-content";
 
 export const dynamicParams = false;
 
@@ -20,5 +21,5 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function SituationPage({ params }: { params: Promise<{ slug: string }> }) {
   const situation = getSituation((await params).slug);
-  return <main><SituationHero situation={situation} /></main>;
+  return <main><SituationHero situation={situation} /><SituationContent slug={situation.slug} /></main>;
 }
