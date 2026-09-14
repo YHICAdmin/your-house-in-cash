@@ -241,7 +241,7 @@ Contains, in document order:
 
 ### Content
 
-* Uses the local portrait asset at `/images/local-trust-portrait.webp`.
+* Uses the local portrait asset at `/images/area-hero/local-trust-portrait.png`.
 * Primary headline:
   Local. Reliable.
   Cleveland’s Neighbor.
@@ -259,6 +259,7 @@ Contains, in document order:
 ### Visual Design
 
 * The portrait fills its crop without distortion and uses a circular crop with the global Pill Radius.
+* Uses `object-position: 50% 15%` to preserve space above the head within the circular crop across all Breakpoints.
 * The Primary Headline uses global `H3` typography and the global Text Primary color.
 * The supporting text uses global `Body Large` typography and the global Text Secondary color.
 * The card uses the global Surface color, Medium Border Radius, and Floating Shadow.

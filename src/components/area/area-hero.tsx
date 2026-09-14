@@ -91,7 +91,7 @@ export function AreaHero({ city }: AreaHeroProps) {
             <div className={styles.identityRow}>
               <Image
                 className={styles.portrait}
-                src="/images/local-trust-portrait.webp"
+                src="/images/area-hero/local-trust-portrait.png"
                 alt=""
                 width={125}
                 height={125}

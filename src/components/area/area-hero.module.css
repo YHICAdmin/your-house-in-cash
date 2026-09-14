@@ -148,6 +148,7 @@
   flex: 0 0 125px;
   border-radius: var(--radius-pill);
   object-fit: cover;
+  object-position: 50% 15%;
 }
 
 .identityText {
