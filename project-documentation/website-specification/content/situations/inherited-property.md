@@ -234,11 +234,11 @@ FAQ
 
 ### Primary Headline
 
-Questions? We’ve got answers.
+More questions about an inherited house?
 
 ### Supporting Copy
 
-Get clear answers about how our process works, how we determine your offer, and what to expect when selling your house as-is.
+Find answers about disagreements between heirs, selling from out of state, belongings left behind, and mortgages or liens.
 
 ## Questions and Answers
 

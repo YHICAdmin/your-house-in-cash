@@ -48,6 +48,7 @@ export function Accordion({ defaultOpenItem, items }: AccordionProps) {
               role="region"
               aria-labelledby={buttonId}
               aria-hidden={!isOpen}
+              inert={!isOpen}
               data-open={isOpen}
             >
               <div className={styles.panelInner}>

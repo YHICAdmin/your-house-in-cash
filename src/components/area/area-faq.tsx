@@ -1,11 +1,5 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
-import { Accordion, type AccordionItem } from "@/components/ui/accordion";
-import { IconContainer } from "@/components/ui/icon-container";
-import { SectionLabel } from "@/components/ui/section-label";
-import { TextLink } from "@/components/ui/text-link";
-import styles from "./area-faq.module.css";
-
-const headingId = "faq-heading";
+import { FaqSection } from "@/components/ui/faq-section";
+import type { AccordionItem } from "@/components/ui/accordion";
 
 const faqItems: readonly AccordionItem[] = [
   {
@@ -41,45 +35,5 @@ const faqItems: readonly AccordionItem[] = [
 ];
 
 export function AreaFaq() {
-  return (
-    <section
-      className={`${styles.section} section-spacing system-lines-bg`}
-      aria-labelledby={headingId}
-    >
-      <div className={`${styles.layout} content-grid`}>
-        <div className={styles.leftFlow}>
-          <div className={styles.intro}>
-            <SectionLabel>FAQ</SectionLabel>
-            <h2 id={headingId} className={`${styles.heading} text-heading-2`}>
-              Questions? We’ve got answers.
-            </h2>
-            <p className={`${styles.supportingCopy} text-body-large`}>
-              Get clear answers about how our process works, how we determine
-              your offer, and what to expect when selling your house as-is.
-            </p>
-          </div>
-
-          <div className={styles.contact}>
-            <IconContainer icon={MessageCircle} aria-hidden="true" />
-            <div className={styles.contactCopy}>
-              <p className={`${styles.contactTitle} text-body`}>
-                <strong>Still have a question?</strong>
-              </p>
-              <p className={`${styles.contactDescription} text-body-small`}>
-                Can’t find what you’re looking for?
-              </p>
-              <TextLink className={styles.contactLink} href="/contact">
-                Contact us
-                <ArrowRight size={16} aria-hidden="true" focusable="false" />
-              </TextLink>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.accordionColumn}>
-          <Accordion items={faqItems} />
-        </div>
-      </div>
-    </section>
-  );
+  return <FaqSection label="FAQ" headline={"Questions? We’ve got answers."} supportingCopy={"Get clear answers about how our process works, how we determine your offer, and what to expect when selling your house as-is."} items={faqItems} />;
 }
