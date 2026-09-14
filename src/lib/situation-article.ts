@@ -60,3 +60,30 @@ export function parseSituationFaq(source: string) {
   if (!items.length || items.some(item => !item.paragraphs[0])) throw new Error("FAQ requires questions with answers");
   return { label: field("Section Label"), headline: field("Primary Headline"), supportingCopy: field("Supporting Copy"), items, references };
 }
+
+export function parseSituationFinalCta(source: string) {
+  const { body } = extractReferences(source);
+  const section = /^# Final CTA[^\S\r\n]*\r?\n([\s\S]*?)(?=^# |$(?![\s\S]))/m.exec(body)?.[1];
+  if (section === undefined) return null;
+  const fields = new Map([...section.matchAll(/^## (.+)\r?\n([\s\S]*?)(?=^## |$(?![\s\S]))/gm)].map(match => [match[1].trim(), match[2].trim()]));
+  const field = (name: string) => {
+    const value = fields.get(name);
+    if (!value) throw new Error(`Missing Final CTA field: ${name}`);
+    return value;
+  };
+  const link = /^\[([^\]]+)\]\(([^\s)]+)\)$/.exec(field("Primary CTA"));
+  if (!link || !/^(\/(?!\/)|https?:\/\/|mailto:|tel:|#)/i.test(link[2])) throw new Error("Invalid Final CTA link");
+  const benefits = [...field("Supporting Benefits").matchAll(/^### Benefit \d+\r?\n([\s\S]*?)(?=^### |$(?![\s\S]))/gm)].map(match => {
+    const icon = /^- Icon: `([^`]+)`\s*$/m.exec(match[1])?.[1];
+    const heading = /^- Heading: (.+)$/m.exec(match[1])?.[1].trim();
+    const supportingCopy = /^- Supporting Copy: (.+)$/m.exec(match[1])?.[1].trim();
+    if (!icon || !heading || !supportingCopy) throw new Error("Incomplete Final CTA benefit");
+    return { icon, heading, supportingCopy };
+  });
+  if (benefits.length !== 2) throw new Error("Final CTA requires exactly two benefits");
+  return {
+    label: field("Section Label"), headline: field("Primary Headline"), supportingCopy: field("Supporting Copy"),
+    cta: { label: link[1], href: link[2] }, reassurance: field("Reassurance Row"),
+    benefits: [benefits[0], benefits[1]] as const,
+  };
+}

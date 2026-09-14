@@ -1,5 +1,8 @@
+.section[data-background="soft"] { background: var(--color-background-soft); }
+.section[data-background="neutral"] { background: var(--color-background-neutral); }
+
 .section {
-  background: var(--color-background-soft);
+  background: var(--color-background);
 }
 
 .composition {

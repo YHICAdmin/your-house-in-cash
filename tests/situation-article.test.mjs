@@ -10,7 +10,7 @@ const implementation = new Module(file);
 implementation._compile(ts.transpileModule(fs.readFileSync(file, "utf8"), {
   compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 },
 }).outputText, file);
-const { parseSituationArticle, parseSituationFaq } = implementation.exports;
+const { parseSituationArticle, parseSituationFaq, parseSituationFinalCta } = implementation.exports;
 
 test("approved article preserves every heading and resolves every source reference", () => {
   const source = fs.readFileSync(new URL("../project-documentation/website-specification/content/situations/inherited-property.md", import.meta.url), "utf8");
@@ -67,4 +67,30 @@ test("FAQ reads its own intro and four answers without including hero or article
 test("missing FAQ is optional but incomplete FAQ content fails clearly", () => {
   assert.equal(parseSituationFaq("# Hero\n\n## Primary Headline\n\nHeadline"), null);
   assert.throws(() => parseSituationFaq("# FAQ\n\n## Section Intro\n\nText"), /requires/);
+});
+
+test("Final CTA reads approved content independently from article and FAQ", () => {
+  const source = fs.readFileSync(new URL("../project-documentation/website-specification/content/situations/inherited-property.md", import.meta.url), "utf8");
+  const cta = parseSituationFinalCta(source);
+  assert.equal(cta.label, "Ready When You Are");
+  assert.equal(cta.headline, "Considering selling the inherited house?");
+  assert.deepEqual(cta.cta, { label: "Get My Cash Offer", href: "/get-cash-offer" });
+  assert.equal(cta.reassurance, "100% free. No obligation.");
+  assert.deepEqual(cta.benefits.map(({ icon, heading }) => ({ icon, heading })), [
+    { icon: "Banknote", heading: "Get Your Cash Sooner" },
+    { icon: "Package", heading: "Skip the Cleanout" },
+  ]);
+  assert.ok(cta.benefits[0].supportingCopy.includes("legally ready to sell"));
+  assert.ok(cta.benefits[1].supportingCopy.includes("agreed before closing"));
+  assert.equal(parseSituationArticle(source).headings.length, 7);
+  assert.equal(parseSituationFaq(source).items.length, 4);
+  assert.deepEqual(parseSituationFinalCta(source.replace(/\r?\n/g, "\r\n")), cta);
+  assert.deepEqual(parseSituationFinalCta(source + "\n# Other\n\nUnrelated text."), cta);
+  assert.throws(() => parseSituationFinalCta(source.replace("### Benefit 2", "### Other")), /exactly two/);
+  assert.throws(() => parseSituationFinalCta(source.replace("[Get My Cash Offer](/get-cash-offer)", "[Offer](javascript:alert)")), /Invalid/);
+});
+
+test("Final CTA is optional but an incomplete section fails clearly", () => {
+  assert.equal(parseSituationFinalCta("# Hero\n\nHeadline"), null);
+  assert.throws(() => parseSituationFinalCta("# Final CTA\n\n## Section Label\n\nLabel"), /Missing Final CTA/);
 });
