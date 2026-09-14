@@ -1,9 +1,9 @@
 import { situationSection } from "@/lib/situation-content";
-import { Banknote, Package, type LucideIcon } from "lucide-react";
+import { Banknote, Clock, Package, type LucideIcon } from "lucide-react";
 import { FinalCta, type FinalCtaBenefit } from "@/components/ui/final-cta";
 import { parseSituationFinalCta } from "@/lib/situation-article";
 
-const icons: Record<string, LucideIcon> = { Banknote, Package };
+const icons: Record<string, LucideIcon> = { Banknote, Clock, Package };
 
 export function SituationFinalCta({ source }: { source: string }) {
   if (!situationSection(source, "Final CTA")) return null;

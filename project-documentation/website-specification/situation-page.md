@@ -242,6 +242,7 @@ Answer practical, situation-specific questions that complement the Article and h
 ### Content
 
 - **Inherited Property:** [FAQ Section Intro](content/situations/inherited-property.md#section-intro), containing Section Label, Primary Headline, and Supporting Copy in that order.
+- **Foreclosure:** [FAQ Section Intro](content/situations/foreclosure.md#section-intro), containing Section Label, Primary Headline, and Supporting Copy in that order.
 
 ### Component and Semantics
 
@@ -306,6 +307,7 @@ Answer practical, situation-specific questions that complement the Article and h
 ### Content
 
 - **Inherited Property:** [Questions and Answers](content/situations/inherited-property.md#questions-and-answers) under `FAQ`.
+- **Foreclosure:** [Questions and Answers](content/situations/foreclosure.md#questions-and-answers) under `FAQ`.
 - Within `FAQ → Questions and Answers`, each `###` heading supplies an Item's Question, and the following answer content supplies its Answer, in document order. Source references belong to their respective answers.
 
 ### Component and Semantics
@@ -319,6 +321,7 @@ Answer practical, situation-specific questions that complement the Article and h
 ## Content
 
 - **Inherited Property:** [Final CTA content](content/situations/inherited-property.md#final-cta), including the Section Label, Primary Headline, Supporting Copy, Primary CTA label and destination, Reassurance Row, and two Supporting Benefits in document order.
+- **Foreclosure:** [Final CTA content](content/situations/foreclosure.md#final-cta), including the Section Label, Primary Headline, Supporting Copy, Primary CTA label and destination, Reassurance Row, and two Supporting Benefits in document order.
 
 # Footer
 

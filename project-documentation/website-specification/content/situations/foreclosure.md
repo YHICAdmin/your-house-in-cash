@@ -280,6 +280,76 @@ If it is, focus on that.
 
 If it isn't, understand the value you still have in the property and the options that remain before the foreclosure process makes the decision for you.
 
+# FAQ
+
+## Section Intro
+
+### Section Label
+
+FAQ
+
+### Primary Headline
+
+More questions about foreclosure?
+
+### Supporting Copy
+
+Understand how mortgage assistance, an outstanding balance, and a possible sale can affect your next decision.
+
+## Questions and Answers
+
+### Does applying for mortgage assistance automatically stop foreclosure?
+
+Not automatically. Certain protections may apply when a complete application reaches the servicer within the required timeframe. An application still being prepared—or submitted close to a scheduled sale—may not provide the same protections. The timing and completeness of the application matter. ([CFPB][8])
+
+### Do I need to catch up on missed payments before selling?
+
+Not necessarily. If the sale proceeds cover the full mortgage payoff and selling costs, the mortgage can be paid off at closing rather than brought current beforehand. Any other liens or obligations also affect whether the sale can close and what money remains. ([CFPB][7])
+
+### What if the house is worth less than I owe?
+
+A sale may not produce enough money to pay off the mortgage. A short sale may be possible, but it requires approval. Selling for less than you owe does not automatically erase the remaining debt; how that balance is handled depends on the approved terms. ([CFPB][7])
+
+### Does requesting a cash offer commit me to selling?
+
+No. A no-obligation offer from Your House in Cash gives you a direct-sale number to consider alongside your mortgage payoff and other options. You can review it without agreeing to sell. If keeping the house remains your preferred and realistic path, requesting an offer does not change that.
+
+# Final CTA
+
+## Section Label
+
+Ready When You Are
+
+## Primary Headline
+
+Considering selling before foreclosure?
+
+## Supporting Copy
+
+If selling looks like the right next step, see what an as-is cash offer could mean for you. Compare it with what you owe and decide whether it fits your situation.
+
+## Primary CTA
+
+[Get My Cash Offer](/get-cash-offer)
+
+## Reassurance Row
+
+100% free. No obligation.
+
+## Supporting Benefits
+
+### Benefit 1
+
+- Icon: `Banknote`
+- Heading: Protect the Equity You’ve Built
+- Supporting Copy: A sale may help you keep what remains after the mortgage, other obligations, and selling costs are paid.
+
+### Benefit 2
+
+- Icon: `Clock`
+- Heading: Move Forward Without Listing Delays
+- Supporting Copy: A direct sale avoids listing preparation and repeated showings, which can matter when foreclosure limits your available time.
+
 [1]: https://www.consumerfinance.gov/rules-policy/regulations/1024/41/?utm_source=chatgpt.com "§ 1024.41 Loss mitigation procedures. | Consumer Financial Protection Bureau"
 [2]: https://www.ohiolegalhelp.org/letters-forms/foreclosure-answer?utm_source=chatgpt.com "Foreclosure answer | Ohio Legal Help"
 [3]: https://cuyahogacounty.gov/sheriff/civil/foreclosure-sales?utm_source=chatgpt.com "Foreclosure Sales"
@@ -287,3 +357,4 @@ If it isn't, understand the value you still have in the property and the options
 [5]: https://www.consumerfinance.gov/ask-cfpb/what-is-a-repayment-plan-on-a-mortgage-en-280/?utm_source=chatgpt.com "What is a repayment plan on a mortgage? | Consumer Financial Protection Bureau"
 [6]: https://www.consumerfinance.gov/ask-cfpb/what-is-a-mortgage-loan-modification-en-269/?utm_source=chatgpt.com "What is a mortgage loan modification? | Consumer Financial Protection Bureau"
 [7]: https://www.consumerfinance.gov/housing/housing-insecurity/help-for-homeowners/avoid-foreclosure/?utm_source=chatgpt.com "Avoid foreclosure - coronavirus mortgage relief options | Consumer Financial Protection Bureau"
+[8]: https://www.consumerfinance.gov/ask-cfpb/what-happens-after-i-complete-an-application-to-determine-my-options-to-avoid-foreclosure-en-1851/ "What happens after I complete an application to determine my options to avoid foreclosure? | Consumer Financial Protection Bureau"
