@@ -12,14 +12,16 @@ export function parseSituationArticle(source: string) {
     references[key] = { href, title };
     return "";
   });
+  const article = /^# Article[^\S\r\n]*\r?\n([\s\S]*?)(?=^# |$(?![\s\S]))/m.exec(body);
+  if (!article) throw new Error("Situation content must contain a # Article section");
   const ids = new Map<string, number>();
-  const blocks: ArticleBlock[] = body.trim().split(/\r?\n\s*\r?\n/).map(chunk => {
-    const heading = /^(#{1,2}) (.+)$/.exec(chunk);
+  const blocks: ArticleBlock[] = article[1].trim().split(/\r?\n\s*\r?\n/).filter(Boolean).map(chunk => {
+    const heading = /^(#{2,3}) (.+)$/.exec(chunk);
     if (heading) {
       const base = heading[2].toLowerCase().replace(/[^a-z0-9\s-]/g, "").trim().replace(/\s+/g, "-");
       const count = (ids.get(base) ?? 0) + 1;
       ids.set(base, count);
-      return { type: heading[1] === "#" ? "heading" : "subheading", text: heading[2], id: count === 1 ? base : `${base}-${count}` };
+      return { type: heading[1] === "##" ? "heading" : "subheading", text: heading[2], id: count === 1 ? base : `${base}-${count}` };
     }
     if (chunk.startsWith("* ")) {
       return { type: "list", text: "", items: chunk.split(/\r?\n/).map(line => line.replace(/^\* /, "")) };

@@ -157,7 +157,7 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 
 ### Content
 
-- Navigation entries use the Article portion's top-level (`#`) section headings verbatim and in document order. The heading text is maintained in the article content file.
+- Navigation entries use the `##` section headings within the content file's `# Article` portion verbatim and in document order. The heading text is maintained in the article content file.
 
 ### Component and Semantics
 
@@ -193,12 +193,12 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 
 ### Content
 
-- **Inherited Property:** [Article content](content/situations/inherited-property.md), from the opening text through the content preceding `# FAQ`, with its associated source references.
+- **Inherited Property:** [Article content](content/situations/inherited-property.md#article), comprising the content beneath `# Article` through the next top-level heading, with its associated source references. The `# Article` heading is a content-group identifier; rendering begins with its opening paragraphs.
 - Render the elements in that Article portion in their document order. The `# FAQ` portion supplies the separate FAQ Section.
 
 ### Component and Semantics
 
-- Uses an `article` element. Content-file `#` headings render as `h2`, and `##` headings render as `h3`, preserving the article hierarchy below the Hero's `h1`.
+- Uses an `article` element. Within the content file's `# Article` portion, `##` headings render as `h2`, and `###` headings render as `h3`, preserving the article hierarchy below the Hero's `h1`.
 - Paragraphs, lists, quotations, emphasis, and source links retain their corresponding native HTML semantics.
 
 ### Visual Design

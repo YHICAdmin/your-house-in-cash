@@ -15,7 +15,7 @@ const { parseSituationArticle } = implementation.exports;
 test("approved article preserves every heading and resolves every source reference", () => {
   const source = fs.readFileSync(new URL("../project-documentation/website-specification/content/situations/inherited-property.md", import.meta.url), "utf8");
   const result = parseSituationArticle(source);
-  const expected = [...source.matchAll(/^# (.+)$/gm)].map(match => match[1].trim());
+  const expected = [...source.split("# FAQ")[0].matchAll(/^## (.+)$/gm)].map(match => match[1].trim());
   assert.deepEqual(result.headings.map(heading => heading.label), expected);
   assert.equal(result.headings.length, 7);
   assert.equal(result.blocks.filter(block => block.type === "subheading").length, 4);
@@ -27,8 +27,20 @@ test("approved article preserves every heading and resolves every source referen
 });
 
 test("heading anchors remain unique and CRLF/soft line breaks preserve words", () => {
-  const result = parseSituationArticle("Opening\r\nparagraph.\r\n\r\n# Same Title?\r\n\r\nText.\r\n\r\n# Same Title?\r\n\r\n> A quote\r\n> continued.");
+  const result = parseSituationArticle("# Article\r\n\r\nOpening\r\nparagraph.\r\n\r\n## Same Title?\r\n\r\nText.\r\n\r\n## Same Title?\r\n\r\n> A quote\r\n> continued.");
   assert.deepEqual(result.headings.map(heading => heading.id), ["same-title", "same-title-2"]);
   assert.equal(result.blocks[0].text, "Opening paragraph.");
   assert.equal(result.blocks.at(-1).text, "A quote continued.");
+});
+
+test("article excludes group labels and FAQ while retaining shared references", () => {
+  const result = parseSituationArticle("# Article\n\nIntro.\n\n## Topic\n\nRead [source][1].\n\n### Detail\n\nText.\n\n# FAQ\n\n## Question?\n\nFAQ answer.\n\n[1]: https://example.com/source");
+  assert.deepEqual(result.headings, [{ id: "topic", label: "Topic" }]);
+  assert.deepEqual(result.blocks.map(block => block.text), ["Intro.", "Topic", "Read [source][1].", "Detail", "Text."]);
+  assert.equal(result.references[1].href, "https://example.com/source");
+});
+
+test("any following top-level section ends the article and a missing Article fails clearly", () => {
+  assert.equal(parseSituationArticle("# Article\n\nBody.\n\n# Other\n\nUnrelated.").blocks.length, 1);
+  assert.throws(() => parseSituationArticle("# FAQ\n\n## Question?"), /# Article/);
 });

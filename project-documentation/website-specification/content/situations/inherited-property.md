@@ -1,10 +1,12 @@
+# Article
+
 If a family member recently died and left behind a house, you probably don’t need a complete lesson on probate law.
 
 You need to know what matters now, who can make decisions about the house, whether it can be sold, and what you should figure out next.
 
 Start there.
 
-# First Steps After Inheriting a House
+## First Steps After Inheriting a House
 
 You do not need to decide today whether to keep, rent, renovate, or sell the house.
 
@@ -20,7 +22,7 @@ You’re trying to answer one question:
 
 That question determines much of what comes next.
 
-# Probate and Who Can Act
+## Probate and Who Can Act
 
 Probate is the court-supervised process used to administer certain property after someone dies.
 
@@ -42,7 +44,7 @@ The useful question is:
 
 **How does this particular house pass, and who has authority to act?**
 
-## Executor, administrator, heir—what’s the difference?
+### Executor, administrator, heir—what’s the difference?
 
 These terms sound more complicated than the underlying idea.
 
@@ -60,7 +62,7 @@ It is finding out:
 
 **Who is entitled to the property, and who is currently authorized to act for the estate?**
 
-# Do I Inherit the Debts?
+## Do I Inherit the Debts?
 
 This is where many people understandably get nervous.
 
@@ -88,7 +90,7 @@ Those obligations can affect what remains before assets are distributed.
 
 So the next question becomes much more practical.
 
-# Could Nothing Be Left for the Heirs?
+## Could Nothing Be Left for the Heirs?
 
 **Yes. It is possible for an estate to have assets but leave little or nothing for the heirs after valid obligations are handled.**
 
@@ -122,7 +124,7 @@ That uncertainty is normal.
 
 Start with what you can establish, and update the picture as the missing numbers become available.
 
-# When Can I Sell the House?
+## When Can I Sell the House?
 
 This is probably the question you ultimately care about most.
 
@@ -142,19 +144,19 @@ The better question is:
 
 Once that answer is clear, you have a much better idea of how close you actually are to being able to sell.
 
-# What Should I Figure Out Next?
+## What Should I Figure Out Next?
 
 At this point, you do not need twenty more questions.
 
 You need clarity in three areas.
 
-## 1. The legal picture
+### 1. The legal picture
 
 You need to know how the house passes after death, who the heirs or beneficiaries are, and who has—or needs to obtain—authority to act for the estate.
 
 That tells you **whether and when the house can move forward**.
 
-## 2. The debt picture
+### 2. The debt picture
 
 Gather what you can about the mortgage, property taxes, liens, and other potential estate obligations.
 
@@ -168,7 +170,7 @@ toward:
 
 > “I know what we’ve confirmed, what remains unknown, and what information we still need.”
 
-## 3. The property-value picture
+### 3. The property-value picture
 
 You need some idea of what the house is actually worth in its current condition.
 
@@ -182,7 +184,7 @@ That offer is not an appraisal, and it does not tell you the property’s full m
 
 You can then use that number as one piece of the financial picture without committing to sell.
 
-# Deciding What to Do With the House
+## Deciding What to Do With the House
 
 You started with:
 
