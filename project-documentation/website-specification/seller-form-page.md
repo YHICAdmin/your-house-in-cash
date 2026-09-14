@@ -8,8 +8,8 @@ Provide a focused conversion flow for homeowners requesting a cash offer. Collec
 
 # Header and Footer
 
-* Uses the shared [Minimal Header](site-shell.md#minimal-header).
-* Uses the shared [Minimal Footer](site-shell.md#minimal-footer).
+* Uses the shared [Minimal Header](shared-sections.md#minimal-header).
+* Uses the shared [Minimal Footer](shared-sections.md#minimal-footer).
 * On this page, the Minimal Header and Minimal Footer use transparent backgrounds so the shared page ribbon continues behind them. Their foreground content and System Lines retain their shared styling.
 
 # Main Form Area
@@ -236,7 +236,7 @@ Guide sellers through submitting their contact and property details to request a
 * Heading: `You're all set, {First Name}.`
 * Supporting copy: `We’ve received your details. Our team will review them and get in touch to discuss your property.`
 * Phone prompt: `Prefer to talk now?`
-* Uses the phone number and `tel:` destination defined in [Site Shell → Phone Contact](site-shell.md#phone-contact).
+* Uses the phone number and `tel:` destination defined in [Shared Sections → Phone Contact](shared-sections.md#phone-contact).
 * `{First Name}` uses the first word from the full-name field, ignoring leading and trailing whitespace. If no name is available, the heading is `You're all set.`.
 
 ### Component and Semantics

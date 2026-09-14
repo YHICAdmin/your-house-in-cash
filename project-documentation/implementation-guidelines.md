@@ -8,7 +8,7 @@
 
 ## Element Order
 
-Build each page with the default `Header` first, its content in the documented order, and the default `Footer` last. The defaults are the `Header` and `Footer` defined in [Site Shell](website-specification/site-shell.md), and apply even when the page specification does not list them. If the page specification explicitly selects a different Header or Footer, render that component in place of the corresponding default.
+Build each page with the default `Header` first, its content in the documented order, and the default `Footer` last. The defaults are the `Header` and `Footer` defined in [Shared Sections](website-specification/shared-sections.md), and apply even when the page specification does not list them. If the page specification explicitly selects a different Header or Footer, render that component in place of the corresponding default.
 
 Elements within each Section must be implemented in the order in which they are documented. The documented element order determines DOM order unless an approved exception is explicitly defined in the relevant Section or Element specification.
 

@@ -552,3 +552,139 @@ Provide essential legal information while keeping attention on the page's primar
 ### Spacing
 
 * `S` (`16px`) separates links; wrapped rows use `XS` (`8px`).
+
+
+# Final CTA
+
+## Purpose
+
+Conclude the page with a clear and simple conversion path.
+
+At this stage, the user has already received the necessary information throughout the page, so the section does not introduce new information. Instead, it focuses attention on the primary action — receiving an offer for their house.
+
+## Layout
+
+- Uses the global `Background` (`#FFFFFF`) by default. The consuming page may override it with an approved global Background System color according to its adjacent Sections; only the override is documented locally.
+
+- The left-aligned hierarchy of the Section Intro, Primary CTA, and Reassurance Row is preserved across Breakpoints.
+- The Section Intro, Primary CTA, and Reassurance Row form one left-aligned composition.
+- On Desktop, the CTA composition occupies Grid Columns `1–6`; the Supporting Benefits occupy Grid Columns `7–12`, with each benefit occupying three columns.
+- On Tablet, the CTA composition occupies Grid Columns `1–4`; the Supporting Benefits occupy Grid Columns `5–8`, with each benefit occupying two columns.
+- On Desktop and Tablet, the CTA composition and Supporting Benefits form parallel left- and right-area content flows whose top edges align.
+- On Mobile, the CTA composition occupies the full available Content Grid width, followed by the Supporting Benefits in canonical document order.
+
+## Section Intro
+
+### Content
+
+Contains, in document order:
+
+1. Section Label text: supplied by the consuming page.
+2. Primary Headline: supplied by the consuming page.
+3. Supporting Copy: supplied by the consuming page.
+
+Content values are supplied by the consuming page; the element structure, typography, spacing, responsive composition, and behavior are defined by this shared specification.
+
+### Component and Semantics
+
+- The Section Label uses the documented `Section Label` Component in its text-only configuration.
+- The Primary Headline uses `H2` semantics.
+- The Supporting Copy uses paragraph semantics.
+
+### Visual Design
+
+- The Primary Headline uses the global `H2` typography.
+- The Supporting Copy uses the global `Body Large` typography.
+
+### Dimensions and Alignment
+
+- The complete Section Intro is left-aligned.
+
+### Spacing
+
+- `S` (`16px`) separates the Section Label from the Primary Headline across all Breakpoints.
+- `M` (`24px`) separates the Primary Headline from the Supporting Copy across all Breakpoints.
+
+### Spacing After
+
+- `L` (`32px`) separates the complete Section Intro from the Primary CTA across all Breakpoints.
+
+## Primary CTA
+
+### Content
+
+- Label and destination: supplied by the consuming page.
+
+### Component and Semantics
+
+- Uses the documented **Button** Component with its `conversion` variant.
+
+### Spacing After
+
+- `XS` (`8px`) separates the Primary CTA from the Reassurance Row across all Breakpoints.
+
+### Interaction
+
+- Navigates to the destination supplied by the consuming page, following the global link-destination rules.
+
+## Reassurance Row
+
+### Content
+
+- Reassurance text: supplied by the consuming page.
+
+### Component and Semantics
+
+- Uses paragraph semantics.
+
+### Visual Design
+
+- Uses the global `Body Small` typography.
+
+### Dimensions and Alignment
+
+- Horizontally centered relative to the Primary CTA rather than the complete Final CTA composition.
+
+### Spacing After
+
+- On Mobile, `L` (`32px`) separates the Reassurance Row from the Supporting Benefits.
+
+## Supporting Benefits
+
+### Content
+
+Contains exactly two benefits in the order supplied by the consuming page. Each benefit supplies a canonical Lucide icon identity, a heading, and Supporting Copy.
+
+### Component and Semantics
+
+- The benefits use one semantic unordered list with one list item per benefit.
+- Each icon uses the documented `Icon Container` Component at its Default size.
+- Each benefit heading uses `H3` semantics.
+- Each Supporting Copy uses paragraph semantics.
+
+### Visual Design
+
+- Each benefit heading uses a local `16px / 600 / 1.25` typography treatment.
+- Each Supporting Copy uses the global `Body` typography.
+- The benefits remain visually open without a Card, background, Border, Radius, or Shadow.
+- On Desktop and Tablet, each benefit is preceded by a `1px` global `Brand Green` vertical separator aligned with the top of its heading and matching the heading's `20px` line-box height; the first separator sits between the CTA composition and the first benefit, and the second sits between the two benefits.
+
+### Dimensions and Alignment
+
+- The benefits are left-aligned.
+- On Desktop and Tablet, each icon, heading, and Supporting Copy form a vertical content flow in that order.
+
+### Spacing
+
+- `M` (`24px`) separates each `Icon Container` from its benefit heading across all Breakpoints.
+- `S` (`16px`) separates each benefit heading from its Supporting Copy across all Breakpoints.
+
+### Accessibility
+
+- Benefit icons are decorative; the supplied adjacent headings communicate their benefit meaning.
+- The separators are decorative.
+
+### Responsive Behavior
+
+- On Mobile, the two benefits form one full-width vertical flow in canonical order with an `L` (`32px`) gap.
+- The vertical separators are not displayed on Mobile.

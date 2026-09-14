@@ -258,6 +258,42 @@ Not necessarily. It depends on the sale agreement. Your House in Cash can buy a 
 
 Often, yes. A mortgage or lien does not automatically rule out a sale. Mortgage debt can be paid from the sale proceeds at closing, and probate sales have rules governing how proceeds are distributed, including payment of liens. These obligations affect what remains after the sale. If the proceeds are insufficient, additional arrangements may be needed before the transaction can close; a sale does not automatically erase the unpaid balance. ([Federal Trade Commission][9]; [Ohio Revised Code][10])
 
+# Final CTA
+
+## Section Label
+
+Ready When You Are
+
+## Primary Headline
+
+Considering selling the inherited house?
+
+## Supporting Copy
+
+Get a no-obligation cash offer for the house as it is, and see whether a direct sale fits your plans.
+
+## Primary CTA
+
+[Get My Cash Offer](/get-cash-offer)
+
+## Reassurance Row
+
+100% free. No obligation.
+
+## Supporting Benefits
+
+### Benefit 1
+
+- Icon: `Banknote`
+- Heading: Get Your Cash Sooner
+- Supporting Copy: Skip repairs and listing delays. Once the house is legally ready to sell, we can work toward a quick closing.
+
+### Benefit 2
+
+- Icon: `Package`
+- Heading: Skip the Cleanout
+- Supporting Copy: Keep what matters to your family. We can buy the house with unwanted belongings still inside, with what stays agreed before closing.
+
 [1]: https://codes.ohio.gov/ohio-revised-code/section-2105.06 "Statute of descent and distribution"
 [2]: https://codes.ohio.gov/ohio-revised-code/section-2117.25 "Order in which debts to be paid"
 [3]: https://codes.ohio.gov/ohio-revised-code/section-2113.39 "Sale of property under authority of will"

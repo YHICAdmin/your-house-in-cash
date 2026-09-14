@@ -307,47 +307,8 @@ Answer practical, situation-specific questions that complement the Article and h
 
 # Final CTA
 
-## Purpose
-
-Conclude the Situation Page with a clear conversion point after the user has received the information relevant to their situation.
+- Uses the [shared Final CTA](shared-sections.md#final-cta).
 
 ## Content
 
-- Short headline tailored to the specific situation.
-- Short supporting copy.
-- Primary CTA: **Get My Cash Offer**.
-- Short microcopy below the CTA when appropriate.
-
-## Structure
-
-- Headline and supporting copy.
-- Primary CTA.
-- Optional microcopy positioned below the CTA.
-- Content is presented as a single focused composition.
-
-## Visual Direction
-
-- Keep the section simple and spacious with a strong visual hierarchy.
-- Create clear visual separation from the preceding Q&A content.
-- Do not add unnecessary cards or supporting elements.
-- The section may use a different background treatment in accordance with the **Background System**.
-
-## Behavior
-
-- The Primary CTA leads to the offer process.
-- Content may change according to the specific situation of the page.
-
-## Technical Specifications
-
-No additional Situation Final CTA-specific technical specifications are currently defined. Global typography, spacing, component, color, and layout rules apply unless explicitly overridden.
-
-## Responsive Behavior
-
-No specific Tablet or Mobile composition is currently defined.
-
-The hierarchy between the headline, supporting copy, CTA, and optional microcopy should be preserved across breakpoints.
-
-## Line System
-
-- Content remains within the two outer System Lines using the globally defined content padding.
-- The internal System Lines remain visible but are not required to dictate element alignment.
+- **Inherited Property:** [Final CTA content](content/situations/inherited-property.md#final-cta), including the Section Label, Primary Headline, Supporting Copy, Primary CTA label and destination, Reassurance Row, and two Supporting Benefits in document order.
