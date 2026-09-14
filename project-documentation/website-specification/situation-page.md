@@ -223,7 +223,11 @@ Answer practical, situation-specific questions that complement the Article and h
 
 ## Layout
 
-- Uses the [Area Page FAQ Layout](area-page.md#faq): Section Intro followed by Contact Us Link in the left flow, with FAQ Accordion in the right flow. Desktop uses `5–1–6`; Tablet uses `4–4`; Mobile presents Section Intro, Contact Us Link, then FAQ Accordion in one full-width flow. The System Line relationship follows that Layout.
+- On Desktop, the left flow contains Section Intro followed by Contact Us Link across Grid Columns `1–5`, Column `6` provides composition whitespace, and FAQ Accordion occupies Grid Columns `7–12`.
+- On Tablet, the left flow occupies Grid Columns `1–4`, and FAQ Accordion occupies Grid Columns `5–8`.
+- On Mobile, Section Intro, Contact Us Link, and FAQ Accordion form one full-width flow in that order.
+- On Desktop and Tablet, the center System Line serves as the boundary at which FAQ Accordion begins.
+- Uses the global `Background Soft` (`#F7F9F7`) across all Breakpoints.
 
 ## Section Intro
 
@@ -233,45 +237,61 @@ Answer practical, situation-specific questions that complement the Article and h
 
 ### Component and Semantics
 
-- Inherits the [Area Page FAQ — Section Intro](area-page.md#faq) Component assignments and semantic roles. Its typography and spacing are also inherited below.
+- The Section Label uses the documented `Section Label` Component in its text-only configuration.
+- The Primary Headline uses `H2` semantics.
+- The Supporting Copy uses paragraph semantics.
 
 ### Visual Design
 
-- Inherits the referenced Section Intro's typography.
+- The Primary Headline uses global `H2` typography.
+- The Supporting Copy uses global `Body Large` typography.
 
 ### Spacing
 
-- Inherits the referenced Section Intro's internal spacing.
+- `S` (`16px`) separates the Section Label from the Primary Headline across all Breakpoints.
+- `M` (`24px`) separates the Primary Headline from the Supporting Copy across all Breakpoints.
 
 ### Spacing After
 
-- Inherits the referenced Section Intro's spacing before Contact Us Link.
+- `M` (`24px`) separates the complete Section Intro from Contact Us Link across all Breakpoints.
 
 ## Contact Us Link
 
 ### Content
 
-- Uses the icon and text defined in [Area Page FAQ — Contact Us Link](area-page.md#contact-us-link).
+- Decorative `MessageCircle` icon to the left of a compact text block containing, in order:
+  - **Still have a question?**
+  - **Can’t find what you’re looking for?**
+  - **Contact us** with a trailing right arrow.
 
 ### Component and Semantics
 
-- Inherits the referenced Contact Us Link's Component assignments, semantic roles, and decorative-icon classifications.
+- Uses the documented `Icon Container` in its Default size. The icon is decorative.
+- The title uses paragraph semantics with strong emphasis; the supporting copy uses paragraph semantics.
+- The action uses the documented `Text Link` Component with link semantics and a decorative `16px` `ArrowRight` icon.
 
 ### Visual Design
 
-- Inherits the referenced Contact Us Link's visual treatment and responsive internal arrangement.
+- The icon and text form an unenclosed composition directly within the FAQ's left flow.
+- The title uses `Body` typography at weight `600`; supporting copy uses `Body Small` and `Text Secondary`.
+- The Text Link uses `Brand Green Dark` as a local default color override and inherits its documented active state.
+
+### Dimensions and Alignment
+
+- The icon and text block remain horizontally arranged and vertically centered across Breakpoints. The text block wraps naturally.
 
 ### Spacing
 
-- Inherits the referenced Contact Us Link's internal spacing.
+- `S` (`16px`) separates the icon and text block across all Breakpoints.
+- The text block stacks its three lines with `XS` (`8px`) gaps.
 
 ### Spacing After
 
-- Inherits the referenced Contact Us Link's Mobile spacing before FAQ Accordion.
+- On Mobile, `L` (`32px`) separates Contact Us Link from FAQ Accordion.
 
 ### Interaction
 
-- Inherits the referenced Contact Us Link's navigation to `/contact`.
+- Activating the link navigates to `/contact`.
 
 ## FAQ Accordion
 

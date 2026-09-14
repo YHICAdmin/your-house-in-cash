@@ -2,6 +2,10 @@
   background: var(--color-background);
 }
 
+.section[data-background="soft"] {
+  background: var(--color-background-soft);
+}
+
 .layout {
   row-gap: 0;
 }
@@ -59,12 +63,8 @@
   color: var(--color-text-secondary);
 }
 
-.contactCopy .contactLink {
+.contactCopy .contactLink:not(:active) {
   color: var(--color-brand-dark);
-}
-
-.contactCopy .contactLink:active {
-  color: #245a33;
 }
 
 @media (min-width: 768px) {

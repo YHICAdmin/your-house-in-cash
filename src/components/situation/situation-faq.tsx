@@ -10,6 +10,7 @@ export async function SituationFaq({ slug }: { slug: string }) {
   const faq = parseSituationFaq(source);
   if (!faq) return null;
   return <FaqSection
+    background="soft"
     label={faq.label}
     headline={faq.headline}
     supportingCopy={faq.supportingCopy}
