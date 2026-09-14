@@ -4,6 +4,12 @@ Create a consistent page template for content addressing different home seller s
 
 The goal is to provide users with information relevant to their specific situation, build trust, and gradually guide them toward the offer process.
 
+# Content Loading
+
+- Each situation loads its Hero, Article, FAQ, and Final CTA content from `content/situations/{slug}.md`.
+- Missing or empty Article, FAQ, and Final CTA sections are omitted independently.
+- If the content file or a Hero text field is missing or empty, the corresponding existing Hero text from the situation data is used. The page remains available with its shared Header and Footer.
+
 # Hero
 
 ## Purpose
@@ -194,6 +200,7 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 ### Content
 
 - **Inherited Property:** [Article content](content/situations/inherited-property.md#article), comprising the content beneath `# Article` through the next top-level heading, with its associated source references. The `# Article` heading is a content-group identifier; rendering begins with its opening paragraphs.
+- **Foreclosure:** [Article content](content/situations/foreclosure.md#article), using the same content-group structure and associated source references.
 - Render the elements in that Article portion in their document order. The `# FAQ` portion supplies the separate FAQ Section.
 
 ### Component and Semantics

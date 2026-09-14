@@ -1,13 +1,11 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { situationSection } from "@/lib/situation-content";
 import { parseSituationArticle } from "@/lib/situation-article";
 import { renderSituationInline } from "./situation-inline";
 import { SituationSidebar } from "./situation-sidebar";
 import styles from "./situation-content.module.css";
 
-export async function SituationContent({ slug }: { slug: string }) {
-  if (slug !== "inherited-property") return null;
-  const source = await readFile(path.join(process.cwd(), "project-documentation/website-specification/content/situations/inherited-property.md"), "utf8");
+export function SituationContent({ source }: { source: string }) {
+  if (!situationSection(source, "Article")) return null;
   const { blocks, headings, references } = parseSituationArticle(source);
 
   const firstHeading = blocks.findIndex(block => block.type === "heading");
