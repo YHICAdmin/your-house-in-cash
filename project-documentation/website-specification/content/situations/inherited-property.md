@@ -212,6 +212,24 @@ First, understand where you stand.
 
 Then decide what to do with the house.
 
+# FAQ
+
+## What if the heirs disagree about selling?
+
+The answer depends on who owns the house and who has authority to sell it. During probate, one Ohio sale procedure requires written consent from the surviving spouse and the applicable heirs or beneficiaries. Other procedures may involve a power of sale in the will or a court-authorized sale. A disagreement can affect the route and timing, but it does not always prevent a sale. The starting point is identifying the authority required for this particular property. ([Ohio Revised Code][6]; [Sale under a will][3]; [Court-authorized sale][7])
+
+## Can I sell an inherited house from out of state?
+
+Yes, living outside Ohio does not by itself prevent you from selling an inherited house. The ownership and authority requirements still apply. Property access, documents, and signing arrangements need to be coordinated. Ohio permits remote online notarization with a signer outside the state, although the signing method available for a particular closing depends on its documents and requirements. ([Ohio Secretary of State][8])
+
+## Do I need to empty the house before selling?
+
+Not necessarily. It depends on the sale agreement. Your House in Cash can buy a house with unwanted belongings still inside, so a full cleanout may not be needed. What stays should be agreed on as part of the sale. Personal documents, keepsakes, and belongings intended for family members should be identified separately from items included in that agreement.
+
+## Can I sell the house with a mortgage or liens?
+
+Often, yes. A mortgage or lien does not automatically rule out a sale. Mortgage debt can be paid from the sale proceeds at closing, and probate sales have rules governing how proceeds are distributed, including payment of liens. These obligations affect what remains after the sale. If the proceeds are insufficient, additional arrangements may be needed before the transaction can close; a sale does not automatically erase the unpaid balance. ([Federal Trade Commission][9]; [Ohio Revised Code][10])
+
 [1]: https://codes.ohio.gov/ohio-revised-code/section-2105.06 "Statute of descent and distribution"
 [2]: https://codes.ohio.gov/ohio-revised-code/section-2117.25 "Order in which debts to be paid"
 [3]: https://codes.ohio.gov/ohio-revised-code/section-2113.39 "Sale of property under authority of will"
@@ -219,3 +237,6 @@ Then decide what to do with the house.
 [5]: https://www.consumerfinance.gov/ask-cfpb/does-a-persons-debt-go-away-when-they-die-en-1463/ "Does a person's debt go away when they die?"
 [6]: https://codes.ohio.gov/ohio-revised-code/section-2127.011 "Disposition of real property"
 [7]: https://codes.ohio.gov/ohio-revised-code/section-2127.04 "Action for authority to sell real property"
+[8]: https://www.ohiosos.gov/notary/become-a-notary-in-ohio/resources-and-frequently-asked-questions "Ohio notary resources and frequently asked questions"
+[9]: https://consumer.ftc.gov/trouble-paying-your-mortgage-or-facing-foreclosure "Trouble paying your mortgage or facing foreclosure"
+[10]: https://codes.ohio.gov/ohio-revised-code/section-2127.38 "Distribution of money received from sale of real property"

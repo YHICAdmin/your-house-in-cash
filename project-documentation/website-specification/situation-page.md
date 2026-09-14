@@ -157,7 +157,7 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 
 ### Content
 
-- Navigation entries use the Article content file's top-level (`#`) section headings verbatim and in document order. The heading text is maintained in the article content file.
+- Navigation entries use the Article portion's top-level (`#`) section headings verbatim and in document order. The heading text is maintained in the article content file.
 
 ### Component and Semantics
 
@@ -193,8 +193,8 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 
 ### Content
 
-- **Inherited Property:** [Article content](content/situations/inherited-property.md), including its headings, body copy, and source references.
-- Render the elements present in the linked article content file, in their document order.
+- **Inherited Property:** [Article content](content/situations/inherited-property.md), from the opening text through the content preceding `# FAQ`, with its associated source references.
+- Render the elements in that Article portion in their document order. The `# FAQ` portion supplies the separate FAQ Section.
 
 ### Component and Semantics
 
@@ -214,6 +214,75 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 
 - At all Breakpoints, `XL` (`48px`) separates major article sections, including the opening text from the first section; `L` (`32px`) precedes subsection headings within a section.
 - `S` (`16px`) separates headings from their content and consecutive prose blocks, lists, or quotations. `XS` (`8px`) separates list items.
+
+# FAQ
+
+## Purpose
+
+Answer practical, situation-specific questions that complement the Article and help the reader understand their remaining options.
+
+## Layout
+
+- Uses the [Area Page FAQ Layout](area-page.md#faq): Section Intro followed by Contact Us Link in the left flow, with FAQ Accordion in the right flow. Desktop uses `5–1–6`; Tablet uses `4–4`; Mobile presents Section Intro, Contact Us Link, then FAQ Accordion in one full-width flow. The System Line relationship follows that Layout.
+
+## Section Intro
+
+### Content
+
+- Uses the Section Label, Primary Headline, and Supporting Copy defined in [Area Page FAQ — Section Intro](area-page.md#faq), in the same order.
+
+### Component and Semantics
+
+- Inherits the referenced Section Intro's Component assignments and semantic roles.
+
+### Visual Design
+
+- Inherits the referenced Section Intro's typography.
+
+### Spacing
+
+- Inherits the referenced Section Intro's internal spacing.
+
+### Spacing After
+
+- Inherits the referenced Section Intro's spacing before Contact Us Link.
+
+## Contact Us Link
+
+### Content
+
+- Uses the icon and text defined in [Area Page FAQ — Contact Us Link](area-page.md#contact-us-link).
+
+### Component and Semantics
+
+- Inherits the referenced Contact Us Link's Component assignments, semantic roles, and decorative-icon classifications.
+
+### Visual Design
+
+- Inherits the referenced Contact Us Link's visual treatment and responsive internal arrangement.
+
+### Spacing
+
+- Inherits the referenced Contact Us Link's internal spacing.
+
+### Spacing After
+
+- Inherits the referenced Contact Us Link's Mobile spacing before FAQ Accordion.
+
+### Interaction
+
+- Inherits the referenced Contact Us Link's navigation to `/contact`.
+
+## FAQ Accordion
+
+### Content
+
+- **Inherited Property:** [FAQ content](content/situations/inherited-property.md#faq).
+- Within the content file's `# FAQ` portion, each `##` heading supplies an Item's Question, and the following answer content supplies its Answer, in document order. Source references belong to their respective answers.
+
+### Component and Semantics
+
+- Uses the shared [Accordion](../component-library.md#accordion) Component.
 
 # Final CTA
 
