@@ -45,16 +45,16 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 ### Content
 
-- **Foreclosure:** `Understanding your options before foreclosure`.
-- **Inherited Property:** `What to know about inheriting a house`.
-- **Tired Landlord:** `When owning a rental no longer fits`.
-- **Major Repairs:** `What to consider when a house needs major repairs`.
-- **Vacant Property:** `What to do with a house that sits empty`.
-- **Problem Tenants:** `Navigating problems with a rental property`.
-- **Relocation:** `Planning what happens to your house when you move`.
-- **Divorce:** `Deciding what happens to a house during divorce`.
-- **Behind on Property Taxes:** `Understanding your options for unpaid property taxes`.
-- **Code Violations:** `What to know about property code violations`.
+- **Foreclosure:** [Primary Headline](content/situations/foreclosure.md#primary-headline) under `Hero`.
+- **Inherited Property:** [Primary Headline](content/situations/inherited-property.md#primary-headline) under `Hero`.
+- **Tired Landlord:** [Primary Headline](content/situations/tired-landlord.md#primary-headline) under `Hero`.
+- **Major Repairs:** [Primary Headline](content/situations/major-repairs.md#primary-headline) under `Hero`.
+- **Vacant Property:** [Primary Headline](content/situations/vacant-property.md#primary-headline) under `Hero`.
+- **Problem Tenants:** [Primary Headline](content/situations/problem-tenants.md#primary-headline) under `Hero`.
+- **Relocation:** [Primary Headline](content/situations/relocation.md#primary-headline) under `Hero`.
+- **Divorce:** [Primary Headline](content/situations/divorce.md#primary-headline) under `Hero`.
+- **Behind on Property Taxes:** [Primary Headline](content/situations/behind-on-property-taxes.md#primary-headline) under `Hero`.
+- **Code Violations:** [Primary Headline](content/situations/code-violations.md#primary-headline) under `Hero`.
 
 ### Component and Semantics
 
@@ -73,16 +73,16 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 ### Content
 
-- **Foreclosure:** `Falling behind on mortgage payments can leave you unsure where to start. Explore the questions to ask about your loan, the foreclosure timeline, and the options to consider for your home.`
-- **Inherited Property:** `Inheriting a house can bring questions about the property, its upkeep, and what comes next. Explore the key considerations and your options for keeping, renting, or selling it.`
-- **Tired Landlord:** `Managing a rental takes time, money, and ongoing attention. Explore what to consider when weighing continued ownership, help with property management, or selling the property.`
-- **Major Repairs:** `A house that needs substantial work brings questions about cost, time, and where to begin. Explore how to assess the repairs and weigh renovating against selling the property in its current condition.`
-- **Vacant Property:** `An empty house still needs care, even when no one lives there. Explore the upkeep, security, and ongoing costs to consider as you decide whether to use, rent, or sell it.`
-- **Problem Tenants:** `Missed rent, property damage, or disagreements can make a rental difficult to manage. Explore the practical considerations around documentation, communication, and deciding whether to continue renting or sell.`
-- **Relocation:** `Moving brings decisions about both your next home and the one you leave behind. Explore how timing, ongoing costs, and managing a property from a distance can shape your plans.`
-- **Divorce:** `A shared home can be one of the most complex decisions during a separation. Explore the questions around ownership, mortgage payments, and whether one person keeps the house or you sell it.`
-- **Behind on Property Taxes:** `Unpaid property taxes can make it difficult to plan your next steps. Explore the questions to ask about your balance, available payment arrangements, and how the debt fits into plans for the property.`
-- **Code Violations:** `A code violation notice can raise questions about repairs, deadlines, and expense. Explore how to understand the cited issues and what to consider when deciding whether to repair or sell the property.`
+- **Foreclosure:** [Supporting Copy](content/situations/foreclosure.md#supporting-copy) under `Hero`.
+- **Inherited Property:** [Supporting Copy](content/situations/inherited-property.md#supporting-copy) under `Hero`.
+- **Tired Landlord:** [Supporting Copy](content/situations/tired-landlord.md#supporting-copy) under `Hero`.
+- **Major Repairs:** [Supporting Copy](content/situations/major-repairs.md#supporting-copy) under `Hero`.
+- **Vacant Property:** [Supporting Copy](content/situations/vacant-property.md#supporting-copy) under `Hero`.
+- **Problem Tenants:** [Supporting Copy](content/situations/problem-tenants.md#supporting-copy) under `Hero`.
+- **Relocation:** [Supporting Copy](content/situations/relocation.md#supporting-copy) under `Hero`.
+- **Divorce:** [Supporting Copy](content/situations/divorce.md#supporting-copy) under `Hero`.
+- **Behind on Property Taxes:** [Supporting Copy](content/situations/behind-on-property-taxes.md#supporting-copy) under `Hero`.
+- **Code Violations:** [Supporting Copy](content/situations/code-violations.md#supporting-copy) under `Hero`.
 
 ### Component and Semantics
 
@@ -229,11 +229,11 @@ Answer practical, situation-specific questions that complement the Article and h
 
 ### Content
 
-- Uses the Section Label, Primary Headline, and Supporting Copy defined in [Area Page FAQ — Section Intro](area-page.md#faq), in the same order.
+- **Inherited Property:** [FAQ Section Intro](content/situations/inherited-property.md#section-intro), containing Section Label, Primary Headline, and Supporting Copy in that order.
 
 ### Component and Semantics
 
-- Inherits the referenced Section Intro's Component assignments and semantic roles.
+- Inherits the [Area Page FAQ — Section Intro](area-page.md#faq) Component assignments and semantic roles. Its typography and spacing are also inherited below.
 
 ### Visual Design
 
@@ -277,8 +277,8 @@ Answer practical, situation-specific questions that complement the Article and h
 
 ### Content
 
-- **Inherited Property:** [FAQ content](content/situations/inherited-property.md#faq).
-- Within the content file's `# FAQ` portion, each `##` heading supplies an Item's Question, and the following answer content supplies its Answer, in document order. Source references belong to their respective answers.
+- **Inherited Property:** [Questions and Answers](content/situations/inherited-property.md#questions-and-answers) under `FAQ`.
+- Within `FAQ → Questions and Answers`, each `###` heading supplies an Item's Question, and the following answer content supplies its Answer, in document order. Source references belong to their respective answers.
 
 ### Component and Semantics
 

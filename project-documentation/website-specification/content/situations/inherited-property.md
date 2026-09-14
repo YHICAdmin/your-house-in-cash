@@ -1,3 +1,13 @@
+# Hero
+
+## Primary Headline
+
+What to know about inheriting a house
+
+## Supporting Copy
+
+Inheriting a house can bring questions about the property, its upkeep, and what comes next. Explore the key considerations and your options for keeping, renting, or selling it.
+
 # Article
 
 If a family member recently died and left behind a house, you probably don’t need a complete lesson on probate law.
@@ -216,19 +226,35 @@ Then decide what to do with the house.
 
 # FAQ
 
-## What if the heirs disagree about selling?
+## Section Intro
+
+### Section Label
+
+FAQ
+
+### Primary Headline
+
+Questions? We’ve got answers.
+
+### Supporting Copy
+
+Get clear answers about how our process works, how we determine your offer, and what to expect when selling your house as-is.
+
+## Questions and Answers
+
+### What if the heirs disagree about selling?
 
 The answer depends on who owns the house and who has authority to sell it. During probate, one Ohio sale procedure requires written consent from the surviving spouse and the applicable heirs or beneficiaries. Other procedures may involve a power of sale in the will or a court-authorized sale. A disagreement can affect the route and timing, but it does not always prevent a sale. The starting point is identifying the authority required for this particular property. ([Ohio Revised Code][6]; [Sale under a will][3]; [Court-authorized sale][7])
 
-## Can I sell an inherited house from out of state?
+### Can I sell an inherited house from out of state?
 
 Yes, living outside Ohio does not by itself prevent you from selling an inherited house. The ownership and authority requirements still apply. Property access, documents, and signing arrangements need to be coordinated. Ohio permits remote online notarization with a signer outside the state, although the signing method available for a particular closing depends on its documents and requirements. ([Ohio Secretary of State][8])
 
-## Do I need to empty the house before selling?
+### Do I need to empty the house before selling?
 
 Not necessarily. It depends on the sale agreement. Your House in Cash can buy a house with unwanted belongings still inside, so a full cleanout may not be needed. What stays should be agreed on as part of the sale. Personal documents, keepsakes, and belongings intended for family members should be identified separately from items included in that agreement.
 
-## Can I sell the house with a mortgage or liens?
+### Can I sell the house with a mortgage or liens?
 
 Often, yes. A mortgage or lien does not automatically rule out a sale. Mortgage debt can be paid from the sale proceeds at closing, and probate sales have rules governing how proceeds are distributed, including payment of liens. These obligations affect what remains after the sale. If the proceeds are insufficient, additional arrangements may be needed before the transaction can close; a sale does not automatically erase the unpaid balance. ([Federal Trade Commission][9]; [Ohio Revised Code][10])
 
