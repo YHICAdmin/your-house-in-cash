@@ -1,7 +1,7 @@
 import type { StaticImageData } from "next/image";
 import foreclosureImage from "../../public/images/situations/foreclosure-hero.jpg";
 import inheritedPropertyImage from "../../public/images/situations/inherited-property-hero.jpg";
-import tiredLandlordImage from "../../public/images/situations/tired-landlord-hero.jpg";
+import landlordsImage from "../../public/images/situations/landlords-hero.jpg";
 import majorRepairsImage from "../../public/images/situations/major-repairs-hero.jpg";
 import vacantPropertyImage from "../../public/images/situations/vacant-property-hero.jpg";
 import problemTenantsImage from "../../public/images/situations/problem-tenants-hero.jpg";
@@ -34,10 +34,10 @@ export const situations: Situation[] = [
     imageAlt: "Bedroom with a four-poster bed, floral bedding, and a rocking chair",
   },
   {
-    slug: "tired-landlord",
+    slug: "landlords",
     headline: "When owning a rental no longer fits",
     supportingCopy: "Managing a rental takes time, money, and ongoing attention. Explore what to consider when weighing continued ownership, help with property management, or selling the property.",
-    image: tiredLandlordImage,
+    image: landlordsImage,
     imageAlt: "Lease agreement with a pen and key on a dark table",
   },
   {

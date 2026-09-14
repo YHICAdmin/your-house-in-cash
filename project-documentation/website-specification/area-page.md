@@ -400,7 +400,7 @@ Contains, in document order:
 * Contains the following options in canonical order:
   1. `Foreclosure`.
   2. `Inherited House`.
-  3. `Tired Landlord`.
+  3. `Landlords`.
   4. `Major Repairs`.
   5. `Vacant Property`.
   6. `Problem Tenants`.
@@ -506,7 +506,7 @@ Contains, in document order:
 * Uses the following canonical Lucide icon for each situation:
   1. `Foreclosure`: `Gavel`.
   2. `Inherited Property`: `ScrollText`.
-  3. `Tired Landlord`: `Building2`.
+  3. `Landlords`: `Building2`.
   4. `Major Repairs`: `Hammer`.
   5. `Vacant Property`: `House`.
   6. `Problem Tenants`: `Users`.
@@ -534,7 +534,7 @@ Contains, in document order:
 * Displays the contextual heading associated with the currently selected situation:
   1. `Foreclosure`: `Understanding Your Timeline Before Foreclosure`.
   2. `Inherited Property`: `What to Consider With an Inherited Property`.
-  3. `Tired Landlord`: `When Landlord Responsibilities Become Unsustainable`.
+  3. `Landlords`: `When Landlord Responsibilities Become Unsustainable`.
   4. `Major Repairs`: `Selling a Home That Needs Major Repairs`.
   5. `Vacant Property`: `Managing the Costs of a Vacant Property`.
   6. `Problem Tenants`: `What to Consider When Tenants Are Involved`.
@@ -562,7 +562,7 @@ Contains, in document order:
 * Uses the following content for each situation:
   1. `Foreclosure`: `Facing foreclosure can feel overwhelming. We offer a straightforward way to sell your house as-is and work around your timeline.`
   2. `Inherited Property`: `An inherited property can bring repairs, belongings, and decisions you did not plan for. We make it easier to sell as-is without preparing the house for the traditional market.`
-  3. `Tired Landlord`: `Managing tenants, maintenance, and ongoing expenses can become exhausting. We buy rental properties as-is so you can move on without another traditional listing.`
+  3. `Landlords`: `Managing tenants, maintenance, and ongoing expenses can become exhausting. We buy rental properties as-is so you can move on without another traditional listing.`
   4. `Major Repairs`: `A house that needs major repairs can be difficult to sell traditionally. We buy properties as-is, so you can sell without completing the repairs first.`
   5. `Vacant Property`: `A vacant house can create ongoing costs, maintenance, and security concerns. We provide a straightforward way to sell it as-is.`
   6. `Problem Tenants`: `Selling a property with tenant issues can feel complicated. We can evaluate the property as-is and discuss a sale that fits its current occupancy situation.`
@@ -592,7 +592,7 @@ Contains, in document order:
 * Uses the following destination for each situation:
   1. `Foreclosure`: `/situations/foreclosure`.
   2. `Inherited Property`: `/situations/inherited-property`.
-  3. `Tired Landlord`: `/situations/tired-landlord`.
+  3. `Landlords`: `/situations/landlords`.
   4. `Major Repairs`: `/situations/major-repairs`.
   5. `Vacant Property`: `/situations/vacant-property`.
   6. `Problem Tenants`: `/situations/problem-tenants`.

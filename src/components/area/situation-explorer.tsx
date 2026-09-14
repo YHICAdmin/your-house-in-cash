@@ -53,8 +53,8 @@ const situations = [
       "An inherited property can bring repairs, belongings, and decisions you did not plan for. We make it easier to sell as-is without preparing the house for the traditional market.",
   },
   {
-    label: "Tired Landlord",
-    slug: "tired-landlord",
+    label: "Landlords",
+    slug: "landlords",
     icon: Building2,
     heading: "When Landlord Responsibilities Become Unsustainable",
     explanation:

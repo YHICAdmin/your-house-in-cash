@@ -1,12 +1,13 @@
 # Purpose
 
-Create a consistent page template for content addressing different home seller situations, such as **Foreclosure**, **Inherited Property**, or **Tired Landlord**.
+Create a consistent page template for content addressing different home seller situations, such as **Foreclosure**, **Inherited Property**, or **Landlords**.
 
 The goal is to provide users with information relevant to their specific situation, build trust, and gradually guide them toward the offer process.
 
 # Content Loading
 
 - Each situation loads its Hero, Article, FAQ, and Final CTA content from `content/situations/{slug}.md`.
+- Landlords uses `/situations/landlords` and `content/situations/landlords.md`.
 - Missing or empty Article, FAQ, and Final CTA sections are omitted independently.
 - If the content file or a Hero text field is missing or empty, the corresponding existing Hero text from the situation data is used. The page remains available with its shared Header and Footer.
 
@@ -53,7 +54,7 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 - **Foreclosure:** [Primary Headline](content/situations/foreclosure.md#primary-headline) under `Hero`.
 - **Inherited Property:** [Primary Headline](content/situations/inherited-property.md#primary-headline) under `Hero`.
-- **Tired Landlord:** [Primary Headline](content/situations/tired-landlord.md#primary-headline) under `Hero`.
+- **Landlords:** [Primary Headline](content/situations/landlords.md#primary-headline) under `Hero`.
 - **Major Repairs:** [Primary Headline](content/situations/major-repairs.md#primary-headline) under `Hero`.
 - **Vacant Property:** [Primary Headline](content/situations/vacant-property.md#primary-headline) under `Hero`.
 - **Problem Tenants:** [Primary Headline](content/situations/problem-tenants.md#primary-headline) under `Hero`.
@@ -81,7 +82,7 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 - **Foreclosure:** [Supporting Copy](content/situations/foreclosure.md#supporting-copy) under `Hero`.
 - **Inherited Property:** [Supporting Copy](content/situations/inherited-property.md#supporting-copy) under `Hero`.
-- **Tired Landlord:** [Supporting Copy](content/situations/tired-landlord.md#supporting-copy) under `Hero`.
+- **Landlords:** [Supporting Copy](content/situations/landlords.md#supporting-copy) under `Hero`.
 - **Major Repairs:** [Supporting Copy](content/situations/major-repairs.md#supporting-copy) under `Hero`.
 - **Vacant Property:** [Supporting Copy](content/situations/vacant-property.md#supporting-copy) under `Hero`.
 - **Problem Tenants:** [Supporting Copy](content/situations/problem-tenants.md#supporting-copy) under `Hero`.
@@ -108,7 +109,7 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 - **Foreclosure:** [foreclosure-hero.jpg](../../public/images/situations/foreclosure-hero.jpg).
 - **Inherited Property:** [inherited-property-hero.jpg](../../public/images/situations/inherited-property-hero.jpg).
-- **Tired Landlord:** [tired-landlord-hero.jpg](../../public/images/situations/tired-landlord-hero.jpg).
+- **Landlords:** [landlords-hero.jpg](../../public/images/situations/landlords-hero.jpg).
 - **Major Repairs:** [major-repairs-hero.jpg](../../public/images/situations/major-repairs-hero.jpg).
 - **Vacant Property:** [vacant-property-hero.jpg](../../public/images/situations/vacant-property-hero.jpg).
 - **Problem Tenants:** [problem-tenants-hero.jpg](../../public/images/situations/problem-tenants-hero.jpg).
@@ -130,7 +131,7 @@ Immediately confirm that the user has reached a page relevant to their specific 
 
 - **Foreclosure:** Alternative text: `Wooden model house and keys resting on a document`.
 - **Inherited Property:** Alternative text: `Bedroom with a four-poster bed, floral bedding, and a rocking chair`.
-- **Tired Landlord:** Alternative text: `Lease agreement with a pen and key on a dark table`.
+- **Landlords:** Alternative text: `Lease agreement with a pen and key on a dark table`.
 - **Major Repairs:** Alternative text: `Room under renovation with exposed masonry, a concrete mixer, and buckets`.
 - **Vacant Property:** Alternative text: `Empty room with a hardwood floor and a window, viewed through an open doorway`.
 - **Problem Tenants:** Alternative text: `Brass keys hanging from a ring against a wooden surface`.
