@@ -141,7 +141,7 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 
 ## Layout
 
-- On Desktop, uses a `3–1–8` composition: the Sidebar occupies Grid Columns `1–3`, Column `4` remains empty, and the Article occupies Grid Columns `5–12`.
+- On Desktop, uses a `3–9` composition: the Sidebar occupies Grid Columns `1–3`, and the Article occupies Grid Columns `4–12`.
 - The section uses a white background.
 
 ### Responsive Behavior
@@ -151,7 +151,7 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 
 ### Line System
 
-- On Desktop, the left internal System Line integrates with the Sidebar and serves as a navigation indicator. At the active item, the relevant portion of the line changes to Brand Green.
+- On Desktop, the left outer System Line serves as a navigation indicator, to the left of the Sidebar labels. At the active item, the relevant portion of the line changes to Brand Green.
 
 ## Sidebar
 
@@ -166,7 +166,7 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 ### Visual Design
 
 - Minimal and text-based.
-- Entries use global `Body Small` typography and `Text Primary`. The active entry uses `Brand Green` across all Breakpoints.
+- Entries use global `Body Small` typography with font weight `600` and `Text Primary`. The active entry uses `Brand Green` across all Breakpoints.
 - Long entry labels wrap within the Sidebar width.
 
 ### Spacing

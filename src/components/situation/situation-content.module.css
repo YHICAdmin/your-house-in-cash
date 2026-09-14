@@ -3,7 +3,7 @@
 .sidebar, .article { grid-column: 1 / -1; min-width: 0; }
 .sidebar { align-self: start; }
 .sidebar ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--spacing-s); }
-.sidebar a { display: block; position: relative; color: var(--color-text-primary); overflow-wrap: anywhere; }
+.sidebar a { display: block; position: relative; color: var(--color-text-primary); font-weight: 600; overflow-wrap: anywhere; }
 .sidebar a[aria-current] { color: var(--color-brand); }
 .article { color: var(--color-text-primary); overflow-wrap: anywhere; }
 .article > * { margin: 0; }
@@ -28,11 +28,11 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    right: calc(-1 * var(--layout-grid-gutter) / 2);
+    left: calc(-1 * var(--layout-grid-inset));
     width: 1px;
     background: var(--color-brand);
     pointer-events: none;
   }
-  .article { grid-column: 5 / -1; }
+  .article { grid-column: 4 / -1; }
   .article :is(h2, h3) { scroll-margin-top: calc(80px + var(--spacing-m)); }
 }
