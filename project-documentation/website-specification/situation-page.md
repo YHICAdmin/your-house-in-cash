@@ -225,6 +225,7 @@ Answer practical, situation-specific questions that complement the Article and h
 
 - On Desktop, the left flow contains Section Intro followed by Contact Us Link across Grid Columns `1–5`, Column `6` provides composition whitespace, and FAQ Accordion occupies Grid Columns `7–12`.
 - On Tablet, the left flow occupies Grid Columns `1–4`, and FAQ Accordion occupies Grid Columns `5–8`.
+- On Desktop and Tablet, the complete left flow and FAQ Accordion are vertically centered relative to each other. This alignment is maintained as answers open and close.
 - On Mobile, Section Intro, Contact Us Link, and FAQ Accordion form one full-width flow in that order.
 - On Desktop and Tablet, the center System Line serves as the boundary at which FAQ Accordion begins.
 - Uses the global `Background Soft` (`#F7F9F7`) across all Breakpoints.

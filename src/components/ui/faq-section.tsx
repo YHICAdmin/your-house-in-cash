@@ -7,14 +7,14 @@ import styles from "./faq-section.module.css";
 
 const headingId = "faq-heading";
 
-export function FaqSection({ label, headline, supportingCopy, items, background = "default" }: { label: string; headline: string; supportingCopy: string; items: readonly AccordionItem[]; background?: "default" | "soft" }) {
+export function FaqSection({ label, headline, supportingCopy, items, background = "default", centerColumns = false }: { label: string; headline: string; supportingCopy: string; items: readonly AccordionItem[]; background?: "default" | "soft"; centerColumns?: boolean }) {
   return (
     <section
       className={`${styles.section} section-spacing system-lines-bg`}
       aria-labelledby={headingId}
       data-background={background}
     >
-      <div className={`${styles.layout} content-grid`}>
+      <div className={`${styles.layout} content-grid`} data-center-columns={centerColumns}>
         <div className={styles.leftFlow}>
           <div className={styles.intro}>
             <SectionLabel>{label}</SectionLabel>

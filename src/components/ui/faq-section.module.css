@@ -68,6 +68,10 @@
 }
 
 @media (min-width: 768px) {
+  .layout[data-center-columns="true"] {
+    align-items: center;
+  }
+
   .leftFlow {
     grid-column: 1 / span 4;
     margin-bottom: 0;
