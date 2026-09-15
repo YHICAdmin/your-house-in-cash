@@ -13,6 +13,7 @@ import { SectionLabel } from "@/components/ui/section-label";
 import { TextLink } from "@/components/ui/text-link";
 import {
   getAreaPagePath,
+  sharedLocalPhoto,
   type AreaPageData,
 } from "@/data/areas";
 import { LocalMap } from "./local-map";
@@ -39,30 +40,28 @@ export function AreaLocal({ area }: AreaLocalProps) {
       value: area.statistics.medianSalePrice,
       icon: BadgeDollarSign,
       background: "purple",
-      supportingCopy:
-        "See what homes are selling for across Cleveland and get a quick sense of the local market.",
+      supportingCopy: area.statistics.supportingCopy.medianSalePrice,
     },
     {
       label: "Homes Sold",
       value: area.statistics.homesSold,
       icon: House,
       background: "navy",
-      supportingCopy: "Recent sales activity across Cleveland.",
+      supportingCopy: area.statistics.supportingCopy.homesSold,
     },
     {
       label: "Median Price per Sq. Ft.",
       value: area.statistics.medianPricePerSquareFoot,
       icon: Ruler,
       background: "turquoise",
-      supportingCopy: "Compare Cleveland home values by square foot.",
+      supportingCopy: area.statistics.supportingCopy.medianPricePerSquareFoot,
     },
     {
       label: "Median Days on Market",
       value: area.statistics.medianDaysOnMarket,
       icon: CalendarDays,
       background: "blue",
-      supportingCopy:
-        "See how long Cleveland homes typically stay on the market before selling.",
+      supportingCopy: area.statistics.supportingCopy.medianDaysOnMarket,
     },
   ];
 
@@ -178,8 +177,8 @@ export function AreaLocal({ area }: AreaLocalProps) {
           <div className={styles.marketPhotoFrame}>
             <Image
               className={styles.marketPhoto}
-              src={area.localPhoto.src}
-              alt={area.localPhoto.alt}
+              src={sharedLocalPhoto.src}
+              alt={sharedLocalPhoto.alt}
               fill
               sizes="(min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw"
             />

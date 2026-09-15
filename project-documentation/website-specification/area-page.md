@@ -11,6 +11,10 @@ Secondary goals are to build trust, demonstrate a local presence, and support or
 * Every Area Page uses the canonical route pattern `/sell-your-house-fast-as-is-{city-slug}`.
 * Each Area Page's canonical city slug is supplied by the canonical Area dataset, and its route is derived from that slug rather than stored as an independently authored URL.
 * The current Cleveland Area Page uses the canonical slug `cleveland` and route `/sell-your-house-fast-as-is-cleveland`.
+* The Euclid Area Page uses the canonical slug `euclid` and route `/sell-your-house-fast-as-is-euclid`.
+* Cleveland and Euclid use one shared Area Page template, supplied by the canonical Area dataset in `src/data/areas.ts`. Each registered Area Page is prerendered.
+* The existing `/` page continues to display Cleveland using the same template and data.
+* Area Pages and Situation Pages share the root-level `[slug]` route handler. Only registered pages are generated; unknown slugs return a 404.
 * `/areas-we-buy-in` remains the broader service-area inventory route and is not the parent path for individual Area Pages.
 
 # Hero
@@ -1177,6 +1181,11 @@ For the current Cleveland Area Page:
 * Primary Headline: `We Know Cleveland`
 * Supporting Copy: `Every local market has its own character. We understand the communities, housing landscape, and local factors that can shape a home sale in Cleveland.`
 
+For the Euclid Area Page:
+
+* Primary Headline: `We Know Euclid`
+* Supporting Copy: `Whether you’re selling a home you live in or a rental property, we look at its condition, your situation, and the local Euclid market to prepare a straightforward as-is cash offer.`
+
 ### Component and Semantics
 
 * The Section Label uses the documented `Section Label` Component.
@@ -1212,6 +1221,9 @@ For the current Cleveland Area Page:
 * Information note: `We buy houses throughout {Area Name} and nearby cities.`, generated dynamically from the current Area Page data.
 * For the current Cleveland Area Page, the information note is `We buy houses throughout Cleveland and nearby cities.`.
 * The repository-owned canonical Area dataset supplies the Google Maps embed URL for each Area Page. Each URL displays that page's approved current location, so the shared Section is not hardcoded for Cleveland or any other individual location.
+* For Euclid, the map focuses on `Euclid, Ohio`; its information note is `We buy houses throughout Euclid and nearby cities.`.
+* Euclid embed URL: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47744.50783599262!2d-81.56199711803099!3d41.59019609607561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830fe5dbe9c8b3b%3A0x57cade33d51809cd!2sEuclid%2C%20OH%2C%20USA!5e0!3m2!1sen!2sca!4v1748013566014!5m2!1sen!2sca`.
+* The Euclid URL is a standard Google Maps embed, retrieved from the iframe on https://www.iip-management.com/euclid-property-management/; no third-party page copy is reused.
 * For the current Cleveland Area Page, the approved embed URL is `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191251.91240052145!2d-81.70586405!3d41.497532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef2ee3686b2d%3A0xed04cb55f7621842!2sCleveland%2C%20OH%2C%20USA!5e0!3m2!1sen!2sil!4v1788783140965!5m2!1sen!2sil`.
 
 ### Component and Semantics
@@ -1277,6 +1289,14 @@ For the current Cleveland Area Page:
   * `Median Days on Market`: `33 days`
   * Data period: `July 2026`
   * Source: `Redfin`
+* For Euclid, use this snapshot:
+  * `Median Sale Price`: `$167,889`
+  * `Homes Sold`: `171`
+  * `Median Price per Sq. Ft.`: `$113/sq ft`
+  * `Median Days on Market`: `30 days`
+  * Data period: `June–August 2026`
+  * Source: `Redfin`, https://www.redfin.com/city/6612/OH/Euclid/housing-market
+  * Period interpretation: Redfin labels the snapshot August 2026 and describes three-month figures. Its methodology specifies rolling three-month windows for city data: https://www.redfin.com/news/data-center/methodology/. The explicit period is June–August 2026; do not describe the sales count as August-only.
 * Every Statistics Card includes the canonical Lucide icon assigned to its statistic role:
   * `Median Sale Price`: `BadgeDollarSign`
   * `Homes Sold`: `House`
@@ -1288,6 +1308,12 @@ For the current Cleveland Area Page:
   * `Homes Sold`: `Recent sales activity across Cleveland.`
   * `Median Price per Sq. Ft.`: `Compare Cleveland home values by square foot.`
   * `Median Days on Market`: `See how long Cleveland homes typically stay on the market before selling.`
+* The canonical Area dataset supplies each Statistics Card's Supporting Copy, preserving these Cleveland values.
+* For Euclid, the approved Supporting Copy is:
+  * `Median Sale Price`: `See what homes are selling for across Euclid.`
+  * `Homes Sold`: `Recent sales activity across Euclid.`
+  * `Median Price per Sq. Ft.`: `Compare Euclid home values by square foot.`
+  * `Median Days on Market`: `See how long Euclid homes typically stay on the market before selling.`
 
 ### Component and Semantics
 
@@ -1352,6 +1378,7 @@ For the current Cleveland Area Page:
 * The source destination is area-specific. For the current Cleveland Area Page, the destination is `https://www.redfin.com/city/4145/OH/Cleveland/housing-market`.
 * `{Data Period}` reflects the period associated with the currently displayed statistic values.
 * The four statistic values, source destination, and data period are updated together as one data snapshot.
+* For Euclid, the visible source line is `Data from Redfin · Updated June–August 2026`; `Redfin` links to `https://www.redfin.com/city/6612/OH/Euclid/housing-market`.
 
 #### Component and Semantics
 
@@ -1387,6 +1414,14 @@ For the current Cleveland Area Page:
   5. `Shaker Heights`
   6. `Garfield Heights`
 * The collection concludes with the link label `See all areas we buy in` and the canonical Lucide `ArrowRight` icon.
+* For Euclid, the approved nearby cities and canonical slugs are, in order:
+  1. `Cleveland`: `cleveland`
+  2. `South Euclid`: `south-euclid`
+  3. `Richmond Heights`: `richmond-heights`
+  4. `Willoughby Hills`: `willoughby-hills`
+  5. `Wickliffe`: `wickliffe`
+  6. `Willowick`: `willowick`
+* These six cities border Euclid, as documented in https://s3.countyplanning.us/wp-content/uploads/2018/06/Euc_Survey_Results-Report.pdf. Nearby-city links follow the canonical route pattern; listing a nearby city does not register a new page before its content is approved.
 * Every nearby-city entry uses the canonical Lucide `MapPin` icon; city-specific icons or symbolism are not introduced without approved city-specific content that justifies them.
 
 ### Component and Semantics
@@ -1453,11 +1488,12 @@ For the current Cleveland Area Page:
 
 * A real local residential photograph replaces the former text Card, House icon, dot field, and two explanatory content groups.
 * A compact white overlay retains the shared headline on two lines: **Local Knowledge.** followed by **Straightforward Offers.**
-* The repository-owned Area dataset supplies the photograph, descriptive alternative text, title, photographer, source URL, and license for each Area Page.
-* For Cleveland, use **East Boulevard Historic District, Glenville, Cleveland, OH**, photographed by **Warren LeMay**. The image illustrates an actual Cleveland neighborhood; it is not presented as a company-owned property or completed purchase.
+* All current and future Area Pages use the same photograph. The shared `sharedLocalPhoto` record in `src/data/areas.ts` supplies its descriptive alternative text, title, photographer, source URL, and license; individual Area Page records do not select a photograph.
+* Use **East Boulevard Historic District, Glenville, Cleveland, OH**, photographed by **Warren LeMay**, across all Area Pages. The image illustrates an actual Cleveland neighborhood as Northeast Ohio regional imagery; it is not presented as a company-owned property or completed purchase.
 * Local asset: `/images/local-area/cleveland-east-boulevard.jpg` (1024 by 768 pixels).
 * Source and verified license record: https://www.flickr.com/photos/warrenlemay/28439607087/
 * License: **CC0 1.0**, https://creativecommons.org/publicdomain/zero/1.0/ (verified 10 September 2026). Visible attribution is not required; source and license information remain in the Area dataset and project documentation.
+* The photograph's alternative text, title, photographer, source, and license remain accurate to Cleveland on every Area Page; they do not change with the city name. The CC0 record is also available at https://commons.wikimedia.org/wiki/File:East_Boulevard_Historic_District,_Glenville,_Cleveland,_OH_(28439607087).jpg.
 
 ### Component and Semantics
 
@@ -1484,7 +1520,7 @@ For the current Cleveland Area Page:
 
 ### Accessibility and Image Use
 
-* The photograph is informative and uses descriptive alternative text from the Area dataset.
+* The photograph is informative and uses descriptive alternative text from the shared photo record.
 * The image and headline are not links.
 * Only photographs verified as Cleveland or Northeast Ohio may be used here. Any replacement must permit commercial use without visible attribution; verify and document its source and license before removing any required credit.
 
