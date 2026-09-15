@@ -1,8 +1,10 @@
 export type ArticleBlock = {
-  type: "heading" | "subheading" | "paragraph" | "quote" | "list";
+  type: "heading" | "subheading" | "paragraph" | "quote" | "list" | "table";
   text: string;
   id?: string;
   items?: string[];
+  columns?: string[];
+  rows?: string[][];
 };
 
 // The supported Markdown blocks are those used by the approved situation article.
@@ -28,8 +30,17 @@ export function parseSituationArticle(source: string) {
       ids.set(base, count);
       return { type: heading[1] === "##" ? "heading" : "subheading", text: heading[2], id: count === 1 ? base : `${base}-${count}` };
     }
-    if (chunk.startsWith("* ")) {
-      return { type: "list", text: "", items: chunk.split(/\r?\n/).map(line => line.replace(/^\* /, "")) };
+    const lines = chunk.split(/\r?\n/);
+    if (lines.every(line => /^[-*] /.test(line))) {
+      return { type: "list", text: "", items: lines.map(line => line.replace(/^[-*] /, "")) };
+    }
+    // Pipe tables are supported; malformed rows remain readable as prose.
+    if (lines.length >= 2 && lines.every(line => /^\|.*\|$/.test(line.trim()))) {
+      const cells = lines.map(line => line.trim().slice(1, -1).split(/(?<!\\)\|/).map(cell => cell.trim().replace(/\\\|/g, "|")));
+      const [columns, separator, ...rows] = cells;
+      if (columns.length > 1 && cells.every(row => row.length === columns.length) && separator.every(cell => /^:?-{3,}:?$/.test(cell))) {
+        return { type: "table", text: "", columns, rows };
+      }
     }
     if (chunk.startsWith("> ")) {
       return { type: "quote", text: chunk.replace(/^> ?/gm, "").replace(/\r?\n/g, " ") };

@@ -21,6 +21,19 @@ export function SituationContent({ source }: { source: string }) {
               case "subheading": return <h3 key={block.id} id={block.id} className="text-heading-4">{content}</h3>;
               case "quote": return <blockquote key={index}><p>{content}</p></blockquote>;
               case "list": return <ul key={index}>{block.items!.map((item, i) => <li key={i}>{renderSituationInline(item, references)}</li>)}</ul>;
+              case "table": {
+                const heading = blocks.slice(0, index).findLast(item => item.type === "heading" || item.type === "subheading");
+                return (
+                  <div key={index} className={styles.tableScroll} role="region" aria-labelledby={heading?.id} aria-label={heading ? undefined : "Article table"} tabIndex={0}>
+                    <table aria-labelledby={heading?.id}>
+                      <thead><tr>{block.columns!.map((cell, i) => <th key={i} scope="col">{renderSituationInline(cell, references)}</th>)}</tr></thead>
+                      <tbody>{block.rows!.map((row, i) => <tr key={i}>{row.map((cell, j) => j === 0
+                        ? <th key={j} scope="row">{renderSituationInline(cell, references)}</th>
+                        : <td key={j}>{renderSituationInline(cell, references)}</td>)}</tr>)}</tbody>
+                    </table>
+                  </div>
+                );
+              }
               default: return <p key={index} className={index < firstHeading ? "text-body-large" : undefined}>{content}</p>;
             }
           })}

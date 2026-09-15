@@ -12,6 +12,34 @@ implementation._compile(ts.transpileModule(fs.readFileSync(file, "utf8"), {
 }).outputText, file);
 const { parseSituationArticle, parseSituationFaq, parseSituationFinalCta } = implementation.exports;
 
+test("Landlords preserves its comparison table, bullet lists and navigation", () => {
+  const source = fs.readFileSync(new URL("../project-documentation/website-specification/content/situations/landlords.md", import.meta.url), "utf8");
+  const result = parseSituationArticle(source);
+  const table = result.blocks.find(block => block.type === "table");
+  assert.deepEqual(table.columns, ["Consideration", "On-Market / MLS", "Off-Market Direct Sale"]);
+  assert.equal(table.rows.length, 12);
+  assert.equal(table.rows[0][0], "Potential sale price");
+  assert.equal(table.rows.at(-1)[0], "Best fit");
+  assert.deepEqual(result.blocks.filter(block => block.type === "list").map(block => block.items.length), [9, 10, 7]);
+  assert.equal(result.headings.length, 9);
+  assert.ok(result.headings.some(heading => heading.label === "On-Market vs. Off-Market"));
+  assert.equal(parseSituationFaq(source), null);
+  assert.equal(parseSituationFinalCta(source), null);
+  assert.deepEqual(parseSituationArticle(source.replace(/\r?\n/g, "\r\n")), result);
+});
+
+test("tables preserve inline markup, escaped pipes and following prose", () => {
+  const result = parseSituationArticle("# Article\n\n## Comparison\n\n| Item | Value |\n| --- | --- |\n| **A** | [B][1] and C\\|D |\n\nAfter.\n\n# FAQ\n\nNot article.\n\n[1]: https://example.com");
+  assert.deepEqual(result.blocks[1].rows, [["**A**", "[B][1] and C|D"]]);
+  assert.equal(result.references[1].href, "https://example.com");
+  assert.equal(result.blocks.at(-1).text, "After.");
+});
+
+test("incomplete tables remain prose without losing cells", () => {
+  for (const table of ["| A | B |\n| nope | --- |\n| C | D |", "| A | B |\n| --- | --- |\n| C | D | E |"])
+    assert.equal(parseSituationArticle(`# Article\n\n${table}`).blocks[0].text, table.replaceAll("\n", " "));
+});
+
 test("approved article preserves every heading and resolves every source reference", () => {
   const source = fs.readFileSync(new URL("../project-documentation/website-specification/content/situations/inherited-property.md", import.meta.url), "utf8");
   const result = parseSituationArticle(source);
