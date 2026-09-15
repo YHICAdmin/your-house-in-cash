@@ -36,7 +36,7 @@
 }
 
 .search {
-  margin-bottom: var(--spacing-s);
+  margin-bottom: var(--spacing-xs);
 }
 
 .popular {
@@ -50,6 +50,13 @@
   color: var(--color-text-secondary);
 }
 
+.popular .popularLink {
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .illustration {
   position: relative;
   width: 100%;
@@ -59,7 +66,7 @@
   pointer-events: none;
 }
 
-.house {
+.map {
   width: 100%;
   height: 100%;
 }
@@ -71,20 +78,36 @@
   align-items: center;
   gap: var(--spacing-xs);
   color: var(--color-brand-dark);
+  transform: translate(-50%, calc(-100% + 12px));
 }
 
 .pinLabel {
-  padding: var(--spacing-xs) var(--spacing-s);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-small);
-  background: var(--color-surface);
-  box-shadow: var(--shadow-subtle);
+  padding-inline: var(--spacing-xs);
+  background: radial-gradient(ellipse, var(--color-background) 35%, transparent 75%);
 }
 
-.pin0 { top: 2%; left: 4%; }
-.pin1 { top: 10%; right: 2%; }
-.pin2 { bottom: 14%; left: 0; }
-.pin3 { bottom: 4%; right: 5%; }
+.mapMarker {
+  width: var(--icon-large);
+  height: var(--icon-large);
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--color-brand) 30%, transparent);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-brand-light) 70%, transparent);
+}
+
+.mapMarker::after {
+  width: var(--spacing-xs);
+  height: var(--spacing-xs);
+  border-radius: var(--radius-pill);
+  background: var(--color-brand);
+  content: "";
+}
+
+.pin0 { top: 48%; left: 42%; }
+.pin1 { top: 22%; left: 78%; }
+.pin2 { top: 57%; left: 12%; }
+.pin3 { top: 78%; left: 44%; }
 
 .gradient {
   --band-deep: color-mix(in srgb, var(--color-brand-dark) 70%, var(--color-brand-light));
@@ -117,5 +140,5 @@
     padding-bottom: calc(var(--section-spacing) + var(--spacing-3xl) + var(--spacing-xl) + var(--spacing-l) + var(--spacing-2xl) + var(--spacing-xl));
   }
   .content { grid-column: 1 / span 6; }
-  .illustration { grid-column: 7 / span 6; }
+  .illustration { grid-column: 8 / span 5; }
 }

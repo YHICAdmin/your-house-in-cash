@@ -16,7 +16,7 @@ Introduce the service area and help sellers find and open their City Page.
 ## Layout
 
 * Uses the global `Background` (`#FFFFFF`).
-* On Desktop, the Introduction, City Search, and Popular Searches form the left content flow in Grid Columns `1–6`. The Local Illustration occupies Grid Columns `7–12`.
+* On Desktop, the Introduction, City Search, and Popular Searches form the left content flow in Grid Columns `1–6`. The Local Illustration occupies Grid Columns `8–12`, with Grid Column `7` providing separation between the two areas.
 * On Tablet and Mobile, the elements form one full-width vertical flow in this order: Introduction, City Search, Popular Searches, Local Illustration.
 * A wide, static diagonal gradient band rises from left to right across the bottom of the Hero, following the supplied Stripe screenshot reference. It passes behind the lower part of the Local Illustration while the text and search remain on white.
 * The band combines a base gradient, two overlapping curved waves, and two soft radial highlights. The wave geometry and gradient stops are defined by the gradient SVG in [Areas Hero](../../src/components/area/areas-hero.tsx).
@@ -85,7 +85,7 @@ Introduce the service area and help sellers find and open their City Page.
 
 ### Spacing After
 
-* `S` (`16px`) separates City Search from Popular Searches at all Breakpoints.
+* `XS` (`8px`) separates City Search from Popular Searches at all Breakpoints.
 
 ### Interaction
 
@@ -108,7 +108,8 @@ Introduce the service area and help sellers find and open their City Page.
 
 ### Visual Design
 
-* The label uses global `Body` typography and `Text Secondary` color.
+* The complete row uses global `Body Small` font size and line height (`14px / 1.5`) at all Breakpoints. The label uses `Text Secondary`; city links retain the Text Link weight, colors, and interaction states.
+* City links have a persistent underline with a `3px` underline offset in all interaction states at every Breakpoint, as a local override of Text Link styling.
 
 ### Dimensions and Alignment
 
@@ -130,18 +131,23 @@ Introduce the service area and help sellers find and open their City Page.
 
 ### Content
 
-* A house at the center, surrounded by four location pins labeled with the cities defined in Popular Searches.
+* A schematic dotted map of Cleveland and its surroundings, with Lake Erie to the northwest and the four cities defined in Popular Searches marked by name. City placement communicates their approximate relative positions.
 
 ### Visual Design
 
-* Uses an isometric house illustration viewed slightly from above and from the side, with clean shapes, the brand's green palette, and subtle depth.
-* The isometric scene contains a white house with green roof planes, windows and a door, on a pale diamond-shaped plot with paths and two trees. The illustration geometry is defined by the SVG in [Areas Hero](../../src/components/area/areas-hero.tsx).
-* Floating city labels use global Body typography, Brand Green Dark text, Surface background, the default Border, Small Radius, and Subtle Shadow. Their padding is `XS` (`8px`) vertically and `S` (`16px`) horizontally. Each label sits `XS` (`8px`) above a Large (`24px`) Lucide `MapPin` in Brand Green Dark with Brand Green Light fill.
+* The land uses fine Brand Green dots, a subtle shoreline, and soft fading at the outer edges and bottom. A pale Brand Green Light glow suggests the lake. Thin curved lines visually connect Cleveland with the other three cities.
+* The map geometry, dot pattern, connecting curves, and fade masks are defined by the SVG in [Local Area Map](../../src/components/area/local-area-map.tsx).
+* City labels use global Body typography and Brand Green Dark text, with `XS` (`8px`) horizontal padding and a soft white radial background for legibility.
+* Each city marker has a `24px` circular halo with an `8px` Brand Green center. The halo uses a `1px` Brand Green border at `30%` opacity and Brand Green Light fill at `70%` opacity.
 
 ### Dimensions and Alignment
 
 * The illustration fills its allocated width up to `600px`, is horizontally centered, and retains a `6:5` aspect ratio at all Breakpoints.
-* City markers use the illustration frame as their positioning reference: Cleveland at `top: 2%; left: 4%`; Euclid at `top: 10%; right: 2%`; Lakewood at `bottom: 14%; left: 0`; Parma at `bottom: 4%; right: 5%`.
+* Marker centers use the illustration frame as their positioning reference: Cleveland at `top: 48%; left: 42%`; Euclid at `top: 22%; left: 78%`; Lakewood at `top: 57%; left: 12%`; Parma at `top: 78%; left: 44%`. Labels are horizontally centered above their markers.
+
+### Spacing
+
+* `XS` (`8px`) separates each city label from its marker.
 
 ### Accessibility
 
