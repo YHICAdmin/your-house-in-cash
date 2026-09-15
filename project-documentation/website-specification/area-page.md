@@ -13,7 +13,7 @@ Secondary goals are to build trust, demonstrate a local presence, and support or
 * Approved cities, canonical slugs, routes, and homepage assignment are defined in the [Area Data city list](content/areas.md#city-list).
 * Registered Area Pages use one shared template, supplied by the canonical Area dataset in `src/data/areas.ts`. Each registered Area Page is prerendered.
 * Area Pages and Situation Pages share the root-level `[slug]` route handler. Only registered pages are generated; unknown slugs return a 404.
-* `/areas-we-buy-in` remains the broader service-area inventory route and is not the parent path for individual Area Pages.
+* The [Areas We Buy In directory](areas-we-buy-in-page.md) uses `/areas-we-buy-in`; it is not the parent path for individual Area Pages.
 
 # Hero
 
