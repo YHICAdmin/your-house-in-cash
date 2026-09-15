@@ -4,7 +4,6 @@ import inheritedPropertyImage from "../../public/images/situations/inherited-pro
 import landlordsImage from "../../public/images/situations/landlords-hero.jpg";
 import majorRepairsImage from "../../public/images/situations/major-repairs-hero.jpg";
 import vacantPropertyImage from "../../public/images/situations/vacant-property-hero.jpg";
-import problemTenantsImage from "../../public/images/situations/problem-tenants-hero.jpg";
 import relocationImage from "../../public/images/situations/relocation-hero.jpg";
 import divorceImage from "../../public/images/situations/divorce-hero.jpg";
 import behindOnPropertyTaxesImage from "../../public/images/situations/behind-on-property-taxes-hero.jpg";
@@ -53,13 +52,6 @@ export const situations: Situation[] = [
     supportingCopy: "An empty house still needs care, even when no one lives there. Explore the upkeep, security, and ongoing costs to consider as you decide whether to use, rent, or sell it.",
     image: vacantPropertyImage,
     imageAlt: "Empty room with a hardwood floor and a window, viewed through an open doorway",
-  },
-  {
-    slug: "problem-tenants",
-    headline: "Navigating problems with a rental property",
-    supportingCopy: "Missed rent, property damage, or disagreements can make a rental difficult to manage. Explore the practical considerations around documentation, communication, and deciding whether to continue renting or sell.",
-    image: problemTenantsImage,
-    imageAlt: "Brass keys hanging from a ring against a wooden surface",
   },
   {
     slug: "relocation",

@@ -12,7 +12,6 @@ import {
   Scale,
   ScrollText,
   Truck,
-  Users,
   type LucideIcon,
 } from "lucide-react";
 import {
@@ -75,14 +74,6 @@ const situations = [
     heading: "Managing the Costs of a Vacant Property",
     explanation:
       "A vacant house can create ongoing costs, maintenance, and security concerns. We provide a straightforward way to sell it as-is.",
-  },
-  {
-    label: "Problem Tenants",
-    slug: "problem-tenants",
-    icon: Users,
-    heading: "What to Consider When Tenants Are Involved",
-    explanation:
-      "Selling a property with tenant issues can feel complicated. We can evaluate the property as-is and discuss a sale that fits its current occupancy situation.",
   },
   {
     label: "Relocation",
