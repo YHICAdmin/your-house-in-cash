@@ -273,4 +273,46 @@ If the numbers are close enough that avoiding the repairs, showings, tenant coor
 
 Either way, you'll have a real number to make the decision with.
 
+# FAQ
+
+## Section Intro
+
+### Section Label
+
+FAQ
+
+### Primary Headline
+
+More questions about selling your rental property?
+
+### Supporting Copy
+
+Find answers about tenants, repairs, selling from out of state, agent commissions, your offer, and closing dates.
+
+## Questions and Answers
+
+### Can I sell my rental property with tenants still living there?
+
+Yes. Your House in Cash can buy rental properties with tenants in place. You don't need to make the property vacant for us to consider buying it. We'll discuss the lease, tenant situation, and property access with you as part of evaluating the purchase.
+
+### Do I need to make repairs or clean out the property first?
+
+No repairs are needed before selling to us — we buy as-is. We can also buy a property with unwanted belongings still inside, so a full cleanout may not be necessary. We'll agree with you on what stays as part of the sale.
+
+### Can I sell a rental property I manage from out of state?
+
+Yes. You can start by sending us the property details from wherever you live. We'll discuss how to coordinate property access and the steps needed to complete the sale, so you know what will be required of you before moving forward.
+
+### Will I pay an agent commission when selling directly to you?
+
+No. There is no agent commission when you sell directly to Your House in Cash. You're dealing with the buyer, and you can compare our offer and any agreed seller costs with what you expect to keep from listing the property.
+
+### How do you determine your offer for my rental property?
+
+We evaluate the property in its current condition as an investment, including the work it needs and its tenant situation. Our offer is the price we're prepared to pay for it as it sits today. You can request a **[no-obligation as-is cash offer](/get-cash-offer)** and decide whether it works for you.
+
+### Can we agree on a closing date that works for me?
+
+Yes. We'll discuss your preferred timing and agree on a closing date together. Tell us about any tenant coordination or other arrangements you need to make so we can factor them into the timeline.
+
 [1]: https://www.consumerfinance.gov/ask-cfpb/on-a-mortgage-whats-the-difference-between-my-principal-and-interest-payment-and-my-total-monthly-payment-en-1941/
