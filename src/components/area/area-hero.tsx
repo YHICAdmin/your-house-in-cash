@@ -98,12 +98,13 @@ export function AreaHero({ city }: AreaHeroProps) {
               />
               <div className={styles.identityText}>
                 <p className={`${styles.trustHeadline} text-heading-3`}>
-                  Local. Reliable.
-                  <br />
-                  Here to Help.
+                  Noah Lubko
                 </p>
-                <p className={`${styles.trustSupporting} text-body-large`}>
-                  We’re a Cleveland-based company buying houses across the area.
+                <p className="text-body">
+                  Local Cleveland Home Buyer
+                </p>
+                <p className={`${styles.trustSupporting} text-body`}>
+                  Deal directly with a local buyer from offer to closing.
                 </p>
               </div>
             </div>

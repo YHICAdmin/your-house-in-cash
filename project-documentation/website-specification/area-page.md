@@ -244,25 +244,22 @@ Contains, in document order:
 ### Content
 
 * Uses the local portrait asset at `/images/area-hero/local-trust-portrait.png`.
-* Primary headline:
-  Local. Reliable.
-  Here to Help.
-* The line break after `Reliable.` is preserved.
-* Supporting text:
-  We’re a Cleveland-based company buying houses across the area.
-* Supporting text wraps naturally without an explicit line break.
+* Primary headline: `Noah Lubko`.
+* Role: `Local Cleveland Home Buyer`.
+* Supporting text: `Deal directly with a local buyer from offer to closing.`
 * Preserves the same content across all Area Pages.
 
 ### Component and Semantics
 
-* The Primary Headline uses paragraph semantics rather than semantic heading semantics.
+* The Primary Headline, role, and supporting text each use paragraph semantics rather than semantic heading semantics.
 
 ### Visual Design
 
 * The portrait fills its crop without distortion and uses a circular crop with the global Pill Radius.
 * Uses `object-position: 50% 15%` to preserve space above the head within the circular crop across all Breakpoints.
 * The Primary Headline uses global `H3` typography and the global Text Primary color.
-* The supporting text uses global `Body Large` typography and the global Text Secondary color.
+* The role uses global `Body` typography and the global Text Primary color.
+* The supporting text uses global `Body` typography and the global Text Secondary color.
 * The card uses the global Surface color, Medium Border Radius, and Floating Shadow.
 
 ### Dimensions and Alignment
@@ -274,7 +271,7 @@ Contains, in document order:
 * The portrait and text block are vertically centered within the card.
 * The complete portrait-and-text row is horizontally centered within the card.
 * All text is left-aligned within the text block.
-* The supporting text appears beneath the primary headline with an `8px` (`XS`) vertical gap.
+* The Primary Headline, role, and supporting text form a vertical flow with `8px` (`XS`) gaps.
 * The card is centered beneath the Left and Right Images.
 * `S` (`16px`) of vertical space separates the images' shared bottom edge from the card across all Breakpoints.
 
@@ -285,7 +282,7 @@ Contains, in document order:
 ### Responsive Behavior
 
 * The full-width card and horizontal portrait-and-text arrangement remain unchanged across all Breakpoints.
-* Text wraps naturally when required by the available width while preserving the headline's explicit line break after `Reliable.`.
+* All text wraps naturally when required by the available width, without explicit line breaks.
 
 # Situations — Situations We Can Help With
 
