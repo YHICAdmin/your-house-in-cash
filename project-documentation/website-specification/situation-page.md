@@ -328,6 +328,7 @@ Answer practical, situation-specific questions that complement the Article and h
 
 - **Inherited Property:** [Final CTA content](content/situations/inherited-property.md#final-cta), including the Section Label, Primary Headline, Supporting Copy, Primary CTA label and destination, Reassurance Row, and two Supporting Benefits in document order.
 - **Foreclosure:** [Final CTA content](content/situations/foreclosure.md#final-cta), including the Section Label, Primary Headline, Supporting Copy, Primary CTA label and destination, Reassurance Row, and two Supporting Benefits in document order.
+- **Landlords:** [Final CTA content](content/situations/landlords.md#final-cta), including the Section Label, Primary Headline, Supporting Copy, Primary CTA label and destination, Reassurance Row, and two Supporting Benefits in document order.
 
 # Footer
 

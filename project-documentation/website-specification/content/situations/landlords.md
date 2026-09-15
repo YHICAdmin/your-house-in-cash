@@ -315,4 +315,40 @@ We evaluate the property in its current condition as an investment, including th
 
 Yes. We'll discuss your preferred timing and agree on a closing date together. Tell us about any tenant coordination or other arrangements you need to make so we can factor them into the timeline.
 
+# Final CTA
+
+## Section Label
+
+Ready When You Are
+
+## Primary Headline
+
+Ready to move on from your rental property?
+
+## Supporting Copy
+
+Get a no-obligation as-is cash offer for your rental property. See what you could walk away with and decide whether a direct sale fits your plans.
+
+## Primary CTA
+
+[Get My Cash Offer](/get-cash-offer)
+
+## Reassurance Row
+
+100% free. No obligation.
+
+## Supporting Benefits
+
+### Benefit 1
+
+- Icon: `Banknote`
+- Heading: Skip Repairs and Agent Commissions
+- Supporting Copy: Sell directly to us as-is, with no repairs to make and no agent commission to pay.
+
+### Benefit 2
+
+- Icon: `Clock`
+- Heading: Move on Your Timeline
+- Supporting Copy: Sell with tenants in place and agree on a closing date that works for you.
+
 [1]: https://www.consumerfinance.gov/ask-cfpb/on-a-mortgage-whats-the-difference-between-my-principal-and-interest-payment-and-my-total-monthly-payment-en-1941/
