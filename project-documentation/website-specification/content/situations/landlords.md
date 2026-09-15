@@ -125,8 +125,6 @@ Depending on the buyer and agreed terms, an off-market sale may allow you to:
 - Reduce dependence on traditional buyer financing.
 - Deal directly with the person or company buying the property.
 
-A direct sale does not automatically remove a commission obligation under an existing listing agreement. Commissions are negotiable and depend on the agreement. ([NAR][4])
-
 For a landlord who is already ready to move on, that simplicity has real value.
 
 But there is an obvious trade-off:
@@ -149,45 +147,11 @@ The better comparison is:
 
 ### On-Market
 
-Expected sale price
-
-− Mortgage payoff and other debts to be paid from the sale
-
-− Repairs and preparation
-
-− Agent commissions, if applicable
-
-− Seller closing costs
-
-− Buyer concessions
-
-− Carrying costs while the property is being sold
-
-− Any vacancy or tenant-related costs created by the sale
-
-± Closing adjustments for taxes, rent and security deposits
-
-= **Estimated net proceeds before income taxes**
+Expected sale price − repairs − commissions − selling/carrying costs = **Estimated net proceeds**
 
 ### Off-Market
 
-Direct purchase price
-
-− Mortgage payoff and other debts to be paid from the sale
-
-− Actual seller costs under the offer
-
-− Carrying costs and any vacancy or tenant-related costs until closing
-
-± Closing adjustments for taxes, rent and security deposits
-
-= **Estimated net proceeds before income taxes**
-
-Include the relevant payoff amounts and closing adjustments in both estimates, even when the buyer covers some closing costs. ([CFPB][2])
-
-For carrying costs, account for rent received and avoid counting mortgage principal payments again if they already reduce your estimated closing payoff. Do not count a cost both here and in a closing adjustment.
-
-These are cash estimates, not calculations of taxable gain. The tax result depends on your adjusted basis, including depreciation, and other facts. ([IRS][3])
+Off-market offer − seller costs = **Estimated net proceeds**
 
 Now compare those two numbers.
 
@@ -211,20 +175,17 @@ Only you can decide what those are worth.
 
 ## On-Market vs. Off-Market
 
-| Consideration | On-Market / MLS | Off-Market Direct Sale |
+| Consideration | On-Market / MLS | Direct Sale to Your House in Cash |
 |---|---|---|
-| Potential sale price | May be higher due to broader market exposure | May be lower |
-| Repairs and preparation | May help maximize price | Often unnecessary |
-| Sell as-is | Possible, but may affect buyer demand and price | Common |
-| Tenant coordination | Often more involved | Can be significantly simpler with a tenant-occupied buyer |
-| Showings | Typically required | Often limited or unnecessary |
-| Open houses | Possible | Generally unnecessary |
-| Agent commission | May apply | None if no brokerage agreement requires payment |
-| Buyer financing | May depend on lender approval | Can be avoided with a verified cash buyer |
-| Inspection / renegotiation | Depends on contract and buyer | Depends on the terms of the direct offer |
-| Timeline | Depends on market and buyer | Can often be more flexible |
-| Seller involvement | Typically higher | Typically lower |
-| Best fit | Maximizing market exposure and potential sale price | Simplicity, as-is condition, tenant occupancy, speed and certainty |
+| Repairs before selling | May be needed | None — we buy as-is |
+| Agent commission | May apply | No agent commission |
+| Preparation for photos and showings | Typically required | Not required |
+| Open houses | Possible | None |
+| Repeated buyer showings | Typically required | None |
+| Selling with tenants | May narrow the buyer pool | Possible — no need to vacate the property for us to consider buying it |
+| Dependence on buyer mortgage approval | May apply | None — we buy with cash |
+| Closing date | Depends on the buyer and process | Coordinated with you |
+| Sale price | Potential for a higher price | Our offer may be lower |
 
 These are possibilities, not guarantees. Off-market describes how a property is marketed; financing, inspections, access, assignment and closing dates depend on the actual agreement.
 
@@ -313,7 +274,4 @@ If the numbers are close enough that avoiding the repairs, showings, tenant coor
 Either way, you'll have a real number to make the decision with.
 
 [1]: https://www.consumerfinance.gov/ask-cfpb/on-a-mortgage-whats-the-difference-between-my-principal-and-interest-payment-and-my-total-monthly-payment-en-1941/
-[2]: https://www.consumerfinance.gov/rules-policy/regulations/1026/38/#k
-[3]: https://www.irs.gov/publications/p544
-[4]: https://www.nar.realtor/the-facts/consumer-guide-listing-agreements
 [5]: https://www.ohiolegalhelp.org/detail/month-to-month-lease
