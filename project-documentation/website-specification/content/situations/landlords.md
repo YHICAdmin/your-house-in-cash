@@ -30,31 +30,25 @@ Don't look only at the rent check.
 
 Look at what the property is actually producing after everything required to own it.
 
-Start with:
+**Start with:**
 
-Expected monthly rent before vacancy
+**Monthly rent**
 
-− Mortgage principal and interest
+− Mortgage
 
-− Property taxes
-
-− Property insurance and any mortgage insurance
+− Property taxes and insurance
 
 − Maintenance and repairs
 
 − Property management, if applicable
 
-− Vacancy and turnover
+− Vacancy and other recurring property expenses
 
-− Monthly reserves for upcoming major expenses
+= **Estimated monthly cash flow**
 
-− Owner-paid utilities and association fees, if applicable
+This doesn't need to be exact. The goal is simply to get an honest picture of what the property is actually putting in your pocket each month.
 
-= **Estimated monthly cash flow before income taxes**
-
-Count each expense only once. If your mortgage payment includes escrow for taxes and insurance, separate those amounts before using this calculation. ([CFPB][1])
-
-Use monthly amounts throughout. If you start with rent already collected after vacancy, do not subtract the same vacancy loss again. Spread anticipated major expenses into monthly reserves rather than subtracting an entire future roof replacement from one month.
+Then look ahead. If the roof, HVAC, plumbing, or another major expense is coming, factor that into your decision too.
 
 Then consider two things that don't appear as neatly on a spreadsheet:
 

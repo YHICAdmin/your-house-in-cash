@@ -1,0 +1,7 @@
+.scroll { overflow-x: auto; min-width: 0; color: var(--color-text-primary); }
+.table { width: 100%; border-collapse: collapse; background: var(--color-background); overflow-wrap: anywhere; }
+.table :is(th, td) { padding: var(--spacing-s); text-align: left; vertical-align: top; min-width: 12ch; }
+.table th { font-weight: 600; }
+.table thead { background: var(--color-background-soft); }
+.table thead tr, .table tbody tr:not(:last-child) { border-bottom: 1px solid var(--color-border); }
+.table tr > :not(:last-child) { border-right: 1px solid var(--color-border); }

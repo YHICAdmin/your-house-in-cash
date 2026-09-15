@@ -232,6 +232,34 @@ Content-width at every Breakpoint; does not automatically become a Button or ful
 
 Label, destination/action, icon and icon position.
 
+## Content Table
+
+### Purpose
+
+Present structured comparisons within page content.
+
+### Content
+
+* The consuming use supplies column headings, row content, and the ID of the heading that labels the table.
+
+### Component and Semantics
+
+* Uses a native `table` with column headers and first-column row headers, using `scope="col"` and `scope="row"` respectively.
+* The table and its scroll container are labelled by the supplied heading.
+
+### Visual Design
+
+* Cells use global `Body` typography with `600` weight for headers.
+* Cell content is left-aligned and top-aligned, with `S` (`16px`) padding across all Breakpoints.
+* The column-header row uses `Background Soft` (`#F7F9F7`); body rows use a uniform `Background` (`#FFFFFF`). All text uses `Text Primary` (`#101114`).
+* Horizontal separators below the column-header row and between body rows, and vertical separators between columns throughout the header and body, use the default `Border` (`1px solid #E4E7E4`).
+* Both comparison columns receive the same visual treatment, without a brand-color highlight for either option.
+
+### Dimensions and Responsive
+
+* The table fills its available content width. Columns retain at least `12ch` of width for readable text wrapping.
+* A keyboard-focusable horizontal scroll container keeps wide tables within the available content width on smaller screens.
+
 ## Autocomplete
 
 ### Purpose

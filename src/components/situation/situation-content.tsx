@@ -1,5 +1,6 @@
 import { situationSection } from "@/lib/situation-content";
 import { parseSituationArticle } from "@/lib/situation-article";
+import { ContentTable } from "@/components/ui/content-table";
 import { renderSituationInline } from "./situation-inline";
 import { SituationSidebar } from "./situation-sidebar";
 import styles from "./situation-content.module.css";
@@ -24,14 +25,12 @@ export function SituationContent({ source }: { source: string }) {
               case "table": {
                 const heading = blocks.slice(0, index).findLast(item => item.type === "heading" || item.type === "subheading");
                 return (
-                  <div key={index} className={styles.tableScroll} role="region" aria-labelledby={heading?.id} aria-label={heading ? undefined : "Article table"} tabIndex={0}>
-                    <table aria-labelledby={heading?.id}>
-                      <thead><tr>{block.columns!.map((cell, i) => <th key={i} scope="col">{renderSituationInline(cell, references)}</th>)}</tr></thead>
-                      <tbody>{block.rows!.map((row, i) => <tr key={i}>{row.map((cell, j) => j === 0
-                        ? <th key={j} scope="row">{renderSituationInline(cell, references)}</th>
-                        : <td key={j}>{renderSituationInline(cell, references)}</td>)}</tr>)}</tbody>
-                    </table>
-                  </div>
+                  <ContentTable
+                    key={index}
+                    labelledBy={heading?.id}
+                    columns={block.columns!.map(cell => renderSituationInline(cell, references))}
+                    rows={block.rows!.map(row => row.map(cell => renderSituationInline(cell, references)))}
+                  />
                 );
               }
               default: return <p key={index} className={index < firstHeading ? "text-body-large" : undefined}>{content}</p>;

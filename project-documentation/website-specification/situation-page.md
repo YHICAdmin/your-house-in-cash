@@ -210,8 +210,7 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 
 - Uses an `article` element. Within the content file's `# Article` portion, `##` headings render as `h2`, and `###` headings render as `h3`, preserving the article hierarchy below the Hero's `h1`.
 - Paragraphs, lists, quotations, emphasis, and source links retain their corresponding native HTML semantics.
-- Markdown comparison tables render as native tables with column headers and first-column row headers. Each table is labelled by its preceding topic heading. A keyboard-focusable horizontal scroll container keeps wide tables within the Article column on smaller screens.
-- Table cells use global `Body` typography with `600` weight for headers, left-aligned and top-aligned content, and `S` (`16px`) padding across all Breakpoints. Columns retain at least `12ch` of width for readable text wrapping.
+- Markdown comparison tables use [Content Table](../component-library.md#content-table), with data from the Article content and the preceding topic heading as their label.
 
 ### Visual Design
 
