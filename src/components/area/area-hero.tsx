@@ -100,12 +100,10 @@ export function AreaHero({ city }: AreaHeroProps) {
                 <p className={`${styles.trustHeadline} text-heading-3`}>
                   Local. Reliable.
                   <br />
-                  Cleveland’s Neighbor.
+                  Here to Help.
                 </p>
                 <p className={`${styles.trustSupporting} text-body-large`}>
-                  We’re a local Cleveland
-                  <br />
-                  company you can trust.
+                  We’re a Cleveland-based company buying houses across the area.
                 </p>
               </div>
             </div>

@@ -244,12 +244,11 @@ Contains, in document order:
 * Uses the local portrait asset at `/images/area-hero/local-trust-portrait.png`.
 * Primary headline:
   Local. Reliable.
-  Cleveland’s Neighbor.
+  Here to Help.
 * The line break after `Reliable.` is preserved.
 * Supporting text:
-  We’re a local Cleveland
-  company you can trust.
-* The line break after `Cleveland` is preserved.
+  We’re a Cleveland-based company buying houses across the area.
+* Supporting text wraps naturally without an explicit line break.
 * Preserves the same content across all Area Pages.
 
 ### Component and Semantics
@@ -284,7 +283,7 @@ Contains, in document order:
 ### Responsive Behavior
 
 * The full-width card and horizontal portrait-and-text arrangement remain unchanged across all Breakpoints.
-* Text wraps naturally when required by the available width while preserving the explicit line breaks after `Reliable.` and `Cleveland`.
+* Text wraps naturally when required by the available width while preserving the headline's explicit line break after `Reliable.`.
 
 # Situations — Situations We Can Help With
 
