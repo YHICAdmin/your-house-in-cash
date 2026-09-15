@@ -13,10 +13,11 @@ type Props = Omit<InputHTMLAttributes<HTMLInputElement>, "value" | "onChange"> &
   limit: number;
   loadingMessage: string;
   emptyMessage: string;
+  onSuggestionSelect?: (suggestion: Suggestion) => void;
   attribution?: ReactNode;
 };
 
-export function Autocomplete({ value, onValueChange, search, minLength, delay, limit, loadingMessage, emptyMessage, attribution, ...inputProps }: Props) {
+export function Autocomplete({ value, onValueChange, search, minLength, delay, limit, loadingMessage, emptyMessage, attribution, onSuggestionSelect, onKeyDown, ...inputProps }: Props) {
   const listId = useId();
   const root = useRef<HTMLDivElement>(null);
   const input = useRef<HTMLInputElement>(null);
@@ -114,6 +115,7 @@ export function Autocomplete({ value, onValueChange, search, minLength, delay, l
     onValueChange(option.value);
     close();
     input.current?.focus();
+    onSuggestionSelect?.(option);
   }
 
   const status = open ? loading ? loadingMessage : options.length ? "" : emptyMessage : "";
@@ -125,15 +127,17 @@ export function Autocomplete({ value, onValueChange, search, minLength, delay, l
       aria-activedescendant={open && active >= 0 ? listId + "-" + active : undefined}
       onChange={event => change(event.target.value)}
       onKeyDown={event => {
-        if (!open) return;
-        if (event.key === "Escape") { event.preventDefault(); close(); }
-        else if ((event.key === "ArrowDown" || event.key === "ArrowUp") && options.length) {
-          event.preventDefault();
-          setActive(previous => event.key === "ArrowDown" ? Math.min(previous + 1, options.length - 1) : previous < 0 ? options.length - 1 : Math.max(0, previous - 1));
-        } else if (event.key === "Enter" && active >= 0) { event.preventDefault(); select(options[active]); }
+        if (open) {
+          if (event.key === "Escape") { event.preventDefault(); close(); }
+          else if ((event.key === "ArrowDown" || event.key === "ArrowUp") && options.length) {
+            event.preventDefault();
+            setActive(previous => event.key === "ArrowDown" ? Math.min(previous + 1, options.length - 1) : previous < 0 ? options.length - 1 : Math.max(0, previous - 1));
+          } else if (event.key === "Enter" && active >= 0) { event.preventDefault(); select(options[active]); }
+        }
+        if (!event.defaultPrevented) onKeyDown?.(event);
       }} />
     {open && <div className={styles.panel} style={{ maxHeight: height }}>
-      <div className={styles.results}>
+      <div className={styles.results} tabIndex={-1}>
         {status && <p className={`text-body-small ${styles.message}`}>{status}</p>}
         <ul id={listId} role="listbox">
           {options.map((option, index) => <li id={listId + "-" + index} key={option.id}

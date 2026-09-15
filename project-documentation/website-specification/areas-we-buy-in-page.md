@@ -7,17 +7,22 @@ Provide a central directory of the cities where the company buys houses, helping
 * Canonical route: `/areas-we-buy-in`.
 * The existing Header navigation and the `See all areas we buy in` links on City Pages lead here.
 
-# City Directory Section
+# Hero
 
 ## Purpose
 
-Help sellers find their city and open its City Page.
+Introduce the service area and help sellers find and open their City Page.
 
 ## Layout
 
-The Introduction appears above the City List in one full-width vertical flow across all Breakpoints.
-
 * Uses the global `Background` (`#FFFFFF`).
+* On Desktop, the Introduction, City Search, and Popular Searches form the left content flow in Grid Columns `1–6`. The Local Illustration occupies Grid Columns `7–12`.
+* On Tablet and Mobile, the elements form one full-width vertical flow in this order: Introduction, City Search, Popular Searches, Local Illustration.
+* A wide, static diagonal gradient band rises from left to right across the bottom of the Hero, following the supplied Stripe screenshot reference. It passes behind the lower part of the Local Illustration while the text and search remain on white.
+* The gradient transitions between global `Brand Green Dark`, `Brand Green`, and `Brand Green Light`.
+* The gradient fills the Hero width in a bottom-aligned region: `240px` high on Desktop and Tablet, `180px` on Mobile. Its polygon follows normalized points `(0%, 65%)`, `(100%, 0%)`, `(100%, 45%)`, `(0%, 100%)`.
+* Its linear gradient uses `115deg`, with Brand Green Dark at `0%`, Brand Green at `40%`, Brand Green Light at `72%`, and Brand Green at `100%`.
+* Hero bottom padding adds `XL` (`48px`) to the global Section padding to accommodate the band. Desktop content and illustration are vertically center-aligned.
 
 ## Introduction
 
@@ -38,7 +43,7 @@ The Introduction appears above the City List in one full-width vertical flow acr
 
 ### Dimensions and Alignment
 
-* Both elements are left-aligned and span the available Content Grid width.
+* Both elements are left-aligned and span the available content-area width.
 * Text wraps naturally.
 
 ### Spacing
@@ -48,6 +53,108 @@ The Introduction appears above the City List in one full-width vertical flow acr
 ### Spacing After
 
 * Use the existing Area Page introduction spacing: `L` (`32px`) after the introduction on Desktop and Tablet, and `M` (`24px`) on Mobile.
+
+## City Search
+
+### Content
+
+* Visible label: **Find your city**.
+* Placeholder: **Enter city name**.
+* Suggestions use the registered city names and canonical slugs defined in [Area Data](content/areas.md#city-list).
+* Empty-results message: **No matching cities found.**
+* Loading message: **Searching cities…**.
+
+### Component and Semantics
+
+* Uses the shared [Autocomplete](../component-library.md#autocomplete) in standalone use.
+
+### Visual Design
+
+* The input and its visible label reuse the presentation defined by [Text Field](../form.md#text-field) and [Field](../form.md#field). Search behavior remains governed by Autocomplete and this element's Interaction requirements.
+
+### Dimensions and Alignment
+
+* The search fills the available content-area width.
+* Label placement and input minimum height follow Text Field.
+
+### Spacing
+
+* Label-to-input spacing and input padding follow Text Field.
+
+### Spacing After
+
+* `S` (`16px`) separates City Search from Popular Searches at all Breakpoints.
+
+### Interaction
+
+* Typing displays cities whose names contain the entered text, ignoring letter case.
+* Selecting a suggestion opens that city's canonical City Page.
+* Minimum query length: one character. Debounce delay: `0ms`.
+* Display all matching registered cities in English alphabetical order by city name. The maximum suggestion count follows the registered city count.
+* When no suggestion is active, Enter opens the City Page only when the input exactly matches a registered city name, ignoring letter case. Otherwise, focus remains in the input so the user can continue typing or select a suggestion.
+
+## Popular Searches
+
+### Content
+
+* Label: **Popular searches:**.
+* City links, in order: **Cleveland**, **Euclid**, **Lakewood**, **Parma**.
+
+### Component and Semantics
+
+* Each city uses the shared [Text Link](../component-library.md#text-link) Component.
+
+### Visual Design
+
+* The label uses global `Body` typography and `Text Secondary` color.
+
+### Dimensions and Alignment
+
+* The label precedes the four links in a horizontal flow that wraps naturally as space requires.
+
+### Spacing
+
+* `XS` (`8px`) separates the label and city links, adjacent city links, and wrapped rows at all Breakpoints.
+
+### Spacing After
+
+* On Tablet and Mobile, `L` (`32px`) separates Popular Searches from the Local Illustration.
+
+### Interaction
+
+* Each link opens its city's canonical City Page.
+
+## Local Illustration
+
+### Content
+
+* A house at the center, surrounded by four location pins labeled with the cities defined in Popular Searches.
+
+### Visual Design
+
+* Uses an isometric house illustration viewed slightly from above and from the side, with clean shapes, the brand's green palette, and subtle depth.
+* The isometric scene contains a white house with green roof planes, windows and a door, on a pale diamond-shaped plot with paths and two trees. The illustration geometry is defined by the SVG in [Areas Hero](../../src/components/area/areas-hero.tsx).
+* Floating city labels use global Body typography, Brand Green Dark text, Surface background, the default Border, Small Radius, and Subtle Shadow. Their padding is `XS` (`8px`) vertically and `S` (`16px`) horizontally. Each label sits `XS` (`8px`) above a Large (`24px`) Lucide `MapPin` in Brand Green Dark with Brand Green Light fill.
+
+### Dimensions and Alignment
+
+* The illustration fills its allocated width up to `600px`, is horizontally centered, and retains a `6:5` aspect ratio at all Breakpoints.
+* City markers use the illustration frame as their positioning reference: Cleveland at `top: 2%; left: 4%`; Euclid at `top: 10%; right: 2%`; Lakewood at `bottom: 14%; left: 0`; Parma at `bottom: 4%; right: 5%`.
+
+### Accessibility
+
+* The illustration is decorative; its city names are already provided by the Popular Searches links.
+
+# City Directory Section
+
+## Purpose
+
+Help sellers browse all supported cities and open a City Page.
+
+## Layout
+
+* Follows the Hero and presents the City List across the full Content Grid width.
+* Uses the global `Background` (`#FFFFFF`).
 
 ## City List
 

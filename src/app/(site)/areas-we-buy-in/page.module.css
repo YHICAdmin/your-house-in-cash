@@ -6,16 +6,6 @@
   row-gap: 0;
 }
 
-.intro {
-  grid-column: 1 / -1;
-  min-width: 0;
-  margin-bottom: var(--spacing-m);
-}
-
-.heading {
-  margin: 0 0 var(--spacing-m);
-}
-
 .cities {
   composes: nearbyGrid from "../../../components/area/area-local.module.css";
   grid-column: 1 / -1;
@@ -25,10 +15,6 @@
 }
 
 @media (min-width: 768px) {
-  .intro {
-    margin-bottom: var(--spacing-l);
-  }
-
   .cities {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

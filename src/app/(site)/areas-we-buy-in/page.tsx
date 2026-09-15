@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
 import { AreaFinalCta } from "@/components/area/area-final-cta";
+import { AreasHero } from "@/components/area/areas-hero";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { areas, getAreaPagePath } from "@/data/areas";
 import localStyles from "@/components/area/area-local.module.css";
@@ -11,14 +12,9 @@ export default function AreasWeBuyInPage() {
   return (
     <>
       <main>
-        <section className={`${styles.section} section-spacing system-lines-bg`} aria-labelledby="areas-heading">
+        <AreasHero cities={sortedAreas.map(area => ({ name: area.city, slug: area.slug }))} />
+        <section className={`${styles.section} section-spacing system-lines-bg`}>
           <div className={`${styles.layout} content-grid`}>
-            <div className={styles.intro}>
-              <h1 id="areas-heading" className={`${styles.heading} text-display`}>Areas We Buy Houses In</h1>
-              <p className={`${localStyles.introCopy} text-body-large`}>
-                We buy houses as-is across Cleveland and the surrounding communities. Find your city below to learn more.
-              </p>
-            </div>
             <ul className={styles.cities}>
               {sortedAreas.map((area) => (
                 <li key={area.slug}>
