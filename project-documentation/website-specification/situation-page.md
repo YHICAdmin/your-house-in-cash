@@ -6,8 +6,9 @@ The goal is to provide users with information relevant to their specific situati
 
 # Content Loading
 
+- Each situation page uses the root-level URL `/{slug}`, such as `/foreclosure`, `/inherited-property`, or `/landlords`.
 - Each situation loads its Hero, Article, FAQ, and Final CTA content from `content/situations/{slug}.md`.
-- Landlords uses `/situations/landlords` and `content/situations/landlords.md`.
+- Landlords uses `/landlords` and `content/situations/landlords.md`.
 - Missing or empty Article, FAQ, and Final CTA sections are omitted independently.
 - If the content file or a Hero text field is missing or empty, the corresponding existing Hero text from the situation data is used. The page remains available with its shared Header and Footer.
 

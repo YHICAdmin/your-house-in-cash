@@ -331,7 +331,7 @@ export function SituationExplorer({
           <p className={`${styles.explanation} text-body`}>
             {selected.explanation}
           </p>
-          <TextLink href={`/situations/${selected.slug}`}>
+          <TextLink href={`/${selected.slug}`}>
             Learn More About {selected.label}
             <ArrowRight aria-hidden="true" size={20} />
           </TextLink>

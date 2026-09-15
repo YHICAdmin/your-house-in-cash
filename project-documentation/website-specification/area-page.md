@@ -590,16 +590,16 @@ Contains, in document order:
 * Visible label template: `Learn More About [Situation]`.
 * Includes the canonical Lucide `ArrowRight` icon after the visible label.
 * Uses the following destination for each situation:
-  1. `Foreclosure`: `/situations/foreclosure`.
-  2. `Inherited Property`: `/situations/inherited-property`.
-  3. `Landlords`: `/situations/landlords`.
-  4. `Major Repairs`: `/situations/major-repairs`.
-  5. `Vacant Property`: `/situations/vacant-property`.
-  6. `Problem Tenants`: `/situations/problem-tenants`.
-  7. `Relocation`: `/situations/relocation`.
-  8. `Divorce`: `/situations/divorce`.
-  9. `Behind on Property Taxes`: `/situations/behind-on-property-taxes`.
-  10. `Code Violations`: `/situations/code-violations`.
+  1. `Foreclosure`: `/foreclosure`.
+  2. `Inherited Property`: `/inherited-property`.
+  3. `Landlords`: `/landlords`.
+  4. `Major Repairs`: `/major-repairs`.
+  5. `Vacant Property`: `/vacant-property`.
+  6. `Problem Tenants`: `/problem-tenants`.
+  7. `Relocation`: `/relocation`.
+  8. `Divorce`: `/divorce`.
+  9. `Behind on Property Taxes`: `/behind-on-property-taxes`.
+  10. `Code Violations`: `/code-violations`.
 * These paths establish the canonical route convention for dedicated Situation Pages.
 
 #### Component and Semantics
