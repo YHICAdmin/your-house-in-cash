@@ -99,7 +99,7 @@ The Introduction appears above the City List in one full-width vertical flow acr
 
 # Final CTA
 
-Use the [shared Final CTA](shared-sections.md#final-cta).
+Use the [shared Final CTA](../shared-sections.md#final-cta).
 
 ## Layout
 

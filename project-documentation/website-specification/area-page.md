@@ -1553,7 +1553,7 @@ Contains, in document order:
 
 # Final CTA
 
-- Uses the [shared Final CTA](shared-sections.md#final-cta).
+- Uses the [shared Final CTA](../shared-sections.md#final-cta).
 
 ## Layout
 

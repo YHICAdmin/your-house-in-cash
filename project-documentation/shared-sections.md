@@ -429,7 +429,7 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 
 - The copyright notice uses paragraph semantics.
 - Social identity marks use a semantic unordered list named `Social media` and local SVG images from `/images/social-platforms/`.
-- Each mark uses native link semantics and opens the supplied profile URL in a new tab, following the global [Link Destinations](../implementation-guidelines.md#link-destinations) rule (`target="_blank"`, `rel="noopener noreferrer"`).
+- Each mark uses native link semantics and opens the supplied profile URL in a new tab, following the global [Link Destinations](implementation-guidelines.md#link-destinations) rule (`target="_blank"`, `rel="noopener noreferrer"`).
 
 ### Visual Design
 
@@ -463,7 +463,7 @@ Provide brand identification, a link to the homepage, and direct phone contact w
 
 * Uses the global `Background` color.
 * Uses the bottom-border treatment defined for the [Header's default state](#layout).
-* Uses the global [Line System](../visual-design-system.md#line-system); internal lines do not dictate element placement.
+* Uses the global [Line System](visual-design-system.md#line-system); internal lines do not dictate element placement.
 * Height: `80px` on Desktop, `72px` on Tablet, and `64px` on Mobile.
 * All Header content is vertically centered.
 * The Minimal Header contains no primary navigation, menu control, or additional CTA.

@@ -41,6 +41,6 @@ Libraries and services not documented here must not be introduced without explic
 
 ## Footer Social Identity Marks
 
-- The Footer uses six local brand SVG assets (Facebook, Instagram, LinkedIn, YouTube, TikTok, X), as specified in `website-specification/shared-sections.md`.
+- The Footer uses six local brand SVG assets (Facebook, Instagram, LinkedIn, YouTube, TikTok, X), as specified in `shared-sections.md`.
 - Source: Simple Icons, version `11.15.0`, `https://github.com/simple-icons/simple-icons/tree/11.15.0/icons` (CC0). Original assets are stored in `/public/images/social-platforms/`.
 - These are static identity assets; no additional icon package or runtime dependency is installed.

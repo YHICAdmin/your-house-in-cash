@@ -321,7 +321,7 @@ Answer practical, situation-specific questions that complement the Article and h
 
 # Final CTA
 
-- Uses the [shared Final CTA](shared-sections.md#final-cta).
+- Uses the [shared Final CTA](../shared-sections.md#final-cta).
 
 ## Content
 
@@ -331,7 +331,7 @@ Answer practical, situation-specific questions that complement the Article and h
 
 # Footer
 
-- Uses the [shared Footer](shared-sections.md#footer).
+- Uses the [shared Footer](../shared-sections.md#footer).
 
 ## Visual Design
 
