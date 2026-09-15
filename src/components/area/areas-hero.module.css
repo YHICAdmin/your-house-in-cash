@@ -1,6 +1,8 @@
 .hero {
+  --band-slope-depth: var(--spacing-l);
+  --band-angle: calc(atan2(var(--band-slope-depth), 100vw) + 9deg);
   background: var(--color-background);
-  padding-bottom: calc(var(--section-spacing) + var(--spacing-xl));
+  padding-bottom: calc(var(--section-spacing) + var(--spacing-xl) + var(--spacing-2xl) + var(--spacing-xl));
 }
 
 .layout {
@@ -85,21 +87,35 @@
 .pin3 { bottom: 4%; right: 5%; }
 
 .gradient {
+  --band-deep: color-mix(in srgb, var(--color-brand-dark) 70%, var(--color-brand-light));
+  --band-mid: color-mix(in srgb, var(--color-brand) 65%, var(--color-brand-light));
   position: absolute;
   inset-inline: 0;
   bottom: 0;
-  height: 180px;
-  background: linear-gradient(115deg, var(--color-brand-dark) 0%, var(--color-brand) 40%, var(--color-brand-light) 72%, var(--color-brand) 100%);
-  clip-path: polygon(0 65%, 100% 0, 100% 45%, 0 100%);
+  height: calc(var(--spacing-3xl) + var(--spacing-s));
+  transform: skewY(calc(-1 * var(--band-angle)));
+  transform-origin: left bottom;
+  opacity: 0.55;
   pointer-events: none;
 }
 
+.gradient svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 @media (min-width: 768px) {
+  .hero { --band-slope-depth: var(--spacing-2xl); }
   .intro { margin-bottom: var(--spacing-l); }
-  .gradient { height: 240px; }
+  .gradient { height: calc(var(--spacing-3xl) + var(--spacing-2xl) + var(--spacing-m)); }
 }
 
 @media (min-width: 1200px) {
+  .hero {
+    --band-slope-depth: var(--spacing-3xl);
+    padding-bottom: calc(var(--section-spacing) + var(--spacing-3xl) + var(--spacing-xl) + var(--spacing-l) + var(--spacing-2xl) + var(--spacing-xl));
+  }
   .content { grid-column: 1 / span 6; }
   .illustration { grid-column: 7 / span 6; }
 }

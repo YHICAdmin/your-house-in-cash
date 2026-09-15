@@ -19,10 +19,12 @@ Introduce the service area and help sellers find and open their City Page.
 * On Desktop, the Introduction, City Search, and Popular Searches form the left content flow in Grid Columns `1–6`. The Local Illustration occupies Grid Columns `7–12`.
 * On Tablet and Mobile, the elements form one full-width vertical flow in this order: Introduction, City Search, Popular Searches, Local Illustration.
 * A wide, static diagonal gradient band rises from left to right across the bottom of the Hero, following the supplied Stripe screenshot reference. It passes behind the lower part of the Local Illustration while the text and search remain on white.
-* The gradient transitions between global `Brand Green Dark`, `Brand Green`, and `Brand Green Light`.
-* The gradient fills the Hero width in a bottom-aligned region: `240px` high on Desktop and Tablet, `180px` on Mobile. Its polygon follows normalized points `(0%, 65%)`, `(100%, 0%)`, `(100%, 45%)`, `(0%, 100%)`.
-* Its linear gradient uses `115deg`, with Brand Green Dark at `0%`, Brand Green at `40%`, Brand Green Light at `72%`, and Brand Green at `100%`.
-* Hero bottom padding adds `XL` (`48px`) to the global Section padding to accommodate the band. Desktop content and illustration are vertically center-aligned.
+* The band combines a base gradient, two overlapping curved waves, and two soft radial highlights. The wave geometry and gradient stops are defined by the gradient SVG in [Areas Hero](../../src/components/area/areas-hero.tsx).
+* Its darker tone mixes `70%` Brand Green Dark with `30%` Brand Green Light; its middle tone mixes `65%` Brand Green with `35%` Brand Green Light, both in sRGB. Highlights use Brand Green Light. The complete band renders at `55%` opacity over white.
+* The band spans the full Hero width with parallel diagonal edges. Its vertical thickness is `3XL + 2XL + M` (`184px`) on Desktop and Tablet, and `3XL + S` (`112px`) on Mobile.
+* The band's lower-left corner anchors to the Hero's bottom-left corner. Its upward slope angle is `atan2(depth, viewport width) + 9deg`, where depth is `3XL` (`96px`) on Desktop, `2XL` (`64px`) on Tablet, and `L` (`32px`) on Mobile.
+* Hero bottom padding adds `3XL + 2XL + 2 × XL + L` (`288px`) on Desktop and `2 × XL + 2XL` (`160px`) on Tablet and Mobile to the global Section padding, positioning the band below the text. Total bottom padding is `384px` on Desktop, `256px` on Tablet, and `232px` on Mobile.
+* Desktop content and illustration are vertically center-aligned.
 
 ## Introduction
 
