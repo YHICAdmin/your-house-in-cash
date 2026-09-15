@@ -1169,7 +1169,7 @@ Contains, in document order:
 2. Area-specific Primary Headline.
 3. Area-specific Supporting Copy.
 
-The Primary Headline and Supporting Copy are dynamic Area Page content. Each future Area Page provides its own approved area-specific values while preserving the same Section structure and content roles. No generic automated copy formula is defined.
+The Primary Headline and Supporting Copy use the approved city-name templates and Cleveland-specific exception defined in [Area Data](content/areas.md#shared-city-content), preserving the same Section structure and content roles.
 
 Approved city-specific headlines and supporting copy are defined in [Area Data](content/areas.md).
 
@@ -1360,7 +1360,7 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 * Every Area Page presents exactly six nearby-city entries.
 * City names, canonical slugs, and display order are defined in [Area Data](content/areas.md) and supplied by `src/data/areas.ts`, consistent with the Local Map wherever geographic content overlaps.
 * The collection concludes with the link label `See all areas we buy in` and the canonical Lucide `ArrowRight` icon.
-* Listing a nearby city does not register a new page before its content is approved.
+* Every recommended city must be one of the 30 registered City Pages in [Area Data](content/areas.md#city-list). Preserve the approved six-city mapping and display order; do not add, substitute, or infer cities. Each list has six unique entries and excludes the current city.
 * Every nearby-city entry uses the canonical Lucide `MapPin` icon; city-specific icons or symbolism are not introduced without approved city-specific content that justifies them.
 
 ### Component and Semantics
