@@ -1,6 +1,6 @@
 # Purpose
 
-The primary page template for Cleveland and future city/area pages.
+The shared page template for city/area pages.
 
 The primary goal is to generate leads from motivated home sellers.
 
@@ -10,10 +10,8 @@ Secondary goals are to build trust, demonstrate a local presence, and support or
 
 * Every Area Page uses the canonical route pattern `/sell-your-house-fast-as-is-{city-slug}`.
 * Each Area Page's canonical city slug is supplied by the canonical Area dataset, and its route is derived from that slug rather than stored as an independently authored URL.
-* The current Cleveland Area Page uses the canonical slug `cleveland` and route `/sell-your-house-fast-as-is-cleveland`.
-* The Euclid Area Page uses the canonical slug `euclid` and route `/sell-your-house-fast-as-is-euclid`.
-* Cleveland and Euclid use one shared Area Page template, supplied by the canonical Area dataset in `src/data/areas.ts`. Each registered Area Page is prerendered.
-* The existing `/` page continues to display Cleveland using the same template and data.
+* Approved cities, canonical slugs, routes, and homepage assignment are defined in the [Area Data city list](content/areas.md#city-list).
+* Registered Area Pages use one shared template, supplied by the canonical Area dataset in `src/data/areas.ts`. Each registered Area Page is prerendered.
 * Area Pages and Situation Pages share the root-level `[slug]` route handler. Only registered pages are generated; unknown slugs return a 404.
 * `/areas-we-buy-in` remains the broader service-area inventory route and is not the parent path for individual Area Pages.
 
@@ -1176,15 +1174,7 @@ Contains, in document order:
 
 The Primary Headline and Supporting Copy are dynamic Area Page content. Each future Area Page provides its own approved area-specific values while preserving the same Section structure and content roles. No generic automated copy formula is defined.
 
-For the current Cleveland Area Page:
-
-* Primary Headline: `We Know Cleveland`
-* Supporting Copy: `Every local market has its own character. We understand the communities, housing landscape, and local factors that can shape a home sale in Cleveland.`
-
-For the Euclid Area Page:
-
-* Primary Headline: `We Know Euclid`
-* Supporting Copy: `Whether you’re selling a home you live in or a rental property, we look at its condition, your situation, and the local Euclid market to prepare a straightforward as-is cash offer.`
+Approved city-specific headlines and supporting copy are defined in [Area Data](content/areas.md).
 
 ### Component and Semantics
 
@@ -1219,12 +1209,7 @@ For the Euclid Area Page:
 * The current Area Page location is the primary geographic focus.
 * `Nearby Areas` is the dedicated Section element for explicitly presenting the Area Page's approved surrounding locations.
 * Information note: `We buy houses throughout {Area Name} and nearby cities.`, generated dynamically from the current Area Page data.
-* For the current Cleveland Area Page, the information note is `We buy houses throughout Cleveland and nearby cities.`.
-* The repository-owned canonical Area dataset supplies the Google Maps embed URL for each Area Page. Each URL displays that page's approved current location, so the shared Section is not hardcoded for Cleveland or any other individual location.
-* For Euclid, the map focuses on `Euclid, Ohio`; its information note is `We buy houses throughout Euclid and nearby cities.`.
-* Euclid embed URL: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47744.50783599262!2d-81.56199711803099!3d41.59019609607561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830fe5dbe9c8b3b%3A0x57cade33d51809cd!2sEuclid%2C%20OH%2C%20USA!5e0!3m2!1sen!2sca!4v1748013566014!5m2!1sen!2sca`.
-* The Euclid URL is a standard Google Maps embed, retrieved from the iframe on https://www.iip-management.com/euclid-property-management/; no third-party page copy is reused.
-* For the current Cleveland Area Page, the approved embed URL is `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191251.91240052145!2d-81.70586405!3d41.497532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef2ee3686b2d%3A0xed04cb55f7621842!2sCleveland%2C%20OH%2C%20USA!5e0!3m2!1sen!2sil!4v1788783140965!5m2!1sen!2sil`.
+* The repository-owned canonical Area dataset supplies the Google Maps embed URL for each Area Page. Approved locations, embed URLs, and their source notes are defined in [Area Data](content/areas.md). Each URL displays the current page's approved location.
 
 ### Component and Semantics
 
@@ -1273,7 +1258,6 @@ For the Euclid Area Page:
 ### Content
 
 * Headline: `{AREA NAME} AT A GLANCE`, generated dynamically from the current Area Page data.
-* For the current Cleveland Area Page, the headline is `CLEVELAND AT A GLANCE`.
 * Every Area Page uses the following fixed set of four statistic roles in this canonical order:
   1. `Median Sale Price`
   2. `Homes Sold`
@@ -1281,39 +1265,13 @@ For the Euclid Area Page:
   4. `Median Days on Market`
 * Redfin housing-market data is the canonical source for all four statistics.
 * Their values and applicable data period are area-specific and time-dependent.
-* The repository-owned Area data provides the four statistic values, applicable data period, and source reference required by Data Sources.
-* For the current Cleveland Area Page, the approved July 2026 snapshot is:
-  * `Median Sale Price`: `$149,925`
-  * `Homes Sold`: `1,202`
-  * `Median Price per Sq. Ft.`: `$100/sq ft`
-  * `Median Days on Market`: `33 days`
-  * Data period: `July 2026`
-  * Source: `Redfin`
-* For Euclid, use this snapshot:
-  * `Median Sale Price`: `$167,889`
-  * `Homes Sold`: `171`
-  * `Median Price per Sq. Ft.`: `$113/sq ft`
-  * `Median Days on Market`: `30 days`
-  * Data period: `June–August 2026`
-  * Source: `Redfin`, https://www.redfin.com/city/6612/OH/Euclid/housing-market
-  * Period interpretation: Redfin labels the snapshot August 2026 and describes three-month figures. Its methodology specifies rolling three-month windows for city data: https://www.redfin.com/news/data-center/methodology/. The explicit period is June–August 2026; do not describe the sales count as August-only.
+* City-specific statistic values, reporting periods, source references, and supporting copy are defined in [Area Data](content/areas.md) and supplied by `src/data/areas.ts`.
 * Every Statistics Card includes the canonical Lucide icon assigned to its statistic role:
   * `Median Sale Price`: `BadgeDollarSign`
   * `Homes Sold`: `House`
   * `Median Price per Sq. Ft.`: `Ruler`
   * `Median Days on Market`: `CalendarDays`
 * Every Statistics Card includes Supporting Copy below its statistic label.
-* For the current Cleveland Area Page, the approved Supporting Copy is:
-  * `Median Sale Price`: `See what homes are selling for across Cleveland and get a quick sense of the local market.`
-  * `Homes Sold`: `Recent sales activity across Cleveland.`
-  * `Median Price per Sq. Ft.`: `Compare Cleveland home values by square foot.`
-  * `Median Days on Market`: `See how long Cleveland homes typically stay on the market before selling.`
-* The canonical Area dataset supplies each Statistics Card's Supporting Copy, preserving these Cleveland values.
-* For Euclid, the approved Supporting Copy is:
-  * `Median Sale Price`: `See what homes are selling for across Euclid.`
-  * `Homes Sold`: `Recent sales activity across Euclid.`
-  * `Median Price per Sq. Ft.`: `Compare Euclid home values by square foot.`
-  * `Median Days on Market`: `See how long Euclid homes typically stay on the market before selling.`
 
 ### Component and Semantics
 
@@ -1373,12 +1331,10 @@ For the Euclid Area Page:
 #### Content
 
 * Visible content follows the pattern `Data from Redfin · Updated {Data Period}`.
-* For the current Cleveland July 2026 snapshot, the visible content is `Data from Redfin · Updated July 2026`.
 * `Redfin` links to the canonical Redfin housing-market source for the current Area Page statistics.
-* The source destination is area-specific. For the current Cleveland Area Page, the destination is `https://www.redfin.com/city/4145/OH/Cleveland/housing-market`.
+* Source destinations and data periods are defined per city in [Area Data](content/areas.md).
 * `{Data Period}` reflects the period associated with the currently displayed statistic values.
 * The four statistic values, source destination, and data period are updated together as one data snapshot.
-* For Euclid, the visible source line is `Data from Redfin · Updated June–August 2026`; `Redfin` links to `https://www.redfin.com/city/6612/OH/Euclid/housing-market`.
 
 #### Component and Semantics
 
@@ -1405,23 +1361,9 @@ For the Euclid Area Page:
   * Line 1: `CITIES WE KNOW.`
   * Line 2: `MARKET WE BUY IN.`
 * Every Area Page presents exactly six nearby-city entries.
-* The city names, their order, and their canonical city slugs are area-specific, are supplied by the canonical Area dataset, and use the same dataset as the Local Map where their geographic content overlaps.
-* For the current Cleveland Area Page, the six cities appear in this canonical order:
-  1. `Lakewood`
-  2. `Cleveland Heights`
-  3. `Euclid`
-  4. `Parma`
-  5. `Shaker Heights`
-  6. `Garfield Heights`
+* City names, canonical slugs, and display order are defined in [Area Data](content/areas.md) and supplied by `src/data/areas.ts`, consistent with the Local Map wherever geographic content overlaps.
 * The collection concludes with the link label `See all areas we buy in` and the canonical Lucide `ArrowRight` icon.
-* For Euclid, the approved nearby cities and canonical slugs are, in order:
-  1. `Cleveland`: `cleveland`
-  2. `South Euclid`: `south-euclid`
-  3. `Richmond Heights`: `richmond-heights`
-  4. `Willoughby Hills`: `willoughby-hills`
-  5. `Wickliffe`: `wickliffe`
-  6. `Willowick`: `willowick`
-* These six cities border Euclid, as documented in https://s3.countyplanning.us/wp-content/uploads/2018/06/Euc_Survey_Results-Report.pdf. Nearby-city links follow the canonical route pattern; listing a nearby city does not register a new page before its content is approved.
+* Listing a nearby city does not register a new page before its content is approved.
 * Every nearby-city entry uses the canonical Lucide `MapPin` icon; city-specific icons or symbolism are not introduced without approved city-specific content that justifies them.
 
 ### Component and Semantics
@@ -1465,13 +1407,6 @@ For the Euclid Area Page:
 ### Interaction
 
 * Each complete nearby-city entry derives its destination from the city's canonical slug using `/sell-your-house-fast-as-is-{city-slug}`.
-* For the current Cleveland Area Page, the destinations are:
-  1. `Lakewood`: `/sell-your-house-fast-as-is-lakewood`
-  2. `Cleveland Heights`: `/sell-your-house-fast-as-is-cleveland-heights`
-  3. `Euclid`: `/sell-your-house-fast-as-is-euclid`
-  4. `Parma`: `/sell-your-house-fast-as-is-parma`
-  5. `Shaker Heights`: `/sell-your-house-fast-as-is-shaker-heights`
-  6. `Garfield Heights`: `/sell-your-house-fast-as-is-garfield-heights`
 * On Hover, the city name and `MapPin` use global `Brand Green Dark`.
 * In the Active state, the city name and `MapPin` use `#245A33`, matching the established Text Link active color.
 * Color transitions use `150ms ease`.
@@ -1486,7 +1421,7 @@ For the Euclid Area Page:
 
 ### Content
 
-* A real local residential photograph replaces the former text Card, House icon, dot field, and two explanatory content groups.
+* Displays a real local residential photograph.
 * A compact white overlay retains the shared headline on two lines: **Local Knowledge.** followed by **Straightforward Offers.**
 * All current and future Area Pages use the same photograph. The shared `sharedLocalPhoto` record in `src/data/areas.ts` supplies its descriptive alternative text, title, photographer, source URL, and license; individual Area Page records do not select a photograph.
 * Use **East Boulevard Historic District, Glenville, Cleveland, OH**, photographed by **Warren LeMay**, across all Area Pages. The image illustrates an actual Cleveland neighborhood as Northeast Ohio regional imagery; it is not presented as a company-owned property or completed purchase.
@@ -1634,8 +1569,8 @@ Contains, in document order:
 ## Content
 
 - Section Label: **Ready When You Are**.
-- Primary Headline: **Ready to sell your {Area Name} house?** For the current Cleveland Area Page: **Ready to sell your Cleveland house?**
-- Supporting Copy: **Tell us about your {Area Name} house and receive a fair, no-obligation cash offer built around your situation and timeline.** For the current Cleveland Area Page: **Tell us about your Cleveland house and receive a fair, no-obligation cash offer built around your situation and timeline.**
+- Primary Headline: **Ready to sell your {Area Name} house?**
+- Supporting Copy: **Tell us about your {Area Name} house and receive a fair, no-obligation cash offer built around your situation and timeline.**
 - `{Area Name}` is supplied by the current Area Page data.
 - Primary CTA: **Get My Cash Offer**, linking to `/get-cash-offer`.
 - Reassurance Row: **100% free. No obligation.**
