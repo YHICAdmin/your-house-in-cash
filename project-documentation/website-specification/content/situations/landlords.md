@@ -207,7 +207,7 @@ In an off-market investor sale, the tenant may be much less of an obstacle.
 
 At Your House in Cash, we're comfortable evaluating occupied rental properties. You don't need to make the property vacant simply so we can consider buying it.
 
-The specific lease and tenant rights still matter to the transaction, but having tenants in the property does not automatically prevent an off-market sale. In Ohio, a sale generally does not cancel an existing lease; its terms, including any valid sale-related provision, matter. ([Ohio Legal Help][5])
+The specific lease and tenant rights still matter to the transaction, but having tenants in the property does not automatically prevent an off-market sale.
 
 ## How Do You Know What Your Rental Is Worth Off-Market?
 
@@ -221,7 +221,7 @@ A price that an actual buyer is prepared to pay for the property in its current 
 
 That's something Your House in Cash can provide.
 
-We'll evaluate the property and give you a **no-obligation as-is cash offer**.
+We'll evaluate the property and give you a **[no-obligation as-is cash offer](/get-cash-offer)**.
 
 That offer is not an appraisal and it isn't a statement of the property's full market value.
 
@@ -274,4 +274,3 @@ If the numbers are close enough that avoiding the repairs, showings, tenant coor
 Either way, you'll have a real number to make the decision with.
 
 [1]: https://www.consumerfinance.gov/ask-cfpb/on-a-mortgage-whats-the-difference-between-my-principal-and-interest-payment-and-my-total-monthly-payment-en-1941/
-[5]: https://www.ohiolegalhelp.org/detail/month-to-month-lease
