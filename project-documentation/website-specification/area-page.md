@@ -1,19 +1,15 @@
 # Purpose
 
-The shared page template for city/area pages.
+Define the shared city/area page template, with each page displaying its city's content and data as defined in [Area Data](content/areas.md).
 
 The primary goal is to generate leads from motivated home sellers.
 
 Secondary goals are to build trust, demonstrate a local presence, and support organic and local search visibility.
 
-# Area Page Routing
+# Page Routing
 
 * Every Area Page uses the canonical route pattern `/sell-your-house-fast-as-is-{city-slug}`.
-* Each Area Page's canonical city slug is supplied by the canonical Area dataset, and its route is derived from that slug rather than stored as an independently authored URL.
-* Approved cities, canonical slugs, routes, and homepage assignment are defined in the [Area Data city list](content/areas.md#city-list).
-* Registered Area Pages use one shared template, supplied by the canonical Area dataset in `src/data/areas.ts`. Each registered Area Page is prerendered.
-* Area Pages and Situation Pages share the root-level `[slug]` route handler. Only registered pages are generated; unknown slugs return a 404.
-* The [Areas We Buy In directory](areas-we-buy-in-page.md) uses `/areas-we-buy-in`; it is not the parent path for individual Area Pages.
+* Each Area Page's route is derived from its canonical city slug rather than stored as an independently authored URL.
 
 # Hero
 

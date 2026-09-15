@@ -2,7 +2,7 @@
 
 Provide a focused conversion flow for homeowners requesting a cash offer. Collect and save the basic lead first, then invite the seller to supply additional property information with minimal typing.
 
-# Area Page Routing
+# Page Routing
 
 * Canonical route: `/get-cash-offer`.
 

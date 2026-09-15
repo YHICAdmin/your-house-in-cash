@@ -194,6 +194,12 @@ Component assignments and local classifications remain documented when they are 
 
 This rule applies to future specification work. It does not authorize retrospective cleanup of existing specifications.
 
+### Page Structure and Routing
+
+Every page-level specification begins with `Purpose`, immediately followed by `Page Routing` at the same heading level. `Page Routing` defines the page's canonical route or route pattern and any required page-specific routing rules. Other page-level definitions and Section specifications follow.
+
+Content definitions and data sources remain under their applicable owners, separate from `Page Routing`. This page-level structure applies only to page specifications; shared Section and Component specifications follow their own structures.
+
 ### Section Structure and Ownership
 
 Every Section specification begins with `Purpose`, followed by `Layout`, then the named element subsections in their canonical order. Shared Header and Footer specifications follow the same structure, describing their reusable role. `Elements` refers to this sequence of element subsections, not to a literal heading or an additional nesting level.

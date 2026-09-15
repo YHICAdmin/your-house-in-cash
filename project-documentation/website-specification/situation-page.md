@@ -4,11 +4,14 @@ Create a consistent page template for content addressing different home seller s
 
 The goal is to provide users with information relevant to their specific situation, build trust, and gradually guide them toward the offer process.
 
-# Content Loading
+# Page Routing
 
 - Each situation page uses the root-level URL `/{slug}`, such as `/foreclosure`, `/inherited-property`, or `/landlords`.
+
+# Content Loading
+
 - Each situation loads its Hero, Article, FAQ, and Final CTA content from `content/situations/{slug}.md`.
-- Landlords uses `/landlords` and `content/situations/landlords.md`.
+- Landlords uses `content/situations/landlords.md`.
 - Missing or empty Article, FAQ, and Final CTA sections are omitted independently.
 - If the content file or a Hero text field is missing or empty, the corresponding existing Hero text from the situation data is used. The page remains available with its shared Header and Footer.
 

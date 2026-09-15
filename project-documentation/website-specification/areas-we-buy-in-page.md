@@ -2,14 +2,10 @@
 
 Provide a central directory of the cities where the company buys houses, helping sellers find their city and open its City Page.
 
-# Route and Data
+# Page Routing
 
 * Canonical route: `/areas-we-buy-in`.
 * The existing Header navigation and the `See all areas we buy in` links on City Pages lead here.
-* The directory reads the registered cities from `src/data/areas.ts`. The approved city inventory is documented in [Area Data](content/areas.md#city-list).
-* Display all 30 currently registered cities exactly once. Future registered cities appear automatically.
-* Sort by the displayed city name in English alphabetical order without mutating the canonical dataset.
-* Derive each destination from its canonical slug using the existing `getAreaPagePath` function.
 * This directory is a separate page; individual City Pages retain their existing `/sell-your-house-fast-as-is-{city-slug}` routes.
 
 # City Directory Section
@@ -58,8 +54,8 @@ The Introduction appears above the City List in one full-width vertical flow acr
 
 ### Content
 
-* City entries appear in alphabetical document order.
-* The list contains the directory's complete city inventory.
+* Display all 30 currently registered cities exactly once. Future registered cities appear automatically.
+* City entries appear in English alphabetical document order by displayed city name.
 
 ### Component and Semantics
 
@@ -94,6 +90,12 @@ The Introduction appears above the City List in one full-width vertical flow acr
 * The city name is the link's accessible name.
 * The `MapPin` icon is decorative.
 * Preserve the same alphabetical DOM and keyboard order at every Breakpoint.
+
+### Technical Requirements
+
+* The directory reads the registered cities from `src/data/areas.ts`. The approved city inventory is documented in [Area Data](content/areas.md#city-list).
+* Sort without mutating the canonical dataset.
+* Derive each destination from its canonical slug using the existing `getAreaPagePath` function.
 
 # Final CTA
 
