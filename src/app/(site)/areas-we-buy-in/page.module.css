@@ -6,22 +6,50 @@
   row-gap: 0;
 }
 
+.intro {
+  grid-column: 1 / -1;
+  min-width: 0;
+  margin-bottom: var(--spacing-m);
+}
+
+.heading {
+  margin: 0 0 var(--spacing-m);
+}
+
+.groups {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  column-gap: var(--layout-grid-gutter);
+  row-gap: var(--spacing-l);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.group {
+  grid-column: span 4;
+  min-width: 0;
+}
+
+.letter {
+  margin: 0 0 var(--spacing-s);
+  color: var(--color-brand-dark);
+}
+
 .cities {
   composes: nearbyGrid from "../../../components/area/area-local.module.css";
-  grid-column: 1 / -1;
   min-width: 0;
   grid-template-columns: minmax(0, 1fr);
   margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
-  .cities {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  .intro { margin-bottom: var(--spacing-l); }
 }
 
 @media (min-width: 1200px) {
-  .cities {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .group {
+    grid-column: span 3;
   }
 }

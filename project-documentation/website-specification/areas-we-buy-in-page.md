@@ -161,8 +161,35 @@ Help sellers browse all supported cities and open a City Page.
 
 ## Layout
 
-* Follows the Hero and presents the City List across the full Content Grid width.
+* Follows the Hero, with an Introduction above the City List across the full Content Grid width.
 * Uses the global `Background` (`#FFFFFF`).
+
+## Introduction
+
+### Content
+
+* Primary Headline: **Find your city**.
+* Supporting Copy: **Explore the cities where we buy houses. Select your city to learn more about selling your house as-is.**
+
+### Component and Semantics
+
+* The headline uses `H2` semantics; Supporting Copy uses paragraph semantics.
+
+### Visual Design
+
+* The headline uses global H2 typography and Text Primary. Supporting Copy uses global Body Large typography and Text Secondary.
+
+### Dimensions and Alignment
+
+* Both elements are left-aligned and span the available Content Grid width.
+
+### Spacing
+
+* `M` (`24px`) separates the headline from Supporting Copy at all Breakpoints.
+
+### Spacing After
+
+* `L` (`32px`) separates the Introduction from the City List on Desktop and Tablet; `M` (`24px`) on Mobile.
 
 ## City List
 
@@ -170,28 +197,29 @@ Help sellers browse all supported cities and open a City Page.
 
 * Display all 30 currently registered cities exactly once. Future registered cities appear automatically.
 * City entries appear in English alphabetical document order by displayed city name.
+* Group cities by their initial letter. Each populated letter appears once as its group's heading; groups and their cities follow alphabetical order.
 
 ### Component and Semantics
 
-* Use one semantic unordered list.
-* Each list item contains one native link wrapping the `MapPin` icon and the visible city name.
+* Use one semantic unordered list of letter groups. Each group contains an `H3` letter heading and a nested unordered list of cities.
+* Each city list item contains one native link wrapping the `MapPin` icon and the visible city name.
 
 ### Visual Design
 
 * Reuse the city-entry treatment from the Area Page's [Nearby Areas](area-page.md#nearby-areas): open icon-and-name links, Body typography, Medium `MapPin` icons, and default colors.
+* Letter headings use global H3 typography and Brand Green Dark.
 
 ### Dimensions and Alignment
 
 * The list spans the full available Content Grid width.
-* Desktop: three equal-width columns.
-* Tablet: two equal-width columns.
-* Mobile: one full-width column.
-* Fill left to right across each row, then top to bottom.
+* Letter groups occupy the spaces between the System Lines: four columns on Desktop (three Content Grid columns each), two on Tablet (four Content Grid columns each), and one on Mobile (the complete four-column Content Grid).
+* Fill letter groups left to right across each row, then top to bottom. Cities within each group form one vertical list.
 * Each link fills its grid cell's width. City names wrap naturally within the available text width, including at the supported minimum viewport width.
 
 ### Spacing
 
-* Reuse the Nearby Areas city-entry spacing: `XS` (`8px`) icon-to-name gap and `S` (`16px`) horizontal and vertical gaps between entries.
+* Horizontal gaps between letter groups inherit the Content Grid gutters. `L` (`32px`) separates rows of letter groups.
+* `S` (`16px`) separates a letter heading from its city list and adjacent city entries vertically. Icon-to-name spacing reuses Nearby Areas' `XS` (`8px`) gap.
 
 ### Interaction
 
