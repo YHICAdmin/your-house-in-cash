@@ -6,7 +6,6 @@ Provide a central directory of the cities where the company buys houses, helping
 
 * Canonical route: `/areas-we-buy-in`.
 * The existing Header navigation and the `See all areas we buy in` links on City Pages lead here.
-* This directory is a separate page; individual City Pages retain their existing `/sell-your-house-fast-as-is-{city-slug}` routes.
 
 # City Directory Section
 
@@ -72,10 +71,8 @@ The Introduction appears above the City List in one full-width vertical flow acr
 * Desktop: three equal-width columns.
 * Tablet: two equal-width columns.
 * Mobile: one full-width column.
-* This three/two/one-column layout replaces the Nearby Areas section's two-column arrangement.
 * Fill left to right across each row, then top to bottom.
-* Each link fills its grid cell's width. City names wrap naturally within the available text width.
-* Long city names fit or wrap without clipping, including at the supported minimum viewport width.
+* Each link fills its grid cell's width. City names wrap naturally within the available text width, including at the supported minimum viewport width.
 
 ### Spacing
 
