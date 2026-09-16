@@ -16,15 +16,15 @@ test("Landlords preserves its comparison table, bullet lists and navigation", ()
   const source = fs.readFileSync(new URL("../project-documentation/website-specification/content/situations/landlords.md", import.meta.url), "utf8");
   const result = parseSituationArticle(source);
   const table = result.blocks.find(block => block.type === "table");
-  assert.deepEqual(table.columns, ["Consideration", "On-Market / MLS", "Off-Market Direct Sale"]);
-  assert.equal(table.rows.length, 12);
-  assert.equal(table.rows[0][0], "Potential sale price");
-  assert.equal(table.rows.at(-1)[0], "Best fit");
+  assert.deepEqual(table.columns, ["Consideration", "On-Market / MLS", "Direct Sale to Your House in Cash"]);
+  assert.equal(table.rows.length, 9);
+  assert.equal(table.rows[0][0], "Repairs before selling");
+  assert.equal(table.rows.at(-1)[0], "Sale price");
   assert.deepEqual(result.blocks.filter(block => block.type === "list").map(block => block.items.length), [9, 10, 7]);
   assert.equal(result.headings.length, 9);
   assert.ok(result.headings.some(heading => heading.label === "On-Market vs. Off-Market"));
-  assert.equal(parseSituationFaq(source), null);
-  assert.equal(parseSituationFinalCta(source), null);
+  assert.ok(parseSituationFaq(source));
+  assert.ok(parseSituationFinalCta(source));
   assert.deepEqual(parseSituationArticle(source.replace(/\r?\n/g, "\r\n")), result);
 });
 

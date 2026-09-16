@@ -19,7 +19,7 @@ test("each situation loads its own approved content", async () => {
     assert.ok(parseSituationHero(source).headline);
   }
   assert.ok(situationSection(await readSituationContent("foreclosure"), "Article"));
-  assert.equal(situationSection(await readSituationContent("major-repairs"), "Article"), "");
+  assert.ok(situationSection(await readSituationContent("major-repairs"), "Article"));
 });
 
 test("missing files and invalid paths return empty content safely", async () => {
