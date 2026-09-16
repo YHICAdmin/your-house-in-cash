@@ -1,5 +1,5 @@
 import type { NearbyCity } from "@/data/areas";
-import styles from "./areas-hero.module.css";
+import styles from "./local-area-map.module.css";
 
 // A schematic regional illustration, not a street map or a service boundary.
 // Lake Erie lies northwest; Euclid is northeast of Cleveland, Cleveland Heights east,

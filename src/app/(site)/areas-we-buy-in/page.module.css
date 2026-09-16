@@ -46,6 +46,8 @@
 
 .contactSection {
   background: var(--color-brand-light);
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-subtle);
 }
 
 .contactSection::before {
@@ -55,6 +57,7 @@
 .contactStrip {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "illustration" "content";
   align-items: center;
   gap: var(--spacing-m);
   grid-column: 1 / -1;
@@ -63,6 +66,7 @@
 }
 
 .contactContent {
+  grid-area: content;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -71,8 +75,12 @@
 }
 
 .contactIllustration {
+  grid-area: illustration;
   display: grid;
   min-width: 0;
+  width: 100%;
+  max-width: 360px;
+  justify-self: center;
 }
 
 .contactHeading {
@@ -91,29 +99,18 @@
 
 @media (min-width: 768px) {
   .contactStrip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "content illustration";
     gap: var(--spacing-l);
     padding: var(--spacing-l);
   }
   .contactContent {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     gap: var(--spacing-l);
   }
   .intro { margin-bottom: var(--spacing-l); }
 }
 
 @media (min-width: 1200px) {
-  .contactStrip {
-    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
-  }
-
-  .contactContent {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
   .group {
     grid-column: span 3;
   }

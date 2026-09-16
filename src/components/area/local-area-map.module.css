@@ -1,0 +1,50 @@
+.illustration {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  pointer-events: none;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.pin {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-brand-dark);
+  transform: translate(-50%, calc(-100% + 12px));
+}
+
+.pinLabel {
+  padding-inline: var(--spacing-xs);
+  background: radial-gradient(ellipse, var(--color-background) 35%, transparent 75%);
+}
+
+.mapMarker {
+  width: var(--icon-large);
+  height: var(--icon-large);
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--color-brand) 30%, transparent);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-brand-light) 70%, transparent);
+}
+
+.mapMarker::after {
+  width: var(--spacing-xs);
+  height: var(--spacing-xs);
+  border-radius: var(--radius-pill);
+  background: var(--color-brand);
+  content: "";
+}
+
+.pin0 { top: 48%; left: 42%; }
+.pin1 { top: 22%; left: 78%; }
+.pin2 { top: 57%; left: 76%; }
+.pin3 { top: 78%; left: 44%; }
+

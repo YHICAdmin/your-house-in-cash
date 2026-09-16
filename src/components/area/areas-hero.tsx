@@ -56,7 +56,9 @@ export function AreasHero({ cities }: { cities: readonly NearbyCity[] }) {
             {popularCities.map(city => <TextLink key={city.slug} className={styles.popularLink} href={getAreaPagePath(city.slug)}>{city.name}</TextLink>)}
           </div>
         </div>
-        <LocalAreaMap cities={popularCities} />
+        <div className={styles.illustration}>
+          <LocalAreaMap cities={popularCities} />
+        </div>
       </div>
     </section>
   );

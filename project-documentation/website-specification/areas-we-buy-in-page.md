@@ -245,10 +245,13 @@ Help sellers whose city is not listed contact Noah about their property.
 
 ## Layout
 
-* Replaces the Final CTA on this page, after the City Directory and immediately before the Footer.
+* The strip uses the global Small radius (`var(--radius-small)`).
+* Use the global Subtle shadow (`var(--shadow-subtle)`) for soft separation from the page background.
 * A full-Content-Grid-width strip with a Brand Green Light background. The background extends through the Grid inset to cover both outer System Lines. Internal System Lines continue over the background and behind the text, using the global treatment.
-* On Desktop, align the Introduction and Contact Button to the left in one vertical flow, with the Button below the Introduction. On Tablet, place the Button to the right of the Introduction, vertically center-aligned. On Mobile, place it below the Introduction, left-aligned.
-* Strip padding inside the Grid inset is `L` (`32px`) on Desktop and Tablet, and `M` (`24px`) on Mobile on all sides. Height follows the content and illustration, without additional fixed height.
+* On Desktop and Tablet, use equal-width left and right halves (`6–6` on Desktop; `4–4` on Tablet). The Introduction and Contact Button form a left-aligned vertical flow in the left half; the illustration occupies the right half. On Mobile, display the illustration first, then the Introduction and Button below, left-aligned.
+* On Desktop and Tablet, vertically center-align the two halves with an `L` (`32px`) gap between them. On Mobile, use an `M` (`24px`) gap between the illustration and the Introduction.
+* Preserve Introduction, Button, Illustration in DOM order. On Mobile, visually move the decorative illustration above the content.
+* Strip padding inside the Grid inset is `L` (`32px`) on Desktop and Tablet, and `M` (`24px`) on Mobile on all sides. Height follows the content and illustration.
 
 ## Introduction
 
@@ -270,6 +273,10 @@ Help sellers whose city is not listed contact Noah about their property.
 
 * `XS` (`8px`) separates the Headline from the Supporting Copy.
 
+### Spacing After
+
+* `L` (`32px`) separates the Introduction from the Contact Button on Desktop and Tablet; `M` (`24px`) on Mobile.
+
 ## Contact Button
 
 ### Content
@@ -282,11 +289,11 @@ Help sellers whose city is not listed contact Noah about their property.
 
 ### Dimensions and Alignment
 
-* Retains its content width without shrinking. Separation from the Introduction is `L` (`32px`) on Desktop and Tablet, and `M` (`24px`) on Mobile.
+* The Button does not shrink.
 
 ### Interaction
 
-* Opens `/contact` in the same tab. The link is displayed now as explicitly requested; the Contact page will be implemented separately.
+* Opens `/contact`. The Contact page will be implemented separately.
 
 ## Local Illustration
 
@@ -300,8 +307,7 @@ Help sellers whose city is not listed contact Noah about their property.
 
 ### Dimensions and Alignment
 
-* On Desktop, the text and Button occupy the left side and the illustration the right, vertically center-aligned. Allocate the available width in a `6:5` ratio, following the Hero proportions, with an `L` (`32px`) gap.
-* On Tablet and Mobile, the illustration follows the text and Button at full available width, separated by `L` (`32px`) on Tablet and `M` (`24px`) on Mobile.
+* The illustration fills its available width up to a local maximum of `360px`, retaining its `6:5` aspect ratio (maximum height `300px`). Center it horizontally within its allocated area at every Breakpoint.
 
 ### Accessibility
 
