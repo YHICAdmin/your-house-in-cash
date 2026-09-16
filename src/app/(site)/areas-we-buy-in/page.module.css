@@ -44,11 +44,76 @@
   margin-bottom: 0;
 }
 
+.contactSection {
+  background: var(--color-brand-light);
+}
+
+.contactSection::before {
+  border-color: var(--color-brand-light);
+}
+
+.contactStrip {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: var(--spacing-m);
+  grid-column: 1 / -1;
+  min-width: 0;
+  padding: var(--spacing-m);
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-m);
+  min-width: 0;
+}
+
+.contactIllustration {
+  display: grid;
+  min-width: 0;
+}
+
+.contactHeading {
+  margin: 0 0 var(--spacing-xs);
+  color: var(--color-brand-dark);
+}
+
+.contactCopy {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.contactButton {
+  flex-shrink: 0;
+}
+
 @media (min-width: 768px) {
+  .contactStrip {
+    gap: var(--spacing-l);
+    padding: var(--spacing-l);
+  }
+  .contactContent {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-l);
+  }
   .intro { margin-bottom: var(--spacing-l); }
 }
 
 @media (min-width: 1200px) {
+  .contactStrip {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  }
+
+  .contactContent {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
   .group {
     grid-column: span 3;
   }

@@ -237,17 +237,72 @@ Help sellers browse all supported cities and open a City Page.
 * Sort without mutating the canonical dataset.
 * Derive each destination from its canonical slug using the existing `getAreaPagePath` function.
 
-# Final CTA
+# Contact Strip
 
-Use the [shared Final CTA](../shared-sections.md#final-cta).
+## Purpose
+
+Help sellers whose city is not listed contact Noah about their property.
 
 ## Layout
 
-* Uses the global `Background Soft` (`#F7F9F7`).
+* Replaces the Final CTA on this page, after the City Directory and immediately before the Footer.
+* A full-Content-Grid-width strip with a Brand Green Light background. The background extends through the Grid inset to cover both outer System Lines. Internal System Lines continue over the background and behind the text, using the global treatment.
+* On Desktop, align the Introduction and Contact Button to the left in one vertical flow, with the Button below the Introduction. On Tablet, place the Button to the right of the Introduction, vertically center-aligned. On Mobile, place it below the Introduction, left-aligned.
+* Strip padding inside the Grid inset is `L` (`32px`) on Desktop and Tablet, and `M` (`24px`) on Mobile on all sides. Height follows the content and illustration, without additional fixed height.
 
-## Content
+## Introduction
 
-* Primary CTA: **Get My Cash Offer**, linking to `/get-cash-offer`.
-* Reuse the Area Page Final CTA's Section Label (**Ready When You Are**), Reassurance Row (**100% free. No obligation.**), and two Supporting Benefits in their existing order and wording: **Sell As-Is**, then **Close on Your Timeline**. Their content is defined in [Area Page — Final CTA](area-page.md#final-cta).
-* Primary Headline: **Ready to sell your house?**
-* Supporting Copy: **Tell us about your house and receive a fair, no-obligation cash offer built around your situation and timeline.**
+### Content
+
+* Headline: **Don’t see your city?**
+* Supporting Copy: **We also buy houses in nearby communities. Get in touch to ask about your property.**
+
+### Component and Semantics
+
+* Headline uses H2 semantics; Supporting Copy uses paragraph semantics.
+
+### Visual Design
+
+* Headline uses global H3 typography and Brand Green Dark for the compact strip.
+* Supporting Copy uses global Body typography and Text Secondary.
+
+### Spacing
+
+* `XS` (`8px`) separates the Headline from the Supporting Copy.
+
+## Contact Button
+
+### Content
+
+* Label: **Contact Us**.
+
+### Component and Semantics
+
+* Uses the shared default Button, rendered as a native link.
+
+### Dimensions and Alignment
+
+* Retains its content width without shrinking. Separation from the Introduction is `L` (`32px`) on Desktop and Tablet, and `M` (`24px`) on Mobile.
+
+### Interaction
+
+* Opens `/contact` in the same tab. The link is displayed now as explicitly requested; the Contact page will be implemented separately.
+
+## Local Illustration
+
+### Content
+
+* Reuse the Hero Local Illustration, including the same four city markers.
+
+### Visual Design
+
+* The illustration has a transparent background, allowing the strip's Brand Green Light background to show through. Reuse its existing aspect ratio, dots, markers, and labels.
+
+### Dimensions and Alignment
+
+* On Desktop, the text and Button occupy the left side and the illustration the right, vertically center-aligned. Allocate the available width in a `6:5` ratio, following the Hero proportions, with an `L` (`32px`) gap.
+* On Tablet and Mobile, the illustration follows the text and Button at full available width, separated by `L` (`32px`) on Tablet and `M` (`24px`) on Mobile.
+
+### Accessibility
+
+* The illustration is decorative and hidden from assistive technology.

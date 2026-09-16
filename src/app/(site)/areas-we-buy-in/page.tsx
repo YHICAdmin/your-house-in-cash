@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
-import { AreaFinalCta } from "@/components/area/area-final-cta";
+import { LocalAreaMap } from "@/components/area/local-area-map";
+import { Button } from "@/components/ui/button";
 import { AreasHero } from "@/components/area/areas-hero";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { areas, getAreaPagePath } from "@/data/areas";
@@ -8,6 +9,10 @@ import styles from "./page.module.css";
 
 export default function AreasWeBuyInPage() {
   const sortedAreas = [...areas].sort((a, b) => a.city.localeCompare(b.city, "en"));
+  const illustrationCities = ["cleveland", "euclid", "cleveland-heights", "parma"].map(slug => {
+    const area = areas.find(area => area.slug === slug)!;
+    return { name: area.city, slug: area.slug };
+  });
   const letterGroups = new Map<string, typeof sortedAreas>();
   for (const area of sortedAreas) {
     const letter = area.city.charAt(0).toUpperCase();
@@ -47,7 +52,22 @@ export default function AreasWeBuyInPage() {
             </ul>
           </div>
         </section>
-        <AreaFinalCta />
+        <section className={`${styles.contactSection} content-grid system-lines-bg`} aria-labelledby="contact-heading">
+          <div className={styles.contactStrip}>
+            <div className={styles.contactContent}>
+            <div>
+              <h2 id="contact-heading" className={`${styles.contactHeading} text-heading-3`}>Don’t see your city?</h2>
+              <p className={`${styles.contactCopy} text-body`}>
+                We also buy houses in nearby communities. Get in touch to ask about your property.
+              </p>
+            </div>
+            <Button href="/contact" className={styles.contactButton}>Contact Us</Button>
+            </div>
+            <div className={styles.contactIllustration}>
+              <LocalAreaMap cities={illustrationCities} idPrefix="contact-map" />
+            </div>
+          </div>
+        </section>
       </main>
       <SiteFooter />
     </>
