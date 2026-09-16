@@ -100,7 +100,7 @@ Introduce the service area and help sellers find and open their City Page.
 ### Content
 
 * Label: **Popular searches:**.
-* City links, in order: **Cleveland**, **Euclid**, **Lakewood**, **Parma**.
+* City links, in order: **Cleveland**, **Euclid**, **Cleveland Heights**, **Parma**.
 
 ### Component and Semantics
 
@@ -143,7 +143,7 @@ Introduce the service area and help sellers find and open their City Page.
 ### Dimensions and Alignment
 
 * The illustration fills its allocated width up to `600px`, is horizontally centered, and retains a `6:5` aspect ratio at all Breakpoints.
-* Marker centers use the illustration frame as their positioning reference: Cleveland at `top: 48%; left: 42%`; Euclid at `top: 22%; left: 78%`; Lakewood at `top: 57%; left: 12%`; Parma at `top: 78%; left: 44%`. Labels are horizontally centered above their markers.
+* Marker centers use the illustration frame as their positioning reference: Cleveland at `top: 48%; left: 42%`; Euclid at `top: 22%; left: 78%`; Parma at `top: 78%; left: 44%`. Cleveland Heights is at `top: 57%; left: 76%`, east of Cleveland. Labels are horizontally centered above their markers.
 
 ### Spacing
 
@@ -195,7 +195,7 @@ Help sellers browse all supported cities and open a City Page.
 
 ### Content
 
-* Display all 30 currently registered cities exactly once. Future registered cities appear automatically.
+* Display all 20 approved cities from [Area Data](content/areas.md#city-list) exactly once.
 * City entries appear in English alphabetical document order by displayed city name.
 * Group cities by their initial letter. Each populated letter appears once as its group's heading; groups and their cities follow alphabetical order.
 

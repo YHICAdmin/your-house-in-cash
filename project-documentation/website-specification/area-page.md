@@ -1356,7 +1356,7 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 * Every Area Page presents exactly six nearby-city entries.
 * City names, canonical slugs, and display order are defined in [Area Data](content/areas.md) and supplied by `src/data/areas.ts`, consistent with the Local Map wherever geographic content overlaps.
 * The collection concludes with the link label `See all areas we buy in` and the canonical Lucide `ArrowRight` icon.
-* Every recommended city must be one of the 30 registered City Pages in [Area Data](content/areas.md#city-list). Preserve the approved six-city mapping and display order; do not add, substitute, or infer cities. Each list has six unique entries and excludes the current city.
+* Every recommended city must be one of the 20 approved City Pages in [Area Data](content/areas.md#city-list). Preserve the approved six-city mapping and display order; do not add, substitute, or infer cities. Each list has six unique entries and excludes the current city.
 * Every nearby-city entry uses the canonical Lucide `MapPin` icon; city-specific icons or symbolism are not introduced without approved city-specific content that justifies them.
 
 ### Component and Semantics

@@ -6,45 +6,35 @@ Shared design, the trust card, and the local photograph remain defined in [area-
 
 ## City List
 
-These are the 30 approved City Pages. Every page uses the shared Area Page template. The homepage `/` also displays Cleveland.
+These are the 20 approved City Pages. Every page uses the shared Area Page template. The homepage `/` also displays Cleveland.
 
 | City | Canonical slug | Route |
 |---|---|---|
-| [Beachwood](#beachwood) | `beachwood` | `/sell-your-house-fast-as-is-beachwood` |
 | [Bedford](#bedford) | `bedford` | `/sell-your-house-fast-as-is-bedford` |
-| [Berea](#berea) | `berea` | `/sell-your-house-fast-as-is-berea` |
-| [Broadview Heights](#broadview-heights) | `broadview-heights` | `/sell-your-house-fast-as-is-broadview-heights` |
-| [Brook Park](#brook-park) | `brook-park` | `/sell-your-house-fast-as-is-brook-park` |
-| [Brooklyn](#brooklyn) | `brooklyn` | `/sell-your-house-fast-as-is-brooklyn` |
+| [Bedford Heights](#bedford-heights) | `bedford-heights` | `/sell-your-house-fast-as-is-bedford-heights` |
 | [Cleveland](#cleveland) | `cleveland` | `/sell-your-house-fast-as-is-cleveland` |
 | [Cleveland Heights](#cleveland-heights) | `cleveland-heights` | `/sell-your-house-fast-as-is-cleveland-heights` |
-| [East Cleveland](#east-cleveland) | `east-cleveland` | `/sell-your-house-fast-as-is-east-cleveland` |
 | [Euclid](#euclid) | `euclid` | `/sell-your-house-fast-as-is-euclid` |
-| [Fairview Park](#fairview-park) | `fairview-park` | `/sell-your-house-fast-as-is-fairview-park` |
 | [Garfield Heights](#garfield-heights) | `garfield-heights` | `/sell-your-house-fast-as-is-garfield-heights` |
+| [Highland Heights](#highland-heights) | `highland-heights` | `/sell-your-house-fast-as-is-highland-heights` |
 | [Independence](#independence) | `independence` | `/sell-your-house-fast-as-is-independence` |
-| [Lakewood](#lakewood) | `lakewood` | `/sell-your-house-fast-as-is-lakewood` |
 | [Lyndhurst](#lyndhurst) | `lyndhurst` | `/sell-your-house-fast-as-is-lyndhurst` |
 | [Maple Heights](#maple-heights) | `maple-heights` | `/sell-your-house-fast-as-is-maple-heights` |
+| [Mayfield Heights](#mayfield-heights) | `mayfield-heights` | `/sell-your-house-fast-as-is-mayfield-heights` |
+| [Mayfield Village](#mayfield-village) | `mayfield-village` | `/sell-your-house-fast-as-is-mayfield-village` |
 | [Middleburg Heights](#middleburg-heights) | `middleburg-heights` | `/sell-your-house-fast-as-is-middleburg-heights` |
-| [North Olmsted](#north-olmsted) | `north-olmsted` | `/sell-your-house-fast-as-is-north-olmsted` |
-| [North Royalton](#north-royalton) | `north-royalton` | `/sell-your-house-fast-as-is-north-royalton` |
 | [Parma](#parma) | `parma` | `/sell-your-house-fast-as-is-parma` |
 | [Parma Heights](#parma-heights) | `parma-heights` | `/sell-your-house-fast-as-is-parma-heights` |
 | [Richmond Heights](#richmond-heights) | `richmond-heights` | `/sell-your-house-fast-as-is-richmond-heights` |
-| [Rocky River](#rocky-river) | `rocky-river` | `/sell-your-house-fast-as-is-rocky-river` |
 | [Seven Hills](#seven-hills) | `seven-hills` | `/sell-your-house-fast-as-is-seven-hills` |
-| [Shaker Heights](#shaker-heights) | `shaker-heights` | `/sell-your-house-fast-as-is-shaker-heights` |
+| [Solon](#solon) | `solon` | `/sell-your-house-fast-as-is-solon` |
 | [South Euclid](#south-euclid) | `south-euclid` | `/sell-your-house-fast-as-is-south-euclid` |
-| [Strongsville](#strongsville) | `strongsville` | `/sell-your-house-fast-as-is-strongsville` |
 | [University Heights](#university-heights) | `university-heights` | `/sell-your-house-fast-as-is-university-heights` |
-| [Warrensville Heights](#warrensville-heights) | `warrensville-heights` | `/sell-your-house-fast-as-is-warrensville-heights` |
-| [Westlake](#westlake) | `westlake` | `/sell-your-house-fast-as-is-westlake` |
 
 ## Shared City Content
 
 * Local headline: `We Know {City}`.
-* Local supporting copy for Euclid and the 28 new cities: `Whether you’re selling a home you live in or a rental property, we look at its condition, your situation, and the local {City} market to prepare a straightforward as-is cash offer.`
+* Local supporting copy for all cities except Cleveland: `Whether you’re selling a home you live in or a rental property, we look at its condition, your situation, and the local {City} market to prepare a straightforward as-is cash offer.`
 * Cleveland retains: `Every local market has its own character. We understand the communities, housing landscape, and local factors that can shape a home sale in Cleveland.`
 * Statistic supporting copy:
   * Median Sale Price: `See what homes are selling for across {City}.` Cleveland retains `See what homes are selling for across Cleveland and get a quick sense of the local market.`
@@ -54,41 +44,17 @@ These are the 30 approved City Pages. Every page uses the shared Area Page templ
 
 ## Maps
 
-The 28 new cities use `https://www.google.com/maps?q={encoded location}&output=embed`, with `encodeURIComponent` applied to `{City}, Ohio, USA`. Google determines the displayed location and zoom. Cleveland and Euclid retain their existing Share/embed URLs listed below. All maps use the existing iframe component and accessibility behavior.
+All cities except Cleveland and Euclid use `https://www.google.com/maps?q={encoded location}&output=embed`, with `encodeURIComponent` applied to `{City}, Ohio, USA`. Google determines the displayed location and zoom. Cleveland and Euclid retain their existing Share/embed URLs listed below. All maps use the existing iframe component and accessibility behavior.
 
 ## Statistics Methodology
 
-All four statistics use Redfin’s All Home Types city data researched on 15 September 2026. Read the precise median sale price, homes sold, and median days on market from the labeled trend statistics; read median price per square foot from the market overview. Do not substitute the Compete Score’s time-to-pending metric.
+Existing statistics use Redfin’s All Home Types city data researched on 15 September 2026. Bedford Heights, Highland Heights, Mayfield Heights, Mayfield Village, and Solon were verified on 16 September 2026. Read the precise median sale price, homes sold, and median days on market from the labeled trend statistics; read median price per square foot from the market overview. Do not substitute the Compete Score’s time-to-pending metric.
 
 [Redfin’s methodology](https://www.redfin.com/news/data-center/methodology/) specifies rolling three-month windows for cities. The August snapshot therefore uses June–August 2026; Independence’s current trend/chart snapshot ends in July and uses May–July 2026. The generic page title must not override the period shown for the actual statistics. Values, source, and reporting period are updated together. The narrative’s monthly homes-sold wording is interpreted using this city methodology, consistent with the existing Euclid approach; these values have not been independently recalculated from raw sales records.
 
 ## Recommended Cities
 
-Each city’s list below is the exact approved display order for the existing Nearby Areas section. Every entry must link to one of these 30 registered City Pages through its canonical slug. Each list contains six unique cities and excludes itself. These are approved recommendations, not a claim that all six cities share a boundary.
-
-## Beachwood
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/1191/OH/Beachwood/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $504,666 |
-| Homes Sold | 40 |
-| Median Price per Sq. Ft. | $233/sq ft |
-| Median Days on Market | 20 days |
-
-**Map:** [Beachwood, Ohio](https://www.google.com/maps?q=Beachwood%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Shaker Heights](#shaker-heights) — `shaker-heights`
-2. [University Heights](#university-heights) — `university-heights`
-3. [Lyndhurst](#lyndhurst) — `lyndhurst`
-4. [Warrensville Heights](#warrensville-heights) — `warrensville-heights`
-5. [Richmond Heights](#richmond-heights) — `richmond-heights`
-6. [South Euclid](#south-euclid) — `south-euclid`
+Each city list below is the approved display order for the existing Nearby Areas section. Every entry must link to one of these 20 approved City Pages through its canonical slug. Each list must contain six unique cities and exclude itself. These are approved recommendations, not a claim that all six cities share a boundary. Retained recommendations preserve their relative order; replacements are selected by geographic proximity within the approved City List.
 
 ## Bedford
 
@@ -109,106 +75,34 @@ Each city’s list below is the exact approved display order for the existing Ne
 
 1. [Maple Heights](#maple-heights) — `maple-heights`
 2. [Garfield Heights](#garfield-heights) — `garfield-heights`
-3. [Warrensville Heights](#warrensville-heights) — `warrensville-heights`
-4. [Independence](#independence) — `independence`
-5. [Shaker Heights](#shaker-heights) — `shaker-heights`
-6. [Broadview Heights](#broadview-heights) — `broadview-heights`
-
-## Berea
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/1516/OH/Berea/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $255,041 |
-| Homes Sold | 76 |
-| Median Price per Sq. Ft. | $176/sq ft |
-| Median Days on Market | 9 days |
-
-**Map:** [Berea, Ohio](https://www.google.com/maps?q=Berea%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Middleburg Heights](#middleburg-heights) — `middleburg-heights`
-2. [Brook Park](#brook-park) — `brook-park`
-3. [Strongsville](#strongsville) — `strongsville`
-4. [North Olmsted](#north-olmsted) — `north-olmsted`
-5. [Parma Heights](#parma-heights) — `parma-heights`
-6. [North Royalton](#north-royalton) — `north-royalton`
-
-## Broadview Heights
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/2349/OH/Broadview-Heights/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $419,722 |
-| Homes Sold | 75 |
-| Median Price per Sq. Ft. | $196/sq ft |
-| Median Days on Market | 24 days |
-
-**Map:** [Broadview Heights, Ohio](https://www.google.com/maps?q=Broadview%20Heights%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Seven Hills](#seven-hills) — `seven-hills`
-2. [North Royalton](#north-royalton) — `north-royalton`
 3. [Independence](#independence) — `independence`
-4. [Strongsville](#strongsville) — `strongsville`
-5. [Parma](#parma) — `parma`
-6. [Garfield Heights](#garfield-heights) — `garfield-heights`
+4. [Bedford Heights](#bedford-heights) — `bedford-heights`
+5. [Solon](#solon) — `solon`
+6. [Seven Hills](#seven-hills) — `seven-hills`
 
-## Brook Park
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/2402/OH/Brook-Park/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $244,838 |
-| Homes Sold | 50 |
-| Median Price per Sq. Ft. | $231/sq ft |
-| Median Days on Market | 8 days |
-
-**Map:** [Brook Park, Ohio](https://www.google.com/maps?q=Brook%20Park%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Cleveland](#cleveland) — `cleveland`
-2. [Brooklyn](#brooklyn) — `brooklyn`
-3. [Parma](#parma) — `parma`
-4. [Parma Heights](#parma-heights) — `parma-heights`
-5. [Middleburg Heights](#middleburg-heights) — `middleburg-heights`
-6. [Berea](#berea) — `berea`
-
-## Brooklyn
+## Bedford Heights
 
 **Data period:** June–August 2026
 
-**Source:** [Redfin](https://www.redfin.com/city/2390/OH/Brooklyn/housing-market)
+**Source:** [Redfin](https://www.redfin.com/city/1304/OH/Bedford-Heights/housing-market)
 
 | Statistic | Value |
 |---|---|
-| Median Sale Price | $228,849 |
-| Homes Sold | 39 |
-| Median Price per Sq. Ft. | $176/sq ft |
-| Median Days on Market | 17 days |
+| Median Sale Price | $196,870 |
+| Homes Sold | 23 |
+| Median Price per Sq. Ft. | $182/sq ft |
+| Median Days on Market | 33 days |
 
-**Map:** [Brooklyn, Ohio](https://www.google.com/maps?q=Brooklyn%2C%20Ohio%2C%20USA&output=embed)
+**Map:** [Bedford Heights, Ohio](https://www.google.com/maps?q=Bedford%20Heights%2C%20Ohio%2C%20USA&output=embed)
 
 **Recommended cities, in order:**
 
-1. [Cleveland](#cleveland) — `cleveland`
-2. [Parma](#parma) — `parma`
-3. [Brook Park](#brook-park) — `brook-park`
-4. [Parma Heights](#parma-heights) — `parma-heights`
-5. [Seven Hills](#seven-hills) — `seven-hills`
-6. [Lakewood](#lakewood) — `lakewood`
+1. [Bedford](#bedford) — `bedford`
+2. [Solon](#solon) — `solon`
+3. [Maple Heights](#maple-heights) — `maple-heights`
+4. [Garfield Heights](#garfield-heights) — `garfield-heights`
+5. [Independence](#independence) — `independence`
+6. [University Heights](#university-heights) — `university-heights`
 
 ## Cleveland
 
@@ -227,12 +121,12 @@ Each city’s list below is the exact approved display order for the existing Ne
 
 **Recommended cities, in order:**
 
-1. [Lakewood](#lakewood) — `lakewood`
-2. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
-3. [Shaker Heights](#shaker-heights) — `shaker-heights`
-4. [Euclid](#euclid) — `euclid`
-5. [Parma](#parma) — `parma`
-6. [Garfield Heights](#garfield-heights) — `garfield-heights`
+1. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
+2. [Euclid](#euclid) — `euclid`
+3. [Parma](#parma) — `parma`
+4. [Garfield Heights](#garfield-heights) — `garfield-heights`
+5. [Independence](#independence) — `independence`
+6. [Seven Hills](#seven-hills) — `seven-hills`
 
 ## Cleveland Heights
 
@@ -252,35 +146,11 @@ Each city’s list below is the exact approved display order for the existing Ne
 **Recommended cities, in order:**
 
 1. [Cleveland](#cleveland) — `cleveland`
-2. [East Cleveland](#east-cleveland) — `east-cleveland`
-3. [University Heights](#university-heights) — `university-heights`
-4. [South Euclid](#south-euclid) — `south-euclid`
-5. [Shaker Heights](#shaker-heights) — `shaker-heights`
-6. [Beachwood](#beachwood) — `beachwood`
-
-## East Cleveland
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/6038/OH/East-Cleveland/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $128,815 |
-| Homes Sold | 17 |
-| Median Price per Sq. Ft. | $63/sq ft |
-| Median Days on Market | 72 days |
-
-**Map:** [East Cleveland, Ohio](https://www.google.com/maps?q=East%20Cleveland%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Cleveland](#cleveland) — `cleveland`
-2. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
-3. [Euclid](#euclid) — `euclid`
-4. [South Euclid](#south-euclid) — `south-euclid`
-5. [University Heights](#university-heights) — `university-heights`
-6. [Shaker Heights](#shaker-heights) — `shaker-heights`
+2. [University Heights](#university-heights) — `university-heights`
+3. [South Euclid](#south-euclid) — `south-euclid`
+4. [Lyndhurst](#lyndhurst) — `lyndhurst`
+5. [Richmond Heights](#richmond-heights) — `richmond-heights`
+6. [Euclid](#euclid) — `euclid`
 
 ## Euclid
 
@@ -302,35 +172,11 @@ Each city’s list below is the exact approved display order for the existing Ne
 **Recommended cities, in order:**
 
 1. [Cleveland](#cleveland) — `cleveland`
-2. [East Cleveland](#east-cleveland) — `east-cleveland`
-3. [South Euclid](#south-euclid) — `south-euclid`
-4. [Richmond Heights](#richmond-heights) — `richmond-heights`
-5. [Lyndhurst](#lyndhurst) — `lyndhurst`
-6. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
-
-## Fairview Park
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/6780/OH/Fairview-Park/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $290,783 |
-| Homes Sold | 64 |
-| Median Price per Sq. Ft. | $195/sq ft |
-| Median Days on Market | 8 days |
-
-**Map:** [Fairview Park, Ohio](https://www.google.com/maps?q=Fairview%20Park%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Rocky River](#rocky-river) — `rocky-river`
-2. [Westlake](#westlake) — `westlake`
-3. [North Olmsted](#north-olmsted) — `north-olmsted`
-4. [Lakewood](#lakewood) — `lakewood`
-5. [Brook Park](#brook-park) — `brook-park`
-6. [Cleveland](#cleveland) — `cleveland`
+2. [South Euclid](#south-euclid) — `south-euclid`
+3. [Richmond Heights](#richmond-heights) — `richmond-heights`
+4. [Lyndhurst](#lyndhurst) — `lyndhurst`
+5. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
+6. [Highland Heights](#highland-heights) — `highland-heights`
 
 ## Garfield Heights
 
@@ -352,9 +198,33 @@ Each city’s list below is the exact approved display order for the existing Ne
 1. [Cleveland](#cleveland) — `cleveland`
 2. [Maple Heights](#maple-heights) — `maple-heights`
 3. [Bedford](#bedford) — `bedford`
-4. [Warrensville Heights](#warrensville-heights) — `warrensville-heights`
-5. [Independence](#independence) — `independence`
-6. [Seven Hills](#seven-hills) — `seven-hills`
+4. [Independence](#independence) — `independence`
+5. [Seven Hills](#seven-hills) — `seven-hills`
+6. [Parma](#parma) — `parma`
+
+## Highland Heights
+
+**Data period:** June–August 2026
+
+**Source:** [Redfin](https://www.redfin.com/city/8967/OH/Highland-Heights/housing-market)
+
+| Statistic | Value |
+|---|---|
+| Median Sale Price | $543,141 |
+| Homes Sold | 37 |
+| Median Price per Sq. Ft. | $201/sq ft |
+| Median Days on Market | 16 days |
+
+**Map:** [Highland Heights, Ohio](https://www.google.com/maps?q=Highland%20Heights%2C%20Ohio%2C%20USA&output=embed)
+
+**Recommended cities, in order:**
+
+1. [Mayfield Village](#mayfield-village) — `mayfield-village`
+2. [Richmond Heights](#richmond-heights) — `richmond-heights`
+3. [Mayfield Heights](#mayfield-heights) — `mayfield-heights`
+4. [Lyndhurst](#lyndhurst) — `lyndhurst`
+5. [South Euclid](#south-euclid) — `south-euclid`
+6. [Euclid](#euclid) — `euclid`
 
 ## Independence
 
@@ -375,34 +245,10 @@ Each city’s list below is the exact approved display order for the existing Ne
 
 1. [Seven Hills](#seven-hills) — `seven-hills`
 2. [Garfield Heights](#garfield-heights) — `garfield-heights`
-3. [Broadview Heights](#broadview-heights) — `broadview-heights`
-4. [Parma](#parma) — `parma`
-5. [Bedford](#bedford) — `bedford`
-6. [Maple Heights](#maple-heights) — `maple-heights`
-
-## Lakewood
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/10611/OH/Lakewood/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $359,762 |
-| Homes Sold | 211 |
-| Median Price per Sq. Ft. | $215/sq ft |
-| Median Days on Market | 15 days |
-
-**Map:** [Lakewood, Ohio](https://www.google.com/maps?q=Lakewood%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Cleveland](#cleveland) — `cleveland`
-2. [Rocky River](#rocky-river) — `rocky-river`
-3. [Fairview Park](#fairview-park) — `fairview-park`
-4. [Westlake](#westlake) — `westlake`
-5. [Brooklyn](#brooklyn) — `brooklyn`
-6. [Parma](#parma) — `parma`
+3. [Parma](#parma) — `parma`
+4. [Bedford](#bedford) — `bedford`
+5. [Maple Heights](#maple-heights) — `maple-heights`
+6. [Parma Heights](#parma-heights) — `parma-heights`
 
 ## Lyndhurst
 
@@ -423,10 +269,10 @@ Each city’s list below is the exact approved display order for the existing Ne
 
 1. [South Euclid](#south-euclid) — `south-euclid`
 2. [Richmond Heights](#richmond-heights) — `richmond-heights`
-3. [Beachwood](#beachwood) — `beachwood`
-4. [University Heights](#university-heights) — `university-heights`
-5. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
-6. [Shaker Heights](#shaker-heights) — `shaker-heights`
+3. [University Heights](#university-heights) — `university-heights`
+4. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
+5. [Mayfield Heights](#mayfield-heights) — `mayfield-heights`
+6. [Highland Heights](#highland-heights) — `highland-heights`
 
 ## Maple Heights
 
@@ -447,10 +293,58 @@ Each city’s list below is the exact approved display order for the existing Ne
 
 1. [Garfield Heights](#garfield-heights) — `garfield-heights`
 2. [Bedford](#bedford) — `bedford`
-3. [Warrensville Heights](#warrensville-heights) — `warrensville-heights`
-4. [Shaker Heights](#shaker-heights) — `shaker-heights`
-5. [Independence](#independence) — `independence`
-6. [Cleveland](#cleveland) — `cleveland`
+3. [Independence](#independence) — `independence`
+4. [Cleveland](#cleveland) — `cleveland`
+5. [Parma](#parma) — `parma`
+6. [Parma Heights](#parma-heights) — `parma-heights`
+
+## Mayfield Heights
+
+**Data period:** June–August 2026
+
+**Source:** [Redfin](https://www.redfin.com/city/12397/OH/Mayfield-Heights/housing-market)
+
+| Statistic | Value |
+|---|---|
+| Median Sale Price | $274,818 |
+| Homes Sold | 75 |
+| Median Price per Sq. Ft. | $163/sq ft |
+| Median Days on Market | 22 days |
+
+**Map:** [Mayfield Heights, Ohio](https://www.google.com/maps?q=Mayfield%20Heights%2C%20Ohio%2C%20USA&output=embed)
+
+**Recommended cities, in order:**
+
+1. [Mayfield Village](#mayfield-village) — `mayfield-village`
+2. [Lyndhurst](#lyndhurst) — `lyndhurst`
+3. [Highland Heights](#highland-heights) — `highland-heights`
+4. [South Euclid](#south-euclid) — `south-euclid`
+5. [Richmond Heights](#richmond-heights) — `richmond-heights`
+6. [University Heights](#university-heights) — `university-heights`
+
+## Mayfield Village
+
+**Data period:** June–August 2026
+
+**Source:** [Redfin](https://www.redfin.com/city/12388/OH/Mayfield/housing-market) (listed by Redfin as Mayfield, OH)
+
+| Statistic | Value |
+|---|---|
+| Median Sale Price | $414,726 |
+| Homes Sold | 14 |
+| Median Price per Sq. Ft. | $242/sq ft |
+| Median Days on Market | 37 days |
+
+**Map:** [Mayfield Village, Ohio](https://www.google.com/maps?q=Mayfield%20Village%2C%20Ohio%2C%20USA&output=embed)
+
+**Recommended cities, in order:**
+
+1. [Highland Heights](#highland-heights) — `highland-heights`
+2. [Mayfield Heights](#mayfield-heights) — `mayfield-heights`
+3. [Lyndhurst](#lyndhurst) — `lyndhurst`
+4. [Richmond Heights](#richmond-heights) — `richmond-heights`
+5. [South Euclid](#south-euclid) — `south-euclid`
+6. [Euclid](#euclid) — `euclid`
 
 ## Middleburg Heights
 
@@ -469,60 +363,12 @@ Each city’s list below is the exact approved display order for the existing Ne
 
 **Recommended cities, in order:**
 
-1. [Brook Park](#brook-park) — `brook-park`
-2. [Berea](#berea) — `berea`
-3. [Parma Heights](#parma-heights) — `parma-heights`
-4. [Parma](#parma) — `parma`
-5. [Strongsville](#strongsville) — `strongsville`
-6. [North Royalton](#north-royalton) — `north-royalton`
-
-## North Olmsted
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/14718/OH/North-Olmsted/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $302,800 |
-| Homes Sold | 161 |
-| Median Price per Sq. Ft. | $178/sq ft |
-| Median Days on Market | 12 days |
-
-**Map:** [North Olmsted, Ohio](https://www.google.com/maps?q=North%20Olmsted%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Westlake](#westlake) — `westlake`
-2. [Fairview Park](#fairview-park) — `fairview-park`
-3. [Berea](#berea) — `berea`
-4. [Brook Park](#brook-park) — `brook-park`
-5. [Middleburg Heights](#middleburg-heights) — `middleburg-heights`
-6. [Rocky River](#rocky-river) — `rocky-river`
-
-## North Royalton
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/14764/OH/North-Royalton/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $341,524 |
-| Homes Sold | 129 |
-| Median Price per Sq. Ft. | $187/sq ft |
-| Median Days on Market | 15 days |
-
-**Map:** [North Royalton, Ohio](https://www.google.com/maps?q=North%20Royalton%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Parma](#parma) — `parma`
-2. [Parma Heights](#parma-heights) — `parma-heights`
-3. [Broadview Heights](#broadview-heights) — `broadview-heights`
-4. [Strongsville](#strongsville) — `strongsville`
-5. [Seven Hills](#seven-hills) — `seven-hills`
-6. [Middleburg Heights](#middleburg-heights) — `middleburg-heights`
+1. [Parma Heights](#parma-heights) — `parma-heights`
+2. [Parma](#parma) — `parma`
+3. [Seven Hills](#seven-hills) — `seven-hills`
+4. [Independence](#independence) — `independence`
+5. [Cleveland](#cleveland) — `cleveland`
+6. [Garfield Heights](#garfield-heights) — `garfield-heights`
 
 ## Parma
 
@@ -542,11 +388,11 @@ Each city’s list below is the exact approved display order for the existing Ne
 **Recommended cities, in order:**
 
 1. [Parma Heights](#parma-heights) — `parma-heights`
-2. [Brooklyn](#brooklyn) — `brooklyn`
-3. [Brook Park](#brook-park) — `brook-park`
-4. [Seven Hills](#seven-hills) — `seven-hills`
-5. [Independence](#independence) — `independence`
-6. [North Royalton](#north-royalton) — `north-royalton`
+2. [Seven Hills](#seven-hills) — `seven-hills`
+3. [Independence](#independence) — `independence`
+4. [Middleburg Heights](#middleburg-heights) — `middleburg-heights`
+5. [Cleveland](#cleveland) — `cleveland`
+6. [Garfield Heights](#garfield-heights) — `garfield-heights`
 
 ## Parma Heights
 
@@ -566,11 +412,11 @@ Each city’s list below is the exact approved display order for the existing Ne
 **Recommended cities, in order:**
 
 1. [Parma](#parma) — `parma`
-2. [Brook Park](#brook-park) — `brook-park`
-3. [Middleburg Heights](#middleburg-heights) — `middleburg-heights`
-4. [Berea](#berea) — `berea`
-5. [North Royalton](#north-royalton) — `north-royalton`
-6. [Seven Hills](#seven-hills) — `seven-hills`
+2. [Middleburg Heights](#middleburg-heights) — `middleburg-heights`
+3. [Seven Hills](#seven-hills) — `seven-hills`
+4. [Independence](#independence) — `independence`
+5. [Cleveland](#cleveland) — `cleveland`
+6. [Garfield Heights](#garfield-heights) — `garfield-heights`
 
 ## Richmond Heights
 
@@ -592,33 +438,9 @@ Each city’s list below is the exact approved display order for the existing Ne
 1. [South Euclid](#south-euclid) — `south-euclid`
 2. [Lyndhurst](#lyndhurst) — `lyndhurst`
 3. [Euclid](#euclid) — `euclid`
-4. [Beachwood](#beachwood) — `beachwood`
-5. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
-6. [University Heights](#university-heights) — `university-heights`
-
-## Rocky River
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/17437/OH/Rocky-River/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $395,988 |
-| Homes Sold | 94 |
-| Median Price per Sq. Ft. | $231/sq ft |
-| Median Days on Market | 16 days |
-
-**Map:** [Rocky River, Ohio](https://www.google.com/maps?q=Rocky%20River%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Lakewood](#lakewood) — `lakewood`
-2. [Fairview Park](#fairview-park) — `fairview-park`
-3. [Westlake](#westlake) — `westlake`
-4. [North Olmsted](#north-olmsted) — `north-olmsted`
-5. [Cleveland](#cleveland) — `cleveland`
-6. [Brook Park](#brook-park) — `brook-park`
+4. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
+5. [University Heights](#university-heights) — `university-heights`
+6. [Highland Heights](#highland-heights) — `highland-heights`
 
 ## Seven Hills
 
@@ -639,34 +461,34 @@ Each city’s list below is the exact approved display order for the existing Ne
 
 1. [Parma](#parma) — `parma`
 2. [Independence](#independence) — `independence`
-3. [North Royalton](#north-royalton) — `north-royalton`
-4. [Garfield Heights](#garfield-heights) — `garfield-heights`
-5. [Parma Heights](#parma-heights) — `parma-heights`
-6. [Broadview Heights](#broadview-heights) — `broadview-heights`
+3. [Garfield Heights](#garfield-heights) — `garfield-heights`
+4. [Parma Heights](#parma-heights) — `parma-heights`
+5. [Middleburg Heights](#middleburg-heights) — `middleburg-heights`
+6. [Cleveland](#cleveland) — `cleveland`
 
-## Shaker Heights
+## Solon
 
 **Data period:** June–August 2026
 
-**Source:** [Redfin](https://www.redfin.com/city/18309/OH/Shaker-Heights/housing-market)
+**Source:** [Redfin](https://www.redfin.com/city/18593/OH/Solon/housing-market)
 
 | Statistic | Value |
 |---|---|
-| Median Sale Price | $434,712 |
-| Homes Sold | 134 |
-| Median Price per Sq. Ft. | $159/sq ft |
-| Median Days on Market | 27 days |
+| Median Sale Price | $509,663 |
+| Homes Sold | 80 |
+| Median Price per Sq. Ft. | $208/sq ft |
+| Median Days on Market | 29 days |
 
-**Map:** [Shaker Heights, Ohio](https://www.google.com/maps?q=Shaker%20Heights%2C%20Ohio%2C%20USA&output=embed)
+**Map:** [Solon, Ohio](https://www.google.com/maps?q=Solon%2C%20Ohio%2C%20USA&output=embed)
 
 **Recommended cities, in order:**
 
-1. [Cleveland](#cleveland) — `cleveland`
-2. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
-3. [University Heights](#university-heights) — `university-heights`
-4. [Beachwood](#beachwood) — `beachwood`
-5. [Warrensville Heights](#warrensville-heights) — `warrensville-heights`
-6. [Maple Heights](#maple-heights) — `maple-heights`
+1. [Bedford Heights](#bedford-heights) — `bedford-heights`
+2. [Bedford](#bedford) — `bedford`
+3. [Maple Heights](#maple-heights) — `maple-heights`
+4. [Garfield Heights](#garfield-heights) — `garfield-heights`
+5. [University Heights](#university-heights) — `university-heights`
+6. [Mayfield Heights](#mayfield-heights) — `mayfield-heights`
 
 ## South Euclid
 
@@ -689,32 +511,8 @@ Each city’s list below is the exact approved display order for the existing Ne
 2. [University Heights](#university-heights) — `university-heights`
 3. [Lyndhurst](#lyndhurst) — `lyndhurst`
 4. [Richmond Heights](#richmond-heights) — `richmond-heights`
-5. [Beachwood](#beachwood) — `beachwood`
-6. [Euclid](#euclid) — `euclid`
-
-## Strongsville
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/19034/OH/Strongsville/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $389,742 |
-| Homes Sold | 176 |
-| Median Price per Sq. Ft. | $191/sq ft |
-| Median Days on Market | 15 days |
-
-**Map:** [Strongsville, Ohio](https://www.google.com/maps?q=Strongsville%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [North Royalton](#north-royalton) — `north-royalton`
-2. [Middleburg Heights](#middleburg-heights) — `middleburg-heights`
-3. [Berea](#berea) — `berea`
-4. [Broadview Heights](#broadview-heights) — `broadview-heights`
-5. [Parma Heights](#parma-heights) — `parma-heights`
-6. [Parma](#parma) — `parma`
+5. [Euclid](#euclid) — `euclid`
+6. [Mayfield Heights](#mayfield-heights) — `mayfield-heights`
 
 ## University Heights
 
@@ -734,56 +532,8 @@ Each city’s list below is the exact approved display order for the existing Ne
 **Recommended cities, in order:**
 
 1. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
-2. [Shaker Heights](#shaker-heights) — `shaker-heights`
-3. [South Euclid](#south-euclid) — `south-euclid`
-4. [Beachwood](#beachwood) — `beachwood`
-5. [Lyndhurst](#lyndhurst) — `lyndhurst`
-6. [Warrensville Heights](#warrensville-heights) — `warrensville-heights`
-
-## Warrensville Heights
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/20280/OH/Warrensville-Heights/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $170,387 |
-| Homes Sold | 23 |
-| Median Price per Sq. Ft. | $137/sq ft |
-| Median Days on Market | 35 days |
-
-**Map:** [Warrensville Heights, Ohio](https://www.google.com/maps?q=Warrensville%20Heights%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Shaker Heights](#shaker-heights) — `shaker-heights`
-2. [Beachwood](#beachwood) — `beachwood`
-3. [Maple Heights](#maple-heights) — `maple-heights`
-4. [Bedford](#bedford) — `bedford`
-5. [University Heights](#university-heights) — `university-heights`
-6. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
-
-## Westlake
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/20680/OH/Westlake/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $457,197 |
-| Homes Sold | 156 |
-| Median Price per Sq. Ft. | $199/sq ft |
-| Median Days on Market | 16 days |
-
-**Map:** [Westlake, Ohio](https://www.google.com/maps?q=Westlake%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Rocky River](#rocky-river) — `rocky-river`
-2. [Fairview Park](#fairview-park) — `fairview-park`
-3. [North Olmsted](#north-olmsted) — `north-olmsted`
-4. [Lakewood](#lakewood) — `lakewood`
-5. [Berea](#berea) — `berea`
-6. [Brook Park](#brook-park) — `brook-park`
+2. [South Euclid](#south-euclid) — `south-euclid`
+3. [Lyndhurst](#lyndhurst) — `lyndhurst`
+4. [Mayfield Heights](#mayfield-heights) — `mayfield-heights`
+5. [Richmond Heights](#richmond-heights) — `richmond-heights`
+6. [Highland Heights](#highland-heights) — `highland-heights`

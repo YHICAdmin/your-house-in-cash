@@ -2,7 +2,7 @@ import type { NearbyCity } from "@/data/areas";
 import styles from "./areas-hero.module.css";
 
 // A schematic regional illustration, not a street map or a service boundary.
-// Lake Erie lies northwest; Euclid is northeast of Cleveland, Lakewood west,
+// Lake Erie lies northwest; Euclid is northeast of Cleveland, Cleveland Heights east,
 // and Parma south. Marker placement is intentionally simplified for legibility.
 export function LocalAreaMap({ cities }: { cities: readonly NearbyCity[] }) {
   return (
@@ -41,7 +41,7 @@ export function LocalAreaMap({ cities }: { cities: readonly NearbyCity[] }) {
             <path d="M253 231C248 250 269 264 255 286S260 312 254 338 262 368 248 405" fill="none" stroke="var(--color-background)" strokeWidth="5" />
           </g>
           <g fill="none" stroke="var(--color-brand)" strokeWidth="1" strokeOpacity=".35">
-            <path d="M72 285Q139 151 252 240" />
+            <path d="M252 240Q358 205 456 285" />
             <path d="M252 240Q336 45 468 110" />
             <path d="M252 240Q349 292 264 390" />
           </g>

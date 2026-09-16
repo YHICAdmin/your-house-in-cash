@@ -5,7 +5,7 @@ import { getAreaPagePath } from "@/data/areas";
 import { CitySearch } from "./city-search";
 import styles from "./areas-hero.module.css";
 
-const popularSlugs = ["cleveland", "euclid", "lakewood", "parma"];
+const popularSlugs = ["cleveland", "euclid", "cleveland-heights", "parma"];
 
 export function AreasHero({ cities }: { cities: readonly NearbyCity[] }) {
   const popularCities = popularSlugs.map(slug => cities.find(city => city.slug === slug)!);

@@ -85,46 +85,6 @@ function createArea(record: AreaRecord): AreaPageData {
 
 // Verified Redfin snapshots and the approved recommendation mapping are documented
 // in project-documentation/website-specification/content/areas.md.
-const beachwoodArea = createArea({
-  city: "Beachwood",
-  slug: "beachwood",
-  statistics: {
-    medianSalePrice: "$504,666",
-    homesSold: "40",
-    medianPricePerSquareFoot: "$233/sq ft",
-    medianDaysOnMarket: "20 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/1191/OH/Beachwood/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "Shaker Heights",
-      slug: "shaker-heights"
-    },
-    {
-      name: "University Heights",
-      slug: "university-heights"
-    },
-    {
-      name: "Lyndhurst",
-      slug: "lyndhurst"
-    },
-    {
-      name: "Warrensville Heights",
-      slug: "warrensville-heights"
-    },
-    {
-      name: "Richmond Heights",
-      slug: "richmond-heights"
-    },
-    {
-      name: "South Euclid",
-      slug: "south-euclid"
-    }
-  ]
-});
-
 const bedfordArea = createArea({
   city: "Bedford",
   slug: "bedford",
@@ -139,188 +99,68 @@ const bedfordArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Maple Heights",
-      slug: "maple-heights"
+      "name": "Maple Heights",
+      "slug": "maple-heights"
     },
     {
-      name: "Garfield Heights",
-      slug: "garfield-heights"
+      "name": "Garfield Heights",
+      "slug": "garfield-heights"
     },
     {
-      name: "Warrensville Heights",
-      slug: "warrensville-heights"
+      "name": "Independence",
+      "slug": "independence"
     },
     {
-      name: "Independence",
-      slug: "independence"
+      "name": "Bedford Heights",
+      "slug": "bedford-heights"
     },
     {
-      name: "Shaker Heights",
-      slug: "shaker-heights"
+      "name": "Solon",
+      "slug": "solon"
     },
     {
-      name: "Broadview Heights",
-      slug: "broadview-heights"
+      "name": "Seven Hills",
+      "slug": "seven-hills"
     }
   ]
 });
 
-const bereaArea = createArea({
-  city: "Berea",
-  slug: "berea",
-  statistics: {
-    medianSalePrice: "$255,041",
-    homesSold: "76",
-    medianPricePerSquareFoot: "$176/sq ft",
-    medianDaysOnMarket: "9 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/1516/OH/Berea/housing-market"
+const bedfordHeightsArea = createArea({
+  "city": "Bedford Heights",
+  "slug": "bedford-heights",
+  "statistics": {
+    "medianSalePrice": "$196,870",
+    "homesSold": "23",
+    "medianPricePerSquareFoot": "$182/sq ft",
+    "medianDaysOnMarket": "33 days",
+    "dataPeriod": "June–August 2026",
+    "sourceName": "Redfin",
+    "sourceUrl": "https://www.redfin.com/city/1304/OH/Bedford-Heights/housing-market"
   },
-  nearbyCities: [
+  "nearbyCities": [
     {
-      name: "Middleburg Heights",
-      slug: "middleburg-heights"
+      "name": "Bedford",
+      "slug": "bedford"
     },
     {
-      name: "Brook Park",
-      slug: "brook-park"
+      "name": "Solon",
+      "slug": "solon"
     },
     {
-      name: "Strongsville",
-      slug: "strongsville"
+      "name": "Maple Heights",
+      "slug": "maple-heights"
     },
     {
-      name: "North Olmsted",
-      slug: "north-olmsted"
+      "name": "Garfield Heights",
+      "slug": "garfield-heights"
     },
     {
-      name: "Parma Heights",
-      slug: "parma-heights"
+      "name": "Independence",
+      "slug": "independence"
     },
     {
-      name: "North Royalton",
-      slug: "north-royalton"
-    }
-  ]
-});
-
-const broadviewHeightsArea = createArea({
-  city: "Broadview Heights",
-  slug: "broadview-heights",
-  statistics: {
-    medianSalePrice: "$419,722",
-    homesSold: "75",
-    medianPricePerSquareFoot: "$196/sq ft",
-    medianDaysOnMarket: "24 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/2349/OH/Broadview-Heights/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "Seven Hills",
-      slug: "seven-hills"
-    },
-    {
-      name: "North Royalton",
-      slug: "north-royalton"
-    },
-    {
-      name: "Independence",
-      slug: "independence"
-    },
-    {
-      name: "Strongsville",
-      slug: "strongsville"
-    },
-    {
-      name: "Parma",
-      slug: "parma"
-    },
-    {
-      name: "Garfield Heights",
-      slug: "garfield-heights"
-    }
-  ]
-});
-
-const brookParkArea = createArea({
-  city: "Brook Park",
-  slug: "brook-park",
-  statistics: {
-    medianSalePrice: "$244,838",
-    homesSold: "50",
-    medianPricePerSquareFoot: "$231/sq ft",
-    medianDaysOnMarket: "8 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/2402/OH/Brook-Park/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "Cleveland",
-      slug: "cleveland"
-    },
-    {
-      name: "Brooklyn",
-      slug: "brooklyn"
-    },
-    {
-      name: "Parma",
-      slug: "parma"
-    },
-    {
-      name: "Parma Heights",
-      slug: "parma-heights"
-    },
-    {
-      name: "Middleburg Heights",
-      slug: "middleburg-heights"
-    },
-    {
-      name: "Berea",
-      slug: "berea"
-    }
-  ]
-});
-
-const brooklynArea = createArea({
-  city: "Brooklyn",
-  slug: "brooklyn",
-  statistics: {
-    medianSalePrice: "$228,849",
-    homesSold: "39",
-    medianPricePerSquareFoot: "$176/sq ft",
-    medianDaysOnMarket: "17 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/2390/OH/Brooklyn/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "Cleveland",
-      slug: "cleveland"
-    },
-    {
-      name: "Parma",
-      slug: "parma"
-    },
-    {
-      name: "Brook Park",
-      slug: "brook-park"
-    },
-    {
-      name: "Parma Heights",
-      slug: "parma-heights"
-    },
-    {
-      name: "Seven Hills",
-      slug: "seven-hills"
-    },
-    {
-      name: "Lakewood",
-      slug: "lakewood"
+      "name": "University Heights",
+      "slug": "university-heights"
     }
   ]
 });
@@ -339,28 +179,28 @@ export const clevelandArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Lakewood",
-      slug: "lakewood"
+      "name": "Cleveland Heights",
+      "slug": "cleveland-heights"
     },
     {
-      name: "Cleveland Heights",
-      slug: "cleveland-heights"
+      "name": "Euclid",
+      "slug": "euclid"
     },
     {
-      name: "Shaker Heights",
-      slug: "shaker-heights"
+      "name": "Parma",
+      "slug": "parma"
     },
     {
-      name: "Euclid",
-      slug: "euclid"
+      "name": "Garfield Heights",
+      "slug": "garfield-heights"
     },
     {
-      name: "Parma",
-      slug: "parma"
+      "name": "Independence",
+      "slug": "independence"
     },
     {
-      name: "Garfield Heights",
-      slug: "garfield-heights"
+      "name": "Seven Hills",
+      "slug": "seven-hills"
     }
   ],
   googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191251.91240052145!2d-81.70586405!3d41.497532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830ef2ee3686b2d%3A0xed04cb55f7621842!2sCleveland%2C%20OH%2C%20USA!5e0!3m2!1sen!2sil!4v1788783140965!5m2!1sen!2sil"
@@ -380,68 +220,28 @@ const clevelandHeightsArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Cleveland",
-      slug: "cleveland"
+      "name": "Cleveland",
+      "slug": "cleveland"
     },
     {
-      name: "East Cleveland",
-      slug: "east-cleveland"
+      "name": "University Heights",
+      "slug": "university-heights"
     },
     {
-      name: "University Heights",
-      slug: "university-heights"
+      "name": "South Euclid",
+      "slug": "south-euclid"
     },
     {
-      name: "South Euclid",
-      slug: "south-euclid"
+      "name": "Lyndhurst",
+      "slug": "lyndhurst"
     },
     {
-      name: "Shaker Heights",
-      slug: "shaker-heights"
+      "name": "Richmond Heights",
+      "slug": "richmond-heights"
     },
     {
-      name: "Beachwood",
-      slug: "beachwood"
-    }
-  ]
-});
-
-const eastClevelandArea = createArea({
-  city: "East Cleveland",
-  slug: "east-cleveland",
-  statistics: {
-    medianSalePrice: "$128,815",
-    homesSold: "17",
-    medianPricePerSquareFoot: "$63/sq ft",
-    medianDaysOnMarket: "72 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/6038/OH/East-Cleveland/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "Cleveland",
-      slug: "cleveland"
-    },
-    {
-      name: "Cleveland Heights",
-      slug: "cleveland-heights"
-    },
-    {
-      name: "Euclid",
-      slug: "euclid"
-    },
-    {
-      name: "South Euclid",
-      slug: "south-euclid"
-    },
-    {
-      name: "University Heights",
-      slug: "university-heights"
-    },
-    {
-      name: "Shaker Heights",
-      slug: "shaker-heights"
+      "name": "Euclid",
+      "slug": "euclid"
     }
   ]
 });
@@ -460,71 +260,31 @@ export const euclidArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Cleveland",
-      slug: "cleveland"
+      "name": "Cleveland",
+      "slug": "cleveland"
     },
     {
-      name: "East Cleveland",
-      slug: "east-cleveland"
+      "name": "South Euclid",
+      "slug": "south-euclid"
     },
     {
-      name: "South Euclid",
-      slug: "south-euclid"
+      "name": "Richmond Heights",
+      "slug": "richmond-heights"
     },
     {
-      name: "Richmond Heights",
-      slug: "richmond-heights"
+      "name": "Lyndhurst",
+      "slug": "lyndhurst"
     },
     {
-      name: "Lyndhurst",
-      slug: "lyndhurst"
+      "name": "Cleveland Heights",
+      "slug": "cleveland-heights"
     },
     {
-      name: "Cleveland Heights",
-      slug: "cleveland-heights"
+      "name": "Highland Heights",
+      "slug": "highland-heights"
     }
   ],
   googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47744.50783599262!2d-81.56199711803099!3d41.59019609607561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830fe5dbe9c8b3b%3A0x57cade33d51809cd!2sEuclid%2C%20OH%2C%20USA!5e0!3m2!1sen!2sca!4v1748013566014!5m2!1sen!2sca"
-});
-
-const fairviewParkArea = createArea({
-  city: "Fairview Park",
-  slug: "fairview-park",
-  statistics: {
-    medianSalePrice: "$290,783",
-    homesSold: "64",
-    medianPricePerSquareFoot: "$195/sq ft",
-    medianDaysOnMarket: "8 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/6780/OH/Fairview-Park/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "Rocky River",
-      slug: "rocky-river"
-    },
-    {
-      name: "Westlake",
-      slug: "westlake"
-    },
-    {
-      name: "North Olmsted",
-      slug: "north-olmsted"
-    },
-    {
-      name: "Lakewood",
-      slug: "lakewood"
-    },
-    {
-      name: "Brook Park",
-      slug: "brook-park"
-    },
-    {
-      name: "Cleveland",
-      slug: "cleveland"
-    }
-  ]
 });
 
 const garfieldHeightsArea = createArea({
@@ -541,28 +301,68 @@ const garfieldHeightsArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Cleveland",
-      slug: "cleveland"
+      "name": "Cleveland",
+      "slug": "cleveland"
     },
     {
-      name: "Maple Heights",
-      slug: "maple-heights"
+      "name": "Maple Heights",
+      "slug": "maple-heights"
     },
     {
-      name: "Bedford",
-      slug: "bedford"
+      "name": "Bedford",
+      "slug": "bedford"
     },
     {
-      name: "Warrensville Heights",
-      slug: "warrensville-heights"
+      "name": "Independence",
+      "slug": "independence"
     },
     {
-      name: "Independence",
-      slug: "independence"
+      "name": "Seven Hills",
+      "slug": "seven-hills"
     },
     {
-      name: "Seven Hills",
-      slug: "seven-hills"
+      "name": "Parma",
+      "slug": "parma"
+    }
+  ]
+});
+
+const highlandHeightsArea = createArea({
+  "city": "Highland Heights",
+  "slug": "highland-heights",
+  "statistics": {
+    "medianSalePrice": "$543,141",
+    "homesSold": "37",
+    "medianPricePerSquareFoot": "$201/sq ft",
+    "medianDaysOnMarket": "16 days",
+    "dataPeriod": "June–August 2026",
+    "sourceName": "Redfin",
+    "sourceUrl": "https://www.redfin.com/city/8967/OH/Highland-Heights/housing-market"
+  },
+  "nearbyCities": [
+    {
+      "name": "Mayfield Village",
+      "slug": "mayfield-village"
+    },
+    {
+      "name": "Richmond Heights",
+      "slug": "richmond-heights"
+    },
+    {
+      "name": "Mayfield Heights",
+      "slug": "mayfield-heights"
+    },
+    {
+      "name": "Lyndhurst",
+      "slug": "lyndhurst"
+    },
+    {
+      "name": "South Euclid",
+      "slug": "south-euclid"
+    },
+    {
+      "name": "Euclid",
+      "slug": "euclid"
     }
   ]
 });
@@ -581,68 +381,28 @@ const independenceArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Seven Hills",
-      slug: "seven-hills"
+      "name": "Seven Hills",
+      "slug": "seven-hills"
     },
     {
-      name: "Garfield Heights",
-      slug: "garfield-heights"
+      "name": "Garfield Heights",
+      "slug": "garfield-heights"
     },
     {
-      name: "Broadview Heights",
-      slug: "broadview-heights"
+      "name": "Parma",
+      "slug": "parma"
     },
     {
-      name: "Parma",
-      slug: "parma"
+      "name": "Bedford",
+      "slug": "bedford"
     },
     {
-      name: "Bedford",
-      slug: "bedford"
+      "name": "Maple Heights",
+      "slug": "maple-heights"
     },
     {
-      name: "Maple Heights",
-      slug: "maple-heights"
-    }
-  ]
-});
-
-const lakewoodArea = createArea({
-  city: "Lakewood",
-  slug: "lakewood",
-  statistics: {
-    medianSalePrice: "$359,762",
-    homesSold: "211",
-    medianPricePerSquareFoot: "$215/sq ft",
-    medianDaysOnMarket: "15 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/10611/OH/Lakewood/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "Cleveland",
-      slug: "cleveland"
-    },
-    {
-      name: "Rocky River",
-      slug: "rocky-river"
-    },
-    {
-      name: "Fairview Park",
-      slug: "fairview-park"
-    },
-    {
-      name: "Westlake",
-      slug: "westlake"
-    },
-    {
-      name: "Brooklyn",
-      slug: "brooklyn"
-    },
-    {
-      name: "Parma",
-      slug: "parma"
+      "name": "Parma Heights",
+      "slug": "parma-heights"
     }
   ]
 });
@@ -661,28 +421,28 @@ const lyndhurstArea = createArea({
   },
   nearbyCities: [
     {
-      name: "South Euclid",
-      slug: "south-euclid"
+      "name": "South Euclid",
+      "slug": "south-euclid"
     },
     {
-      name: "Richmond Heights",
-      slug: "richmond-heights"
+      "name": "Richmond Heights",
+      "slug": "richmond-heights"
     },
     {
-      name: "Beachwood",
-      slug: "beachwood"
+      "name": "University Heights",
+      "slug": "university-heights"
     },
     {
-      name: "University Heights",
-      slug: "university-heights"
+      "name": "Cleveland Heights",
+      "slug": "cleveland-heights"
     },
     {
-      name: "Cleveland Heights",
-      slug: "cleveland-heights"
+      "name": "Mayfield Heights",
+      "slug": "mayfield-heights"
     },
     {
-      name: "Shaker Heights",
-      slug: "shaker-heights"
+      "name": "Highland Heights",
+      "slug": "highland-heights"
     }
   ]
 });
@@ -701,28 +461,108 @@ const mapleHeightsArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Garfield Heights",
-      slug: "garfield-heights"
+      "name": "Garfield Heights",
+      "slug": "garfield-heights"
     },
     {
-      name: "Bedford",
-      slug: "bedford"
+      "name": "Bedford",
+      "slug": "bedford"
     },
     {
-      name: "Warrensville Heights",
-      slug: "warrensville-heights"
+      "name": "Independence",
+      "slug": "independence"
     },
     {
-      name: "Shaker Heights",
-      slug: "shaker-heights"
+      "name": "Cleveland",
+      "slug": "cleveland"
     },
     {
-      name: "Independence",
-      slug: "independence"
+      "name": "Parma",
+      "slug": "parma"
     },
     {
-      name: "Cleveland",
-      slug: "cleveland"
+      "name": "Parma Heights",
+      "slug": "parma-heights"
+    }
+  ]
+});
+
+const mayfieldHeightsArea = createArea({
+  "city": "Mayfield Heights",
+  "slug": "mayfield-heights",
+  "statistics": {
+    "medianSalePrice": "$274,818",
+    "homesSold": "75",
+    "medianPricePerSquareFoot": "$163/sq ft",
+    "medianDaysOnMarket": "22 days",
+    "dataPeriod": "June–August 2026",
+    "sourceName": "Redfin",
+    "sourceUrl": "https://www.redfin.com/city/12397/OH/Mayfield-Heights/housing-market"
+  },
+  "nearbyCities": [
+    {
+      "name": "Mayfield Village",
+      "slug": "mayfield-village"
+    },
+    {
+      "name": "Lyndhurst",
+      "slug": "lyndhurst"
+    },
+    {
+      "name": "Highland Heights",
+      "slug": "highland-heights"
+    },
+    {
+      "name": "South Euclid",
+      "slug": "south-euclid"
+    },
+    {
+      "name": "Richmond Heights",
+      "slug": "richmond-heights"
+    },
+    {
+      "name": "University Heights",
+      "slug": "university-heights"
+    }
+  ]
+});
+
+const mayfieldVillageArea = createArea({
+  "city": "Mayfield Village",
+  "slug": "mayfield-village",
+  "statistics": {
+    "medianSalePrice": "$414,726",
+    "homesSold": "14",
+    "medianPricePerSquareFoot": "$242/sq ft",
+    "medianDaysOnMarket": "37 days",
+    "dataPeriod": "June–August 2026",
+    "sourceName": "Redfin",
+    "sourceUrl": "https://www.redfin.com/city/12388/OH/Mayfield/housing-market"
+  },
+  "nearbyCities": [
+    {
+      "name": "Highland Heights",
+      "slug": "highland-heights"
+    },
+    {
+      "name": "Mayfield Heights",
+      "slug": "mayfield-heights"
+    },
+    {
+      "name": "Lyndhurst",
+      "slug": "lyndhurst"
+    },
+    {
+      "name": "Richmond Heights",
+      "slug": "richmond-heights"
+    },
+    {
+      "name": "South Euclid",
+      "slug": "south-euclid"
+    },
+    {
+      "name": "Euclid",
+      "slug": "euclid"
     }
   ]
 });
@@ -741,108 +581,28 @@ const middleburgHeightsArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Brook Park",
-      slug: "brook-park"
+      "name": "Parma Heights",
+      "slug": "parma-heights"
     },
     {
-      name: "Berea",
-      slug: "berea"
+      "name": "Parma",
+      "slug": "parma"
     },
     {
-      name: "Parma Heights",
-      slug: "parma-heights"
+      "name": "Seven Hills",
+      "slug": "seven-hills"
     },
     {
-      name: "Parma",
-      slug: "parma"
+      "name": "Independence",
+      "slug": "independence"
     },
     {
-      name: "Strongsville",
-      slug: "strongsville"
+      "name": "Cleveland",
+      "slug": "cleveland"
     },
     {
-      name: "North Royalton",
-      slug: "north-royalton"
-    }
-  ]
-});
-
-const northOlmstedArea = createArea({
-  city: "North Olmsted",
-  slug: "north-olmsted",
-  statistics: {
-    medianSalePrice: "$302,800",
-    homesSold: "161",
-    medianPricePerSquareFoot: "$178/sq ft",
-    medianDaysOnMarket: "12 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/14718/OH/North-Olmsted/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "Westlake",
-      slug: "westlake"
-    },
-    {
-      name: "Fairview Park",
-      slug: "fairview-park"
-    },
-    {
-      name: "Berea",
-      slug: "berea"
-    },
-    {
-      name: "Brook Park",
-      slug: "brook-park"
-    },
-    {
-      name: "Middleburg Heights",
-      slug: "middleburg-heights"
-    },
-    {
-      name: "Rocky River",
-      slug: "rocky-river"
-    }
-  ]
-});
-
-const northRoyaltonArea = createArea({
-  city: "North Royalton",
-  slug: "north-royalton",
-  statistics: {
-    medianSalePrice: "$341,524",
-    homesSold: "129",
-    medianPricePerSquareFoot: "$187/sq ft",
-    medianDaysOnMarket: "15 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/14764/OH/North-Royalton/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "Parma",
-      slug: "parma"
-    },
-    {
-      name: "Parma Heights",
-      slug: "parma-heights"
-    },
-    {
-      name: "Broadview Heights",
-      slug: "broadview-heights"
-    },
-    {
-      name: "Strongsville",
-      slug: "strongsville"
-    },
-    {
-      name: "Seven Hills",
-      slug: "seven-hills"
-    },
-    {
-      name: "Middleburg Heights",
-      slug: "middleburg-heights"
+      "name": "Garfield Heights",
+      "slug": "garfield-heights"
     }
   ]
 });
@@ -861,28 +621,28 @@ const parmaArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Parma Heights",
-      slug: "parma-heights"
+      "name": "Parma Heights",
+      "slug": "parma-heights"
     },
     {
-      name: "Brooklyn",
-      slug: "brooklyn"
+      "name": "Seven Hills",
+      "slug": "seven-hills"
     },
     {
-      name: "Brook Park",
-      slug: "brook-park"
+      "name": "Independence",
+      "slug": "independence"
     },
     {
-      name: "Seven Hills",
-      slug: "seven-hills"
+      "name": "Middleburg Heights",
+      "slug": "middleburg-heights"
     },
     {
-      name: "Independence",
-      slug: "independence"
+      "name": "Cleveland",
+      "slug": "cleveland"
     },
     {
-      name: "North Royalton",
-      slug: "north-royalton"
+      "name": "Garfield Heights",
+      "slug": "garfield-heights"
     }
   ]
 });
@@ -901,28 +661,28 @@ const parmaHeightsArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Parma",
-      slug: "parma"
+      "name": "Parma",
+      "slug": "parma"
     },
     {
-      name: "Brook Park",
-      slug: "brook-park"
+      "name": "Middleburg Heights",
+      "slug": "middleburg-heights"
     },
     {
-      name: "Middleburg Heights",
-      slug: "middleburg-heights"
+      "name": "Seven Hills",
+      "slug": "seven-hills"
     },
     {
-      name: "Berea",
-      slug: "berea"
+      "name": "Independence",
+      "slug": "independence"
     },
     {
-      name: "North Royalton",
-      slug: "north-royalton"
+      "name": "Cleveland",
+      "slug": "cleveland"
     },
     {
-      name: "Seven Hills",
-      slug: "seven-hills"
+      "name": "Garfield Heights",
+      "slug": "garfield-heights"
     }
   ]
 });
@@ -941,68 +701,28 @@ const richmondHeightsArea = createArea({
   },
   nearbyCities: [
     {
-      name: "South Euclid",
-      slug: "south-euclid"
+      "name": "South Euclid",
+      "slug": "south-euclid"
     },
     {
-      name: "Lyndhurst",
-      slug: "lyndhurst"
+      "name": "Lyndhurst",
+      "slug": "lyndhurst"
     },
     {
-      name: "Euclid",
-      slug: "euclid"
+      "name": "Euclid",
+      "slug": "euclid"
     },
     {
-      name: "Beachwood",
-      slug: "beachwood"
+      "name": "Cleveland Heights",
+      "slug": "cleveland-heights"
     },
     {
-      name: "Cleveland Heights",
-      slug: "cleveland-heights"
+      "name": "University Heights",
+      "slug": "university-heights"
     },
     {
-      name: "University Heights",
-      slug: "university-heights"
-    }
-  ]
-});
-
-const rockyRiverArea = createArea({
-  city: "Rocky River",
-  slug: "rocky-river",
-  statistics: {
-    medianSalePrice: "$395,988",
-    homesSold: "94",
-    medianPricePerSquareFoot: "$231/sq ft",
-    medianDaysOnMarket: "16 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/17437/OH/Rocky-River/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "Lakewood",
-      slug: "lakewood"
-    },
-    {
-      name: "Fairview Park",
-      slug: "fairview-park"
-    },
-    {
-      name: "Westlake",
-      slug: "westlake"
-    },
-    {
-      name: "North Olmsted",
-      slug: "north-olmsted"
-    },
-    {
-      name: "Cleveland",
-      slug: "cleveland"
-    },
-    {
-      name: "Brook Park",
-      slug: "brook-park"
+      "name": "Highland Heights",
+      "slug": "highland-heights"
     }
   ]
 });
@@ -1021,68 +741,68 @@ const sevenHillsArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Parma",
-      slug: "parma"
+      "name": "Parma",
+      "slug": "parma"
     },
     {
-      name: "Independence",
-      slug: "independence"
+      "name": "Independence",
+      "slug": "independence"
     },
     {
-      name: "North Royalton",
-      slug: "north-royalton"
+      "name": "Garfield Heights",
+      "slug": "garfield-heights"
     },
     {
-      name: "Garfield Heights",
-      slug: "garfield-heights"
+      "name": "Parma Heights",
+      "slug": "parma-heights"
     },
     {
-      name: "Parma Heights",
-      slug: "parma-heights"
+      "name": "Middleburg Heights",
+      "slug": "middleburg-heights"
     },
     {
-      name: "Broadview Heights",
-      slug: "broadview-heights"
+      "name": "Cleveland",
+      "slug": "cleveland"
     }
   ]
 });
 
-const shakerHeightsArea = createArea({
-  city: "Shaker Heights",
-  slug: "shaker-heights",
-  statistics: {
-    medianSalePrice: "$434,712",
-    homesSold: "134",
-    medianPricePerSquareFoot: "$159/sq ft",
-    medianDaysOnMarket: "27 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/18309/OH/Shaker-Heights/housing-market"
+const solonArea = createArea({
+  "city": "Solon",
+  "slug": "solon",
+  "statistics": {
+    "medianSalePrice": "$509,663",
+    "homesSold": "80",
+    "medianPricePerSquareFoot": "$208/sq ft",
+    "medianDaysOnMarket": "29 days",
+    "dataPeriod": "June–August 2026",
+    "sourceName": "Redfin",
+    "sourceUrl": "https://www.redfin.com/city/18593/OH/Solon/housing-market"
   },
-  nearbyCities: [
+  "nearbyCities": [
     {
-      name: "Cleveland",
-      slug: "cleveland"
+      "name": "Bedford Heights",
+      "slug": "bedford-heights"
     },
     {
-      name: "Cleveland Heights",
-      slug: "cleveland-heights"
+      "name": "Bedford",
+      "slug": "bedford"
     },
     {
-      name: "University Heights",
-      slug: "university-heights"
+      "name": "Maple Heights",
+      "slug": "maple-heights"
     },
     {
-      name: "Beachwood",
-      slug: "beachwood"
+      "name": "Garfield Heights",
+      "slug": "garfield-heights"
     },
     {
-      name: "Warrensville Heights",
-      slug: "warrensville-heights"
+      "name": "University Heights",
+      "slug": "university-heights"
     },
     {
-      name: "Maple Heights",
-      slug: "maple-heights"
+      "name": "Mayfield Heights",
+      "slug": "mayfield-heights"
     }
   ]
 });
@@ -1101,68 +821,28 @@ const southEuclidArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Cleveland Heights",
-      slug: "cleveland-heights"
+      "name": "Cleveland Heights",
+      "slug": "cleveland-heights"
     },
     {
-      name: "University Heights",
-      slug: "university-heights"
+      "name": "University Heights",
+      "slug": "university-heights"
     },
     {
-      name: "Lyndhurst",
-      slug: "lyndhurst"
+      "name": "Lyndhurst",
+      "slug": "lyndhurst"
     },
     {
-      name: "Richmond Heights",
-      slug: "richmond-heights"
+      "name": "Richmond Heights",
+      "slug": "richmond-heights"
     },
     {
-      name: "Beachwood",
-      slug: "beachwood"
+      "name": "Euclid",
+      "slug": "euclid"
     },
     {
-      name: "Euclid",
-      slug: "euclid"
-    }
-  ]
-});
-
-const strongsvilleArea = createArea({
-  city: "Strongsville",
-  slug: "strongsville",
-  statistics: {
-    medianSalePrice: "$389,742",
-    homesSold: "176",
-    medianPricePerSquareFoot: "$191/sq ft",
-    medianDaysOnMarket: "15 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/19034/OH/Strongsville/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "North Royalton",
-      slug: "north-royalton"
-    },
-    {
-      name: "Middleburg Heights",
-      slug: "middleburg-heights"
-    },
-    {
-      name: "Berea",
-      slug: "berea"
-    },
-    {
-      name: "Broadview Heights",
-      slug: "broadview-heights"
-    },
-    {
-      name: "Parma Heights",
-      slug: "parma-heights"
-    },
-    {
-      name: "Parma",
-      slug: "parma"
+      "name": "Mayfield Heights",
+      "slug": "mayfield-heights"
     }
   ]
 });
@@ -1181,141 +861,51 @@ const universityHeightsArea = createArea({
   },
   nearbyCities: [
     {
-      name: "Cleveland Heights",
-      slug: "cleveland-heights"
+      "name": "Cleveland Heights",
+      "slug": "cleveland-heights"
     },
     {
-      name: "Shaker Heights",
-      slug: "shaker-heights"
+      "name": "South Euclid",
+      "slug": "south-euclid"
     },
     {
-      name: "South Euclid",
-      slug: "south-euclid"
+      "name": "Lyndhurst",
+      "slug": "lyndhurst"
     },
     {
-      name: "Beachwood",
-      slug: "beachwood"
+      "name": "Mayfield Heights",
+      "slug": "mayfield-heights"
     },
     {
-      name: "Lyndhurst",
-      slug: "lyndhurst"
+      "name": "Richmond Heights",
+      "slug": "richmond-heights"
     },
     {
-      name: "Warrensville Heights",
-      slug: "warrensville-heights"
-    }
-  ]
-});
-
-const warrensvilleHeightsArea = createArea({
-  city: "Warrensville Heights",
-  slug: "warrensville-heights",
-  statistics: {
-    medianSalePrice: "$170,387",
-    homesSold: "23",
-    medianPricePerSquareFoot: "$137/sq ft",
-    medianDaysOnMarket: "35 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/20280/OH/Warrensville-Heights/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "Shaker Heights",
-      slug: "shaker-heights"
-    },
-    {
-      name: "Beachwood",
-      slug: "beachwood"
-    },
-    {
-      name: "Maple Heights",
-      slug: "maple-heights"
-    },
-    {
-      name: "Bedford",
-      slug: "bedford"
-    },
-    {
-      name: "University Heights",
-      slug: "university-heights"
-    },
-    {
-      name: "Cleveland Heights",
-      slug: "cleveland-heights"
-    }
-  ]
-});
-
-const westlakeArea = createArea({
-  city: "Westlake",
-  slug: "westlake",
-  statistics: {
-    medianSalePrice: "$457,197",
-    homesSold: "156",
-    medianPricePerSquareFoot: "$199/sq ft",
-    medianDaysOnMarket: "16 days",
-    dataPeriod: "June–August 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/20680/OH/Westlake/housing-market"
-  },
-  nearbyCities: [
-    {
-      name: "Rocky River",
-      slug: "rocky-river"
-    },
-    {
-      name: "Fairview Park",
-      slug: "fairview-park"
-    },
-    {
-      name: "North Olmsted",
-      slug: "north-olmsted"
-    },
-    {
-      name: "Lakewood",
-      slug: "lakewood"
-    },
-    {
-      name: "Berea",
-      slug: "berea"
-    },
-    {
-      name: "Brook Park",
-      slug: "brook-park"
+      "name": "Highland Heights",
+      "slug": "highland-heights"
     }
   ]
 });
 
 export const areas: readonly AreaPageData[] = [
-  beachwoodArea,
   bedfordArea,
-  bereaArea,
-  broadviewHeightsArea,
-  brookParkArea,
-  brooklynArea,
+  bedfordHeightsArea,
   clevelandArea,
   clevelandHeightsArea,
-  eastClevelandArea,
   euclidArea,
-  fairviewParkArea,
   garfieldHeightsArea,
+  highlandHeightsArea,
   independenceArea,
-  lakewoodArea,
   lyndhurstArea,
   mapleHeightsArea,
+  mayfieldHeightsArea,
+  mayfieldVillageArea,
   middleburgHeightsArea,
-  northOlmstedArea,
-  northRoyaltonArea,
   parmaArea,
   parmaHeightsArea,
   richmondHeightsArea,
-  rockyRiverArea,
   sevenHillsArea,
-  shakerHeightsArea,
+  solonArea,
   southEuclidArea,
-  strongsvilleArea,
   universityHeightsArea,
-  warrensvilleHeightsArea,
-  westlakeArea,
 ];
