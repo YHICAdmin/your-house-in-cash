@@ -5,7 +5,7 @@ import Link from "next/link";
 import { PhoneContact } from "./phone-contact";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { navigationItems } from "@/data/navigation";
+import { headerNavigationItems } from "@/data/navigation";
 import styles from "./site-header.module.css";
 
 const closeDuration = 180;
@@ -177,7 +177,7 @@ export function SiteHeader() {
         </Link>
 
         <nav className={styles.desktopNavigation} aria-label="Primary navigation">
-          {navigationItems.map((item) => (
+          {headerNavigationItems.map((item) => (
             <Link href={item.href} key={item.href}>
               {item.label}
             </Link>
@@ -219,7 +219,7 @@ export function SiteHeader() {
               className={`${styles.menuNavigation} content-inset`}
               aria-label="Menu navigation"
             >
-              {navigationItems.map((item, index) => (
+              {headerNavigationItems.map((item, index) => (
                 <Link
                   ref={index === 0 ? firstMenuItemRef : undefined}
                   href={item.href}

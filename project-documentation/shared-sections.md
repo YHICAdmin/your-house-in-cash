@@ -36,21 +36,19 @@ Provide clear, accessible navigation.
 
 ### Content
 
-#### Shared Navigation Links
+#### Header Navigation Links
 
 * The navigation links and their canonical dedicated-page destinations appear in this order:
 
-  1. `How It Works` — `/how-it-works`
-  2. `Situations` — `/situations`
-  3. `Areas We Buy In` — `/areas-we-buy-in`
-  4. `Reviews` — `/reviews`
-  5. `FAQ` — `/faq`
-  6. `About Us` — `/about-us`
+  1. `Areas We Buy In` — `/areas-we-buy-in`
+  2. `About Us` — `/about-us`
+  3. `Sell a Portfolio` — `/sell-property-portfolio`
+  4. `Blog` — `/blog`
 
 #### Desktop
 
 * Contains the Desktop Navigation.
-* The Desktop Navigation contains the Shared Navigation Links.
+* The Desktop Navigation contains the Header Navigation Links.
 
 #### Tablet and Mobile
 
@@ -60,13 +58,13 @@ Provide clear, accessible navigation.
 #### Tablet
 
 * When opened, the Open Menu Panel contains the Menu Navigation.
-* The Menu Navigation contains the Shared Navigation Links.
+* The Menu Navigation contains the Header Navigation Links.
 
 #### Mobile
 
 * When opened, the Open Menu Panel contains:
 
-  1. Menu Navigation containing the Shared Navigation Links.
+  1. Menu Navigation containing the Header Navigation Links.
   2. Phone Contact.
   3. Menu Primary CTA with the label `Get My Cash Offer`.
 
@@ -319,13 +317,18 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 ### Content
 
 - Heading: **Explore**.
-- Contains the complete `Shared Navigation Links` inventory in its canonical order and with the canonical destinations defined under `Header → Navigation → Content`.
+- Footer navigation links appear in this order:
+
+  1. `Areas We Buy In` — `/areas-we-buy-in`
+  2. `About Us` — `/about-us`
+  3. `Sell a Portfolio` — `/sell-property-portfolio`
+  4. `Blog` — `/blog`
 
 ### Component and Semantics
 
 - The Navigation area uses navigation landmark semantics.
 - The heading uses `H2` semantics.
-- The Shared Navigation Links use one semantic unordered list with one list item per link.
+- The Footer navigation links use one semantic unordered list with one list item per link.
 - Each link uses the documented `Text Link` Component with link semantics.
 
 ### Visual Design

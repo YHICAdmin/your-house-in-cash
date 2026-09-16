@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TextLink } from "@/components/ui/text-link";
-import { navigationItems } from "@/data/navigation";
+import { footerNavigationItems } from "@/data/navigation";
 import { getExternalLinkProps } from "@/lib/link-target";
 import styles from "./site-footer.module.css";
 
@@ -65,7 +65,7 @@ export function SiteFooter({ background = "default" }: {
             Explore
           </h2>
           <ul className={styles.links}>
-            {navigationItems.map((item) => (
+            {footerNavigationItems.map((item) => (
               <li key={item.href}>
                 <TextLink href={item.href}>{item.label}</TextLink>
               </li>

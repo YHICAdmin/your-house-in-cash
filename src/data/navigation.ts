@@ -1,8 +1,13 @@
-export const navigationItems = [
-  { label: "How It Works", href: "/how-it-works" },
-  { label: "Situations", href: "/situations" },
+export const headerNavigationItems = [
   { label: "Areas We Buy In", href: "/areas-we-buy-in" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "FAQ", href: "/faq" },
   { label: "About Us", href: "/about-us" },
+  { label: "Sell a Portfolio", href: "/sell-property-portfolio" },
+  { label: "Blog", href: "/blog" },
+] as const;
+
+export const footerNavigationItems = [
+  { label: "Areas We Buy In", href: "/areas-we-buy-in" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Sell a Portfolio", href: "/sell-property-portfolio" },
+  { label: "Blog", href: "/blog" },
 ] as const;
