@@ -294,3 +294,77 @@ It is to make the choice that leaves you with the best overall outcome.
 For some homeowners, that means repairing and listing.
 
 For others, it means selling the house as-is and moving on without another expensive, cumbersome project.
+
+# FAQ
+
+## Section Intro
+
+### Section Label
+
+FAQ
+
+### Primary Headline
+
+Before You Spend Money on Repairs, Know Your Options
+
+### Supporting Copy
+
+Get clear answers about major repair decisions before you commit time and money to the property.
+
+## Questions and Answers
+
+### Is It Worth Replacing a Roof Before Selling a House?
+
+It can be, but not automatically. Compare the likely increase in your sale price with the roof cost, the time needed to complete the work, carrying costs while you wait, and any remaining selling costs. A new roof may make sense when it is a clear obstacle for otherwise qualified buyers. If the numbers are close, selling as-is may be the simpler choice.
+
+### Can I Sell a House With Foundation Problems or Water Damage?
+
+Yes. These issues do not automatically prevent a sale, though they can affect the type of buyer who is interested and the price they are willing to pay. If the damage is active, stopping it from getting worse may be important. Beyond that, you can compare the cost and uncertainty of repairing it with an as-is sale to a buyer prepared to evaluate the house in its current condition.
+
+### What If I Can't Afford the Repairs Before Selling?
+
+You do not need to take on a renovation project just because the house needs work. You can sell a property that needs major repairs. An as-is sale lets you consider an offer without paying repair costs upfront, coordinating contractors, or waiting for the work to be finished.
+
+### Should I Renovate an Outdated Kitchen Before Selling?
+
+A dated kitchen can affect buyer interest, but it does not necessarily justify a renovation before selling. Kitchens are expensive, personal in style, and may not return their full cost in the sale price. Start with realistic estimates and compare the added net proceeds you expect with the cost, time, and effort of the project.
+
+### Is Selling As-Is Better Than Paying for Repairs First?
+
+It depends on the numbers and on how much time and involvement you want to take on. Selling after repairs may produce a higher sale price, while selling as-is can avoid upfront repair costs, delays, showings, and repair negotiations. A **[no-obligation as-is cash offer](/get-cash-offer)** gives you a real number to compare with your repair estimates and expected net proceeds from listing. You are not required to accept it.
+
+# Final CTA
+
+## Section Label
+
+Ready When You Are
+
+## Primary Headline
+
+See What You Could Sell As-Is For
+
+## Supporting Copy
+
+Get a no-obligation cash offer for your house in its current condition, then compare it with the cost and effort of making repairs first.
+
+## Primary CTA
+
+[Get My Cash Offer](/get-cash-offer)
+
+## Reassurance Row
+
+100% free. No obligation.
+
+## Supporting Benefits
+
+### Benefit 1
+
+- Icon: `Banknote`
+- Heading: Keep Your Cash for What Matters
+- Supporting Copy: Get an offer without spending money on repairs, updates, or a renovation project first.
+
+### Benefit 2
+
+- Icon: `Clock`
+- Heading: Move Forward on Your Timeline
+- Supporting Copy: Skip contractor coordination and work toward a closing date that fits your plans.
