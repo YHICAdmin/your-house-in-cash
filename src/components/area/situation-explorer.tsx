@@ -3,12 +3,10 @@
 import {
   ArrowRight,
   Building2,
-  ClipboardX,
   Gavel,
   Hammer,
   House,
   MessageCircle,
-  ReceiptText,
   Scale,
   ScrollText,
   Truck,
@@ -90,23 +88,6 @@ const situations = [
     heading: "Handling a Property During Divorce",
     explanation:
       "Selling a house during a divorce can add stress to an already difficult transition. We provide a simple and discreet way to sell the property as-is.",
-  },
-  {
-    label: "Behind on Property Taxes",
-    selectorLabel: "Unpaid Property Taxes",
-    slug: "behind-on-property-taxes",
-    icon: ReceiptText,
-    heading: "Understanding Delinquent Property Taxes",
-    explanation:
-      "Falling behind on property taxes can create increasing pressure. We offer a straightforward as-is sale so you can explore your next step.",
-  },
-  {
-    label: "Code Violations",
-    slug: "code-violations",
-    icon: ClipboardX,
-    heading: "Selling a Home With Code Violations",
-    explanation:
-      "Code violations can make repairs and a traditional listing more difficult. We buy houses as-is, including properties with unresolved violations.",
   },
 ] as const satisfies readonly Situation[];
 

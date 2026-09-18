@@ -6,8 +6,6 @@ import majorRepairsImage from "../../public/images/situations/major-repairs-hero
 import vacantPropertyImage from "../../public/images/situations/vacant-property-hero.jpg";
 import relocationImage from "../../public/images/situations/relocation-hero.jpg";
 import divorceImage from "../../public/images/situations/divorce-hero.jpg";
-import behindOnPropertyTaxesImage from "../../public/images/situations/behind-on-property-taxes-hero.jpg";
-import codeViolationsImage from "../../public/images/situations/code-violations-hero.jpg";
 
 export type Situation = {
   slug: string;
@@ -66,19 +64,5 @@ export const situations: Situation[] = [
     supportingCopy: "A shared home can be one of the most complex decisions during a separation. Explore the questions around ownership, mortgage payments, and whether one person keeps the house or you sell it.",
     image: divorceImage,
     imageAlt: "Two empty wooden chairs beside a small table with a vase",
-  },
-  {
-    slug: "behind-on-property-taxes",
-    headline: "Understanding your options for unpaid property taxes",
-    supportingCopy: "Unpaid property taxes can make it difficult to plan your next steps. Explore the questions to ask about your balance, available payment arrangements, and how the debt fits into plans for the property.",
-    image: behindOnPropertyTaxesImage,
-    imageAlt: "Hands reviewing documents with a pen and calculator at a desk",
-  },
-  {
-    slug: "code-violations",
-    headline: "What to know about property code violations",
-    supportingCopy: "A code violation notice can raise questions about repairs, deadlines, and expense. Explore how to understand the cited issues and what to consider when deciding whether to repair or sell the property.",
-    image: codeViolationsImage,
-    imageAlt: "Person wearing a hard hat checking an unfinished wall with a spirit level",
   },
 ];

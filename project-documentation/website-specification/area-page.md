@@ -399,10 +399,8 @@ Contains, in document order:
   5. `Vacant Property`.
   6. `Relocation`.
   7. `Divorce`.
-  8. `Unpaid Property Taxes`.
-  9. `Code Violations`.
 
-* `Inherited House` is the selector label for `Inherited Property`; `Unpaid Property Taxes` is the selector label for `Behind on Property Taxes`. The corresponding content and link definitions below use the original situation names.
+* `Inherited House` is the selector label for `Inherited Property`.
 
 ### Component and Semantics
 
@@ -504,8 +502,6 @@ Contains, in document order:
   5. `Vacant Property`: `House`.
   6. `Relocation`: `Truck`.
   7. `Divorce`: `Scale`.
-  8. `Behind on Property Taxes`: `ReceiptText`.
-  9. `Code Violations`: `ClipboardX`.
 
 #### Component and Semantics
 
@@ -531,8 +527,6 @@ Contains, in document order:
   5. `Vacant Property`: `Managing the Costs of a Vacant Property`.
   6. `Relocation`: `Coordinating a Home Sale With Relocation`.
   7. `Divorce`: `Handling a Property During Divorce`.
-  8. `Behind on Property Taxes`: `Understanding Delinquent Property Taxes`.
-  9. `Code Violations`: `Selling a Home With Code Violations`.
 
 #### Component and Semantics
 
@@ -558,8 +552,6 @@ Contains, in document order:
   5. `Vacant Property`: `A vacant house can create ongoing costs, maintenance, and security concerns. We provide a straightforward way to sell it as-is.`
   6. `Relocation`: `When you need to relocate, timing matters. We offer a flexible, straightforward sale without requiring you to prepare the house for the market.`
   7. `Divorce`: `Selling a house during a divorce can add stress to an already difficult transition. We provide a simple and discreet way to sell the property as-is.`
-  8. `Behind on Property Taxes`: `Falling behind on property taxes can create increasing pressure. We offer a straightforward as-is sale so you can explore your next step.`
-  9. `Code Violations`: `Code violations can make repairs and a traditional listing more difficult. We buy houses as-is, including properties with unresolved violations.`
 
 #### Component and Semantics
 
@@ -587,8 +579,6 @@ Contains, in document order:
   5. `Vacant Property`: `/vacant-property`.
   6. `Relocation`: `/relocation`.
   7. `Divorce`: `/divorce`.
-  8. `Behind on Property Taxes`: `/behind-on-property-taxes`.
-  9. `Code Violations`: `/code-violations`.
 * These paths establish the canonical route convention for dedicated Situation Pages.
 
 #### Component and Semantics

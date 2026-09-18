@@ -63,8 +63,6 @@ Immediately confirm that the user has reached a page relevant to their specific 
 - **Vacant Property:** [Primary Headline](content/situations/vacant-property.md#primary-headline) under `Hero`.
 - **Relocation:** [Primary Headline](content/situations/relocation.md#primary-headline) under `Hero`.
 - **Divorce:** [Primary Headline](content/situations/divorce.md#primary-headline) under `Hero`.
-- **Behind on Property Taxes:** [Primary Headline](content/situations/behind-on-property-taxes.md#primary-headline) under `Hero`.
-- **Code Violations:** [Primary Headline](content/situations/code-violations.md#primary-headline) under `Hero`.
 
 ### Component and Semantics
 
@@ -90,8 +88,6 @@ Immediately confirm that the user has reached a page relevant to their specific 
 - **Vacant Property:** [Supporting Copy](content/situations/vacant-property.md#supporting-copy) under `Hero`.
 - **Relocation:** [Supporting Copy](content/situations/relocation.md#supporting-copy) under `Hero`.
 - **Divorce:** [Supporting Copy](content/situations/divorce.md#supporting-copy) under `Hero`.
-- **Behind on Property Taxes:** [Supporting Copy](content/situations/behind-on-property-taxes.md#supporting-copy) under `Hero`.
-- **Code Violations:** [Supporting Copy](content/situations/code-violations.md#supporting-copy) under `Hero`.
 
 ### Component and Semantics
 
@@ -116,8 +112,6 @@ Immediately confirm that the user has reached a page relevant to their specific 
 - **Vacant Property:** [vacant-property-hero.jpg](../../public/images/situations/vacant-property-hero.jpg).
 - **Relocation:** [relocation-hero.jpg](../../public/images/situations/relocation-hero.jpg).
 - **Divorce:** [divorce-hero.jpg](../../public/images/situations/divorce-hero.jpg).
-- **Behind on Property Taxes:** [behind-on-property-taxes-hero.jpg](../../public/images/situations/behind-on-property-taxes-hero.jpg).
-- **Code Violations:** [code-violations-hero.jpg](../../public/images/situations/code-violations-hero.jpg).
 
 ### Visual Design
 
@@ -137,8 +131,6 @@ Immediately confirm that the user has reached a page relevant to their specific 
 - **Vacant Property:** Alternative text: `Empty room with a hardwood floor and a window, viewed through an open doorway`.
 - **Relocation:** Alternative text: `Moving boxes beside covered furniture in a bright room`.
 - **Divorce:** Alternative text: `Two empty wooden chairs beside a small table with a vase`.
-- **Behind on Property Taxes:** Alternative text: `Hands reviewing documents with a pen and calculator at a desk`.
-- **Code Violations:** Alternative text: `Person wearing a hard hat checking an unfinished wall with a spirit level`.
 
 # Situation Content
 
