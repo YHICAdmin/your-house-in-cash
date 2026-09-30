@@ -1,3 +1,359 @@
+# Final CTA
+
+## Purpose
+
+Conclude the page with a clear and simple conversion path.
+
+At this stage, the user has already received the necessary information throughout the page, so the section does not introduce new information. Instead, it focuses attention on the primary action — receiving an offer for their house.
+
+## Layout
+
+- Uses the global `Background` (`#FFFFFF`) by default. The consuming page may override it with an approved global Background System color according to its adjacent Sections; only the override is documented locally.
+
+- The left-aligned hierarchy of the Section Intro, Primary CTA, and Reassurance Row is preserved across Breakpoints.
+- The Section Intro, Primary CTA, and Reassurance Row form one left-aligned composition.
+- On Desktop, the CTA composition occupies Grid Columns `1–6`; the Supporting Benefits occupy Grid Columns `7–12`, with each benefit occupying three columns.
+- On Tablet, the CTA composition occupies Grid Columns `1–4`; the Supporting Benefits occupy Grid Columns `5–8`, with each benefit occupying two columns.
+- On Desktop and Tablet, the CTA composition and Supporting Benefits form parallel left- and right-area content flows whose top edges align.
+- On Mobile, the CTA composition occupies the full available Content Grid width, followed by the Supporting Benefits in canonical document order.
+
+## Section Intro
+
+### Content
+
+Contains, in document order:
+
+1. Section Label text: supplied by the consuming page.
+2. Primary Headline: supplied by the consuming page.
+3. Supporting Copy: supplied by the consuming page.
+
+Content values are supplied by the consuming page; the element structure, typography, spacing, responsive composition, and behavior are defined by this shared specification.
+
+### Component and Semantics
+
+- The Section Label uses the documented `Section Label` Component in its text-only configuration.
+- The Primary Headline uses `H2` semantics.
+- The Supporting Copy uses paragraph semantics.
+
+### Visual Design
+
+- The Primary Headline uses the global `H2` typography.
+- The Supporting Copy uses the global `Body Large` typography.
+
+### Dimensions and Alignment
+
+- The complete Section Intro is left-aligned.
+
+### Spacing
+
+- `S` (`16px`) separates the Section Label from the Primary Headline across all Breakpoints.
+- `M` (`24px`) separates the Primary Headline from the Supporting Copy across all Breakpoints.
+
+### Spacing After
+
+- `L` (`32px`) separates the complete Section Intro from the Primary CTA across all Breakpoints.
+
+## Primary CTA
+
+### Content
+
+- Label and destination: supplied by the consuming page.
+
+### Component and Semantics
+
+- Uses the documented **Button** Component with its `conversion` variant.
+
+### Spacing After
+
+- `XS` (`8px`) separates the Primary CTA from the Reassurance Row across all Breakpoints.
+
+### Interaction
+
+- Navigates to the destination supplied by the consuming page, following the global link-destination rules.
+
+## Reassurance Row
+
+### Content
+
+- Reassurance text: supplied by the consuming page.
+
+### Component and Semantics
+
+- Uses paragraph semantics.
+
+### Visual Design
+
+- Uses the global `Body Small` typography.
+
+### Dimensions and Alignment
+
+- Horizontally centered relative to the Primary CTA rather than the complete Final CTA composition.
+
+### Spacing After
+
+- On Mobile, `L` (`32px`) separates the Reassurance Row from the Supporting Benefits.
+
+## Supporting Benefits
+
+### Content
+
+Contains exactly two benefits in the order supplied by the consuming page. Each benefit supplies a canonical Lucide icon identity, a heading, and Supporting Copy.
+
+### Component and Semantics
+
+- The benefits use one semantic unordered list with one list item per benefit.
+- Each icon uses the documented `Icon Container` Component at its Default size.
+- Each benefit heading uses `H3` semantics.
+- Each Supporting Copy uses paragraph semantics.
+
+### Visual Design
+
+- Each benefit heading uses a local `16px / 600 / 1.25` typography treatment.
+- Each Supporting Copy uses the global `Body` typography.
+- The benefits remain visually open without a Card, background, Border, Radius, or Shadow.
+- On Desktop and Tablet, each benefit is preceded by a `1px` global `Brand Green` vertical separator aligned with the top of its heading and matching the heading's `20px` line-box height; the first separator sits between the CTA composition and the first benefit, and the second sits between the two benefits.
+
+### Dimensions and Alignment
+
+- The benefits are left-aligned.
+- On Desktop and Tablet, each icon, heading, and Supporting Copy form a vertical content flow in that order.
+
+### Spacing
+
+- `M` (`24px`) separates each `Icon Container` from its benefit heading across all Breakpoints.
+- `S` (`16px`) separates each benefit heading from its Supporting Copy across all Breakpoints.
+
+### Accessibility
+
+- Benefit icons are decorative; the supplied adjacent headings communicate their benefit meaning.
+- The separators are decorative.
+
+### Responsive Behavior
+
+- On Mobile, the two benefits form one full-width vertical flow in canonical order with an `L` (`32px`) gap.
+- The vertical separators are not displayed on Mobile.
+
+# Footer
+
+## Purpose
+
+Provide secondary navigation, company information, legal information, and contact details in a clear and unobtrusive way, while creating a structured conclusion to the page.
+
+## Layout
+
+The Footer is divided into Company, Navigation, Legal, and Contact content areas.
+
+- The outer System Lines bound the Footer content, using the globally defined content padding.
+- Internal System Lines serve as alignment axes between content areas.
+
+### Desktop
+
+- Company occupies Grid Columns `1–3`, Navigation occupies Grid Columns `4–6`, Legal occupies Grid Columns `7–9`, and Contact occupies Grid Columns `10–12`.
+- Company, Navigation, Legal, and Contact are top-aligned within one shared Grid row.
+- The Footer Bottom Row spans Grid Columns `1–12` across all four visual areas.
+
+### Tablet
+
+- Company occupies Grid Columns `1–4` and Navigation occupies Grid Columns `5–8` in the first row.
+- Legal occupies Grid Columns `1–4` and Contact occupies Grid Columns `5–8` in the second row.
+- The two content areas within each row are top-aligned.
+- The Footer Bottom Row spans Grid Columns `1–8`.
+
+### Mobile
+
+- Company, Navigation, Legal, Contact, and the Footer Bottom Row each occupy Grid Columns `1–4` in one full-width flow and preserve that canonical document order.
+
+### Visual Design
+
+- Uses the global `Background` (`#FFFFFF`) by default. The consuming page may override it with an approved global Background System color; only the override is documented locally.
+- Uses no top Border or Shadow.
+- All Footer text links, including Navigation, Legal, and the phone number, use font weight `400` as a Footer-specific override of the `Text Link` Component.
+
+### Spacing
+
+- On Tablet, `XL` (`48px`) separates the first content-area row from the second content-area row.
+- On Mobile, `XL` (`48px`) separates adjacent Company, Navigation, Legal, and Contact content areas.
+- Across all Breakpoints, `XL` (`48px`) separates the complete upper content-area composition from the Footer Bottom Row Divider.
+
+## Component and Semantics
+
+- Uses native `footer` landmark semantics.
+
+## Company
+
+### Content
+
+- Displays the company Logo using `/brand/Logo.svg`.
+- The Logo remains unchanged across Area Pages.
+- Company description: **We buy houses as-is throughout Northeast Ohio and provide straightforward cash offers without repairs, showings, or agent fees.**
+
+### Component and Semantics
+
+- The complete Logo uses link semantics and navigates to the canonical homepage at `/`.
+- The Company description uses paragraph semantics.
+
+### Visual Design
+
+- The Company description uses the global `Body` typography and `Text Secondary` color.
+
+### Dimensions and Alignment
+
+- The Logo preserves its original Aspect Ratio without cropping or distortion.
+- The Logo height is `56px` on Desktop, `48px` on Tablet, and `44px` on Mobile; its width is derived from its original Aspect Ratio.
+- The Logo and Company description form one left-aligned vertical content flow in that order.
+
+### Spacing
+
+- `M` (`24px`) separates the Logo from the Company description across all Breakpoints.
+
+### Accessibility
+
+- The Logo link's accessible name is `Your House in Cash home`.
+
+## Navigation
+
+### Content
+
+- Heading: **Explore**.
+- Footer navigation links appear in this order:
+
+  1. `Areas We Buy In` — `/areas-we-buy-in`
+  2. `About Us` — `/about-us`
+  3. `Sell a Portfolio` — `/sell-property-portfolio`
+  4. `Blog` — `/blog`
+
+### Component and Semantics
+
+- The Navigation area uses navigation landmark semantics.
+- The heading uses `H2` semantics.
+- The Footer navigation links use one semantic unordered list with one list item per link.
+- Each link uses the documented `Text Link` Component with link semantics.
+
+### Visual Design
+
+- The heading uses the global `H4` typography.
+- The link list retains its semantic list structure without visible markers or default list margin or padding.
+
+### Dimensions and Alignment
+
+- The links form one left-aligned vertical content flow in canonical order.
+
+### Spacing
+
+- `M` (`24px`) separates the heading from the link list across all Breakpoints.
+- `S` (`16px`) separates adjacent links across all Breakpoints.
+
+### Accessibility
+
+- The visible **Explore** heading provides the Navigation landmark's accessible name.
+
+## Legal
+
+### Content
+
+- Heading: **Legal**.
+- `Privacy Policy` — `/privacy-policy`.
+- `Terms of Service` — `/terms-of-service`.
+
+### Component and Semantics
+
+- The heading uses `H2` semantics.
+- The Legal links use one semantic unordered list with one list item per link.
+- Each link uses the documented `Text Link` Component with link semantics.
+
+### Visual Design
+
+- The heading uses the global `H4` typography.
+- The Legal link list retains its semantic list structure without visible markers or default list margin or padding.
+
+### Dimensions and Alignment
+
+- The Legal links form one left-aligned vertical content flow in canonical order.
+
+### Spacing
+
+- `M` (`24px`) separates the heading from the Legal link list across all Breakpoints.
+- `S` (`16px`) separates the two Legal links across all Breakpoints.
+
+## Contact
+
+### Content
+
+- Heading: **Contact**.
+- Label: **Call Us**.
+- Phone number: `216-111-1111`.
+- The phone number uses link semantics and navigates to `tel:2161111111`.
+- Email: `info@yourhousesincash.com`, linked to `mailto:info@yourhousesincash.com`.
+- Physical address: **6545 Market Avenue North, North Canton, OH 44720**.
+- Service-area text: **Serving Northeast Ohio**.
+
+### Component and Semantics
+
+- The heading uses `H2` semantics.
+- The phone number uses the documented `Text Link` Component.
+- The email uses the documented `Text Link` Component with the Footer's regular font weight (`400`).
+- The physical address uses `address` semantics, with the street on the first line and city, state, and ZIP on the second line.
+- The service-area text uses paragraph semantics.
+
+### Visual Design
+
+- The heading uses the global `H4` typography.
+- The **Call Us** label uses the global `Label` typography.
+- The service-area text uses the global `Body Small` typography and `Text Secondary` color.
+- The physical address uses `Body Small`, Text Secondary, and normal (non-italic) font style.
+
+### Dimensions and Alignment
+
+- The heading, **Call Us** label, phone number, email, physical address, and service-area text form one left-aligned vertical content flow in that order. The email wraps when needed to remain within the column.
+
+### Spacing
+
+- `M` (`24px`) separates the heading from the **Call Us** label across all Breakpoints.
+- `XS` (`8px`) separates the **Call Us** label from the phone number across all Breakpoints.
+- `S` (`16px`) separates the phone number, email, physical address, and service-area text from each adjacent item across all Breakpoints.
+
+## Footer Bottom Row
+
+### Content
+
+- Copyright notice: **© {Current Year} Your House in Cash. All rights reserved.**
+- `{Current Year}` is generated dynamically from the current calendar year.
+- Social identity marks link to the following profiles in this order:
+  - Facebook: `https://www.facebook.com/yourhouseincash`
+  - Instagram: `https://www.instagram.com/yourhouseincash/`
+  - LinkedIn: `https://www.linkedin.com/company/your-house-in-cash`
+  - YouTube: `https://youtube.com/@yourhouseincash`
+  - TikTok: `https://www.tiktok.com/@yourhouseincash`
+  - X: `https://x.com/yourhouseincash/`
+
+### Component and Semantics
+
+- The copyright notice uses paragraph semantics.
+- Social identity marks use a semantic unordered list named `Social media` and local SVG images from `/images/social-platforms/`.
+- Each mark uses native link semantics and opens the supplied profile URL in a new tab, following the global [Link Destinations](implementation-guidelines.md#link-destinations) rule (`target="_blank"`, `rel="noopener noreferrer"`).
+
+### Visual Design
+
+- The copyright notice uses the global `Body Small` typography and `Text Muted` color.
+- Social identity marks are monochrome, `20px × 20px`, with no enclosing background, Border, or Shadow.
+- A full-width Divider above the copyright notice uses the global default `1px` solid Border treatment and `Border` color (`#E4E7E4`).
+
+### Dimensions and Alignment
+
+- The copyright notice is left-aligned.
+- On Desktop and Tablet, the social marks are right-aligned in the same row as the copyright notice, with both groups vertically centered.
+- On Mobile, the social marks follow the copyright notice on a separate left-aligned row.
+
+### Spacing
+
+- `M` (`24px`) separates the Divider from the copyright notice across all Breakpoints.
+- `S` (`16px`) separates adjacent social marks and is the minimum gap between the copyright and social groups.
+
+### Accessibility
+
+- The Divider is decorative and does not create a semantic boundary.
+- Each social image uses its platform name as alternative text, providing the link's accessible name. Links use the global keyboard focus-visible treatment.
+
 # Header
 
 ## Purpose
@@ -235,226 +591,51 @@ Provide clear, accessible navigation.
 
 * Not displayed in the Header on Mobile.
 
-# Footer
+# Minimal Footer
 
 ## Purpose
 
-Provide secondary navigation, company information, legal information, and contact details in a clear and unobtrusive way, while creating a structured conclusion to the page.
+Provide essential legal information while keeping attention on the page's primary task and preserving the main Footer's visual identity.
 
 ## Layout
 
-The Footer is divided into Company, Navigation, Legal, and Contact content areas.
-
-- The outer System Lines bound the Footer content, using the globally defined content padding.
-- Internal System Lines serve as alignment axes between content areas.
-
-### Desktop
-
-- Company occupies Grid Columns `1–3`, Navigation occupies Grid Columns `4–6`, Legal occupies Grid Columns `7–9`, and Contact occupies Grid Columns `10–12`.
-- Company, Navigation, Legal, and Contact are top-aligned within one shared Grid row.
-- The Footer Bottom Row spans Grid Columns `1–12` across all four visual areas.
-
-### Tablet
-
-- Company occupies Grid Columns `1–4` and Navigation occupies Grid Columns `5–8` in the first row.
-- Legal occupies Grid Columns `1–4` and Contact occupies Grid Columns `5–8` in the second row.
-- The two content areas within each row are top-aligned.
-- The Footer Bottom Row spans Grid Columns `1–8`.
-
-### Mobile
-
-- Company, Navigation, Legal, Contact, and the Footer Bottom Row each occupy Grid Columns `1–4` in one full-width flow and preserve that canonical document order.
-
-### Visual Design
-
-- Uses the global `Background` (`#FFFFFF`) by default. The consuming page may override it with an approved global Background System color; only the override is documented locally.
-- Uses no top Border or Shadow.
-- All Footer text links, including Navigation, Legal, and the phone number, use font weight `400` as a Footer-specific override of the `Text Link` Component.
-
-### Spacing
-
-- On Tablet, `XL` (`48px`) separates the first content-area row from the second content-area row.
-- On Mobile, `XL` (`48px`) separates adjacent Company, Navigation, Legal, and Contact content areas.
-- Across all Breakpoints, `XL` (`48px`) separates the complete upper content-area composition from the Footer Bottom Row Divider.
+* Uses the main Footer's white background, global Grid and System Lines, content inset, and regular-weight Text Links.
+* Consists of the main Footer Bottom Row composition: a full-width Divider, copyright on the left, and Legal Links on the right on Desktop and Tablet. On Mobile, Legal Links follow the copyright on a separate left-aligned row.
+* Reuses the main Footer Bottom Row alignment, Divider treatment, Divider-to-content spacing, and gap between content groups.
+* Vertical Padding: `M` (`24px`) at all Breakpoints, overriding the global Section vertical padding.
 
 ## Component and Semantics
 
-- Uses native `footer` landmark semantics.
+* Uses native `footer` semantics.
 
-## Company
-
-### Content
-
-- Displays the company Logo using `/brand/Logo.svg`.
-- The Logo remains unchanged across Area Pages.
-- Company description: **We buy houses as-is throughout Northeast Ohio and provide straightforward cash offers without repairs, showings, or agent fees.**
-
-### Component and Semantics
-
-- The complete Logo uses link semantics and navigates to the canonical homepage at `/`.
-- The Company description uses paragraph semantics.
-
-### Visual Design
-
-- The Company description uses the global `Body` typography and `Text Secondary` color.
-
-### Dimensions and Alignment
-
-- The Logo preserves its original Aspect Ratio without cropping or distortion.
-- The Logo height is `56px` on Desktop, `48px` on Tablet, and `44px` on Mobile; its width is derived from its original Aspect Ratio.
-- The Logo and Company description form one left-aligned vertical content flow in that order.
-
-### Spacing
-
-- `M` (`24px`) separates the Logo from the Company description across all Breakpoints.
-
-### Accessibility
-
-- The Logo link's accessible name is `Your House in Cash home`.
-
-## Navigation
+## Copyright
 
 ### Content
 
-- Heading: **Explore**.
-- Footer navigation links appear in this order:
-
-  1. `Areas We Buy In` — `/areas-we-buy-in`
-  2. `About Us` — `/about-us`
-  3. `Sell a Portfolio` — `/sell-property-portfolio`
-  4. `Blog` — `/blog`
+* `© {Current Year} Your House in Cash. All rights reserved.`, using the current calendar year.
 
 ### Component and Semantics
 
-- The Navigation area uses navigation landmark semantics.
-- The heading uses `H2` semantics.
-- The Footer navigation links use one semantic unordered list with one list item per link.
-- Each link uses the documented `Text Link` Component with link semantics.
+* Reuses the main Footer copyright paragraph and its typography and color.
 
-### Visual Design
-
-- The heading uses the global `H4` typography.
-- The link list retains its semantic list structure without visible markers or default list margin or padding.
-
-### Dimensions and Alignment
-
-- The links form one left-aligned vertical content flow in canonical order.
-
-### Spacing
-
-- `M` (`24px`) separates the heading from the link list across all Breakpoints.
-- `S` (`16px`) separates adjacent links across all Breakpoints.
-
-### Accessibility
-
-- The visible **Explore** heading provides the Navigation landmark's accessible name.
-
-## Legal
+## Legal Links
 
 ### Content
 
-- Heading: **Legal**.
-- `Privacy Policy` — `/privacy-policy`.
-- `Terms of Service` — `/terms-of-service`.
+* `Privacy Policy` — `/privacy-policy`.
+* `Terms of Service` — `/terms-of-service`.
 
 ### Component and Semantics
 
-- The heading uses `H2` semantics.
-- The Legal links use one semantic unordered list with one list item per link.
-- Each link uses the documented `Text Link` Component with link semantics.
-
-### Visual Design
-
-- The heading uses the global `H4` typography.
-- The Legal link list retains its semantic list structure without visible markers or default list margin or padding.
+* Uses a semantic list of Text Links, inheriting the main Footer's link styling.
 
 ### Dimensions and Alignment
 
-- The Legal links form one left-aligned vertical content flow in canonical order.
+* Links form a horizontal row that wraps when needed.
 
 ### Spacing
 
-- `M` (`24px`) separates the heading from the Legal link list across all Breakpoints.
-- `S` (`16px`) separates the two Legal links across all Breakpoints.
-
-## Contact
-
-### Content
-
-- Heading: **Contact**.
-- Label: **Call Us**.
-- Phone number: `216-111-1111`.
-- The phone number uses link semantics and navigates to `tel:2161111111`.
-- Email: `info@yourhousesincash.com`, linked to `mailto:info@yourhousesincash.com`.
-- Physical address: **6545 Market Avenue North, North Canton, OH 44720**.
-- Service-area text: **Serving Northeast Ohio**.
-
-### Component and Semantics
-
-- The heading uses `H2` semantics.
-- The phone number uses the documented `Text Link` Component.
-- The email uses the documented `Text Link` Component with the Footer's regular font weight (`400`).
-- The physical address uses `address` semantics, with the street on the first line and city, state, and ZIP on the second line.
-- The service-area text uses paragraph semantics.
-
-### Visual Design
-
-- The heading uses the global `H4` typography.
-- The **Call Us** label uses the global `Label` typography.
-- The service-area text uses the global `Body Small` typography and `Text Secondary` color.
-- The physical address uses `Body Small`, Text Secondary, and normal (non-italic) font style.
-
-### Dimensions and Alignment
-
-- The heading, **Call Us** label, phone number, email, physical address, and service-area text form one left-aligned vertical content flow in that order. The email wraps when needed to remain within the column.
-
-### Spacing
-
-- `M` (`24px`) separates the heading from the **Call Us** label across all Breakpoints.
-- `XS` (`8px`) separates the **Call Us** label from the phone number across all Breakpoints.
-- `S` (`16px`) separates the phone number, email, physical address, and service-area text from each adjacent item across all Breakpoints.
-
-## Footer Bottom Row
-
-### Content
-
-- Copyright notice: **© {Current Year} Your House in Cash. All rights reserved.**
-- `{Current Year}` is generated dynamically from the current calendar year.
-- Social identity marks link to the following profiles in this order:
-  - Facebook: `https://www.facebook.com/yourhouseincash`
-  - Instagram: `https://www.instagram.com/yourhouseincash/`
-  - LinkedIn: `https://www.linkedin.com/company/your-house-in-cash`
-  - YouTube: `https://youtube.com/@yourhouseincash`
-  - TikTok: `https://www.tiktok.com/@yourhouseincash`
-  - X: `https://x.com/yourhouseincash/`
-
-### Component and Semantics
-
-- The copyright notice uses paragraph semantics.
-- Social identity marks use a semantic unordered list named `Social media` and local SVG images from `/images/social-platforms/`.
-- Each mark uses native link semantics and opens the supplied profile URL in a new tab, following the global [Link Destinations](implementation-guidelines.md#link-destinations) rule (`target="_blank"`, `rel="noopener noreferrer"`).
-
-### Visual Design
-
-- The copyright notice uses the global `Body Small` typography and `Text Muted` color.
-- Social identity marks are monochrome, `20px × 20px`, with no enclosing background, Border, or Shadow.
-- A full-width Divider above the copyright notice uses the global default `1px` solid Border treatment and `Border` color (`#E4E7E4`).
-
-### Dimensions and Alignment
-
-- The copyright notice is left-aligned.
-- On Desktop and Tablet, the social marks are right-aligned in the same row as the copyright notice, with both groups vertically centered.
-- On Mobile, the social marks follow the copyright notice on a separate left-aligned row.
-
-### Spacing
-
-- `M` (`24px`) separates the Divider from the copyright notice across all Breakpoints.
-- `S` (`16px`) separates adjacent social marks and is the minimum gap between the copyright and social groups.
-
-### Accessibility
-
-- The Divider is decorative and does not create a semantic boundary.
-- Each social image uses its platform name as alternative text, providing the link's accessible name. Links use the global keyboard focus-visible treatment.
+* `S` (`16px`) separates links; wrapped rows use `XS` (`8px`).
 
 # Minimal Header
 
@@ -510,184 +691,87 @@ Provide brand identification, a link to the homepage, and direct phone contact w
 * The icon, label, Divider, and phone number form one horizontal row at all Breakpoints.
 * On Mobile, the label is shortened to `Questions?`. Desktop and Tablet retain `Still have questions?`.
 
-# Minimal Footer
+# Scroll Journey Tracker
 
 ## Purpose
 
-Provide essential legal information while keeping attention on the page's primary task and preserving the main Footer's visual identity.
+Show the visitor where they are within the current page and provide direct, accessible navigation to its configured Sections.
 
 ## Layout
 
-* Uses the main Footer's white background, global Grid and System Lines, content inset, and regular-weight Text Links.
-* Consists of the main Footer Bottom Row composition: a full-width Divider, copyright on the left, and Legal Links on the right on Desktop and Tablet. On Mobile, Legal Links follow the copyright on a separate left-aligned row.
-* Reuses the main Footer Bottom Row alignment, Divider treatment, Divider-to-content spacing, and gap between content groups.
-* Vertical Padding: `M` (`24px`) at all Breakpoints, overriding the global Section vertical padding.
+- The Scroll Journey Tracker is enabled by default and appears immediately before the default Header in document order. A consuming page may disable it only through its documented configuration.
+- The Tracker and Header form one sticky stack at the top of the viewport. The Tracker remains above the Header while the page scrolls.
+- Uses the global `Background` color and the global default `1px` solid `Border` treatment to separate the stack from page content. When the Header changes to its documented scrolled Shadow state, the Tracker shares that same stack-level separation without adding a second Shadow.
+- The Tracker uses the global Content Container and its inherited horizontal page padding at every Breakpoint.
+- The Tracker uses `XS` (`8px`) vertical padding. It has no fixed height; its height is determined by the label line box, this padding, and its existing `1px` Border.
 
-## Component and Semantics
+## Configuration
 
-* Uses native `footer` semantics.
+- Each consuming page supplies `enabled` and an ordered `sections` collection. `enabled` defaults to `true`; `enabled: false` omits the Tracker entirely.
+- Each configured section supplies a unique page-local `id` and a short visible `label`. The `id` identifies the corresponding Section anchor; the label is the Tracker's navigation label.
+- The collection order is the page's canonical Section order. The Tracker does not infer Section IDs or labels from a route, heading, or other page content.
+- When `sections` is absent or empty, the Tracker displays only the scroll-progress line and does not render a navigation list or label.
+- The page's configured Section anchors account for the complete sticky stack height so a selected Section is not obscured by the Tracker or Header.
 
-## Copyright
-
-### Content
-
-* `© {Current Year} Your House in Cash. All rights reserved.`, using the current calendar year.
-
-### Component and Semantics
-
-* Reuses the main Footer copyright paragraph and its typography and color.
-
-## Legal Links
-
-### Content
-
-* `Privacy Policy` — `/privacy-policy`.
-* `Terms of Service` — `/terms-of-service`.
+## Progress Line
 
 ### Component and Semantics
 
-* Uses a semantic list of Text Links, inheriting the main Footer's link styling.
-
-### Dimensions and Alignment
-
-* Links form a horizontal row that wraps when needed.
-
-### Spacing
-
-* `S` (`16px`) separates links; wrapped rows use `XS` (`8px`).
-
-
-# Final CTA
-
-## Purpose
-
-Conclude the page with a clear and simple conversion path.
-
-At this stage, the user has already received the necessary information throughout the page, so the section does not introduce new information. Instead, it focuses attention on the primary action — receiving an offer for their house.
-
-## Layout
-
-- Uses the global `Background` (`#FFFFFF`) by default. The consuming page may override it with an approved global Background System color according to its adjacent Sections; only the override is documented locally.
-
-- The left-aligned hierarchy of the Section Intro, Primary CTA, and Reassurance Row is preserved across Breakpoints.
-- The Section Intro, Primary CTA, and Reassurance Row form one left-aligned composition.
-- On Desktop, the CTA composition occupies Grid Columns `1–6`; the Supporting Benefits occupy Grid Columns `7–12`, with each benefit occupying three columns.
-- On Tablet, the CTA composition occupies Grid Columns `1–4`; the Supporting Benefits occupy Grid Columns `5–8`, with each benefit occupying two columns.
-- On Desktop and Tablet, the CTA composition and Supporting Benefits form parallel left- and right-area content flows whose top edges align.
-- On Mobile, the CTA composition occupies the full available Content Grid width, followed by the Supporting Benefits in canonical document order.
-
-## Section Intro
-
-### Content
-
-Contains, in document order:
-
-1. Section Label text: supplied by the consuming page.
-2. Primary Headline: supplied by the consuming page.
-3. Supporting Copy: supplied by the consuming page.
-
-Content values are supplied by the consuming page; the element structure, typography, spacing, responsive composition, and behavior are defined by this shared specification.
-
-### Component and Semantics
-
-- The Section Label uses the documented `Section Label` Component in its text-only configuration.
-- The Primary Headline uses `H2` semantics.
-- The Supporting Copy uses paragraph semantics.
+- The progress line is a non-interactive visual status indicator. It does not duplicate the section-navigation controls in the accessibility tree.
 
 ### Visual Design
 
-- The Primary Headline uses the global `H2` typography.
-- The Supporting Copy uses the global `Body Large` typography.
-
-### Dimensions and Alignment
-
-- The complete Section Intro is left-aligned.
-
-### Spacing
-
-- `S` (`16px`) separates the Section Label from the Primary Headline across all Breakpoints.
-- `M` (`24px`) separates the Primary Headline from the Supporting Copy across all Breakpoints.
-
-### Spacing After
-
-- `L` (`32px`) separates the complete Section Intro from the Primary CTA across all Breakpoints.
-
-## Primary CTA
-
-### Content
-
-- Label and destination: supplied by the consuming page.
-
-### Component and Semantics
-
-- Uses the documented **Button** Component with its `conversion` variant.
-
-### Spacing After
-
-- `XS` (`8px`) separates the Primary CTA from the Reassurance Row across all Breakpoints.
+- The unfilled track uses the global `Border` color.
+- The filled portion uses `Brand Green`.
+- The line is `1px` high, matching the global line and Border thickness, and remains visually secondary to the section labels.
 
 ### Interaction
 
-- Navigates to the destination supplied by the consuming page, following the global link-destination rules.
+- Its fill represents the page's scroll progress from the start of the document to its end and updates as the visitor scrolls or the viewport changes. Any visual fill transition is disabled when the visitor prefers reduced motion.
 
-## Reassurance Row
-
-### Content
-
-- Reassurance text: supplied by the consuming page.
-
-### Component and Semantics
-
-- Uses paragraph semantics.
-
-### Visual Design
-
-- Uses the global `Body Small` typography.
-
-### Dimensions and Alignment
-
-- Horizontally centered relative to the Primary CTA rather than the complete Final CTA composition.
-
-### Spacing After
-
-- On Mobile, `L` (`32px`) separates the Reassurance Row from the Supporting Benefits.
-
-## Supporting Benefits
+## Section Navigation
 
 ### Content
 
-Contains exactly two benefits in the order supplied by the consuming page. Each benefit supplies a canonical Lucide icon identity, a heading, and Supporting Copy.
+- Displays the configured Section labels in their supplied order when one or more Sections are configured.
 
 ### Component and Semantics
 
-- The benefits use one semantic unordered list with one list item per benefit.
-- Each icon uses the documented `Icon Container` Component at its Default size.
-- Each benefit heading uses `H3` semantics.
-- Each Supporting Copy uses paragraph semantics.
+- Uses a navigation landmark named `Page sections` containing one semantic unordered list with one native in-page anchor link per configured Section.
+- Each link targets its configured Section ID using a fragment destination.
 
 ### Visual Design
 
-- Each benefit heading uses a local `16px / 600 / 1.25` typography treatment.
-- Each Supporting Copy uses the global `Body` typography.
-- The benefits remain visually open without a Card, background, Border, Radius, or Shadow.
-- On Desktop and Tablet, each benefit is preceded by a `1px` global `Brand Green` vertical separator aligned with the top of its heading and matching the heading's `20px` line-box height; the first separator sits between the CTA composition and the first benefit, and the second sits between the two benefits.
+- Labels use the global `Label` typography.
+- The active label uses `Brand Green Dark`; inactive labels use `Text Secondary`.
+- The Section Navigation remains visually open, with no Card, Radius, or additional Shadow treatment.
 
 ### Dimensions and Alignment
 
-- The benefits are left-aligned.
-- On Desktop and Tablet, each icon, heading, and Supporting Copy form a vertical content flow in that order.
+- On Desktop, the labels and horizontal progress line form one horizontal row within the Content Container. `S` (`16px`) separates adjacent labels; `M` (`24px`) separates the label group from the progress line. Labels retain their complete short text without truncation.
+- On Tablet and Mobile, only the active label is displayed with the compact progress line. `S` (`16px`) separates the label from the line. The navigation links remain available through the active-label control, which exposes the complete configured Section list.
 
-### Spacing
+### Interaction
 
-- `M` (`24px`) separates each `Icon Container` from its benefit heading across all Breakpoints.
-- `S` (`16px`) separates each benefit heading from its Supporting Copy across all Breakpoints.
+- The active Section is the last configured Section whose anchor has reached the viewport position immediately below the sticky stack. Before the first anchor reaches that position, the first configured Section is active.
+- Selecting a Section link scrolls to its anchor, accounting for the complete sticky stack height. Scrolling uses smooth motion unless the visitor prefers reduced motion, in which case the destination is reached without animated scrolling.
+- Hover and focus-visible states use the global keyboard focus-visible treatment; hover also changes the applicable label text to `Brand Green Dark`.
 
 ### Accessibility
 
-- Benefit icons are decorative; the supplied adjacent headings communicate their benefit meaning.
-- The separators are decorative.
+- The active Section link communicates its current location with `aria-current="location"`.
+- Each Section link is keyboard reachable and activates with native link keyboard behavior.
+- The mobile active-label control has an accessible name that identifies it as Page sections, communicates its expanded or collapsed state, and is programmatically associated with the complete Section-link list when it is displayed.
+- Changing the active Section through ordinary scrolling does not move keyboard focus or create a live announcement.
 
 ### Responsive Behavior
 
-- On Mobile, the two benefits form one full-width vertical flow in canonical order with an `L` (`32px`) gap.
-- The vertical separators are not displayed on Mobile.
+- Desktop uses the labeled horizontal Section Navigation.
+- Tablet and Mobile use the active label with a compact horizontal progress line and expose the full configured navigation list from the active-label control.
+- The Tracker's sticky stack position, configured anchors, current-section behavior, and scroll progress are preserved across all Breakpoints.
+
+## Technical Requirements
+
+- The Tracker is a reusable shared component. Its behavior is driven only by the consuming page configuration and configured anchors; it contains no route-specific behavior.
+- The component measures the complete sticky Tracker and Header stack when calculating active-section positions and fragment-scroll offsets. It updates those calculations when the responsive Header layout or Tracker content changes.
+- The component responds to user scrolling, viewport resizing, and document-size changes so the progress line and active Section remain accurate.
