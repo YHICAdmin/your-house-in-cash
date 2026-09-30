@@ -695,83 +695,33 @@ Provide brand identification, a link to the homepage, and direct phone contact w
 
 ## Purpose
 
-Show the visitor where they are within the current page and provide direct, accessible navigation to its configured Sections.
+Show the visitor's progress through the current page with a simple filling line.
 
 ## Layout
 
-- The Scroll Journey Tracker is enabled by default and appears immediately before the default Header in document order. A consuming page may disable it only through its documented configuration.
+- The Scroll Journey Tracker is enabled by default and appears immediately before the Header selected by the consuming page in document order. A consuming page may disable it with `enabled: false`.
 - The Tracker and Header form one sticky stack at the top of the viewport. The Tracker remains above the Header while the page scrolls.
 - Uses the global `Background` color and the global default `1px` solid `Border` treatment to separate the stack from page content. When the Header changes to its documented scrolled Shadow state, the Tracker shares that same stack-level separation without adding a second Shadow.
 - The Tracker uses the global Content Container and its inherited horizontal page padding at every Breakpoint.
-- The Tracker uses `XS` (`8px`) vertical padding. It has no fixed height; its height is determined by the label line box, this padding, and its existing `1px` Border.
-
-## Configuration
-
-- Each consuming page supplies `enabled` and an ordered `sections` collection. `enabled` defaults to `true`; `enabled: false` omits the Tracker entirely.
-- Each configured section supplies a unique page-local `id` and a short visible `label`. The `id` identifies the corresponding Section anchor; the label is the Tracker's navigation label.
-- The collection order is the page's canonical Section order. The Tracker does not infer Section IDs or labels from a route, heading, or other page content.
-- When `sections` is absent or empty, the Tracker displays only the scroll-progress line and does not render a navigation list or label.
-- The page's configured Section anchors account for the complete sticky stack height so a selected Section is not obscured by the Tracker or Header.
+- The Tracker uses `XS` (`8px`) vertical padding. Its progress line fills the available Content Container width.
 
 ## Progress Line
 
 ### Component and Semantics
 
-- The progress line is a non-interactive visual status indicator. It does not duplicate the section-navigation controls in the accessibility tree.
+- The progress line is a non-interactive `progressbar` named `Page scroll progress`, with a minimum value of `0`, a maximum value of `100`, and a current value representing the visitor's current scroll progress.
 
 ### Visual Design
 
 - The unfilled track uses the global `Border` color.
 - The filled portion uses `Brand Green`.
-- The line is `1px` high, matching the global line and Border thickness, and remains visually secondary to the section labels.
+- The line is `1px` high, matching the global line and Border thickness.
 
 ### Interaction
 
 - Its fill represents the page's scroll progress from the start of the document to its end and updates as the visitor scrolls or the viewport changes. Any visual fill transition is disabled when the visitor prefers reduced motion.
 
-## Section Navigation
-
-### Content
-
-- Displays the configured Section labels in their supplied order when one or more Sections are configured.
-
-### Component and Semantics
-
-- Uses a navigation landmark named `Page sections` containing one semantic unordered list with one native in-page anchor link per configured Section.
-- Each link targets its configured Section ID using a fragment destination.
-
-### Visual Design
-
-- Labels use the global `Label` typography.
-- The active label uses `Brand Green Dark`; inactive labels use `Text Secondary`.
-- The Section Navigation remains visually open, with no Card, Radius, or additional Shadow treatment.
-
-### Dimensions and Alignment
-
-- On Desktop, the labels and horizontal progress line form one horizontal row within the Content Container. `S` (`16px`) separates adjacent labels; `M` (`24px`) separates the label group from the progress line. Labels retain their complete short text without truncation.
-- On Tablet and Mobile, only the active label is displayed with the compact progress line. `S` (`16px`) separates the label from the line. The navigation links remain available through the active-label control, which exposes the complete configured Section list.
-
-### Interaction
-
-- The active Section is the last configured Section whose anchor has reached the viewport position immediately below the sticky stack. Before the first anchor reaches that position, the first configured Section is active.
-- Selecting a Section link scrolls to its anchor, accounting for the complete sticky stack height. Scrolling uses smooth motion unless the visitor prefers reduced motion, in which case the destination is reached without animated scrolling.
-- Hover and focus-visible states use the global keyboard focus-visible treatment; hover also changes the applicable label text to `Brand Green Dark`.
-
-### Accessibility
-
-- The active Section link communicates its current location with `aria-current="location"`.
-- Each Section link is keyboard reachable and activates with native link keyboard behavior.
-- The mobile active-label control has an accessible name that identifies it as Page sections, communicates its expanded or collapsed state, and is programmatically associated with the complete Section-link list when it is displayed.
-- Changing the active Section through ordinary scrolling does not move keyboard focus or create a live announcement.
-
-### Responsive Behavior
-
-- Desktop uses the labeled horizontal Section Navigation.
-- Tablet and Mobile use the active label with a compact horizontal progress line and expose the full configured navigation list from the active-label control.
-- The Tracker's sticky stack position, configured anchors, current-section behavior, and scroll progress are preserved across all Breakpoints.
-
 ## Technical Requirements
 
-- The Tracker is a reusable shared component. Its behavior is driven only by the consuming page configuration and configured anchors; it contains no route-specific behavior.
-- The component measures the complete sticky Tracker and Header stack when calculating active-section positions and fragment-scroll offsets. It updates those calculations when the responsive Header layout or Tracker content changes.
-- The component responds to user scrolling, viewport resizing, and document-size changes so the progress line and active Section remain accurate.
+- The Tracker is a reusable shared component with no route-specific behavior. Its only page-level configuration is the optional `enabled` Boolean, which defaults to `true`.
+- The component derives its progress from the document scroll range and responds to user scrolling, viewport resizing, and document-size changes so the progress line remains accurate.

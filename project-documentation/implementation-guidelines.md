@@ -8,7 +8,7 @@
 
 ## Element Order
 
-Build each page with the default `Header` first, its content in the documented order, and the default `Footer` last. The defaults are the `Header` and `Footer` defined in [Shared Sections](shared-sections.md), and apply even when the page specification does not list them. If the page specification explicitly selects a different Header or Footer, render that component in place of the corresponding default.
+Build each page with the default `Scroll Journey Tracker` first, followed by the default `Header`, its content in the documented order, and the default `Footer` last. The default `Scroll Journey Tracker`, `Header`, and `Footer` are defined in [Shared Sections](shared-sections.md) and apply even when the page specification does not list them. Omit the Tracker when its page-level configuration sets `enabled: false`. If the page specification explicitly selects a different Header or Footer, render that component in place of the corresponding default; the selected Header follows the enabled Tracker.
 
 Elements within each Section must be implemented in the order in which they are documented. The documented element order determines DOM order unless an approved exception is explicitly defined in the relevant Section or Element specification.
 
