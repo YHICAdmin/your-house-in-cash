@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Cog } from "lucide-react";
 import { SectionLabel } from "@/components/ui/section-label";
 import styles from "./area-how-it-works.module.css";
@@ -111,6 +111,8 @@ export function AreaHowItWorks() {
   const [documentVisible, setDocumentVisible] = useState(true);
   const [desktopComposition, setDesktopComposition] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [sectionVisible, setSectionVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const desktopQuery = window.matchMedia("(min-width: 768px)");
@@ -129,6 +131,21 @@ export function AreaHowItWorks() {
       desktopQuery.removeEventListener("change", syncPreferences);
       motionQuery.removeEventListener("change", syncPreferences);
     };
+  }, []);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    if (!section) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      setSectionVisible(entry.isIntersecting);
+    });
+
+    observer.observe(section);
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -151,6 +168,7 @@ export function AreaHowItWorks() {
       manualSelection ||
       pointerInside ||
       focusInside ||
+      !sectionVisible ||
       !documentVisible
     ) {
       return;
@@ -168,6 +186,7 @@ export function AreaHowItWorks() {
     manualSelection,
     pointerInside,
     reducedMotion,
+    sectionVisible,
   ]);
 
   const selectStep = (index: number) => {
@@ -177,6 +196,7 @@ export function AreaHowItWorks() {
 
   return (
     <section
+      ref={sectionRef}
       className="section-spacing system-lines-bg"
       aria-labelledby={headingId}
     >
@@ -229,7 +249,7 @@ export function AreaHowItWorks() {
               <StepIllustration
                 key={step.illustration}
                 src={step.illustration}
-                active={activeStep === index}
+                active={sectionVisible && activeStep === index}
               />
             ))}
           </div>

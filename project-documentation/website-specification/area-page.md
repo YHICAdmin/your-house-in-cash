@@ -1030,13 +1030,14 @@ The Process Steps area contains exactly three Steps in this order:
 * Step color changes use a `150ms ease` transition.
 * The active Step retains its active visual treatment when hovered.
 * Step `01` is active when the composition first loads.
+* Automatic advancement and the initial illustration crossfade begin only when the How It Works Section enters the viewport.
 * The active Step advances automatically in the sequence `01` to `02` to `03`, then returns to `01`.
 * Automatic advancement occurs every `7 seconds`.
 * Activating a Step manually makes it the active Step, displays its corresponding Step Content, and stops automatic advancement for the remainder of the current page view.
 * Each automatic or manual Step change replaces the content displayed in the Step Content area.
-* On Desktop and Tablet, automatic and manual illustration changes use a `300ms ease` crossfade in which the outgoing illustration fades out and the incoming illustration fades in.
-* The transition does not slide, scale, or otherwise move the illustrations spatially.
-* Automatic advancement pauses while the pointer is over the Interactive Process Composition, while keyboard focus is within it, and while the document is not visible. It resumes when the applicable pause condition ends unless the user has activated a Step manually.
+* On Desktop and Tablet, automatic and manual illustration changes use a `300ms ease-in` transition in which the outgoing illustration fades out and slides right by `S` (`16px`), while the incoming illustration fades in and slides from the right by `S` (`16px`).
+* The transition does not scale the illustrations.
+* Automatic advancement pauses while the pointer is over the Interactive Process Composition, while keyboard focus is within it, while the Section is outside the viewport, and while the document is not visible. It begins or resumes when the applicable pause condition ends unless the user has activated a Step manually.
 * When `prefers-reduced-motion: reduce` applies, automatic advancement is disabled, Step `01` remains active until the user selects another Step, and manual illustration changes occur immediately without animation.
 * On Mobile, all three Steps and their corresponding Step Content are displayed simultaneously and the composition has no automatic advancement, active Step, or Step-selection interaction.
 

@@ -114,11 +114,15 @@
 .illustration {
   object-fit: contain;
   opacity: 0;
-  transition: opacity 300ms ease;
+  transform: translateX(var(--spacing-s));
+  transition:
+    opacity 300ms ease-in,
+    transform 300ms ease-in;
 }
 
 .illustrationActive {
   opacity: 1;
+  transform: translateX(0);
 }
 
 @media (min-width: 768px) {
