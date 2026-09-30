@@ -3,7 +3,7 @@
 
   position: sticky;
   z-index: 10;
-  top: 0;
+  top: var(--scroll-journey-tracker-height, 0px);
   height: var(--header-height);
   border-bottom: 1px dashed var(--color-line);
   background: var(--color-background);
@@ -117,7 +117,7 @@
 
 .menuPanel {
   position: fixed;
-  top: var(--header-height);
+  top: calc(var(--scroll-journey-tracker-height, 0px) + var(--header-height));
   right: 0;
   bottom: 0;
   left: 0;

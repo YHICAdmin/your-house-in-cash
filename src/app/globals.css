@@ -160,6 +160,14 @@
 }
 
 @layer components {
+  .site-shell {
+    --scroll-journey-tracker-height: 0px;
+  }
+
+  .site-shell:has(.scroll-journey-tracker) {
+    --scroll-journey-tracker-height: 5px;
+  }
+
   .page-shell {
     width: 100%;
     max-width: var(--container-page);

@@ -699,11 +699,9 @@ Show the visitor's progress through the current page with a simple filling line.
 
 ## Layout
 
-- The Scroll Journey Tracker is enabled by default and appears immediately before the Header selected by the consuming page in document order. A consuming page may disable it with `enabled: false`.
-- The Tracker and Header form one sticky stack at the top of the viewport. The Tracker remains above the Header while the page scrolls.
-- Uses the global `Background` color and the global default `1px` solid `Border` treatment to separate the stack from page content. When the Header changes to its documented scrolled Shadow state, the Tracker shares that same stack-level separation without adding a second Shadow.
-- The Tracker uses the global Content Container and its inherited horizontal page padding at every Breakpoint.
-- The Tracker uses `XS` (`8px`) vertical padding. Its progress line fills the available Content Container width.
+- Enabled by default, the Tracker precedes the Header selected by the consuming page in document order; together they form a sticky stack with the Tracker above the Header. A consuming page may disable it with `enabled: false`.
+- Uses the global `Background` color. When scrolled, the sticky stack uses the Header's Subtle Shadow.
+- The Tracker is `5px` high. Its progress line fills the full viewport width and the Tracker height.
 
 ## Progress Line
 
@@ -713,13 +711,12 @@ Show the visitor's progress through the current page with a simple filling line.
 
 ### Visual Design
 
-- The unfilled track uses the global `Border` color.
 - The filled portion uses `Brand Green`.
-- The line is `1px` high, matching the global line and Border thickness.
+- The unfilled portion remains the global `Background` color, without a separate track, Border, or divider.
 
 ### Interaction
 
-- Its fill represents the page's scroll progress from the start of the document to its end and updates as the visitor scrolls or the viewport changes. Any visual fill transition is disabled when the visitor prefers reduced motion.
+- Its fill represents the page's scroll progress from the start of the document to its end. Any visual fill transition is disabled when the visitor prefers reduced motion.
 
 ## Technical Requirements
 
