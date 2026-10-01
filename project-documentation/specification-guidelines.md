@@ -180,6 +180,12 @@ This authority applies to future specification work and to new unresolved decora
 
 ## How to Write Specifications
 
+### Document Heading Hierarchy
+
+The filename identifies a page specification. Never add a Markdown document title naming that page, such as `# About Us Page`; it is redundant.
+
+Every page specification starts directly with its first substantive H1: `# Purpose`, followed by `# Page Routing`. Reserve H1 headings for substantive top-level sections, and nest Section-specific details beneath their Section heading using the appropriate lower heading levels. This rule governs Markdown specification structure only; it does not prescribe rendered HTML page headings.
+
 ### Positive Requirements and Negative Constraints
 
 Specifications describe what is to be built: the required content, composition, and behavior. Describe the intended result rather than enumerating excluded alternatives or elements outside its scope.
