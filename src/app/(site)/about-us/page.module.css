@@ -210,13 +210,17 @@
 }
 
 @media (min-width: 1200px) {
+  .introduction {
+    padding-block: var(--spacing-2xl);
+  }
+
   .introductionCopy {
     grid-column: 1 / span 7;
   }
 
   .founderPhotograph {
     grid-column: 8 / span 5;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 5 / 4;
   }
 
   .directAnswerHeading {

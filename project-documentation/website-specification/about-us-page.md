@@ -26,6 +26,7 @@ This is a calm, personal introduction. It is not a sales Hero and does not reuse
 
 - Use the existing Brand Green Light (`#EAF3EC`) as a full-width, quiet section background.
 - On Desktop, the section uses a spacious `7 / 5` two-column composition. The left seven columns contain the Label, Opening, Supporting Copy, and Secondary Line; the right five columns contain one photograph of Noah.
+- On Desktop, the Introduction uses `2XL` (`64px`) vertical padding to create a more compact section height.
 - Use the supplied `Screenshot 2026-10-01 104146.png` only as compositional inspiration. Do not reproduce its typography, colors, spacing, or exact layout.
 - Use generous whitespace. The visual tone is personal, calm, and credible.
 - Do not use a location pill, oversized sales headline, CTA button, house collage, trust badges, a three-benefit row, testimonials, statistics, deal counts, local-office claims, badges, or benefit icons.
@@ -82,6 +83,10 @@ This is a calm, personal introduction. It is not a sales Hero and does not reuse
 
 - Use a simple rounded crop.
 - The photograph supports the introduction and does not dominate the composition.
+
+### Dimensions and Alignment
+
+- On Desktop, use a `5:4` photograph crop.
 
 ### Responsive Behavior
 
