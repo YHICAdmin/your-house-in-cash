@@ -1,10 +1,10 @@
 # Purpose
 
-Introduce Noah and explain the purpose of Your House in Cash. The page should give homeowners a clear, personal understanding of why the company exists, the type of direct-sale option it provides, and what they can expect when they reach out.
+Introduce Your House in Cash and explain its purpose. The page should give homeowners a clear understanding of why the company exists, the type of direct-sale option it provides, and what they can expect when they reach out.
 
 The page is structured as four sections, excluding the shared Header and Footer:
 
-1. Introduction — “Hi, I’m Noah” and an explanation of what Your House in Cash is.
+1. Introduction — a clear introduction to Your House in Cash and its approach.
 2. A Direct Answer, Early.
 3. What You Can Expect — clear communication, a practical as-is option, and no obligation.
 4. Final CTA — “Let’s Start With a Clear Number.”
@@ -18,60 +18,44 @@ The page is structured as four sections, excluding the shared Header and Footer:
 
 ## Purpose
 
-Answer the visitor’s first question: **“Who is behind this company?”**
+Give the visitor a clear first understanding of Your House in Cash and its approach.
 
-This is a calm, personal introduction. It is not a sales Hero and does not reuse the Area Page or Situation Page Hero pattern.
+This is a calm, credible introduction. It is not a sales Hero and does not reuse the Area Page or Situation Page Hero pattern.
 
 ## Layout
 
 - Use the existing Brand Green Light (`#EAF3EC`) as a full-width, quiet section background.
-- On Desktop, the section uses a spacious `7 / 5` two-column composition. The left seven columns contain the Label, Opening, Supporting Copy, and Secondary Line; the right five columns contain one photograph of Noah.
+- On Desktop, the section uses a spacious `7 / 5` two-column composition. The left seven columns contain the Title and Subtitle; the right five columns contain one photograph of Noah.
 - On Desktop, the Introduction uses `2XL` (`64px`) vertical padding to create a more compact section height.
+- On Desktop, top-align the Title and Subtitle with a smaller landscape photograph on the right, creating a compact text-and-media composition.
 - Use the supplied `Screenshot 2026-10-01 104146.png` only as compositional inspiration. Do not reproduce its typography, colors, spacing, or exact layout.
 - Use generous whitespace. The visual tone is personal, calm, and credible.
 - Do not use a location pill, oversized sales headline, CTA button, house collage, trust badges, a three-benefit row, testimonials, statistics, deal counts, local-office claims, badges, or benefit icons.
 - On Mobile, keep the section simple and airy; do not add decorative elements solely for Mobile.
 
-## Label
+## Title
 
 ### Content
 
-- Section title: `About Us`
+- `About Your House in Cash`
 
 ### Component and Semantics
 
-- Use the shared Section Label Component.
-
-## Opening
-
-### Content
-
-- Opening: `Hi, I’m Noah, the person behind Your House in Cash.`
+- Use H1 semantics.
 
 ### Visual Design
 
-- Use the global Display typography.
+- Use the global H2 typography.
 
-## Supporting Copy
-
-### Content
-
-- `I work with Cleveland-area homeowners who want a clear, direct option for selling a house—especially when repairs, timing, tenants, an inherited property, or a long traditional sale process make things more complicated.`
-
-### Visual Design
-
-- Use the global Body typography.
-
-## Secondary Line
+## Subtitle
 
 ### Content
 
-- Optional secondary line: `My Cleveland real estate journey began in 2021.`
+- `Honest guidance before you decide what to do next.`
 
 ### Visual Design
 
-- Use the global Body Small typography for the optional secondary line.
-- Present the optional secondary line with visually quieter emphasis than the opening and supporting copy.
+- Use the global Body Large typography.
 
 ## Founder Photograph
 
@@ -86,11 +70,11 @@ This is a calm, personal introduction. It is not a sales Hero and does not reuse
 
 ### Dimensions and Alignment
 
-- On Desktop, use a `5:4` photograph crop.
+- On Desktop, use a `3:2` landscape photograph crop.
 
 ### Responsive Behavior
 
-- On Mobile, the Label, Opening, Supporting Copy, and Secondary Line precede the Founder Photograph.
+- On Mobile, the Title and Subtitle precede the Founder Photograph.
 
 # A Direct Answer, Early
 

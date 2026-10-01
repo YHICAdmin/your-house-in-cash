@@ -30,27 +30,24 @@
   align-items: flex-start;
 }
 
-.introductionOpening {
-  margin: var(--spacing-m) 0;
+.introductionTitle {
+  margin: 0 0 var(--spacing-m);
 }
 
-.introductionSupporting,
-.introductionSecondary,
+.introductionSubtitle {
+  margin: 0 0 var(--spacing-m);
+  color: var(--color-text-secondary);
+}
+
 .directAnswerContent p,
 .standard p,
 .finalCtaCopy p {
   margin: 0;
 }
 
-.introductionSupporting,
 .assessment,
 .standard > p:last-child {
   color: var(--color-text-secondary);
-}
-
-.introductionSecondary {
-  margin-top: var(--spacing-l);
-  color: var(--color-text-muted);
 }
 
 .founderPhotograph {
@@ -216,11 +213,13 @@
 
   .introductionCopy {
     grid-column: 1 / span 7;
+    align-self: start;
   }
 
   .founderPhotograph {
     grid-column: 8 / span 5;
-    aspect-ratio: 5 / 4;
+    align-self: start;
+    aspect-ratio: 3 / 2;
   }
 
   .directAnswerHeading {

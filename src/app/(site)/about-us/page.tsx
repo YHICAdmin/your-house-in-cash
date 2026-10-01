@@ -17,15 +17,11 @@ export default function AboutUsPage() {
         <section className={`${styles.section} ${styles.introduction} section-spacing system-lines-bg`} aria-labelledby="about-us-heading">
           <div className={`${styles.introductionLayout} content-grid`}>
             <div className={styles.introductionCopy}>
-              <SectionLabel>About Us</SectionLabel>
-              <h1 id="about-us-heading" className={`${styles.introductionOpening} text-display`}>
-                Hi, I’m Noah, the person behind Your House in Cash.
+              <h1 id="about-us-heading" className={`${styles.introductionTitle} text-heading-2`}>
+                About Your House in Cash
               </h1>
-              <p className={`${styles.introductionSupporting} text-body`}>
-                I work with Cleveland-area homeowners who want a clear, direct option for selling a house—especially when repairs, timing, tenants, an inherited property, or a long traditional sale process make things more complicated.
-              </p>
-              <p className={`${styles.introductionSecondary} text-body-small`}>
-                My Cleveland real estate journey began in 2021.
+              <p className={`${styles.introductionSubtitle} text-body-large`}>
+                Honest guidance before you decide what to do next.
               </p>
             </div>
             <figure className={styles.founderPhotograph}>
