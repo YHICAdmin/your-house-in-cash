@@ -43,6 +43,10 @@ This is a calm, personal introduction. It is not a sales Hero and does not reuse
 
 ### Visual Design
 
+- Use the global H3 typography for the Section title.
+- Use the global Body Large typography for the Opening.
+- Use the global Body typography for the Supporting copy.
+- Use the global Body Small typography for the optional secondary line.
 - Present the optional secondary line with visually quieter emphasis than the opening and supporting copy.
 
 ## Founder Photograph
@@ -84,6 +88,7 @@ Explain what Noah believes homeowners deserve before deciding what to do with th
 
 ### Visual Design
 
+- Use the global Label typography.
 - Use small uppercase label styling.
 
 ## Primary Statement
@@ -94,6 +99,7 @@ Explain what Noah believes homeowners deserve before deciding what to do with th
 
 ### Visual Design
 
+- Use the global Display typography.
 - Use oversized, near-black type with intentional line breaks and generous surrounding whitespace.
 
 ## Divider
@@ -108,12 +114,20 @@ Explain what Noah believes homeowners deserve before deciding what to do with th
 
 - `There isn’t one right path.`
 
+### Visual Design
+
+- Use the global H3 typography.
+
 ## Supporting Copy
 
 ### Content
 
 - `Sometimes listing with an agent is the best path. Other times, the work, time, showings, uncertainty, or condition of the property make an as-is sale more practical.`
 - `Either way, you should be able to understand the real options before deciding what comes next.`
+
+### Visual Design
+
+- Use the global Body typography.
 
 ## Closing Line
 
@@ -123,6 +137,7 @@ Explain what Noah believes homeowners deserve before deciding what to do with th
 
 ### Visual Design
 
+- Use the global Body typography.
 - Present this line with quieter emphasis than the Primary Statement and Supporting Copy.
 
 # A Direct Answer, Early
@@ -145,6 +160,10 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 
 - `A Direct Answer, Early`
 
+### Visual Design
+
+- Use the global H2 typography.
+
 ## Direct Contact
 
 ### Content
@@ -153,6 +172,7 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 
 ### Visual Design
 
+- Use the global H3 typography.
 - Give this statement stronger emphasis than the Assessment and Outcome content.
 
 ## Assessment
@@ -160,6 +180,10 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 ### Content
 
 - `I take the time to understand the property and your situation before making an offer. My goal is not to force every house into a deal. It is to identify whether there is a realistic path to a completed sale.`
+
+### Visual Design
+
+- Use the global Body Large typography.
 
 ## Outcome
 
@@ -170,6 +194,7 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 
 ### Visual Design
 
+- Use the global Body typography.
 - Present the first line as the outcome when there is a realistic path and the second as the outcome when there is not.
 
 ## Closing Line
@@ -180,6 +205,7 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 
 ### Visual Design
 
+- Use the global Body Large typography.
 - Give the closing line clear concluding emphasis without competing with the Direct Contact statement.
 
 # What You Can Expect
@@ -215,6 +241,10 @@ Turn the earlier promises on the page into three practical standards for working
 
 - `What you can expect.`
 
+### Visual Design
+
+- Use the global H2 typography.
+
 ## Clear Communication
 
 ### Content
@@ -222,6 +252,10 @@ Turn the earlier promises on the page into three practical standards for working
 - Standard number: `01`
 - Title: `Clear communication`
 - `You will know what the offer is, what it is based on, and what the next steps would look like before you decide anything.`
+
+### Visual Design
+
+- Use the global Label typography for the Standard number, H4 typography for the Title, and Body typography for the supporting copy.
 
 ## A Practical As-Is Option
 
@@ -231,6 +265,10 @@ Turn the earlier promises on the page into three practical standards for working
 - Title: `A practical as-is option`
 - `You do not need to repair the house, prepare it for showings, or make it look perfect just to explore a direct sale.`
 
+### Visual Design
+
+- Use the global Label typography for the Standard number, H4 typography for the Title, and Body typography for the supporting copy.
+
 ## No Obligation
 
 ### Content
@@ -238,6 +276,10 @@ Turn the earlier promises on the page into three practical standards for working
 - Standard number: `03`
 - Title: `No obligation`
 - `An offer is simply one option. If listing, keeping the property, or taking another path makes more sense for you, you should choose what works best.`
+
+### Visual Design
+
+- Use the global Label typography for the Standard number, H4 typography for the Title, and Body typography for the supporting copy.
 
 # Final CTA
 
@@ -261,6 +303,7 @@ Close the page with one calm, clear next step. After meeting Noah, understanding
 
 ### Visual Design
 
+- Use the global H2 typography.
 - Use large, light-colored typography.
 
 ## Supporting Copy
@@ -269,6 +312,10 @@ Close the page with one calm, clear next step. After meeting Noah, understanding
 
 - `If you are considering selling a Cleveland-area house, tell me a little about the property and your situation.`
 - `I will review it and provide a no-obligation as-is cash offer, so you can decide whether it is the right fit.`
+
+### Visual Design
+
+- Use the global Body Large typography.
 
 ## Primary CTA
 

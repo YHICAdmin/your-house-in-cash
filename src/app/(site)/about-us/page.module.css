@@ -1,0 +1,330 @@
+.section {
+  position: relative;
+}
+
+.introduction {
+  background: var(--color-background-soft);
+}
+
+.introductionLayout,
+.beliefsLayout,
+.directAnswerLayout,
+.expectationsLayout,
+.finalCtaLayout {
+  row-gap: var(--spacing-xl);
+}
+
+.introductionCopy,
+.founderPhotograph,
+.plainLabel,
+.beliefStatement,
+.beliefDivider,
+.beliefSubheading,
+.beliefCopy,
+.directAnswerHeading,
+.directAnswerContent,
+.expectationsHeader,
+.standards,
+.finalCtaContent {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.introductionCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.introductionTitle {
+  margin: 0 0 var(--spacing-xl);
+}
+
+.introductionOpening {
+  margin: 0 0 var(--spacing-m);
+}
+
+.introductionSupporting,
+.introductionSecondary,
+.beliefCopy p,
+.directAnswerContent p,
+.standard p,
+.finalCtaCopy p {
+  margin: 0;
+}
+
+.introductionSupporting,
+.beliefCopy,
+.assessment,
+.standard > p:last-child {
+  color: var(--color-text-secondary);
+}
+
+.introductionSecondary {
+  margin-top: var(--spacing-l);
+  color: var(--color-text-muted);
+}
+
+.founderPhotograph {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  margin: 0;
+  border-radius: var(--radius-large) var(--radius-large) var(--radius-pill) var(--radius-large);
+}
+
+.founderPhotograph img {
+  object-fit: cover;
+  object-position: 63% center;
+}
+
+.beliefs {
+  background: var(--color-brand-light);
+}
+
+.plainLabel {
+  margin: 0;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+}
+
+.beliefStatement {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.beliefDivider {
+  height: 1px;
+  background: var(--color-brand);
+}
+
+.beliefSubheading {
+  margin: 0;
+}
+
+.beliefCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.beliefClosing {
+  margin-top: var(--spacing-s) !important;
+  color: var(--color-text-muted);
+}
+
+.directAnswer {
+  background: var(--color-background);
+}
+
+.directAnswerHeading {
+  margin: 0;
+}
+
+.directAnswerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.directContact {
+  margin: 0 0 var(--spacing-l) !important;
+}
+
+.assessment {
+  margin-bottom: var(--spacing-xl) !important;
+}
+
+.outcomes {
+  display: grid;
+  width: 100%;
+  gap: var(--spacing-s);
+  margin-bottom: var(--spacing-xl);
+  padding-block: var(--spacing-m);
+  border-block: 1px solid var(--color-border);
+}
+
+.directClosing {
+  color: var(--color-brand-dark);
+}
+
+.expectations {
+  background: var(--color-background-soft);
+}
+
+.expectationsHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.expectationsHeading {
+  margin: var(--spacing-s) 0 0;
+}
+
+.standards {
+  display: grid;
+  gap: var(--spacing-xl);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.standard {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.standardNumber {
+  margin: 0 0 var(--spacing-l) !important;
+  color: var(--color-brand-dark);
+}
+
+.standardTitle {
+  margin: 0 0 var(--spacing-s);
+}
+
+.openStandard {
+  padding-top: var(--spacing-l);
+}
+
+.finalCta {
+  --system-line-color: rgb(255 255 255 / 20%);
+  background: var(--color-brand-dark);
+  color: var(--color-background);
+}
+
+.finalCtaContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.finalCtaHeading {
+  max-width: 20ch;
+  margin: 0 0 var(--spacing-m);
+}
+
+.finalCtaCopy {
+  display: flex;
+  max-width: 56ch;
+  flex-direction: column;
+  gap: var(--spacing-s);
+  margin-bottom: var(--spacing-l);
+  color: var(--color-brand-light);
+}
+
+@media (min-width: 768px) {
+  .introductionLayout,
+  .beliefsLayout,
+  .directAnswerLayout,
+  .expectationsLayout,
+  .finalCtaLayout {
+    row-gap: var(--spacing-2xl);
+  }
+
+  .introductionCopy {
+    grid-column: 1 / span 4;
+    align-self: center;
+  }
+
+  .founderPhotograph {
+    grid-column: 5 / span 4;
+    aspect-ratio: 1 / 1;
+  }
+
+  .beliefStatement,
+  .beliefDivider {
+    grid-column: 1 / -1;
+  }
+
+  .beliefSubheading {
+    grid-column: 1 / span 3;
+  }
+
+  .beliefCopy {
+    grid-column: 4 / span 5;
+  }
+
+  .directAnswerHeading {
+    grid-column: 1 / span 3;
+  }
+
+  .directAnswerContent {
+    grid-column: 4 / span 5;
+  }
+
+  .standards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-m);
+  }
+
+  .openStandard {
+    padding-top: var(--spacing-xl);
+  }
+
+  .finalCtaContent {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width: 1200px) {
+  .introductionCopy {
+    grid-column: 1 / span 5;
+  }
+
+  .founderPhotograph {
+    grid-column: 8 / span 4;
+    aspect-ratio: 4 / 5;
+  }
+
+  .beliefStatement {
+    grid-column: 1 / span 11;
+    max-width: 18ch;
+  }
+
+  .beliefSubheading {
+    grid-column: 1 / span 3;
+  }
+
+  .beliefCopy {
+    grid-column: 5 / span 6;
+  }
+
+  .directAnswerHeading {
+    grid-column: 1 / span 4;
+  }
+
+  .directAnswerContent {
+    grid-column: 6 / span 6;
+  }
+
+  .expectationsHeader {
+    grid-column: 1 / -1;
+  }
+
+  .standards {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--layout-grid-gutter);
+  }
+
+  .standard:nth-child(1) {
+    grid-column: 4 / span 3;
+  }
+
+  .standard:nth-child(2) {
+    grid-column: 7 / span 3;
+  }
+
+  .standard:nth-child(3) {
+    grid-column: 10 / span 3;
+  }
+
+  .finalCtaContent {
+    grid-column: 1 / span 7;
+  }
+}
