@@ -48,4 +48,5 @@ Use the supplied Vidyard reference only as inspiration for the overall compositi
 - Use a simple uppercase text label rather than the Section Label pill Component.
 - Retain the site’s white space, black typography, restrained green accents, and clean editorial hierarchy.
 - Do not use a house-image collage, reviews, badges, statistics, or a sales-focused benefit row in this Hero.
-- Noah’s photograph must be an approved, repository-owned asset before implementation. Do not substitute an AI-generated or stock portrait.
+- Use the approved founder photograph at `/images/about-us/noah-founder.png`.
+- Do not substitute an AI-generated or stock portrait.
