@@ -3,11 +3,10 @@
 }
 
 .introduction {
-  background: var(--color-background-soft);
+  background: var(--color-brand-light);
 }
 
 .introductionLayout,
-.beliefsLayout,
 .directAnswerLayout,
 .expectationsLayout,
 .finalCtaLayout {
@@ -16,11 +15,6 @@
 
 .introductionCopy,
 .founderPhotograph,
-.plainLabel,
-.beliefStatement,
-.beliefDivider,
-.beliefSubheading,
-.beliefCopy,
 .directAnswerHeading,
 .directAnswerContent,
 .expectationsHeader,
@@ -36,17 +30,12 @@
   align-items: flex-start;
 }
 
-.introductionTitle {
-  margin: 0 0 var(--spacing-xl);
-}
-
 .introductionOpening {
-  margin: 0 0 var(--spacing-m);
+  margin: var(--spacing-m) 0;
 }
 
 .introductionSupporting,
 .introductionSecondary,
-.beliefCopy p,
 .directAnswerContent p,
 .standard p,
 .finalCtaCopy p {
@@ -54,7 +43,6 @@
 }
 
 .introductionSupporting,
-.beliefCopy,
 .assessment,
 .standard > p:last-child {
   color: var(--color-text-secondary);
@@ -76,41 +64,6 @@
 .founderPhotograph img {
   object-fit: cover;
   object-position: 63% center;
-}
-
-.beliefs {
-  background: var(--color-brand-light);
-}
-
-.plainLabel {
-  margin: 0;
-  color: var(--color-text-primary);
-  text-transform: uppercase;
-}
-
-.beliefStatement {
-  margin: 0;
-  color: var(--color-text-primary);
-}
-
-.beliefDivider {
-  height: 1px;
-  background: var(--color-brand);
-}
-
-.beliefSubheading {
-  margin: 0;
-}
-
-.beliefCopy {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-m);
-}
-
-.beliefClosing {
-  margin-top: var(--spacing-s) !important;
-  color: var(--color-text-muted);
 }
 
 .directAnswer {
@@ -149,7 +102,7 @@
 }
 
 .expectations {
-  background: var(--color-background-soft);
+  background: var(--color-brand-light);
 }
 
 .expectationsHeader {
@@ -218,7 +171,6 @@
 
 @media (min-width: 768px) {
   .introductionLayout,
-  .beliefsLayout,
   .directAnswerLayout,
   .expectationsLayout,
   .finalCtaLayout {
@@ -233,19 +185,6 @@
   .founderPhotograph {
     grid-column: 5 / span 4;
     aspect-ratio: 1 / 1;
-  }
-
-  .beliefStatement,
-  .beliefDivider {
-    grid-column: 1 / -1;
-  }
-
-  .beliefSubheading {
-    grid-column: 1 / span 3;
-  }
-
-  .beliefCopy {
-    grid-column: 4 / span 5;
   }
 
   .directAnswerHeading {
@@ -272,25 +211,12 @@
 
 @media (min-width: 1200px) {
   .introductionCopy {
-    grid-column: 1 / span 5;
+    grid-column: 1 / span 7;
   }
 
   .founderPhotograph {
-    grid-column: 8 / span 4;
+    grid-column: 8 / span 5;
     aspect-ratio: 4 / 5;
-  }
-
-  .beliefStatement {
-    grid-column: 1 / span 11;
-    max-width: 18ch;
-  }
-
-  .beliefSubheading {
-    grid-column: 1 / span 3;
-  }
-
-  .beliefCopy {
-    grid-column: 5 / span 6;
   }
 
   .directAnswerHeading {

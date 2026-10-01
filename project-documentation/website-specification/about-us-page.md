@@ -2,13 +2,12 @@
 
 Introduce Noah and explain the purpose of Your House in Cash. The page should give homeowners a clear, personal understanding of why the company exists, the type of direct-sale option it provides, and what they can expect when they reach out.
 
-The page is structured as five sections, excluding the shared Header and Footer:
+The page is structured as four sections, excluding the shared Header and Footer:
 
 1. Introduction — “Hi, I’m Noah” and an explanation of what Your House in Cash is.
-2. What I Believe.
-3. A Direct Answer, Early.
-4. What You Can Expect — clear communication, a practical as-is option, and no obligation.
-5. Final CTA — “Let’s Start With a Clear Number.”
+2. A Direct Answer, Early.
+3. What You Can Expect — clear communication, a practical as-is option, and no obligation.
+4. Final CTA — “Let’s Start With a Clear Number.”
 
 # Page Routing
 
@@ -25,27 +24,51 @@ This is a calm, personal introduction. It is not a sales Hero and does not reuse
 
 ## Layout
 
-- Use the existing Background Soft (`#F7F9F7`) as a full-width, quiet section background.
-- On Desktop, the section uses a spacious two-column composition. The left column contains the heading and copy; the right column contains one photograph of Noah.
+- Use the existing Brand Green Light (`#EAF3EC`) as a full-width, quiet section background.
+- On Desktop, the section uses a spacious `7 / 5` two-column composition. The left seven columns contain the Label, Opening, Supporting Copy, and Secondary Line; the right five columns contain one photograph of Noah.
 - Use the supplied `Screenshot 2026-10-01 104146.png` only as compositional inspiration. Do not reproduce its typography, colors, spacing, or exact layout.
 - Use generous whitespace. The visual tone is personal, calm, and credible.
 - Do not use a location pill, oversized sales headline, CTA button, house collage, trust badges, a three-benefit row, testimonials, statistics, deal counts, local-office claims, badges, or benefit icons.
 - On Mobile, keep the section simple and airy; do not add decorative elements solely for Mobile.
 
-## Introduction Copy
+## Label
 
 ### Content
 
 - Section title: `About Us`
+
+### Component and Semantics
+
+- Use the shared Section Label Component.
+
+## Opening
+
+### Content
+
 - Opening: `Hi, I’m Noah, the person behind Your House in Cash.`
-- Supporting copy: `I work with Cleveland-area homeowners who want a clear, direct option for selling a house—especially when repairs, timing, tenants, an inherited property, or a long traditional sale process make things more complicated.`
+
+### Visual Design
+
+- Use the global Display typography.
+
+## Supporting Copy
+
+### Content
+
+- `I work with Cleveland-area homeowners who want a clear, direct option for selling a house—especially when repairs, timing, tenants, an inherited property, or a long traditional sale process make things more complicated.`
+
+### Visual Design
+
+- Use the global Body typography.
+
+## Secondary Line
+
+### Content
+
 - Optional secondary line: `My Cleveland real estate journey began in 2021.`
 
 ### Visual Design
 
-- Use the global H3 typography for the Section title.
-- Use the global Body Large typography for the Opening.
-- Use the global Body typography for the Supporting copy.
 - Use the global Body Small typography for the optional secondary line.
 - Present the optional secondary line with visually quieter emphasis than the opening and supporting copy.
 
@@ -62,83 +85,7 @@ This is a calm, personal introduction. It is not a sales Hero and does not reuse
 
 ### Responsive Behavior
 
-- On Mobile, the Introduction Copy precedes the Founder Photograph.
-
-# What I Believe
-
-## Purpose
-
-Explain what Noah believes homeowners deserve before deciding what to do with their house. The section presents one continuous belief: the central belief, the explanation that there is not one right path, and the personal conclusion for starting Your House in Cash.
-
-## Layout
-
-- Use the existing Brand Green Light (`#EAF3EC`) as a full-width section background.
-- Use the approved section mockup only as composition inspiration. Do not reproduce its exact layout.
-- On Desktop, the Label appears above the Primary Statement. The Primary Statement occupies most of the upper two-thirds of the section, followed by one thin horizontal Divider.
-- Below the Divider, use two columns: the Supporting Subheading in a narrow left column, and the Supporting Copy followed by the Closing Line in a wider right column.
-- The belief remains visually dominant; the explanation is supporting context rather than a separate section.
-- Do not add photographs, house images, icons, cards, buttons, testimonials, statistics, or a CTA.
-- On Mobile, retain the order Label, Primary Statement, Divider, Supporting Subheading, Supporting Copy, and Closing Line. Stack the lower columns vertically, reduce the Primary Statement type size without losing its visual dominance, and preserve generous vertical spacing without additional decorative elements.
-
-## Label
-
-### Content
-
-- `WHAT I BELIEVE`
-
-### Visual Design
-
-- Use the global Label typography.
-- Use small uppercase label styling.
-
-## Primary Statement
-
-### Content
-
-- `You deserve a clear, honest option before deciding what to do with your house.`
-
-### Visual Design
-
-- Use the global Display typography.
-- Use oversized, near-black type with intentional line breaks and generous surrounding whitespace.
-
-## Divider
-
-### Visual Design
-
-- Use one thin horizontal divider below the Primary Statement.
-
-## Supporting Subheading
-
-### Content
-
-- `There isn’t one right path.`
-
-### Visual Design
-
-- Use the global H3 typography.
-
-## Supporting Copy
-
-### Content
-
-- `Sometimes listing with an agent is the best path. Other times, the work, time, showings, uncertainty, or condition of the property make an as-is sale more practical.`
-- `Either way, you should be able to understand the real options before deciding what comes next.`
-
-### Visual Design
-
-- Use the global Body typography.
-
-## Closing Line
-
-### Content
-
-- `That is why I started Your House in Cash.`
-
-### Visual Design
-
-- Use the global Body typography.
-- Present this line with quieter emphasis than the Primary Statement and Supporting Copy.
+- On Mobile, the Label, Opening, Supporting Copy, and Secondary Line precede the Founder Photograph.
 
 # A Direct Answer, Early
 
@@ -216,6 +163,7 @@ Turn the earlier promises on the page into three practical standards for working
 
 ## Layout
 
+- Use the existing Brand Green Light (`#EAF3EC`) as a full-width section background.
 - On Desktop, use the existing five vertical background lines as the section’s subtle structural framework, creating four spaces.
 - Keep the first space free of standards as intentional breathing room. The Heading begins in this first space and spans above the three standards.
 - Place Clear Communication, A Practical As-Is Option, and No Obligation in the remaining three spaces, in that order. Each standard aligns to its own space between the existing vertical lines.

@@ -17,10 +17,10 @@ export default function AboutUsPage() {
         <section className={`${styles.section} ${styles.introduction} section-spacing system-lines-bg`} aria-labelledby="about-us-heading">
           <div className={`${styles.introductionLayout} content-grid`}>
             <div className={styles.introductionCopy}>
-              <h1 id="about-us-heading" className={`${styles.introductionTitle} text-heading-3`}>About Us</h1>
-              <p className={`${styles.introductionOpening} text-body-large`}>
+              <SectionLabel>About Us</SectionLabel>
+              <h1 id="about-us-heading" className={`${styles.introductionOpening} text-display`}>
                 Hi, I’m Noah, the person behind Your House in Cash.
-              </p>
+              </h1>
               <p className={`${styles.introductionSupporting} text-body`}>
                 I work with Cleveland-area homeowners who want a clear, direct option for selling a house—especially when repairs, timing, tenants, an inherited property, or a long traditional sale process make things more complicated.
               </p>
@@ -37,26 +37,6 @@ export default function AboutUsPage() {
                 priority
               />
             </figure>
-          </div>
-        </section>
-
-        <section className={`${styles.section} ${styles.beliefs} section-spacing system-lines-bg`} aria-labelledby="belief-heading">
-          <div className={`${styles.beliefsLayout} content-grid`}>
-            <p className={`${styles.plainLabel} text-label`}>What I Believe</p>
-            <h2 id="belief-heading" className={`${styles.beliefStatement} text-display`}>
-              You deserve a clear, honest option before deciding what to do with your house.
-            </h2>
-            <div className={styles.beliefDivider} aria-hidden="true" />
-            <h3 className={`${styles.beliefSubheading} text-heading-3`}>There isn’t one right path.</h3>
-            <div className={styles.beliefCopy}>
-              <p className="text-body">
-                Sometimes listing with an agent is the best path. Other times, the work, time, showings, uncertainty, or condition of the property make an as-is sale more practical.
-              </p>
-              <p className="text-body">
-                Either way, you should be able to understand the real options before deciding what comes next.
-              </p>
-              <p className={`${styles.beliefClosing} text-body`}>That is why I started Your House in Cash.</p>
-            </div>
           </div>
         </section>
 
