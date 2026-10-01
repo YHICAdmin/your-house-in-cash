@@ -13,8 +13,6 @@ The page is structured as five sections, excluding the shared Header and Footer:
 # Page Routing
 
 - Canonical route: `/about-us`
-- The page is reached through the shared Header and Footer navigation item labeled `About Us`.
-- The Header logo links to the canonical homepage at `/`.
 - The page’s primary call to action follows the site’s standard Seller Lead Form Flow at `/get-cash-offer`.
 
 # Introduction
@@ -172,7 +170,7 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 
 ### Visual Design
 
-- Present the first line as the outcome when there is a realistic path and the second as the outcome when there is not, without adding cards, icons, or badges.
+- Present the first line as the outcome when there is a realistic path and the second as the outcome when there is not.
 
 ## Closing Line
 
@@ -240,10 +238,6 @@ Turn the earlier promises on the page into three practical standards for working
 - Standard number: `03`
 - Title: `No obligation`
 - `An offer is simply one option. If listing, keeping the property, or taking another path makes more sense for you, you should choose what works best.`
-
-### Visual Design
-
-- Preserve the additional whitespace established by the Section Layout.
 
 # Final CTA
 
