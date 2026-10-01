@@ -3,6 +3,7 @@
 }
 
 .introduction {
+  --system-line-color: rgb(44 107 61 / 8%);
   background: var(--color-brand-light);
 }
 

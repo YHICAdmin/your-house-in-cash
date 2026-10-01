@@ -26,6 +26,7 @@ This is a calm, credible introduction. It is not a sales Hero and does not reuse
 ## Layout
 
 - Use the existing Brand Green Light (`#EAF3EC`) as a full-width, quiet section background.
+- On this background, use Brand Green Dark at `8%` opacity for the existing five-line system so it remains subtle but visible.
 - On Desktop, the section uses a spacious `6 / 1 / 5` composition. The left six columns contain the Title and Subtitle, the center column remains empty, and the right five columns contain one photograph of Noah.
 - On Desktop, the Introduction uses `2XL` (`64px`) vertical padding to create a more compact section height.
 - On Desktop, vertically center the Title and Subtitle relative to the landscape photograph on the right, creating a compact text-and-media composition.
