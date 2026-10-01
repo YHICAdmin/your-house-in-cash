@@ -212,14 +212,14 @@
   }
 
   .introductionCopy {
-    grid-column: 1 / span 7;
-    align-self: start;
+    grid-column: 1 / span 6;
+    align-self: center;
   }
 
   .founderPhotograph {
     grid-column: 8 / span 5;
     align-self: start;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 16 / 9;
   }
 
   .directAnswerHeading {

@@ -17,11 +17,11 @@ export default function AboutUsPage() {
         <section className={`${styles.section} ${styles.introduction} section-spacing system-lines-bg`} aria-labelledby="about-us-heading">
           <div className={`${styles.introductionLayout} content-grid`}>
             <div className={styles.introductionCopy}>
-              <h1 id="about-us-heading" className={`${styles.introductionTitle} text-heading-2`}>
+              <h1 id="about-us-heading" className={`${styles.introductionTitle} text-heading-3`}>
                 About Your House in Cash
               </h1>
-              <p className={`${styles.introductionSubtitle} text-body-large`}>
-                Honest guidance before you decide what to do next.
+              <p className={`${styles.introductionSubtitle} text-body`}>
+                I’m Noah, the person behind Your House in Cash. I believe homeowners deserve honest answers before deciding what comes next.
               </p>
             </div>
             <figure className={styles.founderPhotograph}>

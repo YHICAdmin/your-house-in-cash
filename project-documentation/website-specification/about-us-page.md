@@ -25,9 +25,9 @@ This is a calm, credible introduction. It is not a sales Hero and does not reuse
 ## Layout
 
 - Use the existing Brand Green Light (`#EAF3EC`) as a full-width, quiet section background.
-- On Desktop, the section uses a spacious `7 / 5` two-column composition. The left seven columns contain the Title and Subtitle; the right five columns contain one photograph of Noah.
+- On Desktop, the section uses a spacious `6 / 1 / 5` composition. The left six columns contain the Title and Subtitle, the center column remains empty, and the right five columns contain one photograph of Noah.
 - On Desktop, the Introduction uses `2XL` (`64px`) vertical padding to create a more compact section height.
-- On Desktop, top-align the Title and Subtitle with a smaller landscape photograph on the right, creating a compact text-and-media composition.
+- On Desktop, vertically center the Title and Subtitle relative to the landscape photograph on the right, creating a compact text-and-media composition.
 - Use the supplied `Screenshot 2026-10-01 104146.png` only as compositional inspiration. Do not reproduce its typography, colors, spacing, or exact layout.
 - Use generous whitespace. The visual tone is personal, calm, and credible.
 - Do not use a location pill, oversized sales headline, CTA button, house collage, trust badges, a three-benefit row, testimonials, statistics, deal counts, local-office claims, badges, or benefit icons.
@@ -45,17 +45,17 @@ This is a calm, credible introduction. It is not a sales Hero and does not reuse
 
 ### Visual Design
 
-- Use the global H2 typography.
+- Use the global H3 typography.
 
 ## Subtitle
 
 ### Content
 
-- `Honest guidance before you decide what to do next.`
+- `I’m Noah, the person behind Your House in Cash. I believe homeowners deserve honest answers before deciding what comes next.`
 
 ### Visual Design
 
-- Use the global Body Large typography.
+- Use the global Body typography.
 
 ## Founder Photograph
 
@@ -70,7 +70,7 @@ This is a calm, credible introduction. It is not a sales Hero and does not reuse
 
 ### Dimensions and Alignment
 
-- On Desktop, use a `3:2` landscape photograph crop.
+- On Desktop, use a `16:9` landscape photograph crop.
 
 ### Responsive Behavior
 
