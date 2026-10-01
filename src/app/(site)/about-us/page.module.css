@@ -7,6 +7,7 @@
 }
 
 .introductionLayout,
+.beliefsLayout,
 .directAnswerLayout,
 .expectationsLayout,
 .finalCtaLayout {
@@ -15,6 +16,11 @@
 
 .introductionCopy,
 .founderPhotograph,
+.plainLabel,
+.beliefStatement,
+.beliefDivider,
+.beliefSubheading,
+.beliefCopy,
 .directAnswerHeading,
 .directAnswerContent,
 .expectationsHeader,
@@ -63,8 +69,48 @@
   object-position: 63% center;
 }
 
-.directAnswer {
+.beliefs {
   background: var(--color-background);
+}
+
+.plainLabel {
+  margin: 0;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+}
+
+.beliefStatement {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.beliefDivider {
+  height: 1px;
+  background: var(--color-brand);
+}
+
+.beliefSubheading {
+  margin: 0;
+}
+
+.beliefCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.beliefCopy p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.beliefClosing {
+  margin-top: var(--spacing-s) !important;
+  color: var(--color-text-muted) !important;
+}
+
+.directAnswer {
+  background: var(--color-brand-light);
 }
 
 .directAnswerHeading {
@@ -99,7 +145,7 @@
 }
 
 .expectations {
-  background: var(--color-brand-light);
+  background: var(--color-background);
 }
 
 .expectationsHeader {
@@ -168,6 +214,7 @@
 
 @media (min-width: 768px) {
   .introductionLayout,
+  .beliefsLayout,
   .directAnswerLayout,
   .expectationsLayout,
   .finalCtaLayout {
@@ -182,6 +229,19 @@
   .founderPhotograph {
     grid-column: 5 / span 4;
     aspect-ratio: 1 / 1;
+  }
+
+  .beliefStatement,
+  .beliefDivider {
+    grid-column: 1 / -1;
+  }
+
+  .beliefSubheading {
+    grid-column: 1 / span 3;
+  }
+
+  .beliefCopy {
+    grid-column: 4 / span 5;
   }
 
   .directAnswerHeading {
@@ -220,6 +280,19 @@
     grid-column: 8 / span 5;
     align-self: start;
     aspect-ratio: 16 / 9;
+  }
+
+  .beliefStatement {
+    grid-column: 1 / span 11;
+    max-width: 18ch;
+  }
+
+  .beliefSubheading {
+    grid-column: 1 / span 3;
+  }
+
+  .beliefCopy {
+    grid-column: 5 / span 6;
   }
 
   .directAnswerHeading {

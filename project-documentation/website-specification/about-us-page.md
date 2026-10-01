@@ -2,12 +2,13 @@
 
 Introduce Your House in Cash and explain its purpose. The page should give homeowners a clear understanding of why the company exists, the type of direct-sale option it provides, and what they can expect when they reach out.
 
-The page is structured as four sections, excluding the shared Header and Footer:
+The page is structured as five sections, excluding the shared Header and Footer:
 
 1. Introduction — a clear introduction to Your House in Cash and its approach.
-2. A Direct Answer, Early.
-3. What You Can Expect — clear communication, a practical as-is option, and no obligation.
-4. Final CTA — “Let’s Start With a Clear Number.”
+2. What I Believe.
+3. A Direct Answer, Early.
+4. What You Can Expect — clear communication, a practical as-is option, and no obligation.
+5. Final CTA — “Let’s Start With a Clear Number.”
 
 # Page Routing
 
@@ -76,6 +77,77 @@ This is a calm, credible introduction. It is not a sales Hero and does not reuse
 
 - On Mobile, the Title and Subtitle precede the Founder Photograph.
 
+# What I Believe
+
+## Purpose
+
+Explain what Noah believes homeowners deserve before deciding what to do with their house. The section presents one continuous belief: the central belief, the explanation that there is not one right path, and the personal conclusion for starting Your House in Cash.
+
+## Layout
+
+- Use the existing Background (`#FFFFFF`) as a full-width section background.
+- On Desktop, the Label appears above the Primary Statement. The Primary Statement occupies most of the upper two-thirds of the section, followed by one thin horizontal Divider.
+- Below the Divider, use two columns: the Supporting Subheading in a narrow left column, and the Supporting Copy followed by the Closing Line in a wider right column.
+- The belief remains visually dominant; the explanation is supporting context rather than a separate section.
+- On Mobile, retain the order Label, Primary Statement, Divider, Supporting Subheading, Supporting Copy, and Closing Line. Stack the lower columns vertically, reduce the Primary Statement type size without losing its visual dominance, and preserve generous vertical spacing without additional decorative elements.
+
+## Label
+
+### Content
+
+- `WHAT I BELIEVE`
+
+### Visual Design
+
+- Use the global Label typography with small uppercase label styling.
+
+## Primary Statement
+
+### Content
+
+- `You deserve a clear, honest option before deciding what to do with your house.`
+
+### Visual Design
+
+- Use the global Display typography with intentional line breaks and generous surrounding whitespace.
+
+## Divider
+
+### Visual Design
+
+- Use one thin horizontal divider below the Primary Statement.
+
+## Supporting Subheading
+
+### Content
+
+- `There isn’t one right path.`
+
+### Visual Design
+
+- Use the global H3 typography.
+
+## Supporting Copy
+
+### Content
+
+- `Sometimes listing with an agent is the best path. Other times, the work, time, showings, uncertainty, or condition of the property make an as-is sale more practical.`
+- `Either way, you should be able to understand the real options before deciding what comes next.`
+
+### Visual Design
+
+- Use the global Body typography.
+
+## Closing Line
+
+### Content
+
+- `That is why I started Your House in Cash.`
+
+### Visual Design
+
+- Use the global Body typography with quieter emphasis than the Primary Statement and Supporting Copy.
+
 # A Direct Answer, Early
 
 ## Purpose
@@ -84,7 +156,7 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 
 ## Layout
 
-- Use the existing Background (`#FFFFFF`) as a full-width section background.
+- Use the existing Brand Green Light (`#EAF3EC`) as a full-width section background.
 - On Desktop, use an editorial two-column composition: the Heading occupies a narrower left column, while the direct-contact, assessment, outcome, and closing content form a wider right-column flow.
 - The content flow makes the direct conversation the first and strongest idea, the realistic-path assessment the second, and the honest outcome the concluding idea.
 - Do not use a generic sales-Hero layout, CTA button, testimonial, statistics, badges, or claims that the business is local or large.
@@ -152,7 +224,7 @@ Turn the earlier promises on the page into three practical standards for working
 
 ## Layout
 
-- Use the existing Brand Green Light (`#EAF3EC`) as a full-width section background.
+- Use the existing Background (`#FFFFFF`) as a full-width section background.
 - On Desktop, use the existing five vertical background lines as the section’s subtle structural framework, creating four spaces.
 - Keep the first space free of standards as intentional breathing room. The Heading begins in this first space and spans above the three standards.
 - Place Clear Communication, A Practical As-Is Option, and No Obligation in the remaining three spaces, in that order. Each standard aligns to its own space between the existing vertical lines.

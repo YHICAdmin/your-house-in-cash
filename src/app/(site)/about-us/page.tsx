@@ -36,6 +36,26 @@ export default function AboutUsPage() {
           </div>
         </section>
 
+        <section className={`${styles.section} ${styles.beliefs} section-spacing system-lines-bg`} aria-labelledby="belief-heading">
+          <div className={`${styles.beliefsLayout} content-grid`}>
+            <p className={`${styles.plainLabel} text-label`}>What I Believe</p>
+            <h2 id="belief-heading" className={`${styles.beliefStatement} text-display`}>
+              You deserve a clear, honest option before deciding what to do with your house.
+            </h2>
+            <div className={styles.beliefDivider} aria-hidden="true" />
+            <h3 className={`${styles.beliefSubheading} text-heading-3`}>There isn’t one right path.</h3>
+            <div className={styles.beliefCopy}>
+              <p className="text-body">
+                Sometimes listing with an agent is the best path. Other times, the work, time, showings, uncertainty, or condition of the property make an as-is sale more practical.
+              </p>
+              <p className="text-body">
+                Either way, you should be able to understand the real options before deciding what comes next.
+              </p>
+              <p className={`${styles.beliefClosing} text-body`}>That is why I started Your House in Cash.</p>
+            </div>
+          </div>
+        </section>
+
         <section className={`${styles.section} ${styles.directAnswer} section-spacing system-lines-bg`} aria-labelledby="direct-answer-heading">
           <div className={`${styles.directAnswerLayout} content-grid`}>
             <h2 id="direct-answer-heading" className={`${styles.directAnswerHeading} text-heading-2`}>A Direct Answer, Early</h2>
