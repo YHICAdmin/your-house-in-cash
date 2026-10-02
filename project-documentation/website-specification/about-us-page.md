@@ -89,10 +89,9 @@ Explain what Noah believes homeowners deserve before deciding what to do with th
 ## Layout
 
 - Use the existing Background Neutral (`#F8F8F8`) as a full-width section background.
-- On Desktop, the Label appears above the Primary Statement. The Primary Statement occupies most of the upper two-thirds of the section, followed by one thin horizontal Divider.
-- Below the Divider, use two columns: the Supporting Subheading in a narrow left column, and the Supporting Copy followed by the Closing Line in a wider right column.
+- On Desktop, use two columns. The Label and Primary Statement form the left column; the Supporting Subheading, Supporting Copy, and Closing Line form the right column.
 - The belief remains visually dominant; the explanation is supporting context rather than a separate section.
-- On Mobile, retain the order Label, Primary Statement, Divider, Supporting Subheading, Supporting Copy, and Closing Line. Stack the lower columns vertically, reduce the Primary Statement type size without losing its visual dominance, and preserve generous vertical spacing without additional decorative elements.
+- On Mobile, retain the order Label, Primary Statement, Supporting Subheading, Supporting Copy, and Closing Line. Stack the left column before the right column, reduce the Primary Statement type size without losing its visual dominance, and preserve generous vertical spacing without additional decorative elements.
 
 ## Label
 
@@ -112,13 +111,7 @@ Explain what Noah believes homeowners deserve before deciding what to do with th
 
 ### Visual Design
 
-- Use the global Display typography with intentional line breaks and generous surrounding whitespace.
-
-## Divider
-
-### Visual Design
-
-- Use one thin horizontal divider below the Primary Statement.
+- Use the global H2 typography with intentional line breaks and generous surrounding whitespace.
 
 ## Supporting Subheading
 

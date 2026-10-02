@@ -39,22 +39,23 @@ export default function AboutUsPage() {
 
         <section className={`${styles.section} ${styles.beliefs} section-spacing system-lines-bg`} aria-labelledby="belief-heading">
           <div className={`${styles.beliefsLayout} content-grid`}>
-            <div className={styles.beliefLabel}>
+            <div className={styles.beliefLeft}>
               <SectionLabel icon={Handshake}>What I Believe</SectionLabel>
+              <h2 id="belief-heading" className={`${styles.beliefStatement} text-heading-2`}>
+                You deserve a clear, honest option before deciding what to do with your house.
+              </h2>
             </div>
-            <h2 id="belief-heading" className={`${styles.beliefStatement} text-display`}>
-              You deserve a clear, honest option before deciding what to do with your house.
-            </h2>
-            <div className={styles.beliefDivider} aria-hidden="true" />
-            <h3 className={`${styles.beliefSubheading} text-heading-3`}>There isn’t one right path.</h3>
-            <div className={styles.beliefCopy}>
-              <p className="text-body">
-                Sometimes listing with an agent is the best path. Other times, the work, time, showings, uncertainty, or condition of the property make an as-is sale more practical.
-              </p>
-              <p className="text-body">
-                Either way, you should be able to understand the real options before deciding what comes next.
-              </p>
-              <p className={`${styles.beliefClosing} text-body`}>That is why I started Your House in Cash.</p>
+            <div className={styles.beliefRight}>
+              <h3 className={`${styles.beliefSubheading} text-heading-3`}>There isn’t one right path.</h3>
+              <div className={styles.beliefCopy}>
+                <p className="text-body">
+                  Sometimes listing with an agent is the best path. Other times, the work, time, showings, uncertainty, or condition of the property make an as-is sale more practical.
+                </p>
+                <p className="text-body">
+                  Either way, you should be able to understand the real options before deciding what comes next.
+                </p>
+                <p className={`${styles.beliefClosing} text-body`}>That is why I started Your House in Cash.</p>
+              </div>
             </div>
           </div>
         </section>
