@@ -40,12 +40,16 @@
   align-items: flex-start;
 }
 
+.introductionLabel {
+  margin-bottom: var(--spacing-s);
+}
+
 .introductionTitle {
   margin: 0 0 var(--spacing-m);
 }
 
 .introductionSubtitle {
-  margin: 0 0 var(--spacing-m);
+  margin: 0;
 }
 
 .directAnswerContent p,

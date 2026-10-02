@@ -18,11 +18,14 @@ export default function AboutUsPage() {
         <section className={`${styles.section} ${styles.introduction} section-spacing system-lines-bg`} aria-labelledby="about-us-heading">
           <div className={`${styles.introductionLayout} content-grid`}>
             <div className={styles.introductionCopy}>
-              <h1 id="about-us-heading" className={styles.introductionTitle}>
+              <div className={styles.introductionLabel}>
                 <SectionLabel icon={House}>About Us</SectionLabel>
+              </div>
+              <h1 id="about-us-heading" className={`${styles.introductionTitle} text-heading-2`}>
+                Hi, I’m Noah, the person behind Your House in Cash.
               </h1>
               <p className={`${styles.introductionSubtitle} text-body`}>
-                Hi, I’m Noah, the person behind Your House in Cash. My Cleveland real estate journey began in 2021, and I work with Cleveland-area homeowners who want a clear, direct option for selling a house.
+                My Cleveland real estate journey began in 2021, and I work with Cleveland-area homeowners who want a clear, direct option for selling a house.
               </p>
             </div>
             <figure className={styles.founderPhotograph}>

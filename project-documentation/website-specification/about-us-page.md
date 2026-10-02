@@ -45,13 +45,22 @@ This is a calm, credible introduction. It is not a sales Hero and does not reuse
 ### Component and Semantics
 
 - Use the shared Section Label Component with the canonical Lucide `House` icon.
-- Use H1 semantics.
+
+## Heading
+
+### Content
+
+- `Hi, I’m Noah, the person behind Your House in Cash.`
+
+### Component and Semantics
+
+- Use H1 semantics with the global H2 visual typography.
 
 ## Introduction Copy
 
 ### Content
 
-- `Hi, I’m Noah, the person behind Your House in Cash. My Cleveland real estate journey began in 2021, and I work with Cleveland-area homeowners who want a clear, direct option for selling a house.`
+- `My Cleveland real estate journey began in 2021, and I work with Cleveland-area homeowners who want a clear, direct option for selling a house.`
 
 ### Visual Design
 
