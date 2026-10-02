@@ -77,6 +77,7 @@ This is a calm, credible introduction. It is not a sales Hero and does not reuse
 
 ### Responsive Behavior
 
+- On Tablet and Mobile, reduce the photograph’s visual prominence with a smaller `3:2` contextual frame. Keep Noah recognizable while avoiding a close-portrait treatment.
 - On Mobile, the Label and Introduction Copy precede the Founder Photograph. Preserve the natural contextual composition rather than creating a tight portrait crop.
 
 # What I Believe

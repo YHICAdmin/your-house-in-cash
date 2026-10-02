@@ -58,7 +58,10 @@
 
 .founderPhotograph {
   position: relative;
-  aspect-ratio: 3 / 4;
+  width: 100%;
+  max-width: 320px;
+  justify-self: center;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   margin: 0;
   border-radius: var(--radius-medium);
@@ -228,7 +231,9 @@
 
   .founderPhotograph {
     grid-column: 5 / span 4;
-    aspect-ratio: 4 / 5;
+    max-width: 280px;
+    justify-self: end;
+    aspect-ratio: 3 / 2;
   }
 
   .beliefStatement,
