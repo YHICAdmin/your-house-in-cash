@@ -132,8 +132,6 @@
   width: 100%;
   gap: var(--spacing-s);
   margin-bottom: var(--spacing-xl);
-  padding-block: var(--spacing-m);
-  border-block: 1px solid var(--color-border);
 }
 
 .directClosing {
@@ -245,6 +243,11 @@
     grid-column: 4 / span 5;
   }
 
+  .outcomes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-m);
+  }
+
   .standards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--spacing-m);
@@ -292,6 +295,21 @@
 
   .directAnswerContent {
     grid-column: 7 / span 6;
+  }
+
+  .outcomes p {
+    position: relative;
+  }
+
+  .outcomes p::before {
+    position: absolute;
+    top: 0;
+    left: calc(var(--layout-grid-gutter) / -2);
+    width: 1px;
+    height: calc(16px * 1.6);
+    background: var(--color-brand);
+    content: "";
+    transform: translateX(-0.5px);
   }
 
   .expectationsHeader {

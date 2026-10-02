@@ -200,6 +200,7 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 
 - Use the global Body typography.
 - Present the first line as the outcome when there is a realistic path and the second as the outcome when there is not.
+- On Tablet and Desktop, place the two outcomes side by side; stack them on Mobile. On Desktop, place a short existing-style brand-green vertical mark at the start of each outcome where it aligns to a background system line. Do not use horizontal dividers or bordered containers.
 
 ## Closing Line
 
