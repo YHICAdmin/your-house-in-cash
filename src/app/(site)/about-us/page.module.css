@@ -8,8 +8,7 @@
 
 .introductionLayout,
 .beliefsLayout,
-.expectationsLayout,
-.finalCtaLayout {
+.expectationsLayout {
   row-gap: var(--spacing-xl);
 }
 
@@ -28,8 +27,7 @@
 .directAnswerContent,
 .directAnswerPhotograph,
 .expectationsHeader,
-.standards,
-.finalCtaContent {
+.standards {
   grid-column: 1 / -1;
   min-width: 0;
 }
@@ -53,8 +51,7 @@
 }
 
 .directAnswerContent p,
-.standard p,
-.finalCtaCopy p {
+.standard p {
   margin: 0;
 }
 
@@ -187,37 +184,10 @@
   margin: 0 0 var(--spacing-s);
 }
 
-.finalCta {
-  --system-line-color: rgb(255 255 255 / 20%);
-  background: var(--color-brand-dark);
-  color: var(--color-background);
-}
-
-.finalCtaContent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.finalCtaHeading {
-  max-width: 20ch;
-  margin: 0 0 var(--spacing-m);
-}
-
-.finalCtaCopy {
-  display: flex;
-  max-width: 56ch;
-  flex-direction: column;
-  gap: var(--spacing-s);
-  margin-bottom: var(--spacing-l);
-  color: var(--color-brand-light);
-}
-
 @media (min-width: 768px) {
   .introductionLayout,
   .beliefsLayout,
-  .expectationsLayout,
-  .finalCtaLayout {
+  .expectationsLayout {
     row-gap: var(--spacing-2xl);
   }
 
@@ -271,9 +241,6 @@
     grid-column: 1 / -1;
   }
 
-  .finalCtaContent {
-    grid-column: 1 / span 6;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -337,7 +304,4 @@
     gap: var(--spacing-m);
   }
 
-  .finalCtaContent {
-    grid-column: 1 / span 7;
-  }
 }

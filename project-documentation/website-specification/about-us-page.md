@@ -16,6 +16,7 @@ Normal paragraph copy on the page uses the global primary text color. The Final 
 
 - Canonical route: `/about-us`
 - The page’s primary call to action follows the site’s standard Seller Lead Form Flow at `/get-cash-offer`.
+- The shared Footer uses the existing Background Neutral (`#F8F8F8`) on this page.
 
 # Introduction
 
@@ -302,11 +303,8 @@ Close the page with one calm, clear next step. After meeting Noah, understanding
 
 ## Layout
 
-- Use Brand Green Dark (`#2C6B3D`) as a visually distinct full-width final-section background.
-- Use a restrained, spacious composition with large light-colored typography and one prominent Primary CTA.
+- Use the [shared Final CTA](../shared-sections.md#final-cta) with its default Background (`#FFFFFF`), matching the Area Page Final CTA composition and responsive behavior.
 - The CTA is the natural conclusion of the page, not a sudden marketing push.
-- Do not add testimonials, trust badges, statistics, extra links, illustrations, or a list of benefits.
-- On Mobile, stack the content and Primary CTA cleanly while preserving generous spacing.
 
 ## Heading
 
@@ -316,19 +314,17 @@ Close the page with one calm, clear next step. After meeting Noah, understanding
 
 ### Visual Design
 
-- Use the global H2 typography.
-- Use large, light-colored typography.
+- Use the shared Final CTA Heading treatment.
 
 ## Supporting Copy
 
 ### Content
 
-- `If you are considering selling a Cleveland-area house, tell me a little about the property and your situation.`
-- `I will review it and provide a no-obligation as-is cash offer, so you can decide whether it is the right fit.`
+- `If you are considering selling a Cleveland-area house, tell me a little about the property and your situation. I will review it and provide a no-obligation as-is cash offer, so you can decide whether it is the right fit.`
 
 ### Visual Design
 
-- Use the global Body Large typography.
+- Use the shared Final CTA Supporting Copy treatment.
 
 ## Primary CTA
 
@@ -340,3 +336,20 @@ Close the page with one calm, clear next step. After meeting Noah, understanding
 
 - Use the shared Button Component with link semantics.
 - Navigate to the existing Seller Lead Form Flow at `/get-cash-offer`.
+
+## Section Label
+
+### Content
+
+- `READY WHEN YOU ARE`
+
+## Reassurance Row
+
+### Content
+
+- `100% free. No obligation.`
+
+## Supporting Benefits
+
+1. `House` icon; heading `A practical as-is option`; supporting copy: `You do not need to repair the house, prepare it for showings, or make it look perfect just to explore a direct sale.`
+2. `CircleCheck` icon; heading `No obligation`; supporting copy: `An offer is simply one option. You should choose the path that works best for you.`

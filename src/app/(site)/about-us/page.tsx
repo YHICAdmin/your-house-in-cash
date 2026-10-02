@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Handshake, House } from "lucide-react";
+import { CircleCheck, Handshake, House } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
-import { Button } from "@/components/ui/button";
+import { FinalCta } from "@/components/ui/final-cta";
 import { SectionLabel } from "@/components/ui/section-label";
 import styles from "./page.module.css";
 
@@ -113,20 +113,19 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.finalCta} section-spacing system-lines-bg`} aria-labelledby="final-cta-heading">
-          <div className={`${styles.finalCtaLayout} content-grid`}>
-            <div className={styles.finalCtaContent}>
-              <h2 id="final-cta-heading" className={`${styles.finalCtaHeading} text-heading-2`}>Let’s Start With a Clear Number</h2>
-              <div className={`${styles.finalCtaCopy} text-body-large`}>
-                <p>If you are considering selling a Cleveland-area house, tell me a little about the property and your situation.</p>
-                <p>I will review it and provide a no-obligation as-is cash offer, so you can decide whether it is the right fit.</p>
-              </div>
-              <Button href="/get-cash-offer">Get My Cash Offer</Button>
-            </div>
-          </div>
-        </section>
+        <FinalCta content={{
+          label: "Ready When You Are",
+          headline: "Let’s Start With a Clear Number",
+          supportingCopy: "If you are considering selling a Cleveland-area house, tell me a little about the property and your situation. I will review it and provide a no-obligation as-is cash offer, so you can decide whether it is the right fit.",
+          cta: { label: "Get My Cash Offer", href: "/get-cash-offer" },
+          reassurance: "100% free. No obligation.",
+          benefits: [
+            { icon: House, heading: "A practical as-is option", supportingCopy: "You do not need to repair the house, prepare it for showings, or make it look perfect just to explore a direct sale." },
+            { icon: CircleCheck, heading: "No obligation", supportingCopy: "An offer is simply one option. You should choose the path that works best for you." },
+          ],
+        }} />
       </main>
-      <SiteFooter />
+      <SiteFooter background="neutral" />
     </>
   );
 }
