@@ -15,7 +15,7 @@ The website uses a single font family consistently throughout. Typographic hiera
 * **Body Large:** Desktop 20px · Tablet 19px · Mobile 18px · Weight 400 · Line Height 1.50
 * **Body:** Desktop 16px · Tablet 16px · Mobile 16px · Weight 400 · Line Height 1.60
 * **Body Small:** Desktop 14px · Tablet 14px · Mobile 14px · Weight 400 · Line Height 1.50
-* **Label:** Desktop 13px · Tablet 13px · Mobile 13px · Weight 600 · Line Height 1.30
+* **Label:** Desktop 11px · Tablet 11px · Mobile 11px · Weight 600 · Line Height 1.30
 * **Button:** Desktop 16px · Tablet 16px · Mobile 16px · Weight 600 · Line Height 1.00
 * **Caption:** Desktop 13px · Tablet 13px · Mobile 13px · Weight 400 · Line Height 1.40
 

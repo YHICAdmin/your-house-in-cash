@@ -169,7 +169,7 @@ A small Component used to identify, contextualize, or categorize a Section or co
 
 #### Typography
 
-- Font: Inter / 13px / 600 / 1.3
+- Font: Inter / 11px / 600 / 1.3
 - Letter-spacing: 0.07em
 - Typically uppercase.
 
