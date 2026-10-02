@@ -150,7 +150,7 @@
 }
 
 .expectations {
-  background: var(--color-background);
+  background: var(--color-background-neutral);
 }
 
 .expectationsHeader {
@@ -185,10 +185,6 @@
 
 .standardTitle {
   margin: 0 0 var(--spacing-s);
-}
-
-.openStandard {
-  padding-top: var(--spacing-l);
 }
 
 .finalCta {
@@ -265,12 +261,14 @@
   }
 
   .standards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--spacing-m);
   }
 
-  .openStandard {
-    padding-top: var(--spacing-xl);
+  .expectationsHeader {
+    grid-column: 1 / -1;
   }
 
   .finalCtaContent {
@@ -335,20 +333,8 @@
   .standards {
     display: grid;
     grid-column: 1 / -1;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    column-gap: var(--layout-grid-gutter);
-  }
-
-  .standard:nth-child(1) {
-    grid-column: 4 / span 3;
-  }
-
-  .standard:nth-child(2) {
-    grid-column: 7 / span 3;
-  }
-
-  .standard:nth-child(3) {
-    grid-column: 10 / span 3;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-m);
   }
 
   .finalCtaContent {

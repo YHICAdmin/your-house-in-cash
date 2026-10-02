@@ -238,19 +238,17 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 
 ## Purpose
 
-Turn the earlier promises on the page into three practical standards for working with Your House in Cash. This section communicates how Noah works; it is not a generic benefits or features section.
+Turn the earlier promises on the page into two practical standards for working with Your House in Cash. This section communicates how Noah works; it is not a generic benefits or features section.
 
 ## Layout
 
-- Use the existing Background (`#FFFFFF`) as a full-width section background.
+- Use the existing Background Neutral (`#F8F8F8`) as a full-width section background.
 - On Desktop, use the existing five vertical background lines as the section’s subtle structural framework, creating four spaces.
-- Keep the first space free of standards as intentional breathing room. The Heading begins in this first space and spans above the three standards.
-- Place Clear Communication, A Practical As-Is Option, and No Obligation in the remaining three spaces, in that order. Each standard aligns to its own space between the existing vertical lines.
-- The three standards form one shared section. Do not use separate cards, bordered boxes, shadows, or a generic feature grid.
+- On Desktop and Tablet, the Label and Heading span the full section width above Clear Communication and A Practical As-Is Option, which share one row beneath.
+- The two standards form one shared section. Do not use separate cards, bordered boxes, shadows, or a generic feature grid.
 - Use the existing background lines as subtle visual structure only; do not turn them into a new decorative illustration.
-- Give No Obligation a slightly quieter, more open composition through additional whitespace.
 - Do not add a CTA, testimonials, statistics, badges, review stars, or claims that the business is local or large.
-- On Mobile, stack the three standards in order: Clear Communication, A Practical As-Is Option, and No Obligation. Keep the existing mobile background-line treatment subtle and ensure the content remains easy to scan.
+- On Mobile, stack the Label and Heading followed by the two standards in order. Keep the existing mobile background-line treatment subtle and ensure the content remains easy to scan.
 
 ## Label
 
@@ -291,18 +289,6 @@ Turn the earlier promises on the page into three practical standards for working
 - Standard number: `02`
 - Title: `A practical as-is option`
 - `You do not need to repair the house, prepare it for showings, or make it look perfect just to explore a direct sale.`
-
-### Visual Design
-
-- Use the global Label typography for the Standard number, H4 typography for the Title, and Body typography for the supporting copy.
-
-## No Obligation
-
-### Content
-
-- Standard number: `03`
-- Title: `No obligation`
-- `An offer is simply one option. If listing, keeping the property, or taking another path makes more sense for you, you should choose what works best.`
 
 ### Visual Design
 

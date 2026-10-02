@@ -109,11 +109,6 @@ export default function AboutUsPage() {
                 <h3 className={`${styles.standardTitle} text-heading-4`}>A practical as-is option</h3>
                 <p className="text-body">You do not need to repair the house, prepare it for showings, or make it look perfect just to explore a direct sale.</p>
               </li>
-              <li className={`${styles.standard} ${styles.openStandard}`}>
-                <p className={`${styles.standardNumber} text-label`}>03</p>
-                <h3 className={`${styles.standardTitle} text-heading-4`}>No obligation</h3>
-                <p className="text-body">An offer is simply one option. If listing, keeping the property, or taking another path makes more sense for you, you should choose what works best.</p>
-              </li>
             </ol>
           </div>
         </section>
