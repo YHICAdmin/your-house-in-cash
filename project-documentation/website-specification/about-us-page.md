@@ -255,11 +255,11 @@ Turn the earlier promises on the page into two practical standards for working w
 
 ### Content
 
-- `WHAT YOU CAN EXPECT`
+- `HOW I WORK`
 
 ### Component and Semantics
 
-- Use the shared Section Label Component.
+- Use the shared Section Label Component with the canonical Lucide `ListChecks` icon.
 
 ## Heading
 

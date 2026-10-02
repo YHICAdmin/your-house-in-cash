@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CircleCheck, Handshake, House } from "lucide-react";
+import { CircleCheck, Handshake, House, ListChecks } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { FinalCta } from "@/components/ui/final-cta";
 import { SectionLabel } from "@/components/ui/section-label";
@@ -95,7 +95,7 @@ export default function AboutUsPage() {
         <section className={`${styles.section} ${styles.expectations} section-spacing system-lines-bg`} aria-labelledby="expectations-heading">
           <div className={`${styles.expectationsLayout} content-grid`}>
             <div className={styles.expectationsHeader}>
-              <SectionLabel>What You Can Expect</SectionLabel>
+              <SectionLabel icon={ListChecks}>How I Work</SectionLabel>
               <h2 id="expectations-heading" className={`${styles.expectationsHeading} text-heading-2`}>What you can expect.</h2>
             </div>
             <ol className={styles.standards}>
