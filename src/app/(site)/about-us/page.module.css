@@ -105,13 +105,8 @@
   color: var(--color-text-secondary);
 }
 
-.beliefClosing {
-  margin-top: var(--spacing-s) !important;
-  color: var(--color-text-muted) !important;
-}
-
 .directAnswer {
-  background: var(--color-brand-light);
+  background: var(--color-background);
 }
 
 .directAnswerHeading {

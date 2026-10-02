@@ -54,7 +54,7 @@ export default function AboutUsPage() {
                 <p className="text-body">
                   Either way, you should be able to understand the real options before deciding what comes next.
                 </p>
-                <p className={`${styles.beliefClosing} text-body`}>That is why I started Your House in Cash.</p>
+                <p className={`${styles.beliefClosing} text-body`}>That’s why I started Your House in Cash.</p>
               </div>
             </div>
           </div>

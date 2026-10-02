@@ -138,11 +138,11 @@ Explain what Noah believes homeowners deserve before deciding what to do with th
 
 ### Content
 
-- `That is why I started Your House in Cash.`
+- `That’s why I started Your House in Cash.`
 
 ### Visual Design
 
-- Use the global Body typography with quieter emphasis than the Primary Statement and Supporting Copy.
+- Use the global Body typography and the same secondary text color as the Supporting Copy.
 
 # A Direct Answer, Early
 
@@ -152,7 +152,7 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 
 ## Layout
 
-- Use the existing Brand Green Light (`#EAF3EC`) as a full-width section background.
+- Use the existing Background (`#FFFFFF`) as a full-width section background.
 - On Desktop, use an editorial two-column composition: the Heading occupies a narrower left column, while the direct-contact, assessment, outcome, and closing content form a wider right-column flow.
 - The content flow makes the direct conversation the first and strongest idea, the realistic-path assessment the second, and the honest outcome the concluding idea.
 - Do not use a generic sales-Hero layout, CTA button, testimonial, statistics, badges, or claims that the business is local or large.
