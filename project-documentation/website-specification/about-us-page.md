@@ -63,20 +63,25 @@ This is a calm, credible introduction. It is not a sales Hero and does not reuse
 
 ### Content
 
-- Use the approved house-background founder photo at `/images/about-us/noah-founder.png`.
+- Use the Introduction-specific founder photo at `/images/about-us/noah-founder-introduction.png`.
+- Keep `/images/about-us/noah-founder.png` available in the project for possible use in another About Us section; do not delete, rename, or replace it.
 
 ### Visual Design
 
-- Use a simple rounded crop.
-- The photograph supports the introduction and does not dominate the composition.
+- Use a simple, restrained rounded-rectangle treatment.
+- Do not add filters, overlays, text, badges, or decorative elements over the photograph.
+- The image provides human context: Noah, the Cleveland house, and the residential street remain clearly visible as one real-world composition.
 
 ### Dimensions and Alignment
 
-- On Desktop, use a `16:9` landscape photograph crop.
+- On Desktop, use a wide `3:2` landscape aspect ratio.
+- Use the image close to its natural full composition, showing Noah roughly from mid-thigh up with the house and residential street clearly present around him.
+- Use `object-position: 55% 50%`; do not anchor aggressively toward Noah’s face.
+- Size the image so its visual height is roughly equal to the Title and Subtitle block, rather than substantially taller.
 
 ### Responsive Behavior
 
-- On Mobile, the Title and Subtitle precede the Founder Photograph.
+- On Mobile, the Title and Subtitle precede the Founder Photograph. Preserve the natural contextual composition rather than creating a tight portrait crop.
 
 # What I Believe
 

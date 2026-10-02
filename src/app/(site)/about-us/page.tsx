@@ -26,7 +26,7 @@ export default function AboutUsPage() {
             </div>
             <figure className={styles.founderPhotograph}>
               <Image
-                src="/images/about-us/noah-founder.png"
+                src="/images/about-us/noah-founder-introduction.png"
                 alt="Noah standing outside a house"
                 fill
                 sizes="(min-width: 1200px) 40vw, (min-width: 768px) 60vw, 100vw"

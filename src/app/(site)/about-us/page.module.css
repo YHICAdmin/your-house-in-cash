@@ -59,15 +59,15 @@
 
 .founderPhotograph {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   margin: 0;
-  border-radius: var(--radius-large) var(--radius-large) var(--radius-pill) var(--radius-large);
+  border-radius: var(--radius-medium);
 }
 
 .founderPhotograph img {
   object-fit: cover;
-  object-position: 63% center;
+  object-position: 55% 50%;
 }
 
 .beliefs {
@@ -229,7 +229,7 @@
 
   .founderPhotograph {
     grid-column: 5 / span 4;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 5;
   }
 
   .beliefStatement,
@@ -279,8 +279,11 @@
 
   .founderPhotograph {
     grid-column: 8 / span 5;
-    align-self: start;
-    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 360px;
+    justify-self: end;
+    align-self: center;
+    aspect-ratio: 3 / 2;
   }
 
   .beliefStatement {
