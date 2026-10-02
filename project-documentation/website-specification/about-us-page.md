@@ -153,7 +153,7 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 ## Layout
 
 - Use the existing Background (`#FFFFFF`) as a full-width section background.
-- On Desktop, use an editorial two-column composition: the Heading occupies a narrower left column, while the direct-contact, assessment, outcome, and closing content form a wider right-column flow.
+- On Desktop, use an even `6 / 6` two-column composition: the Heading occupies the left six columns, while the direct-contact, assessment, outcome, and closing content form the right six-column flow.
 - The content flow makes the direct conversation the first and strongest idea, the realistic-path assessment the second, and the honest outcome the concluding idea.
 - Do not use a generic sales-Hero layout, CTA button, testimonial, statistics, badges, or claims that the business is local or large.
 - On Mobile, stack the Heading followed by the right-column content in its documented order, preserving clear distinction between the direct-contact statement, assessment, outcome, and closing line.
