@@ -10,6 +10,8 @@ The page is structured as five sections, excluding the shared Header and Footer:
 4. What You Can Expect — clear communication, a practical as-is option, and no obligation.
 5. Final CTA — “Let’s Start With a Clear Number.”
 
+Normal paragraph copy on the page uses the global primary text color. The Final CTA retains light paragraph text for contrast against its dark background.
+
 # Page Routing
 
 - Canonical route: `/about-us`
@@ -153,7 +155,7 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 ## Layout
 
 - Use the existing Background (`#FFFFFF`) as a full-width section background.
-- On Desktop, use an even `6 / 6` two-column composition: the Heading occupies the left six columns, while the direct-contact, assessment, outcome, and closing content form the right six-column flow.
+- At every breakpoint, the Heading spans the full section width above the remaining content. On Desktop, use a `7 / 1 / 4` composition: the direct contact, assessment, outcomes, and Closing Line occupy the left seven columns, the center column is intentionally empty, and the preserved original founder image at `/images/about-us/noah-founder.png` occupies the right four columns. On Tablet, use the eight-column equivalent `4 / 1 / 3`. On Mobile, stack the written content before the image.
 - The content flow makes the direct conversation the first and strongest idea, the realistic-path assessment the second, and the honest outcome the concluding idea.
 - Do not use a generic sales-Hero layout, CTA button, testimonial, statistics, badges, or claims that the business is local or large.
 - On Mobile, stack the Heading followed by the right-column content in its documented order, preserving clear distinction between the direct-contact statement, assessment, outcome, and closing line.
@@ -187,7 +189,7 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 
 ### Visual Design
 
-- Use the global Body Large typography.
+- Use the global Body typography.
 
 ## Outcome
 
@@ -201,6 +203,16 @@ Show what it is actually like to contact Your House in Cash. Visitors understand
 - Use the global Body typography.
 - Present the first line as the outcome when there is a realistic path and the second as the outcome when there is not.
 - On Tablet and Desktop, place the two outcomes side by side; stack them on Mobile. On Desktop, place a short existing-style brand-green vertical mark at the start of each outcome where it aligns to a background system line. Do not use horizontal dividers or bordered containers.
+
+## Founder Photograph
+
+### Content
+
+- Use the preserved original founder image at `/images/about-us/noah-founder.png`.
+
+### Visual Design
+
+- Use a simple rounded rectangular `3:2` crop with no overlays, filters, text, badges, or decorative elements.
 
 ## Closing Line
 

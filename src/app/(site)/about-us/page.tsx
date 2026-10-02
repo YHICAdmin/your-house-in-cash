@@ -67,7 +67,7 @@ export default function AboutUsPage() {
               <p className={`${styles.directContact} text-heading-3`}>
                 When you contact Your House in Cash, you speak directly with me.
               </p>
-              <p className={`${styles.assessment} text-body-large`}>
+              <p className={`${styles.assessment} text-body`}>
                 I take the time to understand the property and your situation before making an offer. My goal is not to force every house into a deal. It is to identify whether there is a realistic path to a completed sale.
               </p>
               <div className={styles.outcomes}>
@@ -78,6 +78,14 @@ export default function AboutUsPage() {
                 Either way, you get a clear answer without pressure.
               </p>
             </div>
+            <figure className={styles.directAnswerPhotograph}>
+              <Image
+                src="/images/about-us/noah-founder.png"
+                alt="Noah standing outside a house"
+                fill
+                sizes="(min-width: 1200px) 40vw, (min-width: 768px) 50vw, 100vw"
+              />
+            </figure>
           </div>
         </section>
 

@@ -8,10 +8,13 @@
 
 .introductionLayout,
 .beliefsLayout,
-.directAnswerLayout,
 .expectationsLayout,
 .finalCtaLayout {
   row-gap: var(--spacing-xl);
+}
+
+.directAnswerLayout {
+  row-gap: var(--spacing-l);
 }
 
 .introductionCopy,
@@ -23,6 +26,7 @@
 .beliefCopy,
 .directAnswerHeading,
 .directAnswerContent,
+.directAnswerPhotograph,
 .expectationsHeader,
 .standards,
 .finalCtaContent {
@@ -42,18 +46,12 @@
 
 .introductionSubtitle {
   margin: 0 0 var(--spacing-m);
-  color: var(--color-text-secondary);
 }
 
 .directAnswerContent p,
 .standard p,
 .finalCtaCopy p {
   margin: 0;
-}
-
-.assessment,
-.standard > p:last-child {
-  color: var(--color-text-secondary);
 }
 
 .founderPhotograph {
@@ -100,10 +98,7 @@
   gap: var(--spacing-m);
 }
 
-.beliefCopy p {
-  margin: 0;
-  color: var(--color-text-secondary);
-}
+.beliefCopy p { margin: 0; }
 
 .directAnswer {
   background: var(--color-background);
@@ -119,6 +114,22 @@
   align-items: flex-start;
 }
 
+.directAnswerPhotograph {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  justify-self: center;
+  aspect-ratio: 3 / 2;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-medium);
+}
+
+.directAnswerPhotograph img {
+  object-fit: cover;
+  object-position: center;
+}
+
 .directContact {
   margin: 0 0 var(--spacing-l) !important;
 }
@@ -132,10 +143,6 @@
   width: 100%;
   gap: var(--spacing-s);
   margin-bottom: var(--spacing-xl);
-}
-
-.directClosing {
-  color: var(--color-brand-dark);
 }
 
 .expectations {
@@ -209,10 +216,13 @@
 @media (min-width: 768px) {
   .introductionLayout,
   .beliefsLayout,
-  .directAnswerLayout,
   .expectationsLayout,
   .finalCtaLayout {
     row-gap: var(--spacing-2xl);
+  }
+
+  .directAnswerLayout {
+    row-gap: var(--spacing-xl);
   }
 
   .introductionCopy {
@@ -235,12 +245,14 @@
     grid-column: 5 / span 4;
   }
 
-  .directAnswerHeading {
-    grid-column: 1 / span 3;
+  .directAnswerContent {
+    grid-column: 1 / span 4;
   }
 
-  .directAnswerContent {
-    grid-column: 4 / span 5;
+  .directAnswerPhotograph {
+    grid-column: 6 / span 3;
+    max-width: none;
+    justify-self: stretch;
   }
 
   .outcomes {
@@ -289,12 +301,12 @@
     grid-column: 7 / span 6;
   }
 
-  .directAnswerHeading {
-    grid-column: 1 / span 6;
+  .directAnswerContent {
+    grid-column: 1 / span 7;
   }
 
-  .directAnswerContent {
-    grid-column: 7 / span 6;
+  .directAnswerPhotograph {
+    grid-column: 9 / span 4;
   }
 
   .outcomes p {
