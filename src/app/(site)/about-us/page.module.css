@@ -16,7 +16,7 @@
 
 .introductionCopy,
 .founderPhotograph,
-.plainLabel,
+.beliefLabel,
 .beliefStatement,
 .beliefDivider,
 .beliefSubheading,
@@ -74,12 +74,6 @@
 
 .beliefs {
   background: var(--color-background-neutral);
-}
-
-.plainLabel {
-  margin: 0;
-  color: var(--color-text-primary);
-  text-transform: uppercase;
 }
 
 .beliefStatement {

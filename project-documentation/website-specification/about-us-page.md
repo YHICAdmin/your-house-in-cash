@@ -102,7 +102,7 @@ Explain what Noah believes homeowners deserve before deciding what to do with th
 
 ### Visual Design
 
-- Use the global Label typography with small uppercase label styling.
+- Use the shared default Section Label treatment with the canonical Lucide `Handshake` icon.
 
 ## Primary Statement
 

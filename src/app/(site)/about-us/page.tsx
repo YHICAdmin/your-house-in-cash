@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { House } from "lucide-react";
+import { Handshake, House } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Button } from "@/components/ui/button";
 import { SectionLabel } from "@/components/ui/section-label";
@@ -39,7 +39,9 @@ export default function AboutUsPage() {
 
         <section className={`${styles.section} ${styles.beliefs} section-spacing system-lines-bg`} aria-labelledby="belief-heading">
           <div className={`${styles.beliefsLayout} content-grid`}>
-            <p className={`${styles.plainLabel} text-label`}>What I Believe</p>
+            <div className={styles.beliefLabel}>
+              <SectionLabel icon={Handshake}>What I Believe</SectionLabel>
+            </div>
             <h2 id="belief-heading" className={`${styles.beliefStatement} text-display`}>
               You deserve a clear, honest option before deciding what to do with your house.
             </h2>
