@@ -25,35 +25,31 @@ This is a calm, credible introduction. It is not a sales Hero and does not reuse
 
 ## Layout
 
-- Use the existing Brand Green Light (`#EAF3EC`) as a full-width, quiet section background.
-- On this background, use Brand Green Dark at `8%` opacity for the existing five-line system so it remains subtle but visible.
-- On Desktop, the section uses a spacious `6 / 1 / 5` composition. The left six columns contain the Title and Subtitle, the center column remains empty, and the right five columns contain one photograph of Noah.
+- Use the existing Background (`#FFFFFF`) as a full-width section background.
+- On Desktop, the section uses a spacious `6 / 1 / 5` composition. The left six columns contain the Label and Introduction Copy, the center column remains empty, and the right five columns contain one photograph of Noah.
 - On Desktop, the Introduction uses `2XL` (`64px`) vertical padding to create a more compact section height.
-- On Desktop, vertically center the Title and Subtitle relative to the landscape photograph on the right, creating a compact text-and-media composition.
+- On Desktop, vertically center the Label and Introduction Copy relative to the landscape photograph on the right, creating a compact text-and-media composition.
 - Use the supplied `Screenshot 2026-10-01 104146.png` only as compositional inspiration. Do not reproduce its typography, colors, spacing, or exact layout.
 - Use generous whitespace. The visual tone is personal, calm, and credible.
 - Do not use a location pill, oversized sales headline, CTA button, house collage, trust badges, a three-benefit row, testimonials, statistics, deal counts, local-office claims, badges, or benefit icons.
 - On Mobile, keep the section simple and airy; do not add decorative elements solely for Mobile.
 
-## Title
+## Label
 
 ### Content
 
-- `About Your House in Cash`
+- `ABOUT US`
 
 ### Component and Semantics
 
+- Use the shared Section Label Component with the canonical Lucide `House` icon.
 - Use H1 semantics.
 
-### Visual Design
-
-- Use the global H3 typography.
-
-## Subtitle
+## Introduction Copy
 
 ### Content
 
-- `I’m Noah, the person behind Your House in Cash. I believe homeowners deserve honest answers before deciding what comes next.`
+- `Hi, I’m Noah, the person behind Your House in Cash. My Cleveland real estate journey began in 2021, and I work with Cleveland-area homeowners who want a clear, direct option for selling a house.`
 
 ### Visual Design
 
@@ -81,7 +77,7 @@ This is a calm, credible introduction. It is not a sales Hero and does not reuse
 
 ### Responsive Behavior
 
-- On Mobile, the Title and Subtitle precede the Founder Photograph. Preserve the natural contextual composition rather than creating a tight portrait crop.
+- On Mobile, the Label and Introduction Copy precede the Founder Photograph. Preserve the natural contextual composition rather than creating a tight portrait crop.
 
 # What I Believe
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { House } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Button } from "@/components/ui/button";
 import { SectionLabel } from "@/components/ui/section-label";
@@ -17,11 +18,11 @@ export default function AboutUsPage() {
         <section className={`${styles.section} ${styles.introduction} section-spacing system-lines-bg`} aria-labelledby="about-us-heading">
           <div className={`${styles.introductionLayout} content-grid`}>
             <div className={styles.introductionCopy}>
-              <h1 id="about-us-heading" className={`${styles.introductionTitle} text-heading-3`}>
-                About Your House in Cash
+              <h1 id="about-us-heading" className={styles.introductionTitle}>
+                <SectionLabel icon={House}>About Us</SectionLabel>
               </h1>
               <p className={`${styles.introductionSubtitle} text-body`}>
-                I’m Noah, the person behind Your House in Cash. I believe homeowners deserve honest answers before deciding what comes next.
+                Hi, I’m Noah, the person behind Your House in Cash. My Cleveland real estate journey began in 2021, and I work with Cleveland-area homeowners who want a clear, direct option for selling a house.
               </p>
             </div>
             <figure className={styles.founderPhotograph}>
