@@ -87,7 +87,7 @@ Explain what Noah believes homeowners deserve before deciding what to do with th
 
 ## Layout
 
-- Use the existing Background (`#FFFFFF`) as a full-width section background.
+- Use the existing Background Neutral (`#F8F8F8`) as a full-width section background.
 - On Desktop, the Label appears above the Primary Statement. The Primary Statement occupies most of the upper two-thirds of the section, followed by one thin horizontal Divider.
 - Below the Divider, use two columns: the Supporting Subheading in a narrow left column, and the Supporting Copy followed by the Closing Line in a wider right column.
 - The belief remains visually dominant; the explanation is supporting context rather than a separate section.
