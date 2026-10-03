@@ -79,16 +79,8 @@ The Hero should make the direct, package-level alternative clear: fewer buyer co
 
 ### Supporting Microcopy
 
-- Temporarily reuse the Area Page Hero microcopy: `100% free. No obligation.`
+- Use the Area Page Hero microcopy: `100% free. No obligation.`
 - Reuse the Area Page Hero’s existing alignment and spacing beneath the button.
-
-## Hero Benefits
-
-- This is not a separate page Benefits section.
-- Temporarily retain the three existing Area Page Hero benefits beneath the CTA, using their existing content, icons, responsive behavior, and spacing:
-  1. `House` — `Sell As-Is`
-  2. `BadgeDollarSign` — `No Fees`
-  3. `CalendarCheck` — `Choose Your Closing Date`
 
 ## Portfolio Image Composition
 
@@ -98,7 +90,10 @@ Visually communicate several properties being considered together as one transac
 
 ### Content
 
-- Use three understated residential property images. Final image assets are to be selected before implementation.
+- Use the following three residential property images:
+  - Upper-left landscape image: `/images/portfolio-hero/single-family-rental.png`
+  - Upper-right portrait image: `/images/portfolio-hero/cleveland-duplex.png`
+  - Lower, widest landscape image: `/images/portfolio-hero/portfolio-street.png`
 - The images are decorative and must not imply that any depicted property is part of a real portfolio for sale.
 
 ### Visual Design
@@ -107,6 +102,15 @@ Visually communicate several properties being considered together as one transac
 - Arrange the three images as one staggered, editorial composition: a landscape image toward the center-left, a taller image at the upper right, and a wider image below.
 - The image group should suggest multiple homes gathering into one coordinated whole, not a dashboard, sales-card grid, or house-image collage.
 - Use the existing Medium Radius and Subtle Shadow. Keep the composition restrained, with no text, badges, address markers, overlays, or controls on the images.
+
+### Dimensions and Alignment
+
+- The complete gallery uses an approximately `541:590` width-to-height frame.
+- The center-left landscape image uses an approximately `4:3` aspect ratio and occupies about `50%` of the gallery width and `34%` of its height.
+- The upper-right portrait image uses an approximately `3:4` aspect ratio and occupies about `46%` of the gallery width and `56%` of its height.
+- The lower wide image uses an approximately `7:5` aspect ratio and occupies about `63%` of the gallery width and `41%` of its height.
+- Use gaps of approximately `4%` of the gallery width between adjacent non-overlapping image edges.
+- The lower image overlaps the landscape image vertically and sits below the portrait image with the documented gap.
 
 ### Responsive Behavior
 

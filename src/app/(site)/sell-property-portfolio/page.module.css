@@ -1,0 +1,135 @@
+.hero {
+  --skew-depth: var(--spacing-l);
+  --skew-angle: calc(atan2(var(--skew-depth), 100vw) + 3deg);
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.background {
+  --steeper-skew-depth: calc(100vw * tan(var(--skew-angle)));
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: var(--color-background-soft);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--steeper-skew-depth)), 0 100%);
+  pointer-events: none;
+}
+
+.layout {
+  align-items: center;
+  row-gap: 0;
+}
+
+.content,
+.media {
+  min-width: 0;
+  grid-column: 1 / -1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heading {
+  margin: var(--spacing-s) 0 var(--spacing-m);
+}
+
+.supportingCopy {
+  margin: 0 0 var(--spacing-l);
+  color: var(--color-text-secondary);
+}
+
+.ctaGroup {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.microcopy {
+  width: 100%;
+  margin: var(--spacing-xs) 0 0;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.media {
+  width: 100%;
+  max-width: 541px;
+  justify-self: center;
+  margin-top: var(--spacing-xl);
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 541 / 590;
+}
+
+.imageFrame {
+  position: absolute;
+  overflow: hidden;
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-subtle);
+}
+
+.imageFrame img {
+  object-fit: cover;
+}
+
+.upperLeft {
+  top: 21.5%;
+  left: 0;
+  width: 50.1%;
+  height: 34.2%;
+}
+
+.upperRight {
+  top: 0;
+  left: 53.8%;
+  width: 46.2%;
+  height: 55.8%;
+}
+
+.lower {
+  top: 59.2%;
+  left: 18.5%;
+  width: 62.8%;
+  height: 40.8%;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    --skew-depth: var(--spacing-2xl);
+  }
+
+  .microcopy {
+    width: 60%;
+    max-width: 360px;
+  }
+
+  .media {
+    grid-column: 2 / span 6;
+    max-width: none;
+    margin-top: var(--spacing-2xl);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    --skew-depth: var(--spacing-3xl);
+  }
+
+  .content {
+    grid-column: 1 / span 6;
+  }
+
+  .media {
+    grid-column: 8 / span 5;
+    margin-top: 0;
+  }
+}
