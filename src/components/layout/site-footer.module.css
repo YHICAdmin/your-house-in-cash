@@ -57,6 +57,11 @@
   list-style: none;
 }
 
+.links a {
+  font-size: var(--text-body-small);
+  line-height: var(--text-body-small--line-height);
+}
+
 .callLabel {
   margin: 0 0 var(--spacing-xs);
 }

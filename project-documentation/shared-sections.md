@@ -232,6 +232,7 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 ### Visual Design
 
 - The heading uses the global `H4` typography.
+- Navigation links use the global `Body Small` typography at every breakpoint.
 - The link list retains its semantic list structure without visible markers or default list margin or padding.
 
 ### Dimensions and Alignment
@@ -263,6 +264,7 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 
 ### Visual Design
 
+- Legal links use the global `Body Small` typography at every breakpoint.
 - The heading uses the global `H4` typography.
 - The Legal link list retains its semantic list structure without visible markers or default list margin or padding.
 
@@ -451,7 +453,7 @@ Provide clear, accessible navigation.
 
 * The Menu Control uses a transparent background, no Border, and a `#101114` icon color.
 * The Open Menu Panel uses an uninterrupted solid `#FFFFFF` background with no System Lines visible through it.
-* Each Menu Navigation row uses `Inter / 16px / 600 / 1.5`.
+* Each Menu Navigation row uses the global `Body Small` typography with a `600` weight.
 * A `1px` solid `#E4E7E4` divider separates adjacent Menu Navigation rows.
 * Menu Navigation rows do not use individual backgrounds, Card treatments, or Radius.
 
