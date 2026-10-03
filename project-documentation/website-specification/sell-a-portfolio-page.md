@@ -116,3 +116,57 @@ Visually communicate several properties being considered together as one transac
 
 - Preserve the image group as one coherent composition while scaling it down across breakpoints.
 - On Mobile, maintain a clear multi-property reading without turning the images into a uniform grid or showing them as separate cards.
+
+# What a Portfolio Sale Can Simplify
+
+## Purpose
+
+Show that selling a portfolio together can replace the repeated conversations, coordination, and uncertainty of selling each house separately.
+
+## Layout
+
+- Use the existing Background (`#FFFFFF`) with the global faint System Lines and restrained pale-green accents.
+- The Section Heading spans the full available content width above the benefit grid.
+- On Desktop, display the eight benefits as a four-column by two-row grid.
+- On Tablet, display the benefits as a two-column grid.
+- On Mobile, stack the benefits in their documented order.
+- Keep the section spacious and open. Do not use Cards, large boxes, Borders, Shadows, or supporting paragraphs within individual benefits.
+
+## Heading
+
+### Content
+
+- `What a portfolio sale can simplify`
+
+### Component and Semantics
+
+- Use H2 semantics.
+
+### Visual Design
+
+- Use the global H2 typography.
+
+## Benefits
+
+### Component and Semantics
+
+- Use one semantic unordered list containing eight benefits in the documented order.
+- Each benefit consists of one decorative, consistent Lucide line icon above one short text label.
+- Benefit labels use H3 semantics with the global Body typography.
+
+### Visual Design
+
+- Icons use the existing Brand Green color at the global Medium Icon size, without enclosing containers, pills, cards, or background shapes.
+- Each label should naturally occupy approximately two lines within its grid column.
+- Center the icon and label within each grid item in one compact vertical flow.
+
+### Content
+
+1. `Building2` — `One buyer for the whole portfolio`
+2. `FileCheck` — `One coordinated agreement`
+3. `MessageCircle` — `One point of contact`
+4. `CalendarCheck` — `One planned closing`
+5. `Combine` — `No need to sell house by house`
+6. `UsersRound` — `Occupied rentals can be included`
+7. `WalletCards` — `Keep collecting rent while you sell`
+8. `DoorOpen` — `No need to empty properties first`
