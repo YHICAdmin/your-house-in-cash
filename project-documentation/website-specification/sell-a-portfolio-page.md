@@ -245,6 +245,5 @@ Use these rows in order:
 
 ## Responsive Behavior
 
-- On Mobile, do not compress all three columns side by side.
-- Keep the section title above the comparison, then present each change as one readable comparison row: show the change label first, followed by the muted-gray individual-sale marker and dark-green portfolio marker with their column labels preserved in the row context.
+- On Mobile, retain the three-column comparison table with compact existing spacing. Allow column headings to wrap rather than changing the comparison into a stacked list.
 - Keep the portfolio outcome visually emphasized with the same restrained pale-green treatment.

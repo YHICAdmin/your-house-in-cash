@@ -134,7 +134,7 @@
 .comparisonChange,
 .comparisonCell {
   min-width: 0;
-  padding: var(--spacing-s);
+  padding: var(--spacing-xs);
 }
 
 .comparisonColumnHeading {
@@ -175,38 +175,6 @@
   display: none;
 }
 
-@media (max-width: 767px) {
-  .comparisonHeading {
-    margin-bottom: var(--spacing-l);
-  }
-
-  .comparisonHeader {
-    display: none;
-  }
-
-  .comparisonRow {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .comparisonChange {
-    padding-bottom: var(--spacing-s);
-    font-weight: 600;
-  }
-
-  .comparisonCell {
-    justify-content: space-between;
-    padding-top: var(--spacing-s);
-    padding-bottom: var(--spacing-s);
-  }
-
-  .comparisonCell::before {
-    display: block;
-    color: var(--color-text-secondary);
-    font-size: var(--text-body-small);
-    line-height: var(--text-body-small--line-height);
-  }
-}
-
 
 @media (min-width: 768px) {
   .hero {
@@ -226,6 +194,12 @@
 
   .comparisonContent {
     grid-column: 1 / span 8;
+  }
+
+  .comparisonColumnHeading,
+  .comparisonChange,
+  .comparisonCell {
+    padding: var(--spacing-s);
   }
 
 }
