@@ -56,7 +56,7 @@ The Hero should make the direct, package-level alternative clear: fewer buyer co
 
 ### Component and Semantics
 
-- Use the shared Section Label Component in its text-only treatment.
+- Use the shared Section Label Component with the canonical Lucide `Layers` icon.
 - The Primary Headline uses H1 semantics.
 
 ### Visual Design
@@ -117,56 +117,82 @@ Visually communicate several properties being considered together as one transac
 - Preserve the image group as one coherent composition while scaling it down across breakpoints.
 - On Mobile, maintain a clear multi-property reading without turning the images into a uniform grid or showing them as separate cards.
 
-# What a Portfolio Sale Can Simplify
+# Selling a Portfolio Should Mean Fewer Moving Parts
 
 ## Purpose
 
-Show that selling a portfolio together can replace the repeated conversations, coordination, and uncertainty of selling each house separately.
+Show that selling a portfolio together can replace the repeated conversations, coordination, and uncertainty of selling each house separately, while letting the portfolio continue working during the sale.
 
 ## Layout
 
 - Use the existing Background (`#FFFFFF`) with the global faint System Lines and restrained pale-green accents.
-- The Section Heading spans the full available content width above the benefit grid.
-- On Desktop, display the eight benefits as a four-column by two-row grid.
-- On Tablet, display the benefits as a two-column grid.
-- On Mobile, stack the benefits in their documented order.
-- Keep the section spacious and open. Do not use Cards, large boxes, Borders, Shadows, or supporting paragraphs within individual benefits.
+- On Desktop, use a `5 / 1 / 6` composition. The left content area occupies Grid Columns `1–5`, Grid Column `6` remains empty, and the right benefit area occupies Grid Columns `7–12`. On the eight-column Tablet Grid, use the proportional `3 / 1 / 4` equivalent.
+- The left area contains the Label, Section Heading, and Running Text in one vertical flow.
+- The right area contains the eight benefit cards in a two-column internal-scrolling grid.
+- While the section is in view on Desktop and Tablet, the left area remains sticky beneath the shared Header. The right area independently scrolls through its cards within the available viewport height.
+- On Mobile, return to one normal page scroll: stack the left content area followed by the eight cards. Do not use sticky positioning or an internal scroll area.
 
-## Heading
+## Left Content Area
 
-### Content
+### Label
 
-- `What a portfolio sale can simplify`
+- `PORTFOLIO BENEFITS`
+- Use the shared Section Label Component in its text-only treatment.
+
+### Section Heading
+
+- `Selling a portfolio should mean fewer moving parts.`
+- Use H2 semantics and the global H2 typography.
+
+### Running Text
+
+- `A portfolio sale can bring several properties into one organized process, so you can spend less time coordinating separate buyers, agreements, and closing plans.`
+- Use the global Body Large typography.
+
+## Benefit Cards
 
 ### Component and Semantics
 
-- Use H2 semantics.
+- Use one semantic unordered list containing eight benefit cards in the documented order.
+- Each card is one list item containing a decorative Icon Container and H3 Card Headline on one horizontal row, followed by one semantic unordered list of two short bullets.
+- Use the canonical Lucide icon assigned to each card.
 
 ### Visual Design
 
-- Use the global H2 typography.
+- Use the existing Surface background, Medium Radius, and a `1px` Border for every card. Do not use Shadows.
+- Use the shared default Icon Container treatment.
+- Card Headlines use the global H4 typography.
+- Bullets use the global Body Small typography and remain concise; each begins with a decorative Brand Green `Check` icon. Do not add paragraphs or extra explanatory copy.
+- Keep card padding, icon placement, headline spacing, and bullet spacing consistent across all eight cards.
 
-## Benefits
+### Card Content
 
-### Component and Semantics
+1. `Building2` — **One buyer**
+   - One conversation for the full portfolio
+   - No need to field offers property by property
+2. `FileCheck` — **One agreement**
+   - One set of terms for the package
+   - Clearer planning across every property
+3. `MessageCircle` — **One point of contact**
+   - A single person to work with
+   - Less back-and-forth between buyers
+4. `CalendarCheck` — **One planned closing**
+   - Plan dates around your timeline
+   - Coordinate the properties as one sale
+5. `Combine` — **No need to sell house by house**
+   - Avoid separate listings and negotiations
+   - Keep decisions connected across the portfolio
+6. `UsersRound` — **Occupied rentals can be included**
+   - Tenants can remain in place
+   - No need to wait for every lease to end
+7. `WalletCards` — **Keep collecting rent while you sell**
+   - Rental income can continue during the process
+   - Explore a sale without pausing operations
+8. `DoorOpen` — **No need to empty properties first**
+   - Avoid clearing out units for showings
+   - Evaluate properties in their current condition
 
-- Use one semantic unordered list containing eight benefits in the documented order.
-- Each benefit consists of one decorative, consistent Lucide line icon above one short text label.
-- Benefit labels use H3 semantics with the global Body typography.
+### Responsive Behavior
 
-### Visual Design
-
-- Icons use the existing Brand Green color at the global Medium Icon size, without enclosing containers, pills, cards, or background shapes.
-- Each label should naturally occupy approximately two lines within its grid column.
-- Center the icon and label within each grid item in one compact vertical flow.
-
-### Content
-
-1. `Building2` — `One buyer for the whole portfolio`
-2. `FileCheck` — `One coordinated agreement`
-3. `MessageCircle` — `One point of contact`
-4. `CalendarCheck` — `One planned closing`
-5. `Combine` — `No need to sell house by house`
-6. `UsersRound` — `Occupied rentals can be included`
-7. `WalletCards` — `Keep collecting rent while you sell`
-8. `DoorOpen` — `No need to empty properties first`
+- On Desktop and Tablet, show two cards per row within the right scrolling area.
+- On Mobile, show one full-width card per row in the documented order.

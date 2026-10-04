@@ -3,27 +3,30 @@ import Image from "next/image";
 import {
   Building2,
   CalendarCheck,
+  Check,
   Combine,
   DoorOpen,
   FileCheck,
+  Layers,
   MessageCircle,
   UsersRound,
   WalletCards,
 } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Button } from "@/components/ui/button";
+import { IconContainer } from "@/components/ui/icon-container";
 import { SectionLabel } from "@/components/ui/section-label";
 import styles from "./page.module.css";
 
-const portfolioBenefits = [
-  { icon: Building2, label: "One buyer for the whole portfolio" },
-  { icon: FileCheck, label: "One coordinated agreement" },
-  { icon: MessageCircle, label: "One point of contact" },
-  { icon: CalendarCheck, label: "One planned closing" },
-  { icon: Combine, label: "No need to sell house by house" },
-  { icon: UsersRound, label: "Occupied rentals can be included" },
-  { icon: WalletCards, label: "Keep collecting rent while you sell" },
-  { icon: DoorOpen, label: "No need to empty properties first" },
+const portfolioBenefitCards = [
+  { icon: Building2, headline: "One buyer", bullets: ["One conversation for the full portfolio", "No need to field offers property by property"] },
+  { icon: FileCheck, headline: "One agreement", bullets: ["One set of terms for the package", "Clearer planning across every property"] },
+  { icon: MessageCircle, headline: "One point of contact", bullets: ["A single person to work with", "Less back-and-forth between buyers"] },
+  { icon: CalendarCheck, headline: "One planned closing", bullets: ["Plan dates around your timeline", "Coordinate the properties as one sale"] },
+  { icon: Combine, headline: "No need to sell house by house", bullets: ["Avoid separate listings and negotiations", "Keep decisions connected across the portfolio"] },
+  { icon: UsersRound, headline: "Occupied rentals can be included", bullets: ["Tenants can remain in place", "No need to wait for every lease to end"] },
+  { icon: WalletCards, headline: "Keep collecting rent while you sell", bullets: ["Rental income can continue during the process", "Explore a sale without pausing operations"] },
+  { icon: DoorOpen, headline: "No need to empty properties first", bullets: ["Avoid clearing out units for showings", "Evaluate properties in their current condition"] },
 ] as const;
 
 export const metadata: Metadata = {
@@ -39,7 +42,7 @@ export default function SellPropertyPortfolioPage() {
           <div className={styles.background} aria-hidden="true" />
           <div className={`${styles.layout} content-grid`}>
             <div className={styles.content}>
-              <SectionLabel>Sell a Portfolio</SectionLabel>
+              <SectionLabel icon={Layers}>Sell a Portfolio</SectionLabel>
               <h1 id="portfolio-hero-heading" className={`${styles.heading} text-display`}>
                 Sell your Cleveland rental portfolio in one transaction.
               </h1>
@@ -88,17 +91,35 @@ export default function SellPropertyPortfolioPage() {
 
         <section className={`${styles.simplify} section-spacing system-lines-bg`} aria-labelledby="simplify-heading">
           <div className={`${styles.simplifyLayout} content-grid`}>
-            <h2 id="simplify-heading" className={`${styles.simplifyHeading} text-heading-2`}>
-              What a portfolio sale can simplify
-            </h2>
-            <ul className={styles.benefits}>
-              {portfolioBenefits.map(({ icon: Icon, label }) => (
-                <li key={label} className={styles.benefit}>
-                  <Icon aria-hidden="true" />
-                  <h3 className="text-body">{label}</h3>
-                </li>
-              ))}
-            </ul>
+            <div className={styles.simplifyIntro}>
+              <SectionLabel>Portfolio Benefits</SectionLabel>
+              <h2 id="simplify-heading" className={`${styles.simplifyHeading} text-heading-2`}>
+                Selling a portfolio should mean fewer moving parts.
+              </h2>
+              <p className={`${styles.simplifyCopy} text-body-large`}>
+                A portfolio sale can bring several properties into one organized process, so you can spend less time coordinating separate buyers, agreements, and closing plans.
+              </p>
+            </div>
+            <div className={styles.benefitRail} tabIndex={0} aria-label="Portfolio sale benefits">
+              <ul className={styles.benefitCards}>
+                {portfolioBenefitCards.map(({ icon, headline, bullets }) => (
+                  <li key={headline} className={styles.benefitCard}>
+                    <div className={styles.benefitCardHeader}>
+                      <IconContainer icon={icon} aria-hidden="true" />
+                      <h3 className={`${styles.benefitHeadline} text-heading-4`}>{headline}</h3>
+                    </div>
+                    <ul className={`${styles.benefitBullets} text-body-small`}>
+                      {bullets.map((bullet) => (
+                        <li key={bullet}>
+                          <Check aria-hidden="true" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
       </main>
