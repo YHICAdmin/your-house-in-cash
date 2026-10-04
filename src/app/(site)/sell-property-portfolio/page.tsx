@@ -22,7 +22,7 @@ export default function SellPropertyPortfolioPage() {
             <div className={styles.content}>
               <SectionLabel icon={Layers}>Sell a Portfolio</SectionLabel>
               <h1 id="portfolio-hero-heading" className={`${styles.heading} text-display`}>
-                Sell your Cleveland rental portfolio in one transaction.
+                Sell your rental portfolio in one transaction.
               </h1>
               <p className={`${styles.supportingCopy} text-body-large`}>
                 Whether you own three properties or twenty, we can evaluate the portfolio as a whole and coordinate a direct, practical path to sell—without managing a separate buyer and process for every house.
