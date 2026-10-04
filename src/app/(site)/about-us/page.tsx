@@ -52,7 +52,9 @@ export default function AboutUsPage() {
                   Sometimes listing with an agent is the best path. Other times, the work, time, showings, uncertainty, or condition of the property make an as-is sale more practical. Either way, you should be able to understand the real options before deciding what comes next. That’s why I started Your House in Cash.
                 </p>
                 <figure className={styles.beliefCardImage}>
-                  <Image src="/images/about-us/noah-founder.png" alt="Noah standing outside a house" fill sizes="(min-width: 768px) 40vw, 100vw" />
+                  <div className={styles.beliefCardImageFrame}>
+                    <Image src="/images/about-us/noah-founder.png" alt="Noah standing outside a house" fill sizes="(min-width: 768px) 32vw, 80vw" />
+                  </div>
                 </figure>
               </article>
               <article className={styles.beliefCard}>
@@ -61,7 +63,9 @@ export default function AboutUsPage() {
                   When you contact Your House in Cash, you speak directly with me. I take the time to understand the property and your situation before making an offer. My goal is not to force every house into a deal. It is to identify whether there is a realistic path to a completed sale. If there is a realistic path, I’ll explain the offer and the next steps clearly. If there is not, I’ll be upfront about that too. Either way, you get a clear answer without pressure.
                 </p>
                 <figure className={styles.beliefCardImage}>
-                  <Image src="/images/about-us/noah-founder.png" alt="Noah standing outside a house" fill sizes="(min-width: 768px) 40vw, 100vw" />
+                  <div className={styles.beliefCardImageFrame}>
+                    <Image src="/images/about-us/noah-founder.png" alt="Noah standing outside a house" fill sizes="(min-width: 768px) 32vw, 80vw" />
+                  </div>
                 </figure>
               </article>
             </div>
