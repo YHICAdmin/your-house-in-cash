@@ -110,9 +110,6 @@
     height: calc(100svh - var(--scroll-journey-tracker-height) - var(--benefit-header-height) - var(--section-spacing) - var(--section-spacing));
   }
 
-  .track {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 1200px) {
@@ -126,6 +123,10 @@
 
   .viewport {
     grid-column: 7 / span 6;
+  }
+
+  .track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

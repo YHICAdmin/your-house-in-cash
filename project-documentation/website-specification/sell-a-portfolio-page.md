@@ -199,5 +199,5 @@ Show that selling a portfolio together can replace the repeated conversations, c
 
 ### Responsive Behavior
 
-- On Desktop and Tablet, show two cards per row within the right scrolling area.
-- On Mobile, show one full-width card per row in the documented order.
+- On Desktop, show two cards per row within the right scrolling area.
+- On Tablet and Mobile, show one full-width card per row in the documented order.
