@@ -9,7 +9,7 @@ The page is structured as four sections, excluding the shared Header and Footer:
 3. What You Can Expect.
 4. Final CTA.
 
-Normal paragraph copy uses the global primary text color. The shared Footer uses Background Neutral (`#F8F8F8`) on this page.
+Normal paragraph copy uses the global primary text color. The shared Footer uses its default white Background on this page.
 
 # Page Routing
 
@@ -114,7 +114,7 @@ Turn the earlier promises into two practical standards for working with Your Hou
 
 ## Layout
 
-- Use the existing Background Neutral (`#F8F8F8`) with the existing five Desktop background lines as subtle structural framework.
+- Use the existing white Background with the existing five Desktop background lines as subtle structural framework.
 - On Desktop and Tablet, the Label and Heading span the section above the two standards, which share one row.
 - On Mobile, stack the Label, Heading, then standards in order.
 - Do not use separate cards, bordered boxes, shadows, or a generic feature grid. Do not add a CTA, testimonials, statistics, badges, review stars, or claims that the business is local or large.
@@ -149,7 +149,7 @@ Close the page with a calm, clear next step after the visitor has met Noah, unde
 
 ## Layout
 
-- Use the shared Final CTA with its default white Background and established responsive behavior.
+- Use the shared Final CTA with the existing soft brand-neutral Background and established responsive behavior.
 - The CTA is the natural conclusion of the page, not a high-pressure marketing push.
 
 ## Content

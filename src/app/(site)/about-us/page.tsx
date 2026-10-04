@@ -89,7 +89,7 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        <FinalCta content={{
+        <FinalCta background="soft" content={{
           label: "Ready When You Are",
           headline: "Let’s Start With a Clear Number",
           supportingCopy: "If you are considering selling a Cleveland-area house, tell me a little about the property and your situation. I will review it and provide a no-obligation as-is cash offer, so you can decide whether it is the right fit.",
@@ -101,7 +101,7 @@ export default function AboutUsPage() {
           ],
         }} />
       </main>
-      <SiteFooter background="neutral" />
+      <SiteFooter />
     </>
   );
 }
