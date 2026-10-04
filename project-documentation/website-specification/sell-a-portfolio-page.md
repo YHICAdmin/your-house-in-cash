@@ -256,7 +256,7 @@ Answer the practical questions owners may have about selling several properties 
 
 ## Component and Layout
 
-- Use the shared `FaqSection` and its documented Accordion behavior, visual design, spacing, contact link, and responsive layout.
+- Use the shared `FaqSection` with its default white Background and its documented Accordion behavior, visual design, spacing, contact link, and responsive layout.
 - Use the shared Section Label with the text `FAQ` and no icon.
 - Use the following Section Intro content:
   - Headline: `Questions about selling a portfolio?`
@@ -303,7 +303,7 @@ Close the page with one calm, portfolio-specific next step after the visitor has
 
 ## Layout and Visual Design
 
-- Use an existing white Background with the global faint System Lines.
+- Use the existing soft brand-neutral Background with the global faint System Lines.
 - Center the Heading, Supporting Copy, and Primary CTA in one vertical composition across all Breakpoints.
 - Use H2 semantics and global H2 typography for the Heading; use global Body Large typography for the Supporting Copy.
 - Use the shared Button Component with the `conversion` variant, matching the Hero button's dimensions and responsive behavior.

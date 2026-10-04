@@ -41,7 +41,6 @@ export function PortfolioFaq() {
       headline="Questions about selling a portfolio?"
       supportingCopy="Get clear answers about occupied rentals, property condition, timing, and what it means to sell several properties together."
       items={faqItems}
-      background="soft"
     />
   );
 }
