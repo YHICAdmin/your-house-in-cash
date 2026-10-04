@@ -287,3 +287,24 @@ Answer the practical questions owners may have about selling several properties 
 6. **Am I obligated to accept an offer?**
 
    No. An offer is simply one option. We explain it clearly so you can decide whether selling the portfolio together is the right fit.
+
+# Final CTA
+
+## Purpose
+
+Close the page with one calm, portfolio-specific next step after the visitor has reviewed the process, comparison, and common questions.
+
+## Content
+
+- Heading: `See what a portfolio sale could look like.`
+- Supporting Copy: `Tell us about the properties, tenants, and timing you are considering. We’ll review the portfolio as a whole and let you know whether a direct sale makes sense.`
+- Primary CTA: `Tell Us About Your Portfolio`
+- Primary CTA destination: `/get-cash-offer`
+
+## Layout and Visual Design
+
+- Use an existing white Background with the global faint System Lines.
+- Center the Heading, Supporting Copy, and Primary CTA in one vertical composition across all Breakpoints.
+- Use H2 semantics and global H2 typography for the Heading; use global Body Large typography for the Supporting Copy.
+- Use the shared Button Component with the `conversion` variant, matching the Hero button's dimensions and responsive behavior.
+- Keep the composition spacious and restrained. Do not add a label, reassurance row, benefits, icons, cards, or additional links.

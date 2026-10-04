@@ -4,6 +4,7 @@ import { Check, Layers, X } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { PortfolioBenefits } from "@/components/portfolio/portfolio-benefits";
 import { PortfolioFaq } from "@/components/portfolio/portfolio-faq";
+import { PortfolioFinalCta } from "@/components/portfolio/portfolio-final-cta";
 import { Button } from "@/components/ui/button";
 import { SectionLabel } from "@/components/ui/section-label";
 import styles from "./page.module.css";
@@ -108,6 +109,7 @@ export default function SellPropertyPortfolioPage() {
         </section>
 
         <PortfolioFaq />
+        <PortfolioFinalCta />
       </main>
       <SiteFooter />
     </>

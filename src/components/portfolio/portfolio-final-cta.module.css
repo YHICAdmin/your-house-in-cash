@@ -1,0 +1,34 @@
+.section {
+  background: var(--color-background);
+}
+
+.composition {
+  display: flex;
+  grid-column: 1 / -1;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heading {
+  max-width: 760px;
+  margin: 0 0 var(--spacing-m);
+}
+
+.copy {
+  max-width: 680px;
+  margin: 0 0 var(--spacing-l);
+  color: var(--color-text-secondary);
+}
+
+@media (min-width: 768px) {
+  .composition {
+    grid-column: 2 / span 6;
+  }
+}
+
+@media (min-width: 1200px) {
+  .composition {
+    grid-column: 3 / span 8;
+  }
+}
