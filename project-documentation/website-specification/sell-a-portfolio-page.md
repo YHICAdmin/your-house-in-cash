@@ -51,7 +51,7 @@ The Hero should make the direct, package-level alternative clear: fewer buyer co
 ### Content
 
 1. Section Label: `SELL A PORTFOLIO`
-2. Primary Headline: `Sell your Cleveland rental portfolio in one transaction.`
+2. Primary Headline: `Sell your rental portfolio in one transaction.`
 3. Supporting Copy: `Whether you own three properties or twenty, we can evaluate the portfolio as a whole and coordinate a direct, practical path to sell—without managing a separate buyer and process for every house.`
 
 ### Component and Semantics
@@ -172,30 +172,30 @@ Show that selling a portfolio together can replace the repeated conversations, c
 
 ### Card Content
 
-1. `Building2` — **One buyer**
-   - One conversation for the full portfolio
-   - No need to field offers property by property
-2. `FileCheck` — **One agreement**
-   - One set of terms for the package
-   - Clearer planning across every property
-3. `MessageCircle` — **One point of contact**
-   - A single person to work with
-   - Less back-and-forth between buyers
-4. `CalendarCheck` — **One planned closing**
-   - Plan dates around your timeline
-   - Coordinate the properties as one sale
-5. `Combine` — **No need to sell house by house**
-   - Avoid separate listings and negotiations
-   - Keep decisions connected across the portfolio
-6. `UsersRound` — **Occupied rentals can be included**
-   - Tenants can remain in place
-   - No need to wait for every lease to end
-7. `WalletCards` — **Keep collecting rent while you sell**
-   - Rental income can continue during the process
-   - Explore a sale without pausing operations
-8. `DoorOpen` — **No need to empty properties first**
-   - Avoid clearing out units for showings
-   - Evaluate properties in their current condition
+1. `Building2` — **Sell the whole package**
+   - From a few properties to a larger portfolio
+   - Review the opportunity as one sale
+2. `FileCheck` — **One buyer, one agreement**
+   - One direct point of contact
+   - One coordinated purchase agreement
+3. `CalendarCheck` — **One planned closing**
+   - Work toward a clear closing timeline
+   - Coordinate the portfolio together
+4. `MessageCircle` — **Less back-and-forth**
+   - Avoid separate buyer conversations
+   - Avoid negotiating every house individually
+5. `UsersRound` — **Occupied rentals considered**
+   - Tenanted properties can be included
+   - Discuss leases and access upfront
+6. `WalletCards` — **Keep collecting rent**
+   - Continue operating during the process
+   - Avoid rushing vacant units to market
+7. `Combine` — **Sell properties as they are**
+   - No renovation plan before reaching out
+   - Condition is reviewed property by property
+8. `DoorOpen` — **No need to clear out first**
+   - Do not empty every unit to start
+   - Discuss contents and access as part of the plan
 
 ### Responsive Behavior
 

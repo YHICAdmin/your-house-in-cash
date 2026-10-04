@@ -18,14 +18,14 @@ import { SectionLabel } from "@/components/ui/section-label";
 import styles from "./portfolio-benefits.module.css";
 
 const portfolioBenefitCards = [
-  { icon: Building2, headline: "One buyer", bullets: ["One conversation for the full portfolio", "No need to field offers property by property"] },
-  { icon: FileCheck, headline: "One agreement", bullets: ["One set of terms for the package", "Clearer planning across every property"] },
-  { icon: MessageCircle, headline: "One point of contact", bullets: ["A single person to work with", "Less back-and-forth between buyers"] },
-  { icon: CalendarCheck, headline: "One planned closing", bullets: ["Plan dates around your timeline", "Coordinate the properties as one sale"] },
-  { icon: Combine, headline: "No need to sell house by house", bullets: ["Avoid separate listings and negotiations", "Keep decisions connected across the portfolio"] },
-  { icon: UsersRound, headline: "Occupied rentals can be included", bullets: ["Tenants can remain in place", "No need to wait for every lease to end"] },
-  { icon: WalletCards, headline: "Keep collecting rent while you sell", bullets: ["Rental income can continue during the process", "Explore a sale without pausing operations"] },
-  { icon: DoorOpen, headline: "No need to empty properties first", bullets: ["Avoid clearing out units for showings", "Evaluate properties in their current condition"] },
+  { icon: Building2, headline: "Sell the whole package", bullets: ["From a few properties to a larger portfolio", "Review the opportunity as one sale"] },
+  { icon: FileCheck, headline: "One buyer, one agreement", bullets: ["One direct point of contact", "One coordinated purchase agreement"] },
+  { icon: CalendarCheck, headline: "One planned closing", bullets: ["Work toward a clear closing timeline", "Coordinate the portfolio together"] },
+  { icon: MessageCircle, headline: "Less back-and-forth", bullets: ["Avoid separate buyer conversations", "Avoid negotiating every house individually"] },
+  { icon: UsersRound, headline: "Occupied rentals considered", bullets: ["Tenanted properties can be included", "Discuss leases and access upfront"] },
+  { icon: WalletCards, headline: "Keep collecting rent", bullets: ["Continue operating during the process", "Avoid rushing vacant units to market"] },
+  { icon: Combine, headline: "Sell properties as they are", bullets: ["No renovation plan before reaching out", "Condition is reviewed property by property"] },
+  { icon: DoorOpen, headline: "No need to clear out first", bullets: ["Do not empty every unit to start", "Discuss contents and access as part of the plan"] },
 ] as const;
 
 const desktopMedia = "(min-width: 768px)";
