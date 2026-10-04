@@ -247,3 +247,43 @@ Use these rows in order:
 
 - On Mobile, retain the three-column comparison table with compact existing spacing. Allow column headings to wrap rather than changing the comparison into a stacked list.
 - Keep the portfolio outcome visually emphasized with the same restrained pale-green treatment.
+
+# FAQ
+
+## Purpose
+
+Answer the practical questions owners may have about selling several properties together, including portfolio size, occupied rentals, condition, timing, and whether an offer creates any obligation.
+
+## Component and Layout
+
+- Use the shared `FaqSection` and its documented Accordion behavior, visual design, spacing, contact link, and responsive layout.
+- Use the shared Section Label with the text `FAQ` and no icon.
+- Use the following Section Intro content:
+  - Headline: `Questions about selling a portfolio?`
+  - Supporting Copy: `Get clear answers about occupied rentals, property condition, timing, and what it means to sell several properties together.`
+
+## Questions and Answers
+
+1. **Can I sell just a few properties as a portfolio?**
+
+   Yes. Whether you own three properties or a larger group, we can review the opportunity together and discuss whether a coordinated sale makes sense.
+
+2. **Can occupied rentals be included?**
+
+   Often, yes. Tell us about the tenants, leases, and access so we can understand the portfolio and plan around the details upfront.
+
+3. **Do the properties need to be vacant or repaired first?**
+
+   No. Properties can be evaluated in their current condition. You do not need to empty every unit or create a renovation plan before reaching out.
+
+4. **Do all properties need to close on the same day?**
+
+   Not necessarily. We will talk through the portfolio, your timing, and the practical details to determine what coordinated closing plan makes sense.
+
+5. **How do you review a portfolio offer?**
+
+   We look at the properties together, including their condition, occupancy, lease details, and overall situation, before explaining whether there is a realistic path to a purchase.
+
+6. **Am I obligated to accept an offer?**
+
+   No. An offer is simply one option. We explain it clearly so you can decide whether selling the portfolio together is the right fit.

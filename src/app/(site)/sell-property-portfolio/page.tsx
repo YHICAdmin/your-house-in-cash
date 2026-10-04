@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Check, Layers, Minus } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { PortfolioBenefits } from "@/components/portfolio/portfolio-benefits";
+import { PortfolioFaq } from "@/components/portfolio/portfolio-faq";
 import { Button } from "@/components/ui/button";
 import { SectionLabel } from "@/components/ui/section-label";
 import styles from "./page.module.css";
@@ -105,6 +106,8 @@ export default function SellPropertyPortfolioPage() {
             </div>
           </div>
         </section>
+
+        <PortfolioFaq />
       </main>
       <SiteFooter />
     </>
