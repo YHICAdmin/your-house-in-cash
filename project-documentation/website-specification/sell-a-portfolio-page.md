@@ -126,7 +126,7 @@ Show that selling a portfolio together can replace the repeated conversations, c
 ## Layout
 
 - Use the existing Background (`#FFFFFF`) with the global faint System Lines and restrained pale-green accents.
-- On Desktop, use a `5 / 1 / 6` composition. The left content area occupies Grid Columns `1–5`, Grid Column `6` remains empty, and the right benefit area occupies Grid Columns `7–12`. On the eight-column Tablet Grid, use the proportional `3 / 1 / 4` equivalent.
+- On Desktop, use a `5 / 1 / 6` composition. The left content area occupies Grid Columns `1–5`, Grid Column `6` remains empty, and the right benefit area occupies Grid Columns `7–12`. On the eight-column Tablet Grid, use equal `4 / 4` columns.
 - The left area contains the Label, Section Heading, and Running Text in one vertical flow.
 - The right area contains the eight benefit cards in a two-column internal-scrolling grid.
 - On Desktop and Tablet, the section occupies at least the visible viewport below the shared Header: `min-height: calc(100svh - header height)`.
@@ -142,7 +142,7 @@ Show that selling a portfolio together can replace the repeated conversations, c
 ### Label
 
 - `PORTFOLIO BENEFITS`
-- Use the shared Section Label Component in its text-only treatment.
+- Use the shared Section Label Component with the canonical Lucide `ListChecks` icon.
 
 ### Section Heading
 
@@ -166,7 +166,7 @@ Show that selling a portfolio together can replace the repeated conversations, c
 
 - Use the existing Surface background, Medium Radius, and a `1px` Border for every card. Do not use Shadows.
 - Use the shared default Icon Container treatment.
-- Card Headlines use the global H4 typography.
+- Card Headlines use the global Body typography with a semibold weight.
 - Bullets use the global Body Small typography and remain concise; each begins with a decorative Brand Green `Check` icon. Do not add paragraphs or extra explanatory copy.
 - Keep card padding, icon placement, headline spacing, and bullet spacing consistent across all eight cards.
 

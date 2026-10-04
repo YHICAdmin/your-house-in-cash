@@ -8,6 +8,7 @@ import {
   Combine,
   DoorOpen,
   FileCheck,
+  ListChecks,
   MessageCircle,
   UsersRound,
   WalletCards,
@@ -88,7 +89,7 @@ export function PortfolioBenefits() {
     <section ref={sectionRef} className={`${styles.section} system-lines-bg`} aria-labelledby="simplify-heading">
       <div className={`${styles.layout} content-grid`}>
         <div className={styles.intro}>
-          <SectionLabel>Portfolio Benefits</SectionLabel>
+          <SectionLabel icon={ListChecks}>Portfolio Benefits</SectionLabel>
           <h2 id="simplify-heading" className={`${styles.heading} text-heading-2`}>
             Selling a portfolio should mean fewer moving parts.
           </h2>
@@ -102,7 +103,7 @@ export function PortfolioBenefits() {
               <li key={headline} className={styles.card}>
                 <div className={styles.cardHeader}>
                   <IconContainer icon={icon} aria-hidden="true" />
-                  <h3 className={`${styles.cardHeadline} text-heading-4`}>{headline}</h3>
+                  <h3 className={`${styles.cardHeadline} text-body`}>{headline}</h3>
                 </div>
                 <ul className={`${styles.bullets} text-body-small`}>
                   {bullets.map((bullet) => (

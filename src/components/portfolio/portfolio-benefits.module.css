@@ -58,10 +58,12 @@
 
 .cardHeadline {
   margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .bullets {
-  margin: 0;
+  margin: var(--spacing-s) 0 0 12px;
   padding: 0;
   color: var(--color-text-secondary);
   list-style: none;
@@ -98,7 +100,7 @@
   }
 
   .intro {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 4;
     position: sticky;
     top: calc(var(--scroll-journey-tracker-height) + var(--benefit-header-height) + var(--spacing-m));
   }
