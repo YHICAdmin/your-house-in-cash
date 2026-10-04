@@ -117,7 +117,7 @@ Visually communicate several properties being considered together as one transac
 - Preserve the image group as one coherent composition while scaling it down across breakpoints.
 - On Mobile, maintain a clear multi-property reading without turning the images into a uniform grid or showing them as separate cards.
 
-# Selling a Portfolio Should Mean Fewer Moving Parts
+# Benefits
 
 ## Purpose
 
@@ -201,3 +201,49 @@ Show that selling a portfolio together can replace the repeated conversations, c
 
 - On Desktop, show two cards per row within the right scrolling area.
 - On Tablet and Mobile, show one full-width card per row in the documented order.
+
+# One House vs. Portfolio
+
+## Purpose
+
+Make the practical difference between selling individual properties and selling the portfolio together easy to scan.
+
+## Content
+
+### Section Title
+
+- `What changes when you sell as a portfolio?`
+- Use H2 semantics and the global H2 typography.
+
+### Comparison Columns
+
+1. `What changes`
+2. `Sell one property at a time`
+3. `Sell as one portfolio`
+
+### Comparison Rows
+
+Use these rows in order:
+
+1. One buyer for the whole package
+2. One coordinated agreement
+3. One point of contact
+4. One planned closing process
+5. Portfolio-wide review
+6. Fewer separate negotiations
+
+## Layout and Visual Design
+
+- Use a clean three-column comparison matrix: the first column names the change, the second presents selling one property at a time, and the third presents selling as one portfolio.
+- On Desktop and Tablet, align the three column headings across the top and retain each comparison row on one shared horizontal line.
+- Use a muted gray dash or small `×` in the `Sell one property at a time` column for every row.
+- Use a dark brand-green checkmark in the `Sell as one portfolio` column for every row.
+- Give the full `Sell as one portfolio` column a restrained pale-green background to clarify the recommended path. Do not add shadows, card treatments, pricing-table styling, or heavy borders.
+- Use understated row dividers and the existing faint System Lines as the only structural detail. Maintain generous whitespace and the siteâ€™s established editorial hierarchy.
+- Keep the matrix distinct from a spreadsheet: the change label is the primary readable content and the two outcome columns are intentionally simple visual confirmations.
+
+## Responsive Behavior
+
+- On Mobile, do not compress all three columns side by side.
+- Keep the section title above the comparison, then present each change as one readable comparison row: show the change label first, followed by the muted-gray individual-sale marker and dark-green portfolio marker with their column labels preserved in the row context.
+- Keep the portfolio outcome visually emphasized with the same restrained pale-green treatment.
