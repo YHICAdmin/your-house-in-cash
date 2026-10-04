@@ -102,82 +102,6 @@
   height: 40.8%;
 }
 
-.simplify {
-  background: var(--color-background);
-}
-
-.simplifyIntro,
-.benefitRail {
-  min-width: 0;
-  grid-column: 1 / -1;
-}
-
-.simplifyIntro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.simplifyHeading {
-  margin: var(--spacing-s) 0 var(--spacing-m);
-}
-
-.simplifyCopy {
-  margin: 0;
-}
-
-.benefitCards {
-  display: grid;
-  gap: var(--spacing-m);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.benefitCard {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: var(--spacing-m);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-medium);
-  background: var(--color-surface);
-}
-
-.benefitCardHeader {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  gap: var(--spacing-s);
-}
-
-.benefitHeadline {
-  margin: 0;
-}
-
-.benefitBullets {
-  margin: 0;
-  padding: 0;
-  color: var(--color-text-secondary);
-  list-style: none;
-}
-
-.benefitBullets li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--spacing-xs);
-}
-
-.benefitBullets li + li { margin-top: var(--spacing-xs); }
-
-.benefitBullets svg {
-  width: var(--icon-small);
-  height: var(--icon-small);
-  flex: 0 0 var(--icon-small);
-  margin-top: calc((var(--text-body-small--line-height) * 0.875rem - var(--icon-small)) / 2);
-  color: var(--color-brand);
-}
 
 @media (min-width: 768px) {
   .hero {
@@ -195,28 +119,6 @@
     margin-top: var(--spacing-2xl);
   }
 
-  .simplifyLayout {
-    align-items: start;
-    row-gap: 0;
-  }
-
-  .simplifyIntro {
-    grid-column: 1 / span 3;
-    position: sticky;
-    top: calc(var(--scroll-journey-tracker-height) + 72px + var(--spacing-m));
-  }
-
-  .benefitRail {
-    grid-column: 5 / span 4;
-    max-height: calc(100vh - var(--scroll-journey-tracker-height) - 72px - var(--spacing-2xl));
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    scrollbar-gutter: stable;
-  }
-
-  .benefitCards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 1200px) {
@@ -233,13 +135,4 @@
     margin-top: 0;
   }
 
-  .simplifyIntro {
-    grid-column: 1 / span 5;
-    top: calc(var(--scroll-journey-tracker-height) + 80px + var(--spacing-m));
-  }
-
-  .benefitRail {
-    grid-column: 7 / span 6;
-    max-height: calc(100vh - var(--scroll-journey-tracker-height) - 80px - var(--spacing-2xl));
-  }
 }

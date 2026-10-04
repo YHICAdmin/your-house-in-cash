@@ -129,7 +129,12 @@ Show that selling a portfolio together can replace the repeated conversations, c
 - On Desktop, use a `5 / 1 / 6` composition. The left content area occupies Grid Columns `1–5`, Grid Column `6` remains empty, and the right benefit area occupies Grid Columns `7–12`. On the eight-column Tablet Grid, use the proportional `3 / 1 / 4` equivalent.
 - The left area contains the Label, Section Heading, and Running Text in one vertical flow.
 - The right area contains the eight benefit cards in a two-column internal-scrolling grid.
-- While the section is in view on Desktop and Tablet, the left area remains sticky beneath the shared Header. The right area independently scrolls through its cards within the available viewport height.
+- On Desktop and Tablet, the section occupies at least the visible viewport below the shared Header: `min-height: calc(100svh - header height)`.
+- While the section is active, hold the section in view as the visitor explores its benefits. The left area remains static/sticky beneath the shared Header, and the next section or footer must not enter the viewport before the final benefit row is reached.
+- The right area is a fixed-height viewport with `overflow: hidden`. It contains a two-column card track that moves vertically inside the clipped viewport; it must not use native scrolling or expose a scrollbar.
+- Capture vertical wheel and trackpad movement while the active section has unpublished track progress. Use it to move the card track only. Once the track reaches its final position, release downward scrolling to the page; when scrolling upward, move back through the track before releasing upward page scrolling.
+- Use smooth, restrained movement only. Do not create a carousel effect, abrupt jumps, or heavy animation.
+- Keep the visible top and bottom edges of the right area clean: cards are clipped within the viewport and do not overlap the section.
 - On Mobile, return to one normal page scroll: stack the left content area followed by the eight cards. Do not use sticky positioning or an internal scroll area.
 
 ## Left Content Area
