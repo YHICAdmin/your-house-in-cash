@@ -1,353 +1,165 @@
 # Purpose
 
-Introduce Your House in Cash and explain its purpose. The page should give homeowners a clear understanding of why the company exists, the type of direct-sale option it provides, and what they can expect when they reach out.
+Introduce Your House in Cash and explain its approach. The page gives homeowners a clear understanding of why the company exists, the direct-sale option it provides, and what they can expect when they reach out.
 
-The page is structured as five sections, excluding the shared Header and Footer:
+The page is structured as four sections, excluding the shared Header and Footer:
 
-1. Introduction — a clear introduction to Your House in Cash and its approach.
-2. What I Believe.
-3. A Direct Answer, Early.
-4. What You Can Expect — clear communication, a practical as-is option, and no obligation.
-5. Final CTA — “Let’s Start With a Clear Number.”
+1. Introduction.
+2. Belief and Process.
+3. What You Can Expect.
+4. Final CTA.
 
-Normal paragraph copy on the page uses the global primary text color. The Final CTA retains light paragraph text for contrast against its dark background.
+Normal paragraph copy uses the global primary text color. The shared Footer uses Background Neutral (`#F8F8F8`) on this page.
 
 # Page Routing
 
 - Canonical route: `/about-us`
-- The page’s primary call to action follows the site’s standard Seller Lead Form Flow at `/get-cash-offer`.
-- The shared Footer uses the existing Background Neutral (`#F8F8F8`) on this page.
+- The primary CTA navigates to the standard Seller Lead Form Flow at `/get-cash-offer`.
 
 # Introduction
 
 ## Purpose
 
-Give the visitor a clear first understanding of Your House in Cash and its approach.
-
-This is a calm, credible introduction. It is not a sales Hero and does not reuse the Area Page or Situation Page Hero pattern.
+Give the visitor a calm, credible first understanding of Your House in Cash and its approach. This is not a sales Hero and does not reuse the Area or Situation Hero patterns.
 
 ## Layout
 
-- Use the existing Background (`#FFFFFF`) as a full-width section background.
-- On Desktop, the section uses a spacious `6 / 1 / 5` composition. The left six columns contain the Label and Introduction Copy, the center column remains empty, and the right five columns contain one photograph of Noah.
-- On Desktop, the Introduction uses `2XL` (`64px`) vertical padding to create a more compact section height.
-- On Desktop, vertically center the Label and Introduction Copy relative to the landscape photograph on the right, creating a compact text-and-media composition.
-- Use the supplied `Screenshot 2026-10-01 104146.png` only as compositional inspiration. Do not reproduce its typography, colors, spacing, or exact layout.
-- Use generous whitespace. The visual tone is personal, calm, and credible.
-- Do not use a location pill, oversized sales headline, CTA button, house collage, trust badges, a three-benefit row, testimonials, statistics, deal counts, local-office claims, badges, or benefit icons.
-- On Mobile, keep the section simple and airy; do not add decorative elements solely for Mobile.
+- Use the existing white Background as a full-width section background.
+- On Desktop, use a `6 / 1 / 5` composition: the left six columns contain the Label and Introduction Copy, the center column is empty, and the right five columns contain Noah's photograph.
+- Use `2XL` (`64px`) Desktop vertical padding. Vertically center the text composition relative to the photograph.
+- On Mobile, retain one simple, airy flow: Label and text first, photograph second.
+- Do not add a CTA, house collage, trust badges, benefit rows, testimonials, statistics, deal counts, or decorative mobile-only elements.
 
 ## Label
 
-### Content
-
-- `ABOUT US`
-
-### Component and Semantics
-
+- Content: `ABOUT US`
 - Use the shared Section Label Component with the canonical Lucide `House` icon.
 
 ## Heading
 
-### Content
-
-- `Hi, I’m Noah, the person behind Your House in Cash.`
-
-### Component and Semantics
-
-- Use H1 semantics with the global H2 visual typography.
+- Content: `Hi, I’m Noah, the person behind Your House in Cash.`
+- Use H1 semantics with global H2 visual typography.
 
 ## Introduction Copy
 
-### Content
-
-- `My Cleveland real estate journey began in 2021, and I work with Cleveland-area homeowners who want a clear, direct option for selling a house.`
-
-### Visual Design
-
-- Use the global Body typography.
+- Content: `My Cleveland real estate journey began in 2021, and I work with Cleveland-area homeowners who want a clear, direct option for selling a house.`
+- Use global Body typography.
 
 ## Founder Photograph
-
-### Content
 
 - Use the Introduction-specific founder photo at `/images/about-us/noah-founder-introduction.png`.
-- Keep `/images/about-us/noah-founder.png` available in the project for possible use in another About Us section; do not delete, rename, or replace it.
+- Keep `/images/about-us/noah-founder.png` available for use elsewhere on the page.
+- Use a simple rounded-rectangle treatment with no overlays, filters, text, badges, or decorative elements.
+- On Desktop, use a wide `3:2` landscape frame with `object-position: 55% 50%`. Keep Noah recognizable from roughly mid-thigh up while preserving the Cleveland house and residential-street context.
+- On Tablet and Mobile, use a smaller contextual `3:2` frame; do not create a close portrait crop.
 
-### Visual Design
-
-- Use a simple, restrained rounded-rectangle treatment.
-- Do not add filters, overlays, text, badges, or decorative elements over the photograph.
-- The image provides human context: Noah, the Cleveland house, and the residential street remain clearly visible as one real-world composition.
-
-### Dimensions and Alignment
-
-- On Desktop, use a wide `3:2` landscape aspect ratio.
-- Use the image close to its natural full composition, showing Noah roughly from mid-thigh up with the house and residential street clearly present around him.
-- Use `object-position: 55% 50%`; do not anchor aggressively toward Noah’s face.
-- Size the image so its visual height is roughly equal to the Title and Subtitle block, rather than substantially taller.
-
-### Responsive Behavior
-
-- On Tablet and Mobile, reduce the photograph’s visual prominence with a smaller `3:2` contextual frame. Keep Noah recognizable while avoiding a close-portrait treatment.
-- On Mobile, the Label and Introduction Copy precede the Founder Photograph. Preserve the natural contextual composition rather than creating a tight portrait crop.
-
-# What I Believe
+# Belief and Process
 
 ## Purpose
 
-Explain what Noah believes homeowners deserve before deciding what to do with their house. The section presents one continuous belief: the central belief, the explanation that there is not one right path, and the personal conclusion for starting Your House in Cash.
+Show the belief behind Your House in Cash and how that belief changes the first conversation with Noah. This section combines the former `What I Believe` and `A Direct Answer, Early` content into one concise composition.
 
 ## Layout
 
-- Use the existing Background Neutral (`#F8F8F8`) as a full-width section background.
-- On Desktop, use two columns. The Label and Primary Statement form the left column; the Supporting Subheading, Supporting Copy, and Closing Line form the right column.
-- The belief remains visually dominant; the explanation is supporting context rather than a separate section.
-- On Mobile, retain the order Label, Primary Statement, Supporting Subheading, Supporting Copy, and Closing Line. Stack the left column before the right column, reduce the Primary Statement type size without losing its visual dominance, and preserve generous vertical spacing without additional decorative elements.
+- Use the existing Background Neutral (`#F8F8F8`) with the global faint System Lines.
+- Remove the former section labels. Use one Main Title above two equal-width, tall editorial cards.
+- On Desktop and Tablet, place the cards side by side in one row. On Mobile, stack the Main Title, left card, then right card.
+- Each card contains a Title, one running-text block, and an image. Use the same founder image in both cards for now: `/images/about-us/noah-founder.png`.
+- Use existing Surface, Medium Radius, and restrained card styling. The cards should read as one paired editorial composition, not a feature grid.
+- Use `Screenshot 2026-10-04 153527.png` as composition inspiration only. Do not copy its typography, colors, spacing, imagery, or interface elements.
+- Do not add labels, CTA buttons, testimonials, statistics, badges, icons, or extra decorative elements.
 
-## Label
+## Main Title
 
-### Content
+- Content: `You deserve a clear, honest option.`
+- Use centered H2 semantics and global H2 typography. Keep the title on one line where the available width supports it; allow natural wrapping on narrower screens.
 
-- `WHAT I BELIEVE`
+## Left Card: Belief
 
-### Visual Design
-
-- Use the shared default Section Label treatment with the canonical Lucide `Handshake` icon.
-
-## Primary Statement
-
-### Content
-
-- `You deserve a clear, honest option before deciding what to do with your house.`
-
-### Visual Design
-
-- Use the global H2 typography with intentional line breaks and generous surrounding whitespace.
-
-## Supporting Subheading
-
-### Content
+### Title
 
 - `There isn’t one right path.`
+- Use H3 semantics and global H3 typography.
 
-### Visual Design
+### Running Text
 
-- Use the global H3 typography.
+- `Sometimes listing with an agent is the best path. Other times, the work, time, showings, uncertainty, or condition of the property make an as-is sale more practical. Either way, you should be able to understand the real options before deciding what comes next. That’s why I started Your House in Cash.`
+- Use global Body typography at its default size. The final sentence remains the ending of the running text.
 
-## Supporting Copy
+### Image
 
-### Content
+- Use `/images/about-us/noah-founder.png` in a simple rounded-rectangle frame with no overlays, filters, text, badges, or decorative elements.
 
-- `Sometimes listing with an agent is the best path. Other times, the work, time, showings, uncertainty, or condition of the property make an as-is sale more practical.`
-- `Either way, you should be able to understand the real options before deciding what comes next.`
+## Right Card: Direct Answer
 
-### Visual Design
-
-- Use the global Body typography.
-
-## Closing Line
-
-### Content
-
-- `That’s why I started Your House in Cash.`
-
-### Visual Design
-
-- Use the global Body typography and the same secondary text color as the Supporting Copy.
-
-# A Direct Answer, Early
-
-## Purpose
-
-Show what it is actually like to contact Your House in Cash. Visitors understand that they speak directly with Noah, receive an early and honest assessment, and are not pressured into a deal.
-
-## Layout
-
-- Use the existing Background (`#FFFFFF`) as a full-width section background.
-- At every breakpoint, the Heading spans the full section width above the remaining content. On Desktop, use a `7 / 1 / 4` composition: the direct contact, assessment, outcomes, and Closing Line occupy the left seven columns, the center column is intentionally empty, and the preserved original founder image at `/images/about-us/noah-founder.png` occupies the right four columns. On Tablet, use the eight-column equivalent `4 / 1 / 3`. On Mobile, stack the written content before the image.
-- The content flow makes the direct conversation the first and strongest idea, the realistic-path assessment the second, and the honest outcome the concluding idea.
-- Do not use a generic sales-Hero layout, CTA button, testimonial, statistics, badges, or claims that the business is local or large.
-- On Mobile, stack the Heading followed by the right-column content in its documented order, preserving clear distinction between the direct-contact statement, assessment, outcome, and closing line.
-
-## Heading
-
-### Content
+### Title
 
 - `A Direct Answer, Early`
+- Use H3 semantics and global H3 typography.
 
-### Visual Design
+### Running Text
 
-- Use the global H2 typography.
+- `When you contact Your House in Cash, you speak directly with me. I take the time to understand the property and your situation before making an offer. My goal is not to force every house into a deal. It is to identify whether there is a realistic path to a completed sale. If there is a realistic path, I’ll explain the offer and the next steps clearly. If there is not, I’ll be upfront about that too. Either way, you get a clear answer without pressure.`
+- Use global Body typography at its default size. The final sentence remains the ending of the running text.
 
-## Direct Contact
+### Image
 
-### Content
-
-- `When you contact Your House in Cash, you speak directly with me.`
-
-### Visual Design
-
-- Use the global H3 typography.
-- Give this statement stronger emphasis than the Assessment and Outcome content.
-
-## Assessment
-
-### Content
-
-- `I take the time to understand the property and your situation before making an offer. My goal is not to force every house into a deal. It is to identify whether there is a realistic path to a completed sale.`
-
-### Visual Design
-
-- Use the global Body typography.
-
-## Outcome
-
-### Content
-
-- `I’ll explain the offer and the next steps clearly.`
-- `I’ll be upfront about that too.`
-
-### Visual Design
-
-- Use the global Body typography.
-- Present the first line as the outcome when there is a realistic path and the second as the outcome when there is not.
-- On Tablet and Desktop, place the two outcomes side by side; stack them on Mobile. On Desktop, place a short existing-style brand-green vertical mark at the start of each outcome where it aligns to a background system line. Do not use horizontal dividers or bordered containers.
-
-## Founder Photograph
-
-### Content
-
-- Use the preserved original founder image at `/images/about-us/noah-founder.png`.
-
-### Visual Design
-
-- Use a simple rounded rectangular `3:2` crop with no overlays, filters, text, badges, or decorative elements.
-
-## Closing Line
-
-### Content
-
-- `Either way, you get a clear answer without pressure.`
-
-### Visual Design
-
-- Use the global Body Large typography.
-- Give the closing line clear concluding emphasis without competing with the Direct Contact statement.
+- Use the same `/images/about-us/noah-founder.png` treatment as the Left Card.
 
 # What You Can Expect
 
 ## Purpose
 
-Turn the earlier promises on the page into two practical standards for working with Your House in Cash. This section communicates how Noah works; it is not a generic benefits or features section.
+Turn the earlier promises into two practical standards for working with Your House in Cash. This is how Noah works, not a generic benefits or features section.
 
 ## Layout
 
-- Use the existing Background Neutral (`#F8F8F8`) as a full-width section background.
-- On Desktop, use the existing five vertical background lines as the section’s subtle structural framework, creating four spaces.
-- On Desktop and Tablet, the Label and Heading span the full section width above Clear Communication and A Practical As-Is Option, which share one row beneath.
-- The two standards form one shared section. Do not use separate cards, bordered boxes, shadows, or a generic feature grid.
-- Use the existing background lines as subtle visual structure only; do not turn them into a new decorative illustration.
-- Do not add a CTA, testimonials, statistics, badges, review stars, or claims that the business is local or large.
-- On Mobile, stack the Label and Heading followed by the two standards in order. Keep the existing mobile background-line treatment subtle and ensure the content remains easy to scan.
+- Use the existing Background Neutral (`#F8F8F8`) with the existing five Desktop background lines as subtle structural framework.
+- On Desktop and Tablet, the Label and Heading span the section above the two standards, which share one row.
+- On Mobile, stack the Label, Heading, then standards in order.
+- Do not use separate cards, bordered boxes, shadows, or a generic feature grid. Do not add a CTA, testimonials, statistics, badges, review stars, or claims that the business is local or large.
 
 ## Label
 
-### Content
-
-- `HOW I WORK`
-
-### Component and Semantics
-
+- Content: `HOW I WORK`
 - Use the shared Section Label Component with the canonical Lucide `ListChecks` icon.
 
 ## Heading
 
-### Content
-
-- `What you can expect.`
-
-### Visual Design
-
-- Use the global H2 typography.
+- Content: `What you can expect.`
+- Use global H2 typography.
 
 ## Clear Communication
 
-### Content
-
 - Standard number: `01`
 - Title: `Clear communication`
-- `You will know what the offer is, what it is based on, and what the next steps would look like before you decide anything.`
-
-### Visual Design
-
-- Use the global Label typography for the Standard number, H4 typography for the Title, and Body typography for the supporting copy.
+- Copy: `You will know what the offer is, what it is based on, and what the next steps would look like before you decide anything.`
 
 ## A Practical As-Is Option
 
-### Content
-
 - Standard number: `02`
 - Title: `A practical as-is option`
-- `You do not need to repair the house, prepare it for showings, or make it look perfect just to explore a direct sale.`
-
-### Visual Design
-
-- Use the global Label typography for the Standard number, H4 typography for the Title, and Body typography for the supporting copy.
+- Copy: `You do not need to repair the house, prepare it for showings, or make it look perfect just to explore a direct sale.`
 
 # Final CTA
 
 ## Purpose
 
-Close the page with one calm, clear next step. After meeting Noah, understanding his approach, and knowing what to expect, the visitor is invited to receive a real number they can use to decide what makes sense for their house. This is not a high-pressure sales section.
+Close the page with a calm, clear next step after the visitor has met Noah, understood the approach, and knows what to expect.
 
 ## Layout
 
-- Use the [shared Final CTA](../shared-sections.md#final-cta) with its default Background (`#FFFFFF`), matching the Area Page Final CTA composition and responsive behavior.
-- The CTA is the natural conclusion of the page, not a sudden marketing push.
+- Use the shared Final CTA with its default white Background and established responsive behavior.
+- The CTA is the natural conclusion of the page, not a high-pressure marketing push.
 
-## Heading
+## Content
 
-### Content
-
-- `Let’s Start With a Clear Number`
-
-### Visual Design
-
-- Use the shared Final CTA Heading treatment.
-
-## Supporting Copy
-
-### Content
-
-- `If you are considering selling a Cleveland-area house, tell me a little about the property and your situation. I will review it and provide a no-obligation as-is cash offer, so you can decide whether it is the right fit.`
-
-### Visual Design
-
-- Use the shared Final CTA Supporting Copy treatment.
-
-## Primary CTA
-
-### Content
-
-- `Get My Cash Offer`
-
-### Component and Semantics
-
-- Use the shared Button Component with link semantics.
-- Navigate to the existing Seller Lead Form Flow at `/get-cash-offer`.
-
-## Section Label
-
-### Content
-
-- `READY WHEN YOU ARE`
-
-## Reassurance Row
-
-### Content
-
-- `100% free. No obligation.`
+- Section Label: `READY WHEN YOU ARE`
+- Heading: `Let’s Start With a Clear Number`
+- Supporting Copy: `If you are considering selling a Cleveland-area house, tell me a little about the property and your situation. I will review it and provide a no-obligation as-is cash offer, so you can decide whether it is the right fit.`
+- Primary CTA: `Get My Cash Offer`
+- CTA destination: `/get-cash-offer`
+- Reassurance Row: `100% free. No obligation.`
 
 ## Supporting Benefits
 

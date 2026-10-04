@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CircleCheck, Handshake, House, ListChecks } from "lucide-react";
+import { CircleCheck, House, ListChecks } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { FinalCta } from "@/components/ui/final-cta";
 import { SectionLabel } from "@/components/ui/section-label";
@@ -40,55 +40,31 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.beliefs} section-spacing system-lines-bg`} aria-labelledby="belief-heading">
-          <div className={`${styles.beliefsLayout} content-grid`}>
-            <div className={styles.beliefLeft}>
-              <SectionLabel icon={Handshake}>What I Believe</SectionLabel>
-              <h2 id="belief-heading" className={`${styles.beliefStatement} text-heading-2`}>
-                You deserve a clear, honest option before deciding what to do with your house.
-              </h2>
-            </div>
-            <div className={styles.beliefRight}>
-              <h3 className={`${styles.beliefSubheading} text-heading-3`}>There isn’t one right path.</h3>
-              <div className={styles.beliefCopy}>
-                <p className="text-body">
-                  Sometimes listing with an agent is the best path. Other times, the work, time, showings, uncertainty, or condition of the property make an as-is sale more practical.
+        <section className={`${styles.section} ${styles.beliefProcess} section-spacing system-lines-bg`} aria-labelledby="belief-process-heading">
+          <div className={`${styles.beliefProcessLayout} content-grid`}>
+            <h2 id="belief-process-heading" className={`${styles.beliefProcessTitle} text-heading-2`}>
+              You deserve a clear, honest option.
+            </h2>
+            <div className={styles.beliefCards}>
+              <article className={styles.beliefCard}>
+                <h3 className={`${styles.beliefCardTitle} text-heading-3`}>There isn’t one right path.</h3>
+                <p className={`${styles.beliefCardCopy} text-body`}>
+                  Sometimes listing with an agent is the best path. Other times, the work, time, showings, uncertainty, or condition of the property make an as-is sale more practical. Either way, you should be able to understand the real options before deciding what comes next. That’s why I started Your House in Cash.
                 </p>
-                <p className="text-body">
-                  Either way, you should be able to understand the real options before deciding what comes next.
+                <figure className={styles.beliefCardImage}>
+                  <Image src="/images/about-us/noah-founder.png" alt="Noah standing outside a house" fill sizes="(min-width: 768px) 40vw, 100vw" />
+                </figure>
+              </article>
+              <article className={styles.beliefCard}>
+                <h3 className={`${styles.beliefCardTitle} text-heading-3`}>A Direct Answer, Early</h3>
+                <p className={`${styles.beliefCardCopy} text-body`}>
+                  When you contact Your House in Cash, you speak directly with me. I take the time to understand the property and your situation before making an offer. My goal is not to force every house into a deal. It is to identify whether there is a realistic path to a completed sale. If there is a realistic path, I’ll explain the offer and the next steps clearly. If there is not, I’ll be upfront about that too. Either way, you get a clear answer without pressure.
                 </p>
-                <p className={`${styles.beliefClosing} text-body`}>That’s why I started Your House in Cash.</p>
-              </div>
+                <figure className={styles.beliefCardImage}>
+                  <Image src="/images/about-us/noah-founder.png" alt="Noah standing outside a house" fill sizes="(min-width: 768px) 40vw, 100vw" />
+                </figure>
+              </article>
             </div>
-          </div>
-        </section>
-
-        <section className={`${styles.section} ${styles.directAnswer} section-spacing system-lines-bg`} aria-labelledby="direct-answer-heading">
-          <div className={`${styles.directAnswerLayout} content-grid`}>
-            <h2 id="direct-answer-heading" className={`${styles.directAnswerHeading} text-heading-2`}>A Direct Answer, Early</h2>
-            <div className={styles.directAnswerContent}>
-              <p className={`${styles.directContact} text-heading-3`}>
-                When you contact Your House in Cash, you speak directly with me.
-              </p>
-              <p className={`${styles.assessment} text-body`}>
-                I take the time to understand the property and your situation before making an offer. My goal is not to force every house into a deal. It is to identify whether there is a realistic path to a completed sale.
-              </p>
-              <div className={styles.outcomes}>
-                <p className="text-body">I’ll explain the offer and the next steps clearly.</p>
-                <p className="text-body">I’ll be upfront about that too.</p>
-              </div>
-              <p className={`${styles.directClosing} text-body-large`}>
-                Either way, you get a clear answer without pressure.
-              </p>
-            </div>
-            <figure className={styles.directAnswerPhotograph}>
-              <Image
-                src="/images/about-us/noah-founder.png"
-                alt="Noah standing outside a house"
-                fill
-                sizes="(min-width: 1200px) 40vw, (min-width: 768px) 50vw, 100vw"
-              />
-            </figure>
           </div>
         </section>
 
