@@ -88,7 +88,7 @@ Show the belief behind Your House in Cash and how that belief changes the first 
 
 ### Image
 
-- Use `/images/about-us/noah-founder.png` in a centered rounded-rectangle frame at 80% of the reserved image-area width and height. Preserve the complete image area so the card height remains unchanged. Do not add overlays, filters, text, badges, or decorative elements.
+- Use `/images/about-us/noah-founder.png` in a full-width, simple rounded-rectangle frame with no overlays, filters, text, badges, shadows, or decorative elements.
 
 ## Right Card: Direct Answer
 

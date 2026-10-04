@@ -95,20 +95,12 @@
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 2;
-  margin: auto 0 0;
-}
-
-.beliefCardImageFrame {
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  bottom: 10%;
-  left: 10%;
   overflow: hidden;
+  margin: auto 0 0;
   border-radius: var(--radius-small);
 }
 
-.beliefCardImageFrame img {
+.beliefCardImage img {
   object-fit: cover;
   object-position: center;
 }
