@@ -159,7 +159,7 @@
 .comparisonCell svg {
   width: var(--icon-small);
   height: var(--icon-small);
-  color: var(--color-text-muted);
+  color: var(--color-error);
 }
 
 .portfolioColumn {

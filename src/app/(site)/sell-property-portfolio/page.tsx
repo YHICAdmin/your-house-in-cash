@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Check, Layers, Minus } from "lucide-react";
+import { Check, Layers, X } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { PortfolioBenefits } from "@/components/portfolio/portfolio-benefits";
 import { PortfolioFaq } from "@/components/portfolio/portfolio-faq";
@@ -95,7 +95,7 @@ export default function SellPropertyPortfolioPage() {
                   <div key={change} className={styles.comparisonRow} role="row">
                     <div role="rowheader" className={`${styles.comparisonChange} text-body`}>{change}</div>
                     <div role="cell" className={styles.comparisonCell} data-label="Sell one property at a time">
-                      <Minus aria-hidden="true" />
+                      <X aria-hidden="true" />
                     </div>
                     <div role="cell" className={`${styles.comparisonCell} ${styles.portfolioColumn}`} data-label="Sell as one portfolio">
                       <Check aria-hidden="true" />
