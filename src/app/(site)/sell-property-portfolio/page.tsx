@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Layers } from "lucide-react";
+import { Check, Layers, Minus } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { PortfolioBenefits } from "@/components/portfolio/portfolio-benefits";
 import { Button } from "@/components/ui/button";
 import { SectionLabel } from "@/components/ui/section-label";
 import styles from "./page.module.css";
+
+const comparisonRows = [
+  "One buyer for the whole package",
+  "One coordinated agreement",
+  "One point of contact",
+  "One planned closing process",
+  "Portfolio-wide review",
+  "Fewer separate negotiations",
+] as const;
 
 export const metadata: Metadata = {
   title: "Sell a Portfolio | Your House in Cash",
@@ -68,6 +77,34 @@ export default function SellPropertyPortfolioPage() {
         </section>
 
         <PortfolioBenefits />
+
+        <section className={`${styles.comparison} section-spacing system-lines-bg`} aria-labelledby="portfolio-comparison-heading">
+          <div className={`${styles.comparisonLayout} content-grid`}>
+            <div className={styles.comparisonContent}>
+              <h2 id="portfolio-comparison-heading" className={`${styles.comparisonHeading} text-heading-2`}>
+                What changes when you sell as a portfolio?
+              </h2>
+              <div className={styles.comparisonMatrix} role="table" aria-label="Selling one property at a time compared with selling as one portfolio">
+                <div className={`${styles.comparisonRow} ${styles.comparisonHeader}`} role="row">
+                  <div role="columnheader" className={`${styles.comparisonColumnHeading} text-body-small`}>What changes</div>
+                  <div role="columnheader" className={`${styles.comparisonColumnHeading} text-body-small`}>Sell one property at a time</div>
+                  <div role="columnheader" className={`${styles.comparisonColumnHeading} ${styles.portfolioColumn} text-body-small`}>Sell as one portfolio</div>
+                </div>
+                {comparisonRows.map((change) => (
+                  <div key={change} className={styles.comparisonRow} role="row">
+                    <div role="rowheader" className={`${styles.comparisonChange} text-body`}>{change}</div>
+                    <div role="cell" className={styles.comparisonCell} data-label="Sell one property at a time">
+                      <Minus aria-hidden="true" />
+                    </div>
+                    <div role="cell" className={`${styles.comparisonCell} ${styles.portfolioColumn}`} data-label="Sell as one portfolio">
+                      <Check aria-hidden="true" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <SiteFooter />
     </>

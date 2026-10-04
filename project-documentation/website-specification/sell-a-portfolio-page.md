@@ -235,7 +235,8 @@ Use these rows in order:
 ## Layout and Visual Design
 
 - Use a clean three-column comparison matrix: the first column names the change, the second presents selling one property at a time, and the third presents selling as one portfolio.
-- On Desktop and Tablet, align the three column headings across the top and retain each comparison row on one shared horizontal line.
+- On Tablet, keep the Section Title above the full comparison matrix. Align the three column headings across the top and retain each comparison row on one shared horizontal line.
+- On Desktop, place the Section Title and the full comparison matrix on one shared horizontal line using a `5 / 1 / 6` composition. Center the `Sell one property at a time` and `Sell as one portfolio` headings over their columns.
 - Use a muted gray dash or small `×` in the `Sell one property at a time` column for every row.
 - Use a dark brand-green checkmark in the `Sell as one portfolio` column for every row.
 - Give the full `Sell as one portfolio` column a restrained pale-green background to clarify the recommended path. Do not add shadows, card treatments, pricing-table styling, or heavy borders.

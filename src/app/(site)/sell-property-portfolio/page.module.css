@@ -102,6 +102,111 @@
   height: 40.8%;
 }
 
+.comparison {
+  background: var(--color-background-soft);
+}
+
+.comparisonContent {
+  min-width: 0;
+  grid-column: 1 / -1;
+}
+
+.comparisonHeading {
+  max-width: 700px;
+  margin: 0 0 var(--spacing-xl);
+}
+
+.comparisonMatrix {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.comparisonRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr);
+  border-top: 1px solid var(--color-border);
+}
+
+.comparisonHeader {
+  border-top: 0;
+}
+
+.comparisonColumnHeading,
+.comparisonChange,
+.comparisonCell {
+  min-width: 0;
+  padding: var(--spacing-s);
+}
+
+.comparisonColumnHeading {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.comparisonHeader .comparisonColumnHeading:not(:first-child) {
+  text-align: center;
+}
+
+.comparisonChange {
+  color: var(--color-text-primary);
+}
+
+.comparisonCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comparisonCell svg {
+  width: var(--icon-small);
+  height: var(--icon-small);
+  color: var(--color-text-muted);
+}
+
+.portfolioColumn {
+  background: var(--color-brand-light);
+}
+
+.comparisonCell.portfolioColumn svg {
+  color: var(--color-brand-dark);
+}
+
+.comparisonCell::before {
+  content: attr(data-label);
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .comparisonHeading {
+    margin-bottom: var(--spacing-l);
+  }
+
+  .comparisonHeader {
+    display: none;
+  }
+
+  .comparisonRow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .comparisonChange {
+    padding-bottom: var(--spacing-s);
+    font-weight: 600;
+  }
+
+  .comparisonCell {
+    justify-content: space-between;
+    padding-top: var(--spacing-s);
+    padding-bottom: var(--spacing-s);
+  }
+
+  .comparisonCell::before {
+    display: block;
+    color: var(--color-text-secondary);
+    font-size: var(--text-body-small);
+    line-height: var(--text-body-small--line-height);
+  }
+}
+
 
 @media (min-width: 768px) {
   .hero {
@@ -119,6 +224,10 @@
     margin-top: var(--spacing-2xl);
   }
 
+  .comparisonContent {
+    grid-column: 1 / span 8;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -133,6 +242,22 @@
   .media {
     grid-column: 8 / span 5;
     margin-top: 0;
+  }
+
+  .comparisonContent {
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: start;
+    column-gap: var(--spacing-m);
+  }
+
+  .comparisonHeading {
+    grid-column: 1 / span 5;
+  }
+
+  .comparisonMatrix {
+    grid-column: 7 / span 6;
   }
 
 }
