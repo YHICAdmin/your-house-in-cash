@@ -61,11 +61,11 @@ Show the belief behind Your House in Cash and how that belief changes the first 
 
 ## Layout
 
-- Use the existing Background Neutral (`#F8F8F8`) with the global faint System Lines.
+- Use the existing white Background with the global faint System Lines.
 - Remove the former section labels. Use one Main Title above two equal-width, tall editorial cards.
 - On Desktop and Tablet, place the cards side by side in one row. On Mobile, stack the Main Title, left card, then right card.
 - Each card contains a Title, one running-text block, and an image. Use the same founder image in both cards for now: `/images/about-us/noah-founder.png`.
-- Use existing Surface, Medium Radius, and restrained card styling. The cards should read as one paired editorial composition, not a feature grid.
+- Use Brand Green Light as each card background, existing Medium Radius, and no Border or Shadow. On Tablet and Desktop, the cards use equal fixed-height canvases with the text compactly positioned at the top and the image anchored at the bottom. The cards should read as one paired editorial composition, not a feature grid.
 - Use `Screenshot 2026-10-04 153527.png` as composition inspiration only. Do not copy its typography, colors, spacing, imagery, or interface elements.
 - Do not add labels, CTA buttons, testimonials, statistics, badges, icons, or extra decorative elements.
 
@@ -88,7 +88,7 @@ Show the belief behind Your House in Cash and how that belief changes the first 
 
 ### Image
 
-- Use `/images/about-us/noah-founder.png` in a full-width, simple rounded-rectangle frame with no overlays, filters, text, badges, shadows, or decorative elements.
+- Use `/images/about-us/noah-founder.png` in a simple rounded-rectangle frame at 80% of the card width, centered and anchored to the bottom of the card. Do not add overlays, filters, text, badges, shadows, or decorative elements.
 
 ## Right Card: Direct Answer
 
