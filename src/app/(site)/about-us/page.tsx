@@ -25,15 +25,13 @@ export default function AboutUsPage() {
               <Button href="/contact" variant="conversion">Talk Through Your Options</Button>
             </div>
             <div className={styles.visual}>
-              <div className={styles.photoFrame}>
-                <Image
-                  src="/images/about-us/noah-founder-hero.png"
-                  alt="Noah standing beside a house on a residential street"
-                  fill
-                  sizes="(min-width: 1200px) 43vw, (min-width: 768px) 40vw, 84vw"
-                  priority
-                />
-              </div>
+              <Image
+                src="/images/about-us/noah-founder-hero.png"
+                alt="Noah standing beside a house on a residential street"
+                fill
+                sizes="(min-width: 1200px) 50vw, (min-width: 768px) 50vw, 100vw"
+                priority
+              />
             </div>
           </div>
         </section>

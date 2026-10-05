@@ -36,23 +36,24 @@ Create a personal first impression of Noah and make clear that Your House in Cas
 ### Desktop
 
 - Use a spacious two-column Hero.
-- Use a `5 / 1 / 6` composition: the left five columns contain the Primary Headline, Supporting Copy, and Primary CTA in that order; the center column remains open; the right six columns contain one branded founder visual.
+- Use a `5 / 1 / 6` composition: the left five columns contain the Primary Headline, Supporting Copy, and Primary CTA in that order; the center column remains open; the right six columns contain the Founder Photograph.
+- Align the top of the photograph with the top of the text column.
 - Keep the text composition as the Hero’s primary focal point.
+- Use `2XL` (`64px`) vertical padding.
 
 ### Mobile
 
-- Stack the text composition first and the founder visual second.
-- Keep the founder visual proportional and visually supporting the copy.
+- Stack the text composition first and the Founder Photograph second.
+- Keep the photograph proportional and visually supporting the copy.
+- Use `XL` (`48px`) vertical padding.
 
-## Branded Founder Visual
+## Founder Photograph
 
 ### Purpose
 
-Show Noah beside a residential home within a warm branded composition.
+Show Noah beside a residential home in a direct, personal photograph.
 
 ### Design Direction
 
-- Keep the rounded gradient background with pale green, soft sage, warm off-white, and deep forest green close to the existing brand palette.
-- Place `/images/about-us/noah-founder-hero.png` inside it in a centered, rounded `3:2` frame. Leave the branded background visible around the photo, especially above and along the sides.
+- Use `/images/about-us/noah-founder-hero.png` in a full-width rounded `3:2` frame.
 - Preserve the photo's wide house-and-street context and keep Noah clearly visible.
-- Use the supplied reference as loose inspiration for the soft-color background composition.
