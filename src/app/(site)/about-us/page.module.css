@@ -43,6 +43,111 @@
   object-fit: cover;
 }
 
+.coreValues {
+  background: var(--color-background);
+}
+
+.valueGrid {
+  margin-block: 0;
+  list-style: none;
+}
+
+.valueCard {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  grid-column: span 4;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--spacing-m);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-subtle);
+  cursor: default;
+  isolation: isolate;
+}
+
+.valueCard::after {
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    var(--color-brand-light),
+    var(--color-brand-dark),
+    var(--color-brand)
+  );
+  background-size: 200% 200%;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  content: "";
+}
+
+.valueIcon {
+  width: var(--icon-large);
+  height: var(--icon-large);
+  flex: none;
+  margin-bottom: var(--spacing-m);
+  color: var(--color-brand);
+  stroke-width: 1.75;
+}
+
+.valueDescription {
+  margin: 0 0 var(--spacing-l);
+}
+
+.valueName {
+  margin-top: auto;
+  color: var(--color-brand-dark);
+  font-weight: 600;
+}
+
+@media (hover: hover) {
+  .valueCard {
+    transition: box-shadow 220ms ease;
+  }
+
+  .valueCard::after {
+    transition: opacity 220ms ease;
+  }
+
+  .valueCard:hover {
+    box-shadow: var(--shadow-floating);
+  }
+
+  .valueCard:hover::after {
+    opacity: 1;
+    animation: value-border-sweep 800ms ease-out both;
+  }
+}
+
+@keyframes value-border-sweep {
+  from {
+    background-position: 100% 100%;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .valueCard,
+  .valueCard::after {
+    transition: none;
+  }
+
+  .valueCard:hover::after {
+    background: var(--color-brand);
+    animation: none;
+  }
+}
+
 @media (min-width: 768px) {
   .hero {
     padding-block: var(--spacing-2xl);
@@ -68,5 +173,9 @@
 
   .visual {
     grid-column: 7 / span 6;
+  }
+
+  .valueCard {
+    grid-column: span 3;
   }
 }
