@@ -16,7 +16,7 @@ export default function AboutUsPage() {
           <div className={`${styles.layout} content-grid`}>
             <div className={styles.content}>
               <h1 id="about-us-heading" className={`${styles.heading} text-display`}>
-                Hi, I’m Noah. I built Your House in Cash to make selling a Cleveland home feel clearer and more direct.
+                Hi, I’m Noah. I make Cleveland home sales clearer.
               </h1>
               <p className={`${styles.supportingCopy} text-body-large`}>
                 My Cleveland real estate journey began in 2021. I believe homeowners deserve a straightforward conversation about their options—not pressure, confusing sales language, or a one-size-fits-all answer.

@@ -17,7 +17,7 @@ Create a personal first impression of Noah and make clear that Your House in Cas
 
 ### Primary Headline
 
-- `Hi, I’m Noah. I built Your House in Cash to make selling a Cleveland home feel clearer and more direct.`
+- `Hi, I’m Noah. I make Cleveland home sales clearer.`
 - Use H1 semantics and the global Display typography.
 
 ### Supporting Copy
@@ -36,8 +36,7 @@ Create a personal first impression of Noah and make clear that Your House in Cas
 ### Desktop
 
 - Use a spacious two-column Hero.
-- The left column contains the Primary Headline, Supporting Copy, and Primary CTA in that order.
-- The right column contains one abstract branded visual.
+- Use a `5 / 1 / 6` composition: the left five columns contain the Primary Headline, Supporting Copy, and Primary CTA in that order; the center column remains open; the right six columns contain one abstract branded visual.
 - Keep the text composition as the Hero’s primary focal point.
 
 ### Mobile
