@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ClipboardCheck, Handshake, MessageCircle, ShieldCheck } from "lucide-react";
+import { ClipboardCheck, FileCheck2, Handshake, MessageCircle, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteFooter } from "@/components/layout/site-footer";
 import styles from "./page.module.css";
@@ -68,6 +68,39 @@ export default function AboutUsPage() {
                 <strong className={`${styles.valueName} text-body`}>{value}</strong>
               </li>
             ))}
+          </ul>
+        </section>
+        <section className={`${styles.expectations} section-spacing system-lines-bg`} aria-labelledby="expectations-heading">
+          <div className={`${styles.expectationsLayout} content-grid`}>
+            <div className={styles.expectationsText}>
+              <h2 id="expectations-heading" className={`${styles.expectationsHeading} text-heading-2`}>
+                What you can expect from me
+              </h2>
+              <div className={styles.expectationsParagraphs}>
+                <p className="text-body"><strong>I follow through.</strong> I stay involved, keep you updated, and take responsibility for the commitments I make.</p>
+                <p className="text-body"><strong>You know what to expect.</strong> We discuss the terms, costs, and timeline upfront. If something changes, I explain it promptly.</p>
+                <p className="text-body"><strong>You get the full picture.</strong> I explain how the offer works, who is involved, and what you’re agreeing to before you decide.</p>
+                <p className="text-body"><strong>I keep things moving.</strong> When questions, paperwork, or timing issues come up, I stay on top of the details and help keep the sale moving forward.</p>
+              </div>
+            </div>
+            <div className={styles.expectationsPhoto}>
+              <Image
+                src="/images/about-us/clear-communication-kitchen-table.png"
+                alt="Two people reviewing home-sale paperwork together at a table."
+                fill
+                sizes="(min-width: 1200px) 50vw, (min-width: 768px) 50vw, 100vw"
+              />
+            </div>
+          </div>
+          <ul className={`${styles.expectationsBenefits} content-grid`}>
+            <li className={styles.expectationsBenefit}>
+              <span className={styles.benefitGraphic} aria-hidden="true"><FileCheck2 /></span>
+              <p className="text-body"><strong>I handle the heavy lifting.</strong> I help coordinate the paperwork, title company, and closing details, so you have fewer things to manage.</p>
+            </li>
+            <li className={styles.expectationsBenefit}>
+              <span className={styles.benefitGraphic} aria-hidden="true"><MessageCircle /></span>
+              <p className="text-body"><strong>We stay in touch.</strong> You can ask questions, raise concerns, and reach me directly. I keep you informed as the sale moves forward.</p>
+            </li>
           </ul>
         </section>
       </main>

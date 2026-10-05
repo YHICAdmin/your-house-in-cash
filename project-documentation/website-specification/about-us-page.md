@@ -107,3 +107,102 @@ Each card presents an icon, paragraph, and emphasized core value, in that order:
 - On hover, animate a thin highlight around the card border in existing brand-green tones and slightly strengthen the shadow. Keep the animation confined to the border; the card interior stays white.
 - Reserve the border's space in the resting state so hovering never changes card dimensions or moves content. Keep the default cursor because the cards are informational.
 - For reduced-motion preferences, show the green border highlight statically, without the border animation.
+
+# What You Can Expect From Me
+
+## Purpose
+
+Show how Noah follows through during a potential sale: clear expectations, a complete explanation before a decision, practical coordination, direct communication, and steady progress.
+
+## Layout
+
+- Place this section immediately after Core Values. Use `Background Neutral` (`#F8F8F8`) to distinguish it gently from the preceding white section, with the global content width and section spacing.
+- Desktop: use a `5 / 1 / 6` Grid composition. Place the Heading and Commitment Paragraphs in the left five columns, leave the center column open, and place the Supporting Photograph in the right six columns. Visually center the text group against the photograph.
+- Place the Benefit Cards below both columns, separated from the upper composition by `2XL` (`64px`). Display two equal-width cards side by side across the content width.
+- Tablet: retain two balanced four-column areas for the upper composition and two equal-width Benefit Cards below it. Align the text group and photograph at their top edges.
+- Mobile: stack the Heading and Commitment Paragraphs, Supporting Photograph, then the two Benefit Cards in that order. Use `L` (`32px`) between the text group and photograph, and `XL` (`48px`) between the photograph and Benefit Cards. Stack the cards with an `S` (`16px`) gap.
+
+## Heading
+
+### Content
+
+`What you can expect from me`
+
+### Component and Semantics
+
+Use H2 semantics.
+
+### Visual Design
+
+Use the global H2 typography.
+
+### Spacing After
+
+Separate the Heading from the first Commitment Paragraph by `L` (`32px`) at each Breakpoint.
+
+## Commitment Paragraphs
+
+### Content
+
+Present these four paragraphs in order, with each bold lead-in immediately followed by its regular-weight explanation:
+
+1. **I follow through.** I stay involved, keep you updated, and take responsibility for the commitments I make.
+2. **You know what to expect.** We discuss the terms, costs, and timeline upfront. If something changes, I explain it promptly.
+3. **You get the full picture.** I explain how the offer works, who is involved, and what you’re agreeing to before you decide.
+4. **I keep things moving.** When questions, paperwork, or timing issues come up, I stay on top of the details and help keep the sale moving forward.
+
+### Component and Semantics
+
+Use four paragraphs. Emphasize each lead-in inline within its paragraph.
+
+### Visual Design
+
+Use the global Body typography; the lead-ins use its existing semibold weight.
+
+### Spacing
+
+Separate consecutive paragraphs by `M` (`24px`) at each Breakpoint.
+
+## Supporting Photograph
+
+### Content
+
+- Use `/images/about-us/clear-communication-kitchen-table.png`, sourced from the approved `Clear communication at the kitchen table.png` image. Preserve its natural colors.
+- Alt text: `Two people reviewing home-sale paperwork together at a table.`
+
+### Visual Design
+
+Display the photograph directly with the global Medium Radius (`12px`).
+
+### Dimensions and Alignment
+
+Keep its square composition and fill its assigned Grid width.
+
+## Benefit Cards
+
+### Content
+
+Present two informational cards in this order. Each has a compact graphic area on the left and one paragraph on the right, with its bold lead-in inline:
+
+1. **I handle the heavy lifting.** I help coordinate the paperwork, title company, and closing details, so you have fewer things to manage.
+2. **We stay in touch.** You can ask questions, raise concerns, and reach me directly. I keep you informed as the sale moves forward.
+
+### Component and Semantics
+
+- Present the two cards as a semantic list of static informational items, each containing its graphic and paragraph.
+- Use the canonical Lucide `FileCheck2` icon for the first card and `MessageCircle` for the second. Treat both icons as decorative because the adjacent text conveys their meaning.
+
+### Visual Design
+
+- Use white `Surface` interiors, the global `Border` (`1px solid #E4E7E4`), and Medium Radius (`12px`).
+- Use a compact `Brand Green Light` graphic panel along the left edge of each card, with a centered `Brand Green Dark` line icon. Keep the text area white and to the right, following the horizontal composition of the approved reference.
+- Use global Body typography for the paragraphs, with each inline lead-in at the existing semibold weight.
+
+### Dimensions and Alignment
+
+- Keep the two cards equal in height on Desktop and Tablet.
+- Preserve the graphic-left, text-right arrangement at every Breakpoint, including when the cards stack on Mobile.
+
+### Spacing
+
+- Use `M` (`24px`) padding for the text area on Desktop and Tablet, and `S` (`16px`) on Mobile.

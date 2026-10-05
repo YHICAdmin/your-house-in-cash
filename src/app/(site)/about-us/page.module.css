@@ -107,6 +107,84 @@
   font-weight: 600;
 }
 
+.expectations {
+  background: var(--color-background-neutral);
+}
+
+.expectationsLayout {
+  align-items: start;
+  row-gap: var(--spacing-l);
+}
+
+.expectationsText,
+.expectationsPhoto {
+  min-width: 0;
+  grid-column: 1 / -1;
+}
+
+.expectationsHeading {
+  margin: 0 0 var(--spacing-l);
+}
+
+.expectationsParagraphs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.expectationsParagraphs p,
+.expectationsBenefit p {
+  margin: 0;
+}
+
+.expectationsPhoto {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius-medium);
+}
+
+.expectationsPhoto img {
+  object-fit: cover;
+}
+
+.expectationsBenefits {
+  margin-block: var(--spacing-xl) 0;
+  list-style: none;
+}
+
+.expectationsBenefit {
+  display: flex;
+  min-width: 0;
+  grid-column: 1 / -1;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+.benefitGraphic {
+  display: flex;
+  width: var(--spacing-3xl);
+  flex: 0 0 var(--spacing-3xl);
+  align-items: center;
+  justify-content: center;
+  background: var(--color-brand-light);
+  color: var(--color-brand-dark);
+}
+
+.benefitGraphic svg {
+  width: var(--icon-large);
+  height: var(--icon-large);
+  stroke-width: 1.75;
+}
+
+.expectationsBenefit p {
+  padding: var(--spacing-s);
+}
+
 @media (hover: hover) {
   .valueCard {
     transition: box-shadow 220ms ease;
@@ -164,6 +242,27 @@
   .visual {
     grid-column: 5 / span 4;
   }
+
+  .expectationsText {
+    grid-column: 1 / span 4;
+  }
+
+  .expectationsPhoto {
+    grid-column: 5 / span 4;
+  }
+
+  .expectationsBenefits {
+    margin-top: var(--spacing-2xl);
+  }
+
+  .expectationsBenefit {
+    grid-column: span 4;
+  }
+
+  .expectationsBenefit p {
+    padding: var(--spacing-m);
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -177,5 +276,18 @@
 
   .valueCard {
     grid-column: span 3;
+  }
+
+  .expectationsText {
+    grid-column: 1 / span 5;
+    align-self: center;
+  }
+
+  .expectationsPhoto {
+    grid-column: 7 / span 6;
+  }
+
+  .expectationsBenefit {
+    grid-column: span 6;
   }
 }
