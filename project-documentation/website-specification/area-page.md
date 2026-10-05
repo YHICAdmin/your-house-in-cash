@@ -532,10 +532,6 @@ Contains, in document order:
 
 * Serves as the Selected Situation Content's semantic `H3`.
 
-#### Visual Design
-
-* Uses the global `H4` typography: `24px` on Desktop, `22px` on Tablet, and `20px` on Mobile.
-
 #### Spacing After
 
 * `24px` (`M`) across all Breakpoints.
