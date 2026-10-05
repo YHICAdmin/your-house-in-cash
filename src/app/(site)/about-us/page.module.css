@@ -67,6 +67,21 @@
   opacity: 0.22;
 }
 
+.photoFrame {
+  position: absolute;
+  z-index: 1;
+  right: 8%;
+  bottom: 8%;
+  left: 8%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: var(--radius-medium);
+}
+
+.photoFrame img {
+  object-fit: cover;
+}
+
 @media (min-width: 768px) {
   .layout {
     row-gap: 0;
