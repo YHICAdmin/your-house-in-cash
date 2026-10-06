@@ -1,0 +1,118 @@
+.contact {
+  overflow: clip;
+  background: var(--color-background-soft);
+}
+
+.linePattern {
+  position: absolute;
+  z-index: -2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 36%;
+  background: linear-gradient(to bottom, var(--color-brand-light), var(--color-brand));
+  mask-image: repeating-linear-gradient(to right, #000 0 1px, transparent 1px 8px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.layout {
+  position: relative;
+  z-index: 1;
+  align-items: start;
+  row-gap: var(--spacing-xl);
+}
+
+.introduction,
+.formColumn {
+  min-width: 0;
+  grid-column: 1 / -1;
+}
+
+.heading {
+  max-width: 13ch;
+  margin: 0 0 var(--spacing-m);
+}
+
+.supportingText {
+  max-width: 42ch;
+  margin: 0 0 var(--spacing-l);
+  color: var(--color-text-secondary);
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.points li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-s);
+}
+
+.points svg {
+  flex: 0 0 auto;
+  margin-top: 0.3em;
+  color: var(--color-brand-dark);
+}
+
+.formColumn {
+  position: relative;
+}
+
+.demoNotice {
+  margin: 0 0 var(--spacing-xs);
+  color: var(--color-text-secondary);
+}
+
+.formCard {
+  padding: var(--spacing-m);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-subtle);
+}
+
+@media (min-width: 48rem) {
+  .layout {
+    row-gap: 0;
+  }
+
+  .introduction {
+    grid-column: 1 / span 4;
+  }
+
+  .formColumn {
+    grid-column: 5 / span 4;
+  }
+
+  .demoNotice {
+    position: absolute;
+    bottom: calc(100% + var(--spacing-xs));
+    left: 0;
+    margin: 0;
+  }
+
+  .formCard {
+    padding: var(--spacing-l);
+  }
+}
+
+@media (min-width: 75rem) {
+  .introduction {
+    grid-column: 1 / span 5;
+  }
+
+  .formColumn {
+    grid-column: 7 / span 6;
+  }
+
+  .linePattern {
+    height: 50%;
+    opacity: 0.5;
+  }
+}
