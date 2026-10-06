@@ -262,7 +262,7 @@ Separate the Supporting Text from the Primary CTA by `L` (`32px`) at each Breakp
 ### Content
 
 - Label: `Talk Through Your Options`
-- Destination: `/get-cash-offer`
+- Destination: `/contact`
 
 ### Component and Semantics
 

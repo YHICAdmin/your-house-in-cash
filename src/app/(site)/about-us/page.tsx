@@ -112,7 +112,7 @@ export default function AboutUsPage() {
               <p className={`${styles.finalCtaSupportingCopy} text-body-large`}>
                 Whether you’re ready to sell or still weighing your options, tell me about your property and what matters to you. We can talk through whether working together makes sense.
               </p>
-              <Button href="/get-cash-offer" variant="conversion">
+              <Button href="/contact" variant="conversion">
                 Talk Through Your Options
               </Button>
             </div>
