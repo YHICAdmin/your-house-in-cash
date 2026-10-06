@@ -9,13 +9,12 @@ import { AddressField } from "@/components/form/address-field";
 import { validUSPhone } from "@/lib/phone";
 import styles from "./contact-form.module.css";
 
-const fieldOrder = ["firstName", "lastName", "email", "phone", "address", "message"] as const;
+const fieldOrder = ["name", "email", "phone", "address", "message"] as const;
 type FieldKey = typeof fieldOrder[number];
 type Values = Record<FieldKey, string>;
 
 const initialValues: Values = {
-  firstName: "",
-  lastName: "",
+  name: "",
   email: "",
   phone: "",
   address: "",
@@ -23,8 +22,7 @@ const initialValues: Values = {
 };
 
 const inputIds: Record<FieldKey, string> = {
-  firstName: "contact-first-name",
-  lastName: "contact-last-name",
+  name: "contact-name",
   email: "contact-email",
   phone: "contact-phone",
   address: "contact-address",
@@ -35,8 +33,7 @@ function validate(key: FieldKey, value: string): string {
   const trimmed = value.trim();
   if (!trimmed) {
     return {
-      firstName: "Please enter your first name.",
-      lastName: "Please enter your last name.",
+      name: "Please enter your name.",
       email: "Please enter your email address.",
       phone: "",
       address: "",
@@ -93,14 +90,9 @@ export function ContactForm() {
     <form noValidate onSubmit={submit}>
       <h2 className={`${styles.heading} text-heading-3`}>Send me a message</h2>
       <div className={styles.fields}>
-        <div className={styles.nameRow}>
-          <TextField id={inputIds.firstName} name="firstName" label="First name" required autoComplete="given-name"
-            value={values.firstName} onChange={event => change("firstName", event.target.value)}
-            onBlur={() => blur("firstName")} error={errors.firstName} />
-          <TextField id={inputIds.lastName} name="lastName" label="Last name" required autoComplete="family-name"
-            value={values.lastName} onChange={event => change("lastName", event.target.value)}
-            onBlur={() => blur("lastName")} error={errors.lastName} />
-        </div>
+        <TextField id={inputIds.name} name="name" label="Your Name" required autoComplete="name"
+          value={values.name} onChange={event => change("name", event.target.value)}
+          onBlur={() => blur("name")} error={errors.name} />
         <TextField id={inputIds.email} name="email" label="Email" type="email" required autoComplete="email"
           value={values.email} onChange={event => change("email", event.target.value)}
           onBlur={() => blur("email")} error={errors.email} />

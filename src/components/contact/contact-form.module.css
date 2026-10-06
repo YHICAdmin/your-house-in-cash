@@ -8,12 +8,6 @@
   gap: var(--spacing-m);
 }
 
-.nameRow {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--spacing-m);
-}
-
 .actions {
   margin-top: var(--spacing-l);
 }
@@ -35,10 +29,4 @@
 .failure {
   margin: 0 0 var(--spacing-s);
   color: var(--color-error);
-}
-
-@media (min-width: 75rem) {
-  .nameRow {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }

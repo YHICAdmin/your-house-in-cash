@@ -76,12 +76,11 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 
   | Order | Visible label | Control | Required | Autocomplete |
   | --- | --- | --- | --- | --- |
-  | 1 | First name | Single-line text | Yes | `given-name` |
-  | 2 | Last name | Single-line text | Yes | `family-name` |
-  | 3 | Email | Email field | Yes | `email` |
-  | 4 | Phone number (optional) | Phone field | No | `tel` |
-  | 5 | Property address (optional) | Address field | No | `street-address` |
-  | 6 | Message | Multiline textarea | Yes | — |
+  | 1 | Your Name | Single-line text | Yes | `name` |
+  | 2 | Email | Email field | Yes | `email` |
+  | 3 | Phone number (optional) | Phone field | No | `tel` |
+  | 4 | Property address (optional) | Address field | No | `street-address` |
+  | 5 | Message | Multiline textarea | Yes | — |
 
 - Submit label: `Send Message`.
 - Submitting label: `Sending…`.
@@ -93,8 +92,7 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 
   | Field and condition | Message |
   | --- | --- |
-  | First name empty after trimming | `Please enter your first name.` |
-  | Last name empty after trimming | `Please enter your last name.` |
+  | Your Name empty after trimming | `Please enter your name.` |
   | Email empty after trimming | `Please enter your email address.` |
   | Email format invalid | `Please enter a valid email address.` |
   | Phone number supplied but invalid | `Please enter a valid US phone number.` |
@@ -115,8 +113,7 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 ### Dimensions and Alignment
 
 - The Form Card fills its assigned Grid columns. Give the textarea five visible rows initially and allow vertical resizing.
-- Desktop: place First name and Last name in two equal-width fields on the first row. Each remaining field spans the card's available width.
-- Tablet and Mobile: stack all fields at full card width in the documented order.
+- Each field spans the card's available width at every Breakpoint.
 - Make the submit button span the available form width at every Breakpoint.
 
 ### Spacing
