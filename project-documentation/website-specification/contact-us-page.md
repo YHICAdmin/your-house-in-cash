@@ -26,8 +26,8 @@ Help a visitor start a conversation, understand what to expect from it, and send
 
 ### Content
 
-- H1: `Let’s talk about your property.`
-- Supporting text: `Have a question or considering selling? Tell me what’s on your mind, and we can discuss what makes sense for you.`
+- H1: `Have a question? Let’s talk.`
+- Supporting text: `Have a question about your property or how we work? Send me a message. You don’t need to be ready to sell to get in touch.`
 
 ### Component and Semantics
 
@@ -51,9 +51,9 @@ Separate the supporting text from the Conversation Points by `L` (`32px`) at eac
 
 Present these points in order:
 
-1. `Speak directly with Noah.`
-2. `Get clear answers about your options.`
-3. `Start a conversation without committing to sell.`
+1. `Ask about the process, timing, or your options.`
+2. `Hear directly from Noah.`
+3. `Decide if you want to take a next step.`
 
 ### Component and Semantics
 

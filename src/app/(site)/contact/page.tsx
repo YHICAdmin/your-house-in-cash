@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 };
 
 const conversationPoints = [
-  "Speak directly with Noah.",
-  "Get clear answers about your options.",
-  "Start a conversation without committing to sell.",
+  "Ask about the process, timing, or your options.",
+  "Hear directly from Noah.",
+  "Decide if you want to take a next step.",
 ];
 
 export default function ContactPage() {
@@ -23,9 +23,9 @@ export default function ContactPage() {
           <div className={styles.linePattern} aria-hidden="true" />
           <div className={`${styles.layout} content-grid`}>
             <div className={styles.introduction}>
-              <h1 id="contact-heading" className={`${styles.heading} text-display`}>Let’s talk about your property.</h1>
+              <h1 id="contact-heading" className={`${styles.heading} text-display`}>Have a question? Let’s talk.</h1>
               <p className={`${styles.supportingText} text-body-large`}>
-                Have a question or considering selling? Tell me what’s on your mind, and we can discuss what makes sense for you.
+                Have a question about your property or how we work? Send me a message. You don’t need to be ready to sell to get in touch.
               </p>
               <ul className={styles.points}>
                 {conversationPoints.map(point => (
