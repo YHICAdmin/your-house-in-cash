@@ -142,7 +142,11 @@ Immediately confirm that the user has reached a page relevant to their specific 
 - **Divorce:** Alternative text: `Two empty wooden chairs beside a small table with a vase`.
 - **Liens:** Alternative text: `Keys resting on property documents beside miniature house models`.
 - **Fire Damage:** Alternative text: `Fire-damaged kitchen with charred walls and debris`.
-- **Hoarder House:** Alternative text: `Shelves and boxes filled with stored papers and belongings`.
+- **Hoarder House:** Alternative text: `Living room crowded with bags, boxes, furniture, and other belongings`.
+
+### Attribution
+
+- **Hoarder House:** Display the linked credit `Photo by Shadwwulf via Wikimedia Commons (CC BY 3.0)` beneath the Primary Image. The image is available under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
 
 # Situation Content
 

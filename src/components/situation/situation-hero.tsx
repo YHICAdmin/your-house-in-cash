@@ -13,8 +13,17 @@ export function SituationHero({ situation }: { situation: Situation }) {
         <h1 className={`text-heading-2 ${styles.heading}`}>{situation.headline}</h1>
         <p className={`text-body-large ${styles.copy}`}>{situation.supportingCopy}</p>
       </div>
-      <Image className={styles.image} src={situation.image} alt={situation.imageAlt}
-        sizes="(min-width: 1440px) 500px, (min-width: 1200px) 42vw, (min-width: 768px) 50vw, 100vw" priority />
+      <figure className={styles.imageFigure}>
+        <Image className={styles.image} src={situation.image} alt={situation.imageAlt}
+          sizes="(min-width: 1440px) 500px, (min-width: 1200px) 42vw, (min-width: 768px) 50vw, 100vw" priority />
+        {situation.imageCredit && (
+          <figcaption className={`${styles.imageCredit} text-body-small`}>
+            <a href={situation.imageCredit.href} target="_blank" rel="noreferrer">
+              {situation.imageCredit.label}
+            </a>
+          </figcaption>
+        )}
+      </figure>
     </div>
   </section>;
 }

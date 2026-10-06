@@ -56,20 +56,23 @@
 }
 
 .layout { align-items: center; row-gap: var(--spacing-l); }
-.content, .image { grid-column: 1 / -1; min-width: 0; }
+.content, .imageFigure { grid-column: 1 / -1; min-width: 0; }
 .heading { margin: 0 0 var(--spacing-m); }
 .copy { margin: 0; color: var(--color-text-secondary); }
-.image { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius-medium); }
+.imageFigure { margin: 0; }
+.image { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius-medium); }
+.imageCredit { margin: var(--spacing-xs) 0 0; color: var(--color-text-secondary); }
+.imageCredit a { color: inherit; }
 
 @media (min-width: 768px) {
   .hero { --slope-depth: var(--spacing-2xl); }
   .content { grid-column: 1 / span 4; }
-  .image { grid-column: 5 / span 4; }
+  .imageFigure { grid-column: 5 / span 4; }
 }
 
 @media (min-width: 1200px) {
   .hero { --slope-depth: var(--spacing-3xl); }
   .content { grid-column: 1 / span 5; }
-  .image { grid-column: 8 / span 5; }
+  .imageFigure { grid-column: 8 / span 5; }
   .accents { --accent-width: calc(var(--spacing-3xl) * 3); }
 }

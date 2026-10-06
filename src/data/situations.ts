@@ -16,6 +16,10 @@ export type Situation = {
   supportingCopy: string;
   image: StaticImageData;
   imageAlt: string;
+  imageCredit?: {
+    href: string;
+    label: string;
+  };
 };
 
 export const situations: Situation[] = [
@@ -87,6 +91,10 @@ export const situations: Situation[] = [
     headline: "Selling a Hoarder House",
     supportingCopy: "A house with years of belongings can make every next step feel harder. Explore how to approach access, personal items, cleanout decisions, privacy, and selling with contents still inside.",
     image: hoarderHouseImage,
-    imageAlt: "Shelves and boxes filled with stored papers and belongings",
+    imageAlt: "Living room crowded with bags, boxes, furniture, and other belongings",
+    imageCredit: {
+      href: "https://commons.wikimedia.org/wiki/File:Hoarding_living_room.jpg",
+      label: "Photo by Shadwwulf via Wikimedia Commons (CC BY 3.0)",
+    },
   },
 ];
