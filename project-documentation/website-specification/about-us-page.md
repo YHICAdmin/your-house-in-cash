@@ -36,6 +36,7 @@ Create a personal first impression of Noah and make clear that Your House in Cas
 ### Desktop
 
 - Use a spacious two-column Hero.
+- Use the global Line System.
 - Use a `5 / 1 / 6` composition: the left five columns contain the Primary Headline, Supporting Copy, and Primary CTA in that order; the center column remains open; the right six columns contain the Founder Photograph.
 - Align the top of the photograph with the top of the text column.
 - Keep the text composition as the Hero’s primary focal point.
@@ -66,7 +67,7 @@ Show the principles Noah brings to each homeowner conversation through four conc
 
 ## Layout
 
-- Place this section immediately after the Hero on a white background, using the site's existing content width and section spacing.
+- Place this section immediately after the Hero on a white background, using the site's existing content width, section spacing, and global Line System.
 - Begin directly with the four cards as the section's only visible content.
 - Desktop: four equal-width cards in one row.
 - Tablet: two equal-width columns and two rows.
@@ -116,7 +117,7 @@ Show how Noah follows through during a potential sale: clear expectations, a com
 
 ## Layout
 
-- Place this section immediately after Core Values. Use `Background Neutral` (`#F8F8F8`) to distinguish it gently from the preceding white section, with the global content width and section spacing.
+- Place this section immediately after Core Values. Use `Background Neutral` (`#F8F8F8`) to distinguish it gently from the preceding white section, with the global content width, section spacing, and global Line System.
 - Desktop: use a `5 / 1 / 6` Grid composition. Place the Heading and Commitment Paragraphs in the left five columns, leave the center column open, and place the Supporting Photograph in the right six columns. Visually center the text group against the photograph.
 - Place the Benefit Cards below both columns, separated from the upper composition by `2XL` (`64px`). Display two equal-width cards side by side across the content width.
 - Tablet: retain two balanced four-column areas for the upper composition and two equal-width Benefit Cards below it. Align the text group and photograph at their top edges.
@@ -206,3 +207,71 @@ Present two informational cards in this order. Each has a compact graphic area o
 ### Spacing
 
 - Use `M` (`24px`) padding for the text area on Desktop and Tablet, and `S` (`16px`) on Mobile.
+
+# Final CTA
+
+## Purpose
+
+Offer a calm, direct next step once the visitor has learned Noah’s approach and what working together involves.
+
+## Layout
+
+- Place this section after `What You Can Expect From Me` and before the Footer.
+- Use `Background` (`#FFFFFF`) with the global content width, section spacing, and global Line System. Keep the section composition limited to the CTA copy and Primary CTA.
+- Use the centered Final CTA composition established by the Sell a Portfolio page: Headline, Supporting Text, then Primary CTA in one centered vertical flow.
+- Desktop: center the composition across Grid columns 3 through 10. Tablet: center it across Grid columns 2 through 7. Mobile: use the full content width.
+
+## Headline
+
+### Content
+
+`Let’s talk about what works for you.`
+
+### Component and Semantics
+
+Use H2 semantics.
+
+### Visual Design
+
+Use the global H2 typography. Center the headline and let it wrap naturally within the composition.
+
+### Spacing After
+
+Separate the Headline from the Supporting Text by `M` (`24px`) at each Breakpoint.
+
+## Supporting Text
+
+### Content
+
+`Whether you’re ready to sell or still weighing your options, tell me about your property and what matters to you. We can talk through whether working together makes sense.`
+
+### Component and Semantics
+
+Use paragraph semantics.
+
+### Visual Design
+
+Use global Body Large typography with `Text Secondary` color. Center the copy and limit its line length to `680px`.
+
+### Spacing After
+
+Separate the Supporting Text from the Primary CTA by `L` (`32px`) at each Breakpoint.
+
+## Primary CTA
+
+### Content
+
+- Label: `Talk Through Your Options`
+- Destination: `/get-cash-offer`
+
+### Component and Semantics
+
+- Use the shared Button Component with its `conversion` variant as a link.
+
+### Visual Design
+
+Use the shared Button Component’s black background, white text, subtle radius, hover state, and keyboard-focus treatment.
+
+### Dimensions and Alignment
+
+- Use the shared conversion Button width and center it beneath the Supporting Text at every Breakpoint.

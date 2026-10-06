@@ -59,7 +59,7 @@ export default function AboutUsPage() {
             </div>
           </div>
         </section>
-        <section className={`${styles.coreValues} section-spacing`} aria-label="Core values">
+        <section className={`${styles.coreValues} section-spacing system-lines-bg`} aria-label="Core values">
           <ul className={`${styles.valueGrid} content-grid`}>
             {coreValues.map(({ value, description, Icon }) => (
               <li className={styles.valueCard} key={value}>
@@ -103,8 +103,23 @@ export default function AboutUsPage() {
             </li>
           </ul>
         </section>
+        <section className={`${styles.finalCta} section-spacing system-lines-bg`} aria-labelledby="final-cta-heading">
+          <div className={`${styles.finalCtaLayout} content-grid`}>
+            <div className={styles.finalCtaComposition}>
+              <h2 id="final-cta-heading" className={`${styles.finalCtaHeading} text-heading-2`}>
+                Let’s talk about what works for you.
+              </h2>
+              <p className={`${styles.finalCtaSupportingCopy} text-body-large`}>
+                Whether you’re ready to sell or still weighing your options, tell me about your property and what matters to you. We can talk through whether working together makes sense.
+              </p>
+              <Button href="/get-cash-offer" variant="conversion">
+                Talk Through Your Options
+              </Button>
+            </div>
+          </div>
+        </section>
       </main>
-      <SiteFooter />
+      <SiteFooter background="soft" />
     </>
   );
 }
