@@ -79,10 +79,10 @@ Show the principles Noah brings to each homeowner conversation through four conc
 
 Each card presents an icon, paragraph, and emphasized core value, in that order:
 
-1. **Clarity** — `I explain the offer and the next steps in plain language, so you understand what you’re considering.`
-2. **Respect** — `I listen to your priorities and give you space to make the decision that feels right for you.`
-3. **Honesty** — `I’m upfront about what I can offer, any limitations, and whether we’re a good fit.`
-4. **Accountability** — `I take responsibility for my part of the process and communicate when something changes.`
+1. **Clarity** — `Offers and next steps are explained in plain language, so you understand what you’re considering.`
+2. **Respect** — `Your priorities guide the conversation, with space to make the decision that feels right for you.`
+3. **Honesty** — `The offer, its limitations, and whether a direct sale fits are discussed upfront.`
+4. **Accountability** — `Commitments are carried through, and changes are communicated clearly when they arise.`
 
 ### Component and Semantics
 
@@ -146,10 +146,10 @@ Separate the Heading from the first Commitment Paragraph by `L` (`32px`) at each
 
 Present these four paragraphs in order, with each bold lead-in immediately followed by its regular-weight explanation:
 
-1. **I follow through.** I stay involved, keep you updated, and take responsibility for the commitments I make.
-2. **You know what to expect.** We discuss the terms, costs, and timeline upfront. If something changes, I explain it promptly.
-3. **You get the full picture.** I explain how the offer works, who is involved, and what you’re agreeing to before you decide.
-4. **I keep things moving.** When questions, paperwork, or timing issues come up, I stay on top of the details and help keep the sale moving forward.
+1. **Clear follow-through.** You stay updated, and commitments are carried through.
+2. **Upfront communication.** Terms, costs, and timing are discussed early. Changes are explained promptly.
+3. **The full picture.** You understand how the offer works, who is involved, and what you’re agreeing to before deciding.
+4. **Steady progress.** Questions, paperwork, and timing issues are kept moving forward.
 
 ### Component and Semantics
 
@@ -184,8 +184,8 @@ Keep its square composition and fill its assigned Grid width.
 
 Present two informational cards in this order. Each has a compact graphic area on the left and one paragraph on the right, with its bold lead-in inline:
 
-1. **I handle the heavy lifting.** I help coordinate the paperwork, title company, and closing details, so you have fewer things to manage.
-2. **We stay in touch.** You can ask questions, raise concerns, and reach me directly. I keep you informed as the sale moves forward.
+1. **Heavy lifting handled.** Paperwork, title coordination, and closing details are managed so you have fewer things to handle.
+2. **Direct communication.** You can ask questions, raise concerns, and stay informed as the sale moves forward.
 
 ### Component and Semantics
 

@@ -8,22 +8,22 @@ import styles from "./page.module.css";
 const coreValues = [
   {
     value: "Clarity",
-    description: "I explain the offer and the next steps in plain language, so you understand what you’re considering.",
+    description: "Offers and next steps are explained in plain language, so you understand what you’re considering.",
     Icon: MessageCircle,
   },
   {
     value: "Respect",
-    description: "I listen to your priorities and give you space to make the decision that feels right for you.",
+    description: "Your priorities guide the conversation, with space to make the decision that feels right for you.",
     Icon: Handshake,
   },
   {
     value: "Honesty",
-    description: "I’m upfront about what I can offer, any limitations, and whether we’re a good fit.",
+    description: "The offer, its limitations, and whether a direct sale fits are discussed upfront.",
     Icon: ShieldCheck,
   },
   {
     value: "Accountability",
-    description: "I take responsibility for my part of the process and communicate when something changes.",
+    description: "Commitments are carried through, and changes are communicated clearly when they arise.",
     Icon: ClipboardCheck,
   },
 ] as const;
@@ -77,10 +77,10 @@ export default function AboutUsPage() {
                 What you can expect from me
               </h2>
               <div className={styles.expectationsParagraphs}>
-                <p className="text-body"><strong>I follow through.</strong> I stay involved, keep you updated, and take responsibility for the commitments I make.</p>
-                <p className="text-body"><strong>You know what to expect.</strong> We discuss the terms, costs, and timeline upfront. If something changes, I explain it promptly.</p>
-                <p className="text-body"><strong>You get the full picture.</strong> I explain how the offer works, who is involved, and what you’re agreeing to before you decide.</p>
-                <p className="text-body"><strong>I keep things moving.</strong> When questions, paperwork, or timing issues come up, I stay on top of the details and help keep the sale moving forward.</p>
+                <p className="text-body"><strong>Clear follow-through.</strong> You stay updated, and commitments are carried through.</p>
+                <p className="text-body"><strong>Upfront communication.</strong> Terms, costs, and timing are discussed early. Changes are explained promptly.</p>
+                <p className="text-body"><strong>The full picture.</strong> You understand how the offer works, who is involved, and what you’re agreeing to before deciding.</p>
+                <p className="text-body"><strong>Steady progress.</strong> Questions, paperwork, and timing issues are kept moving forward.</p>
               </div>
             </div>
             <div className={styles.expectationsPhoto}>
@@ -95,11 +95,11 @@ export default function AboutUsPage() {
           <ul className={`${styles.expectationsBenefits} content-grid`}>
             <li className={styles.expectationsBenefit}>
               <span className={styles.benefitGraphic} aria-hidden="true"><FileCheck2 /></span>
-              <p className="text-body"><strong>I handle the heavy lifting.</strong> I help coordinate the paperwork, title company, and closing details, so you have fewer things to manage.</p>
+              <p className="text-body"><strong>Heavy lifting handled.</strong> Paperwork, title coordination, and closing details are managed so you have fewer things to handle.</p>
             </li>
             <li className={styles.expectationsBenefit}>
               <span className={styles.benefitGraphic} aria-hidden="true"><MessageCircle /></span>
-              <p className="text-body"><strong>We stay in touch.</strong> You can ask questions, raise concerns, and reach me directly. I keep you informed as the sale moves forward.</p>
+              <p className="text-body"><strong>Direct communication.</strong> You can ask questions, raise concerns, and stay informed as the sale moves forward.</p>
             </li>
           </ul>
         </section>
