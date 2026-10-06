@@ -12,7 +12,7 @@ At this stage, the user has already received the necessary information throughou
 
 - The left-aligned hierarchy of the Section Intro, Primary CTA, and Reassurance Row is preserved across Breakpoints.
 - The Section Intro, Primary CTA, and Reassurance Row form one left-aligned composition.
-- On Desktop, the CTA composition occupies Grid Columns `1–6`; the Supporting Benefits occupy Grid Columns `7–12`, with each benefit occupying three columns.
+- On Desktop, the CTA composition occupies Grid Columns `1–5`, Grid Column `6` remains open, and the Supporting Benefits occupy Grid Columns `7–12`, with each benefit occupying three columns.
 - On Tablet, the CTA composition occupies Grid Columns `1–4`; the Supporting Benefits occupy Grid Columns `5–8`, with each benefit occupying two columns.
 - On Desktop and Tablet, the CTA composition and Supporting Benefits form parallel left- and right-area content flows whose top edges align.
 - On Mobile, the CTA composition occupies the full available Content Grid width, followed by the Supporting Benefits in canonical document order.

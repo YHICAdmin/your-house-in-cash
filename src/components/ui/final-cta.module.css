@@ -109,7 +109,7 @@
 
 @media (min-width: 1200px) {
   .composition {
-    grid-column: 1 / span 6;
+    grid-column: 1 / span 5;
   }
 
   .benefits {
