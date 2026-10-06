@@ -6,6 +6,9 @@ import majorRepairsImage from "../../public/images/situations/major-repairs-hero
 import vacantPropertyImage from "../../public/images/situations/vacant-property-hero.jpg";
 import relocationImage from "../../public/images/situations/relocation-hero.jpg";
 import divorceImage from "../../public/images/situations/divorce-hero.jpg";
+import liensImage from "../../public/images/situations/liens-hero.jpg";
+import fireDamageImage from "../../public/images/situations/fire-damage-hero.jpg";
+import hoarderHouseImage from "../../public/images/situations/hoarder-house-hero.jpg";
 
 export type Situation = {
   slug: string;
@@ -64,5 +67,26 @@ export const situations: Situation[] = [
     supportingCopy: "A shared home can be one of the most complex decisions during a separation. Explore the questions around ownership, mortgage payments, and whether one person keeps the house or you sell it.",
     image: divorceImage,
     imageAlt: "Two empty wooden chairs beside a small table with a vase",
+  },
+  {
+    slug: "liens",
+    headline: "Selling a House With Liens",
+    supportingCopy: "A lien can make a sale feel impossible before you know the facts. Understand how to identify title obstacles, confirm payoff amounts, and see what may remain after closing.",
+    image: liensImage,
+    imageAlt: "Keys resting on property documents beside miniature house models",
+  },
+  {
+    slug: "fire-damage",
+    headline: "Selling a Fire-Damaged House",
+    supportingCopy: "A fire can leave you with urgent questions about the property, insurance, repairs, and what comes next. Understand how to protect the house and compare restoring it with selling as-is.",
+    image: fireDamageImage,
+    imageAlt: "Fire-damaged kitchen with charred walls and debris",
+  },
+  {
+    slug: "hoarder-house",
+    headline: "Selling a Hoarder House",
+    supportingCopy: "A house with years of belongings can make every next step feel harder. Explore how to approach access, personal items, cleanout decisions, privacy, and selling with contents still inside.",
+    image: hoarderHouseImage,
+    imageAlt: "Shelves and boxes filled with stored papers and belongings",
   },
 ];

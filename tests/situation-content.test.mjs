@@ -13,13 +13,16 @@ implementation._compile(ts.transpileModule(fs.readFileSync(file, "utf8"), {
 const { readSituationContent, situationSection, parseSituationHero } = implementation.exports;
 
 test("each situation loads its own approved content", async () => {
-  for (const slug of ["foreclosure", "inherited-property", "major-repairs"]) {
+  for (const slug of [
+    "foreclosure", "inherited-property", "landlords", "major-repairs", "vacant-property", "relocation", "divorce",
+    "liens", "fire-damage", "hoarder-house",
+  ]) {
     const source = await readSituationContent(slug);
     assert.equal(source, fs.readFileSync(new URL(`../project-documentation/website-specification/content/situations/${slug}.md`, import.meta.url), "utf8"));
     assert.ok(parseSituationHero(source).headline);
   }
-  assert.ok(situationSection(await readSituationContent("foreclosure"), "Article"));
-  assert.ok(situationSection(await readSituationContent("major-repairs"), "Article"));
+  for (const slug of ["foreclosure", "major-repairs", "liens", "fire-damage", "hoarder-house"])
+    assert.ok(situationSection(await readSituationContent(slug), "Article"));
 });
 
 test("missing files and invalid paths return empty content safely", async () => {

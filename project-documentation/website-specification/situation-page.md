@@ -63,6 +63,9 @@ Immediately confirm that the user has reached a page relevant to their specific 
 - **Vacant Property:** [Primary Headline](content/situations/vacant-property.md#primary-headline) under `Hero`.
 - **Relocation:** [Primary Headline](content/situations/relocation.md#primary-headline) under `Hero`.
 - **Divorce:** [Primary Headline](content/situations/divorce.md#primary-headline) under `Hero`.
+- **Liens:** [Primary Headline](content/situations/liens.md#primary-headline) under `Hero`.
+- **Fire Damage:** [Primary Headline](content/situations/fire-damage.md#primary-headline) under `Hero`.
+- **Hoarder House:** [Primary Headline](content/situations/hoarder-house.md#primary-headline) under `Hero`.
 
 ### Component and Semantics
 
@@ -88,6 +91,9 @@ Immediately confirm that the user has reached a page relevant to their specific 
 - **Vacant Property:** [Supporting Copy](content/situations/vacant-property.md#supporting-copy) under `Hero`.
 - **Relocation:** [Supporting Copy](content/situations/relocation.md#supporting-copy) under `Hero`.
 - **Divorce:** [Supporting Copy](content/situations/divorce.md#supporting-copy) under `Hero`.
+- **Liens:** [Supporting Copy](content/situations/liens.md#supporting-copy) under `Hero`.
+- **Fire Damage:** [Supporting Copy](content/situations/fire-damage.md#supporting-copy) under `Hero`.
+- **Hoarder House:** [Supporting Copy](content/situations/hoarder-house.md#supporting-copy) under `Hero`.
 
 ### Component and Semantics
 
@@ -112,6 +118,9 @@ Immediately confirm that the user has reached a page relevant to their specific 
 - **Vacant Property:** [vacant-property-hero.jpg](../../public/images/situations/vacant-property-hero.jpg).
 - **Relocation:** [relocation-hero.jpg](../../public/images/situations/relocation-hero.jpg).
 - **Divorce:** [divorce-hero.jpg](../../public/images/situations/divorce-hero.jpg).
+- **Liens:** [liens-hero.jpg](../../public/images/situations/liens-hero.jpg).
+- **Fire Damage:** [fire-damage-hero.jpg](../../public/images/situations/fire-damage-hero.jpg).
+- **Hoarder House:** [hoarder-house-hero.jpg](../../public/images/situations/hoarder-house-hero.jpg).
 
 ### Visual Design
 
@@ -131,6 +140,9 @@ Immediately confirm that the user has reached a page relevant to their specific 
 - **Vacant Property:** Alternative text: `Empty room with a hardwood floor and a window, viewed through an open doorway`.
 - **Relocation:** Alternative text: `Moving boxes beside covered furniture in a bright room`.
 - **Divorce:** Alternative text: `Two empty wooden chairs beside a small table with a vase`.
+- **Liens:** Alternative text: `Keys resting on property documents beside miniature house models`.
+- **Fire Damage:** Alternative text: `Fire-damaged kitchen with charred walls and debris`.
+- **Hoarder House:** Alternative text: `Shelves and boxes filled with stored papers and belongings`.
 
 # Situation Content
 

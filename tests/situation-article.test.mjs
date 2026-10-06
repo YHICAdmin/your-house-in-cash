@@ -122,3 +122,12 @@ test("Final CTA is optional but an incomplete section fails clearly", () => {
   assert.equal(parseSituationFinalCta("# Hero\n\nHeadline"), null);
   assert.throws(() => parseSituationFinalCta("# Final CTA\n\n## Section Label\n\nLabel"), /Missing Final CTA/);
 });
+
+test("new situation drafts provide a complete renderable article, FAQ, and final CTA", () => {
+  for (const slug of ["liens", "fire-damage", "hoarder-house"]) {
+    const source = fs.readFileSync(new URL(`../project-documentation/website-specification/content/situations/${slug}.md`, import.meta.url), "utf8");
+    assert.ok(parseSituationArticle(source).headings.length > 0, slug);
+    assert.ok(parseSituationFaq(source)?.items.length > 0, slug);
+    assert.equal(parseSituationFinalCta(source)?.benefits.length, 2, slug);
+  }
+});

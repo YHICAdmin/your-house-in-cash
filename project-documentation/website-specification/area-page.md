@@ -399,6 +399,9 @@ Contains, in document order:
   5. `Vacant Property`.
   6. `Relocation`.
   7. `Divorce`.
+  8. `Liens`.
+  9. `Fire Damage`.
+  10. `Hoarder House`.
 
 * `Inherited House` is the selector label for `Inherited Property`.
 
@@ -502,6 +505,9 @@ Contains, in document order:
   5. `Vacant Property`: `House`.
   6. `Relocation`: `Truck`.
   7. `Divorce`: `Scale`.
+  8. `Liens`: `FileKey2`.
+  9. `Fire Damage`: `Flame`.
+  10. `Hoarder House`: `Boxes`.
 
 #### Component and Semantics
 
@@ -527,6 +533,9 @@ Contains, in document order:
   5. `Vacant Property`: `Managing the Costs of a Vacant Property`.
   6. `Relocation`: `Coordinating a Home Sale With Relocation`.
   7. `Divorce`: `Handling a Property During Divorce`.
+  8. `Liens`: `Understanding Liens Before You Sell`.
+  9. `Fire Damage`: `Choosing Whether to Restore or Sell After a Fire`.
+  10. `Hoarder House`: `Selling a House Full of Belongings`.
 
 #### Component and Semantics
 
@@ -548,6 +557,9 @@ Contains, in document order:
   5. `Vacant Property`: `A vacant house can create ongoing costs, maintenance, and security concerns. We provide a straightforward way to sell it as-is.`
   6. `Relocation`: `When you need to relocate, timing matters. We offer a flexible, straightforward sale without requiring you to prepare the house for the market.`
   7. `Divorce`: `Selling a house during a divorce can add stress to an already difficult transition. We provide a simple and discreet way to sell the property as-is.`
+  8. `Liens`: `A lien can affect title, timing, and what remains after closing. We can evaluate your house as-is so you can compare a direct offer with your payoff amounts.`
+  9. `Fire Damage`: `Fire damage can make repairs, insurance, and timing feel overwhelming. We buy houses as-is, so you can consider a sale without completing restoration first.`
+  10. `Hoarder House`: `A full house can make cleanout, privacy, and access feel like major obstacles. We can evaluate the property as it sits, with unwanted belongings still inside.`
 
 #### Component and Semantics
 
@@ -575,6 +587,9 @@ Contains, in document order:
   5. `Vacant Property`: `/vacant-property`.
   6. `Relocation`: `/relocation`.
   7. `Divorce`: `/divorce`.
+  8. `Liens`: `/liens`.
+  9. `Fire Damage`: `/fire-damage`.
+  10. `Hoarder House`: `/hoarder-house`.
 * These paths establish the canonical route convention for dedicated Situation Pages.
 
 #### Component and Semantics

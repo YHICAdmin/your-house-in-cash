@@ -3,6 +3,9 @@
 import {
   ArrowRight,
   Building2,
+  Boxes,
+  FileKey2,
+  Flame,
   Gavel,
   Hammer,
   House,
@@ -88,6 +91,30 @@ const situations = [
     heading: "Handling a Property During Divorce",
     explanation:
       "Selling a house during a divorce can add stress to an already difficult transition. We provide a simple and discreet way to sell the property as-is.",
+  },
+  {
+    label: "Liens",
+    slug: "liens",
+    icon: FileKey2,
+    heading: "Understanding Liens Before You Sell",
+    explanation:
+      "A lien can affect title, timing, and what remains after closing. We can evaluate your house as-is so you can compare a direct offer with your payoff amounts.",
+  },
+  {
+    label: "Fire Damage",
+    slug: "fire-damage",
+    icon: Flame,
+    heading: "Choosing Whether to Restore or Sell After a Fire",
+    explanation:
+      "Fire damage can make repairs, insurance, and timing feel overwhelming. We buy houses as-is, so you can consider a sale without completing restoration first.",
+  },
+  {
+    label: "Hoarder House",
+    slug: "hoarder-house",
+    icon: Boxes,
+    heading: "Selling a House Full of Belongings",
+    explanation:
+      "A full house can make cleanout, privacy, and access feel like major obstacles. We can evaluate the property as it sits, with unwanted belongings still inside.",
   },
 ] as const satisfies readonly Situation[];
 
