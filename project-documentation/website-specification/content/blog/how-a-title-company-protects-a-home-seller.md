@@ -2,7 +2,7 @@ Main topic: Selling a House
 
 Publication date: 2026-10-07
 
-Topics covered: Title Search, Escrow, Liens, Closing Costs, Home Sale
+Topics covered: Title Search, Escrow, Liens, Closing Costs
 
 # How a Title Company Helps Protect a Home Seller
 
