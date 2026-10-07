@@ -1,8 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
+import { Fragment, type ReactNode } from "react";
 import { Banknote, Clock } from "lucide-react";
 import { FinalCta } from "@/components/ui/final-cta";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { renderSituationInline } from "@/components/situation/situation-inline";
+import { getExternalLinkProps } from "@/lib/link-target";
 import type { readBlogArticle } from "@/lib/blog-content";
 import styles from "./blog-article.module.css";
 
@@ -47,13 +50,21 @@ export function BlogArticle({ article }: { article: Article }) {
         <article id="blog-article" className={`text-body ${styles.body}`}>
           {article.blocks.map((block, index) => {
             const content = renderSituationInline(block.text, article.references);
+            let element: ReactNode;
             switch (block.type) {
-              case "heading": return <h2 key={block.id} id={block.id} className="text-heading-3">{content}</h2>;
-              case "subheading": return <h3 key={block.id} id={block.id} className="text-heading-4">{content}</h3>;
-              case "quote": return <blockquote key={index}><p>{content}</p></blockquote>;
-              case "list": return <ul key={index}>{block.items!.map((item, itemIndex) => <li key={itemIndex}>{renderSituationInline(item, article.references)}</li>)}</ul>;
-              default: return <p key={index} className={index < firstHeading ? "text-body-large" : undefined}>{content}</p>;
+              case "heading": element = <h2 id={block.id} className="text-heading-3">{content}</h2>; break;
+              case "subheading": element = <h3 id={block.id} className="text-heading-4">{content}</h3>; break;
+              case "quote": element = <blockquote><p>{content}</p></blockquote>; break;
+              case "list": element = <ul>{block.items!.map((item, itemIndex) => <li key={itemIndex}>{renderSituationInline(item, article.references)}</li>)}</ul>; break;
+              default: element = <p className={index < firstHeading ? "text-body-large" : undefined}>{content}</p>;
             }
+            return <Fragment key={block.id ?? index}>
+              {index === firstHeading && article.image && <figure className={styles.articleImage}>
+                <Image src={article.image.src} alt={article.image.alt} width={1536} height={1024} sizes="(min-width: 1200px) 800px, (min-width: 768px) 90vw, 100vw" />
+                <figcaption className="text-caption">{article.image.source ? <>Photo: <a href={article.image.source} {...getExternalLinkProps(article.image.source)}>{article.image.credit}</a></> : article.image.credit}</figcaption>
+              </figure>}
+              {element}
+            </Fragment>;
           })}
         </article>
       </div>

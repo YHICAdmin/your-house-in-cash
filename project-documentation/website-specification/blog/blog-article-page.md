@@ -155,6 +155,7 @@ Show the article's subject and related topics while keeping the article itself t
 
 - Keep body text within the `65–75ch` reading measure on Desktop. On Tablet and Mobile, use the available reading width within the Content Container.
 - Display existing images within the article flow at a size that preserves their proportions and does not create horizontal page overflow. Preserve their supplied alternative text, captions, and attribution.
+- For the current single-image article format, render the supplied image after the opening paragraphs and before the first `h2`, with the supplied photographer credit beneath it in global `Caption` typography.
 
 ### Spacing
 
