@@ -26,7 +26,7 @@ export function BlogArticle({ article }: { article: Article }) {
           <ol>
             <li><Link href="/blog">Blog</Link></li>
             <li aria-hidden="true">→</li>
-            <li aria-current="page">{article.title}</li>
+            <li><Link href={`/blog/${article.topicSlug}`}>{article.mainTopic}</Link></li>
           </ol>
         </nav>
       </div>

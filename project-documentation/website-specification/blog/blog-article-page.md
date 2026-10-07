@@ -4,7 +4,9 @@ Define a consistent, reading-focused template for individual blog articles. The 
 
 # Page Routing
 
-- Blog articles use `/blog/{article-slug}`. The Blog breadcrumb links to `/blog`.
+- Blog articles use `/blog/{article-slug}`. The article slug matches the content filename. The current article URL is `/blog/maple-heights-rental-market-snapshot-2026`.
+- The topic slug is derived from the article's main topic by lowercasing it and replacing non-alphanumeric runs with hyphens. It is used for the topic-index link, not as part of the article URL.
+- Blog links to `/blog` and the main-topic breadcrumb links to `/blog/{topic-slug}`. The topic index page is not part of this article-template implementation.
 
 # Page Composition
 
@@ -25,7 +27,7 @@ Give readers a clear path from the article title through its content and final C
 
 ## Purpose
 
-Show the article's place within the website and provide a path back to the Blog page.
+Show the article's main topic and provide paths back to the Blog and its topic index.
 
 ## Layout
 
@@ -36,20 +38,20 @@ Show the article's place within the website and provide a path back to the Blog 
 
 ### Content
 
-- Display `Blog → {Article title}` in that order. Use the article's actual title for the final item.
+- Display `Blog → {Main topic}` in that order. Do not repeat the article title in the breadcrumb; it appears as the page's `h1`.
 
 ### Component and Semantics
 
-- Use a breadcrumb navigation landmark with an ordered list. Blog is a link; the current article is plain text and is identified as the current page.
-- Use the documented Text Link treatment for Blog. The arrow is a separator, not part of the link label.
+- Use a breadcrumb navigation landmark with an ordered list. Blog and the main topic are links. The breadcrumb has no current-page item because the article title is omitted.
+- Use the documented Text Link treatment for both links. The arrow is a separator, not part of either link label.
 
 ### Visual Design
 
-- Use global `Body Small` typography. Keep linked items recognizable through the shared Text Link states; use `Text Secondary` for separators and the current article.
+- Use global `Body Small` typography. Keep linked items recognizable through the shared Text Link states; use `Text Secondary` for the separator.
 
 ### Dimensions and Alignment
 
-- Allow the trail and long article titles to wrap within the available width without clipping or horizontal page overflow.
+- Allow long topic names to wrap within the available width without clipping or horizontal page overflow.
 
 # Article Header
 

@@ -15,5 +15,6 @@ export async function readBlogArticle(slug: string) {
   const body = source.split(/^# Final CTA\s*$/m)[0].split(/^# .+$/m).slice(1).join("\n");
   const article = parseSituationArticle(`# Article\n${body}`);
   const cta = parseSituationFinalCta(source);
-  return { title, publicationDate, mainTopic, relatedTopics, ...article, cta };
+  const topicSlug = mainTopic.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  return { title, publicationDate, mainTopic, topicSlug, relatedTopics, ...article, cta };
 }
