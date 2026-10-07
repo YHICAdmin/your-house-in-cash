@@ -31,7 +31,7 @@ Show the article's main topic and provide paths back to the Blog and its topic i
 
 ## Layout
 
-- Place Breadcrumbs within the Content Container above the Article Header.
+- Place Breadcrumbs within the Content Container above the Article Header. On Desktop, start Breadcrumbs at Grid Column `4`, aligned with the Article Title, Publication Date, and Article Body. On Tablet and Mobile, keep Breadcrumbs at the full-width content edge.
 - Use `L` (`32px`) of space below the Header before Breadcrumbs, then `2XL` (`64px`) between Breadcrumbs and the Article Header on Desktop and Tablet. On Mobile, use `XL` (`48px`) between Breadcrumbs and the Article Header.
 
 ## Breadcrumb Trail

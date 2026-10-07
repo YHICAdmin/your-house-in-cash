@@ -32,6 +32,7 @@
 }
 
 @media (min-width: 1200px) {
+  .breadcrumbs { grid-column: 4 / -1; }
   .articleHeader { grid-column: 4 / -1; }
   .topics { grid-column: 1 / span 3; grid-row: 2; margin-top: var(--spacing-xl); }
   .body { grid-column: 4 / -1; grid-row: 2; margin-top: var(--spacing-xl); }
