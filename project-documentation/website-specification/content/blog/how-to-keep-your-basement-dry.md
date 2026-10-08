@@ -14,7 +14,7 @@ Image height: 1024
 
 # How to Keep Your Basement Dry
 
-A dry basement starts with finding out where the moisture comes from. Rainwater moving toward the foundation calls for a different fix than a leaking pipe or humid air condensing on a cold wall. Before choosing a waterproofing product or paying for a drainage system, look at when the dampness appears, where it starts, and whether you are dealing with a little moisture or standing water.
+Start by finding out where the water is coming from. Rainwater moving toward the foundation calls for a different fix than a leaking pipe or humid air condensing on a cold wall. Before choosing a waterproofing product or paying for a drainage system, look at when the dampness appears, where it starts, and whether you are dealing with a little moisture or standing water.
 
 ## Why basements get wet
 
