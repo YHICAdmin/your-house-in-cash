@@ -18,19 +18,27 @@ Basement water damage starts with finding out where the water is coming from. Ra
 
 ## Why water gets into basements
 
-Water that appears after heavy rain often points to an outdoor drainage problem. Clogged gutters, short downspouts, or ground that slopes toward the house can concentrate water beside the foundation. From there, water may seep through walls, joints, or the floor and cause water damage. The [U.S. Department of Energy explains](https://bsesc.energy.gov/energy-basics/foundation-drain-gutters-downspouts) that roof runoff can quickly saturate soil around a foundation when it is not carried away.
+There are four common situations:
 
-Plumbing can also cause water damage indoors. A leaking supply pipe, drain, water heater, or washing machine may wet one area regardless of the weather. A basement can also be genuinely damp even when no liquid water is entering: humid air can condense on cold walls or pipes. A musty smell, peeling paint, staining, or damp boxes can be clues. [EPA guidance](https://www.epa.gov/mold/what-are-main-ways-control-moisture-your-home) identifies leaks, seepage through basement floors, and condensation as distinct sources of indoor moisture.
-
-Water rising from a basement floor drain or plumbing fixture can be a different problem: a sewer backup. [EPA notes](https://www.epa.gov/npdes/sanitary-sewer-overflows-ssos) that sewer overflows can back up into homes and threaten public health. Do not treat suspected sewage as ordinary rainwater seepage.
+- **Water from outside:** Rainwater can collect beside the foundation when gutters are clogged, downspouts are too short, or the ground slopes toward the house. It may then seep through walls, joints, or the floor. The [U.S. Department of Energy explains](https://bsesc.energy.gov/energy-basics/foundation-drain-gutters-downspouts) that roof runoff can quickly saturate soil around a foundation when it is not carried away.
+- **Water from pipes:** A leaking supply pipe, drain, water heater, or washing machine can wet one area regardless of the weather.
+- **Water from a sewer backup:** Water rising from a floor drain or plumbing fixture may be a sewer backup. [EPA notes](https://www.epa.gov/npdes/sanitary-sewer-overflows-ssos) that sewer overflows can back up into homes and threaten public health. Do not treat suspected sewage as ordinary rainwater seepage.
+- **A damp basement:** Humid air can condense on cold walls or pipes even when no liquid water is entering. A musty smell, peeling paint, staining, or damp boxes can be clues. [EPA guidance](https://www.epa.gov/mold/what-are-main-ways-control-moisture-your-home) identifies leaks, seepage through basement floors, and condensation as distinct sources of indoor moisture.
 
 ## How to keep water out
 
 Start with the source you can identify. If rain is the trigger, make sure gutters carry water to downspouts and that the discharge moves away from the foundation. Check whether the ground directs water toward or away from the house. If a pipe or appliance is leaking, stopping that leak matters more than coating the nearby wall. [EPA recommends](https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home) maintaining gutters and keeping the ground sloped away from the foundation.
 
-For condensation, lowering indoor humidity and drying damp surfaces can help. EPA recommends keeping indoor relative humidity below 60%, ideally between 30% and 50%; a dehumidifier can help where needed. That does not replace drainage work when liquid water is pushing through a foundation.
+For condensation, lowering indoor humidity and drying damp surfaces can help. EPA recommends keeping indoor relative humidity below 60%, ideally between 30% and 50%; a dehumidifier can help where needed.
 
-If water repeatedly enters at the wall-floor joint or through the slab, the solution may involve an interior drain and sump pump, exterior drainage, or work on the foundation. These approaches do different jobs: an interior system collects and removes water that reaches the basement, while exterior drainage aims to keep water away from the foundation. A coating or waterproof paint is unlikely to solve water under pressure by itself. The right scope depends on the water's path, not simply how large the stain looks.
+If water keeps coming in where the wall meets the floor or through the floor itself, start by finding the source.
+
+Start with the simplest fix that matches the problem:
+
+1. Clean gutters, extend downspouts, and make sure the ground slopes away from the house.
+2. Repair a leaking pipe, appliance, or a small foundation crack.
+3. Install an interior drain and sump pump if water keeps entering through the wall-floor joint or slab.
+4. Consider exterior drainage or foundation waterproofing if the problem keeps coming back or is severe.
 
 ## What to do when the basement is already wet
 
