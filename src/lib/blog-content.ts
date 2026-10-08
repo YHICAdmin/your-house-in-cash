@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { parseSituationArticle, parseSituationFinalCta } from "@/lib/situation-article";
 
-export const blogSlugs = ["maple-heights-rental-market-snapshot-2026", "how-to-keep-your-basement-dry", "how-a-title-company-protects-a-home-seller"] as const;
+export const blogSlugs = ["maple-heights-rental-market-snapshot-2026", "how-to-keep-your-basement-dry", "how-much-money-will-you-net-when-you-sell-your-house"] as const;
 
 export async function readBlogArticle(slug: string) {
   if (!blogSlugs.some(value => value === slug)) return null;
