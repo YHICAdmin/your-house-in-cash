@@ -23,6 +23,7 @@ Orient readers to the blog and make the featured article the primary entry point
 
 - The Hero uses `Background Soft` behind the foreground content.
 - On Desktop, the page heading appears above the Featured Article card. The card spans all 12 Grid columns and divides into equal text and media areas.
+- The card's outer edges align with the outer System Lines.
 - The Featured Article card is a floating Surface with the global `Large` radius (`16px`) and `Floating` shadow (`0 8px 24px rgba(16, 17, 20, 0.08)`).
 - On Tablet and Mobile, the card stacks its text area above its media area. The document and visual order remain topic, title, summary, action, then image.
 - Use `3XL` (`96px`) top spacing before the page heading on Desktop and Tablet, and `XL` (`48px`) on Mobile. Use `XL` (`48px`) between the heading and card on Desktop and Tablet, and `L` (`32px`) on Mobile.
@@ -39,30 +40,32 @@ Orient readers to the blog and make the featured article the primary entry point
 
 ### Visual Design
 
-- Use global `H3` typography and Brand Green for the editorial, secondary treatment established by the reference composition.
+- Use global Body Small typography, Text Primary, and 600 weight to match the Blog breadcrumb link treatment on article pages.
 
 ## Featured Article
 
 ### Content
 
-- The Hero displays one designated featured article.
+- The Hero displays **How Much Money Will You Net When You Sell Your House?** as the designated featured article.
+- Its route is `/blog/how-much-money-will-you-net-when-you-sell-your-house`.
 - Display the article's main topic, title, opening paragraph, and image.
+- Link the article's main topic to `/blog/{topic-slug}`.
 - The article image must have supplied alternative text.
 - Display the Text Link label `Read article`.
 
 ### Component and Semantics
 
 - Render the article title as an `h2`.
-- Render the title and `Read article` Text Link as links to the featured article route.
+- Render the topic as a link to its topic route. Render the title and `Read article` Text Link as links to the featured article route.
 - Group the topic, title, summary, and action in the card's text area. The image belongs to the same article card.
 
 ### Visual Design
 
-- The topic uses the global Label typography and Brand Green.
+- The topic uses global Body typography, 600 weight, and Brand Green.
 - The title uses global `H2` typography and Text Primary.
 - The opening paragraph uses global Body typography and Text Secondary.
 - Use the shared Text Link for `Read article`.
-- The image fills the media area using `object-fit: cover` and preserves the card's right-side rounded corners on Desktop. On stacked layouts, it preserves the card's lower rounded corners.
+- The media area uses `S` (`16px`) padding. The image fills the remaining media area using `object-fit: cover` and has the global `Medium` radius (`12px`).
 
 ### Dimensions and Alignment
 

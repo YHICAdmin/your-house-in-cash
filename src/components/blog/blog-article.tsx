@@ -1,9 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Fragment, type ReactNode } from "react";
 import { Banknote, Clock } from "lucide-react";
 import { FinalCta } from "@/components/ui/final-cta";
 import { ContentTable } from "@/components/ui/content-table";
+import { TextLink } from "@/components/ui/text-link";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { renderSituationInline } from "@/components/situation/situation-inline";
 import { getExternalLinkProps } from "@/lib/link-target";
@@ -28,9 +28,9 @@ export function BlogArticle({ article }: { article: Article }) {
       <div className={`content-grid ${styles.breadcrumbGrid}`}>
         <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
           <ol>
-            <li><Link href="/blog">Blog</Link></li>
+            <li><TextLink className={styles.breadcrumbLink} href="/blog">Blog</TextLink></li>
             <li aria-hidden="true">→</li>
-            <li><Link href={`/blog/${article.topicSlug}`}>{article.mainTopic}</Link></li>
+            <li><TextLink className={styles.breadcrumbLink} href={`/blog/${article.topicSlug}`}>{article.mainTopic}</TextLink></li>
           </ol>
         </nav>
       </div>

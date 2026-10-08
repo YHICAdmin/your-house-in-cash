@@ -3,8 +3,7 @@
 .breadcrumbs { grid-column: 1 / -1; min-width: 0; color: var(--color-text-secondary); font-size: var(--text-body-small); line-height: var(--text-body-small--line-height); }
 .breadcrumbs ol { display: flex; flex-wrap: wrap; gap: var(--spacing-xs); margin: 0; padding: 0; list-style: none; }
 .breadcrumbs li { overflow-wrap: anywhere; }
-.breadcrumbs a { color: var(--color-text-primary); font-weight: 600; text-decoration: none; }
-.breadcrumbs a:hover { color: var(--color-brand-dark); }
+.breadcrumbLink { color: var(--color-text-primary); font-size: inherit; line-height: inherit; }
 .readingGrid { row-gap: 0; padding-top: var(--spacing-xl); }
 .articleHeader, .topics, .body { grid-column: 1 / -1; min-width: 0; }
 .articleHeader h1 { margin: 0; overflow-wrap: anywhere; }
@@ -36,7 +35,7 @@
 }
 
 @media (min-width: 1200px) {
-  .breadcrumbs { grid-column: 4 / -1; }
+  .breadcrumbs { grid-column: 1 / -1; }
   .articleHeader { grid-column: 4 / -1; }
   .topics { grid-column: 1 / span 3; grid-row: 2; margin-top: var(--spacing-xl); }
   .body { grid-column: 4 / -1; grid-row: 2; margin-top: var(--spacing-xl); }
