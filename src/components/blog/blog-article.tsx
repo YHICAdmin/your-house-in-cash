@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Fragment, type ReactNode } from "react";
 import { Banknote, Clock } from "lucide-react";
 import { FinalCta } from "@/components/ui/final-cta";
+import { ContentTable } from "@/components/ui/content-table";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { renderSituationInline } from "@/components/situation/situation-inline";
 import { getExternalLinkProps } from "@/lib/link-target";
@@ -56,6 +57,15 @@ export function BlogArticle({ article }: { article: Article }) {
               case "subheading": element = <h3 id={block.id} className="text-heading-4">{content}</h3>; break;
               case "quote": element = <blockquote><p>{content}</p></blockquote>; break;
               case "list": element = <ul>{block.items!.map((item, itemIndex) => <li key={itemIndex}>{renderSituationInline(item, article.references)}</li>)}</ul>; break;
+              case "table": {
+                const heading = article.blocks.slice(0, index).findLast(item => item.type === "heading" || item.type === "subheading");
+                element = <ContentTable
+                  labelledBy={heading?.id}
+                  columns={block.columns!.map(cell => renderSituationInline(cell, article.references))}
+                  rows={block.rows!.map(row => row.map(cell => renderSituationInline(cell, article.references)))}
+                />;
+                break;
+              }
               default: element = <p className={index < firstHeading ? "text-body-large" : undefined}>{content}</p>;
             }
             return <Fragment key={block.id ?? index}>
