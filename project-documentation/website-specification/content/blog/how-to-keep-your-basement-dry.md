@@ -58,7 +58,7 @@ The price depends on the cause and the work required. [HomeGuide's 2026 national
 
 These ranges are not Maple Heights or Ohio quotes. They also overlap: a complete interior system may already include a drain and pump, so the figures should not simply be added together. Access, basement size, foundation type, damage, and the amount of excavation can change the total. The least expensive-looking fix is not necessarily the least costly if it leaves the water source untouched.
 
-The central question is whether the moisture is coming from outside, from a plumbing failure, or from humid indoor air. Matching the fix to that source gives you a better chance of keeping the basement dry than starting with a product marketed as "waterproofing."
+The main question is where the water is coming from: outside, a pipe, a sewer backup, or indoor humidity. Find the source first. Then choose the fix that matches it.
 
 # Final CTA
 
