@@ -40,14 +40,6 @@ Start with the simplest fix that matches the problem:
 3. Install an interior drain and sump pump if water keeps entering through the wall-floor joint or slab.
 4. Consider exterior drainage or foundation waterproofing if the problem keeps coming back or is severe.
 
-## What to do when the basement is already wet
-
-Standing water changes the priority from prevention to safety and drying. Do not enter water that may be in contact with electrical equipment, and do not operate a breaker or electrical tool while standing in water. [CDC's electrical-safety guidance](https://www.cdc.gov/natural-disasters/response/what-to-do-protect-yourself-from-electrical-hazards.html) makes that distinction clear.
-
-If the water may contain sewage, avoid contact with it. [CDC warns](https://cdc.gov/floods/safety/guidelines-for-septic-and-onsite-wastewater-systems.html) that sewage-contaminated floodwater can make people sick.
-
-Once the area is safe, the goal is to remove water, address its source, and dry wet materials promptly. [EPA says](https://www.epa.gov/mold/brief-guide-mold-moisture-and-your-home) that materials dried within 24 to 48 hours after a leak or spill usually do not become moldy. Carpets, cardboard, insulation, and drywall can hold moisture even after the visible floor is dry, so a surface that looks better is not always fully dry.
-
 ## Health concerns from a damp basement
 
 Dampness creates conditions in which mold can grow. Mold exposure does not affect everyone the same way, but [CDC reports](https://www.cdc.gov/mold-health/about/index.html) links between damp or moldy indoor environments and symptoms such as coughing, wheezing, and irritation; exposure may worsen asthma in people who have it. A damp basement is therefore more than a cosmetic issue, especially if moisture persists or keeps returning.
