@@ -14,13 +14,13 @@ Image height: 1024
 
 # How to Keep Your Basement Dry
 
-Start by finding out where the water is coming from. Rainwater moving toward the foundation calls for a different fix than a leaking pipe or humid air condensing on a cold wall. Before choosing a waterproofing product or paying for a drainage system, look at when the dampness appears, where it starts, and whether you are dealing with a little moisture or standing water.
+Basement water damage starts with finding out where the water is coming from. Rainwater moving toward the foundation calls for a different fix than a leaking pipe. Before paying for waterproofing or drainage work, look at when the water appears, where it starts, and whether you are dealing with a damp area or standing water. A basement can also be damp from humid air or condensation without a leak, but water entering through the foundation, floor, or plumbing needs a different response.
 
-## Why basements get wet
+## Why water gets into basements
 
-Water that appears after heavy rain often points to an outdoor drainage problem. Clogged gutters, short downspouts, or ground that slopes toward the house can concentrate water beside the foundation. From there, water may seep through walls, joints, or the floor. The [U.S. Department of Energy explains](https://bsesc.energy.gov/energy-basics/foundation-drain-gutters-downspouts) that roof runoff can quickly saturate soil around a foundation when it is not carried away.
+Water that appears after heavy rain often points to an outdoor drainage problem. Clogged gutters, short downspouts, or ground that slopes toward the house can concentrate water beside the foundation. From there, water may seep through walls, joints, or the floor and cause water damage. The [U.S. Department of Energy explains](https://bsesc.energy.gov/energy-basics/foundation-drain-gutters-downspouts) that roof runoff can quickly saturate soil around a foundation when it is not carried away.
 
-Moisture can also start indoors. A leaking supply pipe, drain, water heater, or washing machine may wet one area regardless of the weather. If the walls or pipes feel damp but no liquid water is entering, humid air may be condensing on their cooler surfaces. A musty smell, peeling paint, staining, or damp boxes can be clues even when the floor looks dry. [EPA guidance](https://www.epa.gov/mold/what-are-main-ways-control-moisture-your-home) identifies leaks, seepage through basement floors, and condensation as distinct sources of indoor moisture.
+Plumbing can also cause water damage indoors. A leaking supply pipe, drain, water heater, or washing machine may wet one area regardless of the weather. A basement can also be genuinely damp even when no liquid water is entering: humid air can condense on cold walls or pipes. A musty smell, peeling paint, staining, or damp boxes can be clues. [EPA guidance](https://www.epa.gov/mold/what-are-main-ways-control-moisture-your-home) identifies leaks, seepage through basement floors, and condensation as distinct sources of indoor moisture.
 
 Water rising from a basement floor drain or plumbing fixture can be a different problem: a sewer backup. [EPA notes](https://www.epa.gov/npdes/sanitary-sewer-overflows-ssos) that sewer overflows can back up into homes and threaten public health. Do not treat suspected sewage as ordinary rainwater seepage.
 
