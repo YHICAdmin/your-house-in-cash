@@ -106,3 +106,7 @@ A useful test is:
 - If they understand the situation well enough to evaluate next steps, move into **Action Mode**.
 
 This rule should apply especially strongly to high-stress situations such as foreclosure, inherited property, divorce, problem tenants, tax issues, or other situations where the homeowner may be cognitively overloaded.
+
+# 4. Lead Blog Articles With a Useful Point
+
+Start a blog article with a concrete point that matters to the reader. Do not open with a qualification, a vague observation, or an explanation of how data was measured. Introduce that context where it helps the reader understand a specific claim.

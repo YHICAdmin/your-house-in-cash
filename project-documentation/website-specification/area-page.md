@@ -919,7 +919,7 @@ Contains, in document order:
 ### Interaction
 
 * The Reviews Link leads to the official Google Business Profile; exact URL pending.
-* The Reviews Link opens in a new tab, following the global [Link Destinations](../implementation-guidelines.md#link-destinations) rule for external web destinations.
+* The Reviews Link opens in a new tab, following the global [Link Destinations](../guidelines/implementation-guidelines.md#link-destinations) rule for external web destinations.
 
 ### Accessibility
 
@@ -1338,7 +1338,7 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 
 #### Interaction
 
-* Activating `Redfin` opens the current Area Page's source destination in a new tab, following the global [Link Destinations](../implementation-guidelines.md#link-destinations) rule for external web destinations.
+* Activating `Redfin` opens the current Area Page's source destination in a new tab, following the global [Link Destinations](../guidelines/implementation-guidelines.md#link-destinations) rule for external web destinations.
 
 #### Visual Design
 

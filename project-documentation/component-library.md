@@ -79,7 +79,7 @@ A generic Component for actions displayed as a button. It can use the appropriat
 
 ### Link Navigation
 
-- When rendered as a link, follows the global [Link Destinations](implementation-guidelines.md#link-destinations) rule: external web destinations open in a new tab; internal destinations open in the current tab.
+- When rendered as a link, follows the global [Link Destinations](guidelines/implementation-guidelines.md#link-destinations) rule: external web destinations open in a new tab; internal destinations open in the current tab.
 - Telephone, email, and fragment destinations retain their native behavior. Native button actions are unaffected.
 
 ### Visual Style
@@ -206,7 +206,7 @@ A generic Component for actions or navigation displayed as text rather than as a
 
 ### Link Navigation
 
-- Follows the global [Link Destinations](implementation-guidelines.md#link-destinations) rule across all consuming Sections and Breakpoints.
+- Follows the global [Link Destinations](guidelines/implementation-guidelines.md#link-destinations) rule across all consuming Sections and Breakpoints.
 - External web destinations always open in a new tab with `target="_blank"` and `rel="noopener noreferrer"`.
 - Internal destinations open in the current tab; telephone, email, and fragment destinations retain their native behavior.
 
