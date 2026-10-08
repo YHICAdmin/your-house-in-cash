@@ -4,6 +4,14 @@ Publication date: 2026-10-08
 
 Topics covered: Net Proceeds, Mortgage Payoff, Closing Costs, Seller Concessions, Off-Market Sales
 
+Image path: /images/blog/calculating-home-sale-proceeds.png
+
+Image alt: Seller reviewing a home-sale proceeds calculation beside a calculator and house keys
+
+Image width: 1536
+
+Image height: 1024
+
 # How Much Money Will You Net When You Sell Your House?
 
 The price on the contract is not the amount you take home. Your net proceeds are what remain after the sale price pays off what you owe and covers the costs assigned to you at closing.
