@@ -4,11 +4,13 @@ Publication date: 2026-10-07
 
 Topics covered: Basement, Water Damage, Waterproofing, Mold, Repair Costs
 
-Image path: /images/blog/wet-basement-generated.png
+Image path: /images/blog/large-wet-patch-basement-floor.png
 
-Image credit: AI-generated image
+Image alt: Large wet patch on the concrete floor of an unfinished basement
 
-Image alt: Wet concrete floor in an unfinished residential basement
+Image width: 1536
+
+Image height: 1024
 
 # How to Keep Your Basement Dry
 

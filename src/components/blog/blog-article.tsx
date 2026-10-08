@@ -70,8 +70,8 @@ export function BlogArticle({ article }: { article: Article }) {
             }
             return <Fragment key={block.id ?? index}>
               {index === firstHeading && article.image && <figure className={styles.articleImage}>
-                <Image src={article.image.src} alt={article.image.alt} width={1536} height={1024} sizes="(min-width: 1200px) 800px, (min-width: 768px) 90vw, 100vw" />
-                <figcaption className="text-caption">{article.image.source ? <>Photo: <a href={article.image.source} {...getExternalLinkProps(article.image.source)}>{article.image.credit}</a></> : article.image.credit}</figcaption>
+                <Image src={article.image.src} alt={article.image.alt} width={article.image.width} height={article.image.height} sizes="(min-width: 1200px) 800px, (min-width: 768px) 90vw, 100vw" />
+                {article.image.credit && <figcaption className="text-caption">{article.image.source ? <>Photo: <a href={article.image.source} {...getExternalLinkProps(article.image.source)}>{article.image.credit}</a></> : article.image.credit}</figcaption>}
               </figure>}
               {element}
             </Fragment>;
