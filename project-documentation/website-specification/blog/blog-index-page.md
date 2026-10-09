@@ -11,7 +11,7 @@ Present the blog as an editorial destination and direct readers to one featured 
 
 - The Blog Hero begins the page content below the shared site Header.
 - It uses the global Line System and the centered Content Container.
-- The Hero contains the page heading followed by the Featured Article card.
+- The Hero contains Blog Navigation followed by the Featured Article card.
 
 # Blog Hero
 
@@ -23,25 +23,36 @@ Orient readers to the blog and make the featured article the primary entry point
 
 - The Hero uses `Background Soft` behind the foreground content.
 - Use the repository-owned Blog ribbon SVG as a decorative background behind the Hero at 40% opacity. It remains below the global Line System, foreground content, and Featured Article card. The ribbon drifts slowly across the Hero; it is static when reduced motion is preferred.
-- On Desktop, the page heading appears above the Featured Article card. The card spans all 12 Grid columns and divides into equal text and media areas.
+- On Desktop, Blog Navigation appears above the Featured Article card, aligned to the right edge of the Content Container. The card spans all 12 Grid columns and divides into equal text and media areas.
 - The card's outer edges align with the outer System Lines.
 - The Featured Article card is a floating Surface with the global `Large` radius (`16px`) and `Floating` shadow (`0 8px 24px rgba(16, 17, 20, 0.08)`).
 - On Tablet and Mobile, the card stacks its text area above its media area. The document and visual order remain topic, title, summary, action, then image.
-- Use `3XL` (`96px`) top spacing before the page heading on Desktop and Tablet, and `XL` (`48px`) on Mobile. Use `XL` (`48px`) between the heading and card on Desktop and Tablet, and `L` (`32px`) on Mobile.
+- Use `3XL` (`96px`) top spacing before Blog Navigation on Desktop and Tablet, and `XL` (`48px`) on Mobile. Use `XL` (`48px`) between navigation and card on Desktop and Tablet, and `L` (`32px`) on Mobile.
 
-## Page Heading
+## Blog Navigation
 
-### Content
+### Purpose
 
-- Display `Blog`.
+Give readers a direct way to find and navigate to a topic page. Do not display a visible `Blog` page heading in the Hero.
 
-### Component and Semantics
+### Layout
 
-- Render the page heading as the page's only `h1`.
+- Place Search Topics to the left of the topic dropdown.
+- On Desktop and Tablet, align the control group to the right. On Mobile, stack the topic dropdown above Search Topics at full width.
 
-### Visual Design
+### Search Topics
 
-- Use global Body Small typography, Text Primary, and 600 weight to match the Blog breadcrumb link treatment on article pages.
+- Search matches published topic names.
+- Start searching after one entered character. Show at most five matching topic suggestions.
+- Selecting a suggestion navigates to the matching `/blog/{topic-slug}` page.
+- The input uses the shared Text Field visual treatment, with a visible search icon and the placeholder `Search topics`. Its accessible label is `Search topics`.
+
+### Topic Dropdown
+
+- Render a native select with the accessible label `Browse topics`.
+- Its initial option is `All topics`, followed by every published topic in alphabetical order.
+- Selecting a topic navigates to `/blog/{topic-slug}`. `All topics` represents the Blog index and does not navigate.
+- The select uses the shared Text Field visual treatment.
 
 ## Featured Article
 

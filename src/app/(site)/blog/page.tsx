@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
+import { BlogIndexNavigation } from "@/components/blog/blog-index-navigation";
 import { SiteFooter } from "@/components/layout/site-footer";
-import { readBlogArticle } from "@/lib/blog-content";
+import { readBlogArticle, readBlogTopics } from "@/lib/blog-content";
 import styles from "./page.module.css";
 
 const featuredArticleSlug = "how-much-money-will-you-net-when-you-sell-your-house";
@@ -15,24 +16,28 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogIndexPage() {
-  const article = await readBlogArticle(featuredArticleSlug);
+  const [article, topics] = await Promise.all([
+    readBlogArticle(featuredArticleSlug),
+    readBlogTopics(),
+  ]);
   if (!article?.image) notFound();
 
   const summary = article.blocks.find((block) => block.type === "paragraph")?.text;
   if (!summary) notFound();
 
   const articleHref = `/blog/${featuredArticleSlug}`;
+  const sortedTopics = [...topics].sort((first, second) => first.name.localeCompare(second.name));
 
   return (
     <>
       <main>
-        <section className={`${styles.hero} system-lines-bg`} aria-labelledby="blog-heading">
+        <section className={`${styles.hero} system-lines-bg`}>
           <div className={styles.background} aria-hidden="true">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className={styles.ribbon} src="/brand/blog-ribbon-background.svg" alt="" />
           </div>
           <div className={`${styles.layout} content-grid`}>
-            <h1 id="blog-heading" className={`${styles.heading} text-body-small`}>Blog</h1>
+            <BlogIndexNavigation topics={sortedTopics} />
             <article className={styles.featuredArticle}>
               <div className={styles.articleContent}>
                 <p className={`${styles.topic} text-body`}>
