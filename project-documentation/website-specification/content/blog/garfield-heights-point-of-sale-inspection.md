@@ -48,14 +48,16 @@ That is why it helps to obtain the POS early in the sale process. It gives the s
 
 ## What does a Garfield Heights POS include?
 
-The City’s inspection looks for code violations connected with the property. The completed Certificate of Inspection records:
+For a seller, the important part of the POS is the violation list. Garfield Heights uses property-maintenance standards, and the inspection report identifies the conditions found at that house.[3][5]
 
-- The property address, parcel number, or other identifier
-- The owner’s name, address, and telephone number
-- The structure’s authorized use and occupancy
-- Any City code violations that existed when the inspection took place[3]
+From smaller fixes to more expensive work, a report can include:
 
-In practical terms, the report gives the seller and buyer a written record of the property’s municipal compliance status. The City provides a POS application, a buyer acknowledgement form, an affidavit for a buyer assuming outstanding violations, and a separate consent form for an interior POS inspection.[2]
+- **Paint, trim, siding, doors, or windows:** Deteriorated exterior surfaces that need repair or weather protection.
+- **Walkways, stairs, driveways, and drainage:** Cracked, uneven, loose, or settled concrete can be cited when it creates a hazard.[3]
+- **Roof, chimney, or masonry issues:** Conditions that let water in or leave exterior materials unprotected.
+- **Foundation or unsafe structural conditions:** Serious deterioration, unsafe steps or porches, or major masonry failure can require substantial work.
+
+The inspection report—not a general checklist—determines what is cited for a particular house.
 
 ## How the process works
 
@@ -124,3 +126,4 @@ Your House in Cash can make a no-obligation as-is cash offer, so you can compare
 [2]: https://garfieldhts.org/168/Point-of-Sale-Inspections
 [3]: https://codelibrary.amlegal.com/codes/garfieldhts/latest/garfieldhts_oh/0-0-0-34770
 [4]: https://codelibrary.amlegal.com/codes/garfieldhts/latest/garfieldhts_oh/0-0-0-34796
+[5]: https://codelibrary.amlegal.com/codes/garfieldhts/latest/garfieldhts_oh/0-0-0-52094
