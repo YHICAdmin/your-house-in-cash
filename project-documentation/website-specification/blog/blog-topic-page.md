@@ -95,8 +95,10 @@ Give readers direct access to every published article whose main topic matches t
 ## Layout
 
 - Render the matching articles in publication-date order, newest first.
-- On Desktop, each Article Preview spans all 12 Grid columns. Previews with an image divide into equal text and media areas; previews without an image keep their text area in Grid Columns `1–6`, leaving the remaining area open.
-- On Tablet and Mobile, stack each Article Preview with its text area before its media area.
+- On Desktop, each Article Preview spans all 12 Grid columns. Its copy and action occupy Grid Columns `1–6`; its publication date and optional media occupy Grid Columns `7–12`.
+- On Desktop, the publication date aligns to the top of the preview's right area. When present, media appears below the date with `L` (`32px`) spacing.
+- Previews without an image retain the same copy and publication-date alignment, leaving the rest of the right area open.
+- On Tablet and Mobile, stack the copy and action, followed by the publication date and optional media, in document order.
 - Use `XL` (`48px`) between Article Previews on Desktop and Tablet, and `L` (`32px`) on Mobile.
 - Use `3XL` (`96px`) bottom spacing after the final Article Preview on Desktop and Tablet, and `2XL` (`64px`) on Mobile.
 
@@ -114,31 +116,31 @@ Give readers direct access to every published article whose main topic matches t
 - Render each preview as an `article`.
 - Render the article title as an `h2`.
 - Render the publication date in a `time` element with its supplied machine-readable date value.
-- Group the topic, title, summary, date, and action in the preview's text area.
+- The preview content order is topic, title, opening paragraph, action, publication date, and optional image. On Desktop, the Grid places the copy and action in the left area and the publication date and image in the right area while preserving this document order.
 
 ### Visual Design
 
-- Use a Surface for the preview with the global Large radius (`16px`) and Floating shadow (`0 8px 24px rgba(16, 17, 20, 0.08)`).
 - Use global Label typography and Brand Green for the article topic.
 - Use global H2 typography and Text Primary for the title.
 - Use global Body typography and Text Secondary for the opening paragraph.
 - Use global Body Small typography and Text Muted for the publication date.
 - Use the shared Text Link treatment for `Read article`.
-- When present, the image fills the media area using `object-fit: cover`. It preserves the preview's right-side rounded corners on Desktop and its lower rounded corners on stacked layouts.
+- When present, the image fills the media area using `object-fit: cover` and the global Medium radius (`12px`).
 
 ### Dimensions and Alignment
 
-- On Desktop, the text area occupies Grid Columns `1–6` and the media area occupies Grid Columns `7–12` within the preview.
-- The text area uses `XL` (`48px`) padding on Desktop and Tablet and `L` (`32px`) on Mobile.
-- On Desktop, the media area matches the full height of the preview.
+- The preview has no card Surface, padding, border, or shadow; its content aligns directly to the Topic Articles Grid.
+- On Desktop, the copy and action occupy Grid Columns `1–6`; the date and media occupy Grid Columns `7–12`.
+- Media uses a `3 / 2` aspect ratio at every Breakpoint.
 
 ### Spacing
 
 - Use `M` (`24px`) between the topic and title.
 - Use `L` (`32px`) between the title and opening paragraph.
-- Use `M` (`24px`) between the opening paragraph and publication date.
-- Use `L` (`32px`) between the publication date and action.
+- Use `L` (`32px`) between the opening paragraph and action.
+- On Tablet and Mobile, use `M` (`24px`) between the action and publication date.
+- On Desktop, use `L` (`32px`) between the date and media.
 
 ### Responsive Behavior
 
-- On Tablet and Mobile, stack the text and media areas. The image appears after the action and spans the preview's full width.
+- On Tablet and Mobile, the image appears after the action and spans the preview's full width.

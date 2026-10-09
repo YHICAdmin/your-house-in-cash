@@ -4,6 +4,8 @@ import { parseSituationArticle, parseSituationFinalCta } from "@/lib/situation-a
 
 export const blogSlugs = ["maple-heights-rental-market-snapshot-2026", "how-to-keep-your-basement-dry", "how-much-money-will-you-net-when-you-sell-your-house", "garfield-heights-point-of-sale-inspection"] as const;
 
+const toSlug = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
 export async function readBlogArticle(slug: string) {
   if (!blogSlugs.some(value => value === slug)) return null;
   const source = await readFile(path.join(process.cwd(), "project-documentation/website-specification/content/blog", `${slug}.md`), "utf8");
@@ -32,7 +34,49 @@ export async function readBlogArticle(slug: string) {
   const references = source.match(/^\[\d+\]:.+$/gm)?.join("\n") ?? "";
   const article = parseSituationArticle(`# Article\n${body}\n${references}`);
   const cta = parseSituationFinalCta(source);
-  const topicSlug = mainTopic.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const topicSlug = toSlug(mainTopic);
   const image = imagePath ? { src: imagePath, alt: imageAlt!, source: imageSource, credit: imageCredit, width: imageWidth ? Number(imageWidth) : 1536, height: imageHeight ? Number(imageHeight) : 1024 } : null;
-  return { title, publicationDate, mainTopic, topicSlug, relatedTopics, image, images, ...article, cta };
+  return { slug, title, publicationDate, mainTopic, topicSlug, relatedTopics, image, images, ...article, cta };
+}
+
+export type BlogArticle = NonNullable<Awaited<ReturnType<typeof readBlogArticle>>>;
+
+export async function readBlogArticles() {
+  return (await Promise.all(blogSlugs.map(readBlogArticle))).filter((article): article is BlogArticle => article !== null);
+}
+
+export async function readBlogTopic(slug: string) {
+  const [source, articles] = await Promise.all([
+    readFile(path.join(process.cwd(), "project-documentation/website-specification/content/blog/topics.md"), "utf8"),
+    readBlogArticles(),
+  ]);
+  const topic = source
+    .split(/^# /m)
+    .slice(1)
+    .map(section => {
+      const [name, ...description] = section.trim().split("\n");
+      return { name, slug: toSlug(name), description: description.join("\n").trim() };
+    })
+    .find(topic => topic.slug === slug);
+
+  if (!topic) return null;
+
+  const topicArticles = articles
+    .filter(article => article.topicSlug === slug)
+    .sort((a, b) => b.publicationDate.localeCompare(a.publicationDate));
+
+  return topicArticles.length ? { ...topic, articles: topicArticles } : null;
+}
+
+export async function readBlogTopics() {
+  const source = await readFile(path.join(process.cwd(), "project-documentation/website-specification/content/blog/topics.md"), "utf8");
+  const articles = await readBlogArticles();
+  const articleTopicSlugs = new Set(articles.map(article => article.topicSlug));
+
+  return source
+    .split(/^# /m)
+    .slice(1)
+    .map(section => section.trim().split("\n")[0])
+    .map(name => ({ name, slug: toSlug(name) }))
+    .filter(topic => articleTopicSlugs.has(topic.slug));
 }
