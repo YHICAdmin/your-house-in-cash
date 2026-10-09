@@ -22,6 +22,7 @@ Orient readers to the blog and make the featured article the primary entry point
 ## Layout
 
 - The Hero uses `Background Soft` behind the foreground content.
+- Use the repository-owned Blog ribbon SVG as a decorative background behind the Hero at 40% opacity. It remains below the global Line System, foreground content, and Featured Article card. The ribbon drifts slowly across the Hero; it is static when reduced motion is preferred.
 - On Desktop, the page heading appears above the Featured Article card. The card spans all 12 Grid columns and divides into equal text and media areas.
 - The card's outer edges align with the outer System Lines.
 - The Featured Article card is a floating Surface with the global `Large` radius (`16px`) and `Floating` shadow (`0 8px 24px rgba(16, 17, 20, 0.08)`).

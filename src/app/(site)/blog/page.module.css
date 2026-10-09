@@ -1,9 +1,37 @@
 .hero {
+  overflow: hidden;
   padding-block: var(--spacing-xl) var(--section-spacing);
   background: var(--color-background-soft);
 }
 
+.background {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ribbon {
+  position: absolute;
+  top: 0;
+  left: calc(50% + var(--spacing-l));
+  width: 48rem;
+  height: calc(100% + var(--spacing-3xl));
+  max-width: none;
+  opacity: 0.4;
+  transform: translate(-50%, calc(-1 * var(--spacing-l))) scale(1.03);
+  animation: ribbon-drift 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes ribbon-drift {
+  from { transform: translate(-54%, calc(-1 * var(--spacing-l))) scale(1.03); }
+  to { transform: translate(-46%, var(--spacing-s)) scale(1.08); }
+}
+
 .layout {
+  position: relative;
   row-gap: var(--spacing-l);
 }
 
@@ -117,6 +145,11 @@
 }
 
 @media (min-width: 768px) {
+  .ribbon {
+    left: calc(50% + var(--spacing-s));
+    width: max(100%, 60rem);
+  }
+
   .hero {
     padding-top: var(--spacing-3xl);
   }
@@ -131,6 +164,11 @@
 }
 
 @media (min-width: 1200px) {
+  .ribbon {
+    left: 50%;
+    width: 100%;
+  }
+
   .featuredArticle {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -142,4 +180,8 @@
   .imageLink {
     aspect-ratio: auto;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ribbon { animation: none; }
 }

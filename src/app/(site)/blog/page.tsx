@@ -27,6 +27,10 @@ export default async function BlogIndexPage() {
     <>
       <main>
         <section className={`${styles.hero} system-lines-bg`} aria-labelledby="blog-heading">
+          <div className={styles.background} aria-hidden="true">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className={styles.ribbon} src="/brand/blog-ribbon-background.svg" alt="" />
+          </div>
           <div className={`${styles.layout} content-grid`}>
             <h1 id="blog-heading" className={`${styles.heading} text-body-small`}>Blog</h1>
             <article className={styles.featuredArticle}>

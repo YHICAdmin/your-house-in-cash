@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 720" preserveAspectRatio="none" fill="none">
+  <defs>
+    <linearGradient id="ribbon-body" gradientUnits="userSpaceOnUse" x1="80" y1="570" x2="1360" y2="145">
+      <stop stop-color="#EAF3EC"/>
+      <stop offset=".3" stop-color="#4A8755"/>
+      <stop offset=".62" stop-color="#2C6B3D"/>
+      <stop offset="1" stop-color="#EAF3EC"/>
+    </linearGradient>
+    <linearGradient id="ribbon-face" gradientUnits="userSpaceOnUse" x1="380" y1="610" x2="1260" y2="210">
+      <stop stop-color="#FFFFFF" stop-opacity=".75"/>
+      <stop offset=".34" stop-color="#EAF3EC" stop-opacity=".8"/>
+      <stop offset=".7" stop-color="#4A8755" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#EAF3EC" stop-opacity=".35"/>
+    </linearGradient>
+    <linearGradient id="ribbon-fold" gradientUnits="userSpaceOnUse" x1="440" y1="480" x2="1050" y2="250">
+      <stop stop-color="#2C6B3D" stop-opacity=".2"/>
+      <stop offset=".5" stop-color="#2C6B3D" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#4A8755" stop-opacity=".15"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#ribbon-body)" d="M-120 560C185 510 346 436 590 368C867 291 1130 202 1560 88V340C1190 430 900 506 655 578C385 656 155 690-120 734Z"/>
+  <path fill="url(#ribbon-fold)" d="M-120 560C185 510 346 436 590 368C867 291 1130 202 1560 88L1560 196C1122 307 863 386 612 456C352 528 155 607-120 682Z"/>
+  <path fill="url(#ribbon-face)" d="M-120 682C155 607 352 528 612 456C863 386 1122 307 1560 196V340C1190 430 900 506 655 578C385 656 155 690-120 734Z"/>
+</svg>
