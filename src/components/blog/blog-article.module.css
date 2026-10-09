@@ -25,10 +25,16 @@
 .body ul { padding-left: var(--spacing-m); list-style: disc; }
 .body li + li { margin-top: var(--spacing-xs); }
 .body blockquote p { margin: 0; }
+.articleImages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--spacing-s); }
+.articleImage { margin: 0; }
 .articleImage img { width: 100%; height: auto; border-radius: var(--radius-medium); }
 .articleImage figcaption { margin-top: var(--spacing-xs); color: var(--color-text-secondary); }
 .articleImage figcaption a { color: inherit; text-decoration: underline; }
 .articleImage figcaption a:hover { color: var(--color-brand-dark); }
+
+@media (max-width: 767px) {
+  .articleImages { grid-template-columns: 1fr; }
+}
 
 @media (min-width: 768px) {
   .readingGrid { padding-top: var(--spacing-2xl); }

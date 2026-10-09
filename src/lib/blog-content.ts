@@ -17,12 +17,22 @@ export async function readBlogArticle(slug: string) {
   const imageCredit = /^Image credit: (.+)$/m.exec(source)?.[1];
   const imageWidth = /^Image width: (\d+)$/m.exec(source)?.[1];
   const imageHeight = /^Image height: (\d+)$/m.exec(source)?.[1];
+  const imagePaths = [...source.matchAll(/^Image (\d+) path: (\/images\/blog\/[a-z0-9.-]+)$/gm)];
   if (!title || !publicationDate || !mainTopic || !relatedTopics?.length) throw new Error(`Blog article ${slug} needs a title, publication date, and topics`);
   if (imagePath && !imageAlt) throw new Error(`Blog article ${slug} needs image alt text`);
+  const images = imagePaths.map(([, index, src]) => {
+    const alt = new RegExp(`^Image ${index} alt: (.+)$`, "m").exec(source)?.[1];
+    const afterHeading = new RegExp(`^Image ${index} after heading: (.+)$`, "m").exec(source)?.[1];
+    const width = new RegExp(`^Image ${index} width: (\\d+)$`, "m").exec(source)?.[1];
+    const height = new RegExp(`^Image ${index} height: (\\d+)$`, "m").exec(source)?.[1];
+    if (!alt) throw new Error(`Blog article ${slug} needs alt text for image ${index}`);
+    return { src, alt, afterHeading, source: undefined, credit: undefined, width: width ? Number(width) : 1536, height: height ? Number(height) : 1024 };
+  });
   const body = source.split(/^# Final CTA\s*$/m)[0].split(/^# .+$/m).slice(1).join("\n");
-  const article = parseSituationArticle(`# Article\n${body}`);
+  const references = source.match(/^\[\d+\]:.+$/gm)?.join("\n") ?? "";
+  const article = parseSituationArticle(`# Article\n${body}\n${references}`);
   const cta = parseSituationFinalCta(source);
   const topicSlug = mainTopic.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const image = imagePath ? { src: imagePath, alt: imageAlt!, source: imageSource, credit: imageCredit, width: imageWidth ? Number(imageWidth) : 1536, height: imageHeight ? Number(imageHeight) : 1024 } : null;
-  return { title, publicationDate, mainTopic, topicSlug, relatedTopics, image, ...article, cta };
+  return { title, publicationDate, mainTopic, topicSlug, relatedTopics, image, images, ...article, cta };
 }

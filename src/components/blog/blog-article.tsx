@@ -14,6 +14,7 @@ type Article = NonNullable<Awaited<ReturnType<typeof readBlogArticle>>>;
 
 export function BlogArticle({ article }: { article: Article }) {
   const firstHeading = article.blocks.findIndex(block => block.type === "heading");
+  const images = article.images.length ? article.images : article.image ? [article.image] : [];
   const cta = article.cta;
   if (!cta) throw new Error("Blog article needs a Final CTA");
   const icons = { Banknote, Clock };
@@ -68,12 +69,20 @@ export function BlogArticle({ article }: { article: Article }) {
               }
               default: element = <p className={index < firstHeading ? "text-body-large" : undefined}>{content}</p>;
             }
+            const sectionHeading = article.blocks.slice(0, index + 1).findLast(item => item.type === "heading")?.text;
+            const sectionEnds = index === article.blocks.length - 1 || article.blocks[index + 1].type === "heading";
+            const sectionImages = sectionEnds && sectionHeading ? images.filter(image => "afterHeading" in image && image.afterHeading === sectionHeading) : [];
+            const openingImages = index === firstHeading ? images.filter(image => !("afterHeading" in image) || !image.afterHeading) : [];
+            const renderImages = (items: typeof images) => items.length > 0 && <div className={items.length > 1 ? styles.articleImages : undefined}>
+                {items.map(image => <figure key={image.src} className={styles.articleImage}>
+                  <Image src={image.src} alt={image.alt} width={image.width} height={image.height} sizes={images.length > 1 ? "(min-width: 1200px) 260px, (min-width: 768px) 30vw, 100vw" : "(min-width: 1200px) 800px, (min-width: 768px) 90vw, 100vw"} />
+                  {image.credit && <figcaption className="text-caption">{image.source ? <>Photo: <a href={image.source} {...getExternalLinkProps(image.source)}>{image.credit}</a></> : image.credit}</figcaption>}
+                </figure>)}
+              </div>;
             return <Fragment key={block.id ?? index}>
-              {index === firstHeading && article.image && <figure className={styles.articleImage}>
-                <Image src={article.image.src} alt={article.image.alt} width={article.image.width} height={article.image.height} sizes="(min-width: 1200px) 800px, (min-width: 768px) 90vw, 100vw" />
-                {article.image.credit && <figcaption className="text-caption">{article.image.source ? <>Photo: <a href={article.image.source} {...getExternalLinkProps(article.image.source)}>{article.image.credit}</a></> : article.image.credit}</figcaption>}
-              </figure>}
+              {renderImages(openingImages)}
               {element}
+              {renderImages(sectionImages)}
             </Fragment>;
           })}
         </article>
