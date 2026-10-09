@@ -61,26 +61,35 @@ The inspection report—not a general checklist—determines what is cited for a
 
 ## How the process works
 
-1. The owner or an authorized agent submits the City’s application for a Certificate of Inspection and pays the required fee.[3]
-2. The inspection is scheduled during Housing Inspection Department business hours. The code says the City will cause the inspection to be made within 10 days after receiving the application and fee, subject to its stated exceptions.[3]
-3. After access to the property, the City issues the Certificate of Inspection within 10 working days under the code’s schedule.[3]
-4. The seller gives the prospective buyer the certificate. The buyer acknowledgement must be completed, notarized, and returned to the City as part of the title-transfer requirements.[2]
-5. If violations remain, the City’s POS page says a buyer who assumes them must also complete a notarized affidavit. The buyer then has 90 days from transfer to complete the repairs.[2]
+**Step 1: Apply for the inspection.** The owner or an authorized agent submits the City’s application for a Certificate of Inspection and pays the required fee. For a dwelling, the current inspection fee is $200.[3][4]
+
+**Step 2: Schedule the inspection.** The City schedules it during Housing Inspection Department business hours. The code says the City will cause the inspection to be made within 10 days after receiving the application and fee, subject to its stated exceptions.[3]
+
+**Step 3: Receive the report.** After access to the property, the City issues the Certificate of Inspection within 10 working days under the code’s schedule.[3]
+
+**Step 4: Decide who will correct the violations.** The seller can complete the cited repairs before closing. In an as-is sale, the buyer may agree to take responsibility for the remaining POS violations, while the seller may reflect the expected repair cost in the price or a negotiated credit. If the buyer assumes the violations, the buyer acknowledgement must be completed, notarized, and returned to the City as part of the title-transfer requirements.[2]
+
+**Step 5: Complete any remaining repairs.** When a buyer assumes outstanding violations, the buyer also completes a notarized affidavit and has 90 days from transfer to complete the repairs. Otherwise, the seller resolves the cited items before closing.[2]
 
 The report is useful early in a sale because it identifies the City’s requirements before the transfer date. If you are weighing an as-is direct sale, [Your House in Cash can make a no-obligation cash offer](/get-cash-offer) for you to compare with other sale options.
 
-## Typical POS costs in Garfield Heights
+## What POS violations can cost to fix
 
-The City’s current code sets the municipal inspection fee at:
+The $200 City inspection fee is small compared with the cost of correcting a violation. The exact cost depends on the condition, access, permits, and how much work is actually needed.
 
-| Property type | Certificate of Inspection fee |
+| Common POS issue | Approximate repair cost |
 | --- | --- |
-| Dwelling structure | $200 |
-| Commercial building structure | $300 |
+| Paint, trim, small siding repairs, or a minor concrete repair | About $1,500 |
+| Concrete walkway replacement | About $2,300[10] |
+| Concrete front-step replacement | About $3,250[11] |
+| Drainage correction, such as a French drain | About $3,750[12] |
+| Full concrete driveway replacement | About $4,100[9] |
+| Full roof replacement | About $13,000[7] |
+| Major foundation or structural repair | About $10,000+ [8] |
 
-There is no charge for the first two reinspections. After that, the City charges $35 for each reinspection. Missing a scheduled inspection without at least one full business day’s cancellation notice carries a $25 fee.[4]
+\* Prices are estimates and may change based on the property’s condition, the scope of work, permits, and local labor costs.
 
-The inspection fee is only one part of the possible cost. If the report lists violations, the repair cost depends on what was cited and whether the work is completed before transfer or addressed through the City’s process for outstanding violations. That amount cannot be estimated from the POS fee alone.
+One cited item does not always mean a large project. But roof, masonry, drainage, and foundation issues can change the cost of a sale quickly. If the buyer assumes the violations in an as-is sale, the expected repair cost is often part of the price or credit discussion.
 
 ## Plan for the POS before your closing date
 
@@ -127,3 +136,10 @@ Your House in Cash can make a no-obligation as-is cash offer, so you can compare
 [3]: https://codelibrary.amlegal.com/codes/garfieldhts/latest/garfieldhts_oh/0-0-0-34770
 [4]: https://codelibrary.amlegal.com/codes/garfieldhts/latest/garfieldhts_oh/0-0-0-34796
 [5]: https://codelibrary.amlegal.com/codes/garfieldhts/latest/garfieldhts_oh/0-0-0-52094
+[6]: https://fivestarcleveland.com/blog/how-much-does-chimney-repair-cost-cleveland
+[7]: https://www.clearedno.com/blog/roof-replacement-cost-cleveland-oh
+[8]: https://modernize.com/foundations/repair-cost/ohio
+[9]: https://remodeleriq.com/remodeling-cost-guides/cleveland-oh-remodeling-cost-guide/driveway/
+[10]: https://getclearcost.com/cost-guides/concrete-walkway/cleveland-oh
+[11]: https://clevelandconcreteco.com/services/concrete-steps-stoops/
+[12]: https://tmgroupdc.com/blog/french-drain-installation-for-yard-drainage-in-cleveland-oh-expert-tips-costs-2026/

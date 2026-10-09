@@ -51,7 +51,8 @@ export function BlogArticle({ article }: { article: Article }) {
         </aside>
         <article id="blog-article" className={`text-body ${styles.body}`}>
           {article.blocks.map((block, index) => {
-            const content = renderSituationInline(block.text, article.references);
+            const displayText = block.text.startsWith("\\* Prices are estimates") ? block.text.slice(1) : block.text;
+            const content = renderSituationInline(displayText, article.references);
             let element: ReactNode;
             switch (block.type) {
               case "heading": element = <h2 id={block.id} className="text-heading-3">{content}</h2>; break;
@@ -67,7 +68,7 @@ export function BlogArticle({ article }: { article: Article }) {
                 />;
                 break;
               }
-              default: element = <p className={index < firstHeading ? "text-body-large" : undefined}>{content}</p>;
+              default: element = <p className={displayText.startsWith("* Prices are estimates") ? `${styles.priceNote} text-caption` : index < firstHeading ? "text-body-large" : undefined}>{content}</p>;
             }
             const sectionHeading = article.blocks.slice(0, index + 1).findLast(item => item.type === "heading")?.text;
             const sectionEnds = index === article.blocks.length - 1 || article.blocks[index + 1].type === "heading";
