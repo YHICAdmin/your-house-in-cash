@@ -4,8 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { BlogIndexNavigation } from "@/components/blog/blog-index-navigation";
+import { BlogTopicPreviews } from "@/components/blog/blog-topic-previews";
 import { SiteFooter } from "@/components/layout/site-footer";
-import { readBlogArticle, readBlogTopics } from "@/lib/blog-content";
+import { readBlogArticle, readBlogTopics, readRecentBlogTopics } from "@/lib/blog-content";
 import styles from "./page.module.css";
 
 const featuredArticleSlug = "how-much-money-will-you-net-when-you-sell-your-house";
@@ -16,9 +17,10 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogIndexPage() {
-  const [article, topics] = await Promise.all([
+  const [article, topics, recentTopics] = await Promise.all([
     readBlogArticle(featuredArticleSlug),
     readBlogTopics(),
+    readRecentBlogTopics(),
   ]);
   if (!article?.image) notFound();
 
@@ -66,6 +68,7 @@ export default async function BlogIndexPage() {
             </article>
           </div>
         </section>
+        <BlogTopicPreviews topics={recentTopics} />
       </main>
       <SiteFooter background="soft" />
     </>

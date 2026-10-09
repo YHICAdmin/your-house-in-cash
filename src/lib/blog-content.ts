@@ -45,6 +45,20 @@ export async function readBlogArticles() {
   return (await Promise.all(blogSlugs.map(readBlogArticle))).filter((article): article is BlogArticle => article !== null);
 }
 
+export async function readRecentBlogTopics(topicLimit = 5, articlesPerTopic = 2) {
+  const articles = (await readBlogArticles()).sort((first, second) => second.publicationDate.localeCompare(first.publicationDate));
+  const topicSlugs = [...new Set(articles.map(article => article.topicSlug))].slice(0, topicLimit);
+
+  return topicSlugs.map(slug => {
+    const topicArticles = articles.filter(article => article.topicSlug === slug).slice(0, articlesPerTopic);
+    return {
+      name: topicArticles[0].mainTopic,
+      slug,
+      articles: topicArticles,
+    };
+  });
+}
+
 export async function readBlogTopic(slug: string) {
   const [source, articles] = await Promise.all([
     readFile(path.join(process.cwd(), "project-documentation/website-specification/content/blog/topics.md"), "utf8"),

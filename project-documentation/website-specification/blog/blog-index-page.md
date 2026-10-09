@@ -11,7 +11,7 @@ Present the blog as an editorial destination and direct readers to one featured 
 
 - The Blog Hero begins the page content below the shared site Header.
 - It uses the global Line System and the centered Content Container.
-- The Hero contains Blog Navigation followed by the Featured Article card.
+- The Hero contains Blog Navigation followed by the Featured Article card. Topic Article Previews follow the Hero.
 
 # Blog Hero
 
@@ -94,3 +94,30 @@ Give readers a direct way to find and navigate to a topic page. Do not display a
 ### Responsive Behavior
 
 - On Tablet and Mobile, stack the text and media areas. The image appears after the action and spans the card's full width.
+
+## Topic Article Previews
+
+### Purpose
+
+Show readers the most recently active topics and their latest articles.
+
+### Topic Selection
+
+- Sort all published articles newest first by publication date.
+- Select the first five distinct main topics encountered in that order. A topic's newest article therefore determines its position in this section.
+- For every selected topic, show its two newest published articles. When a topic has fewer than two published articles, show every available article.
+- Related-topic tags do not affect selection or grouping.
+
+### Layout and Content
+
+- Use Background and the global Line System behind the foreground content.
+- Each topic occupies the full Content Container width. The topic name is on the left and its `View all` Text Link is on the right; `View all` links to `/blog/{topic-slug}`.
+- Render each preview as an `article` with its image, publication date, linked title, and opening paragraph. Use the article's supplied main image; an article that has no main image may use its first supplied body image.
+- On Desktop and Tablet, render the two article previews in equal columns. On Mobile, render one column.
+- Article images use a `3 / 2` aspect ratio, `object-fit: cover`, and the global Medium radius (`12px`).
+
+### Typography and Spacing
+
+- Use global H3 typography for topic names, H4 for article titles, Body typography with Text Secondary for opening paragraphs, and Body Small with Text Muted for publication dates.
+- Use `L` (`32px`) between a topic header and its article grid, and between article previews on Mobile. Use `M` (`24px`) between desktop and tablet columns.
+- Use `3XL` (`96px`) vertical section spacing and between topics on Desktop and Tablet. Use `2XL` (`64px`) on Mobile.
