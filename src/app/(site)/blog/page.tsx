@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { readBlogArticle } from "@/lib/blog-content";
 import styles from "./page.module.css";
@@ -37,10 +38,13 @@ export default async function BlogIndexPage() {
                   <Link href={articleHref}>{article.title}</Link>
                 </h2>
                 <p className={`${styles.summary} text-body`}>{summary}</p>
-                <Link className={styles.readLink} href={articleHref}>Read article</Link>
+                <Link className={styles.readLink} href={articleHref}>
+                  Read article
+                  <ArrowRight className={styles.readLinkArrow} size={16} aria-hidden="true" focusable="false" />
+                </Link>
               </div>
               <div className={styles.media}>
-                <div className={styles.imageFrame}>
+                <Link className={styles.imageLink} href={articleHref} aria-label={`Read ${article.title}`}>
                   <Image
                     src={article.image.src}
                     alt={article.image.alt}
@@ -48,7 +52,7 @@ export default async function BlogIndexPage() {
                     sizes="(min-width: 1200px) 624px, 100vw"
                     priority
                   />
-                </div>
+                </Link>
               </div>
             </article>
           </div>
