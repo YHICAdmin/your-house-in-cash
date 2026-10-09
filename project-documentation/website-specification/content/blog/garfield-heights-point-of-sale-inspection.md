@@ -128,8 +128,8 @@ Your House in Cash can make a no-obligation as-is cash offer, so you can compare
 ### Benefit 2
 
 - Icon: `Clock`
-- Heading: Choose Your Timing
-- Supporting Copy: Compare a direct offer with your other sale options and choose a closing date that works for you.
+- Heading: We’ll Walk You Through the Process
+- Supporting Copy: Compare a direct offer with your other sale options while you work through the City’s required POS process.
 
 [1]: https://codelibrary.amlegal.com/codes/garfieldhts/latest/garfieldhts_oh/0-0-0-34757
 [2]: https://garfieldhts.org/168/Point-of-Sale-Inspections
