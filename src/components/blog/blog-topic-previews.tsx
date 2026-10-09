@@ -23,8 +23,8 @@ export function BlogTopicPreviews({ topics }: { topics: TopicPreview[] }) {
             <div className={styles.articles}>
               {topic.articles.map(article => {
                 const image = article.image ?? article.images[0];
-                const summary = article.blocks.find(block => block.type === "paragraph")?.text;
-                if (!summary) throw new Error(`Blog article ${article.title} needs an opening paragraph`);
+                const introduction = article.blocks.find(block => block.type === "paragraph")?.text;
+                if (!introduction) throw new Error(`Blog article ${article.title} needs an opening paragraph`);
 
                 return (
                   <article key={article.slug} className={styles.article}>
@@ -37,7 +37,7 @@ export function BlogTopicPreviews({ topics }: { topics: TopicPreview[] }) {
                     <h3 className={`${styles.articleTitle} text-heading-4`}>
                       <Link href={`/blog/${article.slug}`}>{article.title}</Link>
                     </h3>
-                    <p className={`${styles.summary} text-body`}>{summary}</p>
+                    <p className={`${styles.summary} text-body`}>{introduction}</p>
                   </article>
                 );
               })}

@@ -105,7 +105,7 @@ Show readers the most recently active topics and their latest articles.
 
 - Sort all published articles newest first by publication date.
 - Select the first five distinct main topics encountered in that order. A topic's newest article therefore determines its position in this section.
-- For every selected topic, show its two newest published articles. When a topic has fewer than two published articles, show every available article.
+- For every selected topic, show its four newest published articles. When a topic has fewer than four published articles, show every available article.
 - Related-topic tags do not affect selection or grouping.
 
 ### Layout and Content
@@ -113,7 +113,8 @@ Show readers the most recently active topics and their latest articles.
 - Use Background and the global Line System behind the foreground content.
 - Each topic occupies the full Content Container width. The topic name is on the left and its `View all` Text Link is on the right; `View all` links to `/blog/{topic-slug}`.
 - Render each preview as an `article` with its image, publication date, linked title, and opening paragraph. Use the article's supplied main image; an article that has no main image may use its first supplied body image.
-- On Desktop and Tablet, render the two article previews in equal columns. On Mobile, render one column.
+- Limit the opening paragraph to five visual lines. When the paragraph overflows, truncate it and show an ellipsis.
+- On Desktop, render up to four article previews in equal columns. On Tablet, render two equal columns. On Mobile, render one column.
 - Article images use a `3 / 2` aspect ratio, `object-fit: cover`, and the global Medium radius (`12px`).
 
 ### Typography and Spacing

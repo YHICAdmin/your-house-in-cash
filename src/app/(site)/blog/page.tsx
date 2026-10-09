@@ -20,7 +20,7 @@ export default async function BlogIndexPage() {
   const [article, topics, recentTopics] = await Promise.all([
     readBlogArticle(featuredArticleSlug),
     readBlogTopics(),
-    readRecentBlogTopics(),
+    readRecentBlogTopics(5, 4),
   ]);
   if (!article?.image) notFound();
 
