@@ -5,6 +5,7 @@ Present all published articles associated with a blog topic and give readers a c
 # Page Routing
 
 - Topic pages use `/blog/{topic-slug}`.
+- Additional article pages use `/blog/{topic-slug}/page/{page-number}`. Page 1 uses the base topic URL without a page segment.
 - A topic slug is derived from the topic name by lowercasing it and replacing non-alphanumeric runs with hyphens.
 - A topic page exists only when its topic is the main topic of at least one published blog article. Unknown topic slugs return the site's not-found response.
 - Article routes and topic routes share this route pattern. When a slug matches a published article, it resolves to that article; otherwise, it resolves to an existing topic page.
@@ -94,7 +95,8 @@ Give readers direct access to every published article whose main topic matches t
 
 ## Layout
 
-- Render the matching articles in publication-date order, newest first.
+- Render matching articles in publication-date order, newest first, with six articles per page.
+- When more than six articles are available, display numbered pagination with Previous and Next links after the article previews. The current page is conveyed programmatically.
 - On Desktop, each Article Preview spans all 12 Grid columns. Its copy and action occupy Grid Columns `1–6`; its publication date and optional media occupy Grid Columns `7–12`.
 - On Desktop, the publication date aligns to the top of the preview's right area. When present, media appears below the date with `L` (`32px`) spacing.
 - Previews without an image retain the same copy and publication-date alignment, leaving the rest of the right area open.

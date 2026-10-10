@@ -113,6 +113,31 @@
   object-fit: cover;
 }
 
+.pagination {
+  display: flex;
+  min-width: 0;
+  grid-column: 1 / -1;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-m);
+}
+
+.pagination ol {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination a[aria-current="page"] {
+  color: var(--color-brand-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (min-width: 768px) {
   .introduction {
     padding-top: var(--spacing-3xl);

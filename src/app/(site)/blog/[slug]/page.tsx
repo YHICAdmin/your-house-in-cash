@@ -30,5 +30,5 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
 
   const topic = await readBlogTopic(slug);
   if (!topic) notFound();
-  return <BlogTopic topic={topic} />;
+  return <BlogTopic topic={topic} page={1} />;
 }

@@ -7,8 +7,13 @@ import type { readBlogTopic } from "@/lib/blog-content";
 import styles from "./blog-topic.module.css";
 
 type Topic = NonNullable<Awaited<ReturnType<typeof readBlogTopic>>>;
+const articlesPerPage = 6;
 
-export function BlogTopic({ topic }: { topic: Topic }) {
+export function BlogTopic({ topic, page }: { topic: Topic; page: number }) {
+  const totalPages = Math.ceil(topic.articles.length / articlesPerPage);
+  const articles = topic.articles.slice((page - 1) * articlesPerPage, page * articlesPerPage);
+  const pageHref = (pageNumber: number) => pageNumber === 1 ? `/blog/${topic.slug}` : `/blog/${topic.slug}/page/${pageNumber}`;
+
   return <>
     <main className={`${styles.main} system-lines-bg`}>
       <section className={`content-grid ${styles.introduction}`} aria-labelledby="topic-title">
@@ -19,7 +24,7 @@ export function BlogTopic({ topic }: { topic: Topic }) {
         </div>
       </section>
       <section className={`content-grid ${styles.articles}`} aria-label={`${topic.name} articles`}>
-        {topic.articles.map(article => {
+        {articles.map(article => {
           const summary = article.blocks.find(block => block.type === "paragraph")?.text;
           if (!summary) throw new Error(`Blog article ${article.title} needs an opening paragraph`);
 
@@ -43,6 +48,15 @@ export function BlogTopic({ topic }: { topic: Topic }) {
             </div>}
           </article>;
         })}
+        {totalPages > 1 && <nav className={styles.pagination} aria-label="Article pages">
+          {page > 1 && <TextLink href={pageHref(page - 1)}>Previous</TextLink>}
+          <ol>
+            {Array.from({ length: totalPages }, (_, index) => index + 1).map(pageNumber => <li key={pageNumber}>
+              <TextLink href={pageHref(pageNumber)} aria-current={pageNumber === page ? "page" : undefined}>{pageNumber}</TextLink>
+            </li>)}
+          </ol>
+          {page < totalPages && <TextLink href={pageHref(page + 1)}>Next</TextLink>}
+        </nav>}
       </section>
     </main>
     <SiteFooter />
