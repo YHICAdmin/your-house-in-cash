@@ -11,7 +11,6 @@
   grid-column: 1 / -1;
 }
 
-.label,
 .introduction h1,
 .description,
 .topic,
@@ -21,9 +20,10 @@
   margin: 0;
 }
 
-.label,
-.topic {
-  color: var(--color-brand);
+.breadcrumbLink {
+  color: var(--color-text-primary);
+  font-size: var(--text-body-small);
+  line-height: var(--text-body-small--line-height);
 }
 
 .introduction h1 {
@@ -43,18 +43,24 @@
 
 .preview {
   display: grid;
-  row-gap: var(--spacing-m);
-}
-
-.previewContent {
   min-width: 0;
 }
 
-.previewMeta {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-l);
-  min-width: 0;
+.topic {
+  position: relative;
+  color: var(--color-brand-dark);
+  font-weight: 600;
+}
+
+.topic::before {
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--layout-grid-inset));
+  width: 1px;
+  height: 1lh;
+  background: var(--color-brand);
+  transform: translateX(-50%);
+  content: "";
 }
 
 .title {
@@ -72,18 +78,33 @@
 }
 
 .date {
-  margin: 0;
+  position: relative;
+  margin: var(--spacing-m) 0 0;
   color: var(--color-text-muted);
 }
 
+.previewBody {
+  min-width: 0;
+}
+
 .readLink {
-  margin-top: var(--spacing-l);
+  margin-top: var(--spacing-m);
+}
+
+.readLinkArrow {
+  transition: transform 150ms ease;
+}
+
+.readLink:hover .readLinkArrow,
+.readLink:focus-visible .readLinkArrow {
+  transform: translateX(4px);
 }
 
 .media {
   position: relative;
   width: 100%;
   aspect-ratio: 3 / 2;
+  margin-top: var(--spacing-m);
   overflow: hidden;
   border-radius: var(--radius-medium);
 }
@@ -98,7 +119,7 @@
   }
 
   .articles {
-    row-gap: var(--spacing-xl);
+    row-gap: var(--spacing-2xl);
     padding-top: var(--spacing-3xl);
     padding-bottom: var(--spacing-3xl);
   }
@@ -111,15 +132,36 @@
   }
 
   .preview {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     column-gap: var(--spacing-m);
   }
 
-  .previewContent,
-  .previewMeta {
-    grid-row: 1;
+  .topic,
+  .title { grid-column: 1 / span 9; }
+
+  .previewBody { grid-column: 1 / span 6; }
+
+  .topic { grid-row: 1; }
+  .title { grid-row: 2; }
+  .date { grid-row: 3; }
+  .previewBody { grid-row: 4; }
+
+  .date { grid-column: 1 / span 9; }
+
+  .media { grid-column: 7 / -1; }
+
+  .date {
+    margin-top: var(--spacing-m);
   }
 
-  .previewContent { grid-column: 1; }
-  .previewMeta { grid-column: 2; }
+  .media {
+    grid-row: 4;
+    margin-top: var(--spacing-l);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .readLinkArrow {
+    transition: none;
+  }
 }

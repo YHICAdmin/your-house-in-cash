@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { TextLink } from "@/components/ui/text-link";
 import type { readRecentBlogTopics } from "@/lib/blog-content";
 import styles from "./blog-topic-previews.module.css";
@@ -18,7 +19,10 @@ export function BlogTopicPreviews({ topics }: { topics: TopicPreview[] }) {
           <section key={topic.slug} className={styles.topic} aria-labelledby={`${topic.slug}-title`}>
             <header className={styles.topicHeader}>
               <h2 id={`${topic.slug}-title`} className="text-heading-3">{topic.name}</h2>
-              <TextLink href={`/blog/${topic.slug}`}>View all</TextLink>
+              <TextLink href={`/blog/${topic.slug}`}>
+                View all
+                <ArrowRight className={styles.viewAllArrow} size={16} aria-hidden="true" focusable="false" />
+              </TextLink>
             </header>
             <div className={styles.articles}>
               {topic.articles.map(article => {

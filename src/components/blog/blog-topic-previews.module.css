@@ -24,6 +24,15 @@
   margin: 0;
 }
 
+.viewAllArrow {
+  transition: transform 150ms ease;
+}
+
+.topicHeader a:hover .viewAllArrow,
+.topicHeader a:focus-visible .viewAllArrow {
+  transform: translateX(4px);
+}
+
 .articles {
   display: grid;
   gap: var(--spacing-l);
@@ -94,5 +103,11 @@
 @media (min-width: 1200px) {
   .articles {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viewAllArrow {
+    transition: none;
   }
 }
