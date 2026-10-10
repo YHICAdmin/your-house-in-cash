@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { parseSituationArticle, parseSituationFinalCta } from "@/lib/situation-article";
 
-export const blogSlugs = ["maple-heights-rental-market-snapshot-2026", "how-to-keep-your-basement-dry", "how-much-money-will-you-net-when-you-sell-your-house", "garfield-heights-point-of-sale-inspection"] as const;
+export const blogSlugs = ["what-is-real-estate-wholesaling-in-ohio", "maple-heights-rental-market-snapshot-2026", "how-to-keep-your-basement-dry", "how-much-money-will-you-net-when-you-sell-your-house", "garfield-heights-point-of-sale-inspection"] as const;
 
 const toSlug = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
