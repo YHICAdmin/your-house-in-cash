@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { BlogIndexNavigation } from "@/components/blog/blog-index-navigation";
 import { BlogTopicPreviews } from "@/components/blog/blog-topic-previews";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { TextLink } from "@/components/ui/text-link";
 import { readBlogArticle, readBlogTopics, readRecentBlogTopics } from "@/lib/blog-content";
 import styles from "./page.module.css";
 
@@ -33,6 +34,7 @@ export default async function BlogIndexPage() {
   return (
     <>
       <main>
+        <h1 className="visually-hidden">Blog</h1>
         <section className={`${styles.hero} system-lines-bg`}>
           <div className={styles.background} aria-hidden="true">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -49,10 +51,10 @@ export default async function BlogIndexPage() {
                   <Link href={articleHref}>{article.title}</Link>
                 </h2>
                 <p className={`${styles.summary} text-body`}>{summary}</p>
-                <Link className={styles.readLink} href={articleHref}>
+                <TextLink className={styles.readLink} href={articleHref}>
                   Read article
                   <ArrowRight className={styles.readLinkArrow} size={16} aria-hidden="true" focusable="false" />
-                </Link>
+                </TextLink>
               </div>
               <div className={styles.media}>
                 <Link className={styles.imageLink} href={articleHref} aria-label={`Read ${article.title}`}>

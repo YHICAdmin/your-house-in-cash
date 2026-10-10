@@ -111,7 +111,7 @@ Show readers the most recently active topics and their latest articles.
 ### Layout and Content
 
 - Use Background and the global Line System behind the foreground content.
-- Each topic occupies the full Content Container width. The topic name is on the left and its `View all` Text Link is on the right; `View all` links to `/blog/{topic-slug}`.
+- Each topic occupies the full Content Container width. The topic name is on the left and its `View all` Text Link is on the right; `View all` links to `/blog/{topic-slug}`. The link includes a trailing right-arrow icon that moves 4px right on hover and keyboard focus; it remains static when reduced motion is preferred.
 - Render each preview as an `article` with its image, publication date, linked title, and opening paragraph. Use the article's supplied main image; an article that has no main image may use its first supplied body image.
 - Limit the opening paragraph to five visual lines. When the paragraph overflows, truncate it and show an ellipsis.
 - On Desktop, render up to four article previews in equal columns. On Tablet, render two equal columns. On Mobile, render one column.
