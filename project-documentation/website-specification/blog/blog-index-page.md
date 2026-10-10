@@ -95,20 +95,20 @@ Give readers a direct way to find and navigate to a topic page. Do not display a
 
 - On Tablet and Mobile, stack the text and media areas. The image appears after the action and spans the card's full width.
 
-## Topic Article Previews
+# Topic Article Previews
 
-### Purpose
+## Purpose
 
 Show readers the most recently active topics and their latest articles.
 
-### Topic Selection
+## Topic Selection
 
 - Sort all published articles newest first by publication date.
 - Select the first five distinct main topics encountered in that order. A topic's newest article therefore determines its position in this section.
 - For every selected topic, show its four newest published articles. When a topic has fewer than four published articles, show every available article.
 - Related-topic tags do not affect selection or grouping.
 
-### Layout and Content
+## Layout and Content
 
 - Use Background and the global Line System behind the foreground content.
 - Each topic occupies the full Content Container width. The topic name is on the left and its `View all` Text Link is on the right; `View all` links to `/blog/{topic-slug}`. The link includes a trailing right-arrow icon that moves 4px right on hover and keyboard focus; it remains static when reduced motion is preferred.
@@ -117,7 +117,7 @@ Show readers the most recently active topics and their latest articles.
 - On Desktop, render up to four article previews in equal columns. On Tablet, render two equal columns. On Mobile, render one column.
 - Article images use a `3 / 2` aspect ratio, `object-fit: cover`, and the global Medium radius (`12px`).
 
-### Typography and Spacing
+## Typography and Spacing
 
 - Use global H3 typography for topic names, H4 for article titles, Body typography with Text Secondary for opening paragraphs, and Body Small with Text Muted for publication dates.
 - Use `L` (`32px`) between a topic header and its article grid, and between article previews on Mobile. Use `M` (`24px`) between desktop and tablet columns.
