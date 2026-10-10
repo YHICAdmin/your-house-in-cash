@@ -76,7 +76,7 @@ Give readers a direct way to find and navigate to a topic page. Do not display a
 - The topic uses global Body typography, 600 weight, and Brand Green.
 - The title uses global `H2` typography and Text Primary.
 - The opening paragraph uses global Body typography and Text Secondary.
-- Use the shared Text Link for `Read article`.
+- Use the shared Text Link for `Read article`. The link includes a trailing right-arrow icon that moves 4px right on hover and keyboard focus; it remains static when reduced motion is preferred.
 - The media area uses `S` (`16px`) padding. The image fills the remaining media area using `object-fit: cover` and has the global `Medium` radius (`12px`).
 
 ### Dimensions and Alignment
