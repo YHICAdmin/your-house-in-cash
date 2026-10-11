@@ -35,7 +35,9 @@ export async function readBlogArticle(slug: string) {
   const article = parseSituationArticle(`# Article\n${body}\n${references}`);
   const cta = parseSituationFinalCta(source);
   const topicSlug = toSlug(mainTopic);
-  const image = imagePath ? { src: imagePath, alt: imageAlt!, source: imageSource, credit: imageCredit, width: imageWidth ? Number(imageWidth) : 1536, height: imageHeight ? Number(imageHeight) : 1024 } : null;
+  const image = imagePath
+    ? { src: imagePath, alt: imageAlt!, source: imageSource, credit: imageCredit, width: imageWidth ? Number(imageWidth) : 1536, height: imageHeight ? Number(imageHeight) : 1024 }
+    : images[0] ?? null;
   return { slug, title, publicationDate, mainTopic, topicSlug, relatedTopics, image, images, ...article, cta };
 }
 
