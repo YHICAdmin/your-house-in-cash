@@ -162,7 +162,7 @@
   }
 
   .topic,
-  .title { grid-column: 1 / span 9; }
+  .title { grid-column: 1 / -1; }
 
   .previewBody { grid-column: 1 / span 6; }
 
@@ -171,7 +171,7 @@
   .date { grid-row: 3; }
   .previewBody { grid-row: 4; }
 
-  .date { grid-column: 1 / span 9; }
+  .date { grid-column: 1 / -1; }
 
   .media { grid-column: 7 / -1; }
 

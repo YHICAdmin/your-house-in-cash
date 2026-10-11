@@ -5,7 +5,7 @@ Present all published articles associated with a blog topic and give readers a c
 # Page Routing
 
 - Topic pages use `/blog/{topic-slug}`.
-- Additional article pages use `/blog/{topic-slug}/page/{page-number}`. Page 1 uses the base topic URL without a page segment.
+- Additional topic-listing pages use `/blog/{topic-slug}/page/{page-number}`. Page 1 uses the base topic URL without a page segment.
 - A topic slug is derived from the topic name by lowercasing it and replacing non-alphanumeric runs with hyphens.
 - A topic page exists only when its topic is the main topic of at least one published blog article. Unknown topic slugs return the site's not-found response.
 - Article routes and topic routes share this route pattern. When a slug matches a published article, it resolves to that article; otherwise, it resolves to an existing topic page.
@@ -27,25 +27,25 @@ Identify the topic and establish the editorial context for the article collectio
 - Place the Topic Introduction at the beginning of the page below the shared site Header.
 - On Desktop, place the introduction in Grid Columns `1–6`, leaving the remaining columns open.
 - On Tablet and Mobile, use the full-width reading flow.
-- Use `3XL` (`96px`) top spacing before the Topic Label on Desktop and Tablet, and `XL` (`48px`) on Mobile.
+- Use `3XL` (`96px`) top spacing before the Blog Link on Desktop and Tablet, and `XL` (`48px`) on Mobile.
 
-## Topic Label
+## Blog Link
 
 ### Content
 
-- Display `Blog`.
+- Display `Blog` and link it to `/blog`.
 
 ### Component and Semantics
 
-- Render the label as plain text above the Topic Title.
+- Use the shared Text Link above the Topic Title.
 
 ### Visual Design
 
-- Use global Label typography and Brand Green.
+- Use global Body Small typography and Text Primary, matching the Blog breadcrumb link on article pages.
 
 ### Spacing After
 
-- Use `M` (`24px`) between the Topic Label and Topic Title.
+- Use `M` (`24px`) between the Blog Link and Topic Title.
 
 ## Topic Title
 
@@ -95,13 +95,12 @@ Give readers direct access to every published article whose main topic matches t
 
 ## Layout
 
-- Render matching articles in publication-date order, newest first, with six articles per page.
-- When more than six articles are available, display numbered pagination with Previous and Next links after the article previews. The current page is conveyed programmatically.
-- On Desktop, each Article Preview spans all 12 Grid columns. Its copy and action occupy Grid Columns `1–6`; its publication date and optional media occupy Grid Columns `7–12`.
-- On Desktop, the publication date aligns to the top of the preview's right area. When present, media appears below the date with `L` (`32px`) spacing.
-- Previews without an image retain the same copy and publication-date alignment, leaving the rest of the right area open.
-- On Tablet and Mobile, stack the copy and action, followed by the publication date and optional media, in document order.
-- Use `XL` (`48px`) between Article Previews on Desktop and Tablet, and `L` (`32px`) on Mobile.
+- Render matching articles in publication-date order, newest first.
+- On Desktop, each Article Preview spans all 12 Grid columns. Its topic, title, and publication date span Grid Columns `1–12`.
+- Below the publication date, the opening paragraph and action occupy Grid Columns `1–6`; optional media occupies Grid Columns `7–12`, aligned with the opening paragraph.
+- Previews without an image retain the same copy alignment, leaving the right area open.
+- On Tablet and Mobile, stack the topic, title, publication date, opening paragraph, action, and optional media in document order.
+- Use `2XL` (`64px`) between Article Previews on Desktop and Tablet, and `L` (`32px`) on Mobile.
 - Use `3XL` (`96px`) bottom spacing after the final Article Preview on Desktop and Tablet, and `2XL` (`64px`) on Mobile.
 
 ## Article Preview
@@ -118,11 +117,11 @@ Give readers direct access to every published article whose main topic matches t
 - Render each preview as an `article`.
 - Render the article title as an `h2`.
 - Render the publication date in a `time` element with its supplied machine-readable date value.
-- The preview content order is topic, title, opening paragraph, action, publication date, and optional image. On Desktop, the Grid places the copy and action in the left area and the publication date and image in the right area while preserving this document order.
+- The preview content order is topic, title, publication date, opening paragraph, action, and optional image. On Desktop, the topic, title, and publication date sit above the copy and action in the left area and optional image in the right area while preserving this document order.
 
 ### Visual Design
 
-- Use global Label typography and Brand Green for the article topic.
+- Use global Body Large typography, semibold weight, and Brand Dark for the article topic. Place a short, 1px Brand Green vertical marker on the adjacent system line.
 - Use global H2 typography and Text Primary for the title.
 - Use global Body typography and Text Secondary for the opening paragraph.
 - Use global Body Small typography and Text Muted for the publication date.
@@ -132,17 +131,34 @@ Give readers direct access to every published article whose main topic matches t
 ### Dimensions and Alignment
 
 - The preview has no card Surface, padding, border, or shadow; its content aligns directly to the Topic Articles Grid.
-- On Desktop, the copy and action occupy Grid Columns `1–6`; the date and media occupy Grid Columns `7–12`.
+- On Desktop, the topic, title, and date occupy Grid Columns `1–12`. The copy and action occupy Grid Columns `1–6`, and the media occupies Grid Columns `7–12`.
 - Media uses a `3 / 2` aspect ratio at every Breakpoint.
 
 ### Spacing
 
 - Use `M` (`24px`) between the topic and title.
-- Use `L` (`32px`) between the title and opening paragraph.
-- Use `L` (`32px`) between the opening paragraph and action.
-- On Tablet and Mobile, use `M` (`24px`) between the action and publication date.
+- Use `M` (`24px`) between the title and publication date.
+- Use `L` (`32px`) between the publication date and opening paragraph.
+- Use `M` (`24px`) between the opening paragraph and action.
 - On Desktop, use `L` (`32px`) between the date and media.
 
 ### Responsive Behavior
 
 - On Tablet and Mobile, the image appears after the action and spans the preview's full width.
+
+## Pagination
+
+### Content
+
+- Display six matching articles per page.
+- When more than six articles are available, display numbered page links with Previous and Next links after the article previews.
+
+### Component and Semantics
+
+- Render pagination as a navigation landmark labelled `Article pages`.
+- Convey the current page programmatically.
+
+### Interaction
+
+- Previous and Next links appear only when their respective page exists.
+- Page links use the Topic Page routes defined in [Page Routing](#page-routing).
