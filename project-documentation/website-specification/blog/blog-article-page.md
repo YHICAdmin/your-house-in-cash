@@ -4,7 +4,7 @@ Define a consistent, reading-focused template for individual blog articles. The 
 
 # Page Routing
 
-- Blog articles use `/blog/{article-slug}`. The article slug matches the content filename. The current article URL is `/blog/maple-heights-rental-market-snapshot-2026`.
+- Blog articles use `/blog/{article-slug}`. The article slug matches the content filename.
 - The topic slug is derived from the article's main topic by lowercasing it and replacing non-alphanumeric runs with hyphens. It is used for the topic-index link, not as part of the article URL.
 - Blog links to `/blog` and the main-topic breadcrumb links to `/blog/{topic-slug}`. The topic index page is not part of this article-template implementation.
 
