@@ -65,11 +65,6 @@
   position: relative;
 }
 
-.demoNotice {
-  margin: 0 0 var(--spacing-xs);
-  color: var(--color-text-secondary);
-}
-
 .formCard {
   padding: var(--spacing-m);
   border-radius: var(--radius-medium);
@@ -88,13 +83,6 @@
 
   .formColumn {
     grid-column: 5 / span 4;
-  }
-
-  .demoNotice {
-    position: absolute;
-    bottom: calc(100% + var(--spacing-xs));
-    left: 0;
-    margin: 0;
   }
 
   .formCard {

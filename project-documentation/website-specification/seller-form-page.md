@@ -258,8 +258,6 @@ Guide sellers through submitting their contact and property details to request a
 
 # Decisions Still Required Before Implementation
 
-An approved development-only demo (`NODE_ENV === "development"`) allows testing the existing steps before backend integration. A persistent notice above the form reads `Demo mode — details are not sent or saved. Refresh to reset.` Step 1 retains its validation; valid details advance to Step 2, and either completion action previews Success State. Back preserves both steps' values in React memory; refresh resets the demo. Step changes preview a 200ms transition (100ms outgoing and 100ms incoming), with reduced-motion support and heading focus after the transition. Production retains the current Step 1 save-failure behavior until backend integration.
-
 The following decisions remain unresolved:
 
 * Backend: lead destination, persistence service, submission contract, duplicate handling, recovery behavior, and the mechanism associating both steps with the same lead.

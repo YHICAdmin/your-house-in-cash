@@ -34,9 +34,6 @@ export default function ContactPage() {
               </ul>
             </div>
             <div className={styles.formColumn}>
-              {process.env.NODE_ENV === "development" && (
-                <p className={`${styles.demoNotice} text-body-small`}>Demo mode — details are not sent or saved. Refresh to reset.</p>
-              )}
               <div className={styles.formCard}><ContactForm /></div>
             </div>
           </div>

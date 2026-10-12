@@ -84,7 +84,6 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 
 - Submit label: `Send Message`.
 - Submitting label: `Sending…`.
-- Development demo notice above the Form Card: `Demo mode — details are not sent or saved. Refresh to reset.`
 - Text below the button: `Your information will be handled according to our Privacy Policy.` Link only `Privacy Policy` to `/privacy-policy`.
 - Confirmed-success message: `Thanks for reaching out. I’ve received your message and will be in touch.`
 - Submission-failure message: `Your message couldn’t be sent. Please try again.`
@@ -127,7 +126,6 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 - Apply the shared Form validation triggers: show a field error after blur or an attempted submission, then clear it as soon as the edited value becomes valid. Validate required values after trimming; validate nonempty Email and Phone number values using their shared field rules. A manually entered Property address is accepted.
 - Preserve all entered values when validation fails or a submission request fails.
 - When a live submission integration is connected, show `Sending…` while its request is pending, keep entered values visible, prevent edits and duplicate submissions, and announce the pending state through the shared Form behavior. Replace the form controls with the confirmed-success message only after the integration confirms receipt.
-- In development, show the persistent demo notice and let a valid submission preview the success state without sending or saving information. Keep form values in client memory; refreshing the page resets the demo. The notice remains visible while the success state is previewed.
 - Until a live integration exists, a valid submission in production displays the submission-failure message near the submit button, with all entered values and fields available for another attempt. It does not enter a pending-request state or display success.
 - When a live submission fails, keep the form and its values available and display the same failure message near the submit button so the visitor can retry.
 
@@ -139,5 +137,5 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 
 ### Technical Requirements
 
-- No contact-form submission integration exists in the current project. Follow the existing cash-offer form's development-demo boundary for client-side implementation: a visible demo notice and success preview in development, and a value-preserving failure state in production.
+- No contact-form submission integration exists in the current project.
 - Before live submission can be implemented, define and connect a server-side message destination and a success/failure response contract. Only a confirmed successful response may trigger the production success state.
