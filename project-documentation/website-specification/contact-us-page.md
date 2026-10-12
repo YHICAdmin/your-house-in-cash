@@ -96,11 +96,13 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
   | Email format invalid | `Please enter a valid email address.` |
   | Phone number supplied but invalid | `Please enter a valid US phone number.` |
   | Message empty after trimming | `Please enter a message.` |
+  | Message exceeds 2,000 characters | `Please keep your message to 2,000 characters or fewer.` |
 
 ### Component and Semantics
 
 - Use a native `form` with a visible `h2` for the Form Card heading. Use global H3 typography for that heading.
 - Use the shared Form definitions for Text Field, Email Field, Phone Field, Address Field, Textarea, validation feedback, and submission behavior. Optional fields remain valid when empty; an entered phone number follows the shared Phone Field validation and normalization rules. An entered property address allows manual entry under the shared Address Field rules.
+- The Message field accepts at most 2,000 characters. Display the supporting guidance `Up to 2,000 characters.` and enforce the limit in both the browser and the server-side submission handler.
 - Use the shared Button Component as a native submit button, with its existing black primary treatment and a local full-card-width assignment. Use the shared Text Link contract for the Privacy Policy link, with its documented text-size override set to Body Small so it fits the sentence.
 
 ### Visual Design
@@ -132,8 +134,15 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 ### Accessibility
 
 - Associate every visible label with its control and retain native `required`, email, and telephone semantics. Use the shared Form error associations and focus the first invalid field after an attempted invalid submission.
-- Announce submitting, success, and failure states to assistive technology. On success, move keyboard focus to the confirmation message.
+- Announce submitting, success, and failure states to assistive technology. On success, scroll to the top of the page and move keyboard focus to the confirmation message without changing that scroll position.
 - Keep the decorative background strokes and checkmark icons out of the accessibility tree.
+
+## Success State
+
+- After a successful submission, replace the complete two-column Contact layout, including the Introduction and Conversation Points, with one horizontally centered confirmation card.
+- Use the same white Surface, Medium Radius, Floating Shadow, checkmark icon, and vertically stacked confirmation treatment as the cash-offer flow's Success State.
+- The card fills the available width up to `640px`; use `M` (`24px`) padding on Mobile and `XL` (`48px`) on Tablet and Desktop.
+- Show the existing confirmation message as a visible H1 and supporting text: `Thanks for reaching out.` followed by `I've received your message and will be in touch.`
 
 ### Technical Requirements
 

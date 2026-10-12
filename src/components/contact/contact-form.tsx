@@ -1,16 +1,102 @@
 "use client";
+
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { TextLink } from "@/components/ui/text-link";
 import { TextField, Textarea } from "@/components/form/field";
 import { PhoneField } from "@/components/form/phone-field";
 import { AddressField } from "@/components/form/address-field";
+import { CONTACT_MESSAGE_MAX_LENGTH } from "@/lib/form-limits";
 import { validUSPhone } from "@/lib/phone";
 import styles from "./contact-form.module.css";
 
 const keys = ["name", "email", "phone", "address", "message"] as const;
-type Key = typeof keys[number]; type Values = Record<Key, string>;
+type Key = typeof keys[number];
+type Values = Record<Key, string>;
 const empty: Values = { name: "", email: "", phone: "", address: "", message: "" };
 const ids: Record<Key, string> = { name: "contact-name", email: "contact-email", phone: "contact-phone", address: "contact-address", message: "contact-message" };
-function valid(k: Key, v: string) { const x=v.trim(); if (!x) return ({name:"Please enter your name.",email:"Please enter your email address.",phone:"",address:"",message:"Please enter a message."} as Record<Key,string>)[k]; if(k==="email"&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x))return "Please enter a valid email address."; if(k==="phone"&&!validUSPhone(x))return "Please enter a valid US phone number."; return ""; }
-export function ContactForm() { const [v,setV]=useState(empty),[e,setE]=useState<Partial<Values>>({}),[fail,setFail]=useState(""),[ok,setOk]=useState(false),[pending,setPending]=useState(false); const ref=useRef<HTMLParagraphElement>(null); useEffect(()=>{if(ok)ref.current?.focus()},[ok]); const change=(k:Key,x:string)=>{setV(o=>({...o,[k]:x}));if(e[k])setE(o=>({...o,[k]:valid(k,x)}));setFail("")}; const submit=async(f:React.FormEvent<HTMLFormElement>)=>{f.preventDefault();const n=Object.fromEntries(keys.map(k=>[k,valid(k,v[k])])) as Values;setE(n);const bad=keys.find(k=>n[k]);if(bad){document.getElementById(ids[bad])?.focus();return}if(process.env.NODE_ENV==="development"){setOk(true);return}setPending(true);try{const r=await fetch("/api/contact-messages",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(v)});if(!r.ok)throw Error();setOk(true)}catch{setFail("Your message couldn’t be sent. Please try again.")}finally{setPending(false)}}; if(ok)return <p ref={ref} tabIndex={-1} role="status" className="text-body">Thanks for reaching out. I’ve received your message and will be in touch.</p>; return <form noValidate onSubmit={submit}><h2 className={`${styles.heading} text-heading-3`}>Send me a message</h2><div className={styles.fields}>{keys.map(k=>k==="phone"?<PhoneField key={k} id={ids[k]} name={k} label="Phone number (optional)" disabled={pending} value={v[k]} onValueChange={x=>change(k,x)} onBlur={()=>setE(o=>({...o,[k]:valid(k,v[k])}))} error={e[k]}/>:k==="address"?<AddressField key={k} id={ids[k]} label="Property address (optional)" disabled={pending} value={v[k]} onValueChange={x=>change(k,x)} onBlur={()=>setE(o=>({...o,[k]:valid(k,v[k])}))} error={e[k]}/>:k==="message"?<Textarea key={k} id={ids[k]} name={k} label="Message" required disabled={pending} rows={5} value={v[k]} onChange={x=>change(k,x.target.value)} onBlur={()=>setE(o=>({...o,[k]:valid(k,v[k])}))} error={e[k]}/>:<TextField key={k} id={ids[k]} name={k} label={k==="name"?"Your Name":"Email"} type={k==="email"?"email":undefined} required disabled={pending} value={v[k]} onChange={x=>change(k,x.target.value)} onBlur={()=>setE(o=>({...o,[k]:valid(k,v[k])}))} error={e[k]}/>)}</div><div className={styles.actions}>{fail&&<p className={`${styles.failure} text-body-small`} role="alert">{fail}</p>}<Button type="submit" className={styles.submit} disabled={pending}>{pending?"Sending…":"Send Message"}</Button><p className={`${styles.privacy} text-body-small`}>Your information will be handled according to our <TextLink className={styles.privacyLink} href="/privacy-policy">Privacy Policy</TextLink>.</p></div></form> }
+
+function valid(key: Key, value: string) {
+  const trimmed = value.trim();
+  if (!trimmed) return ({ name: "Please enter your name.", email: "Please enter your email address.", phone: "", address: "", message: "Please enter a message." } as Record<Key, string>)[key];
+  if (key === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) return "Please enter a valid email address.";
+  if (key === "phone" && !validUSPhone(trimmed)) return "Please enter a valid US phone number.";
+  if (key === "message" && trimmed.length > CONTACT_MESSAGE_MAX_LENGTH) return `Please keep your message to ${CONTACT_MESSAGE_MAX_LENGTH.toLocaleString()} characters or fewer.`;
+  return "";
+}
+
+export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
+  const [values, setValues] = useState(empty);
+  const [errors, setErrors] = useState<Partial<Values>>({});
+  const [failure, setFailure] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [pending, setPending] = useState(false);
+  const confirmationRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    if (success) {
+      window.scrollTo(0, 0);
+      confirmationRef.current?.focus({ preventScroll: true });
+    }
+  }, [success]);
+
+  const change = (key: Key, value: string) => {
+    setValues(current => ({ ...current, [key]: value }));
+    if (errors[key]) setErrors(current => ({ ...current, [key]: valid(key, value) }));
+    setFailure("");
+  };
+
+  const handleSuccess = () => {
+    if (onSuccess) onSuccess();
+    else setSuccess(true);
+  };
+
+  const submit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const nextErrors = Object.fromEntries(keys.map(key => [key, valid(key, values[key])])) as Values;
+    setErrors(nextErrors);
+    const firstInvalid = keys.find(key => nextErrors[key]);
+    if (firstInvalid) {
+      document.getElementById(ids[firstInvalid])?.focus();
+      return;
+    }
+
+    if (process.env.NODE_ENV === "development") {
+      handleSuccess();
+      return;
+    }
+
+    setPending(true);
+    try {
+      const response = await fetch("/api/contact-messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (!response.ok) throw Error();
+      handleSuccess();
+    } catch {
+      setFailure("Your message couldn’t be sent. Please try again.");
+    } finally {
+      setPending(false);
+    }
+  };
+
+  if (success) return <p ref={confirmationRef} tabIndex={-1} role="status" className="text-body">Thanks for reaching out. I’ve received your message and will be in touch.</p>;
+
+  return <form noValidate onSubmit={submit}>
+    <h2 className={`${styles.heading} text-heading-3`}>Send me a message</h2>
+    <div className={styles.fields}>
+      <TextField id={ids.name} name="name" label="Your Name" required disabled={pending} value={values.name} onChange={event => change("name", event.target.value)} onBlur={() => setErrors(current => ({ ...current, name: valid("name", values.name) }))} error={errors.name} />
+      <TextField id={ids.email} name="email" label="Email" type="email" required disabled={pending} value={values.email} onChange={event => change("email", event.target.value)} onBlur={() => setErrors(current => ({ ...current, email: valid("email", values.email) }))} error={errors.email} />
+      <PhoneField id={ids.phone} name="phone" label="Phone number (optional)" disabled={pending} value={values.phone} onValueChange={value => change("phone", value)} onBlur={() => setErrors(current => ({ ...current, phone: valid("phone", values.phone) }))} error={errors.phone} />
+      <AddressField id={ids.address} label="Property address (optional)" disabled={pending} value={values.address} onValueChange={value => change("address", value)} onBlur={() => setErrors(current => ({ ...current, address: valid("address", values.address) }))} error={errors.address} />
+      <Textarea id={ids.message} name="message" label="Message" guidance={`Up to ${CONTACT_MESSAGE_MAX_LENGTH.toLocaleString()} characters.`} required disabled={pending} rows={5} maxLength={CONTACT_MESSAGE_MAX_LENGTH} value={values.message} onChange={event => change("message", event.target.value)} onBlur={() => setErrors(current => ({ ...current, message: valid("message", values.message) }))} error={errors.message} />
+    </div>
+    <div className={styles.actions}>
+      {failure && <p className={`${styles.failure} text-body-small`} role="alert">{failure}</p>}
+      <Button type="submit" className={styles.submit} disabled={pending}>{pending ? "Sending…" : "Send Message"}</Button>
+      <p className={`${styles.privacy} text-body-small`}>Your information will be handled according to our <TextLink className={styles.privacyLink} href="/privacy-policy">Privacy Policy</TextLink>.</p>
+    </div>
+  </form>;
+}

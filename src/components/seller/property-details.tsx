@@ -15,7 +15,6 @@ const questions = [
   { key: "timeline", label: "Selling Timeline", options: ["As soon as possible", "Within 1–3 months", "Within 3–6 months", "More than 6 months", "Just exploring"] },
 ] as const;
 
-// Mount after confirmed persistence of Step 1, or in the development-only demo.
 export function PropertyDetails({ name, answers, onChange, onBack, onSubmit, onSkip, pending, failure }: {
   name?: string;
   answers: PropertyAnswers; onChange: (answers: PropertyAnswers) => void;

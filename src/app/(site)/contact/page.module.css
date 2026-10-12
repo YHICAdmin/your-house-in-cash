@@ -65,11 +65,44 @@
   position: relative;
 }
 
+.successColumn {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
 .formCard {
   padding: var(--spacing-m);
   border-radius: var(--radius-medium);
   background: var(--color-surface);
   box-shadow: var(--shadow-subtle);
+}
+
+.successCard {
+  width: 100%;
+  max-width: 640px;
+  margin-inline: auto;
+  padding: var(--spacing-m);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-floating);
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.successIcon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--spacing-l);
+  color: var(--color-brand);
+}
+
+.successCopy {
+  margin: var(--spacing-s) 0 0;
+  color: var(--color-text-secondary);
 }
 
 @media (min-width: 48rem) {
@@ -87,6 +120,10 @@
 
   .formCard {
     padding: var(--spacing-l);
+  }
+
+  .successCard {
+    padding: var(--spacing-xl);
   }
 }
 

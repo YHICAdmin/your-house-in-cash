@@ -25,4 +25,3 @@
 @media (min-width: 75rem) { .main { min-height: calc(100svh - 80px); } }
 .page { position: relative; isolation: isolate; }
 .page > header, .page > footer { background: transparent; }
-.demoNotice { margin-bottom: var(--spacing-m); color: var(--color-text-secondary); }

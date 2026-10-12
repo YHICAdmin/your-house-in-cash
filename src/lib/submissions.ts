@@ -1,5 +1,6 @@
 import "server-only";
 import { normalizePhone, validUSPhone } from "@/lib/phone";
+import { CONTACT_MESSAGE_MAX_LENGTH } from "@/lib/form-limits";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const conditions = ["Move-in ready", "Needs minor repairs", "Needs major repairs", "Not sure"] as const;
@@ -40,5 +41,5 @@ export function parseLeadDetails(value: unknown): LeadDetails | null {
 export function parseContactMessage(value: unknown): ContactMessage | null {
   const body = record(value); if (!body) return null;
   const name = string(body.name), emailAddress = email(body.email), phoneNumber = phone(body.phone, false), address = optionalString(body.address), message = string(body.message);
-  return name && emailAddress && phoneNumber !== undefined && address !== undefined && message ? { name, email: emailAddress, phone: phoneNumber, address, message } : null;
+  return name && emailAddress && phoneNumber !== undefined && address !== undefined && message && message.length <= CONTACT_MESSAGE_MAX_LENGTH ? { name, email: emailAddress, phone: phoneNumber, address, message } : null;
 }

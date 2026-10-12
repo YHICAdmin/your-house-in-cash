@@ -21,9 +21,8 @@ function validate(key: Key, value: string) {
   return "";
 }
 
-export function SellerDetails({ initialValues, onDemoContinue, onSave }: {
+export function SellerDetails({ initialValues, onSave }: {
   initialValues?: SellerValues;
-  onDemoContinue?: (values: SellerValues) => void;
   onSave?: (values: SellerValues) => Promise<void>;
 } = {}) {
   const [values, setValues] = useState<Values>(initialValues ?? { address: "", name: "", phone: "", email: "" });
@@ -43,16 +42,11 @@ export function SellerDetails({ initialValues, onDemoContinue, onSave }: {
     setErrors(next);
     const invalid = order.find(key => next[key]);
     if (invalid) { document.getElementById(invalid)?.focus(); return; }
-    if (process.env.NODE_ENV === "development" && onDemoContinue) {
-      onDemoContinue(values);
-      return;
-    }
     if (onSave && !pending) {
       setFailure(""); setPending(true);
       try { await onSave(values); } catch { setFailure("Unable to save your details. Please try again."); } finally { setPending(false); }
       return;
     }
-    // Production stays on Step 1 until persistence is connected.
     setFailure("We couldn’t save your details. Please try again.");
   }}>
     <div className={styles.intro}>

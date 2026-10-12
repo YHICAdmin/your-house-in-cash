@@ -1,0 +1,1 @@
+export const CONTACT_MESSAGE_MAX_LENGTH = 2000;
