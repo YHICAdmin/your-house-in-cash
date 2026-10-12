@@ -102,7 +102,7 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 
 - Use a native `form` with a visible `h2` for the Form Card heading. Use global H3 typography for that heading.
 - Use the shared Form definitions for Text Field, Email Field, Phone Field, Address Field, Textarea, validation feedback, and submission behavior. Optional fields remain valid when empty; an entered phone number follows the shared Phone Field validation and normalization rules. An entered property address allows manual entry under the shared Address Field rules.
-- The Message field accepts at most 2,000 characters. Display the supporting guidance `Up to 2,000 characters.` and enforce the limit in both the browser and the server-side submission handler.
+- The Message field accepts at most 2,000 characters. Display its remaining-character count as supporting guidance, beginning with `2,000 characters remaining.`, and enforce the limit in both the browser and the server-side submission handler.
 - Use the shared Button Component as a native submit button, with its existing black primary treatment and a local full-card-width assignment. Use the shared Text Link contract for the Privacy Policy link, with its documented text-size override set to Body Small so it fits the sentence.
 
 ### Visual Design

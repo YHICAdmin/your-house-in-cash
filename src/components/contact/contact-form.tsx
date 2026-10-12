@@ -61,11 +61,6 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
       return;
     }
 
-    if (process.env.NODE_ENV === "development") {
-      handleSuccess();
-      return;
-    }
-
     setPending(true);
     try {
       const response = await fetch("/api/contact-messages", {
@@ -91,7 +86,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
       <TextField id={ids.email} name="email" label="Email" type="email" required disabled={pending} value={values.email} onChange={event => change("email", event.target.value)} onBlur={() => setErrors(current => ({ ...current, email: valid("email", values.email) }))} error={errors.email} />
       <PhoneField id={ids.phone} name="phone" label="Phone number (optional)" disabled={pending} value={values.phone} onValueChange={value => change("phone", value)} onBlur={() => setErrors(current => ({ ...current, phone: valid("phone", values.phone) }))} error={errors.phone} />
       <AddressField id={ids.address} label="Property address (optional)" disabled={pending} value={values.address} onValueChange={value => change("address", value)} onBlur={() => setErrors(current => ({ ...current, address: valid("address", values.address) }))} error={errors.address} />
-      <Textarea id={ids.message} name="message" label="Message" guidance={`Up to ${CONTACT_MESSAGE_MAX_LENGTH.toLocaleString()} characters.`} required disabled={pending} rows={5} maxLength={CONTACT_MESSAGE_MAX_LENGTH} value={values.message} onChange={event => change("message", event.target.value)} onBlur={() => setErrors(current => ({ ...current, message: valid("message", values.message) }))} error={errors.message} />
+      <Textarea id={ids.message} name="message" label="Message" guidance={`${(CONTACT_MESSAGE_MAX_LENGTH - values.message.length).toLocaleString()} characters remaining.`} required disabled={pending} rows={5} maxLength={CONTACT_MESSAGE_MAX_LENGTH} value={values.message} onChange={event => change("message", event.target.value)} onBlur={() => setErrors(current => ({ ...current, message: valid("message", values.message) }))} error={errors.message} />
     </div>
     <div className={styles.actions}>
       {failure && <p className={`${styles.failure} text-body-small`} role="alert">{failure}</p>}
