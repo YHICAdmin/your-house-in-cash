@@ -14,7 +14,12 @@ export type ContactMessage = { name: string; email: string; phone: string | null
 function record(value: unknown): Record<string, unknown> | null { return typeof value === "object" && value !== null && !Array.isArray(value) ? value as Record<string, unknown> : null; }
 function string(value: unknown): string | null { return typeof value === "string" ? value.trim() : null; }
 function optionalString(value: unknown): string | null | undefined { if (value === undefined) return undefined; const result = string(value); return result || null; }
-function choice(value: unknown, allowed: readonly string[]): string | null | undefined { const result = optionalString(value); return result === undefined || result === null || allowed.includes(result) ? result : undefined; }
+function choice(value: unknown, allowed: readonly string[]): string | null | undefined {
+  if (!Array.isArray(value)) return undefined;
+  if (value.length === 0) return null;
+  if (value.length !== 1 || typeof value[0] !== "string" || !allowed.includes(value[0])) return undefined;
+  return value[0];
+}
 function email(value: unknown): string | null { const result = string(value); return result && emailPattern.test(result) ? result.toLowerCase() : null; }
 function phone(value: unknown, required: boolean): string | null | undefined { const result = string(value); if (!result) return required ? undefined : null; return validUSPhone(result) ? normalizePhone(result) : undefined; }
 
