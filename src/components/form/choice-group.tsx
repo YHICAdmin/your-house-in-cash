@@ -5,10 +5,11 @@ import { TextLink } from "@/components/ui/text-link";
 import { fieldDescription } from "./field";
 import styles from "./field.module.css";
 
-export function ChoiceGroup({ name, question, options, multiple = false, value, onChange, guidance, error, disabled, onBlur }: {
+export function ChoiceGroup({ name, question, options, multiple = false, value, onChange, guidance, error, disabled, onBlur, twoColumnOptions = false }: {
   name: string; question: string; options: readonly string[]; multiple?: boolean;
   value: string[]; onChange: (value: string[]) => void; guidance?: string; error?: string;
   disabled?: boolean; onBlur?: () => void;
+  twoColumnOptions?: boolean;
 }) {
   const id = useId();
   const first = useRef<HTMLInputElement>(null);
@@ -18,7 +19,7 @@ export function ChoiceGroup({ name, question, options, multiple = false, value, 
     }}>
     <legend className="text-label">{question}</legend>
     {guidance && <p id={id + "-help"} className={`text-body-small ${styles.guidance}`}>{guidance}</p>}
-    <div className={styles.options}>
+    <div className={`${styles.options}${twoColumnOptions ? ` ${styles.optionsTwoColumn}` : ""}`}>
       {options.map((option, index) => <label key={option} className={`text-body focus-container ${styles.option}`} htmlFor={id + "-" + index}>
         <input ref={index === 0 ? first : undefined} id={id + "-" + index} name={name}
           type={multiple ? "checkbox" : "radio"} value={option} checked={value.includes(option)}

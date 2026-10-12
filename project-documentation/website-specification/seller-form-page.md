@@ -22,7 +22,7 @@ Guide sellers through submitting their contact and property details to request a
 
 * One large, horizontally centered Form Card is the primary element, with an abstract brand background surrounding it.
 * The Form Card's content follows one vertical column at all Breakpoints, including the fields in Step 1 and question groups in Step 2.
-* Within each Step 2 question group, choice options use content-based widths and form rows that wrap to fit the available width at all Breakpoints.
+* In Step 2, each choice group uses two equal-width columns with each option filling its column. On narrow Mobile screens, groups use one column.
 * The Form Card begins after the main form area's inherited global Section top padding, measured from the bottom of the Minimal Header.
 
 ### Page Background

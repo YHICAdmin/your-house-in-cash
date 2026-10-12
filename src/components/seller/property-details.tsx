@@ -36,6 +36,7 @@ export function PropertyDetails({ name, answers, onChange, onBack, onSubmit, onS
     <div className={styles.fields}>
       {questions.map(question => <ChoiceGroup key={question.key} name={question.key} question={question.label}
         options={question.options} multiple={question.key === "reasons"} value={answers[question.key]}
+        twoColumnOptions
         guidance={question.key === "reasons" ? "Select all that apply." : undefined}
         disabled={!!pending} onChange={value => onChange({ ...answers, [question.key]: value })} />)}
       <Textarea id="notes" name="notes" label="Anything else you'd like us to know?"
