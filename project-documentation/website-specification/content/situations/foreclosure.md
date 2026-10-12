@@ -182,7 +182,7 @@ There may be substantial value between those numbers.
 
 That value matters.
 
-The CFPB specifically notes that if a home is worth more than the mortgage balance, selling may be better financially and for credit than allowing the property to proceed through foreclosure, a short sale, or deed-in-lieu. ([Consumer Financial Protection Bureau][7])
+Losing your home to foreclosure can seriously damage your credit. If selling is an option, it is typically better for your finances and your credit than letting the home go through foreclosure. ([Consumer Financial Protection Bureau][7])
 
 So before assuming “I can't afford the mortgage, therefore I'm losing the house,” understand the difference between:
 
@@ -199,6 +199,8 @@ Those are not the same thing.
 Being behind on payments does not by itself mean you have lost ownership of the house or that a voluntary sale is automatically impossible.
 
 But as foreclosure progresses, timing and the exact status of the case become increasingly important.
+
+If you are considering selling, you can [get a cash offer](/get-cash-offer) and see what selling before foreclosure could look like for you.
 
 If you are considering selling, the basic financial picture is:
 
