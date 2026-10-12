@@ -17,6 +17,10 @@
 .error { color: var(--color-error); }
 .back { margin-bottom: var(--spacing-s); }
 .successPhone { margin-top: var(--spacing-l); display: flex; flex-wrap: wrap; gap: var(--spacing-xs); align-items: baseline; }
+.success { display: flex; flex-direction: column; align-items: flex-start; }
+.successIcon { width: 48px; height: 48px; color: var(--color-brand); margin-bottom: var(--spacing-l); }
+.successIntro { margin-bottom: var(--spacing-l); }
+.successIntro p { margin-top: var(--spacing-s); color: var(--color-text-secondary); }
 @media (min-width: 48rem) { .card { padding: var(--spacing-xl); } .primary { width: fit-content; } .main { min-height: calc(100svh - 72px); } }
 @media (min-width: 75rem) { .main { min-height: calc(100svh - 80px); } }
 .page { position: relative; isolation: isolate; }

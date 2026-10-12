@@ -18,6 +18,7 @@ export function SellerFormDemo() {
     if (!element || transitioning.current) return;
     transitioning.current = true;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo(0, 0);
     const direction = next === 1 ? -1 : 1;
     if (!reduced && next !== "success") {
       await element.animate([

@@ -43,6 +43,7 @@
   min-height: 64px;
   width: 100%;
   padding-inline: var(--spacing-xl);
+  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
