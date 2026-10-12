@@ -81,7 +81,7 @@ Guide sellers through submitting their contact and property details to request a
 
 * Contents change inside the existing Card; the page does not navigate to another route.
 * The Step 1-to-Step 2 transition combines a fade with `16px` of horizontal movement over `200ms`, using `ease-out`. The outgoing content moves left and fades out; the incoming content enters from the right and fades in.
-* Returning from Step 2 to Step 1 with `Back` reverses the direction using the same `16px` movement, `200ms` duration, and `ease-out`: outgoing content moves right and fades out, while incoming content enters from the left and fades in.
+* Returning from Step 2 to Step 1 with `← Edit your details` reverses the direction using the same `16px` movement, `200ms` duration, and `ease-out`: outgoing content moves right and fades out, while incoming content enters from the left and fades in.
 * When `prefers-reduced-motion: reduce` applies, the content is replaced immediately without animation.
 * Do not use a step transition to indicate success before the required save has succeeded.
 * Clear save-failure messages when moving between form steps, while preserving entered answers under the documented back/edit behavior.
@@ -175,7 +175,7 @@ Guide sellers through submitting their contact and property details to request a
   4. `Selling Timeline`
   5. `Anything else you'd like us to know?` — optional free text.
 * Includes `Skip for now` as a secondary action.
-* Includes a small `Back` action for returning to Step 1 to edit the basic details.
+* Includes a small `← Edit your details` action for returning to Step 1 to edit the basic details.
 * Primary completion action: `Submit details`.
 * Save-failure message: `We couldn’t save these details. Please try again.`
 * `Property Condition` allows one selection from: `Move-in ready`, `Needs minor repairs`, `Needs major repairs`, `Not sure`.
@@ -194,11 +194,11 @@ Guide sellers through submitting their contact and property details to request a
 * The optional free-text field has a maximum length of 2,000 characters, enforced with `maxlength="2000"`.
 * `Clear selection` uses the documented `Text Link` Component with native button semantics (`type="button"`).
 * `Skip for now` uses the documented `Text Link` Component with native button semantics (`type="button"`) for the in-page action.
-* `Back` uses the documented `Text Link` Component with native button semantics (`type="button"`) for the in-page action.
+* `← Edit your details` uses the documented `Text Link` Component with native button semantics (`type="button"`) for the in-page action.
 
 ### Dimensions and Alignment
 
-* `Back` appears above the Step 2 heading, aligned to the left.
+* `← Edit your details` appears above the Step 2 heading, aligned to the left.
 * `Skip for now` appears below the supporting copy, before the property questions.
 * `Submit details` uses the full available content width on Mobile and content-based width on Tablet and Desktop.
 * The Step 2 save-failure message appears above `Submit details`, whether saving was triggered by `Submit details` or `Skip for now`.
@@ -208,19 +208,19 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Spacing
 
-* At all Breakpoints, `S` (`16px`) separates `Back` from the Step 2 heading and the supporting copy from `Skip for now`. The complete introduction retains its shared spacing before the fields.
+* At all Breakpoints, `S` (`16px`) separates `← Edit your details` from the Step 2 heading and the supporting copy from `Skip for now`. The complete introduction retains its shared spacing before the fields.
 
 ### Interaction
 
 * Completing Step 2 updates the saved lead with the additional information and shows Success State.
 * While a Step 2 save request is pending, the activated completion action (`Submit details` or `Skip for now`) displays `Saving…`.
-* `Back` is unavailable while the Step 2 save request is pending. If saving fails, it becomes available again.
+* `← Edit your details` is unavailable while the Step 2 save request is pending. If saving fails, it becomes available again.
 * `Submit details` accepts partial answers; unanswered questions do not block completion.
 * On first entering Step 2, all choice groups start with no options selected. Revisiting the step preserves the seller's previous selections.
 * In Property Condition, Occupancy, and Selling Timeline, `Clear selection` clears only that group's answer and then disappears. It is unavailable while a save request is pending.
 * Selecting `Other` in Reason for Selling saves that choice like any other option. Additional explanation is optional and uses the existing `Anything else you'd like us to know?` field.
 * `Skip for now` allows completion without supplying the additional details and leads to the same Success State, retaining the Step 1 lead.
-* `Back` returns to Step 1 with all previously entered values retained, including any Step 2 values. Those Step 2 values remain available when the seller continues forward again.
+* `← Edit your details` returns to Step 1 with all previously entered values retained, including any Step 2 values. Those Step 2 values remain available when the seller continues forward again.
 * If answers have been entered, `Skip for now` saves them to the existing lead before displaying Success State. Show Success State only after that save succeeds.
 * If saving fails after `Submit details` or `Skip for now`, remain on Step 2, preserve all entered answers, show the save-failure message, and allow the seller to retry. Do not display Success State until the required save succeeds.
 

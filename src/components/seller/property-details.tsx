@@ -27,7 +27,7 @@ export function PropertyDetails({ name, answers, onChange, onBack, onSubmit, onS
     event.preventDefault();
     if (!pending) onSubmit(event);
   }}>
-    <TextLink className={styles.back} disabled={!!pending} onClick={onBack}>Back</TextLink>
+    <TextLink className={styles.back} disabled={!!pending} onClick={onBack}>← Edit your details</TextLink>
     <div className={styles.intro}>
       <h1 className="text-heading-2" tabIndex={-1}>{firstName ? `Thanks, ${firstName}!` : "Thanks!"}</h1>
       <p className="text-body">Your request has been received. Add a few optional details to help us understand your property.</p>
