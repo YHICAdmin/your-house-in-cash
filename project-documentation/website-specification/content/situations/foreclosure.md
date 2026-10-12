@@ -12,17 +12,13 @@ Falling behind on mortgage payments can leave you unsure where to start. Explore
 
 Falling behind on your mortgage is frightening. But missing payments does **not** mean you have already lost your house.
 
-The first thing you need to understand is not every possible foreclosure solution.
-
-It is:
-
-**Where are you in the process right now?**
+The first thing you need to understand is not every possible foreclosure solution, but **where you are in the process right now.**
 
 Once you know that, you can focus only on the options that still make sense for your situation.
 
 ## First, Figure Out Where You Are
 
-Two things can help you locate yourself:
+Two things can help you figure out where you are:
 
 **How long have you been behind?**
 
@@ -60,7 +56,7 @@ That's different.
 
 A foreclosure lawsuit has now been filed.
 
-At this point, court deadlines matter. Ohio Legal Help states that a homeowner served with a foreclosure complaint should file an answer within 28 days. ([ohiolegalhelp.org][2])
+Once a foreclosure complaint arrives, the court process is underway and the deadlines matter.
 
 ### Already have a judgment or Sheriff's Sale information?
 
@@ -108,7 +104,7 @@ Forbearance temporarily pauses or reduces mortgage payments.
 
 It can be useful when the financial problem is temporary—for example, after losing a job—and you expect your situation to improve.
 
-But it does **not** erase what you owe. The missed or reduced payments still have to be dealt with later. ([Consumer Financial Protection Bureau][4])
+It doesn't cancel what you owe. You'll still need to repay any missed or reduced payments later. ([Consumer Financial Protection Bureau][4])
 
 So the question isn't merely:
 
