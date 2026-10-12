@@ -1,10 +1,11 @@
 export type ArticleBlock = {
-  type: "heading" | "subheading" | "paragraph" | "quote" | "list" | "table";
+  type: "heading" | "subheading" | "paragraph" | "quote" | "list" | "table" | "image";
   text: string;
   id?: string;
   items?: string[];
   columns?: string[];
   rows?: string[][];
+  src?: string;
 };
 
 // The supported Markdown blocks are those used by the approved situation article.
@@ -30,6 +31,8 @@ export function parseSituationArticle(source: string) {
       ids.set(base, count);
       return { type: heading[1] === "##" ? "heading" : "subheading", text: heading[2], id: count === 1 ? base : `${base}-${count}` };
     }
+    const image = /^!\[([^\]]*)\]\((\/[^\s)]+)\)$/.exec(chunk);
+    if (image) return { type: "image", text: image[1], src: image[2] };
     const lines = chunk.split(/\r?\n/);
     if (lines.every(line => /^[-*] /.test(line))) {
       return { type: "list", text: "", items: lines.map(line => line.replace(/^[-*] /, "")) };

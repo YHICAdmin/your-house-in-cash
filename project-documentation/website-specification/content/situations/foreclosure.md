@@ -26,6 +26,8 @@ and, often more importantly,
 
 **What documents have you received?**
 
+![Foreclosure sequence showing five stages: missed payments, default or acceleration notice, foreclosure lawsuit filed, judgment entered, and Sheriff's Sale.](/images/foreclosure-sequence-timeline.png)
+
 A homeowner who missed two payments is in a very different position from someone who has received a foreclosure complaint from the court. And someone with a Sheriff's Sale scheduled needs to think about the situation differently again.
 
 At the federal level, a mortgage servicer generally cannot make the first filing required to start foreclosure until the loan is more than 120 days delinquent, subject to exceptions. ([Consumer Financial Protection Bureau][1])
@@ -144,11 +146,9 @@ Ask whether it leaves you with a mortgage you can realistically sustain.
 
 ## Why Contact the Mortgage Servicer?
 
-Because your servicer is the party that can tell you which loss-mitigation options, if any, are actually available for your loan.
+Because your servicer is the party that can tell you which foreclosure-prevention options, if any, are actually available for your loan.
 
-A complete loss-mitigation application received at the relevant stage can also trigger important federal procedural protections. For example, Regulation X restricts certain foreclosure steps while qualifying complete applications are being evaluated, with the exact protections depending on timing. ([Consumer Financial Protection Bureau][1])
-
-You don't need to understand those regulations before making contact.
+Your servicer can explain the options available for your loan and whether any could make your mortgage manageable again. The goal is not simply to delay foreclosure—it is to find a realistic way to keep your home, such as a repayment plan, temporary payment relief, or a loan modification.
 
 The purpose of the conversation is simpler:
 

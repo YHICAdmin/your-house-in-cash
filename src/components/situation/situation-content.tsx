@@ -4,6 +4,7 @@ import { ContentTable } from "@/components/ui/content-table";
 import { renderSituationInline } from "./situation-inline";
 import { SituationSidebar } from "./situation-sidebar";
 import styles from "./situation-content.module.css";
+import Image from "next/image";
 
 export function SituationContent({ source }: { source: string }) {
   if (!situationSection(source, "Article")) return null;
@@ -21,6 +22,9 @@ export function SituationContent({ source }: { source: string }) {
               case "heading": return <h2 key={block.id} id={block.id} className="text-heading-3">{content}</h2>;
               case "subheading": return <h3 key={block.id} id={block.id} className="text-heading-4">{content}</h3>;
               case "quote": return <blockquote key={index}><p>{content}</p></blockquote>;
+              case "image": return <figure key={index} className={styles.figure}>
+                <Image src={block.src!} alt={block.text} width={1024} height={1536} sizes="(min-width: 1200px) 936px, 100vw" />
+              </figure>;
               case "list": return <ul key={index}>{block.items!.map((item, i) => <li key={i}>{renderSituationInline(item, references)}</li>)}</ul>;
               case "table": {
                 const heading = blocks.slice(0, index).findLast(item => item.type === "heading" || item.type === "subheading");
