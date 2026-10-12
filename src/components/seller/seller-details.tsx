@@ -21,13 +21,15 @@ function validate(key: Key, value: string) {
   return "";
 }
 
-export function SellerDetails({ initialValues, onDemoContinue }: {
+export function SellerDetails({ initialValues, onDemoContinue, onSave }: {
   initialValues?: SellerValues;
   onDemoContinue?: (values: SellerValues) => void;
+  onSave?: (values: SellerValues) => Promise<void>;
 } = {}) {
   const [values, setValues] = useState<Values>(initialValues ?? { address: "", name: "", phone: "", email: "" });
   const [errors, setErrors] = useState<Partial<Values>>({});
   const [failure, setFailure] = useState("");
+  const [pending, setPending] = useState(false);
   function change(key: Key, value: string) {
     setValues(previous => ({ ...previous, [key]: value }));
     if (errors[key]) setErrors(previous => ({ ...previous, [key]: validate(key, value) }));
@@ -35,7 +37,7 @@ export function SellerDetails({ initialValues, onDemoContinue }: {
   function blur(key: Key) {
     setErrors(previous => ({ ...previous, [key]: validate(key, values[key]) }));
   }
-  return <form noValidate onSubmit={event => {
+  return <form noValidate onSubmit={async event => {
     event.preventDefault();
     const next = Object.fromEntries(order.map(key => [key, validate(key, values[key])]));
     setErrors(next);
@@ -43,6 +45,11 @@ export function SellerDetails({ initialValues, onDemoContinue }: {
     if (invalid) { document.getElementById(invalid)?.focus(); return; }
     if (process.env.NODE_ENV === "development" && onDemoContinue) {
       onDemoContinue(values);
+      return;
+    }
+    if (onSave && !pending) {
+      setFailure(""); setPending(true);
+      try { await onSave(values); } catch { setFailure("Unable to save your details. Please try again."); } finally { setPending(false); }
       return;
     }
     // Production stays on Step 1 until persistence is connected.
@@ -53,19 +60,19 @@ export function SellerDetails({ initialValues, onDemoContinue }: {
       <p className="text-body">Tell us a few basic details about the house you&apos;d like to sell. It only takes about a minute.</p>
     </div>
     <div className={styles.fields}>
-      <AddressField id="address" label="Property Address" required value={values.address}
+      <AddressField id="address" label="Property Address" required disabled={pending} value={values.address}
         onValueChange={value => change("address", value)} onBlur={() => blur("address")}
         error={errors.address} guidance="Enter the street address, city, state, and ZIP code." />
-      <TextField id="name" name="name" label="Your Name" required autoComplete="name"
+      <TextField id="name" name="name" label="Your Name" required disabled={pending} autoComplete="name"
         value={values.name} onChange={event => change("name", event.target.value)} onBlur={() => blur("name")} error={errors.name} />
-      <PhoneField id="phone" name="phone" label="Phone Number" required placeholder="e.g. 216-555-1234"
+      <PhoneField id="phone" name="phone" label="Phone Number" required disabled={pending} placeholder="e.g. 216-555-1234"
         value={values.phone} onValueChange={value => change("phone", value)} onBlur={() => blur("phone")} error={errors.phone} />
-      <TextField id="email" name="email" label="Email Address" type="email" required autoComplete="email"
+      <TextField id="email" name="email" label="Email Address" type="email" required disabled={pending} autoComplete="email"
         value={values.email} onChange={event => change("email", event.target.value)} onBlur={() => blur("email")} error={errors.email} />
     </div>
     <div className={styles.actions}>
       {failure && <p className={`text-body-small ${styles.error}`}>{failure}</p>}
-      <Button className={styles.continueButton} type="submit">Get My Cash Offer</Button>
+      <Button className={styles.continueButton} type="submit" disabled={pending}>{pending ? "Saving…" : "Get My Cash Offer"}</Button>
       <p className={`text-body-small ${styles.reassurance}`}><LockKeyhole size={16} aria-hidden="true" /><span>Your information stays private</span></p>
       <span role="status" className="visually-hidden">{failure}</span>
     </div>
