@@ -4,6 +4,8 @@ import {
   ArrowRight,
   Building2,
   Boxes,
+  ChevronLeft,
+  ChevronRight,
   FileKey2,
   Flame,
   Gavel,
@@ -19,6 +21,7 @@ import {
   useEffect,
   useRef,
   useState,
+  type KeyboardEvent as ReactKeyboardEvent,
   type PointerEvent as ReactPointerEvent,
 } from "react";
 import { IconContainer } from "@/components/ui/icon-container";
@@ -157,6 +160,12 @@ function revealSelection(
   if (delta !== 0) selector.scrollBy({ left: delta, behavior: "instant" });
 }
 
+function getScrollBehavior(): ScrollBehavior {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ? "auto"
+    : "smooth";
+}
+
 export function SituationExplorer({
   descriptionId,
   headingId,
@@ -201,6 +210,42 @@ export function SituationExplorer({
 
     setSelectedIndex(index);
     setAnnouncement(`${getSelectorLabel(situations[index])} details are now available.`);
+  }
+
+  function scrollSelector(direction: -1 | 1) {
+    const selector = selectorRef.current;
+    if (!selector) return;
+
+    const currentEdge = direction < 0 ? selector.scrollLeft : selector.scrollLeft + selector.clientWidth;
+    const options = Array.from(selector.querySelectorAll<HTMLButtonElement>("button[data-situation-option]"));
+    const nextOption = direction < 0
+      ? [...options].reverse().find(option => option.offsetLeft < currentEdge - 1)
+      : options.find(option => option.offsetLeft + option.offsetWidth > currentEdge + 1);
+    const target = nextOption
+      ? direction < 0
+        ? nextOption.offsetLeft
+        : nextOption.offsetLeft + nextOption.offsetWidth - selector.clientWidth
+      : direction < 0
+        ? 0
+        : selector.scrollWidth - selector.clientWidth;
+
+    selector.scrollTo({ left: Math.max(0, target), behavior: getScrollBehavior() });
+  }
+
+  function handleOptionKeyDown(
+    event: ReactKeyboardEvent<HTMLButtonElement>,
+    index: number,
+  ) {
+    let nextIndex: number | null = null;
+
+    if (event.key === "ArrowLeft") nextIndex = index > 0 ? index - 1 : null;
+    if (event.key === "ArrowRight") nextIndex = index < situations.length - 1 ? index + 1 : null;
+    if (event.key === "Home") nextIndex = 0;
+    if (event.key === "End") nextIndex = situations.length - 1;
+    if (nextIndex === null) return;
+
+    event.preventDefault();
+    document.getElementById(`situation-option-${situations[nextIndex].slug}`)?.focus();
   }
 
   function handlePointerDown(event: ReactPointerEvent<HTMLDivElement>) {
@@ -255,6 +300,18 @@ export function SituationExplorer({
 
   return (
     <>
+      <div className={styles.selectorControls}>
+        <button
+          aria-label="Scroll situations left"
+          className={styles.scrollButton}
+          disabled={!scrollEdges.left}
+          onClick={() => scrollSelector(-1)}
+          type="button"
+        >
+          <span className={styles.scrollButtonVisual}>
+            <ChevronLeft aria-hidden="true" focusable="false" size={20} />
+          </span>
+        </button>
         <div
           ref={selectorRef}
           data-fade-left={scrollEdges.left}
@@ -281,6 +338,7 @@ export function SituationExplorer({
               <button
                 key={situation.slug}
                 id={`situation-option-${situation.slug}`}
+                data-situation-option
                 className={`text-body-small ${styles.option}${isSelected ? ` ${styles.selectedOption}` : ""}`}
                 type="button"
                 aria-controls={selectedContentId}
@@ -304,12 +362,25 @@ export function SituationExplorer({
                     inline: "nearest",
                   });
                 }}
+                onKeyDown={(event) => handleOptionKeyDown(event, index)}
               >
                 <span className={styles.optionLabel}>{getSelectorLabel(situation)}</span>
               </button>
             );
           })}
         </div>
+        <button
+          aria-label="Scroll situations right"
+          className={styles.scrollButton}
+          disabled={!scrollEdges.right}
+          onClick={() => scrollSelector(1)}
+          type="button"
+        >
+          <span className={styles.scrollButtonVisual}>
+            <ChevronRight aria-hidden="true" focusable="false" size={20} />
+          </span>
+        </button>
+      </div>
 
 
       <div

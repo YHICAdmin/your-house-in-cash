@@ -410,6 +410,8 @@ Contains, in document order:
 * The Situation Selector uses independent selection buttons.
 * Exactly one option is selected at a time.
 * `Foreclosure` is selected by default when the Section first loads.
+* A native previous-scroll button precedes the scrollable option list and a native next-scroll button follows it. They scroll the list only; neither changes the selected Situation.
+* The previous-scroll button uses the canonical Lucide `ChevronLeft` icon and accessible name `Scroll situations left`. The next-scroll button uses the canonical Lucide `ChevronRight` icon and accessible name `Scroll situations right`.
 
 ### Visual Design
 
@@ -419,13 +421,15 @@ Contains, in document order:
 * The row and its options use no Card, Border, Divider, or Shadow. Background and Radius apply only to the selected label.
 * The selected option's visible label uses global Surface text at `600` font weight on a Brand Green Dark background with the global Pill Radius.
 * Hovering an unselected option changes only its text color to Brand Green Dark.
-* A subtle `16px` (`S`) fade blends each overflowing edge into the background. It appears on the right when more content is available to the right, and on the left when content can be scrolled back into view. It updates on scrolling and resizing. During visible keyboard focus, the row remains fully opaque to preserve the focus indicator.
+* Each scroll button has a `48px` square interactive area containing a centered `36px` circular visual control. When scrolling is available, the circle has a `1px` Brand Green Dark border and Brand Green Dark Chevron icon; on hover, it uses Brand Green Dark background with a Surface icon. When disabled, the circle uses the global Border with Text Muted icon color. The Chevron icon is informative through the button's accessible name.
+* A subtle `16px` (`S`) fade blends the applicable edge of the scrollable option viewport into the background. It appears on the right when more content is available to the right, and on the left when content can be scrolled back into view. It updates on scrolling and resizing. During visible keyboard focus, the row remains fully opaque to preserve the focus indicator.
 
 ### Dimensions and Alignment
 
 * The selector fills the width of its content area across all Breakpoints.
-* The first option aligns with the left edge of the content area.
-* Overflowing labels are naturally clipped at the list's edges as the user scrolls.
+* The scroll buttons and the scrollable option viewport form one horizontal row. The buttons occupy the row's outer ends; the viewport occupies the remaining width and uses `8px` (`XS`) gaps to each button.
+* At the beginning, the first option aligns with the left edge of the option viewport. At the end, the last option aligns with its right edge.
+* When content remains beyond an edge, the viewport clips the overflowing labels while retaining a visible partial glimpse of the next label beneath that edge's fade. The glimpse is at least `24px` (`M`) wide before the fade begins.
 * Text is left-aligned.
 * Each option uses its content-based width across all Breakpoints.
 * Each option has a minimum interactive height of `48px`.
@@ -443,6 +447,8 @@ Contains, in document order:
 
 * Selecting an option updates the Selected Situation Content within the Section and keeps keyboard focus on the selected option.
 * `Enter` or `Space` selects the focused option.
+* Activating the previous-scroll or next-scroll button scrolls the option viewport in its labelled direction far enough to reveal the next previously obscured option. Scrolling never moves beyond the list's natural beginning or end.
+* The previous-scroll button is disabled at the beginning of the list and whenever the complete list fits within the viewport. The next-scroll button is disabled at the end of the list and whenever the complete list fits within the viewport.
 * Users can move through the overflowed carousel using touch swipe, trackpad scrolling, or pointer dragging.
 * The carousel viewport uses a `grab` cursor where it is draggable and a `grabbing` cursor during pointer dragging; the options retain their pointer cursor.
 * After a selection changes and its selected styling is applied, reveal the selected option together with its immediate neighbor in the direction of progression. Determine direction by comparing the new selection's position with the previous selection: a later option progresses right, and an earlier option progresses left.
@@ -451,12 +457,15 @@ Contains, in document order:
 * At a list endpoint with no further neighbor in the direction of progression, reveal the selected option in full using the nearest edge.
 * Keyboard focus reveals a partially visible option immediately using the nearest edge. Pointer focus leaves this reveal to the completed selection.
 * Dragging scrolls the list while preserving the selected situation.
+* With focus on an option, `ArrowLeft` and `ArrowRight` move focus to the previous and next option respectively, without changing selection; `Home` and `End` move focus to the first and last option. Focus does not wrap at either endpoint.
+* When the user prefers reduced motion, arrow-button, keyboard-focus, and selection-driven scrolling occurs without smooth scrolling or animated transitions.
 
 ### Accessibility
 
 * The visible Primary Headline provides the Situation Selector's accessible name.
 * The visible Supporting Copy provides the Situation Selector's accessible description.
 * Each option is reached individually with `Tab` and `Shift + Tab`.
+* The scroll buttons participate in the logical keyboard focus order before and after the option list. A disabled scroll button is not keyboard-focusable.
 * The selected state is communicated to assistive technologies.
 * Selected Situation Content updates are announced politely without interrupting other assistive-technology output.
 * Update announcement template: `[Situation] details are now available.`
@@ -464,6 +473,7 @@ Contains, in document order:
 ### Responsive Behavior
 
 * Across all Breakpoints, displays the situation options as one manually scrollable horizontal carousel.
+* The previous-scroll and next-scroll buttons remain visible at the outer ends of the option row, including on Mobile. Mobile users can also swipe the option viewport.
 * The carousel does not advance automatically.
 
 ## Selected Situation Content
