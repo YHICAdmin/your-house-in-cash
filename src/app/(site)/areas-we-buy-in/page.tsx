@@ -61,7 +61,7 @@ export default function AreasWeBuyInPage() {
                 We also buy houses in nearby communities. Get in touch to ask about your property.
               </p>
             </div>
-            <Button href="/contact" className={styles.contactButton}>Contact Us</Button>
+            <Button href="/contact" variant="conversion" className={styles.contactButton}>Contact Us</Button>
             </div>
             <div className={styles.contactIllustration}>
               <LocalAreaMap cities={illustrationCities} idPrefix="contact-map" />

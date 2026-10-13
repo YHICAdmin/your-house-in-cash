@@ -285,11 +285,11 @@ Help sellers whose city is not listed contact Noah about their property.
 
 ### Component and Semantics
 
-* Uses the shared default Button, rendered as a native link.
+* Uses the shared `Button` Component in its `conversion` variant, rendered as a native link, matching the Area Hero CTA's size treatment.
 
 ### Dimensions and Alignment
 
-* The Button does not shrink.
+* Inherits the `conversion` Button's documented dimensions and responsive width behavior.
 
 ### Interaction
 
