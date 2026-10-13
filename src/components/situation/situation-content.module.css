@@ -2,6 +2,7 @@
 .layout { row-gap: var(--spacing-l); }
 .sidebar, .article { grid-column: 1 / -1; min-width: 0; }
 .sidebar { align-self: start; }
+.sidebarLabel { margin: 0 0 var(--spacing-s); color: var(--color-brand-dark); }
 .sidebar ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--spacing-s); }
 .sidebar a { display: block; position: relative; color: var(--color-text-primary); font-weight: 600; overflow-wrap: anywhere; }
 .sidebar a[aria-current] { color: var(--color-brand); }
@@ -19,6 +20,7 @@
 .figure img { display: block; width: 100%; height: auto; }
 
 @media (min-width: 768px) {
+  .sidebarLabel { display: none; }
   .article :is(h2, h3) { scroll-margin-top: calc(72px + var(--spacing-m)); }
 }
 

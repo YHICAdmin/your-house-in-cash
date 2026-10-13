@@ -45,6 +45,7 @@ export function SituationSidebar({ headings }: { headings: { id: string; label: 
 
   return (
     <nav ref={navRef} className={`text-body-small ${styles.sidebar}`} data-sticky={fits} aria-label="Article topics">
+      <p className={`${styles.sidebarLabel} text-label`}>On this page</p>
       <ul>
         {headings.map(({ id, label }) => (
           <li key={id}><a href={`#${id}`} aria-current={activeId === id ? "location" : undefined}>{label}</a></li>

@@ -202,6 +202,7 @@ Present in-depth, situation-specific content in a clear and readable format, whi
 
 ### Responsive Behavior
 
+- On Mobile only, display the `On this page` label before the navigation entries using global `Label` typography and Brand Green Dark. The label is separated from the first entry by `S` (`16px`).
 - On Tablet and Mobile, navigation is presented as a visible table-of-contents list. The Sidebar scrolls with the page in normal document flow.
 
 ## Article
