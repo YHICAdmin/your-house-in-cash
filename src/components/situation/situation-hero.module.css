@@ -22,7 +22,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  z-index: -2;
+  z-index: -1;
   transform: skewY(calc(-1 * var(--slope-angle)));
   transform-origin: left top;
   pointer-events: none;
@@ -35,7 +35,7 @@
   top: 0;
   width: var(--accent-width);
   height: var(--spacing-xl);
-  z-index: -2;
+  z-index: 0;
   /* Cancel the anchor's shear so the accents stay true rectangles. */
   transform: skewY(var(--slope-angle)) rotate(calc(-1 * var(--slope-angle))) translateX(-66.666667%);
   transform-origin: left top;
