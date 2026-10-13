@@ -35,5 +35,5 @@ const faqItems: readonly AccordionItem[] = [
 ];
 
 export function AreaFaq() {
-  return <FaqSection label="FAQ" headline={"Questions? We’ve got answers."} supportingCopy={"Get clear answers about how our process works, how we determine your offer, and what to expect when selling your house as-is."} items={faqItems} />;
+  return <FaqSection label="FAQ" headline={"Questions? We’ve got answers."} supportingCopy={"Get clear answers about how our process works, how we determine your offer, and what to expect when selling your house as-is."} items={faqItems} background="soft" />;
 }

@@ -942,6 +942,8 @@ Present the home-selling process as a simple, clear three-step experience and gu
 
 The Process Steps and Step Content areas together form the Interactive Process Composition.
 
+* Uses the global `Background Soft` (`#F7F9F7`).
+
 * The composition contains two coordinated areas: a Process Steps area on the left and a Step Content area on the right.
 * On Desktop and Tablet, the Process Steps area forms one top-to-bottom flow and the Step Content area changes in coordination with the active Process Step.
 * On Desktop, the Process Steps area occupies Grid Columns `1–5`, Grid Column `6` remains intentionally empty, and the Step Content area occupies Grid Columns `7–12`.
@@ -1137,6 +1139,8 @@ The Section:
 ## Layout
 
 On Desktop and Tablet, the Section Intro spans the complete available Content Grid width above the left and right areas. Beneath it, the left-area elements form one top-to-bottom content flow and the right-area elements form a separate top-to-bottom content flow; the two flows begin from the same baseline and appear in parallel within their allocated Grid columns.
+
+* Uses the global `Background` (`#FFFFFF`).
 
 ### Desktop
 
@@ -1460,6 +1464,8 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 
 Provide clear and quick answers to the main questions sellers may have, reduce uncertainty and objections, and help users understand the process without overloading the rest of the page with information.
 
+* Uses the global `Background Soft` (`#F7F9F7`).
+
 ## Layout
 
 - On Desktop, the left flow contains the Section Intro followed by the Contact Us Link across Grid Columns `1–5`, Grid Column `6` remains intentionally empty as composition whitespace, and the FAQ Accordion occupies Grid Columns `7–12`.
@@ -1559,7 +1565,7 @@ Contains, in document order:
 
 ## Layout
 
-- Uses the global `Background Soft` (`#F7F9F7`).
+- Uses the global `Background` (`#FFFFFF`).
 
 ## Content
 

@@ -197,7 +197,7 @@ export function AreaHowItWorks() {
   return (
     <section
       ref={sectionRef}
-      className="section-spacing system-lines-bg"
+      className={`${styles.section} section-spacing system-lines-bg`}
       aria-labelledby={headingId}
     >
       <div className={styles.layout + " content-grid"}>

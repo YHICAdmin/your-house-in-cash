@@ -3,7 +3,7 @@ import { FinalCta } from "@/components/ui/final-cta";
 
 export function AreaFinalCta({ areaName }: { areaName?: string }) {
   const houseDescription = areaName ? `${areaName} house` : "house";
-  return <FinalCta background="soft" content={{
+  return <FinalCta content={{
     label: "Ready When You Are",
     headline: `Ready to sell your ${houseDescription}?`,
     supportingCopy: `Tell us about your ${houseDescription} and receive a fair, no-obligation cash offer built around your situation and timeline.`,

@@ -1,3 +1,7 @@
+.section {
+  background: var(--color-background-soft);
+}
+
 .layout {
   row-gap: 0;
 }
