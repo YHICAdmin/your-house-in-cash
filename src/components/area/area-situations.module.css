@@ -69,21 +69,21 @@
 }
 
 .selectorControls {
-  display: flex;
+  display: grid;
   min-width: 0;
+  grid-template-columns: var(--spacing-m) minmax(0, 1fr) var(--spacing-m);
   align-items: center;
   gap: var(--spacing-xs);
   margin-bottom: var(--spacing-xs);
 }
 
 .scrollButton {
-  display: inline-flex;
+  z-index: 1;
   width: 48px;
   height: 48px;
-  flex: 0 0 48px;
+  justify-self: center;
+  margin-inline: -12px;
   padding: 0;
-  align-items: center;
-  justify-content: center;
   border: 0;
   background: transparent;
   color: var(--color-brand-dark);
@@ -92,32 +92,14 @@
 
 .scrollButtonVisual {
   display: inline-flex;
-  width: 36px;
-  height: 36px;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--color-brand-dark);
-  border-radius: 50%;
-  transition:
-    background-color 150ms ease,
-    border-color 150ms ease,
-    color 150ms ease;
 }
 
 .scrollButton:disabled {
   color: var(--color-text-muted);
   cursor: default;
-}
-
-.scrollButton:disabled .scrollButtonVisual {
-  border-color: var(--color-border);
-}
-
-@media (hover: hover) {
-  .scrollButton:not(:disabled):hover .scrollButtonVisual {
-    background: var(--color-brand-dark);
-    color: var(--color-surface);
-  }
+  opacity: 0.7;
 }
 
 .selector {
@@ -128,7 +110,6 @@
   min-width: 0;
   flex-wrap: nowrap;
   gap: var(--spacing-xs);
-  flex: 1 1 auto;
   margin: -5px 0;
   padding: 5px;
   overflow-x: auto;
@@ -159,10 +140,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .selector,
-  .scrollButtonVisual {
+  .selector {
     scroll-behavior: auto;
-    transition: none;
   }
 }
 

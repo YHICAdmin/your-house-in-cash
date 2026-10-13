@@ -421,13 +421,13 @@ Contains, in document order:
 * The row and its options use no Card, Border, Divider, or Shadow. Background and Radius apply only to the selected label.
 * The selected option's visible label uses global Surface text at `600` font weight on a Brand Green Dark background with the global Pill Radius.
 * Hovering an unselected option changes only its text color to Brand Green Dark.
-* Each scroll button has a `48px` square interactive area containing a centered `36px` circular visual control. When scrolling is available, the circle has a `1px` Brand Green Dark border and Brand Green Dark Chevron icon; on hover, it uses Brand Green Dark background with a Surface icon. When disabled, the circle uses the global Border with Text Muted icon color. The Chevron icon is informative through the button's accessible name.
+* Each scroll button has a transparent `48px` square interactive area overlaid at its corresponding option-viewport edge, without reducing the viewport's allocated width. It presents only its centered Chevron icon: Brand Green Dark when scrolling is available and Text Muted when disabled. The Chevron icon is informative through the button's accessible name.
 * A subtle `16px` (`S`) fade blends the applicable edge of the scrollable option viewport into the background. It appears on the right when more content is available to the right, and on the left when content can be scrolled back into view. It updates on scrolling and resizing. During visible keyboard focus, the row remains fully opaque to preserve the focus indicator.
 
 ### Dimensions and Alignment
 
 * The selector fills the width of its content area across all Breakpoints.
-* The scroll buttons and the scrollable option viewport form one horizontal row. The buttons occupy the row's outer ends; the viewport occupies the remaining width and uses `8px` (`XS`) gaps to each button.
+* The scroll buttons occupy compact `24px` (`M`) visual slots at the outer ends of the row, with `8px` (`XS`) gaps before the scrollable option viewport. Their `48px` interactive areas extend equally beyond their visual slots, preserving the complete option viewport while keeping the visible Chevrons clear of the labels.
 * At the beginning, the first option aligns with the left edge of the option viewport. At the end, the last option aligns with its right edge.
 * When content remains beyond an edge, the viewport clips the overflowing labels while retaining a visible partial glimpse of the next label beneath that edge's fade. The glimpse is at least `24px` (`M`) wide before the fade begins.
 * Text is left-aligned.
