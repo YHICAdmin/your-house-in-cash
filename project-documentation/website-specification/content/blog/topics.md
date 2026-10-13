@@ -9,3 +9,7 @@ Clear guidance for homeowners assessing repairs, preventing property damage, and
 # Selling a House
 
 Straightforward information to help homeowners understand the selling process, weigh their options, and make informed decisions about a home sale.
+
+# Foreclosure
+
+Clear information for homeowners behind on mortgage payments, including the options that may be available before foreclosure moves forward.
