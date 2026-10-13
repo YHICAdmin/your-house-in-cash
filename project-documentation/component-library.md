@@ -259,6 +259,8 @@ Present structured comparisons within page content.
 
 * The table fills its available content width. Columns retain at least `12ch` of width for readable text wrapping.
 * A keyboard-focusable horizontal scroll container keeps wide tables within the available content width on smaller screens.
+* A table uses the long-text layout when any body cell contains `80` or more characters of prose. Its row-header column has a minimum width of `14ch`, and each remaining column has a minimum width of `20ch` at every Breakpoint. The table fills its available width with a `33rem` minimum width, rather than expanding to the full unwrapped text width.
+* When the long-text layout exceeds the available width, retain the native horizontal scrollbar and allow touch swipe, trackpad, mouse-wheel, and keyboard scrolling in the existing focusable scroll container. Do not stack the table or replace its comparison columns on Mobile.
 
 ## Autocomplete
 

@@ -63,6 +63,7 @@ export function BlogArticle({ article }: { article: Article }) {
                 const heading = article.blocks.slice(0, index).findLast(item => item.type === "heading" || item.type === "subheading");
                 element = <ContentTable
                   labelledBy={heading?.id}
+                  longText={block.rows!.some(row => row.some(cell => cell.length >= 80))}
                   columns={block.columns!.map(cell => renderSituationInline(cell, article.references))}
                   rows={block.rows!.map(row => row.map(cell => renderSituationInline(cell, article.references)))}
                 />;

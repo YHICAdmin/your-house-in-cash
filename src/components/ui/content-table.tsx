@@ -3,16 +3,17 @@ import styles from "./content-table.module.css";
 
 type ContentTableProps = {
   columns: ReactNode[];
+  longText?: boolean;
   rows: ReactNode[][];
   labelledBy?: string;
 };
 
-export function ContentTable({ columns, rows, labelledBy }: ContentTableProps) {
+export function ContentTable({ columns, longText = false, rows, labelledBy }: ContentTableProps) {
   const label = labelledBy ? { "aria-labelledby": labelledBy } : { "aria-label": "Content table" };
 
   return (
     <div className={`text-body ${styles.scroll}`} role="region" {...label} tabIndex={0}>
-      <table className={styles.table} {...label}>
+      <table className={`${styles.table}${longText ? ` ${styles.longText}` : ""}`} {...label}>
         <thead>
           <tr>{columns.map((cell, index) => <th key={index} scope="col">{cell}</th>)}</tr>
         </thead>

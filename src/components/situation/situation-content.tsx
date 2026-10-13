@@ -32,6 +32,7 @@ export function SituationContent({ source }: { source: string }) {
                   <ContentTable
                     key={index}
                     labelledBy={heading?.id}
+                    longText={block.rows!.some(row => row.some(cell => cell.length >= 80))}
                     columns={block.columns!.map(cell => renderSituationInline(cell, references))}
                     rows={block.rows!.map(row => row.map(cell => renderSituationInline(cell, references)))}
                   />
