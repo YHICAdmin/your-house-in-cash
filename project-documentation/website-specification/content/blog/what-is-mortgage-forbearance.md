@@ -4,6 +4,14 @@ Publication date: 2026-10-13
 
 Topics covered: Missed Mortgage Payments, Mortgage Servicer, Foreclosure Prevention
 
+Image path: /images/blog/mortgage-payments-paused.png
+
+Image alt: Model house beside a pause symbol representing temporarily paused mortgage payments
+
+Image width: 1536
+
+Image height: 1024
+
 # Mortgage Forbearance What Homeowners Need to Know
 
 Mortgage forbearance can give you temporary room to breathe when a short-term hardship makes your regular payment impossible. It is not forgiveness: the unpaid amount still has to be addressed later.
