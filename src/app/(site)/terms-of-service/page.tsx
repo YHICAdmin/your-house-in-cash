@@ -87,7 +87,7 @@ export default function TermsOfServicePage() {
 
                 <section>
                   <h2 className="text-heading-3">Contact</h2>
-                  <p>For questions about these Terms, contact <TextLink href="mailto:info@yourhousesincash.com">info@yourhousesincash.com</TextLink> or call <TextLink href="tel:2161111111">216-111-1111</TextLink>.</p>
+                  <p>For questions about these Terms, contact <TextLink href="mailto:info@yourhousesincash.com">info@yourhousesincash.com</TextLink> or call <TextLink href="tel:2165109014">(216) 510-9014</TextLink>.</p>
                 </section>
               </div>
             </div>

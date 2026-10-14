@@ -123,7 +123,7 @@ We may update this Privacy Policy from time to time. We will post the updated ve
 
 #### Contact
 
-For privacy questions, contact [info@yourhousesincash.com](mailto:info@yourhousesincash.com) or call `216-111-1111`.
+For privacy questions, contact [info@yourhousesincash.com](mailto:info@yourhousesincash.com) or call `(216) 510-9014`.
 
 # Audit Findings and Research Notes
 

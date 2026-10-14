@@ -283,8 +283,8 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 
 - Heading: **Contact**.
 - Label: **Call Us**.
-- Phone number: `216-111-1111`.
-- The phone number uses link semantics and navigates to `tel:2161111111`.
+- Phone number: `(216) 510-9014`.
+- The phone number uses link semantics and navigates to `tel:2165109014`.
 - Email: `info@yourhousesincash.com`, linked to `mailto:info@yourhousesincash.com`.
 - Physical address: **6545 Market Avenue North, North Canton, OH 44720**.
 - Service-area text: **Serving Northeast Ohio**.
@@ -539,14 +539,14 @@ Provide clear, accessible navigation.
 ### Content
 
 * Label: `Call Us`.
-* Phone number: `216-111-1111`.
+* Phone number: `(216) 510-9014`.
 * The phone number is fixed content and remains unchanged across all Breakpoints.
 * Includes the canonical Lucide `Phone` icon and a Divider.
 
 ### Component and Semantics
 
 * The complete Phone Contact uses link semantics across all Breakpoints, including the Phone icon, label, Divider, and phone number.
-* Navigates to the phone-call destination `tel:2161111111`.
+* Navigates to the phone-call destination `tel:2165109014`.
 
 ### Visual Design
 

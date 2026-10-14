@@ -84,7 +84,7 @@ export function SiteFooter({ background = "default" }: {
         <div className={styles.contact}>
           <h2 className={`${styles.heading} text-heading-4`}>Contact</h2>
           <p className={`${styles.callLabel} text-label`}>Call Us</p>
-          <TextLink href="tel:2161111111">216-111-1111</TextLink>
+          <TextLink href="tel:2165109014">(216) 510-9014</TextLink>
           <TextLink className={styles.email} href="mailto:info@yourhousesincash.com">
             info@yourhousesincash.com
           </TextLink>
