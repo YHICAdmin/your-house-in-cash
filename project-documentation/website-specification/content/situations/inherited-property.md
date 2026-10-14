@@ -24,7 +24,7 @@ For now, make sure nothing preventable happens to it.
 
 If the house is vacant, that generally means checking that it is secure, identifying urgent maintenance problems, and figuring out what is happening with insurance and essential services. A leaking pipe matters now. Whether the kitchen needs remodeling does not.
 
-Also locate whatever estate and property documents are readily available—especially a will, trust, deed, or transfer-on-death paperwork.
+Start by gathering any estate and property documents you can find, such as a will, trust documents, the property deed, or transfer-on-death paperwork.
 
 You’re trying to answer one question:
 
