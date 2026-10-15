@@ -20,7 +20,7 @@ type ContactNotification = {
   message: string;
 };
 
-const recipient = process.env.LEAD_NOTIFICATION_EMAIL ?? "nlubko@gmail.com";
+const recipient = process.env.LEAD_NOTIFICATION_EMAIL;
 
 function escapeHtml(value: string): string {
   return value.replace(/[&<>\"']/g, character => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" })[character]!);
@@ -37,8 +37,8 @@ function rows(values: Array<[string, string]>): string {
 async function deliver(subject: string, html: string): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.RESEND_FROM_EMAIL;
-  if (!apiKey || !from) {
-    console.error("Lead notification was not sent because RESEND_API_KEY or RESEND_FROM_EMAIL is not configured.");
+  if (!apiKey || !from || !recipient) {
+    console.error("Lead notification was not sent because RESEND_API_KEY, RESEND_FROM_EMAIL, or LEAD_NOTIFICATION_EMAIL is not configured.");
     return;
   }
 

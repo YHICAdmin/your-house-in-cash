@@ -22,7 +22,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Email notifications
 
-Form submissions are saved to Neon and then send a best-effort notification through Resend. Copy `.env.example` to your local environment configuration and set `RESEND_API_KEY` plus a verified `RESEND_FROM_EMAIL`. Notifications go to `nlubko@gmail.com` by default; set `LEAD_NOTIFICATION_EMAIL` to change the recipient.
+Form submissions are saved to Neon and then send a best-effort notification through Resend. Set `RESEND_API_KEY`, a verified `RESEND_FROM_EMAIL`, and `LEAD_NOTIFICATION_EMAIL` in your local environment configuration.
 
 ## Learn More
 
