@@ -286,7 +286,6 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 - Phone number: `(216) 510-9014`.
 - The phone number uses link semantics and navigates to `tel:2165109014`.
 - Email: `info@yourhousesincash.com`, linked to `mailto:info@yourhousesincash.com`.
-- Physical address: **6545 Market Avenue North, North Canton, OH 44720**.
 - Service-area text: **Serving Northeast Ohio**.
 
 ### Component and Semantics
@@ -294,7 +293,6 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 - The heading uses `H2` semantics.
 - The phone number uses the documented `Text Link` Component.
 - The email uses the documented `Text Link` Component with the Footer's regular font weight (`400`).
-- The physical address uses `address` semantics, with the street on the first line and city, state, and ZIP on the second line.
 - The service-area text uses paragraph semantics.
 
 ### Visual Design
@@ -302,17 +300,16 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 - The heading uses the global `H4` typography.
 - The **Call Us** label uses the global `Label` typography.
 - The service-area text uses the global `Body Small` typography and `Text Secondary` color.
-- The physical address uses `Body Small`, Text Secondary, and normal (non-italic) font style.
 
 ### Dimensions and Alignment
 
-- The heading, **Call Us** label, phone number, email, physical address, and service-area text form one left-aligned vertical content flow in that order. The email wraps when needed to remain within the column.
+- The heading, **Call Us** label, phone number, email, and service-area text form one left-aligned vertical content flow in that order. The email wraps when needed to remain within the column.
 
 ### Spacing
 
 - `M` (`24px`) separates the heading from the **Call Us** label across all Breakpoints.
 - `XS` (`8px`) separates the **Call Us** label from the phone number across all Breakpoints.
-- `S` (`16px`) separates the phone number, email, physical address, and service-area text from each adjacent item across all Breakpoints.
+- `S` (`16px`) separates the phone number, email, and service-area text from each adjacent item across all Breakpoints.
 
 ## Footer Bottom Row
 

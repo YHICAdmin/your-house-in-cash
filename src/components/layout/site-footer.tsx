@@ -88,10 +88,6 @@ export function SiteFooter({ background = "default" }: {
           <TextLink className={styles.email} href="mailto:info@yourhousesincash.com">
             info@yourhousesincash.com
           </TextLink>
-          <address className={`${styles.address} text-body-small`}>
-            6545 Market Avenue North<br />
-            North Canton, OH 44720
-          </address>
           <p className={`${styles.serviceArea} text-body-small`}>
             Serving Northeast Ohio
           </p>
