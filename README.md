@@ -20,6 +20,10 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Email notifications
+
+Form submissions are saved to Neon and then send a best-effort notification through Resend. Copy `.env.example` to your local environment configuration and set `RESEND_API_KEY` plus a verified `RESEND_FROM_EMAIL`. Notifications go to `nlubko@gmail.com` by default; set `LEAD_NOTIFICATION_EMAIL` to change the recipient.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
