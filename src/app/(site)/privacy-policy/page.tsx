@@ -77,7 +77,7 @@ export default function PrivacyPolicyPage() {
 
                 <section>
                   <h2 className="text-heading-3">Privacy Requests</h2>
-                  <p>You may contact us at <TextLink href="mailto:info@yourhousesincash.com">info@yourhousesincash.com</TextLink> to ask about the personal information we hold about you or to request access, correction, or deletion. We may ask for information needed to verify your request. We may keep information that we need for legal, recordkeeping, or business purposes.</p>
+                  <p>You may contact us at <TextLink href="mailto:noah@yourhouseincash.com">noah@yourhouseincash.com</TextLink> to ask about the personal information we hold about you or to request access, correction, or deletion. We may ask for information needed to verify your request. We may keep information that we need for legal, recordkeeping, or business purposes.</p>
                 </section>
 
                 <section>
@@ -87,7 +87,7 @@ export default function PrivacyPolicyPage() {
 
                 <section>
                   <h2 className="text-heading-3">Contact</h2>
-                  <p>For privacy questions, contact <TextLink href="mailto:info@yourhousesincash.com">info@yourhousesincash.com</TextLink> or call <TextLink href="tel:2165109014">(216) 510-9014</TextLink>.</p>
+                  <p>For privacy questions, contact <TextLink href="mailto:noah@yourhouseincash.com">noah@yourhouseincash.com</TextLink> or call <TextLink href="tel:2165109014">(216) 510-9014</TextLink>.</p>
                 </section>
               </div>
             </div>

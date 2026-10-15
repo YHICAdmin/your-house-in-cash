@@ -85,8 +85,8 @@ export function SiteFooter({ background = "default" }: {
           <h2 className={`${styles.heading} text-heading-4`}>Contact</h2>
           <p className={`${styles.callLabel} text-label`}>Call Us</p>
           <TextLink href="tel:2165109014">(216) 510-9014</TextLink>
-          <TextLink className={styles.email} href="mailto:info@yourhousesincash.com">
-            info@yourhousesincash.com
+          <TextLink className={styles.email} href="mailto:noah@yourhouseincash.com">
+            noah@yourhouseincash.com
           </TextLink>
           <p className={`${styles.serviceArea} text-body-small`}>
             Serving Northeast Ohio

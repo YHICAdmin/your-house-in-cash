@@ -285,7 +285,7 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 - Label: **Call Us**.
 - Phone number: `(216) 510-9014`.
 - The phone number uses link semantics and navigates to `tel:2165109014`.
-- Email: `info@yourhousesincash.com`, linked to `mailto:info@yourhousesincash.com`.
+- Email: `noah@yourhouseincash.com`, linked to `mailto:noah@yourhouseincash.com`.
 - Service-area text: **Serving Northeast Ohio**.
 
 ### Component and Semantics

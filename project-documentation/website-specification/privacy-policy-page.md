@@ -115,7 +115,7 @@ We may use your contact information to respond to your request, discuss your pro
 
 #### Privacy Requests
 
-You may contact us at [info@yourhousesincash.com](mailto:info@yourhousesincash.com) to ask about the personal information we hold about you or to request access, correction, or deletion. We may ask for information needed to verify your request. We may keep information that we need for legal, recordkeeping, or business purposes.
+You may contact us at [noah@yourhouseincash.com](mailto:noah@yourhouseincash.com) to ask about the personal information we hold about you or to request access, correction, or deletion. We may ask for information needed to verify your request. We may keep information that we need for legal, recordkeeping, or business purposes.
 
 #### Changes to This Policy
 
@@ -123,7 +123,7 @@ We may update this Privacy Policy from time to time. We will post the updated ve
 
 #### Contact
 
-For privacy questions, contact [info@yourhousesincash.com](mailto:info@yourhousesincash.com) or call `(216) 510-9014`.
+For privacy questions, contact [noah@yourhouseincash.com](mailto:noah@yourhouseincash.com) or call `(216) 510-9014`.
 
 # Audit Findings and Research Notes
 
