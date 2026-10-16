@@ -6,7 +6,7 @@ Thinking About Selling Your Rental Property? Start With the Numbers
 
 ## Supporting Copy
 
-Managing a rental takes time, money, and ongoing attention. Explore what to consider when weighing continued ownership, help with property management, or selling the property.
+Being a landlord comes with ongoing costs, responsibilities, and decisions. If the property no longer fits your plans, you can keep it, hire a property manager, or sell.
 
 # Article
 
@@ -54,7 +54,7 @@ Then consider two things that don't appear as neatly on a spreadsheet:
 
 **Your time and your equity.**
 
-A property producing a few hundred dollars per month may look attractive until you consider a roof that will need replacing, an aging HVAC system, repeated tenant turnover, or the amount of equity tied up in the property.
+A property producing a few hundred dollars per month may look attractive until you consider the time it requires and how much of your equity is tied up in it.
 
 One useful question is:
 
@@ -96,15 +96,11 @@ Depending on the property and tenant situation, that may include:
 - Waiting for buyer financing.
 - Paying applicable agent commissions and other selling costs.
 
-A tenant can add another layer.
-
-If the property is occupied under an existing lease, the timing of the lease and the buyer's plans can affect who is interested in purchasing the property and how easily the property can be shown.
-
 None of that means listing is a bad option.
 
-It simply means the highest advertised sale price isn't necessarily the number you should compare with an off-market offer.
+For some landlords, the extra work is worth it. For others, a simpler sale may be a better fit.
 
-## Selling Off-Market
+### Selling Off-Market
 
 If you've already decided that you want to sell the rental, an off-market sale can be a much simpler way to exit.
 
@@ -172,26 +168,6 @@ Then there is another part of the decision that doesn't fit neatly into the equa
 **Your involvement.**
 
 Only you can decide what those are worth.
-
-## On-Market vs. Off-Market
-
-| Consideration | On-Market / MLS | Direct Sale to Your House in Cash |
-|---|---|---|
-| Repairs before selling | May be needed | None — we buy as-is |
-| Agent commission | May apply | No agent commission |
-| Preparation for photos and showings | Typically required | Not required |
-| Open houses | Possible | None |
-| Repeated buyer showings | Typically required | None |
-| Selling with tenants | May narrow the buyer pool | Possible — no need to vacate the property for us to consider buying it |
-| Dependence on buyer mortgage approval | May apply | None — we buy with cash |
-| Closing date | Depends on the buyer and process | Coordinated with you |
-| Sale price | Potential for a higher price | Our offer may be lower |
-
-These are possibilities, not guarantees. Off-market describes how a property is marketed; financing, inspections, access, assignment and closing dates depend on the actual agreement.
-
-Neither column automatically wins.
-
-The question is which outcome matters more to you.
 
 ## What About the Tenants?
 

@@ -40,7 +40,7 @@ export const situations: Situation[] = [
   {
     slug: "landlords",
     headline: "When owning a rental no longer fits",
-    supportingCopy: "Managing a rental takes time, money, and ongoing attention. Explore what to consider when weighing continued ownership, help with property management, or selling the property.",
+    supportingCopy: "Being a landlord comes with ongoing costs, responsibilities, and decisions. If the property no longer fits your plans, you can keep it, hire a property manager, or sell.",
     image: landlordsImage,
     imageAlt: "Lease agreement with a pen and key on a dark table",
   },
