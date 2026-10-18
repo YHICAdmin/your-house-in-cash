@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { parseSituationArticle, parseSituationFinalCta } from "@/lib/situation-article";
 
-export const blogSlugs = ["what-is-real-estate-wholesaling-in-ohio", "maple-heights-rental-market-snapshot-2026", "how-to-keep-your-basement-dry", "how-much-money-will-you-net-when-you-sell-your-house", "garfield-heights-point-of-sale-inspection", "section-8-for-landlords-in-cuyahoga-county", "what-is-mortgage-forbearance", "how-much-does-it-cost-to-inherit-a-house"] as const;
+export const blogSlugs = ["what-is-real-estate-wholesaling-in-ohio", "maple-heights-rental-market-snapshot-2026", "how-to-keep-your-basement-dry", "how-much-money-will-you-net-when-you-sell-your-house", "garfield-heights-point-of-sale-inspection", "section-8-for-landlords-in-cuyahoga-county", "what-is-mortgage-forbearance", "how-much-does-it-cost-to-inherit-a-house", "what-to-do-when-tenants-stop-paying-rent-in-ohio"] as const;
 
 const toSlug = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
