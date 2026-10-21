@@ -53,11 +53,17 @@ The notice was broken down by area of the house: the garage exterior, yard, base
 
 ### The bigger items we had to fix
 
-**Water-heater safety and venting.** We had to add a missing pilot cover to the water heater and correct the flue, which had a negative pitch. These were the two items still listed at reinspection, so they were the last things we needed to finish.
+**Water-heater safety and venting.** We had to add a missing pilot cover to the water heater and correct the flue, which had a negative pitch.
 
 **Smoke and carbon-monoxide detection.** The notice called for smoke detectors and carbon-monoxide detectors in several locations. The smoke-detector items were marked for immediate compliance, so we took care of those right away.
 
 **Exterior maintenance and drainage.** We also had to address a deteriorating garage window/side-over, clean the gutters, and make the driveway drain operable. The notice covered both safety items inside the house and maintenance items outside.
+
+### This inspection was manageable
+
+Overall, this inspection was not too bad. The list had several items on it, but it could have been much more expensive if the inspector had cited heavier work.
+
+For a sense of what larger violations can cost, our [Garfield Heights point-of-sale inspection guide](/blog/garfield-heights-point-of-sale-inspection) includes a list of violations and average repair prices. Garfield Heights is a different city and its POS process is not the same, but the cost of many repairs is similar.
 
 ## Why major repairs can change the decision
 
@@ -66,12 +72,6 @@ Some POS items are manageable repairs. Others can become a larger project. Roof,
 If the house needs several substantial repairs, the question is not automatically whether to fix everything before selling. It can help to compare the repair cost, escrow requirement, time involved, and likely sale outcome. Our guide to [what to consider when a house needs major repairs](/major-repairs) explains that comparison in more detail.
 
 An as-is buyer may be willing to purchase a property with outstanding POS work. That does not remove the City's transfer requirements. Instead, it can change who completes the work and how the price, escrow, and closing paperwork are structured.
-
-## Cleveland Heights and Garfield Heights do not use the same POS process
-
-It is easy to assume that a point-of-sale inspection works the same way in every nearby city. It does not. Cleveland Heights uses its own certificate, acknowledgement, Class A classification, and escrow process. The timing, fees, inspection scope, and transfer requirements in another municipality may be different.
-
-For example, our [Garfield Heights point-of-sale inspection guide](/blog/garfield-heights-point-of-sale-inspection) explains a different city process, including its own certificate and buyer-assumption rules. If you are selling outside Cleveland Heights, confirm the rules that apply to that property's municipality rather than relying on a POS experience from another city.
 
 ## Plan for the POS before the closing date
 
