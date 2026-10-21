@@ -4,6 +4,16 @@ Publication date: 2026-10-20
 
 Topics covered: Cleveland Heights, Point-of-Sale Inspection, Certificate of Inspection, Escrow, Code Violations, Selling As Is
 
+Image 1 path: /images/blog/cleveland-heights-inspection-notice-review.png
+
+Image 1 alt: Owner reviewing a Cleveland Heights housing inspection notice at a desk.
+
+Image 1 after heading: A real-world City inspection case study: from notice to correction
+
+Image 1 width: 1536
+
+Image 1 height: 1024
+
 # Cleveland Heights Point-of-Sale Inspection: A Real-World Case Study
 
 If you are preparing to sell a house in Cleveland Heights, the point-of-sale inspection—usually called a POS—is a required part of the sale process. Cleveland Heights can also require an inspection outside of a sale—as in the real-world case discussed here, years after the property was purchased. When a sale is involved, the City requires owners to obtain a Certificate of Inspection before entering into an agreement and give the prospective buyer a copy before the contract is signed.[1]
