@@ -17,7 +17,8 @@ export function renderSituationInline(text: string, references: Record<string, {
           continue;
         }
         if (!reference) throw new Error(`Missing article reference: ${referenceKey}`);
-        nodes.push(<TextLink key={match.index} href={reference.href} title={"title" in reference ? reference.title : undefined}>{match[2] ?? match[4] ?? `[${match[6]}]`}</TextLink>);
+        const isDownloadableDocument = reference.href.startsWith("/documents/") && reference.href.endsWith(".pdf");
+        nodes.push(<TextLink key={match.index} href={reference.href} title={"title" in reference ? reference.title : undefined} download={isDownloadableDocument || undefined}>{match[2] ?? match[4] ?? `[${match[6]}]`}</TextLink>);
       }
       cursor = match.index! + match[0].length;
     }
