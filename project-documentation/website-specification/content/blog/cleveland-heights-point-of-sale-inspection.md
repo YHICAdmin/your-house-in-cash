@@ -41,18 +41,23 @@ The report itself determines what is cited at a particular house. It is not a ge
 
 ## A real-world City inspection case study: from notice to correction
 
-The documents used for this article are official Cleveland Heights inspection and violation notices. They show a City inspection process: the City issued violation notices years after the property was purchased, when no ownership transfer was underway. After the cited work was completed, the City sent written confirmation that the corrections had been accepted.
+I recently got a letter from the City about one of my rental properties in Cleveland Heights. We'd owned the house for years and had no plans to sell it, but the City notified us that it was time for another inspection.
 
-That distinction matters. A POS is tied to a sale or conveyance, while rental and systematic inspections can occur without a sale. Cleveland Heights states that rental properties receive interior and exterior inspections on a three-year rotation.[4]
+The notice included a list of things we needed to fix. We took care of everything, and after the City came back to reinspect the property, they sent us a letter confirming that all the issues had been resolved.
 
-The practical sequence in this case was:
+You can [download the redacted case-study documents](/documents/cleveland-heights-inspection-case-study-redacted.pdf) to see the actual list of violations.
 
-- The City inspection identified conditions that needed attention.
-- The owner received violation notice documentation.
-- The cited work was completed.
-- The City confirmed that the corrections had been accepted.
+### What the notice looked like
 
-For an owner, the useful takeaway is that a City violation notice does not necessarily mean the property is being sold. It identifies requirements the City expects the owner to address. If you are selling, begin the POS early as well, so the seller, buyer, and title company have time to account for its separate transfer requirements before closing.
+The notice was broken down by area of the house: the garage exterior, yard, basement, stairs, kitchen, and bedrooms. Under each area, it listed the work that needed to be done and the City code section. By the time of the reinspection, only a couple of items were still open.
+
+### The bigger items we had to fix
+
+**Water-heater safety and venting.** We had to add a missing pilot cover to the water heater and correct the flue, which had a negative pitch. These were the two items still listed at reinspection, so they were the last things we needed to finish.
+
+**Smoke and carbon-monoxide detection.** The notice called for smoke detectors and carbon-monoxide detectors in several locations. The smoke-detector items were marked for immediate compliance, so we took care of those right away.
+
+**Exterior maintenance and drainage.** We also had to address a deteriorating garage window/side-over, clean the gutters, and make the driveway drain operable. The notice covered both safety items inside the house and maintenance items outside.
 
 ## Why major repairs can change the decision
 
@@ -113,4 +118,3 @@ Your House in Cash can make a no-obligation as-is cash offer, so you can compare
 [1]: https://www.clevelandheights.gov/205/Point-of-Sale-Inspections
 [2]: https://www.clevelandheights.gov/209/Escrow-Requirements
 [3]: https://www.clevelandheights.gov/m/FAQ
-[4]: https://www.clevelandheights.gov/213/Rental-Property-Inspections
