@@ -8,6 +8,19 @@
   gap: var(--spacing-m);
 }
 
+.marketingConsent {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.marketingConsent input {
+  flex: 0 0 auto;
+  margin-top: 0.2em;
+}
+
 .actions {
   margin-top: var(--spacing-l);
 }

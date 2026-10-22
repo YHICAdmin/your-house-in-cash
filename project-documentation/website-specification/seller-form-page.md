@@ -101,6 +101,7 @@ Guide sellers through submitting their contact and property details to request a
   2. `Your Name`
   3. `Phone Number`
   4. `Email Address`
+  5. Optional email-marketing consent: `Yes, email me occasional updates and offers from Your House in Cash. I can unsubscribe at any time. See the Privacy Policy.`
 * Primary action: `Get My Cash Offer`.
 * Phone Number placeholder: `e.g. 216-555-1234`.
 * Save-failure message: `We couldn’t save your details. Please try again.`
@@ -120,6 +121,7 @@ Guide sellers through submitting their contact and property details to request a
 * `Your Name` uses the shared [Text Field](../form.md#text-field) as a single full-name field.
 * `Phone Number` uses the shared [Phone Field](../form.md#phone-field).
 * `Email Address` uses the shared [Email Field](../form.md#email-field).
+* The email-marketing checkbox follows the shared [Optional Marketing Email Consent](../form.md#optional-marketing-email-consent) requirements. It is optional and unchecked by default.
 * `Your Name` is valid when non-empty after trimming leading and trailing whitespace. It does not require two words or restrict the language or script used.
 
 ### Dimensions and Alignment

@@ -8,9 +8,9 @@ const occupancies = ["Owner-occupied", "Tenant-occupied", "Vacant", "Other / Not
 const reasons = ["Inherited property", "Moving / Relocating", "Financial difficulties", "Too many repairs", "Tired of being a landlord", "Downsizing", "Other"] as const;
 const timelines = ["As soon as possible", "Within 1–3 months", "Within 3–6 months", "More than 6 months", "Just exploring"] as const;
 
-export type LeadBasics = { address: string; name: string; phone: string; email: string };
+export type LeadBasics = { address: string; name: string; phone: string; email: string; emailMarketingOptIn: boolean };
 export type LeadDetails = { condition: string | null; occupancy: string | null; reasons: string[]; timeline: string | null; notes: string | null };
-export type ContactMessage = { name: string; email: string; phone: string | null; address: string | null; message: string };
+export type ContactMessage = { name: string; email: string; phone: string | null; address: string | null; message: string; emailMarketingOptIn: boolean };
 
 function record(value: unknown): Record<string, unknown> | null { return typeof value === "object" && value !== null && !Array.isArray(value) ? value as Record<string, unknown> : null; }
 function string(value: unknown): string | null { return typeof value === "string" ? value.trim() : null; }
@@ -23,11 +23,12 @@ function choice(value: unknown, allowed: readonly string[]): string | null | und
 }
 function email(value: unknown): string | null { const result = string(value); return result && emailPattern.test(result) ? result.toLowerCase() : null; }
 function phone(value: unknown, required: boolean): string | null | undefined { const result = string(value); if (!result) return required ? undefined : null; return validUSPhone(result) ? normalizePhone(result) : undefined; }
+function optionalBoolean(value: unknown): boolean | undefined { return value === undefined ? false : typeof value === "boolean" ? value : undefined; }
 
 export function parseLeadBasics(value: unknown): LeadBasics | null {
   const body = record(value); if (!body) return null;
-  const address = string(body.address), name = string(body.name), phoneNumber = phone(body.phone, true), emailAddress = email(body.email);
-  return address && name && phoneNumber && emailAddress ? { address, name, phone: phoneNumber, email: emailAddress } : null;
+  const address = string(body.address), name = string(body.name), phoneNumber = phone(body.phone, true), emailAddress = email(body.email), emailMarketingOptIn = optionalBoolean(body.emailMarketingOptIn);
+  return address && name && phoneNumber && emailAddress && emailMarketingOptIn !== undefined ? { address, name, phone: phoneNumber, email: emailAddress, emailMarketingOptIn } : null;
 }
 
 export function parseLeadDetails(value: unknown): LeadDetails | null {
@@ -40,6 +41,6 @@ export function parseLeadDetails(value: unknown): LeadDetails | null {
 
 export function parseContactMessage(value: unknown): ContactMessage | null {
   const body = record(value); if (!body) return null;
-  const name = string(body.name), emailAddress = email(body.email), phoneNumber = phone(body.phone, false), address = optionalString(body.address), message = string(body.message);
-  return name && emailAddress && phoneNumber !== undefined && address !== undefined && message && message.length <= CONTACT_MESSAGE_MAX_LENGTH ? { name, email: emailAddress, phone: phoneNumber, address, message } : null;
+  const name = string(body.name), emailAddress = email(body.email), phoneNumber = phone(body.phone, false), address = optionalString(body.address), message = string(body.message), emailMarketingOptIn = optionalBoolean(body.emailMarketingOptIn);
+  return name && emailAddress && phoneNumber !== undefined && address !== undefined && message && message.length <= CONTACT_MESSAGE_MAX_LENGTH && emailMarketingOptIn !== undefined ? { name, email: emailAddress, phone: phoneNumber, address, message, emailMarketingOptIn } : null;
 }

@@ -111,7 +111,7 @@ We keep lead and inquiry information for three years after our last meaningful i
 
 #### Marketing Communications
 
-We may use your contact information to respond to your request, discuss your property, provide an offer, and follow up about a possible transaction. If we send promotional email, you can opt out by using the unsubscribe instructions in the message or contacting us. Submitting a form does not itself give permission for automated marketing calls or texts.
+We may use your contact information to respond to your request, discuss your property, provide an offer, and follow up about a possible transaction. Where a form offers an optional promotional-email checkbox, we use it to record your affirmative choice to receive occasional updates and offers. You can opt out of promotional email by using the unsubscribe instructions in the message or contacting us. Submitting a form does not itself give permission for automated marketing calls or texts.
 
 #### Privacy Requests
 

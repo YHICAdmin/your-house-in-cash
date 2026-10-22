@@ -12,8 +12,9 @@ import styles from "./contact-form.module.css";
 
 const keys = ["name", "email", "phone", "address", "message"] as const;
 type Key = typeof keys[number];
-type Values = Record<Key, string>;
-const empty: Values = { name: "", email: "", phone: "", address: "", message: "" };
+type FieldValues = Record<Key, string>;
+type Values = FieldValues & { emailMarketingOptIn: boolean };
+const empty: Values = { name: "", email: "", phone: "", address: "", message: "", emailMarketingOptIn: false };
 const ids: Record<Key, string> = { name: "contact-name", email: "contact-email", phone: "contact-phone", address: "contact-address", message: "contact-message" };
 
 function valid(key: Key, value: string) {
@@ -27,7 +28,7 @@ function valid(key: Key, value: string) {
 
 export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
   const [values, setValues] = useState(empty);
-  const [errors, setErrors] = useState<Partial<Values>>({});
+  const [errors, setErrors] = useState<Partial<FieldValues>>({});
   const [failure, setFailure] = useState("");
   const [success, setSuccess] = useState(false);
   const [pending, setPending] = useState(false);
@@ -53,7 +54,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
 
   const submit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const nextErrors = Object.fromEntries(keys.map(key => [key, valid(key, values[key])])) as Values;
+    const nextErrors = Object.fromEntries(keys.map(key => [key, valid(key, values[key])])) as FieldValues;
     setErrors(nextErrors);
     const firstInvalid = keys.find(key => nextErrors[key]);
     if (firstInvalid) {
@@ -87,6 +88,11 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
       <PhoneField id={ids.phone} name="phone" label="Phone number (optional)" disabled={pending} value={values.phone} onValueChange={value => change("phone", value)} onBlur={() => setErrors(current => ({ ...current, phone: valid("phone", values.phone) }))} error={errors.phone} />
       <AddressField id={ids.address} label="Property address (optional)" disabled={pending} value={values.address} onValueChange={value => change("address", value)} onBlur={() => setErrors(current => ({ ...current, address: valid("address", values.address) }))} error={errors.address} />
       <Textarea id={ids.message} name="message" label="Message" guidance={`${(CONTACT_MESSAGE_MAX_LENGTH - values.message.length).toLocaleString()} characters remaining.`} required disabled={pending} rows={5} maxLength={CONTACT_MESSAGE_MAX_LENGTH} value={values.message} onChange={event => change("message", event.target.value)} onBlur={() => setErrors(current => ({ ...current, message: valid("message", values.message) }))} error={errors.message} />
+      <label className={`text-body-small focus-container ${styles.marketingConsent}`}>
+        <input name="emailMarketingOptIn" type="checkbox" checked={values.emailMarketingOptIn} disabled={pending}
+          onChange={event => setValues(current => ({ ...current, emailMarketingOptIn: event.target.checked }))} />
+        <span>Yes, email me occasional updates and offers from Your House in Cash. I can unsubscribe at any time. See the <TextLink href="/privacy-policy">Privacy Policy</TextLink>.</span>
+      </label>
     </div>
     <div className={styles.actions}>
       {failure && <p className={`${styles.failure} text-body-small`} role="alert">{failure}</p>}

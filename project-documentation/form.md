@@ -202,6 +202,13 @@ Inherits [Field](#field).
 * When a native radio or checkbox has visible focus, apply the global [Focus-Visible Treatment](accessibility.md#focus-visible-treatment) around its full option container instead of a separate outline around the indicator. Keyboard focus remains on the native control; the container does not become an additional tab stop.
 * While a choice group displays a validation error, set `aria-invalid="true"` on its `fieldset` and include the group error message's ID in the fieldset's `aria-describedby`, preserving any existing references to group guidance.
 
+# Optional Marketing Email Consent
+
+* A form may offer an unchecked optional checkbox for promotional email. It must not be required to submit the form and must never be preselected.
+* Its visible copy must identify the sender, describe the promotional-email purpose, state that recipients can unsubscribe, and link to the Privacy Policy.
+* This consent does not authorize automated marketing calls or texts. Those channels require a separate, legally reviewed consent flow.
+* When selected, submission storage records the affirmative choice, server capture time, and the consent-copy version. An unselected checkbox stores no consent time or version.
+
 # Submission State
 
 ## Component and Semantics

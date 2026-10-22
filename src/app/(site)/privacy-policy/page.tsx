@@ -72,7 +72,7 @@ export default function PrivacyPolicyPage() {
 
                 <section>
                   <h2 className="text-heading-3">Marketing Communications</h2>
-                  <p>We may use your contact information to respond to your request, discuss your property, provide an offer, and follow up about a possible transaction. If we send promotional email, you can opt out by using the unsubscribe instructions in the message or contacting us. Submitting a form does not itself give permission for automated marketing calls or texts.</p>
+                  <p>We may use your contact information to respond to your request, discuss your property, provide an offer, and follow up about a possible transaction. Where a form offers an optional promotional-email checkbox, we use it to record your affirmative choice to receive occasional updates and offers. You can opt out of promotional email by using the unsubscribe instructions in the message or contacting us. Submitting a form does not itself give permission for automated marketing calls or texts.</p>
                 </section>
 
                 <section>
