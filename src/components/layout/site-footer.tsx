@@ -74,10 +74,11 @@ export function SiteFooter({ background = "default" }: {
         </nav>
 
         <div className={styles.legal}>
-          <h2 className={`${styles.heading} text-heading-4`}>Legal</h2>
+          <h2 className={`${styles.heading} text-heading-4`}>Legal &amp; Resources</h2>
           <ul className={styles.links}>
             <li><TextLink href="/privacy-policy">Privacy Policy</TextLink></li>
             <li><TextLink href="/terms-of-service">Terms of Service</TextLink></li>
+            <li><TextLink href="/sitemap.xml">Sitemap</TextLink></li>
           </ul>
         </div>
 

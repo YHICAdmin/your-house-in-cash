@@ -137,42 +137,42 @@ Contains exactly two benefits in the order supplied by the consuming page. Each 
 
 ## Purpose
 
-Provide secondary navigation, company information, legal information, and contact details in a clear and unobtrusive way, while creating a structured conclusion to the page.
+Provide secondary navigation, company information, legal and resource information, and contact details in a clear and unobtrusive way, while creating a structured conclusion to the page.
 
 ## Layout
 
-The Footer is divided into Company, Navigation, Legal, and Contact content areas.
+The Footer is divided into Company, Navigation, Legal & Resources, and Contact content areas.
 
 - The outer System Lines bound the Footer content, using the globally defined content padding.
 - Internal System Lines serve as alignment axes between content areas.
 
 ### Desktop
 
-- Company occupies Grid Columns `1–3`, Navigation occupies Grid Columns `4–6`, Legal occupies Grid Columns `7–9`, and Contact occupies Grid Columns `10–12`.
-- Company, Navigation, Legal, and Contact are top-aligned within one shared Grid row.
+- Company occupies Grid Columns `1–3`, Navigation occupies Grid Columns `4–6`, Legal & Resources occupies Grid Columns `7–9`, and Contact occupies Grid Columns `10–12`.
+- Company, Navigation, Legal & Resources, and Contact are top-aligned within one shared Grid row.
 - The Footer Bottom Row spans Grid Columns `1–12` across all four visual areas.
 
 ### Tablet
 
 - Company occupies Grid Columns `1–4` and Navigation occupies Grid Columns `5–8` in the first row.
-- Legal occupies Grid Columns `1–4` and Contact occupies Grid Columns `5–8` in the second row.
+- Legal & Resources occupies Grid Columns `1–4` and Contact occupies Grid Columns `5–8` in the second row.
 - The two content areas within each row are top-aligned.
 - The Footer Bottom Row spans Grid Columns `1–8`.
 
 ### Mobile
 
-- Company, Navigation, Legal, Contact, and the Footer Bottom Row each occupy Grid Columns `1–4` in one full-width flow and preserve that canonical document order.
+- Company, Navigation, Legal & Resources, Contact, and the Footer Bottom Row each occupy Grid Columns `1–4` in one full-width flow and preserve that canonical document order.
 
 ### Visual Design
 
 - Uses the global `Background` (`#FFFFFF`) by default. The consuming page may override it with an approved global Background System color; only the override is documented locally.
 - Uses no top Border or Shadow.
-- All Footer text links, including Navigation, Legal, and the phone number, use font weight `400` as a Footer-specific override of the `Text Link` Component.
+- All Footer text links, including Navigation, Legal & Resources, and the phone number, use font weight `400` as a Footer-specific override of the `Text Link` Component.
 
 ### Spacing
 
 - On Tablet, `XL` (`48px`) separates the first content-area row from the second content-area row.
-- On Mobile, `XL` (`48px`) separates adjacent Company, Navigation, Legal, and Contact content areas.
+- On Mobile, `XL` (`48px`) separates adjacent Company, Navigation, Legal & Resources, and Contact content areas.
 - Across all Breakpoints, `XL` (`48px`) separates the complete upper content-area composition from the Footer Bottom Row Divider.
 
 ## Component and Semantics
@@ -248,34 +248,35 @@ The Footer is divided into Company, Navigation, Legal, and Contact content areas
 
 - The visible **Explore** heading provides the Navigation landmark's accessible name.
 
-## Legal
+## Legal & Resources
 
 ### Content
 
-- Heading: **Legal**.
+- Heading: **Legal & Resources**.
 - `Privacy Policy` — `/privacy-policy`.
 - `Terms of Service` — `/terms-of-service`.
+- `Sitemap` — `/sitemap.xml`.
 
 ### Component and Semantics
 
 - The heading uses `H2` semantics.
-- The Legal links use one semantic unordered list with one list item per link.
+- The Legal & Resources links use one semantic unordered list with one list item per link.
 - Each link uses the documented `Text Link` Component with link semantics.
 
 ### Visual Design
 
-- Legal links use the global `Body Small` typography at every breakpoint.
+- Legal & Resources links use the global `Body Small` typography at every breakpoint.
 - The heading uses the global `H4` typography.
-- The Legal link list retains its semantic list structure without visible markers or default list margin or padding.
+- The Legal & Resources link list retains its semantic list structure without visible markers or default list margin or padding.
 
 ### Dimensions and Alignment
 
-- The Legal links form one left-aligned vertical content flow in canonical order.
+- The Legal & Resources links form one left-aligned vertical content flow in canonical order.
 
 ### Spacing
 
-- `M` (`24px`) separates the heading from the Legal link list across all Breakpoints.
-- `S` (`16px`) separates the two Legal links across all Breakpoints.
+- `M` (`24px`) separates the heading from the Legal & Resources link list across all Breakpoints.
+- `S` (`16px`) separates the three Legal & Resources links across all Breakpoints.
 
 ## Contact
 
