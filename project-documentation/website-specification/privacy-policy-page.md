@@ -91,7 +91,7 @@ When you type at least three characters into a property-address field, the text 
 
 When you visit the website, our website host and service providers may receive standard technical information, such as your IP address, browser type, device information, pages requested, and the date and time of your visit. We use this information to operate, maintain, and protect the website.
 
-We do not use advertising pixels or website analytics tools at this time. Third-party features, including Google Maps and Geoapify address autocomplete, may use cookies or similar technologies under their own privacy policies.
+As of the effective date, we do not use advertising pixels or website analytics tools. Third-party features, including Google Maps and Geoapify address autocomplete, may use cookies or similar technologies under their own privacy policies.
 
 #### Who Receives Information
 

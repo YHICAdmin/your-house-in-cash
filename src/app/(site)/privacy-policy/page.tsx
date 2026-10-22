@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
                 <section>
                   <h2 className="text-heading-3">Information Collected Automatically</h2>
                   <p>When you visit the website, our website host and service providers may receive standard technical information, such as your IP address, browser type, device information, pages requested, and the date and time of your visit. We use this information to operate, maintain, and protect the website.</p>
-                  <p>We do not use advertising pixels or website analytics tools at this time. Third-party features, including Google Maps and Geoapify address autocomplete, may use cookies or similar technologies under their own privacy policies.</p>
+                  <p>As of October 12, 2026, we do not use advertising pixels or website analytics tools. Third-party features, including Google Maps and Geoapify address autocomplete, may use cookies or similar technologies under their own privacy policies.</p>
                 </section>
 
                 <section>
