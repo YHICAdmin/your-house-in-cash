@@ -24,6 +24,21 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 Cash-offer submissions are saved to Neon, then immediately send best-effort Resend emails to the internal team and the seller. Set `RESEND_API_KEY`, a verified `RESEND_FROM_EMAIL`, and `LEAD_NOTIFICATION_EMAIL` in your environment.
 
+## Production cash-offer form check
+
+The GitHub Actions workflow in `.github/workflows/production-cash-offer-smoke-test.yml` submits the live cash-offer form daily at 14:15 UTC (10:15 AM in Bolivia). A visible success confirmation proves that the production database saved the lead. The resulting lead, email, and SMS are intentional; the workflow does not delete the lead.
+
+Configure these repository secrets before running the workflow:
+
+* `PRODUCTION_TEST_URL` — the public production site URL, without a trailing slash.
+* `PRODUCTION_TEST_EMAIL` — `test@yourhouseincash.com`.
+* `PRODUCTION_TEST_PHONE` — the existing ten-digit phone number that should receive the normal confirmation SMS.
+* `PRODUCTION_TEST_ALERT_RESEND_API_KEY` — a Resend API key used only to send test-failure alerts.
+* `PRODUCTION_TEST_ALERT_FROM_EMAIL` — a verified Resend sender address.
+* `PRODUCTION_TEST_ALERT_EMAIL` — the recipient for failed-test alerts, such as `test@yourhouseincash.com`.
+
+You can run the check manually from the GitHub Actions page with **Production cash-offer smoke test → Run workflow**. It intentionally uses the normal production submission path and does not alter the application code, API, or database schema.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
