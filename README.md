@@ -24,9 +24,9 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 Cash-offer submissions are saved to Neon, then immediately send best-effort Resend emails to the internal team and the seller. Set `RESEND_API_KEY`, a verified `RESEND_FROM_EMAIL`, and `LEAD_NOTIFICATION_EMAIL` in your environment.
 
-## Production cash-offer form check
+## Production form check
 
-The GitHub Actions workflow in `.github/workflows/production-cash-offer-smoke-test.yml` submits the live cash-offer form daily at 14:15 UTC (10:15 AM in Bolivia). A visible success confirmation proves that the production database saved the lead. The resulting lead, email, and SMS are intentional; the workflow does not delete the lead.
+The GitHub Actions workflow in `.github/workflows/production-cash-offer-smoke-test.yml` submits the live cash-offer and Contact Us forms daily at 14:15 UTC (10:15 AM in Bolivia). Visible success confirmations prove that the production database saved a lead and contact message. The resulting lead, messages, emails, and cash-offer SMS are intentional; the workflow does not delete database records. The Contact Us test leaves its optional phone field blank, so it sends no SMS.
 
 Configure these repository secrets before running the workflow:
 
@@ -37,7 +37,7 @@ Configure these repository secrets before running the workflow:
 * `PRODUCTION_TEST_ALERT_FROM_EMAIL` — a verified Resend sender address.
 * `PRODUCTION_TEST_ALERT_EMAIL` — the recipient for failed-test alerts, such as `test@yourhouseincash.com`.
 
-You can run the check manually from the GitHub Actions page with **Production cash-offer smoke test → Run workflow**. It intentionally uses the normal production submission path and does not alter the application code, API, or database schema.
+You can run the check manually from the GitHub Actions page with **Production form smoke test → Run workflow**. It intentionally uses the normal production submission path and does not alter the application code, API, or database schema.
 
 ## Learn More
 

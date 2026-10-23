@@ -1,4 +1,4 @@
-name: Production cash-offer smoke test
+name: Production form smoke test
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  cash-offer-form:
+  production-forms:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
@@ -26,7 +26,7 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: production-cash-offer-failure
+          name: production-form-failure
           path: |
             playwright-report
             test-results
@@ -43,4 +43,4 @@ jobs:
           curl --fail-with-body --request POST https://api.resend.com/emails \
             --header "Authorization: Bearer $RESEND_API_KEY" \
             --header "Content-Type: application/json" \
-            --data "{\"from\":\"$RESEND_FROM_EMAIL\",\"to\":[\"$ALERT_EMAIL\"],\"subject\":\"Production cash-offer form test failed\",\"html\":\"<p>The production cash-offer form smoke test failed.</p><p><a href='$RUN_URL'>View the failed run</a></p>\"}"
+            --data "{\"from\":\"$RESEND_FROM_EMAIL\",\"to\":[\"$ALERT_EMAIL\"],\"subject\":\"Production form test failed\",\"html\":\"<p>A production form smoke test failed.</p><p><a href='$RUN_URL'>View the failed run</a></p>\"}"
