@@ -8,7 +8,7 @@ on:
 jobs:
   production-forms:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     env:
       PRODUCTION_TEST_URL: ${{ secrets.PRODUCTION_TEST_URL }}
       PRODUCTION_TEST_EMAIL: ${{ secrets.PRODUCTION_TEST_EMAIL }}
@@ -19,6 +19,11 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run test:production-form
