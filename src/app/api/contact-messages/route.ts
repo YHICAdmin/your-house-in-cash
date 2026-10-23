@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { sql } from "@/lib/db";
-import { notifyContactMessage } from "@/lib/notifications";
+import { notifyContactMessage, notifyContactSenderConfirmation } from "@/lib/notifications";
 import { parseContactMessage } from "@/lib/submissions";
 
 const EMAIL_MARKETING_CONSENT_VERSION = "email-marketing-v1";
@@ -11,7 +11,15 @@ export async function POST(request: Request) {
   if (!message) return NextResponse.json({ error: "Invalid message details." }, { status: 400 });
   try {
     const rows = await sql`insert into contact_messages (sender_name, email_address, phone_digits, property_address, message, email_marketing_opt_in, email_marketing_consented_at, email_marketing_consent_version) values (${message.name}, ${message.email}, ${message.phone}, ${message.address}, ${message.message}, ${message.emailMarketingOptIn}, ${message.emailMarketingOptIn ? sql`now()` : null}, ${message.emailMarketingOptIn ? EMAIL_MARKETING_CONSENT_VERSION : null}) returning id` as { id: string }[];
-    await notifyContactMessage(message);
-    return NextResponse.json({ messageId: rows[0].id }, { status: 201 });
+    const saved = rows[0];
+    try {
+      const delivery = await notifyContactMessage(message);
+      if (!delivery.delivered) console.error("Contact-message notification was not delivered.", delivery.error);
+    } catch (error) { console.error("Contact-message notification failed unexpectedly.", error); }
+    try {
+      const delivery = await notifyContactSenderConfirmation(message, `contact-message-confirmation/${saved.id}`);
+      if (!delivery.delivered) console.error("Contact confirmation email was not delivered.", delivery.error);
+    } catch (error) { console.error("Contact confirmation email failed unexpectedly.", error); }
+    return NextResponse.json({ messageId: saved.id }, { status: 201 });
   } catch { return NextResponse.json({ error: "Unable to save message." }, { status: 500 }); }
 }

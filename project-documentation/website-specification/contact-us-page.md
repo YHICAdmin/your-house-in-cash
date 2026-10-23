@@ -127,9 +127,9 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 
 - Apply the shared Form validation triggers: show a field error after blur or an attempted submission, then clear it as soon as the edited value becomes valid. Validate required values after trimming; validate nonempty Email and Phone number values using their shared field rules. A manually entered Property address is accepted.
 - Preserve all entered values when validation fails or a submission request fails.
-- When a live submission integration is connected, show `Sending…` while its request is pending, keep entered values visible, prevent edits and duplicate submissions, and announce the pending state through the shared Form behavior. Replace the form controls with the confirmed-success message only after the integration confirms receipt.
-- Until a live integration exists, a valid submission in production displays the submission-failure message near the submit button, with all entered values and fields available for another attempt. It does not enter a pending-request state or display success.
-- When a live submission fails, keep the form and its values available and display the same failure message near the submit button so the visitor can retry.
+- Show `Sending…` while the submission request is pending, keep entered values visible, prevent edits and duplicate submissions, and announce the pending state through the shared Form behavior. Replace the form controls with the confirmed-success message only after the server confirms that the message was saved.
+- After a successful save, send an immediate best-effort internal notification and a confirmation email to the sender. A notification delivery failure is logged but does not change the successful form response or discard the saved message.
+- When a submission fails before it is saved, keep the form and its values available and display the failure message near the submit button so the visitor can retry.
 
 ### Accessibility
 
@@ -144,7 +144,15 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 - The card fills the available width up to `640px`; use `M` (`24px`) padding on Mobile and `XL` (`48px`) on Tablet and Desktop.
 - Show the existing confirmation message as a visible H1 and supporting text: `Thanks for reaching out.` followed by `I've received your message and will be in touch.`
 
+## Contact Confirmation Email
+
+- Send the sender a confirmation email immediately after the contact message is saved.
+- Subject: `Thanks for reaching out`.
+- Do not include a logo. Greet the sender by first name when available, and confirm that Noah received the message and will be in touch soon.
+- Invite the sender to reply to the email with any questions, then sign off as Noah.
+- Use the configured Resend sender identity. The reply address is determined by that sender configuration.
+
 ### Technical Requirements
 
-- No contact-form submission integration exists in the current project.
-- Before live submission can be implemented, define and connect a server-side message destination and a success/failure response contract. Only a confirmed successful response may trigger the production success state.
+- Submit messages to the server-side contact-message endpoint. The endpoint validates and persists the message before returning a successful response; only that response may trigger the production success state.
+- The endpoint sends the internal notification and sender confirmation through the existing Resend integration after persistence. Email delivery is best-effort and must not affect the saved-message response.
