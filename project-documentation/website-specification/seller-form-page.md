@@ -184,8 +184,10 @@ Guide sellers through submitting their contact and property details to request a
 ## Seller Confirmation Email
 
 * Subject: `We received your cash-offer request`.
+* Show the Your House in Cash logo from the public `/brand/Logo.jpeg` asset at the top of the email.
 * Greet the seller by first name when available.
-* Confirm receipt of the request for the submitted property address and state that the team will review it and get in touch.
+* Thank the seller for reaching out about the submitted property address, state that Noah will review it shortly, and reassure them that the conversation carries no pressure or obligation.
+* Invite the seller to reply to the email with any questions and sign the email from Noah at Your House in Cash.
 
 ### Accessibility
 
