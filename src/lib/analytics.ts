@@ -1,5 +1,6 @@
 export const analyticsEventNames = {
   clickToCall: "click_to_call",
+  contactMessageSent: "contact_message_sent",
   generateLead: "generate_lead",
 } as const;
 

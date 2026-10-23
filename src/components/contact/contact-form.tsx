@@ -8,6 +8,7 @@ import { PhoneField } from "@/components/form/phone-field";
 import { AddressField } from "@/components/form/address-field";
 import { CONTACT_MESSAGE_MAX_LENGTH } from "@/lib/form-limits";
 import { validUSPhone } from "@/lib/phone";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 import styles from "./contact-form.module.css";
 
 const keys = ["name", "email", "phone", "address", "message"] as const;
@@ -33,6 +34,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
   const [success, setSuccess] = useState(false);
   const [pending, setPending] = useState(false);
   const confirmationRef = useRef<HTMLParagraphElement>(null);
+  const submissionKey = useRef<string | null>(null);
 
   useEffect(() => {
     if (success) {
@@ -64,12 +66,16 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
 
     setPending(true);
     try {
+      const key = getSubmissionKey();
       const response = await fetch("/api/contact-messages", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Idempotency-Key": key },
         body: JSON.stringify(values),
       });
       if (!response.ok) throw Error();
+      const result = await response.json() as { created: boolean };
+      if (result.created) trackAnalyticsEvent("contact_message_sent");
+      window.sessionStorage.removeItem("contact-message-submission-key");
       handleSuccess();
     } catch {
       setFailure("Your message couldn’t be sent. Please try again.");
@@ -77,6 +83,15 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
       setPending(false);
     }
   };
+
+  function getSubmissionKey() {
+    if (submissionKey.current) return submissionKey.current;
+    const stored = window.sessionStorage.getItem("contact-message-submission-key");
+    const key = stored ?? crypto.randomUUID();
+    window.sessionStorage.setItem("contact-message-submission-key", key);
+    submissionKey.current = key;
+    return key;
+  }
 
   if (success) return <p ref={confirmationRef} tabIndex={-1} role="status" className="text-body">Thanks for reaching out. I’ve received your message and will be in touch.</p>;
 
