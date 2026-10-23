@@ -1,6 +1,6 @@
 # Purpose
 
-Provide a focused conversion flow for homeowners requesting a cash offer. Collect and save the basic lead first, then invite the seller to supply additional property information with minimal typing.
+Provide a focused conversion flow for homeowners requesting a cash offer, collecting the lead and any optional message in one submission.
 
 # Page Routing
 
@@ -21,8 +21,7 @@ Guide sellers through submitting their contact and property details to request a
 ## Layout
 
 * One large, horizontally centered Form Card is the primary element, with an abstract brand background surrounding it.
-* The Form Card's content follows one vertical column at all Breakpoints, including the fields in Step 1 and question groups in Step 2.
-* In Step 2, each choice group uses two equal-width columns with each option filling its column. When a choice group's available content width is `400px` or less, its options use one column.
+* The Form Card's content follows one vertical column at all Breakpoints.
 * The Form Card begins after the main form area's inherited global Section top padding, measured from the bottom of the Minimal Header.
 
 ### Page Background
@@ -52,9 +51,9 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Component and Semantics
 
-* Contains the currently displayed form step or Success State.
-* Each form step uses native form semantics. The active state's primary heading uses `H1` semantics.
-* Uses the shared [Form](../form.md) definitions for text fields, choice controls, validation feedback, and submission state.
+* Contains the form or Success State.
+* The form uses native form semantics. The active state's primary heading uses `H1` semantics.
+* Uses the shared [Form](../form.md) definitions for text fields, validation feedback, and submission state.
 
 ### Visual Design
 
@@ -65,32 +64,28 @@ Guide sellers through submitting their contact and property details to request a
 ### Dimensions and Alignment
 
 * Width: `100%` of the available width, up to a maximum of `640px`, while preserving global page padding.
-* The same Card container is retained for Step 1, Step 2, and Success State, with stable width and placement while its contents change. Its top edge remains at the same position within the main form area throughout the flow.
+* The same Card container is retained for the form and Success State, with stable width and placement while its contents change. Its top edge remains at the same position within the main form area throughout the flow.
 * Card height is determined by the content of the current state. The Card grows or shrinks downward.
 
 ### Spacing
 
 * Internal Padding: `XL` (`48px`) on Desktop and Tablet; `L` (`32px`) on Mobile.
-* Step 1 begins with its heading.
+* The form begins with its heading.
 * `S` (`16px`) separates a heading from its supporting copy where present.
 * `L` (`32px`) separates the step introduction from its fields.
-* `M` (`24px`) separates adjacent field or question groups.
+* `M` (`24px`) separates adjacent fields.
 * `L` (`32px`) separates the final field from the primary action.
 
 ### Interaction
 
 * Contents change inside the existing Card; the page does not navigate to another route.
-* The Step 1-to-Step 2 transition combines a fade with `16px` of horizontal movement over `200ms`, using `ease-out`. The outgoing content moves left and fades out; the incoming content enters from the right and fades in.
-* Returning from Step 2 to Step 1 with `← Edit your details` reverses the direction using the same `16px` movement, `200ms` duration, and `ease-out`: outgoing content moves right and fades out, while incoming content enters from the left and fades in.
-* When `prefers-reduced-motion: reduce` applies, the content is replaced immediately without animation.
-* Do not use a step transition to indicate success before the required save has succeeded.
-* Clear save-failure messages when moving between form steps, while preserving entered answers under the documented back/edit behavior.
+* The form has no Step 2; do not show Success State before the required save has succeeded.
 
 ### Accessibility
 
-* After a transition between form steps completes, move keyboard focus to the new step's heading. When reduced motion is preferred, move focus after the content is replaced immediately.
+* On entering Success State, move keyboard focus to its heading.
 
-## Step 1 — Your Details
+## Form
 
 ### Content
 
@@ -101,11 +96,13 @@ Guide sellers through submitting their contact and property details to request a
   2. `Your Name`
   3. `Phone Number`
   4. `Email Address`
-  5. Optional email-marketing consent: `Yes, email me occasional updates and offers from Your House in Cash. I can unsubscribe at any time. See the Privacy Policy.`
+  5. `Anything else you'd like us to know?` — optional free text.
+  6. Optional email-marketing consent: `Yes, email me occasional updates and offers from Your House in Cash. I can unsubscribe at any time. See the Privacy Policy.`
 * Primary action: `Get My Cash Offer`.
 * Phone Number placeholder: `e.g. 216-555-1234`.
 * Save-failure message: `We couldn’t save your details. Please try again.`
 * Reassurance line below the primary action: `Your information stays private`, preceded by a decorative Lucide `LockKeyhole` icon.
+* Optional free-text length guidance: `Up to 2,000 characters`.
 * Required-field error messages:
   * Your Name: `Please enter your name.`
   * Phone Number: `Please enter your phone number.`
@@ -121,12 +118,13 @@ Guide sellers through submitting their contact and property details to request a
 * `Your Name` uses the shared [Text Field](../form.md#text-field) as a single full-name field.
 * `Phone Number` uses the shared [Phone Field](../form.md#phone-field).
 * `Email Address` uses the shared [Email Field](../form.md#email-field).
+* The optional message uses the shared [Textarea](../form.md#textarea), with `maxlength="2000"`.
 * The email-marketing checkbox follows the shared [Optional Marketing Email Consent](../form.md#optional-marketing-email-consent) requirements. It is optional and unchecked by default.
 * `Your Name` is valid when non-empty after trimming leading and trailing whitespace. It does not require two words or restrict the language or script used.
 
 ### Dimensions and Alignment
 
-* The Step 1 save-failure message appears above `Get My Cash Offer`.
+* The save-failure message appears above `Get My Cash Offer`.
 * `Get My Cash Offer` uses the full available field width at all Breakpoints. The reassurance icon and text form one horizontally centered group beneath it, vertically center-aligned with an `XS` (`8px`) gap. The icon uses the global Small Icon size (`16px`) and inherits the reassurance text color.
 
 ### Spacing
@@ -135,17 +133,15 @@ Guide sellers through submitting their contact and property details to request a
 
 ### Interaction
 
-* Completing Step 1 saves the basic lead **before** advancing to Step 2.
-* Step 2 is displayed only after successful persistence has been confirmed; merely holding values in client memory does not satisfy this requirement.
+* Completing the form saves the lead, including any optional message, before showing Success State.
+* After persistence, send an immediate best-effort internal lead notification and a transactional seller confirmation email. An email-delivery failure does not change the saved lead or prevent Success State.
 * While the lead-save request is pending, the primary action displays `Saving…`.
-* If saving fails, remain on Step 1, preserve all entered values, show the save-failure message, and restore the primary action to `Get My Cash Offer` so the seller can retry.
+* If saving fails, remain on the form, preserve all entered values, show the save-failure message, and restore the primary action to `Get My Cash Offer` so the seller can retry.
 
 ### Technical Requirements
 
 * Open backend decisions are listed under [Decisions Still Required Before Implementation](#decisions-still-required-before-implementation).
 * `Your Name` uses `autocomplete="name"` for browser autofill.
-* Step 2 information must be associated with the lead saved in Step 1 rather than treated as an unrelated lead.
-* When Step 1 is revisited for editing, `Get My Cash Offer` saves the revised details to the same lead before returning to Step 2; it does not create a new lead.
 
 ### Property Address
 
@@ -161,75 +157,6 @@ Guide sellers through submitting their contact and property details to request a
 #### Dimensions and Alignment
 
 * The Property Address guidance appears below the address field.
-
-## Step 2 — About the House
-
-### Content
-
-* Heading: `Thanks, {First Name}!`
-* `{First Name}` uses the first word of the trimmed full name. If unavailable, use `Thanks!`.
-* Supporting copy: `Your request has been received. Add a few optional details to help us understand your property.`
-* Uses quick choices wherever possible to minimize typing.
-* Question groups, in canonical order:
-  1. `Property Condition`
-  2. `Occupancy`
-  3. `Reason for Selling`
-  4. `Selling Timeline`
-  5. `Anything else you'd like us to know?` — optional free text.
-* Includes `Skip for now` as a secondary action.
-* Includes a small `← Edit your details` action for returning to Step 1 to edit the basic details.
-* Primary completion action: `Submit details`.
-* Save-failure message: `We couldn’t save these details. Please try again.`
-* `Property Condition` allows one selection from: `Move-in ready`, `Needs minor repairs`, `Needs major repairs`, `Not sure`.
-* `Occupancy` allows one selection from: `Owner-occupied`, `Tenant-occupied`, `Vacant`, `Other / Not sure`.
-* `Reason for Selling` allows multiple selections from: `Inherited property`, `Moving / Relocating`, `Financial difficulties`, `Too many repairs`, `Tired of being a landlord`, `Downsizing`, `Other`.
-* `Selling Timeline` allows one selection from: `As soon as possible`, `Within 1–3 months`, `Within 3–6 months`, `More than 6 months`, `Just exploring`.
-* All Step 2 questions are optional.
-* `Reason for Selling` guidance: `Select all that apply.`
-* Optional free-text length guidance: `Up to 2,000 characters`.
-* Single-selection groups include a `Clear selection` action when an answer is selected.
-
-### Component and Semantics
-
-* Property Condition, Occupancy, and Selling Timeline use the shared single-selection controls. Reason for Selling uses the shared multiple-selection controls.
-* The optional free-text question uses the shared [Textarea](../form.md#textarea).
-* The optional free-text field has a maximum length of 2,000 characters, enforced with `maxlength="2000"`.
-* `Clear selection` uses the documented `Text Link` Component with native button semantics (`type="button"`).
-* `Skip for now` uses the documented `Text Link` Component with native button semantics (`type="button"`) for the in-page action.
-* `← Edit your details` uses the documented `Text Link` Component with native button semantics (`type="button"`) for the in-page action.
-
-### Dimensions and Alignment
-
-* `← Edit your details` appears above the Step 2 heading, aligned to the left.
-* `Skip for now` appears below the supporting copy, before the property questions.
-* `Submit details` uses the full available content width on Mobile and content-based width on Tablet and Desktop.
-* The Step 2 save-failure message appears above `Submit details`, whether saving was triggered by `Submit details` or `Skip for now`.
-* The `Reason for Selling` guidance appears below the question and above its choice options.
-* The free-text length guidance appears beside the `Anything else you'd like us to know?` label and wraps below it when space is insufficient.
-* `Clear selection` appears below the options of its single-selection group, aligned to the left.
-
-### Spacing
-
-* At all Breakpoints, `S` (`16px`) separates `← Edit your details` from the Step 2 heading and the supporting copy from `Skip for now`. The complete introduction retains its shared spacing before the fields.
-
-### Interaction
-
-* Completing Step 2 updates the saved lead with the additional information and shows Success State.
-* While a Step 2 save request is pending, the activated completion action (`Submit details` or `Skip for now`) displays `Saving…`.
-* `← Edit your details` is unavailable while the Step 2 save request is pending. If saving fails, it becomes available again.
-* `Submit details` accepts partial answers; unanswered questions do not block completion.
-* On first entering Step 2, all choice groups start with no options selected. Revisiting the step preserves the seller's previous selections.
-* In Property Condition, Occupancy, and Selling Timeline, `Clear selection` clears only that group's answer and then disappears. It is unavailable while a save request is pending.
-* Selecting `Other` in Reason for Selling saves that choice like any other option. Additional explanation is optional and uses the existing `Anything else you'd like us to know?` field.
-* `Skip for now` allows completion without supplying the additional details and leads to the same Success State, retaining the Step 1 lead.
-* `← Edit your details` returns to Step 1 with all previously entered values retained, including any Step 2 values. Those Step 2 values remain available when the seller continues forward again.
-* If answers have been entered, `Skip for now` saves them to the existing lead before displaying Success State. Show Success State only after that save succeeds.
-* If saving fails after `Submit details` or `Skip for now`, remain on Step 2, preserve all entered answers, show the save-failure message, and allow the seller to retry. Do not display Success State until the required save succeeds.
-
-### Accessibility
-
-* After `Clear selection` clears a group and disappears, move focus to the first radio option in that group without selecting it.
-* Each `Clear selection` action has the accessible name `Clear selection for {Question}`, using its group's visible question: `Property Condition`, `Occupancy`, or `Selling Timeline`. The visible action text remains `Clear selection`.
 
 ## Success State
 
@@ -254,6 +181,12 @@ Guide sellers through submitting their contact and property details to request a
 * The transition into Success State uses a fade over `200ms` with `ease-out`.
 * When `prefers-reduced-motion: reduce` applies, Success State replaces the form immediately without animation.
 
+## Seller Confirmation Email
+
+* Subject: `We received your cash-offer request`.
+* Greet the seller by first name when available.
+* Confirm receipt of the request for the submitted property address and state that the team will review it and get in touch.
+
 ### Accessibility
 
 * On entering Success State, move keyboard focus to its confirmation heading.
@@ -262,6 +195,6 @@ Guide sellers through submitting their contact and property details to request a
 
 The following decisions remain unresolved:
 
-* Backend: lead destination, persistence service, submission contract, duplicate handling, recovery behavior, and the mechanism associating both steps with the same lead.
+* Backend: lead destination, persistence service, submission contract, duplicate handling, and recovery behavior.
 
 No placeholder implementation, additional services, or assumptions about these decisions are authorized by this specification.

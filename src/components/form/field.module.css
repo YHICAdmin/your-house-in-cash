@@ -8,17 +8,3 @@
 textarea.control { min-height: 0; resize: vertical; }
 .guidance { color: var(--color-text-secondary); }
 .error { color: var(--color-error); }
-.group { container-type: inline-size; min-width: 0; padding: 0; border: 0; }
-.group legend { margin-bottom: var(--spacing-xs); }
-.group > p { margin-bottom: var(--spacing-xs); }
-.options { display: flex; flex-wrap: wrap; gap: var(--spacing-xs); }
-.optionsTwoColumn { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.optionsTwoColumn .option { width: 100%; }
-@container (max-width: 25rem) { .optionsTwoColumn { grid-template-columns: 1fr; } }
-.option { display: inline-flex; align-items: center; gap: var(--spacing-xs); padding: var(--spacing-xs) var(--spacing-s); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-small); color: var(--color-text-primary); cursor: pointer; }
-.option:has(:checked) { border-color: var(--color-brand); background: var(--color-brand-light); }
-.option:hover:has(input:enabled) { border-color: var(--color-brand); }
-.option input { accent-color: var(--color-brand); flex-shrink: 0; }
-.option input:focus-visible { outline: none; }
-.option:has(:disabled) { cursor: default; }
-.group .error, .clear { margin-top: var(--spacing-xs); }

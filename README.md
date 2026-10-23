@@ -22,7 +22,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Email notifications
 
-Form submissions are saved to Neon and then send a best-effort notification through Resend. Set `RESEND_API_KEY`, a verified `RESEND_FROM_EMAIL`, and `LEAD_NOTIFICATION_EMAIL` in your local environment configuration.
+Cash-offer submissions are saved to Neon, then immediately send best-effort Resend emails to the internal team and the seller. Set `RESEND_API_KEY`, a verified `RESEND_FROM_EMAIL`, and `LEAD_NOTIFICATION_EMAIL` in your environment.
 
 ## Learn More
 

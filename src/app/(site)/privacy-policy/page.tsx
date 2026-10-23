@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
 
                 <section>
                   <h2 className="text-heading-3">Information You Provide</h2>
-                  <p>The website includes forms for requesting a cash offer and sending a message. Depending on the form, we may collect your name, email address, phone number, property address, details about the property, your selling timeline, and information you include in a message or notes.</p>
+                  <p>The website includes forms for requesting a cash offer and sending a message. Depending on the form, we may collect your name, email address, phone number, property address, and information you include in a message or notes.</p>
                 </section>
 
                 <section>

@@ -1081,9 +1081,9 @@ The Process Steps area contains exactly three Steps in this order:
 * Step `01` uses `/images/how-it-works/property-form.svg`. The illustrated form contains:
   1. Heading: `Tell us about your house`.
   2. Field label: `Property address`.
-  3. Property-condition choices: `Move-in ready` and `Needs some work`.
+  3. Optional message label: `Anything else? (optional)`.
   4. Field label: `Contact information`.
-  5. Visual action label: `Continue`.
+  5. Visual action label: `Get My Cash Offer`.
 * Step `02` uses `/images/how-it-works/cash-offer.svg`. The illustrated offer contains:
   1. Heading: `Your cash offer is ready`.
   2. Clearly illustrative amount: `$172,541`.

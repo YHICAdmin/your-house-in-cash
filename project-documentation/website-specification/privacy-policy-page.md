@@ -77,7 +77,7 @@ Your House in Cash is operated by TOP HOUSES LLC. This Privacy Policy explains h
 
 #### Information You Provide
 
-The website includes forms for requesting a cash offer and sending a message. Depending on the form, we may collect your name, email address, phone number, property address, details about the property, your selling timeline, and information you include in a message or notes.
+The website includes forms for requesting a cash offer and sending a message. Depending on the form, we may collect your name, email address, phone number, property address, and information you include in a message or notes.
 
 #### How We Use Information
 
