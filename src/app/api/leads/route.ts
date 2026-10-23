@@ -13,6 +13,7 @@ type SavedLead = {
   phone_digits: string;
   email_address: string;
   notes: string | null;
+  created: boolean;
 };
 
 async function sendLeadNotifications(saved: SavedLead) {
@@ -51,14 +52,20 @@ export async function POST(request: Request) {
       with saved_lead as (
         insert into leads (property_address, seller_name, phone_digits, email_address, notes, email_marketing_opt_in, email_marketing_consented_at, email_marketing_consent_version, submission_key)
         values (${lead.address}, ${lead.name}, ${lead.phone}, ${lead.email}, ${lead.notes}, ${lead.emailMarketingOptIn}, ${lead.emailMarketingOptIn ? sql`now()` : null}, ${lead.emailMarketingOptIn ? EMAIL_MARKETING_CONSENT_VERSION : null}, ${submissionKey})
-        on conflict (submission_key) do update set submission_key = excluded.submission_key
-        returning id, property_address, seller_name, phone_digits, email_address, notes
+        on conflict (submission_key) do nothing
+        returning id, property_address, seller_name, phone_digits, email_address, notes, true as created
+      ), existing_lead as (
+        select id, property_address, seller_name, phone_digits, email_address, notes, false as created
+        from leads
+        where submission_key = ${submissionKey} and not exists (select 1 from saved_lead)
       )
-      select id, property_address, seller_name, phone_digits, email_address, notes from saved_lead
-    ` as { id: string; property_address: string; seller_name: string; phone_digits: string; email_address: string; notes: string | null }[];
+      select id, property_address, seller_name, phone_digits, email_address, notes, created from saved_lead
+      union all
+      select id, property_address, seller_name, phone_digits, email_address, notes, created from existing_lead
+    ` as SavedLead[];
     const saved = rows[0];
     if (!saved) throw new Error("Lead was not returned after saving.");
-    after(() => sendLeadNotifications(saved));
-    return NextResponse.json({ leadId: saved.id }, { status: 201 });
+    if (saved.created) after(() => sendLeadNotifications(saved));
+    return NextResponse.json({ leadId: saved.id, created: saved.created }, { status: saved.created ? 201 : 200 });
   } catch { return NextResponse.json({ error: "Unable to save lead." }, { status: 500 }); }
 }

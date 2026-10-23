@@ -91,13 +91,17 @@ When you type at least three characters into a property-address field, the text 
 
 When you visit the website, our website host and service providers may receive standard technical information, such as your IP address, browser type, device information, pages requested, and the date and time of your visit. We use this information to operate, maintain, and protect the website.
 
-As of the effective date, we do not use advertising pixels or website analytics tools. Third-party features, including Google Maps and Geoapify address autocomplete, may use cookies or similar technologies under their own privacy policies.
+We use Google Analytics only after you choose to accept optional analytics cookies. Google Analytics helps us understand pages viewed, general interactions, browser and device information, and the date and time of visits. Google handles this information under its [Privacy Policy](https://policies.google.com/privacy). We do not send Google Analytics information that directly identifies you, such as your name, email address, phone number, or property address.
+
+You may decline analytics cookies without affecting the website's features. You can change a previous choice from the Privacy Policy page.
+
+Third-party features, including Google Maps and Geoapify address autocomplete, may also use cookies or similar technologies under their own privacy policies.
 
 #### Who Receives Information
 
 We may share personal information with authorized people who need it to respond to inquiries, evaluate properties, complete transactions, operate our business, or provide support.
 
-We may also share information with service providers that help us operate the website, store form submissions, communicate with you, and run our business. These providers may include our website host, database host, email or communication providers, Geoapify for address autocomplete, and Google for embedded maps.
+We may also share information with service providers that help us operate the website, store form submissions, communicate with you, and run our business. These providers may include our website host, database host, email or communication providers, Geoapify for address autocomplete, Google for embedded maps, and Google Analytics for website analytics.
 
 We may disclose information when required by law, to protect our rights or safety, or as part of a business sale, merger, or similar transaction.
 

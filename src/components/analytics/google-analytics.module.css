@@ -1,0 +1,7 @@
+.banner { position: fixed; z-index: 20; right: var(--spacing-s); bottom: var(--spacing-s); left: var(--spacing-s); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--spacing-s); padding: var(--spacing-s); border: 1px solid var(--color-border); border-radius: var(--radius-medium); background: var(--color-surface); box-shadow: var(--shadow-floating); }
+.banner p { margin: 0; max-width: 48rem; }
+.banner a { color: inherit; text-decoration: underline; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--spacing-xs); }
+.actions button { min-height: 2.5rem; padding: var(--spacing-xs) var(--spacing-s); border-radius: var(--radius-small); font: inherit; font-weight: 600; cursor: pointer; }
+.decline { border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text-primary); }
+.accept { border: 1px solid var(--color-brand-dark); background: var(--color-brand-dark); color: var(--color-surface); }
