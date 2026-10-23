@@ -1,10 +1,44 @@
-import { NextResponse } from "next/server";
+import { after, NextResponse } from "next/server";
 import { sql } from "@/lib/db";
 import { notifyLead, notifySellerLeadConfirmation } from "@/lib/notifications";
 import { sendSellerSmsConfirmation } from "@/lib/quo";
 import { parseLeadBasics } from "@/lib/submissions";
 
 const EMAIL_MARKETING_CONSENT_VERSION = "email-marketing-v1";
+
+type SavedLead = {
+  id: string;
+  property_address: string;
+  seller_name: string;
+  phone_digits: string;
+  email_address: string;
+  notes: string | null;
+};
+
+async function sendLeadNotifications(saved: SavedLead) {
+  const lead = { address: saved.property_address, name: saved.seller_name, phone: saved.phone_digits, email: saved.email_address, notes: saved.notes };
+  await Promise.all([
+    notifyLead(lead, `cash-offer-lead/${saved.id}`).then(delivery => {
+      if (!delivery.delivered) console.error("Lead notification was not delivered.", delivery.error);
+    }).catch(error => console.error("Lead notification failed unexpectedly.", error)),
+    notifySellerLeadConfirmation(lead, `cash-offer-lead-confirmation/${saved.id}`).then(delivery => {
+      if (!delivery.delivered) console.error("Seller confirmation email was not delivered.", delivery.error);
+    }).catch(error => console.error("Seller confirmation email failed unexpectedly.", error)),
+    sendSellerSmsOnce(saved),
+  ]);
+}
+
+async function sendSellerSmsOnce(saved: SavedLead) {
+  try {
+    const smsClaim = await sql`
+      update leads
+      set sms_confirmation_attempted_at = now()
+      where id = ${saved.id} and sms_confirmation_attempted_at is null
+      returning id
+    ` as { id: string }[];
+    if (smsClaim.length) await sendSellerSmsConfirmation(saved.seller_name, saved.phone_digits);
+  } catch (error) { console.error("Seller SMS confirmation failed unexpectedly.", error); }
+}
 
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
@@ -23,24 +57,8 @@ export async function POST(request: Request) {
       select id, property_address, seller_name, phone_digits, email_address, notes from saved_lead
     ` as { id: string; property_address: string; seller_name: string; phone_digits: string; email_address: string; notes: string | null }[];
     const saved = rows[0];
-    try {
-      const delivery = await notifyLead({ address: saved.property_address, name: saved.seller_name, phone: saved.phone_digits, email: saved.email_address, notes: saved.notes }, `cash-offer-lead/${saved.id}`);
-      if (!delivery.delivered) console.error("Lead notification was not delivered.", delivery.error);
-    } catch (error) { console.error("Lead notification failed unexpectedly.", error); }
-    try {
-      const delivery = await notifySellerLeadConfirmation({ address: saved.property_address, name: saved.seller_name, email: saved.email_address }, `cash-offer-lead-confirmation/${saved.id}`);
-      if (!delivery.delivered) console.error("Seller confirmation email was not delivered.", delivery.error);
-    } catch (error) { console.error("Seller confirmation email failed unexpectedly.", error); }
-    const smsClaim = await sql`
-      update leads
-      set sms_confirmation_attempted_at = now()
-      where id = ${saved.id} and sms_confirmation_attempted_at is null
-      returning id
-    ` as { id: string }[];
-    if (smsClaim.length) {
-      try { await sendSellerSmsConfirmation(saved.seller_name, saved.phone_digits); }
-      catch (error) { console.error("Seller SMS confirmation failed unexpectedly.", error); }
-    }
+    if (!saved) throw new Error("Lead was not returned after saving.");
+    after(() => sendLeadNotifications(saved));
     return NextResponse.json({ leadId: saved.id }, { status: 201 });
   } catch { return NextResponse.json({ error: "Unable to save lead." }, { status: 500 }); }
 }
