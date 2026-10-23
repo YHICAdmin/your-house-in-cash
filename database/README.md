@@ -9,3 +9,5 @@ Run the SQL files in `migrations/` against the matching Neon database, in filena
 `005_remove_lead_step_two_fields.sql` removes the unused former Step 2 columns from `leads`.
 
 `006_remove_lead_notification_queue.sql` removes the retired notification queue table.
+
+`007_add_lead_sms_confirmation_attempt.sql` adds one-time SMS confirmation attempt fields for cash-offer leads and Contact Us messages.

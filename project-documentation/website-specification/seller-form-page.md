@@ -134,7 +134,7 @@ Guide sellers through submitting their contact and property details to request a
 ### Interaction
 
 * Completing the form saves the lead, including any optional message, before showing Success State.
-* After persistence, send an immediate best-effort internal lead notification and a transactional seller confirmation email. An email-delivery failure does not change the saved lead or prevent Success State.
+* After persistence, send an immediate best-effort internal lead notification, transactional seller confirmation email, and one transactional seller SMS from the configured business number. Delivery failures do not change the saved lead or prevent Success State.
 * While the lead-save request is pending, the primary action displays `Saving…`.
 * If saving fails, remain on the form, preserve all entered values, show the save-failure message, and restore the primary action to `Get My Cash Offer` so the seller can retry.
 
@@ -188,6 +188,11 @@ Guide sellers through submitting their contact and property details to request a
 * Greet the seller by first name when available.
 * Thank the seller for reaching out about the submitted property address, state that Noah will review it shortly, and reassure them that the conversation carries no pressure or obligation.
 * Invite the seller to reply to the email with any questions and sign the email from Noah at Your House in Cash.
+
+## Seller SMS Confirmation
+
+* Send from the configured Quo business number: `Hi {First Name}, thanks for reaching out to Your House in Cash. I received your cash-offer request and will be in touch soon. Reply STOP to opt out.`
+* Retain the one-time delivery attempt with the lead so a repeated browser submission does not send another confirmation text.
 
 ### Accessibility
 

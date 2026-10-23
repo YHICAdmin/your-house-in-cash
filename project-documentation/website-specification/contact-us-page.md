@@ -128,7 +128,7 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 - Apply the shared Form validation triggers: show a field error after blur or an attempted submission, then clear it as soon as the edited value becomes valid. Validate required values after trimming; validate nonempty Email and Phone number values using their shared field rules. A manually entered Property address is accepted.
 - Preserve all entered values when validation fails or a submission request fails.
 - Show `Sending…` while the submission request is pending, keep entered values visible, prevent edits and duplicate submissions, and announce the pending state through the shared Form behavior. Replace the form controls with the confirmed-success message only after the server confirms that the message was saved.
-- After a successful save, send an immediate best-effort internal notification and a confirmation email to the sender. A notification delivery failure is logged but does not change the successful form response or discard the saved message.
+- After a successful save, send an immediate best-effort internal notification and a confirmation email to the sender. When the visitor provided a phone number, also send one transactional SMS confirmation from the configured business number. Delivery failures are logged but do not change the successful form response or discard the saved message.
 - When a submission fails before it is saved, keep the form and its values available and display the failure message near the submit button so the visitor can retry.
 
 ### Accessibility
@@ -152,7 +152,14 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 - Invite the sender to reply to the email with any questions, then sign off as Noah.
 - Use the configured Resend sender identity. The reply address is determined by that sender configuration.
 
+## Contact SMS Confirmation
+
+- Send only when the visitor provided a phone number.
+- Send from the configured Quo business number: `Hi {First Name}, thanks for your message to Your House in Cash. I received it and will be in touch soon. Reply STOP to opt out.`
+- Retain the one-time delivery attempt with the contact message so a repeated submission does not send another confirmation text.
+
 ### Technical Requirements
 
 - Submit messages to the server-side contact-message endpoint. The endpoint validates and persists the message before returning a successful response; only that response may trigger the production success state.
 - The endpoint sends the internal notification and sender confirmation through the existing Resend integration after persistence. Email delivery is best-effort and must not affect the saved-message response.
+- When a phone number was provided, the endpoint also sends the one-time SMS confirmation through Quo after persistence. SMS delivery is best-effort and must not affect the saved-message response.

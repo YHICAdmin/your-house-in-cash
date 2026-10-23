@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { sql } from "@/lib/db";
 import { notifyContactMessage, notifyContactSenderConfirmation } from "@/lib/notifications";
+import { sendContactSmsConfirmation } from "@/lib/quo";
 import { parseContactMessage } from "@/lib/submissions";
 
 const EMAIL_MARKETING_CONSENT_VERSION = "email-marketing-v1";
@@ -20,6 +21,18 @@ export async function POST(request: Request) {
       const delivery = await notifyContactSenderConfirmation(message, `contact-message-confirmation/${saved.id}`);
       if (!delivery.delivered) console.error("Contact confirmation email was not delivered.", delivery.error);
     } catch (error) { console.error("Contact confirmation email failed unexpectedly.", error); }
+    if (message.phone) {
+      const smsClaim = await sql`
+        update contact_messages
+        set sms_confirmation_attempted_at = now()
+        where id = ${saved.id} and sms_confirmation_attempted_at is null
+        returning id
+      ` as { id: string }[];
+      if (smsClaim.length) {
+        try { await sendContactSmsConfirmation(message.name, message.phone); }
+        catch (error) { console.error("Contact SMS confirmation failed unexpectedly.", error); }
+      }
+    }
     return NextResponse.json({ messageId: saved.id }, { status: 201 });
   } catch { return NextResponse.json({ error: "Unable to save message." }, { status: 500 }); }
 }
