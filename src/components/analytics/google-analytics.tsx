@@ -1,6 +1,5 @@
 "use client";
 
-import Script from "next/script";
 import Link from "next/link";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
@@ -61,6 +60,13 @@ export function GoogleAnalytics({ measurementId, productionDeployment }: { measu
       send_page_view: false,
     });
     window.__analyticsConsentGranted = true;
+
+    const script = document.createElement("script");
+    script.id = "google-analytics";
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    script.addEventListener("load", () => setTagReady(true));
+    document.head.appendChild(script);
   }, [measurementId, trackingAllowed]);
 
   useEffect(() => {
@@ -85,16 +91,7 @@ export function GoogleAnalytics({ measurementId, productionDeployment }: { measu
     window.dispatchEvent(new Event("analytics-consent-change"));
   }
 
-  if (!enabled || consent !== null) {
-    return trackingAllowed ? (
-      <Script
-        id="google-analytics"
-        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-        strategy="afterInteractive"
-        onLoad={() => setTagReady(true)}
-      />
-    ) : null;
-  }
+  if (!enabled || consent !== null) return null;
 
   return (
     <aside className={styles.banner} aria-label="Cookie preferences">
