@@ -97,11 +97,11 @@ export function GoogleAnalytics({ measurementId, productionDeployment }: { measu
   }
 
   return (
-    <aside className={styles.banner} aria-label="Analytics cookie preference">
-      <p className="text-body-small">We use optional analytics cookies to understand website usage. <Link href="/privacy-policy">Learn more</Link></p>
+    <aside className={styles.banner} aria-label="Cookie preferences">
+      <p className="text-body-small">We use cookies to remember your preferences and understand website use. <Link href="/privacy-policy">Learn more</Link></p>
       <div className={styles.actions}>
-        <button className={styles.decline} type="button" onClick={() => updateConsent("denied")}>Decline</button>
-        <button className={styles.accept} type="button" onClick={() => updateConsent("granted")}>Accept analytics</button>
+        <button className={styles.decline} type="button" onClick={() => updateConsent("denied")}>Reject optional cookies</button>
+        <button className={styles.accept} type="button" onClick={() => updateConsent("granted")}>Accept optional cookies</button>
       </div>
     </aside>
   );

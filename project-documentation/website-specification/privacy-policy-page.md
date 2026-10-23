@@ -91,9 +91,9 @@ When you type at least three characters into a property-address field, the text 
 
 When you visit the website, our website host and service providers may receive standard technical information, such as your IP address, browser type, device information, pages requested, and the date and time of your visit. We use this information to operate, maintain, and protect the website.
 
-We use Google Analytics only after you choose to accept optional analytics cookies. Google Analytics helps us understand pages viewed, general interactions, browser and device information, and the date and time of visits. Google handles this information under its [Privacy Policy](https://policies.google.com/privacy). We do not send Google Analytics information that directly identifies you, such as your name, email address, phone number, or property address.
+We use a cookie to remember your cookie preference. We use Google Analytics only after you choose to accept optional analytics cookies. Google Analytics helps us understand pages viewed, general interactions, browser and device information, and the date and time of visits. Google handles this information under its [Privacy Policy](https://policies.google.com/privacy). We do not send Google Analytics information that directly identifies you, such as your name, email address, phone number, or property address.
 
-You may decline analytics cookies without affecting the website's features. You can change a previous choice from the Privacy Policy page.
+You may reject optional cookies without affecting the website's features. You can change a previous choice from the Privacy Policy page.
 
 Third-party features, including Google Maps and Geoapify address autocomplete, may also use cookies or similar technologies under their own privacy policies.
 
