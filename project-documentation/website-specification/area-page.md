@@ -1261,6 +1261,7 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 
 * Uses the approved [Google Maps Embed service](../external-libraries.md#google-maps-embed), following its embedding, interaction, branding, and accessibility requirements. Each Area Page's embed URL is stored in the canonical Area dataset.
 * The iframe uses lazy loading and the `strict-origin-when-cross-origin` referrer policy.
+* The iframe is added only when its frame is within `600px` below the viewport, preventing the Google Maps service from loading during the initial page render.
 
 ## Local Statistics
 
