@@ -142,7 +142,7 @@ Guide sellers through submitting their contact and property details to request a
 ### Technical Requirements
 
 * The lead API validates the required fields and idempotency key, persists the lead in Neon, verifies a saved lead identifier was returned, then responds successfully. Storage failures return an error so the form remains available for retry.
-* Notification work uses Next.js `after()` so Vercel can continue it after the response is sent. The seller SMS retains its atomic one-time attempt claim; its `Reply STOP to opt out.` language and the existing optional marketing-email consent rules remain unchanged.
+* Notification work uses Next.js `after()` so Vercel can continue it after the response is sent. The seller SMS retains its atomic one-time attempt claim and the shared atomic Quo cap of 10,000 automated messages per UTC calendar month; its `Reply STOP to opt out.` language and the existing optional marketing-email consent rules remain unchanged. A reached SMS cap blocks only the SMS attempt and does not affect persistence or other notifications.
 * `Your Name` uses `autocomplete="name"` for browser autofill.
 
 ### Property Address

@@ -162,4 +162,4 @@ Use `S` (`16px`) between list items and `S` (`16px`) between each checkmark and 
 
 - Submit messages to the server-side contact-message endpoint. The endpoint validates and persists the message before returning a successful response; only that response may trigger the production success state.
 - The endpoint sends the internal notification and sender confirmation through the existing Resend integration after persistence. Email delivery is best-effort and must not affect the saved-message response.
-- When a phone number was provided, the endpoint also sends the one-time SMS confirmation through Quo after persistence. SMS delivery is best-effort and must not affect the saved-message response.
+- When a phone number was provided, the endpoint also sends the one-time SMS confirmation through Quo after persistence. SMS delivery is best-effort and must not affect the saved-message response. The shared atomic Quo cap allows at most 10,000 automated messages per UTC calendar month; reaching it blocks only SMS delivery.

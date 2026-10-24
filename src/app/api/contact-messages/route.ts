@@ -42,16 +42,15 @@ export async function POST(request: Request) {
         if (!delivery.delivered) console.error("Contact confirmation email was not delivered.", delivery.error);
       } catch (error) { console.error("Contact confirmation email failed unexpectedly.", error); }
       if (message.phone) {
-        const smsClaim = await sql`
-          update contact_messages
-          set sms_confirmation_attempted_at = now()
-          where id = ${saved.id} and sms_confirmation_attempted_at is null
-          returning id
-        ` as { id: string }[];
-        if (smsClaim.length) {
-          try { await sendContactSmsConfirmation(message.name, message.phone); }
-          catch (error) { console.error("Contact SMS confirmation failed unexpectedly.", error); }
-        }
+        try {
+          const smsClaim = await sql`
+            update contact_messages
+            set sms_confirmation_attempted_at = now()
+            where id = ${saved.id} and sms_confirmation_attempted_at is null
+            returning id
+          ` as { id: string }[];
+          if (smsClaim.length) await sendContactSmsConfirmation(message.name, message.phone);
+        } catch (error) { console.error("Contact SMS confirmation failed unexpectedly.", error); }
       }
     }
     return NextResponse.json({ messageId: saved.id, created: saved.created }, { status: saved.created ? 201 : 200 });

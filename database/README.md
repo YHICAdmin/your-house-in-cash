@@ -11,3 +11,5 @@ Run the SQL files in `migrations/` against the matching Neon database, in filena
 `006_remove_lead_notification_queue.sql` removes the retired notification queue table.
 
 `007_add_lead_sms_confirmation_attempt.sql` adds one-time SMS confirmation attempt fields for cash-offer leads and Contact Us messages.
+
+`009_add_automated_sms_monthly_usage.sql` adds the atomic, UTC calendar-month counter that caps automated Quo SMS attempts at 10,000 per month.
