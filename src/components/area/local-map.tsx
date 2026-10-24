@@ -16,12 +16,13 @@ export function LocalMap({ areaName, embedUrl }: LocalMapProps) {
     const frame = frameRef.current;
     if (!frame || shouldLoad) return;
 
-    if (!("IntersectionObserver" in window)) {
-      setShouldLoad(true);
-      return;
+    const Observer = window.IntersectionObserver as typeof IntersectionObserver | undefined;
+    if (!Observer) {
+      const frameId = window.requestAnimationFrame(() => setShouldLoad(true));
+      return () => window.cancelAnimationFrame(frameId);
     }
 
-    const observer = new IntersectionObserver(
+    const observer = new Observer(
       ([entry]) => {
         if (!entry.isIntersecting) return;
         setShouldLoad(true);

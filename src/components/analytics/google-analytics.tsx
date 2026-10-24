@@ -45,7 +45,7 @@ export function GoogleAnalytics({ measurementId, productionDeployment }: { measu
   useEffect(() => {
     if (!trackingAllowed || window.__analyticsConsentGranted) return;
     window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function gtag() { window.dataLayer?.push(arguments); };
+    window.gtag = window.gtag || function gtag(...args: unknown[]) { window.dataLayer?.push(args); };
     window.gtag("consent", "default", {
       ad_storage: "denied",
       ad_user_data: "denied",
@@ -95,7 +95,7 @@ export function GoogleAnalytics({ measurementId, productionDeployment }: { measu
 
   return (
     <aside className={styles.banner} aria-label="Cookie preferences">
-      <p className="text-body-small">We use cookies to remember your preferences and understand website use. <Link href="/privacy-policy">Learn more</Link></p>
+      <p className="text-body-small">We use cookies to remember your preferences and understand website use. <Link href="/privacy-policy">Read our Privacy Policy</Link></p>
       <div className={styles.actions}>
         <button className={styles.decline} type="button" onClick={() => updateConsent("denied")}>Reject optional cookies</button>
         <button className={styles.accept} type="button" onClick={() => updateConsent("granted")}>Accept optional cookies</button>
