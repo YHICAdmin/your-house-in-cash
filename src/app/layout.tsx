@@ -11,6 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.yourhouseincash.com"),
   title: "Your House in Cash",
   description: "Sell your house for cash.",
 };

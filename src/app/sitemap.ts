@@ -3,7 +3,7 @@ import { areas, getAreaPagePath } from "@/data/areas";
 import { situations } from "@/data/situations";
 import { blogSlugs, readBlogArticle, readBlogTopic, readBlogTopics } from "@/lib/blog-content";
 
-const siteUrl = "https://yourhouseincash.com";
+const siteUrl = "https://www.yourhouseincash.com";
 const articlesPerTopicPage = 6;
 
 const toAbsoluteUrl = (path: string) => new URL(path, siteUrl).toString();
