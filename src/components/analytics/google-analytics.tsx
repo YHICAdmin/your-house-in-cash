@@ -45,7 +45,7 @@ export function GoogleAnalytics({ measurementId, productionDeployment }: { measu
   useEffect(() => {
     if (!trackingAllowed || window.__analyticsConsentGranted) return;
     window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function gtag(...args: unknown[]) { window.dataLayer?.push(args); };
+    window.gtag = window.gtag || function gtag() { window.dataLayer?.push(arguments); };
     window.gtag("consent", "default", {
       ad_storage: "denied",
       ad_user_data: "denied",
