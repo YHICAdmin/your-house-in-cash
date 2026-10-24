@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Privacy Policy | Your House in Cash",
   description: "Learn how Your House in Cash handles personal information collected through this website.",
+  alternates: { canonical: "/privacy-policy" },
 };
 
 export default function PrivacyPolicyPage() {

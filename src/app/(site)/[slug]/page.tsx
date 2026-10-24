@@ -41,10 +41,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
       title: `Sell Your House Fast in ${area.city} | Your House in Cash`,
       description: `We buy houses in ${area.city} as-is, with no repairs, fees, or waiting for a traditional sale.`,
+      alternates: { canonical: `/${slug}` },
     };
   }
   const { situation } = await getSituation(slug);
-  return { title: `${situation.headline} | Your House in Cash`, description: situation.supportingCopy };
+  return {
+    title: `${situation.headline} | Your House in Cash`,
+    description: situation.supportingCopy,
+    alternates: { canonical: `/${slug}` },
+  };
 }
 
 export default async function ContentPage({ params }: { params: Promise<{ slug: string }> }) {

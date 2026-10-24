@@ -31,6 +31,7 @@ const coreValues = [
 export const metadata: Metadata = {
   title: "About Us | Your House in Cash",
   description: "Meet Noah, the person behind Your House in Cash, and learn about a clearer, more direct way to discuss selling a Cleveland home.",
+  alternates: { canonical: "/about-us" },
 };
 
 export default function AboutUsPage() {

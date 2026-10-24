@@ -16,11 +16,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const article = await readBlogArticle(slug);
   if (article) {
     const opening = article.blocks.find(block => block.type === "paragraph")?.text ?? "";
-    return { title: `${article.title} | Your House in Cash`, description: opening.slice(0, 155) };
+    return {
+      title: `${article.title} | Your House in Cash`,
+      description: opening.slice(0, 155),
+      alternates: { canonical: `/blog/${slug}` },
+    };
   }
 
   const topic = await readBlogTopic(slug);
-  return topic ? { title: `${topic.name} | Blog | Your House in Cash`, description: topic.description } : {};
+  return topic ? {
+    title: `${topic.name} | Blog | Your House in Cash`,
+    description: topic.description,
+    alternates: { canonical: `/blog/${slug}` },
+  } : {};
 }
 
 export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {

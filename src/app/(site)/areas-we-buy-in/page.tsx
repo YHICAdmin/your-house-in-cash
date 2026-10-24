@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { MapPin } from "lucide-react";
 import { LocalAreaMap } from "@/components/area/local-area-map";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,10 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { areas, getAreaPagePath } from "@/data/areas";
 import localStyles from "@/components/area/area-local.module.css";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/areas-we-buy-in" },
+};
 
 export default function AreasWeBuyInPage() {
   const sortedAreas = [...areas].sort((a, b) => a.city.localeCompare(b.city, "en"));

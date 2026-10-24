@@ -4,7 +4,10 @@ import { MinimalFooter } from "@/components/layout/minimal-footer";
 import { SellerForm } from "@/components/seller/seller-form";
 import styles from "@/components/seller/seller-form.module.css";
 
-export const metadata: Metadata = { title: "Get a Cash Offer | Your House in Cash" };
+export const metadata: Metadata = {
+  title: "Get a Cash Offer | Your House in Cash",
+  alternates: { canonical: "/get-cash-offer" },
+};
 
 export default function SellerFormPage() {
   return <div className={styles.page}>

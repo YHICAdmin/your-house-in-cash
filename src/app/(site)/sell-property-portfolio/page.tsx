@@ -21,6 +21,7 @@ const comparisonRows = [
 export const metadata: Metadata = {
   title: "Sell a Portfolio | Your House in Cash",
   description: "Sell your Cleveland rental portfolio in one coordinated transaction with Your House in Cash.",
+  alternates: { canonical: "/sell-property-portfolio" },
 };
 
 export default function SellPropertyPortfolioPage() {

@@ -15,6 +15,7 @@ const featuredArticleSlug = "how-much-money-will-you-net-when-you-sell-your-hous
 export const metadata: Metadata = {
   title: "Blog | Your House in Cash",
   description: "Clear, practical guidance for homeowners considering a sale.",
+  alternates: { canonical: "/blog" },
 };
 
 export default async function BlogIndexPage() {

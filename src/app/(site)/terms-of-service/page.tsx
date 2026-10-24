@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Terms of Service | Your House in Cash",
   description: "Read the terms that govern use of the Your House in Cash website.",
+  alternates: { canonical: "/terms-of-service" },
 };
 
 export default function TermsOfServicePage() {

@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "Contact Us | Your House in Cash",
   description: "Ask Noah a question or talk through your options for selling a Cleveland-area property.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
