@@ -9,6 +9,8 @@ import localStyles from "@/components/area/area-local.module.css";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
+  title: "Areas We Buy Houses In | Your House in Cash",
+  description: "We buy houses as-is across Cleveland and the surrounding communities. Find your city to learn more.",
   alternates: { canonical: "/areas-we-buy-in" },
 };
 

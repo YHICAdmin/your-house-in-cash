@@ -6,6 +6,7 @@ import styles from "@/components/seller/seller-form.module.css";
 
 export const metadata: Metadata = {
   title: "Get a Cash Offer | Your House in Cash",
+  description: "Request a cash offer for your Cleveland-area property and get started with Your House in Cash.",
   alternates: { canonical: "/get-cash-offer" },
 };
 
