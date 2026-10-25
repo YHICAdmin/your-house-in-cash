@@ -9,7 +9,7 @@ export function SellerForm() {
   const [details, setDetails] = useState<SellerValues>(); const [step, setStep] = useState<1|2>(1);
   const submissionKey = useRef<string | null>(null);
   useLayoutEffect(() => { window.scrollTo(0, 0); }, [step]);
-  if (step === 2) return <SellerSuccess name={details?.name ?? ""} />;
+  if (step === 2) return <SellerSuccess name={details?.name ?? ""} email={details?.email ?? ""} />;
   return <SellerDetails initialValues={details} onSave={async values => {
     const key = getSubmissionKey();
     const result = await save("/api/leads", "POST", values, key);

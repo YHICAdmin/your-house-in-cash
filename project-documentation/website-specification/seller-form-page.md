@@ -165,18 +165,21 @@ Guide sellers through submitting their contact and property details to request a
 ### Content
 
 * Heading: `You're all set, {First Name}.`
-* Supporting copy: `We’ve received your details. Our team will review them and get in touch to discuss your property.`
-* Phone prompt: `Prefer to talk now?`
-* Uses the phone number and `tel:` destination defined in [Shared Sections → Phone Contact](../shared-sections.md#phone-contact).
+* Supporting copy: `Thanks — we’ve received your property details and will be in touch.`
+* Optional scheduling heading: `Want to talk sooner?`
+* Optional scheduling copy: `Choose a time that works for you, and we’ll call you then.`
+* Optional scheduling action: `Schedule a Free 15-Minute Call`.
+* Secondary action: `Back to home`.
 * `{First Name}` uses the first word from the full-name field, ignoring leading and trailing whitespace. If no name is available, the heading is `You're all set.`.
 
 ### Component and Semantics
 
-* The phone number uses the documented `Text Link` Component with telephone link semantics.
+* The scheduling action uses the documented `Button` Component with link semantics and opens the Cal.com booking URL in a new tab.
+* The booking URL pre-fills the seller’s name and email using Cal.com URL parameters. Scheduling is optional.
 
 ### Dimensions and Alignment
 
-* The phone prompt and phone link appear below the confirmation message.
+* The optional scheduling heading and supporting copy appear below the confirmation message, followed by the scheduling action and the secondary action.
 
 ### Interaction
 
