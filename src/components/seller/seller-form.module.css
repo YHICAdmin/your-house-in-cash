@@ -16,11 +16,31 @@
 .reassurance svg { flex-shrink: 0; }
 .error { color: var(--color-error); }
 .success { display: flex; flex-direction: column; align-items: flex-start; }
-.successIcon { width: 48px; height: 48px; color: var(--color-brand); margin-bottom: var(--spacing-l); }
-.successIntro { margin-bottom: var(--spacing-l); }
+.successIcon { position: relative; display: flex; align-items: center; justify-content: center; width: 72px; height: 72px; margin-bottom: var(--spacing-l); border-radius: var(--radius-pill); background: var(--color-brand-light); color: var(--color-brand-dark); }
+.successIcon > svg { width: var(--spacing-l); height: var(--spacing-l); stroke-width: 1.75; }
+.successRays { position: absolute; top: -2px; left: calc(100% - var(--spacing-xs)); width: 28px; height: 32px; }
+.successRays i { position: absolute; display: block; width: 12px; height: 4px; border-radius: var(--radius-pill); background: var(--color-brand); }
+.successRays i:nth-child(1) { top: 0; left: 0; transform: rotate(-62deg); }
+.successRays i:nth-child(2) { top: 13px; right: 0; transform: rotate(-25deg); }
+.successRays i:nth-child(3) { right: 0; bottom: 0; transform: rotate(12deg); }
+.successIntro { margin-bottom: var(--spacing-xl); }
 .successIntro p { margin-top: var(--spacing-s); color: var(--color-text-secondary); }
-.successActions { display: flex; flex-direction: column; align-items: flex-start; gap: var(--spacing-m); }
-.successActions p { color: var(--color-text-secondary); }
+.successActions { display: grid; width: 100%; grid-template-columns: 56px minmax(0, 1fr); gap: var(--spacing-s) var(--spacing-m); padding-top: var(--spacing-xl); border-top: 1px solid var(--color-border); }
+.scheduleIllustration { position: relative; display: flex; align-items: center; justify-content: center; grid-row: span 2; width: 56px; height: 56px; border-radius: var(--radius-pill); background: var(--color-brand-light); color: var(--color-brand-dark); }
+.scheduleIllustration svg { width: 32px; height: 32px; stroke-width: 1.75; }
+.scheduleCopy h2 { margin: 0; }
+.scheduleCopy p { margin: var(--spacing-xs) 0 0; color: var(--color-text-secondary); }
+.scheduleButton { grid-column: 1 / -1; width: 100%; gap: var(--spacing-xs); border: 1px solid var(--color-brand-dark); background: transparent; color: var(--color-brand-dark); }
+.scheduleButton:hover { background: var(--color-brand-light); }
+.scheduleButton svg { width: var(--icon-medium); height: var(--icon-medium); flex: 0 0 auto; }
+.scheduleButton svg:last-child { margin-left: auto; }
+.backHome { margin-top: var(--spacing-xl); color: var(--color-brand-dark); font-size: var(--text-body-small); font-weight: 400; }
+@media (min-width: 48rem) {
+  .card:has(.success) { max-width: 900px; }
+  .successActions { grid-template-columns: 56px minmax(0, 1fr) auto; align-items: center; }
+  .scheduleIllustration { grid-row: 1; }
+  .scheduleButton { grid-column: 3; grid-row: 1; width: auto; white-space: nowrap; }
+}
 @media (min-width: 48rem) { .card { padding: var(--spacing-xl); } .main { min-height: calc(100svh - 72px); } }
 @media (min-width: 75rem) { .main { min-height: calc(100svh - 80px); } }
 .page { position: relative; isolation: isolate; }

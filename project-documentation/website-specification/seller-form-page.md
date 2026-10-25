@@ -59,12 +59,13 @@ Guide sellers through submitting their contact and property details to request a
 
 * Uses opaque white global `Surface`, global `Medium` Radius (`12px`), and subtle separation from the background. The Card renders above the ribbon so the graphic does not interfere with form readability.
 * Uses the global `Floating` Shadow for separation from the background.
-* State headings use global `H2` typography. Supporting copy uses global `Body` typography and `Text Secondary`.
+* The Success State's confirmation heading uses global `H2` typography; its supporting copy uses global `Body Large` typography and `Text Secondary`.
+* The optional scheduling row is visually subordinate to the confirmation: its heading uses global `H4` typography, its copy uses global `Body` typography and `Text Secondary`, and its action uses an outlined Brand Green Dark treatment.
 
 ### Dimensions and Alignment
 
-* Width: `100%` of the available width, up to a maximum of `640px`, while preserving global page padding.
-* The same Card container is retained for the form and Success State, with stable width and placement while its contents change. Its top edge remains at the same position within the main form area throughout the flow.
+* The active form is `100%` of the available width, up to a maximum of `640px`, while preserving global page padding.
+* On Tablet and Desktop, the Success State expands within the same centered Card to a maximum width of `900px`; on Mobile it remains `100%` of the available width. Its top edge remains at the same position within the main form area throughout the flow.
 * Card height is determined by the content of the current state. The Card grows or shrinks downward.
 
 ### Spacing
@@ -180,6 +181,21 @@ Guide sellers through submitting their contact and property details to request a
 ### Dimensions and Alignment
 
 * The optional scheduling heading and supporting copy appear below the confirmation message, followed by the scheduling action and the secondary action.
+
+### Approved Visual and Content Update
+
+The following approved update supersedes the earlier Success State content, component, and layout details above.
+
+* Supporting copy: `We’ve received your property details and will be in touch soon.`
+* Optional scheduling heading: `Can’t wait to chat?`
+* Optional scheduling copy: `Pick a time that works for you, and we’ll give you a call.`
+* Optional scheduling action: `Schedule a Call`.
+* The confirmation forms the dominant first content group, using global `H2` and `Body Large` typography. Its checkmark icon and rays are decorative.
+* A full-width Divider separates confirmation from the optional scheduling group. The scheduling heading uses global `H4`; its copy uses global `Body`.
+* The scheduling icon and rays are decorative and use a calendar-with-clock treatment.
+* On Tablet and Desktop, the scheduling icon, heading/copy, and outlined scheduling action form one horizontal row. On Mobile, the icon and copy remain together above the full-width action.
+* The scheduling action uses the documented `Button` Component with link semantics. Its compact outlined Brand Green Dark treatment communicates that scheduling is optional rather than a primary conversion action.
+* `Back to home` uses the documented `Text Link` Component with a preceding decorative left arrow. It follows the scheduling group with `XL` (`48px`) separation and uses a quiet `Body Small`, regular-weight treatment.
 
 ### Interaction
 
