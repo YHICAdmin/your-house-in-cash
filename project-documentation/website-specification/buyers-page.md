@@ -61,6 +61,37 @@ Immediately establish the page as an investor-focused opportunity flow and encou
 - On Tablet and Desktop, use the shared conversion-button width behavior: 60% of the available content width, up to `360px`.
 - Preserve the lower gradient treatment and System Lines across breakpoints.
 
+# Why Join Our Buyers List?
+
+## Layout
+
+- Use the global Background Soft, Content Grid, Section spacing, and System Lines.
+- Do not include a visible section heading or subheading.
+- Use one semantic unordered list of four equal-width benefits. Do not use cards, rounded containers, shadows, or background boxes.
+- On Desktop, display all four benefits in one row. Use subtle vertical Border dividers between adjacent benefits.
+- On Tablet, display two benefits per row. Use a vertical Border divider between the two columns in each row.
+- On Mobile, display one benefit per row with no dividers.
+
+## Benefit Content
+
+1. `Search` — **Off-Market Opportunities**
+   - Discover investment properties beyond traditional listings.
+2. `SlidersHorizontal` — **Deals That Fit Your Criteria**
+   - Receive opportunities based on your preferred locations, budget, and investment strategy.
+3. `Bell` — **Direct Property Alerts**
+   - Stay informed when new investment opportunities become available.
+4. `CircleDollarSign` — **Free to Join**
+   - Join our buyers list at no cost, with no obligation to purchase.
+
+## Visual Design
+
+- Use the supplied Lucide icons as decorative line icons with a restrained Brand Green Dark color. Do not place icons inside a container.
+- Keep every benefit left-aligned: icon, heading, and description.
+- Use global H4 typography for the compact benefit headings and global Body typography with Text Secondary color for the descriptions.
+- Separate the icon and heading by `M` (`24px`), and the heading and description by `S` (`16px`).
+- Add a `1px`-wide, `16px`-high Brand Green mark aligned with each benefit heading. Align the marks with their nearest vertical System Line or divider.
+- Keep the benefits visually open, with no additional internal background or surface treatment.
+
 # Footer
 
 - Use the shared Site Footer with its `Background Soft` variant.

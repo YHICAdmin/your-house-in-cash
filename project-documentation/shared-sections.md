@@ -220,7 +220,8 @@ The Footer is divided into Company, Navigation, Legal & Resources, and Contact c
   1. `Areas We Buy In` — `/areas-we-buy-in`
   2. `About Us` — `/about-us`
   3. `Sell a Portfolio` — `/sell-property-portfolio`
-  4. `Blog` — `/blog`
+  4. `Join Our Buyers List` — `/buyers`
+  5. `Blog` — `/blog`
 
 ### Component and Semantics
 

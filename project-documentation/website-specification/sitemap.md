@@ -15,7 +15,7 @@ Provide search engines with a current, machine-readable inventory of the website
 The sitemap includes absolute URLs for the following public routes:
 
 - Homepage: `/`.
-- Static site pages: `/about-us`, `/areas-we-buy-in`, `/blog`, `/contact`, `/get-cash-offer`, `/privacy-policy`, `/sell-property-portfolio`, and `/terms-of-service`.
+- Static site pages: `/about-us`, `/areas-we-buy-in`, `/blog`, `/buyers`, `/contact`, `/get-cash-offer`, `/privacy-policy`, `/sell-property-portfolio`, and `/terms-of-service`.
 - Area pages generated from `src/data/areas.ts` using each area's `getAreaPagePath` destination, except Cleveland because its canonical page is the Homepage (`/`), which is already included.
 - Situation pages generated from `src/data/situations.ts`.
 - Blog article pages generated from `blogSlugs` in `src/lib/blog-content.ts`.

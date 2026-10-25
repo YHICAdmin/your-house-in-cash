@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BuyersHero } from "@/components/buyers/buyers-hero";
+import { BuyersListBenefits } from "@/components/buyers/buyers-list-benefits";
 import { SiteFooter } from "@/components/layout/site-footer";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function BuyersPage() {
     <>
       <main>
         <BuyersHero />
+        <BuyersListBenefits />
       </main>
       <SiteFooter background="soft" />
     </>
