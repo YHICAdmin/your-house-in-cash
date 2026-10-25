@@ -138,7 +138,17 @@ export function BuyersRegistrationForm() {
       const response = await fetch("/api/buyer-registrations", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Idempotency-Key": key },
-        body: JSON.stringify(values),
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          phone: values.phone,
+          purchasingMethod: values.purchasingMethod,
+          investmentStrategies: values.strategies,
+          purchaseBudget: values.budget,
+          preferredAreas: values.areas,
+          emailMarketingConsent: values.emailMarketingConsent,
+          smsMarketingConsent: values.smsMarketingConsent,
+        }),
       });
       if (!response.ok) throw new Error();
       window.sessionStorage.removeItem("buyer-registration-submission-key");
