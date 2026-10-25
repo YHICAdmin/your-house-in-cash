@@ -24,6 +24,8 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 Cash-offer submissions are saved to Neon, then immediately send best-effort Resend emails to the internal team and the seller. Set `RESEND_API_KEY`, a verified `RESEND_FROM_EMAIL`, and `LEAD_NOTIFICATION_EMAIL` in your environment.
 
+Seller confirmation SMS defaults to disabled outside production and enabled in production. Set `ENABLE_SELLER_SMS=true` or `ENABLE_SELLER_SMS=false` to override the default in any environment.
+
 ## Production form check
 
 The GitHub Actions workflow in `.github/workflows/production-cash-offer-smoke-test.yml` submits the live cash-offer and Contact Us forms daily at 14:15 UTC (10:15 AM in Bolivia). Visible success confirmations prove that the production database saved a lead and contact message. The resulting lead, messages, emails, and cash-offer SMS are intentional; the workflow does not delete database records. The Contact Us test leaves its optional phone field blank, so it sends no SMS.

@@ -5,6 +5,7 @@ import { sendSellerSmsConfirmation } from "@/lib/quo";
 import { parseLeadBasics } from "@/lib/submissions";
 
 const EMAIL_MARKETING_CONSENT_VERSION = "email-marketing-v1";
+const sellerSmsEnabled = process.env.ENABLE_SELLER_SMS === "true" || (process.env.ENABLE_SELLER_SMS === undefined && process.env.NODE_ENV === "production");
 
 type SavedLead = {
   id: string;
@@ -25,7 +26,7 @@ async function sendLeadNotifications(saved: SavedLead) {
     notifySellerLeadConfirmation(lead, `cash-offer-lead-confirmation/${saved.id}`).then(delivery => {
       if (!delivery.delivered) console.error("Seller confirmation email was not delivered.", delivery.error);
     }).catch(error => console.error("Seller confirmation email failed unexpectedly.", error)),
-    sendSellerSmsOnce(saved),
+    ...(sellerSmsEnabled ? [sendSellerSmsOnce(saved)] : []),
   ]);
 }
 

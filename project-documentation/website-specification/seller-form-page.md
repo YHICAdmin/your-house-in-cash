@@ -134,7 +134,7 @@ Guide sellers through submitting their contact and property details to request a
 ### Interaction
 
 * Completing the form saves and confirms the lead, including any optional message, before showing Success State. The client keeps one session-scoped submission key for retries, so a timeout or failed response cannot create a duplicate lead record.
-* After confirmed persistence, schedule an immediate best-effort internal lead notification, transactional seller confirmation email, and one transactional seller SMS from the configured business number. Each delivery is independent; delivery failures do not change the saved lead or prevent Success State.
+* After confirmed persistence, schedule an immediate best-effort internal lead notification, transactional seller confirmation email, and, when seller SMS is enabled, one transactional seller SMS from the configured business number. Each delivery is independent; delivery failures do not change the saved lead or prevent Success State.
 * Success State appears as soon as storage succeeds, without waiting for notification delivery.
 * While the lead-save request is pending, the primary action displays `Saving…`.
 * If saving fails, remain on the form, preserve all entered values, show the save-failure message, and restore the primary action to `Get My Cash Offer` so the seller can retry.
@@ -142,7 +142,7 @@ Guide sellers through submitting their contact and property details to request a
 ### Technical Requirements
 
 * The lead API validates the required fields and idempotency key, persists the lead in Neon, verifies a saved lead identifier was returned, then responds successfully. Storage failures return an error so the form remains available for retry.
-* Notification work uses Next.js `after()` so Vercel can continue it after the response is sent. The seller SMS retains its atomic one-time attempt claim and the shared atomic Quo cap of 10,000 automated messages per UTC calendar month; its `Reply STOP to opt out.` language and the existing optional marketing-email consent rules remain unchanged. A reached SMS cap blocks only the SMS attempt and does not affect persistence or other notifications.
+* Notification work uses Next.js `after()` so Vercel can continue it after the response is sent. Seller SMS is disabled by default outside production and enabled by default in production; `ENABLE_SELLER_SMS=true` or `ENABLE_SELLER_SMS=false` overrides that default in any environment. When enabled, the seller SMS retains its atomic one-time attempt claim and the shared atomic Quo cap of 10,000 automated messages per UTC calendar month; its `Reply STOP to opt out.` language and the existing optional marketing-email consent rules remain unchanged. A reached SMS cap blocks only the SMS attempt and does not affect persistence or other notifications.
 * `Your Name` uses `autocomplete="name"` for browser autofill.
 
 ### Property Address
