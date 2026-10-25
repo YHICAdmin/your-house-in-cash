@@ -30,9 +30,10 @@ Immediately establish the page as an investor-focused opportunity flow and encou
 ## Layout
 
 - Use the global Content Grid, Section spacing, and System Lines.
-- On Desktop and Tablet, the Hero content occupies Grid Columns `1–6` and remains left-aligned.
-- On Mobile, the content occupies all four columns.
-- Vertically center the content within a generously spaced Hero composition. Do not add media, cards, badges, secondary CTAs, microcopy, or benefit lists.
+- On Desktop, the content occupies Grid Columns `1–6`, Grid Column `7` remains open, and the media occupies Grid Columns `8–12`. The content and media are vertically center-aligned.
+- On Tablet, the content occupies all eight columns. The media occupies Grid Columns `2–7` and follows the content.
+- On Mobile, the content and media each occupy all four columns, with the media following the content.
+- Vertically center the content within a generously spaced Hero composition. Do not add cards, badges, secondary CTAs, microcopy, or benefit lists.
 
 ## Visual Design
 
@@ -40,6 +41,12 @@ Immediately establish the page as an investor-focused opportunity flow and encou
 - Use the shared dark conversion-button treatment so the CTA remains the Hero’s prominent action.
 - Keep the Hero’s base Background neutral and light. Add a restrained Brand Green Light gradient treatment toward the lower portion of the Hero, consistent with the site-wide Hero background system.
 - Preserve the global System Lines above the background treatment and below foreground content.
+
+## Hero Media
+
+- Use `/images/buyers/cleveland-brick-duplex-fixer-upper.png` in the Hero’s media area.
+- Use the supplied brick duplex image as a real-estate-investment visual, with the alt text `Brick duplex investment property exterior`.
+- Preserve a `3:2` media frame using the global Medium Radius and Subtle Shadow. The image fills the frame with `object-fit: cover`.
 
 ## Spacing
 

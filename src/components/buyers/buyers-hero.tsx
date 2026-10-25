@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import styles from "./buyers-hero.module.css";
 
@@ -20,6 +21,17 @@ export function BuyersHero() {
           <Button href="#buyer-registration" variant="conversion">
             Join Our Buyers List
           </Button>
+        </div>
+        <div className={styles.media}>
+          <div className={styles.imageFrame}>
+            <Image
+              src="/images/buyers/cleveland-brick-duplex-fixer-upper.png"
+              alt="Brick duplex investment property exterior"
+              fill
+              sizes="(min-width: 1200px) 29vw, (min-width: 768px) 75vw, 100vw"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
