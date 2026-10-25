@@ -12,7 +12,7 @@ These are the 20 approved City Pages. Every page uses the shared Area Page templ
 |---|---|---|
 | [Bedford](#bedford) | `bedford` | `/sell-your-house-fast-as-is-bedford` |
 | [Bedford Heights](#bedford-heights) | `bedford-heights` | `/sell-your-house-fast-as-is-bedford-heights` |
-| [Cleveland](#cleveland) | `cleveland` | `/sell-your-house-fast-as-is-cleveland` |
+| [Cleveland](#cleveland) | `cleveland` | `/` |
 | [Cleveland Heights](#cleveland-heights) | `cleveland-heights` | `/sell-your-house-fast-as-is-cleveland-heights` |
 | [Euclid](#euclid) | `euclid` | `/sell-your-house-fast-as-is-euclid` |
 | [Garfield Heights](#garfield-heights) | `garfield-heights` | `/sell-your-house-fast-as-is-garfield-heights` |

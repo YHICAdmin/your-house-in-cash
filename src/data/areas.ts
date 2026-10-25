@@ -39,6 +39,7 @@ export type AreaPageData = {
 };
 
 export function getAreaPagePath(citySlug: string) {
+  if (citySlug === "cleveland") return "/";
   return `/sell-your-house-fast-as-is-${citySlug}`;
 }
 

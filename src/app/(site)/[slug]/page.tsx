@@ -16,7 +16,9 @@ export const dynamicParams = false;
 export function generateStaticParams() {
   return [
     ...situations.map(({ slug }) => ({ slug })),
-    ...areas.map(area => ({ slug: getAreaPagePath(area.slug).slice(1) })),
+    ...areas
+      .filter(area => area.slug !== "cleveland")
+      .map(area => ({ slug: getAreaPagePath(area.slug).slice(1) })),
   ];
 }
 

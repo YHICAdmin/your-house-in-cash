@@ -8,8 +8,9 @@ Secondary goals are to build trust, demonstrate a local presence, and support or
 
 # Page Routing
 
-* Every Area Page uses the canonical route pattern `/sell-your-house-fast-as-is-{city-slug}`.
-* Each Area Page's route is derived from its canonical city slug rather than stored as an independently authored URL.
+* Every Area Page except Cleveland uses the canonical route pattern `/sell-your-house-fast-as-is-{city-slug}`.
+* Cleveland's canonical Area Page is the Homepage at `/`; its legacy `/sell-your-house-fast-as-is-cleveland` URL permanently redirects to `/` and is not indexable.
+* Each Area Page's route is derived from its canonical city slug rather than stored as an independently authored URL. The existing `getAreaPagePath` function returns `/` for the Cleveland exception.
 
 # Hero
 
@@ -1416,7 +1417,7 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 
 ### Interaction
 
-* Each complete nearby-city entry derives its destination from the city's canonical slug using `/sell-your-house-fast-as-is-{city-slug}`.
+* Each complete nearby-city entry derives its destination from the city's canonical slug using `getAreaPagePath`; Cleveland resolves to `/`, while all other cities use `/sell-your-house-fast-as-is-{city-slug}`.
 * On Hover, the city name and `MapPin` use global `Brand Green Dark`.
 * In the Active state, the city name and `MapPin` use `#245A33`, matching the established Text Link active color.
 * Color transitions use `150ms ease`.

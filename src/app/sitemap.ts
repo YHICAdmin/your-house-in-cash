@@ -25,7 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/privacy-policy",
     "/sell-property-portfolio",
     "/terms-of-service",
-    ...areas.map(area => getAreaPagePath(area.slug)),
+    ...areas.filter(area => area.slug !== "cleveland").map(area => getAreaPagePath(area.slug)),
     ...situations.map(situation => `/${situation.slug}`),
   ].map(url => ({ url: toAbsoluteUrl(url) })).concat(
     articles.flatMap(article => article
