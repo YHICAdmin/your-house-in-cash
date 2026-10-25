@@ -63,6 +63,50 @@
 
 .consent :global(a) { display: inline; }
 
+.locationPicker {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.locationGuidance { margin: 0; color: var(--color-text-secondary); }
+
+.locationChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.locationChips button {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  gap: 4px;
+  padding: 4px var(--spacing-xs);
+  border: 1px solid var(--color-brand);
+  border-radius: var(--radius-small);
+  background: var(--color-brand-light);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.locationChips button:disabled { cursor: default; }
+
+.locationControl {
+  width: 100%;
+  min-height: 40px;
+  padding: 4px var(--spacing-s);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.locationControl::placeholder { color: var(--color-text-placeholder); opacity: 1; }
+
 .submit {
   width: 100%;
   margin-top: var(--spacing-l);

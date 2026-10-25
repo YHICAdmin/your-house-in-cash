@@ -132,7 +132,7 @@ Let investors share their buying preferences and voluntarily opt into future opp
 4. `Purchasing method` — optional single-choice group: Cash, Hard money / Private lending, Conventional financing, Other.
 5. `Investment strategy` — optional multiple-choice group: Rental, Fix & flip, BRRRR, Multifamily.
 6. `Purchase budget` — optional single-choice group: Under $50K, $50K–$100K, $100K–$200K, $200K+.
-7. `Preferred areas / ZIP codes` — optional free-text field.
+7. `Preferred areas / ZIP codes` — optional multi-value location field. The compact `40px`-high add-location input appears first, followed by supporting guidance and the selected removable chips. Its placeholder is `Enter a city, neighborhood, or ZIP code`. Buyers add one city, neighborhood, or ZIP code at a time by pressing Enter or comma. Supporting guidance: `Add a city, neighborhood, or ZIP code, then press Enter or comma.`
 8. Email marketing consent — optional, unchecked by default.
 9. SMS marketing consent — optional, unchecked by default.
 
