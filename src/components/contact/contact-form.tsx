@@ -8,6 +8,7 @@ import { PhoneField } from "@/components/form/phone-field";
 import { AddressField } from "@/components/form/address-field";
 import { CONTACT_MESSAGE_MAX_LENGTH } from "@/lib/form-limits";
 import { validUSPhone } from "@/lib/phone";
+import { focusInvalidField } from "@/lib/focus-invalid-field";
 import { trackAnalyticsEvent } from "@/lib/analytics";
 import styles from "./contact-form.module.css";
 
@@ -60,7 +61,7 @@ export function ContactForm({ onSuccess }: { onSuccess?: () => void }) {
     setErrors(nextErrors);
     const firstInvalid = keys.find(key => nextErrors[key]);
     if (firstInvalid) {
-      document.getElementById(ids[firstInvalid])?.focus();
+      focusInvalidField(ids[firstInvalid]);
       return;
     }
 

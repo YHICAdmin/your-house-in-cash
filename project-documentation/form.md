@@ -234,6 +234,6 @@ Inherits [Field](#field).
 
 ## Accessibility
 
-* When submission encounters validation errors, move keyboard focus to the first invalid field in the page's documented field order.
+* When submission encounters validation errors, scroll the first invalid field into the visible center of the viewport, then move keyboard focus to it in the page's documented field order. Respect the visitor's reduced-motion preference.
 * If the first invalid field is a choice group, move focus to its first enabled option in document order without changing the group's selection.
 * Announce the page-defined saving status and save-failure message to screen readers without moving focus.

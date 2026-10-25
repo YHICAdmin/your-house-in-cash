@@ -6,7 +6,7 @@ Give real estate investors a direct entry point for receiving off-market investm
 
 - Canonical route: `/buyers`.
 - The page uses the shared site Header and Footer.
-- The primary CTA uses the in-page fragment destination `#buyer-registration`. The Buyer Registration Form Section that owns this target is intentionally not part of the current page scope.
+- The primary CTA uses the in-page fragment destination `#buyer-registration`.
 
 # Hero
 
@@ -25,7 +25,7 @@ Immediately establish the page as an investor-focused opportunity flow and encou
 - The Primary Headline uses `h1` semantics.
 - The Supporting Copy uses paragraph semantics.
 - The Primary CTA uses the shared Button Component with the `conversion` variant and link semantics.
-- The CTA links to `#buyer-registration`; the future registration section must expose that exact ID when it is implemented.
+- The CTA links to `#buyer-registration`, which is owned by the Buyer Registration Section.
 
 ## Layout
 
@@ -65,11 +65,11 @@ Immediately establish the page as an investor-focused opportunity flow and encou
 
 ## Layout
 
-- Use the global Background Soft, Content Grid, Section spacing, and System Lines.
+- Use the global Background, Content Grid, Section spacing, and System Lines. The Hero's lower gradient already provides the preceding visual separation.
 - Do not include a visible section heading or subheading.
 - Use one semantic unordered list of four equal-width benefits. Do not use cards, rounded containers, shadows, or background boxes.
-- On Desktop, display all four benefits in one row. Use subtle vertical Border dividers between adjacent benefits.
-- On Tablet, display two benefits per row. Use a vertical Border divider between the two columns in each row.
+- On Desktop, display all four benefits in one row.
+- On Tablet, display two benefits per row.
 - On Mobile, display one benefit per row with no dividers.
 
 ## Benefit Content
@@ -92,6 +92,94 @@ Immediately establish the page as an investor-focused opportunity flow and encou
 - Add a `1px`-wide, `16px`-high Brand Green mark aligned with each benefit heading. Align the marks with their nearest vertical System Line or divider.
 - Keep the benefits visually open, with no additional internal background or surface treatment.
 
+# Buyer Registration
+
+## Purpose
+
+Let investors share their buying preferences and voluntarily opt into future opportunity alerts.
+
+## Layout
+
+- The Section ID is `buyer-registration`.
+- Use the global Background Soft, Content Grid, Section spacing, and System Lines.
+- On Desktop, the left content occupies Grid Columns `1–5`, Grid Column `6` remains open, and the Form Card occupies Grid Columns `7–12`.
+- On Tablet, the left content occupies Grid Columns `1–4` and the Form Card occupies Grid Columns `5–8`.
+- On Mobile, stack the left content followed by the Form Card in document order.
+- The Form Card uses the global Surface, default Border, and Medium Radius. Do not add a Shadow.
+- The section is the scroll target for the Hero CTA. Use smooth in-page scrolling and offset the target below the sticky Header.
+
+## Left Content
+
+1. Eyebrow: `JOIN OUR NETWORK`
+2. Headline: `Let's Find Your Next Investment.`
+3. Description: `Tell us what you're looking for, and we'll notify you when opportunities matching your criteria become available.`
+4. Trust points:
+   - Free registration
+   - No obligation to purchase
+
+- Use the shared text-only Section Label for the Eyebrow.
+- Use H2 semantics and global H2 typography for the Headline.
+- Use global Body Large typography and Text Secondary color for the Description.
+- Use one semantic unordered list for the Trust points, each preceded by a decorative Brand Green Dark `Check` icon.
+
+## Registration Form
+
+### Fields
+
+1. `Full name` — required text field with `name` autocomplete.
+2. `Email address` — required email field with `email` autocomplete.
+3. `Phone number` — optional US phone field with `tel` autocomplete; required when SMS marketing consent is selected.
+4. `Purchasing method` — optional single-choice group: Cash, Hard money / Private lending, Conventional financing, Other.
+5. `Investment strategy` — optional multiple-choice group: Rental, Fix & flip, BRRRR, Multifamily.
+6. `Purchase budget` — optional single-choice group: Under $50K, $50K–$100K, $100K–$200K, $200K+.
+7. `Preferred areas / ZIP codes` — optional free-text field.
+8. Email marketing consent — optional, unchecked by default.
+9. SMS marketing consent — optional, unchecked by default.
+
+### Component and Semantics
+
+- Use shared Text Field and Phone Field controls.
+- Use native `fieldset` and `legend` semantics for the three choice groups. Single-choice groups use native radios and Investment strategy uses native checkboxes.
+- Each choice option uses the shared Choice Controls visual treatment: visible native indicator, Border, Small Radius, and Brand Green/Brand Green Light selected state.
+- The two marketing consents remain separate native checkboxes. Email consent identifies Your House in Cash as the sender, states the promotional purpose and unsubscribe option, and links to the Privacy Policy. SMS consent identifies the sender and links to the Privacy Policy.
+- The Primary Button uses the label `Join Our Buyers List`.
+
+### Validation and Interaction
+
+- Use `novalidate` and client-side validation only. Do not create an API route, save data, send a notification, or integrate a CRM in this phase.
+- Validate Full name and Email address after blur or a submit attempt. Validate an entered Phone number after blur or a submit attempt; when SMS marketing consent is selected, an empty Phone number is invalid.
+- Full name empty: `Please enter your full name.`
+- Email address empty: `Please enter your email address.`
+- Email address format invalid: `Please enter a valid email address.`
+- Phone number required for SMS marketing: `Please enter your phone number to receive SMS marketing.`
+- Phone number format invalid: `Please enter a valid US phone number.`
+- Revalidate an invalid field on change and clear its error once valid. On an invalid submit attempt, move focus to the first invalid field in document order.
+
+# FAQ
+
+## Layout and Visual Design
+
+- Place the FAQ immediately after Buyer Registration.
+- Use the shared FaqSection with its default Background variant so the page continues the documented alternating Background pattern.
+- Use the shared FaqSection layout, Accordion behavior, contact prompt, typography, and responsive composition.
+
+## Content
+
+- Label: `FAQ`
+- Headline: `Questions about the buyers list?`
+- Supporting Copy: `Learn how the buyers list works, what to expect from opportunities, and how to keep your preferences up to date.`
+
+1. **How will I receive investment opportunities?**
+   - When an opportunity matches the preferences you share, we will use the contact information and marketing preferences you selected to keep you informed.
+2. **Is there a cost to join the buyers list?**
+   - No. Joining the buyers list is free, and there is no obligation to purchase a property.
+3. **Can I update my buying criteria later?**
+   - Yes. Contact us when your target areas, budget, purchasing method, or investment strategy changes so we can keep your preferences current.
+4. **Will every opportunity match my criteria?**
+   - We use your preferences to help identify relevant opportunities, but availability and property details can vary. Review each opportunity carefully to decide whether it fits your plans.
+5. **Do I have to buy a property after joining?**
+   - No. The buyers list is simply a way to hear about potential opportunities. You decide whether to pursue any property that becomes available.
+
 # Footer
 
-- Use the shared Site Footer with its `Background Soft` variant.
+- Use the shared Site Footer with its Background Soft variant. This follows the FAQ's default Background treatment.

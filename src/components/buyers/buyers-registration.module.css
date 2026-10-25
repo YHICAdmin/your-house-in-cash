@@ -1,0 +1,79 @@
+:global(html:has(#buyer-registration)) {
+  scroll-behavior: smooth;
+}
+
+.section {
+  --registration-header-height: 64px;
+  background: var(--color-background-soft);
+  scroll-margin-top: calc(var(--registration-header-height) + var(--spacing-m));
+}
+
+.layout {
+  align-items: start;
+  row-gap: var(--spacing-xl);
+}
+
+.intro,
+.formCard {
+  min-width: 0;
+  grid-column: 1 / -1;
+}
+
+.heading {
+  margin: var(--spacing-s) 0 var(--spacing-m);
+}
+
+.description {
+  max-width: 520px;
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.trustPoints {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+  margin: var(--spacing-l) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trustPoints li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.trustPoints svg {
+  width: var(--icon-small);
+  height: var(--icon-small);
+  flex: 0 0 var(--icon-small);
+  color: var(--color-brand-dark);
+}
+
+.formCard {
+  padding: var(--spacing-m);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background: var(--color-surface);
+}
+
+@media (min-width: 768px) {
+  .section { --registration-header-height: 72px; }
+
+  .layout { row-gap: var(--spacing-2xl); }
+
+  .intro { grid-column: 1 / span 4; }
+
+  .formCard { grid-column: 5 / span 4; }
+
+  .formCard { padding: var(--spacing-l); }
+}
+
+@media (min-width: 1200px) {
+  .section { --registration-header-height: 80px; }
+
+  .intro { grid-column: 1 / span 5; }
+
+  .formCard { grid-column: 7 / span 6; }
+}

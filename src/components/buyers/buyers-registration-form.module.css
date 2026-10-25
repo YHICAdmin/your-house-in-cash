@@ -1,0 +1,73 @@
+.form,
+.fields,
+.choiceGroup,
+.consents {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.fields { gap: var(--spacing-m); }
+
+.choiceGroup {
+  gap: var(--spacing-xs);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.choiceGroup legend { padding: 0; }
+
+.choices {
+  display: grid;
+  gap: var(--spacing-xs);
+}
+
+.choice {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-s);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.choice:hover { border-color: var(--color-brand); }
+
+.choice:has(input:checked) {
+  border-color: var(--color-brand);
+  background: var(--color-brand-light);
+}
+
+.choice input,
+.consent input {
+  flex: 0 0 auto;
+  accent-color: var(--color-brand-dark);
+}
+
+.consents { gap: var(--spacing-s); }
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.consent input { margin-top: 0.2em; }
+
+.consent :global(a) { display: inline; }
+
+.submit {
+  width: 100%;
+  margin-top: var(--spacing-l);
+}
+
+@media (min-width: 768px) {
+  .choices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

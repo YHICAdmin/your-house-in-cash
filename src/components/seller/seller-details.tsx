@@ -8,6 +8,7 @@ import { Textarea, TextField } from "@/components/form/field";
 import { PhoneField } from "@/components/form/phone-field";
 import { AddressField } from "@/components/form/address-field";
 import { validUSPhone } from "@/lib/phone";
+import { focusInvalidField } from "@/lib/focus-invalid-field";
 import styles from "./seller-form.module.css";
 
 const order = ["address", "name", "phone", "email"] as const;
@@ -42,7 +43,7 @@ export function SellerDetails({ initialValues, onSave }: {
     const next = Object.fromEntries(order.map(key => [key, validate(key, values[key])]));
     setErrors(next);
     const invalid = order.find(key => next[key]);
-    if (invalid) { document.getElementById(invalid)?.focus(); return; }
+    if (invalid) { focusInvalidField(invalid); return; }
     if (onSave && !pending) {
       setFailure(""); setPending(true);
       try { await onSave(values); } catch { setFailure("Unable to save your details. Please try again."); } finally { setPending(false); }
