@@ -1,10 +1,9 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TextLink } from "@/components/ui/text-link";
-import { Field, TextField } from "@/components/form/field";
+import { TextField } from "@/components/form/field";
 import { PhoneField } from "@/components/form/phone-field";
 import { validUSPhone } from "@/lib/phone";
 import { focusInvalidField } from "@/lib/focus-invalid-field";
@@ -21,7 +20,7 @@ type Values = {
   purchasingMethod: string;
   strategies: string[];
   budget: string;
-  areas: string[];
+  areas: string;
   emailMarketingConsent: boolean;
   smsMarketingConsent: boolean;
 };
@@ -41,7 +40,7 @@ const initialValues: Values = {
   purchasingMethod: "",
   strategies: [],
   budget: "",
-  areas: [],
+  areas: "",
   emailMarketingConsent: false,
   smsMarketingConsent: false,
 };
@@ -73,7 +72,6 @@ export function BuyersRegistrationForm() {
   const [pending, setPending] = useState(false);
   const [success, setSuccess] = useState(false);
   const [failure, setFailure] = useState("");
-  const [locationInput, setLocationInput] = useState("");
   const submissionKey = useRef<string | null>(null);
 
   function validate(field: ValidatedField, nextValues = values) {
@@ -111,20 +109,6 @@ export function BuyersRegistrationForm() {
     }
   }
 
-  function addLocations(rawValue = locationInput) {
-    const locations = rawValue.split(",").map((location) => location.trim()).filter(Boolean);
-    if (!locations.length) return;
-    setValues((current) => ({
-      ...current,
-      areas: [...current.areas, ...locations.filter((location) => !current.areas.some((area) => area.toLocaleLowerCase() === location.toLocaleLowerCase()))],
-    }));
-    setLocationInput("");
-  }
-
-  function removeLocation(location: string) {
-    setValues((current) => ({ ...current, areas: current.areas.filter((area) => area !== location) }));
-  }
-
   function blur(field: ValidatedField) {
     setErrors((current) => ({ ...current, [field]: validate(field) }));
   }
@@ -154,7 +138,7 @@ export function BuyersRegistrationForm() {
       const response = await fetch("/api/buyer-registrations", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Idempotency-Key": key },
-        body: JSON.stringify({ ...values, areas: undefined, preferredAreas: values.areas.join(", ") }),
+        body: JSON.stringify(values),
       });
       if (!response.ok) throw new Error();
       window.sessionStorage.removeItem("buyer-registration-submission-key");
@@ -276,47 +260,14 @@ export function BuyersRegistrationForm() {
           </div>
         </fieldset>
 
-        <Field
+        <TextField
           id="buyer-areas"
           label="Preferred areas / ZIP codes"
-        >
-          <div className={styles.locationPicker}>
-            <input
-              id="buyer-areas"
-              className={`text-body ${styles.locationControl}`}
-              name="preferredAreas"
-              autoComplete="off"
-              aria-describedby="buyer-areas-help"
-              disabled={pending}
-              value={locationInput}
-              placeholder="Enter a city, neighborhood, or ZIP code"
-              onChange={(event) => {
-                const nextValue = event.target.value;
-                if (nextValue.includes(",")) addLocations(nextValue);
-                else setLocationInput(nextValue);
-              }}
-              onKeyDown={(event) => {
-                if (event.key === "Enter" || event.key === ",") {
-                  event.preventDefault();
-                  addLocations();
-                }
-              }}
-              onBlur={() => addLocations()}
-            />
-            <p id="buyer-areas-help" className={`${styles.locationGuidance} text-body-small`}>Add a city, neighborhood, or ZIP code, then press Enter or comma.</p>
-            {values.areas.length ? (
-              <ul className={styles.locationChips} aria-label="Selected preferred areas and ZIP codes">
-                {values.areas.map((location) => (
-                  <li key={location}>
-                    <button type="button" aria-label={`Remove ${location}`} disabled={pending} onClick={() => removeLocation(location)}>
-                      {location}<X aria-hidden="true" size={14} strokeWidth={2} />
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
-          </div>
-        </Field>
+          name="preferredAreas"
+          disabled={pending}
+          value={values.areas}
+          onChange={(event) => setValues((current) => ({ ...current, areas: event.target.value }))}
+        />
 
         <div className={styles.consents}>
           <label className={`${styles.consent} text-body-small focus-container`}>
