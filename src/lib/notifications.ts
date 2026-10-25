@@ -17,6 +17,19 @@ type ContactNotification = {
   message: string;
 };
 
+export type BuyerNotification = {
+  fullName: string;
+  email: string;
+  phone: string | null;
+  purchasingMethod: string | null;
+  investmentStrategies: string[];
+  purchaseBudget: string | null;
+  preferredAreas: string | null;
+  emailMarketingConsent: boolean;
+  smsMarketingConsent: boolean;
+  registeredAt: string;
+};
+
 const teamRecipient = process.env.LEAD_NOTIFICATION_EMAIL;
 
 function escapeHtml(value: string): string {
@@ -92,4 +105,26 @@ export function notifyContactMessage(message: ContactNotification): Promise<Deli
     ["Property address", valueOrNotProvided(message.address)],
     ["Message", escapeHtml(message.message).replace(/\n/g, "<br>")],
   ])}</table>`);
+}
+
+export function notifyBuyerRegistration(buyer: BuyerNotification, idempotencyKey?: string): Promise<DeliveryResult> {
+  return deliver(teamRecipient, `New Buyer Registration – ${buyer.fullName}`, `<h1>New Buyer Registration</h1><table>${rows([
+    ["Full name", escapeHtml(buyer.fullName)],
+    ["Email address", escapeHtml(buyer.email)],
+    ["Phone number", valueOrNotProvided(buyer.phone)],
+    ["Purchasing method", valueOrNotProvided(buyer.purchasingMethod)],
+    ["Investment strategy", buyer.investmentStrategies.length ? escapeHtml(buyer.investmentStrategies.join(", ")) : "Not provided"],
+    ["Purchase budget", valueOrNotProvided(buyer.purchaseBudget)],
+    ["Preferred areas / ZIP codes", valueOrNotProvided(buyer.preferredAreas)],
+    ["Email marketing consent", buyer.emailMarketingConsent ? "Yes" : "No"],
+    ["SMS marketing consent", buyer.smsMarketingConsent ? "Yes" : "No"],
+    ["Registration timestamp", escapeHtml(buyer.registeredAt)],
+  ])}</table>`, idempotencyKey);
+}
+
+export function notifyBuyerConfirmation(buyer: Pick<BuyerNotification, "fullName" | "email">, idempotencyKey?: string): Promise<DeliveryResult> {
+  const firstName = buyer.fullName.trim().split(/\s+/)[0];
+  const greeting = firstName ? `Hi ${escapeHtml(firstName)},` : "Hi,";
+  const title = "Welcome to the Your House in Cash Buyers List";
+  return deliver(buyer.email, title, `<div style="margin:0;padding:32px 16px;background:#f7f8f7;font-family:Arial,sans-serif;color:#101114"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="center"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;background:#ffffff"><tr><td style="padding:40px;font-size:16px;line-height:1.6"><h1 style="margin:0 0 24px;font-size:28px;line-height:1.25">${title}</h1><p style="margin:0 0 18px">${greeting}</p><p style="margin:0 0 18px">Thanks for joining the Your House in Cash buyers list!</p><p style="margin:0 0 18px">We&apos;ll keep your investment preferences in mind and reach out when we have opportunities in Greater Cleveland that match what you&apos;re looking for.</p><p style="margin:0 0 18px">There&apos;s no cost to join and no obligation to purchase.</p><p style="margin:0 0 24px">We look forward to working with you!</p><p style="margin:0 0 24px"><a href="https://www.yourhouseincash.com" style="color:#2c6b3d">yourhouseincash.com</a></p><p style="margin:0">Your House in Cash Team</p></td></tr></table></td></tr></table></div>`, idempotencyKey);
 }

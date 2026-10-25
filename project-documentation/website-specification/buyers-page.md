@@ -141,7 +141,7 @@ Let investors share their buying preferences and voluntarily opt into future opp
 - Use shared Text Field and Phone Field controls.
 - Use native `fieldset` and `legend` semantics for the three choice groups. Single-choice groups use native radios and Investment strategy uses native checkboxes.
 - Each choice option uses the shared Choice Controls visual treatment: visible native indicator, Border, Small Radius, and Brand Green/Brand Green Light selected state.
-- The two marketing consents remain separate native checkboxes. Email consent identifies Your House in Cash as the sender, states the promotional purpose and unsubscribe option, and links to the Privacy Policy. SMS consent identifies the sender and links to the Privacy Policy.
+- The two marketing consents remain separate native checkboxes. Email consent identifies Your House in Cash as the sender, states the promotional purpose, and links to the Privacy Policy. SMS consent identifies the sender and links to the Privacy Policy.
 - The Primary Button uses the label `Join Our Buyers List`.
 
 ### Validation and Interaction
@@ -154,6 +154,16 @@ Let investors share their buying preferences and voluntarily opt into future opp
 - Phone number required for SMS marketing: `Please enter your phone number to receive SMS marketing.`
 - Phone number format invalid: `Please enter a valid US phone number.`
 - Revalidate an invalid field on change and clear its error once valid. On an invalid submit attempt, move focus to the first invalid field in document order.
+- After successful server-side storage, replace the form with: `Thanks for joining the Your House in Cash Buyers List. We'll keep your preferences in mind and be in touch when a matching opportunity becomes available.`
+
+### Persistence and Notifications
+
+- Persist registrations by normalized email address. A repeated registration updates buying preferences without creating a second buyer record or sending another welcome email.
+- Store email and SMS marketing consent preferences, affirmative consent timestamps, and consent-language versions. A withdrawn consent remains withdrawn unless the buyer provides fresh affirmative consent.
+- New registrations send one best-effort internal team notification and buyer confirmation email after successful storage. Delivery failures are logged and never change a successfully saved registration.
+- Do not send an automated SMS message. Retain SMS consent only for future alert functionality; future SMS activation must support STOP opt-out processing.
+- The buyer confirmation uses the existing verified Resend sender, is titled `Welcome to the Your House in Cash Buyers List`, and includes the website link.
+- The internal notification uses the existing team notification recipient and includes submitted preferences, consent statuses, and the registration timestamp.
 
 # FAQ
 

@@ -26,6 +26,10 @@ Cash-offer submissions are saved to Neon, then immediately send best-effort Rese
 
 Seller confirmation SMS defaults to disabled outside production and enabled in production. Set `ENABLE_SELLER_SMS=true` or `ENABLE_SELLER_SMS=false` to override the default in any environment.
 
+## Buyer registrations
+
+Apply `database/migrations/010_buyer_registrations.sql` before deploying buyer registration. Buyer registrations are stored by email address, and each newly created registration sends a best-effort buyer confirmation and internal team notification. Email delivery errors are logged and never prevent a registration from being saved.
+
 ## Production form check
 
 The GitHub Actions workflow in `.github/workflows/production-cash-offer-smoke-test.yml` submits the live cash-offer and Contact Us forms daily at 14:15 UTC (10:15 AM in Bolivia). Visible success confirmations prove that the production database saved a lead and contact message. The resulting lead, messages, emails, and cash-offer SMS are intentional; the workflow does not delete database records. The Contact Us test leaves its optional phone field blank, so it sends no SMS.

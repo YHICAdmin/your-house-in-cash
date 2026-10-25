@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { TextLink } from "@/components/ui/text-link";
 import { TextField } from "@/components/form/field";
@@ -69,6 +69,10 @@ function validatePhone(value: string, smsConsent: boolean) {
 export function BuyersRegistrationForm() {
   const [values, setValues] = useState<Values>(initialValues);
   const [errors, setErrors] = useState<Partial<Record<ValidatedField, string>>>({});
+  const [pending, setPending] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [failure, setFailure] = useState("");
+  const submissionKey = useRef<string | null>(null);
 
   function validate(field: ValidatedField, nextValues = values) {
     if (field === "name") return validateName(nextValues.name);
@@ -109,7 +113,7 @@ export function BuyersRegistrationForm() {
     setErrors((current) => ({ ...current, [field]: validate(field) }));
   }
 
-  function submit(event: React.FormEvent<HTMLFormElement>) {
+  async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const nextErrors = {
       name: validate("name"),
@@ -121,7 +125,42 @@ export function BuyersRegistrationForm() {
     const firstInvalid = (Object.keys(nextErrors) as ValidatedField[]).find(
       (field) => nextErrors[field],
     );
-    if (firstInvalid) focusInvalidField(fieldIds[firstInvalid]);
+    if (firstInvalid) {
+      focusInvalidField(fieldIds[firstInvalid]);
+      return;
+    }
+
+    if (pending) return;
+    setFailure("");
+    setPending(true);
+    try {
+      const key = getSubmissionKey();
+      const response = await fetch("/api/buyer-registrations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Idempotency-Key": key },
+        body: JSON.stringify(values),
+      });
+      if (!response.ok) throw new Error();
+      window.sessionStorage.removeItem("buyer-registration-submission-key");
+      setSuccess(true);
+    } catch {
+      setFailure("We couldn’t save your registration. Please try again.");
+    } finally {
+      setPending(false);
+    }
+  }
+
+  function getSubmissionKey() {
+    if (submissionKey.current) return submissionKey.current;
+    const stored = window.sessionStorage.getItem("buyer-registration-submission-key");
+    const key = stored ?? crypto.randomUUID();
+    window.sessionStorage.setItem("buyer-registration-submission-key", key);
+    submissionKey.current = key;
+    return key;
+  }
+
+  if (success) {
+    return <p className={`${styles.success} text-body`} role="status">Thanks for joining the Your House in Cash Buyers List. We&apos;ll keep your preferences in mind and be in touch when a matching opportunity becomes available.</p>;
   }
 
   return (
@@ -133,6 +172,7 @@ export function BuyersRegistrationForm() {
           name="name"
           required
           autoComplete="name"
+          disabled={pending}
           value={values.name}
           error={errors.name}
           onChange={(event) => updateText("name", event.target.value)}
@@ -145,6 +185,7 @@ export function BuyersRegistrationForm() {
           type="email"
           required
           autoComplete="email"
+          disabled={pending}
           value={values.email}
           error={errors.email}
           onChange={(event) => updateText("email", event.target.value)}
@@ -155,6 +196,7 @@ export function BuyersRegistrationForm() {
           label="Phone number"
           name="phone"
           required={values.smsMarketingConsent}
+          disabled={pending}
           value={values.phone}
           error={errors.phone}
           onValueChange={updatePhone}
@@ -171,6 +213,7 @@ export function BuyersRegistrationForm() {
                   name="purchasingMethod"
                   value={method}
                   checked={values.purchasingMethod === method}
+                  disabled={pending}
                   onChange={() => setValues((current) => ({ ...current, purchasingMethod: method }))}
                 />
                 <span>{method}</span>
@@ -189,6 +232,7 @@ export function BuyersRegistrationForm() {
                   name="investmentStrategy"
                   value={strategy}
                   checked={values.strategies.includes(strategy)}
+                  disabled={pending}
                   onChange={() => toggleStrategy(strategy)}
                 />
                 <span>{strategy}</span>
@@ -207,6 +251,7 @@ export function BuyersRegistrationForm() {
                   name="purchaseBudget"
                   value={budget}
                   checked={values.budget === budget}
+                  disabled={pending}
                   onChange={() => setValues((current) => ({ ...current, budget }))}
                 />
                 <span>{budget}</span>
@@ -219,6 +264,7 @@ export function BuyersRegistrationForm() {
           id="buyer-areas"
           label="Preferred areas / ZIP codes"
           name="preferredAreas"
+          disabled={pending}
           value={values.areas}
           onChange={(event) => setValues((current) => ({ ...current, areas: event.target.value }))}
         />
@@ -229,12 +275,13 @@ export function BuyersRegistrationForm() {
               type="checkbox"
               name="emailMarketingConsent"
               checked={values.emailMarketingConsent}
+              disabled={pending}
               onChange={(event) =>
                 setValues((current) => ({ ...current, emailMarketingConsent: event.target.checked }))
               }
             />
             <span>
-              I agree to receive marketing emails from Your House in Cash. I can unsubscribe at any time. See the{" "}
+              I agree to receive marketing emails from Your House in Cash. See the{" "}
               <TextLink href="/privacy-policy">Privacy Policy</TextLink>.
             </span>
           </label>
@@ -243,6 +290,7 @@ export function BuyersRegistrationForm() {
               type="checkbox"
               name="smsMarketingConsent"
               checked={values.smsMarketingConsent}
+              disabled={pending}
               onChange={(event) => updateSmsConsent(event.target.checked)}
             />
             <span>
@@ -252,8 +300,9 @@ export function BuyersRegistrationForm() {
           </label>
         </div>
       </div>
-      <Button className={styles.submit} type="submit">
-        Join Our Buyers List
+      {failure ? <p className={`${styles.failure} text-body-small`} role="alert">{failure}</p> : null}
+      <Button className={styles.submit} type="submit" disabled={pending}>
+        {pending ? "Saving…" : "Join Our Buyers List"}
       </Button>
     </form>
   );
