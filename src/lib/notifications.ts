@@ -1,4 +1,5 @@
 import "server-only";
+import { formatPhone } from "@/lib/phone";
 
 type LeadNotification = {
   address: string;
@@ -63,7 +64,7 @@ export function notifyLead(lead: LeadNotification, idempotencyKey?: string): Pro
   return deliver(teamRecipient, `${title}: ${lead.name}`, `<h1>${title}</h1><table>${rows([
     ["Property address", escapeHtml(lead.address)],
     ["Seller name", escapeHtml(lead.name)],
-    ["Phone", escapeHtml(lead.phone)],
+    ["Phone", escapeHtml(formatPhone(lead.phone))],
     ["Email", escapeHtml(lead.email)],
     ["Additional notes", valueOrNotProvided(lead.notes)],
   ])}</table>`, idempotencyKey);
