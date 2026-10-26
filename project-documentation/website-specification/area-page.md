@@ -68,11 +68,11 @@ Contains, in document order:
    * Rendered example: `CLEVELAND, OHIO`.
    * Includes the `MapPin` icon from `lucide-react`.
 2. Primary Headline:
-   * Content template: `Sell Your House Fast in [City]`.
+   * Content template: `Sell Your House Fast in [City], Ohio`.
    * The city name changes dynamically between Area Pages.
    * This Hero content template applies to City Area Pages; non-city Area Pages require a separately defined content template.
 3. Supporting Copy:
-   * Content template: `We buy houses in [City] as-is, with no repairs, fees, or waiting for a traditional sale.`
+   * Content template: `We buy houses in [City], Ohio and across Greater Cleveland as-is, with no repairs, fees, or waiting for a traditional sale.`
    * The city name changes dynamically between Area Pages.
 
 ### Component and Semantics

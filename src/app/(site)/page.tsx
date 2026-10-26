@@ -3,8 +3,8 @@ import { AreaPage } from "@/components/area/area-page";
 import { clevelandArea } from "@/data/areas";
 
 export const metadata: Metadata = {
-  title: "Sell Your House Fast in Cleveland | Your House in Cash",
-  description: "We buy houses in Cleveland as-is, with no repairs, fees, or waiting for a traditional sale.",
+  title: "Sell Your House Fast in Cleveland, OH | Your House in Cash",
+  description: "Sell your Cleveland, Ohio house as-is for cash. No repairs, fees, or traditional-sale waiting. Serving Greater Cleveland homeowners.",
   alternates: { canonical: "/" },
 };
 

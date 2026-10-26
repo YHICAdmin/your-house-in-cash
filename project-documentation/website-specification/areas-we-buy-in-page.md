@@ -30,8 +30,8 @@ Introduce the service area and help sellers find and open their City Page.
 
 ### Content
 
-1. Primary Headline: **Areas We Buy Houses In**
-2. Supporting Copy: **We buy houses as-is across Cleveland and the surrounding communities. Find your city below to learn more.**
+1. Primary Headline: **Areas We Buy Houses In Greater Cleveland, Ohio**
+2. Supporting Copy: **We buy houses as-is in Greater Cleveland, Ohio and surrounding communities. Find your city below to learn more.**
 
 ### Component and Semantics
 
@@ -169,7 +169,7 @@ Help sellers browse all supported cities and open a City Page.
 ### Content
 
 * Primary Headline: **Find your city**.
-* Supporting Copy: **Explore the cities where we buy houses. Select your city to learn more about selling your house as-is.**
+* Supporting Copy: **Explore the Greater Cleveland, Ohio cities where we buy houses. Select your city to learn more about selling your house as-is.**
 
 ### Component and Semantics
 

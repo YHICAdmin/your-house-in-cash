@@ -31,11 +31,11 @@ export function AreaHero({ city }: AreaHeroProps) {
           <SectionLabel icon={MapPin}>{`${city}, Ohio`}</SectionLabel>
           <h1 id="area-hero-heading" className={`${styles.heading} text-display`}>
             Sell Your House Fast in{" "}
-            <span className={styles.city}>{city}</span>
+            <span className={styles.city}>{city}, Ohio</span>
           </h1>
           <p className={`${styles.supportingCopy} text-body-large`}>
-            We buy houses in {city} as-is, with no repairs, fees, or waiting for a
-            traditional sale.
+            We buy houses in {city}, Ohio and across Greater Cleveland as-is, with
+            no repairs, fees, or waiting for a traditional sale.
           </p>
           <div className={styles.ctaGroup}>
             <Button href="/get-cash-offer" variant="conversion">

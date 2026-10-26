@@ -41,8 +41,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const area = getArea(slug);
   if (area) {
     return {
-      title: `Sell Your House Fast in ${area.city} | Your House in Cash`,
-      description: `We buy houses in ${area.city} as-is, with no repairs, fees, or waiting for a traditional sale.`,
+      title: `Sell Your House Fast in ${area.city}, OH | Your House in Cash`,
+      description: `Sell your ${area.city}, Ohio house as-is for cash. No repairs, fees, or traditional-sale waiting. Serving Greater Cleveland homeowners.`,
       alternates: { canonical: `/${slug}` },
     };
   }

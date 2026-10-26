@@ -9,8 +9,8 @@ import localStyles from "@/components/area/area-local.module.css";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Areas We Buy Houses In | Your House in Cash",
-  description: "We buy houses as-is across Cleveland and the surrounding communities. Find your city to learn more.",
+  title: "Areas We Buy Houses In Greater Cleveland, OH | Your House in Cash",
+  description: "We buy houses as-is in Greater Cleveland, Ohio and surrounding communities. Find your city to learn more.",
   alternates: { canonical: "/areas-we-buy-in" },
 };
 
@@ -37,7 +37,7 @@ export default function AreasWeBuyInPage() {
             <div className={styles.intro}>
               <h2 id="city-directory-heading" className={`${styles.heading} text-heading-2`}>Find your city</h2>
               <p className={`${localStyles.introCopy} text-body-large`}>
-                Explore the cities where we buy houses. Select your city to learn more about selling your house as-is.
+                Explore the Greater Cleveland, Ohio cities where we buy houses. Select your city to learn more about selling your house as-is.
               </p>
             </div>
             <ul className={styles.groups}>

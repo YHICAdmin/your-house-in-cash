@@ -45,9 +45,9 @@ export function AreasHero({ cities }: { cities: readonly NearbyCity[] }) {
       <div className={`${styles.layout} content-grid`}>
         <div className={styles.content}>
           <div className={styles.intro}>
-            <h1 id="areas-heading" className={`${styles.heading} text-display`}>Areas We Buy Houses In</h1>
+            <h1 id="areas-heading" className={`${styles.heading} text-display`}>Areas We Buy Houses In Greater Cleveland, Ohio</h1>
             <p className={`${styles.copy} text-body-large`}>
-              We buy houses as-is across Cleveland and the surrounding communities. Find your city below to learn more.
+              We buy houses as-is in Greater Cleveland, Ohio and surrounding communities. Find your city below to learn more.
             </p>
           </div>
           <div className={styles.search}><CitySearch cities={cities} /></div>
