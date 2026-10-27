@@ -127,7 +127,7 @@ A house may be vacant because:
 * A tenant moved out.
 * The property needs more work than you want to take on.
 * You live out of state.
-* You are deciding whether to rent or sell.
+* You are deciding whether to [rent the property or sell it](/landlords).
 * The house has been listed but has not sold.
 * A financial, family, or legal situation made it difficult to deal with the property immediately.
 
