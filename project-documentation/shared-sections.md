@@ -324,7 +324,6 @@ The Footer is divided into Company, Navigation, Legal & Resources, and Contact c
   - Instagram: `https://www.instagram.com/yourhouseincash/`
   - LinkedIn: `https://www.linkedin.com/company/your-house-in-cash`
   - YouTube: `https://youtube.com/@yourhouseincash`
-  - TikTok: `https://www.tiktok.com/@yourhouseincash`
   - X: `https://x.com/yourhouseincash/`
 
 ### Component and Semantics

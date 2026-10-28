@@ -27,11 +27,6 @@ const socialPlatforms = [
     href: "https://youtube.com/@yourhouseincash",
   },
   {
-    name: "TikTok",
-    icon: "tiktok",
-    href: "https://www.tiktok.com/@yourhouseincash",
-  },
-  {
     name: "X",
     icon: "x",
     href: "https://x.com/yourhouseincash/",
