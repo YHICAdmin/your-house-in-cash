@@ -197,7 +197,6 @@ If you do not have an agreement or clear authority to move forward, speak with y
 
 Ohio Legal Help notes that a divorce can take months or longer, and temporary orders may address property division or debt payments while the case is pending. [Ohio Legal Help](https://www.ohiolegalhelp.org/topic/divorce)
 
-If there is domestic violence, coercion, or concern for anyone’s safety, safety comes first. Seek legal assistance and support appropriate to the situation before focusing on the house.
 
 ## How Your House in Cash Can Help
 
