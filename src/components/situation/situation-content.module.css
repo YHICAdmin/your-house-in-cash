@@ -7,7 +7,6 @@
 .sidebar a { display: block; position: relative; color: var(--color-text-primary); font-weight: 600; overflow-wrap: anywhere; }
 .sidebar a[aria-current] { color: var(--color-brand); }
 .article { color: var(--color-text-primary); overflow-wrap: anywhere; }
-.inlineLink { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
 .article > * { margin: 0; }
 .article > * + * { margin-top: var(--spacing-s); }
 .article > h2 { margin-top: var(--spacing-xl); }

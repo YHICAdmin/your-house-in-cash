@@ -214,6 +214,7 @@ A generic Component for actions or navigation displayed as text rather than as a
 
 - Font: Inter / 16px / 600 / 1.5
 - Color: #101114
+- Text decoration: Underline in every state, with a 1px thickness and 2px underline offset
 - Background/Border/Shadow: none
 - Width: content
 - Icon gap: 8px

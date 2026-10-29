@@ -9,7 +9,9 @@
   font-size: var(--text-body);
   font-weight: 600;
   line-height: 1.5;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
   transition: color 150ms ease;
 }
 
