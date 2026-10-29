@@ -200,7 +200,7 @@ Ohio Legal Help notes that a divorce can take months or longer, and temporary or
 
 ## How Your House in Cash Can Help
 
-Once both spouses have agreed to explore a sale—or there is legal authority to do so—Your House in Cash can provide a **[no-obligation as-is cash offer](/get-cash-offer)**.
+Once both spouses have agreed to explore a sale—or there is legal authority to do so—you can [get a no-obligation as-is cash offer](/get-cash-offer) from Your House in Cash.
 
 That offer is not an appraisal and does not determine how the property should be divided in a divorce.
 

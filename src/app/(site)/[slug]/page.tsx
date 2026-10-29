@@ -59,5 +59,5 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
   const area = getArea(slug);
   if (area) return <AreaPage area={area} />;
   const { situation, source } = await getSituation(slug);
-  return <><main><SituationHero situation={situation} /><SituationContent source={source} /><SituationFaq source={source} /><SituationFinalCta source={source} /></main><SiteFooter background="soft" /></>;
+  return <><main><SituationHero situation={situation} /><SituationContent source={source} underlineInlineLinks={slug === "divorce"} /><SituationFaq source={source} /><SituationFinalCta source={source} /></main><SiteFooter background="soft" /></>;
 }
