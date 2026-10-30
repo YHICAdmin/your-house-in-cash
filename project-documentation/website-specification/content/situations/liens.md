@@ -26,21 +26,21 @@ Start with a simpler question:
 
 **What is recorded against this property, how much is required to resolve it, and what would be left after the sale?**
 
-## First, Separate the House From the Debt
+## First, Find Out What Is Recorded Against the House
 
-The word “lien” is often used as if it means every kind of debt.
+The first step is to identify the lien or liens that are actually recorded against the property.
 
-It does not.
+The word “lien” is often used as if it means every kind of debt. It does not.
 
 A lien is a legal claim that can affect property. Some liens are connected directly to the house, such as a mortgage. Others can arise from taxes, construction work, court judgments, or other obligations.
 
-The details matter.
+For example, an unpaid contractor bill is a debt, but it does not automatically mean there is a lien against the house. A lien exists only if the required legal steps have been taken and it is recorded or otherwise enforceable against the property.
 
-For example, an Ohio judgment can become a lien on a debtor’s land in a county when the required certificate of judgment is filed. ([Ohio Revised Code][1]) Delinquent real-estate taxes can also be enforced through a lien and, if left unresolved, can lead to a tax-foreclosure action. ([Ohio Revised Code][2])
+The details matter.
 
 That does not tell you the answer for your house.
 
-It tells you why the first step is to identify the actual recorded issue rather than relying on a vague memory of an old bill or a letter you received.
+It tells you why you need to identify the actual recorded issue rather than relying on a vague memory of an old bill or a letter you received.
 
 ## A Lien Can Affect the Sale Without Preventing a Sale
 
