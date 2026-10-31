@@ -60,13 +60,15 @@ That does not mean every fire becomes a full rebuild.
 
 It means you should avoid making the repair decision from a single number or a quick visual impression.
 
-## Understand What the Insurance Claim Does—and Does Not—Answer
+## What Your Insurance Claim Covers—and What It Doesn’t
 
 Homeowners insurance commonly covers fire damage, but the coverage, deductible, limits, exclusions, and claim process depend on the policy. The National Association of Insurance Commissioners notes that homeowners policies may cover damage from fire and that claim documentation can include photos, video, and an inventory of damaged belongings. ([National Association of Insurance Commissioners][1])
 
 An insurance claim can be an important part of the financial picture.
 
 But it does not automatically answer every question about the house.
+
+Before authorizing major restoration, some homeowners wait to understand the insurer's assessment and how much the claim may provide. They may also obtain written repair estimates from contractors. Depending on the insurer and claim process, those estimates may be reviewed as part of the claim; the NAIC notes that it can help to have a contractor meet with the insurance adjuster. ([National Association of Insurance Commissioners][1])
 
 You may still need to understand:
 
