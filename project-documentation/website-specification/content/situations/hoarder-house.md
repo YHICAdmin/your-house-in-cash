@@ -14,7 +14,7 @@ When a house is full of belongings, selling it can feel like more than a real-es
 
 It may be your own home. It may belong to a parent, another family member, or an estate. It may have accumulated over many years, one room at a time.
 
-People sometimes call this a “hoarder house.”
+People sometimes call this a â€œhoarder house.â€
 
 But the most useful place to start is not with a label.
 
@@ -30,13 +30,13 @@ A house full of possessions can carry memories, family history, privacy concerns
 
 Some items may be valuable. Some may be important only to the person who lived there. Some may be things no one wants to keep but that still take time and energy to sort.
 
-That is why “just clean it out” is rarely a useful first answer.
+That is why â€œjust clean it outâ€ is rarely a useful first answer.
 
 Before thinking about a sale, it helps to understand a few basics:
 
 * Is anyone still living in the house?
 * Who has the right to decide what happens to the belongings?
-* Are there important documents, family keepsakes, medications, cash, or valuables that need to be located?
+* Are there important documents, family mementos, medications, cash, or valuables that need to be located?
 * Can the house be entered safely?
 * Is there an immediate issue with water, heat, pests, fire risk, or access?
 * Is the house vacant, inherited, or difficult to manage from a distance?
@@ -45,7 +45,7 @@ You are not trying to organize a perfect cleanout plan on day one.
 
 You are trying to make sure the situation is understood well enough that it does not become more overwhelming.
 
-## Belongings and the House Are Related—but They Are Not the Same Decision
+## Belongings and the House Are Relatedâ€”but They Are Not the Same Decision
 
 It is easy to feel like you cannot make any decision about the property until every item is gone.
 
@@ -85,7 +85,7 @@ You may not know the full condition of the house until enough space is available
 
 A full house can create a false choice:
 
-**“Either I sort every item perfectly, or I give up everything.”**
+**â€œEither I sort every item perfectly, or I give up everything.â€**
 
 There is usually more room between those two extremes.
 
@@ -93,7 +93,7 @@ Start by identifying what deserves special attention:
 
 * Personal documents and records
 * Financial papers and identification
-* Family photographs, letters, and keepsakes
+* Family photographs, letters, and mementos
 * Jewelry, cash, collections, or items that may have meaningful value
 * Medications or materials that should not be left unsecured
 * Items other family members may want to review
@@ -116,7 +116,7 @@ For some sellers, the work is worth it because they want the broadest possible m
 
 For others, especially when the property is full of personal belongings, the process feels too public or too difficult to manage.
 
-The right question is not whether the house meets someone else’s standard of presentation.
+The right question is not whether the house meets someone elseâ€™s standard of presentation.
 
 It is:
 
@@ -140,77 +140,9 @@ If you are considering cleaning out before selling, ask:
 
 **Will the time, cost, and effort of emptying the house leave me meaningfully better off?**
 
-The answer depends on more than the house’s possible sale price.
+The answer depends on more than the houseâ€™s possible sale price.
 
 It also depends on the work required, the repairs you may find, carrying costs while you wait, and how much responsibility you are willing to take on.
-
-## You Can Compare a Traditional Listing With Selling As-Is
-
-A traditional listing may make sense if you want broad exposure and are prepared to clean, repair, photograph, show, and negotiate around the house.
-
-An as-is direct sale is a different option.
-
-Your House in Cash can evaluate a house with unwanted belongings still inside. You do not need to empty it completely or make it ready for repeated showings before asking us to consider it.
-
-What stays is an important part of the agreement.
-
-That means you can take time to identify what you want to keep, then agree clearly on what belongings, if any, will remain with the property.
-
-There is a trade-off:
-
-**A direct as-is offer may be lower than the price you could potentially achieve after cleaning, repairing, and exposing the house to the full market.**
-
-That is why it helps to compare the outcomes honestly.
-
-## Compare the Net Result, Not Just the Best-Case Price
-
-Suppose the house might sell for more after it is fully cleared, cleaned, repaired, and listed.
-
-That number is only one part of the decision.
-
-A more useful comparison is:
-
-### Clean Out and List
-
-Expected sale price
-
-minus
-
-Cleanout, repair, carrying, and selling costs
-
-minus
-
-The time and coordination required
-
-equals
-
-**Estimated net result**
-
-### Sell As-Is With Remaining Contents Agreed
-
-Direct offer
-
-minus
-
-Seller costs, if any
-
-equals
-
-**Estimated net result**
-
-Then consider the parts that do not fit neatly into a calculation:
-
-**Privacy.**
-
-**Emotional energy.**
-
-**How much sorting you can realistically do.**
-
-**Whether the house is becoming more expensive or difficult to hold.**
-
-Listing may still be the right choice.
-
-But a complete cleanout should be a deliberate decision—not an assumption that every seller has to make before they can move forward.
 
 ## How Your House in Cash Can Help
 
@@ -266,7 +198,7 @@ Not necessarily. A traditional listing may require the house to be cleaned and p
 
 ### What If There Are Important Belongings Mixed In With Everything Else?
 
-Start by identifying the items that deserve special attention, such as personal records, photographs, family keepsakes, jewelry, cash, medications, and anything other family members may want to review. You do not need to sort every item immediately, but it is wise to separate what matters before deciding what will remain with the property.
+Start by identifying the items that deserve special attention, such as personal records, photographs, family mementos, jewelry, cash, medications, and anything other family members may want to review. You do not need to sort every item immediately, but it is wise to separate what matters before deciding what will remain with the property.
 
 ### Can You Buy a House if Rooms Are Hard to Access?
 
