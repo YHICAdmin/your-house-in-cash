@@ -46,7 +46,7 @@ Closing costs can include title or settlement fees, recording fees, transfer tax
 
 A buyer may ask for repairs after an inspection or request a credit instead. A seller may agree, decline, offer less, or change another part of the deal. These are common negotiation points, and they directly affect your net proceeds.
 
-## Everything Is Negotiable!
+## The Price Is Not the Only Term That Matters
 
 The price is negotiable, but it is not the only number that matters. Buyers and sellers can also negotiate repairs, credits, closing-cost contributions, and which costs each party will pay. [Freddie Mac notes](https://myhome.freddiemac.com/blog/homeownership/20160512-responding-to-counteroffer) that repairs and closing costs are among the terms commonly negotiated in a home sale.
 

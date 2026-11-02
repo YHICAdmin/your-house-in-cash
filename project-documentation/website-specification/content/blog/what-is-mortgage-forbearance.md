@@ -12,7 +12,7 @@ Image width: 1536
 
 Image height: 1024
 
-# Mortgage Forbearance What Homeowners Need to Know
+# Mortgage Forbearance: What Homeowners Need to Know
 
 Mortgage forbearance can give you temporary room to breathe when a short-term hardship makes your regular payment impossible. It is not forgiveness: the unpaid amount still has to be addressed later.
 
