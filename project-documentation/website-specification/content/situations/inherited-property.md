@@ -244,11 +244,11 @@ Find answers about disagreements between heirs, selling from out of state, belon
 
 ### What if the heirs disagree about selling?
 
-The answer depends on who owns the house and who has authority to sell it. During probate, one Ohio sale procedure requires written consent from the surviving spouse and the applicable heirs or beneficiaries. Other procedures may involve a power of sale in the will or a court-authorized sale. A disagreement can affect the route and timing, but it does not always prevent a sale. The starting point is identifying the authority required for this particular property. ([Ohio Revised Code][6]; [Sale under a will][3]; [Court-authorized sale][7])
+If heirs disagree, the house may still be sold if the executor has legal authority to sell it. If the executor does not have that authority, the heirs may need to agree or the probate court may need to approve the sale. A disagreement may delay the sale, but it does not always stop it. ([Ohio Revised Code][6]; [Sale under a will][3]; [Court-authorized sale][7])
 
 ### Can I sell an inherited house from out of state?
 
-Yes, living outside Ohio does not by itself prevent you from selling an inherited house. The ownership and authority requirements still apply. Property access, documents, and signing arrangements need to be coordinated. Ohio permits remote online notarization with a signer outside the state, although the signing method available for a particular closing depends on its documents and requirements. ([Ohio Secretary of State][8])
+Yes. Living outside Ohio does not stop you from selling an inherited house there. You still need the legal authority to sell it, and you will need to coordinate access to the house and the closing paperwork. In many cases, documents can be signed remotely. ([Ohio Secretary of State][8])
 
 ### Do I need to empty the house before selling?
 
