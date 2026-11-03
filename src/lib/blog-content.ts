@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { parseSituationArticle, parseSituationFinalCta } from "@/lib/situation-article";
 
-export const blogSlugs = ["what-is-real-estate-wholesaling-in-ohio", "maple-heights-rental-market-snapshot-2026", "how-to-keep-your-basement-dry", "how-much-money-will-you-net-when-you-sell-your-house", "garfield-heights-point-of-sale-inspection", "cleveland-heights-point-of-sale-inspection", "section-8-for-landlords-in-cuyahoga-county", "what-is-mortgage-forbearance", "how-much-does-it-cost-to-inherit-a-house", "what-to-do-when-tenants-stop-paying-rent-in-ohio"] as const;
+export const blogSlugs = ["what-is-real-estate-wholesaling-in-ohio", "maple-heights-rental-market-snapshot-2026", "how-to-keep-your-basement-dry", "how-much-money-will-you-net-when-you-sell-your-house", "garfield-heights-point-of-sale-inspection", "cleveland-heights-point-of-sale-inspection", "section-8-for-landlords-in-cuyahoga-county", "what-is-mortgage-forbearance", "how-much-does-it-cost-to-inherit-a-house", "what-to-do-when-tenants-stop-paying-rent-in-ohio", "selling-a-tenant-occupied-house-on-the-market"] as const;
 
 const toSlug = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
@@ -13,6 +13,8 @@ export async function readBlogArticle(slug: string) {
   const publicationDate = /^Publication date: (\d{4}-\d{2}-\d{2})$/m.exec(source)?.[1];
   const mainTopic = /^Main topic: (.+)$/m.exec(source)?.[1];
   const relatedTopics = /^Topics covered: (.+)$/m.exec(source)?.[1]?.split(",").map(topic => topic.trim()).filter(Boolean);
+  const metaTitle = /^Meta title: (.+)$/m.exec(source)?.[1];
+  const metaDescription = /^Meta description: (.+)$/m.exec(source)?.[1];
   const imagePath = /^Image path: (\/images\/blog\/[a-z0-9.-]+)$/m.exec(source)?.[1];
   const imageAlt = /^Image alt: (.+)$/m.exec(source)?.[1];
   const imageSource = /^Image source: (https:\/\/\S+)$/m.exec(source)?.[1];
@@ -38,7 +40,7 @@ export async function readBlogArticle(slug: string) {
   const image = imagePath
     ? { src: imagePath, alt: imageAlt!, source: imageSource, credit: imageCredit, width: imageWidth ? Number(imageWidth) : 1536, height: imageHeight ? Number(imageHeight) : 1024 }
     : images[0] ?? null;
-  return { slug, title, publicationDate, mainTopic, topicSlug, relatedTopics, image, images, ...article, cta };
+  return { slug, title, publicationDate, mainTopic, topicSlug, relatedTopics, metaTitle, metaDescription, image, images, ...article, cta };
 }
 
 export type BlogArticle = NonNullable<Awaited<ReturnType<typeof readBlogArticle>>>;

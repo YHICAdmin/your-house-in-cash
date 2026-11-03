@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (article) {
     const opening = article.blocks.find(block => block.type === "paragraph")?.text ?? "";
     return {
-      title: `${article.title} | Your House in Cash`,
-      description: opening.slice(0, 155),
+      title: article.metaTitle ?? `${article.title} | Your House in Cash`,
+      description: article.metaDescription ?? opening.slice(0, 155),
       alternates: { canonical: `/blog/${slug}` },
     };
   }
