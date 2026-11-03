@@ -8,6 +8,14 @@ Meta title: Selling a House With Tenants in Ohio vs. Vacant: 4 Differences
 
 Meta description: Compare four important differences between selling an Ohio house vacant and selling it with a tenant still living there.
 
+Image path: /images/blog/tenant-occupied-home-showing.png
+
+Image alt: A real estate agent shows a lived-in home to prospective buyers while the tenant works at a kitchen table nearby.
+
+Image width: 1672
+
+Image height: 941
+
 # 4 Differences Between Selling a House With or Without a Tenant
 
 Before selling a rental, one decision shapes nearly every part of the process: will the house be vacant, or will the tenant still be living there when you sell?
