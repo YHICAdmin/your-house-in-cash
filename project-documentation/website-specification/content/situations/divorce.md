@@ -252,7 +252,7 @@ Sometimes, but the answer depends on your agreement, the stage of the case, and 
 
 ### What If Only One Spouse Is on the Deed or Mortgage?
 
-The name on the deed or mortgage does not by itself settle every question about the house in a divorce. Ohio courts determine whether property is marital or separate based on the facts and divide property equitably. The mortgage also remains a separate financial obligation until it is paid off, refinanced, or otherwise addressed. Get advice from your attorney before assuming that title or loan paperwork alone decides the outcome.
+The deed shows ownership; the mortgage shows who owes the loan. In a divorce, the house may still be shared marital property even if only one spouse is named. Anyone on the mortgage remains responsible until the loan is resolved.
 
 ### What Happens If One Person Moves Out but Is Still on the Mortgage?
 
