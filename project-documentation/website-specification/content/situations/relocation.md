@@ -305,7 +305,7 @@ Yes. Moving out of Ohio does not automatically prevent you from selling the hous
 
 ### What If I Cannot Afford to Carry Two Homes?
 
-First, calculate what your current house will cost each month after you move, including the mortgage, taxes, insurance, utilities, maintenance, and any travel or management costs. Then compare that total with your expected sale timeline and the equity you need for your next home. Knowing the real monthly cost can help you decide how much flexibility you have.
+If you cannot afford two homes for long, set a firm sale timeline based on what you can realistically carry each month. Compare a traditional listing with an as-is sale, and choose the option that best fits your move date and budget.
 
 ### Should I Rent My House Instead of Selling It?
 
