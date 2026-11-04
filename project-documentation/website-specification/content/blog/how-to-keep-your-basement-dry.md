@@ -1,5 +1,9 @@
 Main topic: Home Maintenance
 
+Meta title: How to Keep Your Basement Dry
+
+Meta description: Learn how to identify the source of basement moisture and choose the right fix for leaks, drainage problems, condensation, and water damage.
+
 Publication date: 2026-10-07
 
 Topics covered: Basement, Water Damage, Waterproofing, Mold, Repair Costs

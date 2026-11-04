@@ -1,5 +1,9 @@
 Main topic: Selling a House
 
+Meta title: Garfield Heights Point-of-Sale Inspection: Seller Guide
+
+Meta description: Understand Garfield Heights point-of-sale inspection requirements, common violations, compliance certificates, and options for selling as is.
+
 Publication date: 2026-10-09
 
 Topics covered: Garfield Heights, Point-of-Sale Inspection, Compliance Certificate, Code Violations, Selling As Is

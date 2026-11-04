@@ -1,5 +1,9 @@
 Main topic: Rent
 
+Meta title: Maple Heights House Rents: 2026 Snapshot and 2027 Outlook
+
+Meta description: Review 2026 Maple Heights house-rent trends, recent nearby listings, and the factors rental-property owners may watch in 2027.
+
 Publication date: 2026-10-07
 
 Topics covered: Maple Heights, Single-Family Houses, Rental Trends, 44137, 44125

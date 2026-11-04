@@ -1,5 +1,9 @@
 Main topic: Foreclosure
 
+Meta title: Mortgage Forbearance: What Homeowners Need to Know
+
+Meta description: Learn what mortgage forbearance is, when it may help, how repayment works, and what homeowners should understand before agreeing to a plan.
+
 Publication date: 2026-10-13
 
 Topics covered: Missed Mortgage Payments, Mortgage Servicer, Foreclosure Prevention

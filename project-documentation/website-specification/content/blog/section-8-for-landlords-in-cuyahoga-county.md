@@ -1,5 +1,9 @@
 Main topic: Rent
 
+Meta title: Section 8 for Landlords in Cuyahoga County
+
+Meta description: A practical guide to Section 8 for Cuyahoga County landlords, including CMHA inspections, rent considerations, and the voucher process.
+
 Publication date: 2026-10-11
 
 Topics covered: Section 8, Housing Choice Vouchers, CMHA, Euclid, Maple Heights, Garfield Heights, Parma, Cleveland Heights

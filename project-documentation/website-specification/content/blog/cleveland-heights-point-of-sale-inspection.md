@@ -1,5 +1,9 @@
 Main topic: Selling a House
 
+Meta title: Cleveland Heights Point-of-Sale Inspection: Seller Guide
+
+Meta description: Learn how Cleveland Heights point-of-sale inspections work, what a Certificate of Inspection requires, and what sellers should know before listing.
+
 Publication date: 2026-10-20
 
 Topics covered: Cleveland Heights, Point-of-Sale Inspection, Certificate of Inspection, Escrow, Code Violations, Selling As Is

@@ -1,5 +1,9 @@
 Main topic: Rent
 
+Meta title: What to Do When Tenants Stop Paying Rent in Ohio
+
+Meta description: Learn the Ohio process for nonpayment of rent, including the three-day notice, eviction steps, and important landlord responsibilities.
+
 Publication date: 2026-10-18
 
 Topics covered: Ohio Eviction Process, Nonpayment of Rent, Three-Day Notice, Landlord Responsibilities
