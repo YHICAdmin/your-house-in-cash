@@ -1,9 +1,5 @@
 Main topic: Selling a House
 
-Meta title: How Much Will You Net When You Sell Your House?
-
-Meta description: Estimate your home-sale net proceeds by understanding the mortgage payoff, closing costs, seller concessions, and other deductions.
-
 Publication date: 2026-10-08
 
 Topics covered: Net Proceeds, Mortgage Payoff, Closing Costs, Seller Concessions, Off-Market Sales

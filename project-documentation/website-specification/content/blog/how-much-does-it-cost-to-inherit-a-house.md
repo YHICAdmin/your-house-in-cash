@@ -1,9 +1,5 @@
 Main topic: Selling a House
 
-Meta title: How Much Does It Cost to Inherit a House?
-
-Meta description: Learn the common costs of inheriting a house, including probate, upkeep, taxes, insurance, and expenses for a vacant property.
-
 Publication date: 2026-10-15
 
 Topics covered: Inherited House, Probate Costs, Estate Expenses, Vacant House, Estate Debts
