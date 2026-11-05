@@ -8,6 +8,14 @@ Meta title: What Do You Need to Qualify for a Short Sale?
 
 Meta description: Do you qualify for a short sale? Learn the key eligibility requirements, documents lenders review, and what homeowners should know before getting started.
 
+Image path: /images/blog/short-sale-qualification-paperwork.png
+
+Image alt: Homeowner reviewing mortgage paperwork with a calculator and house keys at a dining table
+
+Image width: 1536
+
+Image height: 1024
+
 # How to Know if You Could Qualify for a Short Sale
 
 If you owe more on your mortgage than your house can sell for, a short sale may be one way to avoid a completed foreclosure. In a short sale, the mortgage servicer agrees to let the home be sold for less than the mortgage balance. It is not automatic, and it is not the same as simply putting the house up for sale: the servicer and, in some cases, the owner of the loan must approve it. ([Consumer Financial Protection Bureau][1])
