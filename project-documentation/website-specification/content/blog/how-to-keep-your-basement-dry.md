@@ -44,6 +44,8 @@ Start with the simplest fix that matches the problem:
 3. Install an interior drain and sump pump if water keeps entering through the wall-floor joint or slab.
 4. Consider exterior drainage or foundation waterproofing if the problem keeps coming back or is severe.
 
+If that work is more than you want to take on, our guide to [what to consider when a house needs major repairs](/major-repairs) can help you compare repairing the property with selling it as-is.
+
 ## Health concerns from a damp basement
 
 Dampness creates conditions in which mold can grow. Mold exposure does not affect everyone the same way, but [CDC reports](https://www.cdc.gov/mold-health/about/index.html) links between damp or moldy indoor environments and symptoms such as coughing, wheezing, and irritation; exposure may worsen asthma in people who have it. A damp basement is therefore more than a cosmetic issue, especially if moisture persists or keeps returning.
