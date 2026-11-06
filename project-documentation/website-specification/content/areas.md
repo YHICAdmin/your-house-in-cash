@@ -35,6 +35,7 @@ These are the approved City Pages. Every page uses the shared Area Page template
 | Bratenahl | `bratenahl` | `/sell-your-house-fast-as-is-bratenahl` |
 | Brecksville | `brecksville` | `/sell-your-house-fast-as-is-brecksville` |
 | Broadview Heights | `broadview-heights` | `/sell-your-house-fast-as-is-broadview-heights` |
+| Brook Park | `brook-park` | `/sell-your-house-fast-as-is-brook-park` |
 | Brooklyn | `brooklyn` | `/sell-your-house-fast-as-is-brooklyn` |
 | Brooklyn Heights | `brooklyn-heights` | `/sell-your-house-fast-as-is-brooklyn-heights` |
 | Chagrin Falls | `chagrin-falls` | `/sell-your-house-fast-as-is-chagrin-falls` |
@@ -100,6 +101,31 @@ Each area uses the lead image from its corresponding English Wikipedia city arti
 | Solon | [Solon City Hall](https://commons.wikimedia.org/wiki/File:SolonCityHall.jpg) | CC BY-SA 3.0 |
 | South Euclid | [South Euclid War Memorial](https://commons.wikimedia.org/wiki/File:South_Euclid_War_Memorial_2.jpg) | CC BY 3.0 |
 | University Heights | [Saint Ignatius Hall](https://commons.wikimedia.org/wiki/File:Administration_Building_(Saint_Ignatius_Hall),_John_Carroll_University,_University_Heights,_OH.jpg) | CC BY-SA 2.0 |
+| Brook Park | [Richard from Smith, Brook Park](https://commons.wikimedia.org/wiki/File:Richard_from_Smith,_Brook_Park.jpg) | Public domain |
+
+## Brook Park
+
+**Data period:** July–September 2026
+
+**Source:** [Redfin](https://www.redfin.com/city/2402/OH/Brook-Park/housing-market)
+
+| Statistic | Value |
+|---|---|
+| Median Sale Price | $243,384 |
+| Homes Sold | 45 |
+| Median Price per Sq. Ft. | $178/sq ft |
+| Median Days on Market | 14 days |
+
+**Map:** [Brook Park, Ohio](https://www.google.com/maps?q=Brook%20Park%2C%20Ohio%2C%20USA&output=embed)
+
+**Recommended cities, in order:**
+
+1. Cleveland — `cleveland`
+2. Berea — `berea`
+3. Middleburg Heights — `middleburg-heights`
+4. Fairview Park — `fairview-park`
+5. Parma — `parma`
+6. Parma Heights — `parma-heights`
 
 ## Maps
 

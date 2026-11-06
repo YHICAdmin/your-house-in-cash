@@ -85,6 +85,7 @@ Object.assign(localPhotos, {
   bratenahl: { src: "/images/local-area/bratenahl.jpg", alt: "Gwinn Estate gateway in Bratenahl", title: "Gwinn Estate gateway", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Gwinn_Estate_gateway.jpg", license: "Public domain", attributionRequired: false },
   brecksville: { src: "/images/local-area/brecksville.jpg", alt: "Jonas Coonrad House in Brecksville", title: "Jonas Coonrad House NPS", photographer: "National Park Service", sourceUrl: "https://commons.wikimedia.org/wiki/File:Jonas_Coonrad_House_NPS.jpg", license: "Public domain", attributionRequired: false },
   "broadview-heights": { src: "/images/local-area/broadview-heights.jpg", alt: "View across Broadview Heights", title: "City of Broadview Heights, Ohio", photographer: "Highvolt", sourceUrl: "https://commons.wikimedia.org/wiki/File:City_of_Broadview_Heights,_Ohio_from_Broadview_Commons_Shopping_Center,_June_2014.jpg", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
+  "brook-park": { src: "/images/local-area/brook-park.jpg", alt: "Homes along Richard Drive in Brook Park, Ohio", title: "Richard from Smith, Brook Park", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Richard_from_Smith,_Brook_Park.jpg", license: "Public domain", attributionRequired: false },
   brooklyn: { src: "/images/local-area/brooklyn.jpg", alt: "Welcome sign in Brooklyn, Ohio", title: "Brooklyn Welcome Sign", photographer: "Vaultguy999", sourceUrl: "https://commons.wikimedia.org/wiki/File:BrooklynWelcomeSign.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
   "brooklyn-heights": { src: "/images/local-area/brooklyn-heights.jpg", alt: "Brooklyn Heights, Ohio", title: "Brooklyn Heights", photographer: "SilentMatt Psychedelic", sourceUrl: "https://commons.wikimedia.org/wiki/File:Brooklyn_Heights(8)9-15-24_thumbnail_IMG_7510.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
   "chagrin-falls": { src: "/images/local-area/chagrin-falls.jpg", alt: "Chagrin Falls waterfall and bridge", title: "Chagrin Falls, Ohio", photographer: "Paul Sableman", sourceUrl: "https://commons.wikimedia.org/wiki/File:Chagrin_Falls,_Ohio.jpg", license: "CC BY 2.0", licenseUrl: "https://creativecommons.org/licenses/by/2.0", attributionRequired: true },
@@ -990,6 +991,10 @@ const additionalAreaStatistics: Partial<Record<string, Omit<AreaStatistics, "sup
     medianSalePrice: "$413,750", homesSold: "74", medianPricePerSquareFoot: "$188/sq ft", medianDaysOnMarket: "24 days",
     dataPeriod: "June–August 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/2349/OH/Broadview-Heights/housing-market",
   },
+  "brook-park": {
+    medianSalePrice: "$243,384", homesSold: "45", medianPricePerSquareFoot: "$178/sq ft", medianDaysOnMarket: "14 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/2402/OH/Brook-Park/housing-market",
+  },
   "brooklyn-heights": {
     medianSalePrice: "$315,000", homesSold: "2", medianPricePerSquareFoot: "$206/sq ft", medianDaysOnMarket: "24 days",
     dataPeriod: "Redfin snapshot checked November 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/2396/OH/Brooklyn-Heights",
@@ -1107,6 +1112,7 @@ const additionalAreas = [
   ["Bratenahl", "bratenahl", ["Cleveland", "Euclid", "East Cleveland", "Cleveland Heights", "Shaker Heights", "Lakewood"]],
   ["Brecksville", "brecksville", ["Broadview Heights", "North Royalton", "Seven Hills", "Independence", "Solon", "Bedford"]],
   ["Broadview Heights", "broadview-heights", ["Brecksville", "North Royalton", "Seven Hills", "Parma", "Independence", "Middleburg Heights"]],
+  ["Brook Park", "brook-park", ["Cleveland", "Berea", "Middleburg Heights", "Fairview Park", "Parma", "Parma Heights"]],
   ["Brooklyn", "brooklyn", ["Cleveland", "Parma", "Parma Heights", "Seven Hills", "Brooklyn Heights", "Lakewood"]],
   ["Brooklyn Heights", "brooklyn-heights", ["Brooklyn", "Cleveland", "Independence", "Seven Hills", "Parma", "Garfield Heights"]],
   ["Chagrin Falls", "chagrin-falls", ["Solon", "Gates Mills", "Orange Village", "Mayfield Village", "Highland Heights", "Richmond Heights"]],
