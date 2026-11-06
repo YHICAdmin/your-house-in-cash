@@ -68,6 +68,28 @@
   grid-column: 1 / -1;
 }
 
+.noScriptFallback {
+  margin-top: var(--spacing-l);
+}
+
+.noScriptFallback h3 {
+  margin: 0 0 var(--spacing-s);
+}
+
+.noScriptFallback ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-s) var(--spacing-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.noScriptFallback a {
+  color: var(--color-brand-dark);
+  text-decoration: underline;
+}
+
 .selectorControls {
   display: grid;
   min-width: 0;

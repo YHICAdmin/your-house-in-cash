@@ -6,6 +6,18 @@ import styles from "./area-situations.module.css";
 
 const headingId = "situations-heading";
 const descriptionId = "situations-description";
+const situationLinks = [
+  { label: "Foreclosure", href: "/foreclosure" },
+  { label: "Inherited Property", href: "/inherited-property" },
+  { label: "Landlords", href: "/landlords" },
+  { label: "Major Repairs", href: "/major-repairs" },
+  { label: "Vacant Property", href: "/vacant-property" },
+  { label: "Relocation", href: "/relocation" },
+  { label: "Divorce", href: "/divorce" },
+  { label: "Liens", href: "/liens" },
+  { label: "Fire Damage", href: "/fire-damage" },
+  { label: "Hoarder House", href: "/hoarder-house" },
+] as const;
 
 export function AreaSituations() {
   return (
@@ -58,6 +70,16 @@ export function AreaSituations() {
             descriptionId={descriptionId}
             headingId={headingId}
           />
+          <noscript>
+            <nav className={styles.noScriptFallback} aria-label="Seller situations">
+              <h3 className="text-heading-4">Explore seller situations</h3>
+              <ul className="text-body-small">
+                {situationLinks.map(({ label, href }) => (
+                  <li key={href}><a href={href}>{label}</a></li>
+                ))}
+              </ul>
+            </nav>
+          </noscript>
         </div>
       </div>
     </section>
