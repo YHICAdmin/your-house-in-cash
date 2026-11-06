@@ -22,6 +22,7 @@ export function parseSituationHero(source: string) {
   const fields = new Map([...hero.matchAll(/^## (.+)\n([\s\S]*?)(?=^## |$(?![\s\S]))/gm)]
     .map(match => [match[1].trim(), match[2].trim()]));
   return {
+    metaTitle: /^Meta title: (.+)$/m.exec(source)?.[1],
     headline: fields.get("Primary Headline") || undefined,
     supportingCopy: fields.get("Supporting Copy") || undefined,
   };

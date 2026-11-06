@@ -31,7 +31,7 @@ const getSituation = cache(async (slug: string) => {
   const source = await readSituationContent(slug);
   const hero = parseSituationHero(source);
   return {
-    situation: { ...fallback, headline: hero.headline ?? fallback.headline, supportingCopy: hero.supportingCopy ?? fallback.supportingCopy },
+    situation: { ...fallback, metaTitle: hero.metaTitle, headline: hero.headline ?? fallback.headline, supportingCopy: hero.supportingCopy ?? fallback.supportingCopy },
     source,
   };
 });
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
   const { situation } = await getSituation(slug);
   return {
-    title: `${situation.headline} | Your House in Cash`,
+    title: situation.metaTitle ?? `${situation.headline} | Your House in Cash`,
     description: situation.supportingCopy,
     alternates: { canonical: `/${slug}` },
   };

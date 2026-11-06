@@ -1,3 +1,5 @@
+Meta title: Garfield Heights Point-of-Sale Inspection | Your House in Cash
+
 Main topic: Selling a House
 
 Publication date: 2026-10-09
