@@ -152,11 +152,11 @@ const bedfordArea = createArea({
   city: "Bedford",
   slug: "bedford",
   statistics: {
-    medianSalePrice: "$144,904",
+    medianSalePrice: "$164,921",
     homesSold: "46",
-    medianPricePerSquareFoot: "$141/sq ft",
-    medianDaysOnMarket: "39 days",
-    dataPeriod: "June–August 2026",
+    medianPricePerSquareFoot: "$159/sq ft",
+    medianDaysOnMarket: "34 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/1289/OH/Bedford/housing-market"
   },
@@ -192,11 +192,11 @@ const bedfordHeightsArea = createArea({
   "city": "Bedford Heights",
   "slug": "bedford-heights",
   "statistics": {
-    "medianSalePrice": "$196,870",
+    "medianSalePrice": "$199,905",
     "homesSold": "23",
-    "medianPricePerSquareFoot": "$182/sq ft",
+    "medianPricePerSquareFoot": "$171/sq ft",
     "medianDaysOnMarket": "33 days",
-    "dataPeriod": "June–August 2026",
+    "dataPeriod": "July–September 2026",
     "sourceName": "Redfin",
     "sourceUrl": "https://www.redfin.com/city/1304/OH/Bedford-Heights/housing-market"
   },
@@ -232,11 +232,11 @@ export const clevelandArea = createArea({
   city: "Cleveland",
   slug: "cleveland",
   statistics: {
-    medianSalePrice: "$149,901",
-    homesSold: "1,179",
-    medianPricePerSquareFoot: "$100/sq ft",
+    medianSalePrice: "$149,929",
+    homesSold: "1,116",
+    medianPricePerSquareFoot: "$92/sq ft",
     medianDaysOnMarket: "32 days",
-    dataPeriod: "June–August 2026",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/4145/OH/Cleveland/housing-market"
   },
@@ -273,11 +273,11 @@ const clevelandHeightsArea = createArea({
   city: "Cleveland Heights",
   slug: "cleveland-heights",
   statistics: {
-    medianSalePrice: "$256,081",
-    homesSold: "205",
-    medianPricePerSquareFoot: "$130/sq ft",
-    medianDaysOnMarket: "27 days",
-    dataPeriod: "June–August 2026",
+    medianSalePrice: "$243,661",
+    homesSold: "183",
+    medianPricePerSquareFoot: "$133/sq ft",
+    medianDaysOnMarket: "28 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/4153/OH/Cleveland-Heights/housing-market"
   },
@@ -313,11 +313,11 @@ export const euclidArea = createArea({
   city: "Euclid",
   slug: "euclid",
   statistics: {
-    medianSalePrice: "$167,889",
-    homesSold: "171",
-    medianPricePerSquareFoot: "$113/sq ft",
-    medianDaysOnMarket: "30 days",
-    dataPeriod: "June–August 2026",
+    medianSalePrice: "$172,168",
+    homesSold: "150",
+    medianPricePerSquareFoot: "$119/sq ft",
+    medianDaysOnMarket: "34 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/6612/OH/Euclid/housing-market"
   },
@@ -354,11 +354,11 @@ const garfieldHeightsArea = createArea({
   city: "Garfield Heights",
   slug: "garfield-heights",
   statistics: {
-    medianSalePrice: "$153,898",
-    homesSold: "91",
-    medianPricePerSquareFoot: "$127/sq ft",
-    medianDaysOnMarket: "26 days",
-    dataPeriod: "June–August 2026",
+    medianSalePrice: "$151,028",
+    homesSold: "87",
+    medianPricePerSquareFoot: "$115/sq ft",
+    medianDaysOnMarket: "22 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/7498/OH/Garfield-Heights/housing-market"
   },
@@ -394,10 +394,10 @@ const highlandHeightsArea = createArea({
   "city": "Highland Heights",
   "slug": "highland-heights",
   "statistics": {
-    "medianSalePrice": "$543,141",
+    "medianSalePrice": "$537,000",
     "homesSold": "37",
-    "medianPricePerSquareFoot": "$201/sq ft",
-    "medianDaysOnMarket": "16 days",
+    "medianPricePerSquareFoot": "$203/sq ft",
+    "medianDaysOnMarket": "19 days",
     "dataPeriod": "June–August 2026",
     "sourceName": "Redfin",
     "sourceUrl": "https://www.redfin.com/city/8967/OH/Highland-Heights/housing-market"
@@ -434,11 +434,11 @@ const independenceArea = createArea({
   city: "Independence",
   slug: "independence",
   statistics: {
-    medianSalePrice: "$459,720",
+    medianSalePrice: "$432,244",
     homesSold: "12",
-    medianPricePerSquareFoot: "$258/sq ft",
-    medianDaysOnMarket: "29 days",
-    dataPeriod: "May–July 2026",
+    medianPricePerSquareFoot: "$196/sq ft",
+    medianDaysOnMarket: "32 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/9463/OH/Independence/housing-market"
   },
@@ -474,11 +474,11 @@ const lyndhurstArea = createArea({
   city: "Lyndhurst",
   slug: "lyndhurst",
   statistics: {
-    medianSalePrice: "$259,828",
-    homesSold: "81",
-    medianPricePerSquareFoot: "$153/sq ft",
-    medianDaysOnMarket: "21 days",
-    dataPeriod: "June–August 2026",
+    medianSalePrice: "$259,876",
+    homesSold: "78",
+    medianPricePerSquareFoot: "$165/sq ft",
+    medianDaysOnMarket: "22 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/11615/OH/Lyndhurst/housing-market"
   },
@@ -514,11 +514,11 @@ const mapleHeightsArea = createArea({
   city: "Maple Heights",
   slug: "maple-heights",
   statistics: {
-    medianSalePrice: "$153,898",
-    homesSold: "77",
-    medianPricePerSquareFoot: "$107/sq ft",
-    medianDaysOnMarket: "32 days",
-    dataPeriod: "June–August 2026",
+    medianSalePrice: "$144,931",
+    homesSold: "70",
+    medianPricePerSquareFoot: "$120/sq ft",
+    medianDaysOnMarket: "25 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/12086/OH/Maple-Heights/housing-market"
   },
@@ -554,11 +554,11 @@ const mayfieldHeightsArea = createArea({
   "city": "Mayfield Heights",
   "slug": "mayfield-heights",
   "statistics": {
-    "medianSalePrice": "$274,818",
-    "homesSold": "75",
-    "medianPricePerSquareFoot": "$163/sq ft",
-    "medianDaysOnMarket": "22 days",
-    "dataPeriod": "June–August 2026",
+    "medianSalePrice": "$271,871",
+    "homesSold": "69",
+    "medianPricePerSquareFoot": "$167/sq ft",
+    "medianDaysOnMarket": "31 days",
+    "dataPeriod": "July–September 2026",
     "sourceName": "Redfin",
     "sourceUrl": "https://www.redfin.com/city/12397/OH/Mayfield-Heights/housing-market"
   },
@@ -594,11 +594,11 @@ const mayfieldVillageArea = createArea({
   "city": "Mayfield Village",
   "slug": "mayfield-village",
   "statistics": {
-    "medianSalePrice": "$414,726",
-    "homesSold": "14",
-    "medianPricePerSquareFoot": "$242/sq ft",
-    "medianDaysOnMarket": "37 days",
-    "dataPeriod": "June–August 2026",
+    "medianSalePrice": "$447,287",
+    "homesSold": "16",
+    "medianPricePerSquareFoot": "$154/sq ft",
+    "medianDaysOnMarket": "38 days",
+    "dataPeriod": "July–September 2026",
     "sourceName": "Redfin",
     "sourceUrl": "https://www.redfin.com/city/12388/OH/Mayfield/housing-market"
   },
@@ -634,11 +634,11 @@ const middleburgHeightsArea = createArea({
   city: "Middleburg Heights",
   slug: "middleburg-heights",
   statistics: {
-    medianSalePrice: "$312,693",
-    homesSold: "55",
-    medianPricePerSquareFoot: "$177/sq ft",
-    medianDaysOnMarket: "8 days",
-    dataPeriod: "June–August 2026",
+    medianSalePrice: "$339,838",
+    homesSold: "47",
+    medianPricePerSquareFoot: "$178/sq ft",
+    medianDaysOnMarket: "13 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/12733/OH/Middleburg-Heights/housing-market"
   },
@@ -674,11 +674,11 @@ const parmaArea = createArea({
   city: "Parma",
   slug: "parma",
   statistics: {
-    medianSalePrice: "$231,847",
-    homesSold: "294",
-    medianPricePerSquareFoot: "$173/sq ft",
-    medianDaysOnMarket: "10 days",
-    dataPeriod: "June–August 2026",
+    medianSalePrice: "$229,891",
+    homesSold: "309",
+    medianPricePerSquareFoot: "$181/sq ft",
+    medianDaysOnMarket: "13 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/15701/OH/Parma/housing-market"
   },
@@ -714,11 +714,11 @@ const parmaHeightsArea = createArea({
   city: "Parma Heights",
   slug: "parma-heights",
   statistics: {
-    medianSalePrice: "$247,336",
-    homesSold: "64",
-    medianPricePerSquareFoot: "$199/sq ft",
-    medianDaysOnMarket: "9 days",
-    dataPeriod: "June–August 2026",
+    medianSalePrice: "$243,884",
+    homesSold: "66",
+    medianPricePerSquareFoot: "$168/sq ft",
+    medianDaysOnMarket: "15 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/15711/OH/Parma-Heights/housing-market"
   },
@@ -754,11 +754,11 @@ const richmondHeightsArea = createArea({
   city: "Richmond Heights",
   slug: "richmond-heights",
   statistics: {
-    medianSalePrice: "$277,816",
-    homesSold: "31",
-    medianPricePerSquareFoot: "$135/sq ft",
-    medianDaysOnMarket: "30 days",
-    dataPeriod: "June–August 2026",
+    medianSalePrice: "$270,871",
+    homesSold: "24",
+    medianPricePerSquareFoot: "$155/sq ft",
+    medianDaysOnMarket: "38 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/17125/OH/Richmond-Heights/housing-market"
   },
@@ -794,11 +794,11 @@ const sevenHillsArea = createArea({
   city: "Seven Hills",
   slug: "seven-hills",
   statistics: {
-    medianSalePrice: "$336,277",
-    homesSold: "49",
-    medianPricePerSquareFoot: "$190/sq ft",
-    medianDaysOnMarket: "9 days",
-    dataPeriod: "June–August 2026",
+    medianSalePrice: "$327,844",
+    homesSold: "50",
+    medianPricePerSquareFoot: "$182/sq ft",
+    medianDaysOnMarket: "10 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/18238/OH/Seven-Hills/housing-market"
   },
@@ -834,11 +834,11 @@ const solonArea = createArea({
   "city": "Solon",
   "slug": "solon",
   "statistics": {
-    "medianSalePrice": "$509,663",
-    "homesSold": "80",
-    "medianPricePerSquareFoot": "$208/sq ft",
-    "medianDaysOnMarket": "29 days",
-    "dataPeriod": "June–August 2026",
+    "medianSalePrice": "$452,285",
+    "homesSold": "83",
+    "medianPricePerSquareFoot": "$193/sq ft",
+    "medianDaysOnMarket": "31 days",
+    "dataPeriod": "July–September 2026",
     "sourceName": "Redfin",
     "sourceUrl": "https://www.redfin.com/city/18593/OH/Solon/housing-market"
   },
@@ -874,11 +874,11 @@ const southEuclidArea = createArea({
   city: "South Euclid",
   slug: "south-euclid",
   statistics: {
-    medianSalePrice: "$199,868",
-    homesSold: "101",
-    medianPricePerSquareFoot: "$125/sq ft",
-    medianDaysOnMarket: "22 days",
-    dataPeriod: "June–August 2026",
+    medianSalePrice: "$200,904",
+    homesSold: "94",
+    medianPricePerSquareFoot: "$134/sq ft",
+    medianDaysOnMarket: "21 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/18673/OH/South-Euclid/housing-market"
   },
@@ -914,11 +914,11 @@ const universityHeightsArea = createArea({
   city: "University Heights",
   slug: "university-heights",
   statistics: {
-    medianSalePrice: "$308,546",
-    homesSold: "74",
-    medianPricePerSquareFoot: "$191/sq ft",
-    medianDaysOnMarket: "18 days",
-    dataPeriod: "June–August 2026",
+    medianSalePrice: "$289,612",
+    homesSold: "59",
+    medianPricePerSquareFoot: "$173/sq ft",
+    medianDaysOnMarket: "26 days",
+    dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/19865/OH/University-Heights/housing-market"
   },
@@ -950,8 +950,157 @@ const universityHeightsArea = createArea({
   ]
 });
 
-// These additional municipalities are active service areas. Market snapshots are
-// intentionally omitted until they are separately verified and documented.
+const additionalAreaStatistics: Partial<Record<string, Omit<AreaStatistics, "supportingCopy">>> = {
+  "bay-village": {
+    medianSalePrice: "$449,786",
+    homesSold: "71",
+    medianPricePerSquareFoot: "$259/sq ft",
+    medianDaysOnMarket: "18 days",
+    dataPeriod: "July–September 2026",
+    sourceName: "Redfin",
+    sourceUrl: "https://www.redfin.com/city/1171/OH/Bay-Village/housing-market",
+  },
+  berea: {
+    medianSalePrice: "$255,210", homesSold: "74", medianPricePerSquareFoot: "$179/sq ft", medianDaysOnMarket: "9 days",
+    dataPeriod: "June–August 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/1516/OH/Berea/housing-market",
+  },
+  bratenahl: {
+    medianSalePrice: "$431,045", homesSold: "12", medianPricePerSquareFoot: "$203/sq ft", medianDaysOnMarket: "179 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/2160/OH/Bratenahl/housing-market",
+  },
+  beachwood: {
+    medianSalePrice: "$549,738",
+    homesSold: "34",
+    medianPricePerSquareFoot: "$201/sq ft",
+    medianDaysOnMarket: "48 days",
+    dataPeriod: "July–September 2026",
+    sourceName: "Redfin",
+    sourceUrl: "https://www.redfin.com/city/1191/OH/Beachwood/housing-market",
+  },
+  brecksville: {
+    medianSalePrice: "$474,774",
+    homesSold: "62",
+    medianPricePerSquareFoot: "$184/sq ft",
+    medianDaysOnMarket: "22 days",
+    dataPeriod: "July–September 2026",
+    sourceName: "Redfin",
+    sourceUrl: "https://www.redfin.com/city/2164/OH/Brecksville/housing-market",
+  },
+  "broadview-heights": {
+    medianSalePrice: "$413,750", homesSold: "74", medianPricePerSquareFoot: "$188/sq ft", medianDaysOnMarket: "24 days",
+    dataPeriod: "June–August 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/2349/OH/Broadview-Heights/housing-market",
+  },
+  "brooklyn-heights": {
+    medianSalePrice: "$315,000", homesSold: "2", medianPricePerSquareFoot: "$206/sq ft", medianDaysOnMarket: "24 days",
+    dataPeriod: "Redfin snapshot checked November 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/2396/OH/Brooklyn-Heights",
+  },
+  brooklyn: {
+    medianSalePrice: "$216,897",
+    homesSold: "38",
+    medianPricePerSquareFoot: "$169/sq ft",
+    medianDaysOnMarket: "14 days",
+    dataPeriod: "July–September 2026",
+    sourceName: "Redfin",
+    sourceUrl: "https://www.redfin.com/city/2390/OH/Brooklyn/housing-market",
+  },
+  "chagrin-falls": {
+    medianSalePrice: "$542,742", homesSold: "24", medianPricePerSquareFoot: "$329/sq ft", medianDaysOnMarket: "27 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/3481/OH/Chagrin-Falls/housing-market",
+  },
+  "cuyahoga-heights": {
+    medianSalePrice: "$180,000", homesSold: "1", medianPricePerSquareFoot: "$122/sq ft", medianDaysOnMarket: "97 days",
+    dataPeriod: "Redfin snapshot checked November 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/5101/OH/Cuyahoga-Heights",
+  },
+  "east-cleveland": {
+    medianSalePrice: "$143,432", homesSold: "14", medianPricePerSquareFoot: "$46/sq ft", medianDaysOnMarket: "78 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/6038/OH/East-Cleveland/housing-market",
+  },
+  "fairview-park": {
+    medianSalePrice: "$289,362", homesSold: "55", medianPricePerSquareFoot: "$191/sq ft", medianDaysOnMarket: "12 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/6780/OH/Fairview-Park/housing-market",
+  },
+  "gates-mills": {
+    medianSalePrice: "$1,007,020", homesSold: "8", medianPricePerSquareFoot: "$250/sq ft", medianDaysOnMarket: "60 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/7517/OH/Gates-Mills/housing-market",
+  },
+  glenwillow: {
+    medianSalePrice: "$220,000", homesSold: "1", medianPricePerSquareFoot: "$269/sq ft", medianDaysOnMarket: "46 days",
+    dataPeriod: "June–August 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/7824/OH/Glenwillow/housing-market",
+  },
+  "highland-hills": {
+    medianSalePrice: "$156,000", homesSold: "1", medianPricePerSquareFoot: "$169/sq ft", medianDaysOnMarket: "23 days",
+    dataPeriod: "May–July 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/8969/OH/Highland-Hills/housing-market",
+  },
+  lakewood: {
+    medianSalePrice: "$342,837", homesSold: "198", medianPricePerSquareFoot: "$196/sq ft", medianDaysOnMarket: "21 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/10611/OH/Lakewood/housing-market",
+  },
+  linndale: {
+    medianSalePrice: "$140,000", homesSold: "1", medianPricePerSquareFoot: "$107/sq ft", medianDaysOnMarket: "47 days",
+    dataPeriod: "Redfin snapshot checked November 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/11182/OH/Linndale",
+  },
+  "north-olmsted": {
+    medianSalePrice: "$288,862", homesSold: "149", medianPricePerSquareFoot: "$172/sq ft", medianDaysOnMarket: "12 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/14718/OH/North-Olmsted/housing-market",
+  },
+  "north-randall": {
+    medianSalePrice: "$200,000", homesSold: "1", medianPricePerSquareFoot: "$174/sq ft", medianDaysOnMarket: "27 days",
+    dataPeriod: "Redfin snapshot checked November 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/neighborhood/765795/OH/North-Randall/North-Randall-Village",
+  },
+  "north-royalton": {
+    medianSalePrice: "$357,830", homesSold: "121", medianPricePerSquareFoot: "$183/sq ft", medianDaysOnMarket: "19 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/14764/OH/North-Royalton/housing-market",
+  },
+  "orange-village": {
+    medianSalePrice: "$623,453", homesSold: "24", medianPricePerSquareFoot: "$255/sq ft", medianDaysOnMarket: "62 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/15175/OH/Orange/housing-market",
+  },
+  "oakwood-village": {
+    medianSalePrice: "$363,000", homesSold: "4", medianPricePerSquareFoot: "$143/sq ft", medianDaysOnMarket: "43 days",
+    dataPeriod: "Redfin snapshot checked November 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/14977/OH/Oakwood",
+  },
+  "olmsted-falls": {
+    medianSalePrice: "$259,876", homesSold: "53", medianPricePerSquareFoot: "$158/sq ft", medianDaysOnMarket: "27 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/15128/OH/Olmsted-Falls/housing-market",
+  },
+  "pepper-pike": {
+    medianSalePrice: "$847,000", homesSold: "37", medianPricePerSquareFoot: "$258/sq ft", medianDaysOnMarket: "35 days",
+    dataPeriod: "June–August 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/15864/OH/Pepper-Pike/housing-market",
+  },
+  "rocky-river": {
+    medianSalePrice: "$396,011", homesSold: "89", medianPricePerSquareFoot: "$237/sq ft", medianDaysOnMarket: "18 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/17437/OH/Rocky-River/housing-market",
+  },
+  "shaker-heights": {
+    medianSalePrice: "$363,577", homesSold: "118", medianPricePerSquareFoot: "$165/sq ft", medianDaysOnMarket: "37 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/18309/OH/Shaker-Heights/housing-market",
+  },
+  strongsville: {
+    medianSalePrice: "$379,819", homesSold: "190", medianPricePerSquareFoot: "$190/sq ft", medianDaysOnMarket: "17 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/19034/OH/Strongsville/housing-market",
+  },
+  "valley-view": {
+    medianSalePrice: "$343,000", homesSold: "2", medianPricePerSquareFoot: "$170/sq ft", medianDaysOnMarket: "6 days",
+    dataPeriod: "May–July 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/19939/OH/Valley-View/housing-market",
+  },
+  "walton-hills": {
+    medianSalePrice: "$394,812", homesSold: "9", medianPricePerSquareFoot: "$133/sq ft", medianDaysOnMarket: "52 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/20238/OH/Walton-Hills/housing-market",
+  },
+  westlake: {
+    medianSalePrice: "$449,786", homesSold: "140", medianPricePerSquareFoot: "$173/sq ft", medianDaysOnMarket: "17 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/20680/OH/Westlake/housing-market",
+  },
+  woodmere: {
+    medianSalePrice: "$398,000", homesSold: "2", medianPricePerSquareFoot: "$202/sq ft", medianDaysOnMarket: "96 days",
+    dataPeriod: "Redfin snapshot checked November 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/20963/OH/Woodmere",
+  },
+  "warrensville-heights": {
+    medianSalePrice: "$173,118", homesSold: "20", medianPricePerSquareFoot: "$173/sq ft", medianDaysOnMarket: "30 days",
+    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/20280/OH/Warrensville-Heights/housing-market",
+  },
+};
+
 const additionalAreas = [
   ["Bay Village", "bay-village", ["Westlake", "Rocky River", "Fairview Park", "North Olmsted", "Berea", "Lakewood"]],
   ["Berea", "berea", ["Olmsted Falls", "North Olmsted", "Strongsville", "Brook Park", "Middleburg Heights", "Fairview Park"]],
@@ -990,6 +1139,7 @@ const additionalAreas = [
 const additionalAreaPages = additionalAreas.map(([city, slug, nearbyCities]) => createArea({
   city,
   slug,
+  statistics: additionalAreaStatistics[slug],
   nearbyCities: nearbyCities.map(name => ({
     name,
     slug: name.toLowerCase().replaceAll(" ", "-"),
