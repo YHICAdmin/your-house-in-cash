@@ -37,7 +37,7 @@ type StatisticCard = {
 const headingId = "local-area-heading";
 
 export function AreaLocal({ area }: AreaLocalProps) {
-  const statistics: readonly StatisticCard[] = [
+  const statistics: readonly StatisticCard[] = area.statistics ? [
     {
       label: "Median Sale Price",
       value: area.statistics.medianSalePrice,
@@ -66,7 +66,7 @@ export function AreaLocal({ area }: AreaLocalProps) {
       background: "blue",
       supportingCopy: area.statistics.supportingCopy.medianDaysOnMarket,
     },
-  ];
+  ] : [];
 
   const statisticColumns = [statistics.slice(0, 2), statistics.slice(2)];
 
@@ -128,7 +128,7 @@ export function AreaLocal({ area }: AreaLocalProps) {
           </TextLink>
         </div>
 
-        <div className={styles.statistics}>
+        {area.statistics && <div className={styles.statistics}>
           <h3 className={`${styles.statisticsHeading} text-heading-3`}>
             {area.city} at a Glance
           </h3>
@@ -174,7 +174,7 @@ export function AreaLocal({ area }: AreaLocalProps) {
             </TextLink>{" "}
             · Updated {area.statistics.dataPeriod}
           </p>
-        </div>
+        </div>}
 
         <figure className={styles.localMarket}>
           <div className={styles.marketPhotoFrame}>

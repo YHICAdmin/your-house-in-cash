@@ -6,7 +6,7 @@ Shared design and the trust card remain defined in [area-page.md](../area-page.m
 
 ## City List
 
-These are the 20 approved City Pages. Every page uses the shared Area Page template. The homepage `/` also displays Cleveland.
+These are the approved City Pages. Every page uses the shared Area Page template. The homepage `/` also displays Cleveland.
 
 | City | Canonical slug | Route |
 |---|---|---|
@@ -30,6 +30,38 @@ These are the 20 approved City Pages. Every page uses the shared Area Page templ
 | [Solon](#solon) | `solon` | `/sell-your-house-fast-as-is-solon` |
 | [South Euclid](#south-euclid) | `south-euclid` | `/sell-your-house-fast-as-is-south-euclid` |
 | [University Heights](#university-heights) | `university-heights` | `/sell-your-house-fast-as-is-university-heights` |
+| Bay Village | `bay-village` | `/sell-your-house-fast-as-is-bay-village` |
+| Berea | `berea` | `/sell-your-house-fast-as-is-berea` |
+| Bratenahl | `bratenahl` | `/sell-your-house-fast-as-is-bratenahl` |
+| Brecksville | `brecksville` | `/sell-your-house-fast-as-is-brecksville` |
+| Broadview Heights | `broadview-heights` | `/sell-your-house-fast-as-is-broadview-heights` |
+| Brooklyn | `brooklyn` | `/sell-your-house-fast-as-is-brooklyn` |
+| Brooklyn Heights | `brooklyn-heights` | `/sell-your-house-fast-as-is-brooklyn-heights` |
+| Chagrin Falls | `chagrin-falls` | `/sell-your-house-fast-as-is-chagrin-falls` |
+| East Cleveland | `east-cleveland` | `/sell-your-house-fast-as-is-east-cleveland` |
+| Fairview Park | `fairview-park` | `/sell-your-house-fast-as-is-fairview-park` |
+| Gates Mills | `gates-mills` | `/sell-your-house-fast-as-is-gates-mills` |
+| Glenwillow | `glenwillow` | `/sell-your-house-fast-as-is-glenwillow` |
+| North Olmsted | `north-olmsted` | `/sell-your-house-fast-as-is-north-olmsted` |
+| North Royalton | `north-royalton` | `/sell-your-house-fast-as-is-north-royalton` |
+| Olmsted Falls | `olmsted-falls` | `/sell-your-house-fast-as-is-olmsted-falls` |
+| Orange Village | `orange-village` | `/sell-your-house-fast-as-is-orange-village` |
+| Rocky River | `rocky-river` | `/sell-your-house-fast-as-is-rocky-river` |
+| Shaker Heights | `shaker-heights` | `/sell-your-house-fast-as-is-shaker-heights` |
+| Strongsville | `strongsville` | `/sell-your-house-fast-as-is-strongsville` |
+| Westlake | `westlake` | `/sell-your-house-fast-as-is-westlake` |
+| Beachwood | `beachwood` | `/sell-your-house-fast-as-is-beachwood` |
+| Cuyahoga Heights | `cuyahoga-heights` | `/sell-your-house-fast-as-is-cuyahoga-heights` |
+| Highland Hills | `highland-hills` | `/sell-your-house-fast-as-is-highland-hills` |
+| Lakewood | `lakewood` | `/sell-your-house-fast-as-is-lakewood` |
+| Linndale | `linndale` | `/sell-your-house-fast-as-is-linndale` |
+| North Randall | `north-randall` | `/sell-your-house-fast-as-is-north-randall` |
+| Oakwood Village | `oakwood-village` | `/sell-your-house-fast-as-is-oakwood-village` |
+| Pepper Pike | `pepper-pike` | `/sell-your-house-fast-as-is-pepper-pike` |
+| Valley View | `valley-view` | `/sell-your-house-fast-as-is-valley-view` |
+| Walton Hills | `walton-hills` | `/sell-your-house-fast-as-is-walton-hills` |
+| Warrensville Heights | `warrensville-heights` | `/sell-your-house-fast-as-is-warrensville-heights` |
+| Woodmere | `woodmere` | `/sell-your-house-fast-as-is-woodmere` |
 
 ## Shared City Content
 
@@ -75,13 +107,13 @@ All cities except Cleveland and Euclid use `https://www.google.com/maps?q={encod
 
 ## Statistics Methodology
 
-Existing statistics use Redfin’s All Home Types city data researched on 15 September 2026. Bedford Heights, Highland Heights, Mayfield Heights, Mayfield Village, and Solon were verified on 16 September 2026. Read the precise median sale price, homes sold, and median days on market from the labeled trend statistics; read median price per square foot from the market overview. Do not substitute the Compete Score’s time-to-pending metric.
+Existing statistics use Redfin’s All Home Types city data researched on 15 September 2026. Bedford Heights, Highland Heights, Mayfield Heights, Mayfield Village, and Solon were verified on 16 September 2026. Read the precise median sale price, homes sold, and median days on market from the labeled trend statistics; read median price per square foot from the market overview. Do not substitute the Compete Score’s time-to-pending metric. The added City Pages intentionally omit the market-statistics module until their snapshots are verified and documented.
 
 [Redfin’s methodology](https://www.redfin.com/news/data-center/methodology/) specifies rolling three-month windows for cities. The August snapshot therefore uses June–August 2026; Independence’s current trend/chart snapshot ends in July and uses May–July 2026. The generic page title must not override the period shown for the actual statistics. Values, source, and reporting period are updated together. The narrative’s monthly homes-sold wording is interpreted using this city methodology, consistent with the existing Euclid approach; these values have not been independently recalculated from raw sales records.
 
 ## Recommended Cities
 
-Each city list below is the approved display order for the existing Nearby Areas section. Every entry must link to one of these 20 approved City Pages through its canonical slug. Each list must contain six unique cities and exclude itself. These are approved recommendations, not a claim that all six cities share a boundary. Retained recommendations preserve their relative order; replacements are selected by geographic proximity within the approved City List.
+Each city list below is the approved display order for the existing Nearby Areas section. Every entry must link to one of the approved City Pages through its canonical slug. Each list must contain six unique cities and exclude itself. These are approved recommendations, not a claim that all six cities share a boundary. Retained recommendations preserve their relative order; replacements are selected by geographic proximity within the approved City List.
 
 ## Bedford
 

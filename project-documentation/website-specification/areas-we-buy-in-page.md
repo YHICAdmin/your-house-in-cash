@@ -195,7 +195,7 @@ Help sellers browse all supported cities and open a City Page.
 
 ### Content
 
-* Display all 20 approved cities from [Area Data](content/areas.md#city-list) exactly once.
+* Display every approved city from [Area Data](content/areas.md#city-list) exactly once.
 * City entries appear in English alphabetical document order by displayed city name.
 * Group cities by their initial letter. Each populated letter appears once as its group's heading; groups and their cities follow alphabetical order.
 

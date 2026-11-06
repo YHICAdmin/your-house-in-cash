@@ -36,7 +36,7 @@ export type AreaPageData = {
   ];
   localPhoto: LocalPhoto;
   slug: string;
-  statistics: AreaStatistics;
+  statistics?: AreaStatistics;
 };
 
 export type LocalPhoto = {
@@ -81,7 +81,7 @@ const localPhotos: Record<string, LocalPhoto> = {
 export const defaultLocalPhoto = localPhotos.cleveland;
 
 type AreaRecord = Pick<AreaPageData, "city" | "slug" | "nearbyCities"> & {
-  statistics: Omit<AreaStatistics, "supportingCopy">;
+  statistics?: Omit<AreaStatistics, "supportingCopy">;
   googleMapsEmbedUrl?: string;
 };
 
@@ -98,7 +98,7 @@ function createArea(record: AreaRecord): AreaPageData {
         ? "Every local market has its own character. We understand the communities, housing landscape, and local factors that can shape a home sale in Cleveland."
         : `Whether you’re selling a home you live in or a rental property, we look at its condition, your situation, and the local ${city} market to prepare a straightforward as-is cash offer.`,
     },
-    statistics: {
+    statistics: record.statistics && {
       ...record.statistics,
       supportingCopy: {
         medianSalePrice: city === "Cleveland"
@@ -916,6 +916,52 @@ const universityHeightsArea = createArea({
   ]
 });
 
+// These additional municipalities are active service areas. Market snapshots are
+// intentionally omitted until they are separately verified and documented.
+const additionalAreas = [
+  ["Bay Village", "bay-village", ["Westlake", "Rocky River", "Fairview Park", "North Olmsted", "Berea", "Lakewood"]],
+  ["Berea", "berea", ["Olmsted Falls", "North Olmsted", "Strongsville", "Brook Park", "Middleburg Heights", "Fairview Park"]],
+  ["Bratenahl", "bratenahl", ["Cleveland", "Euclid", "East Cleveland", "Cleveland Heights", "Shaker Heights", "Lakewood"]],
+  ["Brecksville", "brecksville", ["Broadview Heights", "North Royalton", "Seven Hills", "Independence", "Solon", "Bedford"]],
+  ["Broadview Heights", "broadview-heights", ["Brecksville", "North Royalton", "Seven Hills", "Parma", "Independence", "Middleburg Heights"]],
+  ["Brooklyn", "brooklyn", ["Cleveland", "Parma", "Parma Heights", "Seven Hills", "Brooklyn Heights", "Lakewood"]],
+  ["Brooklyn Heights", "brooklyn-heights", ["Brooklyn", "Cleveland", "Independence", "Seven Hills", "Parma", "Garfield Heights"]],
+  ["Chagrin Falls", "chagrin-falls", ["Solon", "Gates Mills", "Orange Village", "Mayfield Village", "Highland Heights", "Richmond Heights"]],
+  ["East Cleveland", "east-cleveland", ["Cleveland", "Cleveland Heights", "Euclid", "Bratenahl", "Shaker Heights", "University Heights"]],
+  ["Beachwood", "beachwood", ["Shaker Heights", "University Heights", "Cleveland Heights", "Warrensville Heights", "Orange Village", "Woodmere"]],
+  ["Cuyahoga Heights", "cuyahoga-heights", ["Cleveland", "Garfield Heights", "Valley View", "Brooklyn Heights", "Independence", "Maple Heights"]],
+  ["Fairview Park", "fairview-park", ["Rocky River", "North Olmsted", "Westlake", "Lakewood", "Brook Park", "Berea"]],
+  ["Gates Mills", "gates-mills", ["Mayfield Heights", "Mayfield Village", "Highland Heights", "Lyndhurst", "Richmond Heights", "Chagrin Falls"]],
+  ["Glenwillow", "glenwillow", ["Solon", "Bedford Heights", "Bedford", "Maple Heights", "North Royalton", "Brecksville"]],
+  ["Highland Hills", "highland-hills", ["Warrensville Heights", "Beachwood", "Shaker Heights", "Maple Heights", "Bedford Heights", "North Randall"]],
+  ["Lakewood", "lakewood", ["Rocky River", "Fairview Park", "Brooklyn", "Cleveland", "Westlake", "Bay Village"]],
+  ["Linndale", "linndale", ["Cleveland", "Brooklyn", "Lakewood", "Parma", "Parma Heights", "Brooklyn Heights"]],
+  ["North Olmsted", "north-olmsted", ["Westlake", "Fairview Park", "Olmsted Falls", "Berea", "North Royalton", "Bay Village"]],
+  ["North Randall", "north-randall", ["Warrensville Heights", "Highland Hills", "Maple Heights", "Bedford Heights", "Bedford", "Garfield Heights"]],
+  ["North Royalton", "north-royalton", ["Broadview Heights", "Brecksville", "Strongsville", "Parma", "Seven Hills", "Glenwillow"]],
+  ["Oakwood Village", "oakwood-village", ["Bedford", "Bedford Heights", "Walton Hills", "Maple Heights", "Solon", "Glenwillow"]],
+  ["Olmsted Falls", "olmsted-falls", ["North Olmsted", "Berea", "Strongsville", "Westlake", "Fairview Park", "Bay Village"]],
+  ["Orange Village", "orange-village", ["Chagrin Falls", "Gates Mills", "Mayfield Village", "Mayfield Heights", "Highland Heights", "Solon"]],
+  ["Pepper Pike", "pepper-pike", ["Orange Village", "Gates Mills", "Mayfield Heights", "Lyndhurst", "Beachwood", "Woodmere"]],
+  ["Rocky River", "rocky-river", ["Lakewood", "Fairview Park", "Westlake", "Bay Village", "North Olmsted", "Cleveland"]],
+  ["Shaker Heights", "shaker-heights", ["Cleveland Heights", "University Heights", "Garfield Heights", "Maple Heights", "Cleveland", "East Cleveland"]],
+  ["Strongsville", "strongsville", ["North Royalton", "Olmsted Falls", "Berea", "Middleburg Heights", "Parma Heights", "Broadview Heights"]],
+  ["Valley View", "valley-view", ["Cuyahoga Heights", "Independence", "Garfield Heights", "Bedford", "Bedford Heights", "Seven Hills"]],
+  ["Walton Hills", "walton-hills", ["Oakwood Village", "Bedford", "Bedford Heights", "Maple Heights", "Solon", "North Randall"]],
+  ["Warrensville Heights", "warrensville-heights", ["Beachwood", "Highland Hills", "North Randall", "Shaker Heights", "University Heights", "Maple Heights"]],
+  ["Westlake", "westlake", ["Bay Village", "Rocky River", "Fairview Park", "North Olmsted", "Olmsted Falls", "Strongsville"]],
+  ["Woodmere", "woodmere", ["Beachwood", "Orange Village", "Pepper Pike", "Shaker Heights", "University Heights", "Warrensville Heights"]],
+] as const satisfies readonly (readonly [string, string, readonly [string, string, string, string, string, string]])[];
+
+const additionalAreaPages = additionalAreas.map(([city, slug, nearbyCities]) => createArea({
+  city,
+  slug,
+  nearbyCities: nearbyCities.map(name => ({
+    name,
+    slug: name.toLowerCase().replaceAll(" ", "-"),
+  })) as unknown as AreaRecord["nearbyCities"],
+}));
+
 export const areas: readonly AreaPageData[] = [
   bedfordArea,
   bedfordHeightsArea,
@@ -937,4 +983,5 @@ export const areas: readonly AreaPageData[] = [
   solonArea,
   southEuclidArea,
   universityHeightsArea,
+  ...additionalAreaPages,
 ];
