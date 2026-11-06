@@ -102,6 +102,7 @@ Each area uses the lead image from its corresponding English Wikipedia city arti
 | South Euclid | [South Euclid War Memorial](https://commons.wikimedia.org/wiki/File:South_Euclid_War_Memorial_2.jpg) | CC BY 3.0 |
 | University Heights | [Saint Ignatius Hall](https://commons.wikimedia.org/wiki/File:Administration_Building_(Saint_Ignatius_Hall),_John_Carroll_University,_University_Heights,_OH.jpg) | CC BY-SA 2.0 |
 | Brook Park | [Richard from Smith, Brook Park](https://commons.wikimedia.org/wiki/File:Richard_from_Smith,_Brook_Park.jpg) | Public domain |
+| North Randall | [Thistledown Racino](https://commons.wikimedia.org/wiki/File:Thistledown_Racino,_North_Randall,_Ohio.jpg) | CC BY 2.0 |
 
 ## Brook Park
 
