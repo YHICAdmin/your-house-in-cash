@@ -5,14 +5,15 @@ import { Button } from "@/components/ui/button";
 import { AreasHero } from "@/components/area/areas-hero";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { areas, getAreaPagePath } from "@/data/areas";
+import { createPageMetadata } from "@/lib/page-metadata";
 import localStyles from "@/components/area/area-local.module.css";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Areas We Buy Houses In Greater Cleveland, OH | Your House in Cash",
   description: "We buy houses as-is in Greater Cleveland, Ohio and surrounding communities. Find your city to learn more.",
-  alternates: { canonical: "/areas-we-buy-in" },
-};
+  canonical: "/areas-we-buy-in",
+});
 
 export default function AreasWeBuyInPage() {
   const sortedAreas = [...areas].sort((a, b) => a.city.localeCompare(b.city, "en"));

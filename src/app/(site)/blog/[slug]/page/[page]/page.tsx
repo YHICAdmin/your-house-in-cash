@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BlogTopic } from "@/components/blog/blog-topic";
 import { readBlogTopic, readBlogTopics } from "@/lib/blog-content";
+import { createPageMetadata } from "@/lib/page-metadata";
 
 const articlesPerPage = 6;
 
@@ -20,7 +21,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; page: string }> }): Promise<Metadata> {
   const { slug, page } = await params;
   const topic = await readBlogTopic(slug);
-  return topic ? { title: `${topic.name} | Blog | Your House in Cash`, description: topic.description, alternates: { canonical: `/blog/${slug}/page/${page}` } } : {};
+  return topic ? createPageMetadata({
+    title: `${topic.name} | Blog | Your House in Cash`,
+    description: topic.description,
+    canonical: `/blog/${slug}/page/${page}`,
+  }) : {};
 }
 
 export default async function BlogTopicPaginationPage({ params }: { params: Promise<{ slug: string; page: string }> }) {

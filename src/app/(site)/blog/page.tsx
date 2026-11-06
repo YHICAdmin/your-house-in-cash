@@ -8,15 +8,16 @@ import { BlogTopicPreviews } from "@/components/blog/blog-topic-previews";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { TextLink } from "@/components/ui/text-link";
 import { readBlogArticle, readBlogTopics, readRecentBlogTopics } from "@/lib/blog-content";
+import { createPageMetadata } from "@/lib/page-metadata";
 import styles from "./page.module.css";
 
 const featuredArticleSlug = "how-much-money-will-you-net-when-you-sell-your-house";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Blog | Your House in Cash",
   description: "Clear, practical guidance for homeowners considering a sale.",
-  alternates: { canonical: "/blog" },
-};
+  canonical: "/blog",
+});
 
 export default async function BlogIndexPage() {
   const [article, topics, recentTopics] = await Promise.all([

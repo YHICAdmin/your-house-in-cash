@@ -7,6 +7,7 @@ import { PortfolioFaq } from "@/components/portfolio/portfolio-faq";
 import { PortfolioFinalCta } from "@/components/portfolio/portfolio-final-cta";
 import { Button } from "@/components/ui/button";
 import { SectionLabel } from "@/components/ui/section-label";
+import { createPageMetadata } from "@/lib/page-metadata";
 import styles from "./page.module.css";
 
 const comparisonRows = [
@@ -18,11 +19,12 @@ const comparisonRows = [
   "Fewer separate negotiations",
 ] as const;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Sell a Portfolio | Your House in Cash",
   description: "Sell your Cleveland rental portfolio in one coordinated transaction with Your House in Cash.",
-  alternates: { canonical: "/sell-property-portfolio" },
-};
+  canonical: "/sell-property-portfolio",
+  image: { url: "/images/portfolio-hero/portfolio-street.png", width: 1536, height: 1024, alt: "Cleveland rental properties" },
+});
 
 export default function SellPropertyPortfolioPage() {
   return (

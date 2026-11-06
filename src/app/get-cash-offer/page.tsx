@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { MinimalHeader } from "@/components/layout/minimal-header";
 import { MinimalFooter } from "@/components/layout/minimal-footer";
 import { SellerForm } from "@/components/seller/seller-form";
+import { createPageMetadata } from "@/lib/page-metadata";
 import styles from "@/components/seller/seller-form.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Get a Cash Offer | Your House in Cash",
   description: "Request a cash offer for your Cleveland-area property and get started with Your House in Cash.",
-  alternates: { canonical: "/get-cash-offer" },
-};
+  canonical: "/get-cash-offer",
+});
 
 export default function SellerFormPage() {
   return <div className={styles.page}>

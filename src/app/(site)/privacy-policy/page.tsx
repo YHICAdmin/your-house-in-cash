@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { TextLink } from "@/components/ui/text-link";
 import { AnalyticsPreferences } from "@/components/analytics/analytics-preferences";
+import { createPageMetadata } from "@/lib/page-metadata";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Privacy Policy | Your House in Cash",
   description: "Learn how Your House in Cash handles personal information collected through this website.",
-  alternates: { canonical: "/privacy-policy" },
-};
+  canonical: "/privacy-policy",
+});
 
 export default function PrivacyPolicyPage() {
   return (

@@ -10,6 +10,7 @@ import { SituationFaq } from "@/components/situation/situation-faq";
 import { SituationFinalCta } from "@/components/situation/situation-final-cta";
 import { cache } from "react";
 import { readSituationContent, parseSituationHero } from "@/lib/situation-content";
+import { createPageMetadata } from "@/lib/page-metadata";
 
 export const dynamicParams = false;
 
@@ -40,18 +41,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const area = getArea(slug);
   if (area) {
-    return {
+    return createPageMetadata({
       title: `Sell Your House Fast in ${area.city}, OH | Your House in Cash`,
       description: `Sell your ${area.city}, Ohio house as-is for cash. No repairs, fees, or traditional-sale waiting. Serving Greater Cleveland homeowners.`,
-      alternates: { canonical: `/${slug}` },
-    };
+      canonical: `/${slug}`,
+      image: { url: area.localPhoto.src, alt: area.localPhoto.alt },
+    });
   }
   const { situation } = await getSituation(slug);
-  return {
+  return createPageMetadata({
     title: situation.metaTitle ?? `${situation.headline} | Your House in Cash`,
     description: situation.supportingCopy,
-    alternates: { canonical: `/${slug}` },
-  };
+    canonical: `/${slug}`,
+    image: {
+      url: situation.image.src,
+      width: situation.image.width,
+      height: situation.image.height,
+      alt: situation.imageAlt,
+    },
+  });
 }
 
 export default async function ContentPage({ params }: { params: Promise<{ slug: string }> }) {

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ClipboardCheck, FileCheck2, Handshake, MessageCircle, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { createPageMetadata } from "@/lib/page-metadata";
 import styles from "./page.module.css";
 
 const coreValues = [
@@ -28,11 +29,12 @@ const coreValues = [
   },
 ] as const;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "About Us | Your House in Cash",
   description: "Meet Noah, the person behind Your House in Cash, and learn about a clearer, more direct way to discuss selling a Cleveland home.",
-  alternates: { canonical: "/about-us" },
-};
+  canonical: "/about-us",
+  image: { url: "/images/about-us/noah-founder-hero.png", width: 1536, height: 1024, alt: "Noah, founder of Your House in Cash" },
+});
 
 export default function AboutUsPage() {
   return (

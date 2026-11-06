@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { TextLink } from "@/components/ui/text-link";
+import { createPageMetadata } from "@/lib/page-metadata";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Terms of Service | Your House in Cash",
   description: "Read the terms that govern use of the Your House in Cash website.",
-  alternates: { canonical: "/terms-of-service" },
-};
+  canonical: "/terms-of-service",
+});
 
 export default function TermsOfServicePage() {
   return (
