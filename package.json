@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "validate:images": "node scripts/validate-images.mjs",
     "test:production-form": "playwright test --config=playwright.production.config.ts"
   },
   "dependencies": {
