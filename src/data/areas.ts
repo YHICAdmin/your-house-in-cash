@@ -34,8 +34,20 @@ export type AreaPageData = {
     NearbyCity,
     NearbyCity,
   ];
+  localPhoto: LocalPhoto;
   slug: string;
   statistics: AreaStatistics;
+};
+
+export type LocalPhoto = {
+  alt: string;
+  attributionRequired: boolean;
+  license: string;
+  licenseUrl?: string;
+  photographer: string;
+  sourceUrl: string;
+  src: string;
+  title: string;
 };
 
 export function getAreaPagePath(citySlug: string) {
@@ -43,15 +55,30 @@ export function getAreaPagePath(citySlug: string) {
   return `/sell-your-house-fast-as-is-${citySlug}`;
 }
 
-export const sharedLocalPhoto = {
-  src: "/images/local-area/cleveland-east-boulevard.jpg",
-  alt: "Brick house with a front porch and lawn in Cleveland’s East Boulevard Historic District, Glenville",
-  photographer: "Warren LeMay",
-  sourceUrl: "https://www.flickr.com/photos/warrenlemay/28439607087/",
-  title: "East Boulevard Historic District, Glenville, Cleveland, OH",
-  license: "CC0 1.0",
-  licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
-} as const;
+const localPhotos: Record<string, LocalPhoto> = {
+  bedford: { src: "/images/local-area/bedford.jpg", alt: "Bedford Historic District in Bedford, Ohio", title: "Bedford Historic District, Bedford, Ohio", photographer: "Bennett-ne", sourceUrl: "https://commons.wikimedia.org/wiki/File:Bedford_Historic_District,_Bedford,_Ohio.JPG", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
+  "bedford-heights": { src: "/images/local-area/bedford-heights.jpg", alt: "Cleveland Holocaust Memorial in Bedford Heights, Ohio", title: "Holocaust Memorial Cleveland Ohio", photographer: "Arnold H Berger", sourceUrl: "https://commons.wikimedia.org/wiki/File:Holmem-scene-large.jpg", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
+  cleveland: { src: "/images/local-area/cleveland.jpg", alt: "Cleveland skyline viewed from Lakewood Park", title: "Cleveland skyline from Lakewood Park, January 2026", photographer: "Erik Drost", sourceUrl: "https://commons.wikimedia.org/wiki/File:Cleveland_skyline_from_Lakewood_Park,_January_2026.jpg", license: "CC BY 4.0", licenseUrl: "https://creativecommons.org/licenses/by/4.0", attributionRequired: true },
+  "cleveland-heights": { src: "/images/local-area/cleveland-heights.jpg", alt: "Taylor Tudors building in Cleveland Heights, Ohio", title: "North building - Taylor Tudors", photographer: "Tim Evanson", sourceUrl: "https://commons.wikimedia.org/wiki/File:North_building_-_Taylor_Tudors.jpg", license: "CC BY-SA 2.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0", attributionRequired: true },
+  euclid: { src: "/images/local-area/euclid.jpg", alt: "Old City Hall in Euclid, Ohio", title: "Euclid (Ohio) - Old City Hall", photographer: "stu_spivack", sourceUrl: "https://commons.wikimedia.org/wiki/File:Euclid_(Ohio)_-_Old_City_Hall.jpg", license: "CC BY-SA 2.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0", attributionRequired: true },
+  "garfield-heights": { src: "/images/local-area/garfield-heights.jpg", alt: "Garfield Heights City Hall and Civic Center", title: "Garfield Heights city hall", photographer: "AJHalliwell", sourceUrl: "https://commons.wikimedia.org/wiki/File:Garfield_Heights_city_hall.jpg", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
+  "highland-heights": { src: "/images/local-area/highland-heights.jpg", alt: "Air traffic control tower at Cuyahoga County Airport in Highland Heights", title: "CGF TOWER", photographer: "Cole Goldberg", sourceUrl: "https://commons.wikimedia.org/wiki/File:CGF_TOWER.JPG", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
+  independence: { src: "/images/local-area/independence.jpg", alt: "Independence Presbyterian Church in Independence, Ohio", title: "Independence Presbyterian Church", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Independence_Presbyterian_Church.jpg", license: "Public domain", attributionRequired: false },
+  lyndhurst: { src: "/images/local-area/lyndhurst.jpg", alt: "Old Euclid District 4 Schoolhouse in Lyndhurst, Ohio", title: "Old Euclid District 4 Schoolhouse in Lyndhurst", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Old_Euclid_District_4_Schoolhouse_in_Lyndhurst.jpg", license: "Public domain", attributionRequired: false },
+  "maple-heights": { src: "/images/local-area/maple-heights.jpg", alt: "Homes on Vine Street in Maple Heights, Ohio", title: "Southern end of Vine Street, Maple Heights", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Southern_end_of_Vine_Street,_Maple_Heights.jpg", license: "Public domain", attributionRequired: false },
+  "mayfield-heights": { src: "/images/local-area/mayfield-heights.jpg", alt: "Mayfield Heights City Hall", title: "Mayfield City Hall - panoramio", photographer: "mil199", sourceUrl: "https://commons.wikimedia.org/wiki/File:Mayfield_City_Hall_-_panoramio.jpg", license: "CC BY 3.0", licenseUrl: "https://creativecommons.org/licenses/by/3.0", attributionRequired: true },
+  "mayfield-village": { src: "/images/local-area/mayfield-village.jpg", alt: "Old Center School in Mayfield, Ohio", title: "Old Center School in Mayfield", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Old_Center_School_in_Mayfield.jpg", license: "Public domain", attributionRequired: false },
+  "middleburg-heights": { src: "/images/local-area/middleburg-heights.jpg", alt: "Municipal Center flower displays and City Hall in Middleburg Heights", title: "Middleburg Heights 9-14-24 combined IMG 7312", photographer: "SilentMatt Psychedelic", sourceUrl: "https://commons.wikimedia.org/wiki/File:Middleburg_Heights_9-14-24_combined_IMG_7312.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
+  parma: { src: "/images/local-area/parma.png", alt: "Cleveland skyline viewed from State Road in Parma, Ohio", title: "Parma, OH - Cleveland Skyline from State Rd", photographer: "JSmetana", sourceUrl: "https://commons.wikimedia.org/wiki/File:Parma,_OH_-_Cleveland_Skyline_from_State_Rd.png", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
+  "parma-heights": { src: "/images/local-area/parma-heights.jpg", alt: "Robert W. Henry House in Parma Heights, Ohio", title: "Robert W. Henry House, Parma Heights", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Robert_W._Henry_House,_Parma_Heights.jpg", license: "Public domain", attributionRequired: false },
+  "richmond-heights": { src: "/images/local-area/richmond-heights.jpg", alt: "Main house at Greenwood Farm in Richmond Heights, Ohio", title: "The main house at Greenwood Farm", photographer: "RHOhio", sourceUrl: "https://commons.wikimedia.org/wiki/File:The_main_house_at_Greenwood_Farm.JPG", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
+  "seven-hills": { src: "/images/local-area/seven-hills.jpg", alt: "John Froelich House in Seven Hills, Ohio", title: "John Froelich House", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:John_Froelich_House.jpg", license: "Public domain", attributionRequired: false },
+  solon: { src: "/images/local-area/solon.jpg", alt: "Solon City Hall in Solon, Ohio", title: "SolonCityHall", photographer: "Mayor Pez", sourceUrl: "https://commons.wikimedia.org/wiki/File:SolonCityHall.jpg", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
+  "south-euclid": { src: "/images/local-area/south-euclid.jpg", alt: "South Euclid War Memorial", title: "South Euclid War Memorial 2", photographer: "User:THD3", sourceUrl: "https://commons.wikimedia.org/wiki/File:South_Euclid_War_Memorial_2.jpg", license: "CC BY 3.0", licenseUrl: "https://creativecommons.org/licenses/by/3.0", attributionRequired: true },
+  "university-heights": { src: "/images/local-area/university-heights.jpg", alt: "Saint Ignatius Hall at John Carroll University in University Heights", title: "Administration Building (Saint Ignatius Hall), John Carroll University, University Heights, OH", photographer: "w_lemay", sourceUrl: "https://commons.wikimedia.org/wiki/File:Administration_Building_(Saint_Ignatius_Hall),_John_Carroll_University,_University_Heights,_OH.jpg", license: "CC BY-SA 2.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0", attributionRequired: true },
+};
+
+export const defaultLocalPhoto = localPhotos.cleveland;
 
 type AreaRecord = Pick<AreaPageData, "city" | "slug" | "nearbyCities"> & {
   statistics: Omit<AreaStatistics, "supportingCopy">;
@@ -62,6 +89,7 @@ function createArea(record: AreaRecord): AreaPageData {
   const { city } = record;
   return {
     ...record,
+    localPhoto: localPhotos[record.slug] ?? defaultLocalPhoto,
     googleMapsEmbedUrl: record.googleMapsEmbedUrl ??
       `https://www.google.com/maps?q=${encodeURIComponent(`${city}, Ohio, USA`)}&output=embed`,
     intro: {

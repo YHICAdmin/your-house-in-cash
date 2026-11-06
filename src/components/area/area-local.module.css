@@ -198,6 +198,15 @@
   margin: 0;
 }
 
+.marketCredit {
+  margin: var(--spacing-xs) 0 0;
+  color: var(--color-text-secondary);
+}
+
+.marketCredit a {
+  color: inherit;
+}
+
 .marketPhotoFrame {
   position: relative;
   aspect-ratio: 4 / 3;

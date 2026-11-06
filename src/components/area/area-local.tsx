@@ -13,9 +13,12 @@ import { SectionLabel } from "@/components/ui/section-label";
 import { TextLink } from "@/components/ui/text-link";
 import {
   getAreaPagePath,
-  sharedLocalPhoto,
   type AreaPageData,
 } from "@/data/areas";
+import {
+  AnimatedStatisticValue,
+  StatisticsAnimation,
+} from "./animated-statistic-value";
 import { LocalMap } from "./local-map";
 import styles from "./area-local.module.css";
 
@@ -130,7 +133,7 @@ export function AreaLocal({ area }: AreaLocalProps) {
             {area.city} at a Glance
           </h3>
 
-          <div className={styles.statisticColumns}>
+          <StatisticsAnimation>
             {statisticColumns.map((column, columnIndex) => (
               <ul key={columnIndex} className={styles.statisticColumn}>
                 {column.map((statistic) => {
@@ -146,7 +149,7 @@ export function AreaLocal({ area }: AreaLocalProps) {
                         <span
                           className={`${styles.statisticValue} text-heading-3`}
                         >
-                          {statistic.value}
+                          <AnimatedStatisticValue value={statistic.value} />
                         </span>
                       </div>
                       <span className={`${styles.statisticLabel} text-body`}>
@@ -162,7 +165,7 @@ export function AreaLocal({ area }: AreaLocalProps) {
                 })}
               </ul>
             ))}
-          </div>
+          </StatisticsAnimation>
 
           <p className={`${styles.dataSources} text-body-small`}>
             Data from{" "}
@@ -177,8 +180,8 @@ export function AreaLocal({ area }: AreaLocalProps) {
           <div className={styles.marketPhotoFrame}>
             <Image
               className={styles.marketPhoto}
-              src={sharedLocalPhoto.src}
-              alt={sharedLocalPhoto.alt}
+              src={area.localPhoto.src}
+              alt={area.localPhoto.alt}
               fill
               sizes="(min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw"
             />
@@ -188,6 +191,19 @@ export function AreaLocal({ area }: AreaLocalProps) {
               Straightforward Offers.
             </h3>
           </div>
+          {area.localPhoto.attributionRequired && (
+            <figcaption className={`${styles.marketCredit} text-body-small`}>
+              Photo by {area.localPhoto.photographer} via{" "}
+              <a href={area.localPhoto.sourceUrl} target="_blank" rel="noreferrer">
+                Wikimedia Commons
+              </a>{" "}
+              (
+              <a href={area.localPhoto.licenseUrl} target="_blank" rel="noreferrer">
+                {area.localPhoto.license}
+              </a>
+              )
+            </figcaption>
+          )}
         </figure>
       </div>
     </section>

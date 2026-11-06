@@ -1434,16 +1434,16 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 
 * Displays a real local residential photograph.
 * A compact white overlay retains the shared headline on two lines: **Local Knowledge.** followed by **Straightforward Offers.**
-* All current and future Area Pages use the same photograph. The shared `sharedLocalPhoto` record in `src/data/areas.ts` supplies its descriptive alternative text, title, photographer, source URL, and license; individual Area Page records do not select a photograph.
-* Use **East Boulevard Historic District, Glenville, Cleveland, OH**, photographed by **Warren LeMay**, across all Area Pages. The image illustrates an actual Cleveland neighborhood as Northeast Ohio regional imagery; it is not presented as a company-owned property or completed purchase.
-* Local asset: `/images/local-area/cleveland-east-boulevard.jpg` (1024 by 768 pixels).
-* Source and verified license record: https://www.flickr.com/photos/warrenlemay/28439607087/
-* License: **CC0 1.0**, https://creativecommons.org/publicdomain/zero/1.0/ (verified 10 September 2026). Visible attribution is not required; source and license information remain in the Area dataset and project documentation.
-* The photograph's alternative text, title, photographer, source, and license remain accurate to Cleveland on every Area Page; they do not change with the city name. The CC0 record is also available at https://commons.wikimedia.org/wiki/File:East_Boulevard_Historic_District,_Glenville,_Cleveland,_OH_(28439607087).jpg.
+* Every Area Page uses the current lead image from its corresponding English Wikipedia city article. The canonical per-city `localPhoto` record in `src/data/areas.ts` supplies the local asset, descriptive alternative text, title, photographer, Wikimedia Commons source URL, and license.
+* The approved city-to-image mapping, including source and license records, is defined in [Area Data](content/areas.md#local-market-images). Mayfield Village follows the lead image of its redirected `Mayfield, Ohio` article.
+* If a current or future Area Page has no approved Wikipedia lead image, it uses the Cleveland skyline record (`defaultLocalPhoto`) as its default. Its existing attribution requirements remain in effect.
+* Local assets are stored under `/images/local-area/` using their canonical city slug.
+* The image illustrates the current page's city and is not presented as a company-owned property or completed purchase.
 
 ### Component and Semantics
 
-* Uses a `figure` containing the photograph and overlaid `H3` headline, without a visible credit or license row.
+* Uses a `figure` containing the photograph and overlaid `H3` headline.
+* When the image license requires attribution, a visible caption beneath the image credits the photographer and links to both its Wikimedia Commons source and license. Public-domain images do not display a credit row.
 
 ### Visual Design
 
@@ -1466,9 +1466,9 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 
 ### Accessibility and Image Use
 
-* The photograph is informative and uses descriptive alternative text from the shared photo record.
+* The photograph is informative and uses descriptive alternative text from the current Area Page's local-photo record.
 * The image and headline are not links.
-* Only photographs verified as Cleveland or Northeast Ohio may be used here. Any replacement must permit commercial use without visible attribution; verify and document its source and license before removing any required credit.
+* Every image must remain the lead image of its corresponding English Wikipedia city article at the time it is approved. Verify and document its source, license, and attribution requirements before replacing it.
 
 # FAQ
 

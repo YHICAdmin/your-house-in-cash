@@ -2,7 +2,7 @@
 
 This document defines the approved city-specific content for the [shared Area Page specification](../area-page.md). The running site reads corresponding values from `src/data/areas.ts`.
 
-Shared design, the trust card, and the local photograph remain defined in [area-page.md](../area-page.md).
+Shared design and the trust card remain defined in [area-page.md](../area-page.md). Local Market image records are listed below.
 
 ## City List
 
@@ -41,6 +41,33 @@ These are the 20 approved City Pages. Every page uses the shared Area Page templ
   * Homes Sold: `Recent sales activity across {City}.`
   * Median Price per Sq. Ft.: `Compare {City} home values by square foot.`
   * Median Days on Market: `See how long {City} homes typically stay on the market before selling.`
+
+## Local Market Images
+
+Each area uses the lead image from its corresponding English Wikipedia city article, downloaded as a local asset. The image record in `src/data/areas.ts` is canonical for its alternative text, photographer, source, license, and attribution requirement. Mayfield Village follows the lead image of the redirected `Mayfield, Ohio` article. If no approved lead image exists, `defaultLocalPhoto` uses the Cleveland skyline record and retains its attribution requirements.
+
+| City | Wikimedia Commons source | License |
+|---|---|---|
+| Bedford | [Bedford Historic District](https://commons.wikimedia.org/wiki/File:Bedford_Historic_District,_Bedford,_Ohio.JPG) | CC BY-SA 3.0 |
+| Bedford Heights | [Holocaust Memorial Cleveland Ohio](https://commons.wikimedia.org/wiki/File:Holmem-scene-large.jpg) | CC BY-SA 3.0 |
+| Cleveland | [Cleveland skyline from Lakewood Park](https://commons.wikimedia.org/wiki/File:Cleveland_skyline_from_Lakewood_Park,_January_2026.jpg) | CC BY 4.0 |
+| Cleveland Heights | [North building - Taylor Tudors](https://commons.wikimedia.org/wiki/File:North_building_-_Taylor_Tudors.jpg) | CC BY-SA 2.0 |
+| Euclid | [Old City Hall](https://commons.wikimedia.org/wiki/File:Euclid_(Ohio)_-_Old_City_Hall.jpg) | CC BY-SA 2.0 |
+| Garfield Heights | [Garfield Heights city hall](https://commons.wikimedia.org/wiki/File:Garfield_Heights_city_hall.jpg) | CC BY-SA 3.0 |
+| Highland Heights | [CGF TOWER](https://commons.wikimedia.org/wiki/File:CGF_TOWER.JPG) | CC BY-SA 3.0 |
+| Independence | [Independence Presbyterian Church](https://commons.wikimedia.org/wiki/File:Independence_Presbyterian_Church.jpg) | Public domain |
+| Lyndhurst | [Old Euclid District 4 Schoolhouse](https://commons.wikimedia.org/wiki/File:Old_Euclid_District_4_Schoolhouse_in_Lyndhurst.jpg) | Public domain |
+| Maple Heights | [Southern end of Vine Street](https://commons.wikimedia.org/wiki/File:Southern_end_of_Vine_Street,_Maple_Heights.jpg) | Public domain |
+| Mayfield Heights | [Mayfield City Hall](https://commons.wikimedia.org/wiki/File:Mayfield_City_Hall_-_panoramio.jpg) | CC BY 3.0 |
+| Mayfield Village | [Old Center School in Mayfield](https://commons.wikimedia.org/wiki/File:Old_Center_School_in_Mayfield.jpg) | Public domain |
+| Middleburg Heights | [Middleburg Heights City Hall](https://commons.wikimedia.org/wiki/File:Middleburg_Heights_9-14-24_combined_IMG_7312.jpg) | CC BY-SA 4.0 |
+| Parma | [Cleveland Skyline from State Road](https://commons.wikimedia.org/wiki/File:Parma,_OH_-_Cleveland_Skyline_from_State_Rd.png) | CC BY-SA 3.0 |
+| Parma Heights | [Robert W. Henry House](https://commons.wikimedia.org/wiki/File:Robert_W._Henry_House,_Parma_Heights.jpg) | Public domain |
+| Richmond Heights | [The main house at Greenwood Farm](https://commons.wikimedia.org/wiki/File:The_main_house_at_Greenwood_Farm.JPG) | CC BY-SA 3.0 |
+| Seven Hills | [John Froelich House](https://commons.wikimedia.org/wiki/File:John_Froelich_House.jpg) | Public domain |
+| Solon | [Solon City Hall](https://commons.wikimedia.org/wiki/File:SolonCityHall.jpg) | CC BY-SA 3.0 |
+| South Euclid | [South Euclid War Memorial](https://commons.wikimedia.org/wiki/File:South_Euclid_War_Memorial_2.jpg) | CC BY 3.0 |
+| University Heights | [Saint Ignatius Hall](https://commons.wikimedia.org/wiki/File:Administration_Building_(Saint_Ignatius_Hall),_John_Carroll_University,_University_Heights,_OH.jpg) | CC BY-SA 2.0 |
 
 ## Maps
 
