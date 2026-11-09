@@ -1,5 +1,11 @@
 .section {
-  background: var(--color-background-soft);
+  background: linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent var(--spacing-3xl),
+    var(--color-background) var(--spacing-3xl),
+    var(--color-background) 100%
+  );
 }
 
 .layout {

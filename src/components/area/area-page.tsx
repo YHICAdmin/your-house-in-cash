@@ -22,9 +22,9 @@ export function AreaPage({
     <>
       <main>
         <AreaIntroTransition hero={<AreaHero city={area.city} />}>
-          <AreaSituations />
+          <AreaHowItWorks content={howItWorksContent} />
         </AreaIntroTransition>
-        <AreaHowItWorks content={howItWorksContent} />
+        <AreaSituations />
         <AreaLocal area={area} />
         <AreaFaq />
         <AreaFinalCta areaName={area.city} />

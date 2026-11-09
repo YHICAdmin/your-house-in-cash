@@ -45,12 +45,12 @@ Provide the seller with a clear path to begin the conversion process.
 ### Cross-Section Background Transition
 
 * One cross-section transition layer owns the complete temporary green treatment.
-* The transition begins within the lower Hero and extends `96px` (`3XL`) into the following Situations Section.
+* The transition begins within the lower Hero and extends `96px` (`3XL`) into the following How It Works Section.
 * The upper boundary begins at approximately `95%` of the Hero height on the left, `80%` near the center, and `65%` on the right.
 * The boundary forms a smooth, continuous wave that is higher on the right and lower on the left, creating a strong diagonal descent from right to left without jagged edges or corners.
 * The wave and Gradient scale smoothly across Breakpoints while preserving their direction, relative position, and visual continuity.
-* The upper Hero remains `#FFFFFF`. Within the transition band, the color progresses from `#FFFFFF` through the temporary `#DFEEE2` green treatment and fades back to the global white Background by the end of the `96px` (`3XL`) depth inside the Situations Section.
-* After the transition completes, the Situations Section retains its normal inherited global white Background and does not own or continue a persistent `#DFEEE2` background.
+* The upper Hero remains `#FFFFFF`. Within the transition band, the color progresses from `#FFFFFF` through the temporary `#DFEEE2` green treatment and fades back to the global white Background by the end of the `96px` (`3XL`) depth inside the How It Works Section.
+* After the transition completes, the How It Works Section retains the global white Background and does not own or continue a persistent `#DFEEE2` background.
 * The treatment spans the full viewport width without introducing horizontal overflow and is not constrained by the Content Container or Grid.
 * The global System Lines remain visible above the treatment, and foreground content remains above both.
 * The treatment must preserve foreground-content contrast and readability.
@@ -288,6 +288,8 @@ Contains, in document order:
 Help sellers identify the situation that best matches their circumstances and understand that the company has relevant experience.
 
 Provide entry points to dedicated Situation Pages for each documented situation.
+
+* Uses the global `Background Soft` (`#F7F9F7`).
 
 ## Layout
 
@@ -953,7 +955,7 @@ Present the home-selling process as a simple, clear three-step experience and gu
 
 The Process Steps and Step Content areas together form the Interactive Process Composition.
 
-* Uses the global `Background Soft` (`#F7F9F7`).
+* Uses the global white Background (`#FFFFFF`).
 
 * The composition contains two coordinated areas: a Process Steps area on the left and a Step Content area on the right.
 * On Desktop and Tablet, the Process Steps area forms one top-to-bottom flow and the Step Content area changes in coordination with the active Process Step.
