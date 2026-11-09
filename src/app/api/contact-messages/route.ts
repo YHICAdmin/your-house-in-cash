@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { after, NextResponse } from "next/server";
 import { sql } from "@/lib/db";
 import { notifyContactMessage, notifyContactSenderConfirmation } from "@/lib/notifications";
 import { sendContactSmsConfirmation } from "@/lib/quo";
@@ -7,6 +7,32 @@ import { parseContactMessage } from "@/lib/submissions";
 const EMAIL_MARKETING_CONSENT_VERSION = "email-marketing-v1";
 
 type SavedMessage = { id: string; created: boolean };
+
+async function sendContactNotifications(saved: SavedMessage, message: NonNullable<ReturnType<typeof parseContactMessage>>) {
+  await Promise.all([
+    notifyContactMessage(message).then(delivery => {
+      if (!delivery.delivered) console.error("Contact-message notification was not delivered.", delivery.error);
+    }).catch(error => console.error("Contact-message notification failed unexpectedly.", error)),
+    notifyContactSenderConfirmation(message, `contact-message-confirmation/${saved.id}`).then(delivery => {
+      if (!delivery.delivered) console.error("Contact confirmation email was not delivered.", delivery.error);
+    }).catch(error => console.error("Contact confirmation email failed unexpectedly.", error)),
+    ...(message.phone ? [sendContactSmsOnce(saved, message)] : []),
+  ]);
+}
+
+async function sendContactSmsOnce(saved: SavedMessage, message: NonNullable<ReturnType<typeof parseContactMessage>>) {
+  const phone = message.phone;
+  if (!phone) return;
+  try {
+    const smsClaim = await sql`
+      update contact_messages
+      set sms_confirmation_attempted_at = now()
+      where id = ${saved.id} and sms_confirmation_attempted_at is null
+      returning id
+    ` as { id: string }[];
+    if (smsClaim.length) await sendContactSmsConfirmation(message.name, phone);
+  } catch (error) { console.error("Contact SMS confirmation failed unexpectedly.", error); }
+}
 
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
@@ -32,27 +58,7 @@ export async function POST(request: Request) {
     ` as SavedMessage[];
     const saved = rows[0];
     if (!saved) throw new Error("Message was not returned after saving.");
-    if (saved.created) {
-      try {
-        const delivery = await notifyContactMessage(message);
-        if (!delivery.delivered) console.error("Contact-message notification was not delivered.", delivery.error);
-      } catch (error) { console.error("Contact-message notification failed unexpectedly.", error); }
-      try {
-        const delivery = await notifyContactSenderConfirmation(message, `contact-message-confirmation/${saved.id}`);
-        if (!delivery.delivered) console.error("Contact confirmation email was not delivered.", delivery.error);
-      } catch (error) { console.error("Contact confirmation email failed unexpectedly.", error); }
-      if (message.phone) {
-        try {
-          const smsClaim = await sql`
-            update contact_messages
-            set sms_confirmation_attempted_at = now()
-            where id = ${saved.id} and sms_confirmation_attempted_at is null
-            returning id
-          ` as { id: string }[];
-          if (smsClaim.length) await sendContactSmsConfirmation(message.name, message.phone);
-        } catch (error) { console.error("Contact SMS confirmation failed unexpectedly.", error); }
-      }
-    }
+    if (saved.created) after(() => sendContactNotifications(saved, message));
     return NextResponse.json({ messageId: saved.id, created: saved.created }, { status: saved.created ? 201 : 200 });
   } catch { return NextResponse.json({ error: "Unable to save message." }, { status: 500 }); }
 }
