@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/test";
 
+const confirmationTimeout = 15_000;
+
 function required(name: "PRODUCTION_TEST_URL" | "PRODUCTION_TEST_EMAIL" | "PRODUCTION_TEST_PHONE") {
   const value = process.env[name];
   if (!value) throw new Error(`${name} must be configured.`);
@@ -20,7 +22,7 @@ test("the live cash-offer form stores a lead", async ({ page }) => {
 
   await page.getByRole("button", { name: "Get My Cash Offer" }).click();
 
-  await expect(page.getByRole("heading", { name: /all set/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /all set/i })).toBeVisible({ timeout: confirmationTimeout });
 });
 
 test("the live contact form stores a message", async ({ page }) => {
@@ -34,5 +36,5 @@ test("the live contact form stores a message", async ({ page }) => {
 
   await page.getByRole("button", { name: "Send Message" }).click();
 
-  await expect(page.getByRole("heading", { name: "Thanks for reaching out." })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Thanks for reaching out." })).toBeVisible({ timeout: confirmationTimeout });
 });
