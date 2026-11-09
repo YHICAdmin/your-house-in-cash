@@ -9,7 +9,23 @@ import styles from "./area-how-it-works.module.css";
 const headingId = "how-it-works-heading";
 const stepPanelId = "how-it-works-step-content";
 
-const processSteps = [
+type ProcessStepData = {
+  number: string;
+  title: string;
+  body: string;
+  illustration: string;
+};
+
+export type AreaHowItWorksContent = {
+  heading: string;
+  intro: string;
+  steps: readonly [ProcessStepData, ProcessStepData, ProcessStepData];
+};
+
+const defaultContent = {
+  heading: "Selling your house can be simple.",
+  intro: "See how easy it is to sell your house for cash in just three simple steps.",
+  steps: [
   {
     number: "01",
     title: "Tell Us About Your House",
@@ -28,10 +44,11 @@ const processSteps = [
     body: "Choose the closing date that works for you, and we’ll handle the remaining details.",
     illustration: "/images/how-it-works/closing-calendar.svg",
   },
-] as const;
+  ],
+} as const satisfies AreaHowItWorksContent;
 
 type ProcessStepProps = {
-  step: (typeof processSteps)[number];
+  step: ProcessStepData;
   active?: boolean;
   interactive?: boolean;
   onSelect?: () => void;
@@ -103,7 +120,7 @@ function StepIllustration({
   );
 }
 
-export function AreaHowItWorks() {
+export function AreaHowItWorks({ content = defaultContent }: { content?: AreaHowItWorksContent }) {
   const [activeStep, setActiveStep] = useState(0);
   const [manualSelection, setManualSelection] = useState(false);
   const [pointerInside, setPointerInside] = useState(false);
@@ -175,8 +192,8 @@ export function AreaHowItWorks() {
     }
 
     const interval = window.setInterval(() => {
-      setActiveStep((currentStep) => (currentStep + 1) % processSteps.length);
-    }, 7000);
+      setActiveStep((currentStep) => (currentStep + 1) % content.steps.length);
+    }, 5000);
 
     return () => window.clearInterval(interval);
   }, [
@@ -187,6 +204,7 @@ export function AreaHowItWorks() {
     pointerInside,
     reducedMotion,
     sectionVisible,
+    content.steps.length,
   ]);
 
   const selectStep = (index: number) => {
@@ -204,13 +222,12 @@ export function AreaHowItWorks() {
         <div className={styles.intro}>
           <SectionLabel icon={Cog}>How It Works</SectionLabel>
           <h2 id={headingId} className={styles.heading + " text-heading-2"}>
-            Selling your house can be simple.
+            {content.heading}
           </h2>
           <p
             className={styles.supportingCopy + " text-body-large"}
           >
-            See how easy it is to sell your house for cash in just three simple
-            steps.
+            {content.intro}
           </p>
         </div>
 
@@ -226,7 +243,7 @@ export function AreaHowItWorks() {
           }}
         >
           <ol className={styles.desktopStepList}>
-            {processSteps.map((step, index) => (
+            {content.steps.map((step, index) => (
               <li key={step.title}>
                 <ProcessStep
                   step={step}
@@ -242,10 +259,10 @@ export function AreaHowItWorks() {
             id={stepPanelId}
             className={styles.desktopIllustrationStage}
             aria-labelledby={
-              "how-it-works-step-" + processSteps[activeStep].number
+              "how-it-works-step-" + content.steps[activeStep].number
             }
           >
-            {processSteps.map((step, index) => (
+            {content.steps.map((step, index) => (
               <StepIllustration
                 key={step.illustration}
                 src={step.illustration}
@@ -256,7 +273,7 @@ export function AreaHowItWorks() {
         </div>
 
         <ol className={styles.mobileProcessList}>
-          {processSteps.map((step) => (
+          {content.steps.map((step) => (
             <li key={step.title} className={styles.mobileStepGroup}>
               <ProcessStep step={step} />
               <div className={styles.mobileIllustrationStage}>
