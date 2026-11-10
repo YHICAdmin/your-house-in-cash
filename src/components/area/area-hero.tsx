@@ -42,7 +42,7 @@ export function AreaHero({ city }: AreaHeroProps) {
               Get My Cash Offer
             </Button>
             <p className={`${styles.microcopy} text-body-small`}>
-              100% free. No obligation.
+              100% free · No obligation · We never sell your information
             </p>
           </div>
           <ul className={styles.benefits}>

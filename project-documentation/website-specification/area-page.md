@@ -139,7 +139,7 @@ Contains, in document order:
 
 ### Content
 
-* Content: `100% free. No obligation.`
+* Content: `100% free · No obligation · We never sell your information`.
 
 ### Visual Design
 
