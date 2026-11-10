@@ -84,11 +84,39 @@ Each verified record includes the status, seller-facing short answer, applicable
 | City | Status | Official source records |
 |---|---|---|
 | Cleveland | No POS inspection; Certificate of Disclosure applies | City of Cleveland Certificates of Disclosure |
+| Bedford Heights | POS required | City Point of Sale Inspections and Application |
+| Bay Village | No general POS inspection; vacant-building inspection applies | City Vacant Building Certificate of Compliance Application |
+| Berea | No POS inspection | City repeal of Exterior Point-of-Sale Inspection Chapter |
+| Brecksville | POS required for septic-system properties | City Code Point of Sale Septic System Inspection |
+| Brook Park | POS required | City Building Department FAQ |
+| Brooklyn Heights | POS required | Village Point-of-Sale Application; Certificate of Inspection at Time of Sale |
+| Bratenahl | No POS inspection; Certificate of Occupancy applies | Village Building Department FAQ |
+| Broadview Heights | No general POS inspection; septic-system inspection applies | City Point-of-Sale Septic Inspection Notice |
 | Cleveland Heights | POS required | City Point-of-Sale Inspections; Escrow Requirements |
+| Cuyahoga Heights | POS required | Village Code Point of Sale Inspections; Point of Sale Inspection Fees |
+| East Cleveland | POS required | City HUD Consolidated Plan; Housing Programs Description |
+| Euclid | POS required | City Forms and Permits; Assumption Application |
 | Garfield Heights | POS required | City Point-of-Sale Inspections; Buyer Affidavit |
+| Gates Mills | POS required; septic-system evaluation may apply | Village Septic Point-of-Sale; Certification of Inspection Code |
+| Highland Hills | POS required | Village Building Department; Point-of-Sale Application and Instructions |
+| Lakewood | POS required for non-owner-occupied residential rentals | City Inspections and Code Compliance |
 | Maple Heights | POS required | City Point of Sale Inspection; Point of Sale Application |
+| Mayfield Heights | POS required | City Residential Point-of-Sale Application; Statement of Assumption of Housing Violations |
+| Mayfield Village | No general POS inspection; septic-system certificate applies | Mayfield Village Point-of-Sale FAQ |
+| Middleburg Heights | No general POS inspection; septic-system certificate applies | City Building Division FAQ |
+| North Olmsted | No POS inspection | City Assistance to Homebuyers |
+| North Randall | Sale-time occupancy inspection required | Village Occupancy Permit Application |
+| Oakwood Village | POS required | Village Building Department; POS, Lease, and Rent Inspection Process |
+| Orange Village | POS required | Village Point-of-Sale Inspection; Point-of-Sale Application Instructions |
+| Richmond Heights | No POS inspection; exterior home inspection applies | City Exterior Maintenance Inspection Program |
+| Seven Hills | POS required for septic-system properties | City Code Point of Sale Inspection of Septic Systems |
 | Shaker Heights | POS required | City Point of Sale Procedure; POS Inspection and Escrow Requirements |
+| Solon | No POS inspection | City Certificate of Occupancy Procedure; Council Minutes |
+| South Euclid | No general POS inspection; vacant-property inspection applies | City Housing Department |
 | University Heights | POS required | City Point-of-Sale Application; Point-of-Sale Transfer Process |
+| Walton Hills | POS required for residential rental-property transfers | Village Code Certificate of Inspection |
+| Warrensville Heights | POS required | City Residential POS Application and Checklist; Inspections |
+| Woodmere | POS required | Village POS Buyer/Seller Escrow Agreement; Point-of-Sale Inspection Code |
 
 ## Local Market Images
 

@@ -208,6 +208,21 @@ const bedfordArea = createArea({
 const bedfordHeightsArea = createArea({
   "city": "Bedford Heights",
   "slug": "bedford-heights",
+  posInspection: {
+    status: "required",
+    shortAnswer: "A Point-of-Sale inspection and occupancy permit are required before a home can be occupied or title transferred. A sale can close with violations still outstanding only after the City accepts the required escrow.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before title transfer or occupancy. The inspection is valid for one year from compliance or title transfer; the dye test is valid for 12 months." },
+      { question: "What does it cost?", requirement: "$150, including the sewer dye test. The application offers exterior-only or interior-and-exterior inspection with owner consent." },
+      { question: "What does the City inspect?", requirement: "A visual interior and exterior inspection, or exterior only if selected. The dye test confirms proper sewer connections." },
+      { question: "Can the sale close with violations?", requirement: "Yes. The seller must submit written repair estimates for City approval and deposit at least $100 and 100% of the approved estimate with a bank or title company." },
+      { question: "How do I apply?", requirement: "Submit the City’s Point-of-Sale Inspection application to the Building Department and select the inspection type." },
+    ],
+    sources: [
+      { label: "City of Bedford Heights: Point of Sale Inspections and Application (PDF)", url: "https://cms5.revize.com/revize/bedfordheightsoh/PDF%20Files/Fillable%20Forms/ResidentialPropertyInspections-POS-2021.pdf" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   "statistics": {
     "medianSalePrice": "$199,905",
     "homesSold": "23",
@@ -356,6 +371,20 @@ const clevelandHeightsArea = createArea({
 export const euclidArea = createArea({
   city: "Euclid",
   slug: "euclid",
+  posInspection: {
+    status: "required",
+    shortAnswer: "Euclid requires a Point-of-Sale inspection and offers an assumption process when a purchaser takes responsibility for cited violations. A purchaser who assumes violations must correct them within six months.",
+    tableRows: [
+      { question: "What happens if there are violations?", requirement: "A purchaser may assume the cited violations by submitting the City’s Assumption Application. The responsible party must correct all assumed violations within six months and the City schedules a reinspection." },
+      { question: "What does the assumption process cost?", requirement: "The City’s Assumption Application has a $150 non-refundable fee." },
+      { question: "How do I apply?", requirement: "Submit the Point-of-Sale Inspection Application and, when applicable, the Assumption Application to the City Building and Housing Department." },
+    ],
+    sources: [
+      { label: "City of Euclid: All Forms and Permits", url: "https://www.cityofeuclid.gov/allformsandpermits" },
+      { label: "City of Euclid: Assumption Application (PDF)", url: "https://irp.cdn-website.com/83d949c5/files/uploaded/Assumption-Application-fillable.pdf" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   statistics: {
     medianSalePrice: "$172,168",
     homesSold: "150",
@@ -650,6 +679,22 @@ const mapleHeightsArea = createArea({
 const mayfieldHeightsArea = createArea({
   "city": "Mayfield Heights",
   "slug": "mayfield-heights",
+  posInspection: {
+    status: "required",
+    shortAnswer: "A Point-of-Sale inspection is required before selling a house in Mayfield Heights. Condominiums and cluster homes where the owner is not responsible for exterior maintenance are exempt.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before selling a house. Condominiums and cluster homes where the owner is not responsible for exterior maintenance do not require a POS inspection." },
+      { question: "What does it cost?", requirement: "$100 for the residential Point-of-Sale inspection." },
+      { question: "What does the City inspect?", requirement: "The exterior of the dwelling structure and premises." },
+      { question: "What happens if there are violations?", requirement: "A purchaser may assume remaining violations by submitting the City’s notarized Statement of Assumption of Housing Violations. The form says violations must be corrected within six months after title transfer, with health or safety violations corrected before occupancy." },
+      { question: "How do I apply?", requirement: "Submit the City’s residential Point-of-Sale Inspection application and authorize the exterior inspection." },
+    ],
+    sources: [
+      { label: "City of Mayfield Heights: Residential Point-of-Sale Inspection Application (PDF)", url: "https://www.mayfieldheightsohio.gov/DocumentCenter/View/3259/Point-of-Sale-Inspection-Application-PDF" },
+      { label: "City of Mayfield Heights: Statement of Assumption of Housing Violations (PDF)", url: "https://www.mayfieldheightsohio.gov/DocumentCenter/View/105/Point-of-Sale-InspectionBuyers-Assumption-Form-PDF" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   "statistics": {
     "medianSalePrice": "$271,871",
     "homesSold": "69",
@@ -690,6 +735,14 @@ const mayfieldHeightsArea = createArea({
 const mayfieldVillageArea = createArea({
   "city": "Mayfield Village",
   "slug": "mayfield-village",
+  posInspection: {
+    status: "not-required",
+    shortAnswer: "Mayfield Village does not require a general point-of-sale inspection for a home sale. A property with a septic system does require a Certificate of Inspection from the Cuyahoga County Board of Health.",
+    sources: [
+      { label: "Mayfield Village: Point-of-Sale FAQ", url: "https://mayfieldvillage.com/mayfield-village-faq/" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   "statistics": {
     "medianSalePrice": "$447,287",
     "homesSold": "16",
@@ -730,6 +783,14 @@ const mayfieldVillageArea = createArea({
 const middleburgHeightsArea = createArea({
   city: "Middleburg Heights",
   slug: "middleburg-heights",
+  posInspection: {
+    status: "not-required",
+    shortAnswer: "Middleburg Heights does not require a general point-of-sale inspection for a home sale. A property with a septic system must obtain a Certificate of Septic System Evaluation from the Cuyahoga County Board of Health.",
+    sources: [
+      { label: "City of Middleburg Heights: Building Division FAQ", url: "https://middleburgheights.com/faq/" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   statistics: {
     medianSalePrice: "$339,838",
     homesSold: "47",
@@ -850,6 +911,14 @@ const parmaHeightsArea = createArea({
 const richmondHeightsArea = createArea({
   city: "Richmond Heights",
   slug: "richmond-heights",
+  posInspection: {
+    status: "not-required",
+    shortAnswer: "Richmond Heights does not call its required transfer review a point-of-sale inspection. Before a home transfer, the City requires a no-cost exterior home inspection; it does not include an interior inspection.",
+    sources: [
+      { label: "City of Richmond Heights: Exterior Maintenance Inspection Program (PDF)", url: "https://www.richmondheightsohio.org/DocumentCenter/View/165/Exterior-Maintenance-Inspection-Rules-Revised-7-28-2017-PDF?bidId=" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   statistics: {
     medianSalePrice: "$270,871",
     homesSold: "24",
@@ -970,6 +1039,14 @@ const solonArea = createArea({
 const southEuclidArea = createArea({
   city: "South Euclid",
   slug: "south-euclid",
+  posInspection: {
+    status: "not-required",
+    shortAnswer: "South Euclid does not require a general point-of-sale inspection for an occupied home sale. A vacant property must be registered and inspected before title transfer.",
+    sources: [
+      { label: "City of South Euclid: Housing", url: "https://southeuclid.gov/housing/" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   statistics: {
     medianSalePrice: "$200,904",
     homesSold: "94",
@@ -1218,6 +1295,235 @@ const additionalAreaStatistics: Partial<Record<string, Omit<AreaStatistics, "sup
 };
 
 const additionalPosInspections: Partial<Record<string, PosInspection>> = {
+  berea: {
+    status: "not-required",
+    shortAnswer: "Berea repealed its Exterior Point-of-Sale Inspection chapter in 2019 and does not require a point-of-sale inspection for this type of home sale.",
+    sources: [
+      { label: "City of Berea: Repeal of Exterior Point-of-Sale Inspection Chapter (PDF)", url: "https://www.cityofberea.org/DocumentCenter/View/1903/2019-29-CO-Repeal-of-Chapter-1360-Exterior-POS" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "bay-village": {
+    status: "not-required",
+    shortAnswer: "Bay Village does not publish a general point-of-sale inspection requirement for a home sale. A vacant building must receive a vacant-building inspection and Certificate of Compliance before it is sold or transferred.",
+    sources: [
+      { label: "City of Bay Village: Vacant Building Certificate of Compliance Application (PDF)", url: "https://www.cityofbayvillage.gov/DocumentCenter/View/2381/Application-for-Vacant-Building-Certificate-of-Compliance-PDF" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "brooklyn-heights": {
+    status: "required",
+    shortAnswer: "The seller must obtain a Certificate of Inspection before entering into an agreement to sell or transfer a single- or two-family home. The seller must give the prospective buyer a copy of that certificate.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before entering into an agreement to sell or convey a single- or two-family dwelling. A current certificate or compliance certificate must be presented to the buyer." },
+      { question: "What does it cost?", requirement: "$50 for the Point-of-Sale inspection application." },
+      { question: "How do I apply?", requirement: "Submit the Village Point-of-Sale Application to the Building Department." },
+    ],
+    sources: [
+      { label: "Village of Brooklyn Heights: Point-of-Sale Application (PDF)", url: "https://www.brooklynhts.org/DocumentCenter/View/141/Point-of-Sale-Application-PDF" },
+      { label: "Village of Brooklyn Heights: Certificate of Inspection at Time of Sale (PDF)", url: "https://www.brooklynhts.org/DocumentCenter/View/155/Chapter-1446-Certificate-of-Inspection-at-Time-of-Sale-PDF" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  bratenahl: {
+    status: "not-required",
+    shortAnswer: "Bratenahl no longer requires a point-of-sale inspection. A Certificate of Occupancy is required for title transfer; an inspection is optional and free if requested.",
+    sources: [
+      { label: "Village of Bratenahl: Building Department FAQ", url: "https://www.bratenahl.org/m/faq" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "broadview-heights": {
+    status: "not-required",
+    shortAnswer: "Broadview Heights does not publish a general point-of-sale inspection requirement for a home sale. A property with a septic system is subject to the City’s point-of-sale septic inspection ordinance.",
+    sources: [
+      { label: "City of Broadview Heights: Point-of-Sale Septic Inspection Notice", url: "https://www.broadview-heights.org/ArchiveCenter/ViewFile/Item/825" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "north-olmsted": {
+    status: "not-required",
+    shortAnswer: "North Olmsted does not require a point-of-sale inspection for this type of home sale. The City encourages buyers to review the property's permit, citation, and inspection history with its Building Department.",
+    sources: [
+      { label: "City of North Olmsted: Assistance to Homebuyers (PDF)", url: "https://cms3.revize.com/revize/northolmsted/Documents/Departments/Public%20Safety/Building%20Division/Resources%20%26%20Regulations/Homebuyer%20Assistance.pdf" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "north-randall": {
+    status: "required",
+    shortAnswer: "North Randall requires a City Occupancy Permit inspection for a direct sale of a house. The seller or buyer should request the inspection through the Village Building Department before closing.",
+    tableRows: [
+      { question: "When is it required?", requirement: "The Village’s Occupancy Permit application identifies Direct Sale as a transaction requiring an inspection and includes houses among the covered structures." },
+      { question: "How do I apply?", requirement: "Submit the Village Occupancy Permit Application to the Building Department, identify the transaction as a Direct Sale, and request an inspection time." },
+    ],
+    sources: [
+      { label: "Village of North Randall: Occupancy Permit Application (PDF)", url: "https://northrandall.com/wp-content/uploads/2018/01/Occupancy-Permit-1-26-18.pdf" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "oakwood-village": {
+    status: "required",
+    shortAnswer: "Oakwood Village requires a Point-of-Sale inspection before any dwelling is sold. The seller must arrange the inspection with the Village Building Department.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before any dwelling is sold." },
+      { question: "What does the Village inspect?", requirement: "The Building Department's published guidance says the inspection checks the home for code violations." },
+      { question: "What happens if there are violations?", requirement: "The buyer may assume violations before an Occupancy Certificate is issued; otherwise, they must be corrected before the sale." },
+      { question: "How do I apply?", requirement: "Contact the Oakwood Village Building Department at 440-232-9980 to schedule the Point-of-Sale inspection." },
+    ],
+    sources: [
+      { label: "Oakwood Village: Building Department", url: "https://www.oakwoodvillageoh.com/departments/building-department/" },
+      { label: "Oakwood Village: POS, Lease, and Rent Inspection Process (PDF)", url: "https://www.oakwoodvillageoh.com/wp-content/uploads/2025/07/POS-Lease-Rent-Inspection-Process.pdf" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  brecksville: {
+    status: "required",
+    shortAnswer: "Brecksville requires a point-of-sale septic-system inspection when the property is served by a septic system. The seller must obtain the required County certificate before transfer.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before an owner of property with a septic system enters an agreement to sell, convey, or transfer it." },
+      { question: "What is required?", requirement: "Obtain a current Certificate of Septic System Evaluation from the Cuyahoga County Board of Health and give it to the buyer before transfer." },
+      { question: "What about escrow?", requirement: "If escrow is used, the buyer's acknowledgement of receipt of the certificate must be deposited in escrow before possession or title transfer." },
+    ],
+    sources: [
+      { label: "City of Brecksville Code: Point of Sale Septic System Inspection", url: "https://library.municode.com/oh/brecksville/codes/code_of_ordinances?nodeId=PTTHIRTEENBUCO_TITONEBUCOPR" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "east-cleveland": {
+    status: "required",
+    shortAnswer: "East Cleveland requires a point-of-sale inspection for housing units. The seller must obtain the City’s Certificate of Inspection before the property is transferred; outstanding Class A violations are subject to the City’s escrow process.",
+    tableRows: [
+      { question: "When is it required?", requirement: "East Cleveland’s official housing plan identifies a Point-of-Sale inspection program for all housing units. City inspection materials state that a Certificate of Inspection is required for a property transfer." },
+      { question: "What happens if there are violations?", requirement: "The City’s Housing Programs materials identify an escrow process for Point-of-Sale Class A violations. Confirm the current escrow amount and process with the City before closing." },
+      { question: "How do I apply?", requirement: "Contact the City of East Cleveland’s Department of Building and Housing to request the Point-of-Sale inspection and Certificate of Inspection process." },
+    ],
+    sources: [
+      { label: "City of East Cleveland: HUD Consolidated Plan (PDF)", url: "https://webgen1files1.revize.com/eastclevelandoh/Document_Center/News/2020/Consolidated-Plan-FY-2020-24_East-Cleve_June-2020-for-public-comment-Draft.pdf" },
+      { label: "City of East Cleveland: Director of Housing Programs Description (PDF)", url: "https://webgen1files1.revize.com/eastclevelandoh/Document_Center/Department/Human%20resource/Director_of_Housing_Programs.pdf" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "seven-hills": {
+    status: "required",
+    shortAnswer: "Seven Hills requires a point-of-sale septic-system inspection when the property has a septic system. The seller must obtain a current County septic-system evaluation before transfer.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before selling, conveying, or transferring a property with a septic system." },
+      { question: "What is required?", requirement: "Obtain a current Certificate of Septic System Evaluation from the Cuyahoga County Board of Health and present it to the buyer." },
+      { question: "What about escrow?", requirement: "If escrow is established, the buyer's acknowledgement of receipt of the certificate must be deposited in escrow before possession or title transfer." },
+    ],
+    sources: [
+      { label: "City of Seven Hills Code: Point of Sale Inspection of Septic Systems", url: "https://codelibrary.amlegal.com/codes/sevenhills/latest/sevenhills_oh/0-0-0-16271" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  solon: {
+    status: "not-required",
+    shortAnswer: "Solon does not require a point-of-sale inspection for this type of home sale. The City’s Building Department states that it does not perform Point-of-Sale inspections.",
+    sources: [
+      { label: "City of Solon: Certificate of Occupancy Procedure (PDF)", url: "https://www.solonohio.gov/DocumentCenter/View/857/COO-ProdedureSolon-Comm--4Res?bidId=" },
+      { label: "City of Solon Council Minutes, February 19, 2019", url: "https://www.solonohio.gov/ArchiveCenter/ViewFile/Item/2230" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "walton-hills": {
+    status: "required",
+    shortAnswer: "Walton Hills requires a Certificate of Inspection when a residential rental property, or property intended for residential rental use, is sold or transferred. A sale can close with outstanding violations only if the Village's escrow requirements are completed.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before selling or transferring a residential rental unit, property intended to be rented as a residence, or property converted to a rental after sale." },
+      { question: "What does the Village inspect?", requirement: "The general inspection reviews conditions that affect health or safety and compliance with Village, state building, and fire codes." },
+      { question: "Can the sale close with violations?", requirement: "Yes. Before possession or title transfer, escrow must contain the buyer's acknowledgement and funds equal to 100% of the work needed to correct outstanding violations." },
+      { question: "How do I apply?", requirement: "Apply for a Certificate of Inspection at Village Hall in the manner prescribed by the Village." },
+    ],
+    sources: [
+      { label: "Village of Walton Hills Code: Certificate of Inspection", url: "https://codelibrary.amlegal.com/codes/waltonhills/latest/waltonhills_oh/0-0-0-62732" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  lakewood: {
+    status: "required",
+    shortAnswer: "Lakewood requires a point-of-sale inspection before the sale of a non-owner-occupied residential rental property. The City’s published requirement does not apply to an owner-occupied home sale.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before selling a non-owner-occupied residential rental property. A Certificate of Code Compliance is required before that sale." },
+      { question: "What does the City inspect?", requirement: "The interior, exterior, and yard areas of residential rental properties." },
+      { question: "How do I apply?", requirement: "Contact Lakewood’s Division of Housing and Building to submit the request and schedule an inspection." },
+    ],
+    sources: [
+      { label: "City of Lakewood: Inspections and Code Compliance", url: "https://lakewoodoh.gov/housing-and-building/inspections-code-compliance/" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "orange-village": {
+    status: "required",
+    shortAnswer: "Orange Village requires a Point-of-Sale inspection before selling a home. The process includes verification of required smoke and carbon-monoxide detectors, plus septic or well inspection when applicable.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before selling a house." },
+      { question: "What does it cost?", requirement: "$50, paid with the Point-of-Sale application." },
+      { question: "What does the City inspect?", requirement: "The Fire Department verifies working smoke and carbon-monoxide detectors in the required locations. Septic and well inspections are scheduled with the Cuyahoga County Board of Health when applicable." },
+      { question: "How do I apply?", requirement: "Complete the two-page application, submit it to the Building Department with payment, then schedule the detector inspection through the Building Department." },
+    ],
+    sources: [
+      { label: "Orange Village: Point-of-Sale Inspection", url: "https://www.orangevillage.com/building-department-2/" },
+      { label: "Orange Village: Point-of-Sale Application Instructions (PDF)", url: "https://www.orangevillage.com/wp-content/uploads/2020/01/full-pos-information-updated-jan-2020.pdf" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "brook-park": {
+    status: "required",
+    shortAnswer: "Brook Park requires a point-of-sale inspection when you sell your home. The City advises scheduling early because the inspection is valid for six months.",
+    tableRows: [
+      { question: "When is it required?", requirement: "When selling a home. The City says the Point-of-Sale inspection is valid for six months." },
+      { question: "How do I apply?", requirement: "Contact the Brook Park Building Department to schedule the inspection early enough for closing." },
+    ],
+    sources: [
+      { label: "City of Brook Park Building Department: FAQ (PDF)", url: "https://cityofbrookpark.com/forms/faq.pdf" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "cuyahoga-heights": {
+    status: "required",
+    shortAnswer: "The seller must obtain a Certificate of Inspection before transferring property in Cuyahoga Heights. If violations remain, the purchaser must correct them within the time set by the Building Commissioner.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before transferring title, except transfers through probate to heirs or due to divorce. The Certificate of Inspection is valid for one year and is ordinarily issued at least 30 days before transfer unless the Building Commissioner approves a shorter period." },
+      { question: "What does it cost?", requirement: "Single-family: $150. Two-family: $200. Three-family: $250. Four-plex: $300." },
+      { question: "What does the City inspect?", requirement: "The Certificate lists known building- or zoning-code violations identified during the inspection." },
+      { question: "Can the sale close with violations?", requirement: "Yes. If the seller does not correct violations before transfer, the purchaser must correct them within the allotted time or an approved extension." },
+      { question: "How do I apply?", requirement: "The owner or an authorized representative applies to the Building Commissioner and submits the required fee." },
+    ],
+    sources: [
+      { label: "Village of Cuyahoga Heights Code: Point of Sale Inspections", url: "https://codelibrary.amlegal.com/codes/cuyahogahts/latest/cuyahoga_oh/0-0-0-34554" },
+      { label: "Village of Cuyahoga Heights Code: Point of Sale Inspection Fees", url: "https://codelibrary.amlegal.com/codes/cuyahogahts/latest/cuyahoga_oh/0-0-0-34516" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "gates-mills": {
+    status: "required",
+    shortAnswer: "Gates Mills requires a Certificate of Inspection before selling or transferring property. For a property served by a septic system, the seller must also obtain a County septic-system evaluation.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before renting, leasing, selling, conveying, or transferring property. The seller must present the City certificate to the prospective purchaser." },
+      { question: "What separate requirement applies?", requirement: "A property served by a septic system also requires a Cuyahoga County Board of Health septic-system evaluation. The Village says the County application and payment are $350 and advises scheduling at least four weeks before closing." },
+      { question: "Can the sale close without a septic evaluation?", requirement: "For an unoccupied home, title may transfer and the septic inspection may be completed after the new owner has occupied the home for 30 days. The Village says escrow is not required." },
+    ],
+    sources: [
+      { label: "Village of Gates Mills: Septic Point-of-Sale", url: "https://w.gatesmillsvillage.com/building/news/septic-point-sale-gates-mills" },
+      { label: "Village of Gates Mills Code: Certification of Inspection", url: "https://codelibrary.amlegal.com/codes/gatesmills/latest/gatesmills_oh/0-0-0-19230" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "highland-hills": {
+    status: "required",
+    shortAnswer: "Highland Hills requires a Point-of-Sale inspection before a property can be transferred. The seller must obtain and provide the Certificate of Inspection before title transfer.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before transferring property. The Certificate of Inspection is valid for one year; an occupancy permit is also required before a new owner or tenant moves in." },
+      { question: "What does it cost?", requirement: "$25 for the first unit and $20 for each additional unit." },
+      { question: "What happens if there are violations?", requirement: "Known violations appear on the certificate and must be corrected within 90 days of issuance unless the Housing Department grants an extension." },
+      { question: "How do I apply?", requirement: "Submit the Village’s Point-of-Sale application to the Housing Department and schedule the inspection." },
+    ],
+    sources: [
+      { label: "Village of Highland Hills: Building Department", url: "https://vhhohio.org/buildingdepartment/" },
+      { label: "Village of Highland Hills: Point-of-Sale Application and Instructions (PDF)", url: "https://www.vhhohio.org/pdf/Point%20of%20Sale%20Application%202014%20%282%29.pdf" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   "shaker-heights": {
     status: "required",
     shortAnswer: "The seller must apply for a Point-of-Sale inspection before entering into a contract to sell a residential property. A sale can close with violations still outstanding only when the City approves the required escrow arrangement.",
@@ -1231,6 +1537,36 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     sources: [
       { label: "City of Shaker Heights: Point of Sale Procedure", url: "https://www.shakerheightsoh.gov/477/Point-of-Sale-Procedure" },
       { label: "City of Shaker Heights: POS Inspection and Escrow Requirements (PDF)", url: "https://www.shakerheightsoh.gov/DocumentCenter/View/124/Point-of-Sale-Escrow-Requirements-PDF" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  "warrensville-heights": {
+    status: "required",
+    shortAnswer: "The seller must obtain a Point-of-Sale Certificate of Inspection before agreeing to sell or transfer property. A sale can close with unresolved violations only when the City’s escrow and buyer-acknowledgement requirements are completed.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before entering an agreement to sell or convey residential or commercial property. The certificate provided to the buyer must have been issued within one year before the agreement." },
+      { question: "What does it cost?", requirement: "Residential: $100. Condominiums and apartments: $30 per unit. Commercial: $200 for the first unit and $90 for each additional unit." },
+      { question: "What paperwork is required?", requirement: "The seller must give the buyer a Certificate of Inspection or Compliance. A buyer-signed Acknowledgement Form must be deposited in escrow and copied to the Building Department before title transfer." },
+      { question: "Can the sale close with violations?", requirement: "Yes. Escrow of at least $100 and 150% of an itemized, current-market repair estimate from a City-registered company is required for remaining violations." },
+      { question: "How do I apply?", requirement: "Submit the City’s residential or commercial Point-of-Sale application to the Building Department." },
+    ],
+    sources: [
+      { label: "City of Warrensville Heights: Residential POS Application and Checklist (PDF)", url: "https://www.cityofwarrensville.com/DocumentCenter/View/88/Residential-Point-of-Sale-Inspection-Application-and-Checklist--PDF" },
+      { label: "City of Warrensville Heights: Inspections", url: "https://www.cityofwarrensville.com/151/Inspections" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+  woodmere: {
+    status: "required",
+    shortAnswer: "A Point-of-Sale Certificate is required for a Woodmere property transfer. If repairs are not completed before title transfer, the buyer may assume the violations through a Village-approved escrow agreement.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before transferring a residential property. The seller must provide the purchaser with a current Certificate of Inspection." },
+      { question: "Can the sale close with violations?", requirement: "Yes. The buyer may assume violations, including Class A violations, through a Village-approved escrow agreement. The buyer must not occupy the home until the violations are completed and a Certificate of Compliance is issued." },
+      { question: "What paperwork is required?", requirement: "The buyer, seller, their agents, and the escrow agent complete the City-approved Point-of-Sale Buyer/Seller Escrow Agreement before closing." },
+    ],
+    sources: [
+      { label: "Village of Woodmere: Point-of-Sale Buyer/Seller Escrow Agreement (PDF)", url: "https://cms3.revize.com/revize/woodmereoh/Departments/Building%20and%20Inspections/Residential%20Forms%20and%20Permits/Point-of-Sale-Buyer-Seller-Escrow-Agreement-2021.pdf" },
+      { label: "Village of Woodmere Code: Point-of-Sale Inspection", url: "https://codelibrary.amlegal.com/codes/woodmere/latest/woodmere_oh/0-0-0-18273" },
     ],
     verifiedDate: "November 10, 2026",
   },
