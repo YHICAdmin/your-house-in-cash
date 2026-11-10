@@ -77,7 +77,6 @@ const localPhotos: Record<string, LocalPhoto> = {
   "cleveland-heights": { src: "/images/local-area/cleveland-heights.jpg", alt: "Taylor Tudors building in Cleveland Heights, Ohio", title: "North building - Taylor Tudors", photographer: "Tim Evanson", sourceUrl: "https://commons.wikimedia.org/wiki/File:North_building_-_Taylor_Tudors.jpg", license: "CC BY-SA 2.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0", attributionRequired: true },
   euclid: { src: "/images/local-area/euclid.jpg", alt: "Old City Hall in Euclid, Ohio", title: "Euclid (Ohio) - Old City Hall", photographer: "stu_spivack", sourceUrl: "https://commons.wikimedia.org/wiki/File:Euclid_(Ohio)_-_Old_City_Hall.jpg", license: "CC BY-SA 2.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0", attributionRequired: true },
   "garfield-heights": { src: "/images/local-area/garfield-heights.jpg", alt: "Garfield Heights City Hall and Civic Center", title: "Garfield Heights city hall", photographer: "AJHalliwell", sourceUrl: "https://commons.wikimedia.org/wiki/File:Garfield_Heights_city_hall.jpg", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
-  "highland-heights": { src: "/images/local-area/highland-heights.jpg", alt: "Air traffic control tower at Cuyahoga County Airport in Highland Heights", title: "CGF TOWER", photographer: "Cole Goldberg", sourceUrl: "https://commons.wikimedia.org/wiki/File:CGF_TOWER.JPG", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
   independence: { src: "/images/local-area/independence.jpg", alt: "Independence Presbyterian Church in Independence, Ohio", title: "Independence Presbyterian Church", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Independence_Presbyterian_Church.jpg", license: "Public domain", attributionRequired: false },
   lyndhurst: { src: "/images/local-area/lyndhurst.jpg", alt: "Old Euclid District 4 Schoolhouse in Lyndhurst, Ohio", title: "Old Euclid District 4 Schoolhouse in Lyndhurst", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Old_Euclid_District_4_Schoolhouse_in_Lyndhurst.jpg", license: "Public domain", attributionRequired: false },
   "maple-heights": { src: "/images/local-area/maple-heights.jpg", alt: "Homes on Vine Street in Maple Heights, Ohio", title: "Southern end of Vine Street, Maple Heights", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Southern_end_of_Vine_Street,_Maple_Heights.jpg", license: "Public domain", attributionRequired: false },
@@ -97,8 +96,6 @@ Object.assign(localPhotos, {
   "bay-village": { src: "/images/local-area/bay-village.jpg", alt: "Huntington Beach in Bay Village with Cleveland in the distance", title: "Huntington Beach With Downtown Cleveland In Background", photographer: "Heather McLaughlin", sourceUrl: "https://commons.wikimedia.org/wiki/File:Huntington_Beach_With_Downtown_Cleveland_In_Background.jpg", license: "CC BY 2.0", licenseUrl: "https://creativecommons.org/licenses/by/2.0", attributionRequired: true },
   beachwood: { src: "/images/local-area/beachwood.jpg", alt: "Beachwood water tower", title: "Beachwood water tower", photographer: "Nick22aku", sourceUrl: "https://commons.wikimedia.org/wiki/File:Beachwood_water_tower.jpg", license: "Public domain", attributionRequired: false },
   berea: { src: "/images/local-area/berea.jpg", alt: "Downtown Berea, Ohio", title: "Berea OH", photographer: "Geoffrey.landis", sourceUrl: "https://commons.wikimedia.org/wiki/File:Berea_OH.jpg", license: "CC BY-SA 1.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/1.0", attributionRequired: true },
-  bratenahl: { src: "/images/local-area/bratenahl.jpg", alt: "Gwinn Estate gateway in Bratenahl", title: "Gwinn Estate gateway", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Gwinn_Estate_gateway.jpg", license: "Public domain", attributionRequired: false },
-  brecksville: { src: "/images/local-area/brecksville.jpg", alt: "Jonas Coonrad House in Brecksville", title: "Jonas Coonrad House NPS", photographer: "National Park Service", sourceUrl: "https://commons.wikimedia.org/wiki/File:Jonas_Coonrad_House_NPS.jpg", license: "Public domain", attributionRequired: false },
   "broadview-heights": { src: "/images/local-area/broadview-heights.jpg", alt: "View across Broadview Heights", title: "City of Broadview Heights, Ohio", photographer: "Highvolt", sourceUrl: "https://commons.wikimedia.org/wiki/File:City_of_Broadview_Heights,_Ohio_from_Broadview_Commons_Shopping_Center,_June_2014.jpg", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
   "brook-park": { src: "/images/local-area/brook-park.jpg", alt: "Homes along Richard Drive in Brook Park, Ohio", title: "Richard from Smith, Brook Park", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Richard_from_Smith,_Brook_Park.jpg", license: "Public domain", attributionRequired: false },
   brooklyn: { src: "/images/local-area/brooklyn.jpg", alt: "Welcome sign in Brooklyn, Ohio", title: "Brooklyn Welcome Sign", photographer: "Vaultguy999", sourceUrl: "https://commons.wikimedia.org/wiki/File:BrooklynWelcomeSign.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
@@ -107,15 +104,11 @@ Object.assign(localPhotos, {
   "cuyahoga-heights": { src: "/images/local-area/cuyahoga-heights.jpg", alt: "Cuyahoga Heights Village Hall", title: "Cuyahoga Heights village hall", photographer: "SilentMatt Psychedelic", sourceUrl: "https://commons.wikimedia.org/wiki/File:Cuyahoga_heights_village_hall.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
   "east-cleveland": { src: "/images/local-area/east-cleveland.jpg", alt: "East Cleveland City Hall", title: "East Cleveland City Hall", photographer: "Greg", sourceUrl: "https://commons.wikimedia.org/wiki/File:East_Cleveland_City_Hall.jpg", license: "CC BY-SA 2.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0", attributionRequired: true },
   "fairview-park": { src: "/images/local-area/fairview-park.jpg", alt: "Bain Cabin in Fairview Park", title: "Fairview Park Bain Cabin", photographer: "Vinceye", sourceUrl: "https://commons.wikimedia.org/wiki/File:Fairview_Park_Bain_Cabin.jpg", license: "CC0", attributionRequired: false },
-  "gates-mills": { src: "/images/local-area/gates-mills.jpg", alt: "Gates Mills Methodist Episcopal Church", title: "Gates Mills Methodist Episcopal Church", photographer: "Jf1123581321", sourceUrl: "https://commons.wikimedia.org/wiki/File:Gates_Mills_Methodist_Episcopal_Church_Joseph_Frost.jpg", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
-  glenwillow: { src: "/images/local-area/glenwillow.jpg", alt: "Glenwillow Village Hall", title: "Glenwillow village hall", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Glenwillow_village_hall.jpg", license: "Public domain", attributionRequired: false },
-  "highland-hills": { src: "/images/local-area/highland-hills.jpg", alt: "Cuyahoga Community College in Highland Hills", title: "Cuyahoga Community College, Highland Hills", photographer: "Ohio Redevelopment Projects", sourceUrl: "https://commons.wikimedia.org/wiki/File:Cuyahoga_Community_College,_Highland_Hills.jpg", license: "CC BY 2.0", licenseUrl: "https://creativecommons.org/licenses/by/2.0", attributionRequired: true },
   lakewood: { src: "/images/local-area/lakewood.jpg", alt: "Lakewood Downtown Historic District", title: "Lakewood Downtown Historic District", photographer: "Catsmeowmeow", sourceUrl: "https://commons.wikimedia.org/wiki/File:OH_Cuyahoga_Lakewood_Downtown_Historic_District_016.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
   linndale: { src: "/images/local-area/linndale.jpg", alt: "Linndale Village Hall", title: "Linndale village hall", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Linndale_village_hall.jpg", license: "Public domain", attributionRequired: false },
   "north-olmsted": { src: "/images/local-area/north-olmsted.jpg", alt: "North Olmsted Old Town Hall", title: "North Olmsted Old Town Hall", photographer: "Ameike", sourceUrl: "https://commons.wikimedia.org/wiki/File:North_Olmsted_Old_Town_Hall.JPG", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
   "north-randall": { src: "/images/local-area/north-randall.jpg", alt: "Thistledown Racino racetrack in North Randall, Ohio", title: "Thistledown Racino, North Randall, Ohio", photographer: "Nicholas Eckhart", sourceUrl: "https://commons.wikimedia.org/wiki/File:Thistledown_Racino,_North_Randall,_Ohio.jpg", license: "CC BY 2.0", licenseUrl: "https://creativecommons.org/licenses/by/2.0", attributionRequired: true },
   "north-royalton": { src: "/images/local-area/north-royalton.jpg", alt: "John M. Annis House in North Royalton", title: "John M. Annis House", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:John_M._Annis_House.jpg", license: "Public domain", attributionRequired: false },
-  "oakwood-village": { src: "/images/local-area/oakwood-village.jpg", alt: "Alonzo Drake House in Oakwood Village", title: "Alonzo Drake House", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Alonzo_Drake_House.jpg", license: "Public domain", attributionRequired: false },
   "olmsted-falls": { src: "/images/local-area/olmsted-falls.jpg", alt: "Grand Pacific Hotel in Olmsted Falls", title: "Grand Pacific Hotel in Olmsted Falls", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Grand_Pacific_Hotel_in_Olmsted_Falls.jpg", license: "Public domain", attributionRequired: false },
   "orange-village": { src: "/images/local-area/orange-village.jpg", alt: "Orange Village, Ohio", title: "Orange Village", photographer: "SilentMatt Psychedelic", sourceUrl: "https://commons.wikimedia.org/wiki/File:Orange_8-3-25_thumbnail_IMG_1.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
   "pepper-pike": { src: "/images/local-area/pepper-pike.jpg", alt: "Horses in Pepper Pike", title: "Pepper Pike Horses", photographer: "Hannah Wolfe", sourceUrl: "https://commons.wikimedia.org/wiki/File:Pepper_Pike_Horses.jpg", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
@@ -123,10 +116,8 @@ Object.assign(localPhotos, {
   "shaker-heights": { src: "/images/local-area/shaker-heights.jpg", alt: "Homes in Shaker Heights", title: "Shaker Heights Houses", photographer: "Spencer", sourceUrl: "https://commons.wikimedia.org/wiki/File:Shaker_Heights_Houses.jpg", license: "CC BY-SA 2.5", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.5", attributionRequired: true },
   strongsville: { src: "/images/local-area/strongsville.jpg", alt: "Strong House in Strongsville", title: "Strong House", photographer: "Chris Light", sourceUrl: "https://commons.wikimedia.org/wiki/File:Strong_House_2.jpg", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
   "valley-view": { src: "/images/local-area/valley-view.jpg", alt: "Wilson's Mill near Valley View", title: "Wilson's Mill", photographer: "Frank John Aleksandrowicz", sourceUrl: "https://commons.wikimedia.org/wiki/File:WILSON%27S_MILL,_FORMERLY_KNOWN_AS_ALEXANDER%27S_MILL,_ON_THE_OHIO-ERIE_CANAL_SOUTH_OF_ALEXANDER_ROAD_NEAR_VALLEY_VIEW..._-_NARA_-_558001.jpg", license: "Public domain", attributionRequired: false },
-  "walton-hills": { src: "/images/local-area/walton-hills.jpg", alt: "Meadowpark Drive in Walton Hills", title: "Meadowpark Drive, WH", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Meadowpark_Drive,_WH.jpg", license: "Public domain", attributionRequired: false },
   "warrensville-heights": { src: "/images/local-area/warrensville-heights.jpg", alt: "Warrensville Heights Town Center", title: "Warrensville Heights Town Center Project", photographer: "Ohio Redevelopment Projects - ODSA", sourceUrl: "https://commons.wikimedia.org/wiki/File:Warrensville_Heights-Town_Center_Project_(CORF).jpg", license: "CC BY 2.0", licenseUrl: "https://creativecommons.org/licenses/by/2.0", attributionRequired: true },
   westlake: { src: "/images/local-area/westlake.jpg", alt: "Westlake Porter Public Library", title: "Westlake Porter Public Library", photographer: "Kulshrax", sourceUrl: "https://commons.wikimedia.org/wiki/File:Westlake_Porter_Public_Library.jpg", license: "Public domain", attributionRequired: false },
-  woodmere: { src: "/images/local-area/woodmere.jpg", alt: "Woodmere, Ohio", title: "Woodmere", photographer: "SilentMatt Psychedelic", sourceUrl: "https://commons.wikimedia.org/wiki/File:Woodmere_8-17-25_thumbnail_IMG_3899b.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
 } satisfies Record<string, LocalPhoto>);
 
 export const defaultLocalPhoto = localPhotos.cleveland;
@@ -416,8 +407,8 @@ export const euclidArea = createArea({
       "slug": "cleveland-heights"
     },
     {
-      "name": "Highland Heights",
-      "slug": "highland-heights"
+      "name": "University Heights",
+      "slug": "university-heights"
     }
   ],
   googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47744.50783599262!2d-81.56199711803099!3d41.59019609607561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830fe5dbe9c8b3b%3A0x57cade33d51809cd!2sEuclid%2C%20OH%2C%20USA!5e0!3m2!1sen!2sca!4v1748013566014!5m2!1sen!2sca"
@@ -475,46 +466,6 @@ const garfieldHeightsArea = createArea({
     {
       "name": "Parma",
       "slug": "parma"
-    }
-  ]
-});
-
-const highlandHeightsArea = createArea({
-  "city": "Highland Heights",
-  "slug": "highland-heights",
-  "statistics": {
-    "medianSalePrice": "$537,000",
-    "homesSold": "37",
-    "medianPricePerSquareFoot": "$203/sq ft",
-    "medianDaysOnMarket": "19 days",
-    "dataPeriod": "June–August 2026",
-    "sourceName": "Redfin",
-    "sourceUrl": "https://www.redfin.com/city/8967/OH/Highland-Heights/housing-market"
-  },
-  "nearbyCities": [
-    {
-      "name": "Mayfield Village",
-      "slug": "mayfield-village"
-    },
-    {
-      "name": "Richmond Heights",
-      "slug": "richmond-heights"
-    },
-    {
-      "name": "Mayfield Heights",
-      "slug": "mayfield-heights"
-    },
-    {
-      "name": "Lyndhurst",
-      "slug": "lyndhurst"
-    },
-    {
-      "name": "South Euclid",
-      "slug": "south-euclid"
-    },
-    {
-      "name": "Euclid",
-      "slug": "euclid"
     }
   ]
 });
@@ -593,8 +544,8 @@ const lyndhurstArea = createArea({
       "slug": "mayfield-heights"
     },
     {
-      "name": "Highland Heights",
-      "slug": "highland-heights"
+      "name": "Euclid",
+      "slug": "euclid"
     }
   ]
 });
@@ -714,8 +665,8 @@ const mayfieldHeightsArea = createArea({
       "slug": "lyndhurst"
     },
     {
-      "name": "Highland Heights",
-      "slug": "highland-heights"
+      "name": "Euclid",
+      "slug": "euclid"
     },
     {
       "name": "South Euclid",
@@ -754,8 +705,8 @@ const mayfieldVillageArea = createArea({
   },
   "nearbyCities": [
     {
-      "name": "Highland Heights",
-      "slug": "highland-heights"
+      "name": "University Heights",
+      "slug": "university-heights"
     },
     {
       "name": "Mayfield Heights",
@@ -950,8 +901,8 @@ const richmondHeightsArea = createArea({
       "slug": "university-heights"
     },
     {
-      "name": "Highland Heights",
-      "slug": "highland-heights"
+      "name": "Mayfield Heights",
+      "slug": "mayfield-heights"
     }
   ]
 });
@@ -1133,8 +1084,8 @@ const universityHeightsArea = createArea({
       "slug": "richmond-heights"
     },
     {
-      "name": "Highland Heights",
-      "slug": "highland-heights"
+      "name": "Euclid",
+      "slug": "euclid"
     }
   ]
 });
@@ -1153,10 +1104,6 @@ const additionalAreaStatistics: Partial<Record<string, Omit<AreaStatistics, "sup
     medianSalePrice: "$255,210", homesSold: "74", medianPricePerSquareFoot: "$179/sq ft", medianDaysOnMarket: "9 days",
     dataPeriod: "June–August 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/1516/OH/Berea/housing-market",
   },
-  bratenahl: {
-    medianSalePrice: "$431,045", homesSold: "12", medianPricePerSquareFoot: "$203/sq ft", medianDaysOnMarket: "179 days",
-    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/2160/OH/Bratenahl/housing-market",
-  },
   beachwood: {
     medianSalePrice: "$549,738",
     homesSold: "34",
@@ -1165,15 +1112,6 @@ const additionalAreaStatistics: Partial<Record<string, Omit<AreaStatistics, "sup
     dataPeriod: "July–September 2026",
     sourceName: "Redfin",
     sourceUrl: "https://www.redfin.com/city/1191/OH/Beachwood/housing-market",
-  },
-  brecksville: {
-    medianSalePrice: "$474,774",
-    homesSold: "62",
-    medianPricePerSquareFoot: "$184/sq ft",
-    medianDaysOnMarket: "22 days",
-    dataPeriod: "July–September 2026",
-    sourceName: "Redfin",
-    sourceUrl: "https://www.redfin.com/city/2164/OH/Brecksville/housing-market",
   },
   "broadview-heights": {
     medianSalePrice: "$413,750", homesSold: "74", medianPricePerSquareFoot: "$188/sq ft", medianDaysOnMarket: "24 days",
@@ -1212,18 +1150,6 @@ const additionalAreaStatistics: Partial<Record<string, Omit<AreaStatistics, "sup
     medianSalePrice: "$289,362", homesSold: "55", medianPricePerSquareFoot: "$191/sq ft", medianDaysOnMarket: "12 days",
     dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/6780/OH/Fairview-Park/housing-market",
   },
-  "gates-mills": {
-    medianSalePrice: "$1,007,020", homesSold: "8", medianPricePerSquareFoot: "$250/sq ft", medianDaysOnMarket: "60 days",
-    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/7517/OH/Gates-Mills/housing-market",
-  },
-  glenwillow: {
-    medianSalePrice: "$220,000", homesSold: "1", medianPricePerSquareFoot: "$269/sq ft", medianDaysOnMarket: "46 days",
-    dataPeriod: "June–August 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/7824/OH/Glenwillow/housing-market",
-  },
-  "highland-hills": {
-    medianSalePrice: "$156,000", homesSold: "1", medianPricePerSquareFoot: "$169/sq ft", medianDaysOnMarket: "23 days",
-    dataPeriod: "May–July 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/8969/OH/Highland-Hills/housing-market",
-  },
   lakewood: {
     medianSalePrice: "$342,837", homesSold: "198", medianPricePerSquareFoot: "$196/sq ft", medianDaysOnMarket: "21 days",
     dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/10611/OH/Lakewood/housing-market",
@@ -1247,10 +1173,6 @@ const additionalAreaStatistics: Partial<Record<string, Omit<AreaStatistics, "sup
   "orange-village": {
     medianSalePrice: "$623,453", homesSold: "24", medianPricePerSquareFoot: "$255/sq ft", medianDaysOnMarket: "62 days",
     dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/15175/OH/Orange/housing-market",
-  },
-  "oakwood-village": {
-    medianSalePrice: "$363,000", homesSold: "4", medianPricePerSquareFoot: "$143/sq ft", medianDaysOnMarket: "43 days",
-    dataPeriod: "Redfin snapshot checked November 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/14977/OH/Oakwood",
   },
   "olmsted-falls": {
     medianSalePrice: "$259,876", homesSold: "53", medianPricePerSquareFoot: "$158/sq ft", medianDaysOnMarket: "27 days",
@@ -1276,17 +1198,9 @@ const additionalAreaStatistics: Partial<Record<string, Omit<AreaStatistics, "sup
     medianSalePrice: "$343,000", homesSold: "2", medianPricePerSquareFoot: "$170/sq ft", medianDaysOnMarket: "6 days",
     dataPeriod: "May–July 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/19939/OH/Valley-View/housing-market",
   },
-  "walton-hills": {
-    medianSalePrice: "$394,812", homesSold: "9", medianPricePerSquareFoot: "$133/sq ft", medianDaysOnMarket: "52 days",
-    dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/20238/OH/Walton-Hills/housing-market",
-  },
   westlake: {
     medianSalePrice: "$449,786", homesSold: "140", medianPricePerSquareFoot: "$173/sq ft", medianDaysOnMarket: "17 days",
     dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/20680/OH/Westlake/housing-market",
-  },
-  woodmere: {
-    medianSalePrice: "$398,000", homesSold: "2", medianPricePerSquareFoot: "$202/sq ft", medianDaysOnMarket: "96 days",
-    dataPeriod: "Redfin snapshot checked November 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/20963/OH/Woodmere",
   },
   "warrensville-heights": {
     medianSalePrice: "$173,118", homesSold: "20", medianPricePerSquareFoot: "$173/sq ft", medianDaysOnMarket: "30 days",
@@ -1325,14 +1239,6 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 10, 2026",
   },
-  bratenahl: {
-    status: "not-required",
-    shortAnswer: "Bratenahl no longer requires a point-of-sale inspection. A Certificate of Occupancy is required for title transfer; an inspection is optional and free if requested.",
-    sources: [
-      { label: "Village of Bratenahl: Building Department FAQ", url: "https://www.bratenahl.org/m/faq" },
-    ],
-    verifiedDate: "November 10, 2026",
-  },
   "broadview-heights": {
     status: "not-required",
     shortAnswer: "Broadview Heights does not publish a general point-of-sale inspection requirement for a home sale. A property with a septic system is subject to the City’s point-of-sale septic inspection ordinance.",
@@ -1358,34 +1264,6 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     sources: [
       { label: "Village of North Randall: Occupancy Permit Application (PDF)", url: "https://northrandall.com/wp-content/uploads/2018/01/Occupancy-Permit-1-26-18.pdf" },
-    ],
-    verifiedDate: "November 10, 2026",
-  },
-  "oakwood-village": {
-    status: "required",
-    shortAnswer: "Oakwood Village requires a Point-of-Sale inspection before any dwelling is sold. The seller must arrange the inspection with the Village Building Department.",
-    tableRows: [
-      { question: "When is it required?", requirement: "Before any dwelling is sold." },
-      { question: "What does the Village inspect?", requirement: "The Building Department's published guidance says the inspection checks the home for code violations." },
-      { question: "What happens if there are violations?", requirement: "The buyer may assume violations before an Occupancy Certificate is issued; otherwise, they must be corrected before the sale." },
-      { question: "How do I apply?", requirement: "Contact the Oakwood Village Building Department at 440-232-9980 to schedule the Point-of-Sale inspection." },
-    ],
-    sources: [
-      { label: "Oakwood Village: Building Department", url: "https://www.oakwoodvillageoh.com/departments/building-department/" },
-      { label: "Oakwood Village: POS, Lease, and Rent Inspection Process (PDF)", url: "https://www.oakwoodvillageoh.com/wp-content/uploads/2025/07/POS-Lease-Rent-Inspection-Process.pdf" },
-    ],
-    verifiedDate: "November 10, 2026",
-  },
-  brecksville: {
-    status: "required",
-    shortAnswer: "Brecksville requires a point-of-sale septic-system inspection when the property is served by a septic system. The seller must obtain the required County certificate before transfer.",
-    tableRows: [
-      { question: "When is it required?", requirement: "Before an owner of property with a septic system enters an agreement to sell, convey, or transfer it." },
-      { question: "What is required?", requirement: "Obtain a current Certificate of Septic System Evaluation from the Cuyahoga County Board of Health and give it to the buyer before transfer." },
-      { question: "What about escrow?", requirement: "If escrow is used, the buyer's acknowledgement of receipt of the certificate must be deposited in escrow before possession or title transfer." },
-    ],
-    sources: [
-      { label: "City of Brecksville Code: Point of Sale Septic System Inspection", url: "https://library.municode.com/oh/brecksville/codes/code_of_ordinances?nodeId=PTTHIRTEENBUCO_TITONEBUCOPR" },
     ],
     verifiedDate: "November 10, 2026",
   },
@@ -1422,20 +1300,6 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     sources: [
       { label: "City of Solon: Certificate of Occupancy Procedure (PDF)", url: "https://www.solonohio.gov/DocumentCenter/View/857/COO-ProdedureSolon-Comm--4Res?bidId=" },
       { label: "City of Solon Council Minutes, February 19, 2019", url: "https://www.solonohio.gov/ArchiveCenter/ViewFile/Item/2230" },
-    ],
-    verifiedDate: "November 10, 2026",
-  },
-  "walton-hills": {
-    status: "required",
-    shortAnswer: "Walton Hills requires a Certificate of Inspection when a residential rental property, or property intended for residential rental use, is sold or transferred. A sale can close with outstanding violations only if the Village's escrow requirements are completed.",
-    tableRows: [
-      { question: "When is it required?", requirement: "Before selling or transferring a residential rental unit, property intended to be rented as a residence, or property converted to a rental after sale." },
-      { question: "What does the Village inspect?", requirement: "The general inspection reviews conditions that affect health or safety and compliance with Village, state building, and fire codes." },
-      { question: "Can the sale close with violations?", requirement: "Yes. Before possession or title transfer, escrow must contain the buyer's acknowledgement and funds equal to 100% of the work needed to correct outstanding violations." },
-      { question: "How do I apply?", requirement: "Apply for a Certificate of Inspection at Village Hall in the manner prescribed by the Village." },
-    ],
-    sources: [
-      { label: "Village of Walton Hills Code: Certificate of Inspection", url: "https://codelibrary.amlegal.com/codes/waltonhills/latest/waltonhills_oh/0-0-0-62732" },
     ],
     verifiedDate: "November 10, 2026",
   },
@@ -1495,35 +1359,6 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 10, 2026",
   },
-  "gates-mills": {
-    status: "required",
-    shortAnswer: "Gates Mills requires a Certificate of Inspection before selling or transferring property. For a property served by a septic system, the seller must also obtain a County septic-system evaluation.",
-    tableRows: [
-      { question: "When is it required?", requirement: "Before renting, leasing, selling, conveying, or transferring property. The seller must present the City certificate to the prospective purchaser." },
-      { question: "What separate requirement applies?", requirement: "A property served by a septic system also requires a Cuyahoga County Board of Health septic-system evaluation. The Village says the County application and payment are $350 and advises scheduling at least four weeks before closing." },
-      { question: "Can the sale close without a septic evaluation?", requirement: "For an unoccupied home, title may transfer and the septic inspection may be completed after the new owner has occupied the home for 30 days. The Village says escrow is not required." },
-    ],
-    sources: [
-      { label: "Village of Gates Mills: Septic Point-of-Sale", url: "https://w.gatesmillsvillage.com/building/news/septic-point-sale-gates-mills" },
-      { label: "Village of Gates Mills Code: Certification of Inspection", url: "https://codelibrary.amlegal.com/codes/gatesmills/latest/gatesmills_oh/0-0-0-19230" },
-    ],
-    verifiedDate: "November 10, 2026",
-  },
-  "highland-hills": {
-    status: "required",
-    shortAnswer: "Highland Hills requires a Point-of-Sale inspection before a property can be transferred. The seller must obtain and provide the Certificate of Inspection before title transfer.",
-    tableRows: [
-      { question: "When is it required?", requirement: "Before transferring property. The Certificate of Inspection is valid for one year; an occupancy permit is also required before a new owner or tenant moves in." },
-      { question: "What does it cost?", requirement: "$25 for the first unit and $20 for each additional unit." },
-      { question: "What happens if there are violations?", requirement: "Known violations appear on the certificate and must be corrected within 90 days of issuance unless the Housing Department grants an extension." },
-      { question: "How do I apply?", requirement: "Submit the Village’s Point-of-Sale application to the Housing Department and schedule the inspection." },
-    ],
-    sources: [
-      { label: "Village of Highland Hills: Building Department", url: "https://vhhohio.org/buildingdepartment/" },
-      { label: "Village of Highland Hills: Point-of-Sale Application and Instructions (PDF)", url: "https://www.vhhohio.org/pdf/Point%20of%20Sale%20Application%202014%20%282%29.pdf" },
-    ],
-    verifiedDate: "November 10, 2026",
-  },
   "shaker-heights": {
     status: "required",
     shortAnswer: "The seller must apply for a Point-of-Sale inspection before entering into a contract to sell a residential property. A sale can close with violations still outstanding only when the City approves the required escrow arrangement.",
@@ -1556,56 +1391,34 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 10, 2026",
   },
-  woodmere: {
-    status: "required",
-    shortAnswer: "A Point-of-Sale Certificate is required for a Woodmere property transfer. If repairs are not completed before title transfer, the buyer may assume the violations through a Village-approved escrow agreement.",
-    tableRows: [
-      { question: "When is it required?", requirement: "Before transferring a residential property. The seller must provide the purchaser with a current Certificate of Inspection." },
-      { question: "Can the sale close with violations?", requirement: "Yes. The buyer may assume violations, including Class A violations, through a Village-approved escrow agreement. The buyer must not occupy the home until the violations are completed and a Certificate of Compliance is issued." },
-      { question: "What paperwork is required?", requirement: "The buyer, seller, their agents, and the escrow agent complete the City-approved Point-of-Sale Buyer/Seller Escrow Agreement before closing." },
-    ],
-    sources: [
-      { label: "Village of Woodmere: Point-of-Sale Buyer/Seller Escrow Agreement (PDF)", url: "https://cms3.revize.com/revize/woodmereoh/Departments/Building%20and%20Inspections/Residential%20Forms%20and%20Permits/Point-of-Sale-Buyer-Seller-Escrow-Agreement-2021.pdf" },
-      { label: "Village of Woodmere Code: Point-of-Sale Inspection", url: "https://codelibrary.amlegal.com/codes/woodmere/latest/woodmere_oh/0-0-0-18273" },
-    ],
-    verifiedDate: "November 10, 2026",
-  },
 };
 
 const additionalAreas = [
   ["Bay Village", "bay-village", ["Westlake", "Rocky River", "Fairview Park", "North Olmsted", "Berea", "Lakewood"]],
   ["Berea", "berea", ["Olmsted Falls", "North Olmsted", "Strongsville", "Brook Park", "Middleburg Heights", "Fairview Park"]],
-  ["Bratenahl", "bratenahl", ["Cleveland", "Euclid", "East Cleveland", "Cleveland Heights", "Shaker Heights", "Lakewood"]],
-  ["Brecksville", "brecksville", ["Broadview Heights", "North Royalton", "Seven Hills", "Independence", "Solon", "Bedford"]],
-  ["Broadview Heights", "broadview-heights", ["Brecksville", "North Royalton", "Seven Hills", "Parma", "Independence", "Middleburg Heights"]],
+  ["Broadview Heights", "broadview-heights", ["Parma Heights", "North Royalton", "Seven Hills", "Parma", "Independence", "Middleburg Heights"]],
   ["Brook Park", "brook-park", ["Cleveland", "Berea", "Middleburg Heights", "Fairview Park", "Parma", "Parma Heights"]],
   ["Brooklyn", "brooklyn", ["Cleveland", "Parma", "Parma Heights", "Seven Hills", "Brooklyn Heights", "Lakewood"]],
   ["Brooklyn Heights", "brooklyn-heights", ["Brooklyn", "Cleveland", "Independence", "Seven Hills", "Parma", "Garfield Heights"]],
-  ["Chagrin Falls", "chagrin-falls", ["Solon", "Gates Mills", "Orange Village", "Mayfield Village", "Highland Heights", "Richmond Heights"]],
-  ["East Cleveland", "east-cleveland", ["Cleveland", "Cleveland Heights", "Euclid", "Bratenahl", "Shaker Heights", "University Heights"]],
-  ["Beachwood", "beachwood", ["Shaker Heights", "University Heights", "Cleveland Heights", "Warrensville Heights", "Orange Village", "Woodmere"]],
+  ["Chagrin Falls", "chagrin-falls", ["Solon", "Lyndhurst", "Orange Village", "Mayfield Village", "Mayfield Heights", "Richmond Heights"]],
+  ["East Cleveland", "east-cleveland", ["Cleveland", "Cleveland Heights", "Euclid", "Garfield Heights", "Shaker Heights", "University Heights"]],
+  ["Beachwood", "beachwood", ["Shaker Heights", "University Heights", "Cleveland Heights", "Warrensville Heights", "Orange Village", "Pepper Pike"]],
   ["Cuyahoga Heights", "cuyahoga-heights", ["Cleveland", "Garfield Heights", "Valley View", "Brooklyn Heights", "Independence", "Maple Heights"]],
   ["Fairview Park", "fairview-park", ["Rocky River", "North Olmsted", "Westlake", "Lakewood", "Brook Park", "Berea"]],
-  ["Gates Mills", "gates-mills", ["Mayfield Heights", "Mayfield Village", "Highland Heights", "Lyndhurst", "Richmond Heights", "Chagrin Falls"]],
-  ["Glenwillow", "glenwillow", ["Solon", "Bedford Heights", "Bedford", "Maple Heights", "North Royalton", "Brecksville"]],
-  ["Highland Hills", "highland-hills", ["Warrensville Heights", "Beachwood", "Shaker Heights", "Maple Heights", "Bedford Heights", "North Randall"]],
   ["Lakewood", "lakewood", ["Rocky River", "Fairview Park", "Brooklyn", "Cleveland", "Westlake", "Bay Village"]],
   ["Linndale", "linndale", ["Cleveland", "Brooklyn", "Lakewood", "Parma", "Parma Heights", "Brooklyn Heights"]],
   ["North Olmsted", "north-olmsted", ["Westlake", "Fairview Park", "Olmsted Falls", "Berea", "North Royalton", "Bay Village"]],
-  ["North Randall", "north-randall", ["Warrensville Heights", "Highland Hills", "Maple Heights", "Bedford Heights", "Bedford", "Garfield Heights"]],
-  ["North Royalton", "north-royalton", ["Broadview Heights", "Brecksville", "Strongsville", "Parma", "Seven Hills", "Glenwillow"]],
-  ["Oakwood Village", "oakwood-village", ["Bedford", "Bedford Heights", "Walton Hills", "Maple Heights", "Solon", "Glenwillow"]],
+  ["North Randall", "north-randall", ["Warrensville Heights", "South Euclid", "Maple Heights", "Bedford Heights", "Bedford", "Garfield Heights"]],
+  ["North Royalton", "north-royalton", ["Broadview Heights", "Middleburg Heights", "Strongsville", "Parma", "Seven Hills", "Olmsted Falls"]],
   ["Olmsted Falls", "olmsted-falls", ["North Olmsted", "Berea", "Strongsville", "Westlake", "Fairview Park", "Bay Village"]],
-  ["Orange Village", "orange-village", ["Chagrin Falls", "Gates Mills", "Mayfield Village", "Mayfield Heights", "Highland Heights", "Solon"]],
-  ["Pepper Pike", "pepper-pike", ["Orange Village", "Gates Mills", "Mayfield Heights", "Lyndhurst", "Beachwood", "Woodmere"]],
+  ["Orange Village", "orange-village", ["Chagrin Falls", "Pepper Pike", "Mayfield Village", "Mayfield Heights", "Lyndhurst", "Solon"]],
+  ["Pepper Pike", "pepper-pike", ["Orange Village", "Shaker Heights", "Mayfield Heights", "Lyndhurst", "Beachwood", "University Heights"]],
   ["Rocky River", "rocky-river", ["Lakewood", "Fairview Park", "Westlake", "Bay Village", "North Olmsted", "Cleveland"]],
   ["Shaker Heights", "shaker-heights", ["Cleveland Heights", "University Heights", "Garfield Heights", "Maple Heights", "Cleveland", "East Cleveland"]],
   ["Strongsville", "strongsville", ["North Royalton", "Olmsted Falls", "Berea", "Middleburg Heights", "Parma Heights", "Broadview Heights"]],
   ["Valley View", "valley-view", ["Cuyahoga Heights", "Independence", "Garfield Heights", "Bedford", "Bedford Heights", "Seven Hills"]],
-  ["Walton Hills", "walton-hills", ["Oakwood Village", "Bedford", "Bedford Heights", "Maple Heights", "Solon", "North Randall"]],
-  ["Warrensville Heights", "warrensville-heights", ["Beachwood", "Highland Hills", "North Randall", "Shaker Heights", "University Heights", "Maple Heights"]],
+  ["Warrensville Heights", "warrensville-heights", ["Beachwood", "Bedford Heights", "North Randall", "Shaker Heights", "University Heights", "Maple Heights"]],
   ["Westlake", "westlake", ["Bay Village", "Rocky River", "Fairview Park", "North Olmsted", "Olmsted Falls", "Strongsville"]],
-  ["Woodmere", "woodmere", ["Beachwood", "Orange Village", "Pepper Pike", "Shaker Heights", "University Heights", "Warrensville Heights"]],
 ] as const satisfies readonly (readonly [string, string, readonly [string, string, string, string, string, string]])[];
 
 const additionalAreaPages = additionalAreas.map(([city, slug, nearbyCities]) => createArea({
@@ -1626,7 +1439,6 @@ export const areas: readonly AreaPageData[] = [
   clevelandHeightsArea,
   euclidArea,
   garfieldHeightsArea,
-  highlandHeightsArea,
   independenceArea,
   lyndhurstArea,
   mapleHeightsArea,

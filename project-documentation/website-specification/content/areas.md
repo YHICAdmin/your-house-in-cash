@@ -16,7 +16,6 @@ These are the approved City Pages. Every page uses the shared Area Page template
 | [Cleveland Heights](#cleveland-heights) | `cleveland-heights` | `/sell-your-house-fast-as-is-cleveland-heights` |
 | [Euclid](#euclid) | `euclid` | `/sell-your-house-fast-as-is-euclid` |
 | [Garfield Heights](#garfield-heights) | `garfield-heights` | `/sell-your-house-fast-as-is-garfield-heights` |
-| [Highland Heights](#highland-heights) | `highland-heights` | `/sell-your-house-fast-as-is-highland-heights` |
 | [Independence](#independence) | `independence` | `/sell-your-house-fast-as-is-independence` |
 | [Lyndhurst](#lyndhurst) | `lyndhurst` | `/sell-your-house-fast-as-is-lyndhurst` |
 | [Maple Heights](#maple-heights) | `maple-heights` | `/sell-your-house-fast-as-is-maple-heights` |
@@ -32,8 +31,6 @@ These are the approved City Pages. Every page uses the shared Area Page template
 | [University Heights](#university-heights) | `university-heights` | `/sell-your-house-fast-as-is-university-heights` |
 | Bay Village | `bay-village` | `/sell-your-house-fast-as-is-bay-village` |
 | Berea | `berea` | `/sell-your-house-fast-as-is-berea` |
-| Bratenahl | `bratenahl` | `/sell-your-house-fast-as-is-bratenahl` |
-| Brecksville | `brecksville` | `/sell-your-house-fast-as-is-brecksville` |
 | Broadview Heights | `broadview-heights` | `/sell-your-house-fast-as-is-broadview-heights` |
 | Brook Park | `brook-park` | `/sell-your-house-fast-as-is-brook-park` |
 | Brooklyn | `brooklyn` | `/sell-your-house-fast-as-is-brooklyn` |
@@ -41,8 +38,6 @@ These are the approved City Pages. Every page uses the shared Area Page template
 | Chagrin Falls | `chagrin-falls` | `/sell-your-house-fast-as-is-chagrin-falls` |
 | East Cleveland | `east-cleveland` | `/sell-your-house-fast-as-is-east-cleveland` |
 | Fairview Park | `fairview-park` | `/sell-your-house-fast-as-is-fairview-park` |
-| Gates Mills | `gates-mills` | `/sell-your-house-fast-as-is-gates-mills` |
-| Glenwillow | `glenwillow` | `/sell-your-house-fast-as-is-glenwillow` |
 | North Olmsted | `north-olmsted` | `/sell-your-house-fast-as-is-north-olmsted` |
 | North Royalton | `north-royalton` | `/sell-your-house-fast-as-is-north-royalton` |
 | Olmsted Falls | `olmsted-falls` | `/sell-your-house-fast-as-is-olmsted-falls` |
@@ -53,16 +48,12 @@ These are the approved City Pages. Every page uses the shared Area Page template
 | Westlake | `westlake` | `/sell-your-house-fast-as-is-westlake` |
 | Beachwood | `beachwood` | `/sell-your-house-fast-as-is-beachwood` |
 | Cuyahoga Heights | `cuyahoga-heights` | `/sell-your-house-fast-as-is-cuyahoga-heights` |
-| Highland Hills | `highland-hills` | `/sell-your-house-fast-as-is-highland-hills` |
 | Lakewood | `lakewood` | `/sell-your-house-fast-as-is-lakewood` |
 | Linndale | `linndale` | `/sell-your-house-fast-as-is-linndale` |
 | North Randall | `north-randall` | `/sell-your-house-fast-as-is-north-randall` |
-| Oakwood Village | `oakwood-village` | `/sell-your-house-fast-as-is-oakwood-village` |
 | Pepper Pike | `pepper-pike` | `/sell-your-house-fast-as-is-pepper-pike` |
 | Valley View | `valley-view` | `/sell-your-house-fast-as-is-valley-view` |
-| Walton Hills | `walton-hills` | `/sell-your-house-fast-as-is-walton-hills` |
 | Warrensville Heights | `warrensville-heights` | `/sell-your-house-fast-as-is-warrensville-heights` |
-| Woodmere | `woodmere` | `/sell-your-house-fast-as-is-woodmere` |
 
 ## Shared City Content
 
@@ -87,18 +78,14 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Bedford Heights | POS required | City Point of Sale Inspections and Application |
 | Bay Village | No general POS inspection; vacant-building inspection applies | City Vacant Building Certificate of Compliance Application |
 | Berea | No POS inspection | City repeal of Exterior Point-of-Sale Inspection Chapter |
-| Brecksville | POS required for septic-system properties | City Code Point of Sale Septic System Inspection |
 | Brook Park | POS required | City Building Department FAQ |
 | Brooklyn Heights | POS required | Village Point-of-Sale Application; Certificate of Inspection at Time of Sale |
-| Bratenahl | No POS inspection; Certificate of Occupancy applies | Village Building Department FAQ |
 | Broadview Heights | No general POS inspection; septic-system inspection applies | City Point-of-Sale Septic Inspection Notice |
 | Cleveland Heights | POS required | City Point-of-Sale Inspections; Escrow Requirements |
 | Cuyahoga Heights | POS required | Village Code Point of Sale Inspections; Point of Sale Inspection Fees |
 | East Cleveland | POS required | City HUD Consolidated Plan; Housing Programs Description |
 | Euclid | POS required | City Forms and Permits; Assumption Application |
 | Garfield Heights | POS required | City Point-of-Sale Inspections; Buyer Affidavit |
-| Gates Mills | POS required; septic-system evaluation may apply | Village Septic Point-of-Sale; Certification of Inspection Code |
-| Highland Hills | POS required | Village Building Department; Point-of-Sale Application and Instructions |
 | Lakewood | POS required for non-owner-occupied residential rentals | City Inspections and Code Compliance |
 | Maple Heights | POS required | City Point of Sale Inspection; Point of Sale Application |
 | Mayfield Heights | POS required | City Residential Point-of-Sale Application; Statement of Assumption of Housing Violations |
@@ -106,7 +93,6 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Middleburg Heights | No general POS inspection; septic-system certificate applies | City Building Division FAQ |
 | North Olmsted | No POS inspection | City Assistance to Homebuyers |
 | North Randall | Sale-time occupancy inspection required | Village Occupancy Permit Application |
-| Oakwood Village | POS required | Village Building Department; POS, Lease, and Rent Inspection Process |
 | Orange Village | POS required | Village Point-of-Sale Inspection; Point-of-Sale Application Instructions |
 | Richmond Heights | No POS inspection; exterior home inspection applies | City Exterior Maintenance Inspection Program |
 | Seven Hills | POS required for septic-system properties | City Code Point of Sale Inspection of Septic Systems |
@@ -114,9 +100,7 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Solon | No POS inspection | City Certificate of Occupancy Procedure; Council Minutes |
 | South Euclid | No general POS inspection; vacant-property inspection applies | City Housing Department |
 | University Heights | POS required | City Point-of-Sale Application; Point-of-Sale Transfer Process |
-| Walton Hills | POS required for residential rental-property transfers | Village Code Certificate of Inspection |
 | Warrensville Heights | POS required | City Residential POS Application and Checklist; Inspections |
-| Woodmere | POS required | Village POS Buyer/Seller Escrow Agreement; Point-of-Sale Inspection Code |
 
 ## Local Market Images
 
@@ -130,7 +114,6 @@ Each area uses the lead image from its corresponding English Wikipedia city arti
 | Cleveland Heights | [North building - Taylor Tudors](https://commons.wikimedia.org/wiki/File:North_building_-_Taylor_Tudors.jpg) | CC BY-SA 2.0 |
 | Euclid | [Old City Hall](https://commons.wikimedia.org/wiki/File:Euclid_(Ohio)_-_Old_City_Hall.jpg) | CC BY-SA 2.0 |
 | Garfield Heights | [Garfield Heights city hall](https://commons.wikimedia.org/wiki/File:Garfield_Heights_city_hall.jpg) | CC BY-SA 3.0 |
-| Highland Heights | [CGF TOWER](https://commons.wikimedia.org/wiki/File:CGF_TOWER.JPG) | CC BY-SA 3.0 |
 | Independence | [Independence Presbyterian Church](https://commons.wikimedia.org/wiki/File:Independence_Presbyterian_Church.jpg) | Public domain |
 | Lyndhurst | [Old Euclid District 4 Schoolhouse](https://commons.wikimedia.org/wiki/File:Old_Euclid_District_4_Schoolhouse_in_Lyndhurst.jpg) | Public domain |
 | Maple Heights | [Southern end of Vine Street](https://commons.wikimedia.org/wiki/File:Southern_end_of_Vine_Street,_Maple_Heights.jpg) | Public domain |
@@ -177,7 +160,7 @@ All cities except Cleveland and Euclid use `https://www.google.com/maps?q={encod
 
 ## Statistics Methodology
 
-Existing statistics use Redfin’s All Home Types city data researched on 15 September 2026. Bedford Heights, Highland Heights, Mayfield Heights, Mayfield Village, and Solon were verified on 16 September 2026. Read the precise median sale price, homes sold, and median days on market from the labeled trend statistics; read median price per square foot from the market overview. Do not substitute the Compete Score’s time-to-pending metric. The added City Pages intentionally omit the market-statistics module until their snapshots are verified and documented.
+Existing statistics use Redfin’s All Home Types city data researched on 15 September 2026. Bedford Heights, Mayfield Heights, Mayfield Village, and Solon were verified on 16 September 2026. Read the precise median sale price, homes sold, and median days on market from the labeled trend statistics; read median price per square foot from the market overview. Do not substitute the Compete Score’s time-to-pending metric. The added City Pages intentionally omit the market-statistics module until their snapshots are verified and documented.
 
 [Redfin’s methodology](https://www.redfin.com/news/data-center/methodology/) specifies rolling three-month windows for cities. The August snapshot therefore uses June–August 2026; Independence’s current trend/chart snapshot ends in July and uses May–July 2026. The generic page title must not override the period shown for the actual statistics. Values, source, and reporting period are updated together. The narrative’s monthly homes-sold wording is interpreted using this city methodology, consistent with the existing Euclid approach; these values have not been independently recalculated from raw sales records.
 
@@ -305,7 +288,6 @@ Each city list below is the approved display order for the existing Nearby Areas
 3. [Richmond Heights](#richmond-heights) — `richmond-heights`
 4. [Lyndhurst](#lyndhurst) — `lyndhurst`
 5. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
-6. [Highland Heights](#highland-heights) — `highland-heights`
 
 ## Garfield Heights
 
@@ -330,30 +312,6 @@ Each city list below is the approved display order for the existing Nearby Areas
 4. [Independence](#independence) — `independence`
 5. [Seven Hills](#seven-hills) — `seven-hills`
 6. [Parma](#parma) — `parma`
-
-## Highland Heights
-
-**Data period:** June–August 2026
-
-**Source:** [Redfin](https://www.redfin.com/city/8967/OH/Highland-Heights/housing-market)
-
-| Statistic | Value |
-|---|---|
-| Median Sale Price | $543,141 |
-| Homes Sold | 37 |
-| Median Price per Sq. Ft. | $201/sq ft |
-| Median Days on Market | 16 days |
-
-**Map:** [Highland Heights, Ohio](https://www.google.com/maps?q=Highland%20Heights%2C%20Ohio%2C%20USA&output=embed)
-
-**Recommended cities, in order:**
-
-1. [Mayfield Village](#mayfield-village) — `mayfield-village`
-2. [Richmond Heights](#richmond-heights) — `richmond-heights`
-3. [Mayfield Heights](#mayfield-heights) — `mayfield-heights`
-4. [Lyndhurst](#lyndhurst) — `lyndhurst`
-5. [South Euclid](#south-euclid) — `south-euclid`
-6. [Euclid](#euclid) — `euclid`
 
 ## Independence
 
@@ -401,7 +359,6 @@ Each city list below is the approved display order for the existing Nearby Areas
 3. [University Heights](#university-heights) — `university-heights`
 4. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
 5. [Mayfield Heights](#mayfield-heights) — `mayfield-heights`
-6. [Highland Heights](#highland-heights) — `highland-heights`
 
 ## Maple Heights
 
@@ -446,7 +403,6 @@ Each city list below is the approved display order for the existing Nearby Areas
 
 1. [Mayfield Village](#mayfield-village) — `mayfield-village`
 2. [Lyndhurst](#lyndhurst) — `lyndhurst`
-3. [Highland Heights](#highland-heights) — `highland-heights`
 4. [South Euclid](#south-euclid) — `south-euclid`
 5. [Richmond Heights](#richmond-heights) — `richmond-heights`
 6. [University Heights](#university-heights) — `university-heights`
@@ -468,7 +424,6 @@ Each city list below is the approved display order for the existing Nearby Areas
 
 **Recommended cities, in order:**
 
-1. [Highland Heights](#highland-heights) — `highland-heights`
 2. [Mayfield Heights](#mayfield-heights) — `mayfield-heights`
 3. [Lyndhurst](#lyndhurst) — `lyndhurst`
 4. [Richmond Heights](#richmond-heights) — `richmond-heights`
@@ -569,7 +524,6 @@ Each city list below is the approved display order for the existing Nearby Areas
 3. [Euclid](#euclid) — `euclid`
 4. [Cleveland Heights](#cleveland-heights) — `cleveland-heights`
 5. [University Heights](#university-heights) — `university-heights`
-6. [Highland Heights](#highland-heights) — `highland-heights`
 
 ## Seven Hills
 
@@ -665,4 +619,3 @@ Each city list below is the approved display order for the existing Nearby Areas
 3. [Lyndhurst](#lyndhurst) — `lyndhurst`
 4. [Mayfield Heights](#mayfield-heights) — `mayfield-heights`
 5. [Richmond Heights](#richmond-heights) — `richmond-heights`
-6. [Highland Heights](#highland-heights) — `highland-heights`

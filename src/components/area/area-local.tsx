@@ -15,6 +15,7 @@ import { TextLink } from "@/components/ui/text-link";
 import { ContentTable } from "@/components/ui/content-table";
 import { IconContainer } from "@/components/ui/icon-container";
 import {
+  areas,
   getAreaPagePath,
   type AreaPageData,
 } from "@/data/areas";
@@ -40,6 +41,8 @@ type StatisticCard = {
 const headingId = "local-area-heading";
 
 export function AreaLocal({ area }: AreaLocalProps) {
+  const activeAreaSlugs = new Set(areas.map((activeArea) => activeArea.slug));
+  const nearbyCities = area.nearbyCities.filter((city) => activeAreaSlugs.has(city.slug));
   const statistics: readonly StatisticCard[] = area.statistics ? [
     {
       label: "Median Sale Price",
@@ -112,7 +115,7 @@ export function AreaLocal({ area }: AreaLocalProps) {
           </h3>
 
           <ul className={styles.nearbyGrid}>
-            {area.nearbyCities.map((city) => (
+            {nearbyCities.map((city) => (
               <li key={city.slug}>
                 <a
                   className={`${styles.nearbyLink} text-body`}
