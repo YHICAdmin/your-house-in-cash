@@ -35,8 +35,23 @@ export type AreaPageData = {
     NearbyCity,
   ];
   localPhoto: LocalPhoto;
+  posInspection?: PosInspection;
   slug: string;
   statistics?: AreaStatistics;
+};
+
+export type PosInspection = {
+  shortAnswer: string;
+  sources: readonly {
+    label: string;
+    url: string;
+  }[];
+  status: "not-required" | "required";
+  tableRows?: readonly {
+    question: string;
+    requirement: string;
+  }[];
+  verifiedDate: string;
 };
 
 export type LocalPhoto = {
@@ -116,7 +131,7 @@ Object.assign(localPhotos, {
 
 export const defaultLocalPhoto = localPhotos.cleveland;
 
-type AreaRecord = Pick<AreaPageData, "city" | "slug" | "nearbyCities"> & {
+type AreaRecord = Pick<AreaPageData, "city" | "slug" | "nearbyCities" | "posInspection"> & {
   statistics?: Omit<AreaStatistics, "supportingCopy">;
   googleMapsEmbedUrl?: string;
 };
@@ -233,6 +248,17 @@ const bedfordHeightsArea = createArea({
 export const clevelandArea = createArea({
   city: "Cleveland",
   slug: "cleveland",
+  posInspection: {
+    status: "not-required",
+    shortAnswer: "Cleveland does not require a point-of-sale inspection for a residential home transfer. It does require a Certificate of Disclosure before a voluntary transfer of one- to four-unit residential property; the certificate reports City records and is not a POS inspection.",
+    sources: [
+      {
+        label: "City of Cleveland: Certificates of Disclosure",
+        url: "https://www.clevelandohio.gov/city-hall/departments/building-housing/divisions/records-administration/certificates-disclosure",
+      },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   statistics: {
     medianSalePrice: "$149,929",
     homesSold: "1,116",
@@ -274,6 +300,22 @@ export const clevelandArea = createArea({
 const clevelandHeightsArea = createArea({
   city: "Cleveland Heights",
   slug: "cleveland-heights",
+  posInspection: {
+    status: "required",
+    shortAnswer: "The seller must obtain a Point-of-Sale Certificate of Inspection before entering into a sale agreement. A sale can close with unresolved Class A violations when the required escrow and purchaser acknowledgement are in place.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before entering into an agreement to sell any residential or commercial property. The Certificate of Inspection is valid for one year from issuance." },
+      { question: "What does it cost?", requirement: "$200 for the first unit and $50 for each additional unit." },
+      { question: "What happens if there are violations?", requirement: "The buyer may assume violations. Uncorrected Class A violations require escrow of at least $1,000 and 125% of the City’s estimated repair cost before title transfer." },
+      { question: "What paperwork is required?", requirement: "The seller must give the buyer the Certificate of Inspection and Certificate of Compliance, if available. A purchaser-signed Acknowledgement Form must be provided to Housing Inspections before title transfer." },
+      { question: "How do I apply?", requirement: "Apply and schedule through the City’s online portal, or submit an application through Housing Inspections." },
+    ],
+    sources: [
+      { label: "City of Cleveland Heights: Point-of-Sale Inspections", url: "https://www.clevelandheights.gov/205/Point-of-Sale-Inspections" },
+      { label: "City of Cleveland Heights: Escrow Requirements", url: "https://www.clevelandheights.gov/209/Escrow-Requirements" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   statistics: {
     medianSalePrice: "$243,661",
     homesSold: "183",
@@ -355,6 +397,22 @@ export const euclidArea = createArea({
 const garfieldHeightsArea = createArea({
   city: "Garfield Heights",
   slug: "garfield-heights",
+  posInspection: {
+    status: "required",
+    shortAnswer: "A Point-of-Sale inspection and Compliance Certificate are required before title transfer. The buyer can assume outstanding violations by completing the City’s required forms and must complete the repairs within 90 days after transfer.",
+    tableRows: [
+      { question: "When is it required?", requirement: "For all structures being sold, transferred, or otherwise conveyed. A Compliance Certificate is required for title transfer." },
+      { question: "What does the City inspect?", requirement: "The City inspects the exterior. An interior inspection requires the City’s consent form." },
+      { question: "Can the sale close with violations?", requirement: "Yes. The buyer may assume outstanding violations by submitting a notarized Affidavit, and must complete the repairs within 90 days after title transfer." },
+      { question: "What paperwork is required?", requirement: "The buyer must submit a notarized Buyer’s Acknowledgement Form. If violations are assumed, a notarized Affidavit is also required before the Compliance Certificate is issued." },
+      { question: "How do I apply?", requirement: "Use the City’s current Point-of-Sale application and submit the required forms to the Building Department." },
+    ],
+    sources: [
+      { label: "City of Garfield Heights: Point-of-Sale Inspections", url: "https://garfieldhts.org/168/Point-of-Sale-Inspections" },
+      { label: "City of Garfield Heights: Buyer Affidavit (PDF)", url: "https://garfieldhts.org/DocumentCenter/View/2867/Affidavit-PDF-updated-8-12-2024" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   statistics: {
     medianSalePrice: "$151,028",
     homesSold: "87",
@@ -515,6 +573,43 @@ const lyndhurstArea = createArea({
 const mapleHeightsArea = createArea({
   city: "Maple Heights",
   slug: "maple-heights",
+  posInspection: {
+    status: "required",
+    shortAnswer: "The owner must obtain a Point of Sale/Property Maintenance inspection before selling or transferring an improved residential property. A sale can proceed with violations still outstanding only when the City’s approved escrow and buyer paperwork requirements are completed.",
+    tableRows: [
+      {
+        question: "When is it required?",
+        requirement: "Before selling, transferring, conveying, or entering into an agreement to transfer improved residential property. The initial inspection is valid for six months, subject to the City’s conditions.",
+      },
+      {
+        question: "What does it cost?",
+        requirement: "Single-family: $100 plus a $10 administrative fee. Two-family: $150 plus $10. Three-family: $210 plus $10.",
+      },
+      {
+        question: "What does the City inspect?",
+        requirement: "The City performs an exterior inspection. An interior inspection is performed only if the owner gives written consent; the owner must be present and provide yard access.",
+      },
+      {
+        question: "Can the sale close with violations?",
+        requirement: "Yes, if a City-registered contractor’s written estimate is approved by the Building Official and 100% of that estimate is escrowed. Before title transfer, the Building Department also requires proof of escrow, a Buyer’s Affidavit, and an Assumption of Violations Form.",
+      },
+      {
+        question: "How do I apply?",
+        requirement: "Submit the City’s Point of Sale Application to the Maple Heights Building Department. The application requires the owner’s information and a copy of a driver’s license or state-issued ID.",
+      },
+    ],
+    sources: [
+      {
+        label: "City of Maple Heights: Point of Sale Inspection",
+        url: "https://mapleheightsohio.gov/businesses/permits-and-registrations/point-of-sale-inspection/",
+      },
+      {
+        label: "City of Maple Heights: Point of Sale Application (PDF)",
+        url: "https://mapleheightsohio.gov/wp-content/uploads/2025/06/Point-of-Sale-Application_2.pdf",
+      },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   statistics: {
     medianSalePrice: "$144,931",
     homesSold: "70",
@@ -915,6 +1010,21 @@ const southEuclidArea = createArea({
 const universityHeightsArea = createArea({
   city: "University Heights",
   slug: "university-heights",
+  posInspection: {
+    status: "required",
+    shortAnswer: "The seller must obtain a Point-of-Sale inspection before title transfer. A buyer may assume unresolved violations when the City’s Statement of Assumption of Violations is submitted before transfer.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before title transfer. The inspection is valid for one year from the initial inspection date." },
+      { question: "What does it cost?", requirement: "$250 for a single-family home and $300 for a two-family home." },
+      { question: "What happens if there are violations?", requirement: "The seller may correct all violations, correct some while the buyer assumes the rest, or have the buyer assume all violations. The City requires the buyer’s Statement of Assumption of Violations before transfer when violations remain." },
+      { question: "How do I apply?", requirement: "Submit the Point-of-Sale application through CitizenServe or in person with the Housing Department, then schedule the inspection." },
+    ],
+    sources: [
+      { label: "City of University Heights: Point-of-Sale Application (PDF)", url: "https://www.universityheights.com/wp-content/uploads/2022/01/POINT-OF-SALE-APPLICATION-2022.pdf" },
+      { label: "City of University Heights: Point-of-Sale Transfer Process (PDF)", url: "https://www.universityheights.com/wp-content/uploads/2024/06/Point-of-Sale-Before-Sale-Is-Completed-REV-1.pdf" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
   statistics: {
     medianSalePrice: "$289,612",
     homesSold: "59",
@@ -1107,6 +1217,25 @@ const additionalAreaStatistics: Partial<Record<string, Omit<AreaStatistics, "sup
   },
 };
 
+const additionalPosInspections: Partial<Record<string, PosInspection>> = {
+  "shaker-heights": {
+    status: "required",
+    shortAnswer: "The seller must apply for a Point-of-Sale inspection before entering into a contract to sell a residential property. A sale can close with violations still outstanding only when the City approves the required escrow arrangement.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before entering into an agreement to sell a residential property with a structure. The inspection is valid for transfer for 24 months from the original inspection date." },
+      { question: "What does it cost?", requirement: "Single-family: $200. Two-family: $300. Condominium: $150. Apartment building: $200 for the first unit and $50 for each additional unit." },
+      { question: "What does the City inspect?", requirement: "A visual inspection of the interior and exterior. Apartment-building common areas and fire-code violations are also included." },
+      { question: "Can the sale close with violations?", requirement: "Yes. The buyer or seller must submit an itemized estimate from a registered contractor; after City approval, the buyer establishes City-held escrow equal to 150% of the estimated repairs." },
+      { question: "How do I apply?", requirement: "Apply and pay online through the City’s CitizenServe Point-of-Sale process, then schedule the inspection with the City." },
+    ],
+    sources: [
+      { label: "City of Shaker Heights: Point of Sale Procedure", url: "https://www.shakerheightsoh.gov/477/Point-of-Sale-Procedure" },
+      { label: "City of Shaker Heights: POS Inspection and Escrow Requirements (PDF)", url: "https://www.shakerheightsoh.gov/DocumentCenter/View/124/Point-of-Sale-Escrow-Requirements-PDF" },
+    ],
+    verifiedDate: "November 10, 2026",
+  },
+};
+
 const additionalAreas = [
   ["Bay Village", "bay-village", ["Westlake", "Rocky River", "Fairview Park", "North Olmsted", "Berea", "Lakewood"]],
   ["Berea", "berea", ["Olmsted Falls", "North Olmsted", "Strongsville", "Brook Park", "Middleburg Heights", "Fairview Park"]],
@@ -1146,6 +1275,7 @@ const additionalAreas = [
 const additionalAreaPages = additionalAreas.map(([city, slug, nearbyCities]) => createArea({
   city,
   slug,
+  posInspection: additionalPosInspections[slug],
   statistics: additionalAreaStatistics[slug],
   nearbyCities: nearbyCities.map(name => ({
     name,

@@ -1430,6 +1430,23 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 * Each `MapPin` icon is decorative because its accompanying visible city name communicates the entry's identity.
 * The `ArrowRight` icon is decorative because the visible link label communicates the complete destination.
 
+## Point-of-Sale Inspections
+
+### Content and Data
+
+* This optional subsection appears at the bottom of the `We Know {City}` local-area section only when the current city has a verified `posInspection` record in [Area Data](content/areas.md#point-of-sale-inspection-content).
+* If a city is unverified or its rules are unclear, the subsection is omitted entirely. It must never display a default claim that no POS inspection is required.
+* The subsection uses the heading `Point-of-Sale Inspections in {City}` and a `The Short Answer` callout.
+* A city with `required` status includes the seller-question and city-requirements table, official municipal source links, and a source-check date. A city with `not-required` status has no table and distinguishes any separate city transfer requirement from a POS inspection.
+* The closing conversion note appears only for cities with `required` status; it is not shown for a `not-required` city such as Cleveland. It is part of the optional subsection and is never displayed independently. It uses the `MessageCircle` icon, the heading `Questions about selling with POS requirements?`, the supporting copy `We’re happy to talk through your situation and help you understand your options.`, and the `Get My Cash Offer` text link to `/get-cash-offer`.
+
+### Design and Accessibility
+
+* The closing note uses global `Background Soft`, `M` (`24px`) padding, `Medium` (`12px`) radius, and a horizontal icon-and-content arrangement.
+* The `MessageCircle` icon uses the default `Icon Container` and is decorative.
+* The requirements table uses the shared `Content Table` component. It remains horizontally scrollable within its labeled region at narrow widths so columns remain readable.
+* The source links and conversion link use the shared `Text Link` component.
+
 ## Local Market Content
 
 ### Content

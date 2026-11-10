@@ -75,6 +75,21 @@ These are the approved City Pages. Every page uses the shared Area Page template
   * Median Price per Sq. Ft.: `Compare {City} home values by square foot.`
   * Median Days on Market: `See how long {City} homes typically stay on the market before selling.`
 
+## Point-of-Sale Inspection Content
+
+Point-of-sale (POS) content is stored as the optional `posInspection` record on the corresponding city entry in `src/data/areas.ts`. The shared Area Page renders no POS content, including its closing conversion note, when that record is absent. An absent record means the city is unverified or unclear; it must never be presented as having no POS requirement.
+
+Each verified record includes the status, seller-facing short answer, applicable table rows, official municipal source links, and the source-check date. The current verified records are:
+
+| City | Status | Official source records |
+|---|---|---|
+| Cleveland | No POS inspection; Certificate of Disclosure applies | City of Cleveland Certificates of Disclosure |
+| Cleveland Heights | POS required | City Point-of-Sale Inspections; Escrow Requirements |
+| Garfield Heights | POS required | City Point-of-Sale Inspections; Buyer Affidavit |
+| Maple Heights | POS required | City Point of Sale Inspection; Point of Sale Application |
+| Shaker Heights | POS required | City Point of Sale Procedure; POS Inspection and Escrow Requirements |
+| University Heights | POS required | City Point-of-Sale Application; Point-of-Sale Transfer Process |
+
 ## Local Market Images
 
 Each area uses the lead image from its corresponding English Wikipedia city article, downloaded as a local asset. The image record in `src/data/areas.ts` is canonical for its alternative text, photographer, source, license, and attribution requirement. Mayfield Village follows the lead image of the redirected `Mayfield, Ohio` article. If no approved lead image exists, `defaultLocalPhoto` uses the Cleveland skyline record and retains its attribution requirements.

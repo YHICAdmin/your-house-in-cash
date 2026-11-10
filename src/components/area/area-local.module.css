@@ -198,6 +198,63 @@
   margin: 0;
 }
 
+.posInspection {
+  grid-column: 1 / -1;
+  margin-top: var(--spacing-xl);
+}
+
+.posHeading {
+  margin: 0 0 var(--spacing-m);
+}
+
+.posAnswer {
+  margin-bottom: var(--spacing-m);
+  padding: var(--spacing-m);
+  border-left: 4px solid var(--color-brand);
+  background: var(--color-background-soft);
+}
+
+.posAnswerHeading {
+  margin: 0 0 var(--spacing-xs);
+  font-weight: 700;
+}
+
+.posAnswer p:last-child,
+.posSources {
+  margin-bottom: 0;
+}
+
+.posSources {
+  margin-top: var(--spacing-s);
+  color: var(--color-text-muted);
+}
+
+.posCta {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-s);
+  margin-top: var(--spacing-l);
+  padding: var(--spacing-m);
+  border-radius: var(--radius-medium);
+  background: var(--color-background-soft);
+}
+
+.posCta > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-s);
+}
+
+.posCta p {
+  margin: 0;
+}
+
+.posCtaHeading {
+  margin: 0;
+  font-weight: 700;
+}
+
 .marketCredit {
   margin: var(--spacing-xs) 0 0;
   color: var(--color-text-secondary);
@@ -244,6 +301,10 @@
   .statistics {
     grid-row: 4;
     align-self: start;
+  }
+
+  .posInspection {
+    grid-row: 5;
   }
 
   .map,

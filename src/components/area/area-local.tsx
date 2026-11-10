@@ -6,11 +6,14 @@ import {
   House,
   Info,
   MapPin,
+  MessageCircle,
   Ruler,
   type LucideIcon,
 } from "lucide-react";
 import { SectionLabel } from "@/components/ui/section-label";
 import { TextLink } from "@/components/ui/text-link";
+import { ContentTable } from "@/components/ui/content-table";
+import { IconContainer } from "@/components/ui/icon-container";
 import {
   getAreaPagePath,
   type AreaPageData,
@@ -205,6 +208,40 @@ export function AreaLocal({ area }: AreaLocalProps) {
             </figcaption>
           )}
         </figure>
+
+        {area.posInspection && <section className={styles.posInspection} aria-labelledby="pos-inspection-heading">
+          <h3 id="pos-inspection-heading" className={`${styles.posHeading} text-heading-3`}>
+            Point-of-Sale Inspections in {area.city}
+          </h3>
+          <div className={styles.posAnswer}>
+            <p className={`${styles.posAnswerHeading} text-body`}>The Short Answer</p>
+            <p className="text-body">{area.posInspection.shortAnswer}</p>
+          </div>
+          {area.posInspection.status === "required" && area.posInspection.tableRows && (
+            <ContentTable
+              longText
+              labelledBy="pos-inspection-heading"
+              columns={["Seller question", `${area.city} requirements`]}
+              rows={area.posInspection.tableRows.map((row) => [row.question, row.requirement])}
+            />
+          )}
+          <p className={`${styles.posSources} text-body-small`}>
+            Official sources: {area.posInspection.sources.map((source, index) => (
+              <span key={source.url}>
+                {index > 0 && " · "}
+                <TextLink href={source.url}>{source.label}</TextLink>
+              </span>
+            ))} · Checked {area.posInspection.verifiedDate}
+          </p>
+          {area.posInspection.status === "required" && <div className={styles.posCta}>
+            <IconContainer aria-hidden="true" icon={MessageCircle} />
+            <div>
+              <p className={`${styles.posCtaHeading} text-body`}>Questions about selling with POS requirements?</p>
+              <p className="text-body">We’re happy to talk through your situation and help you understand your options.</p>
+              <TextLink href="/get-cash-offer">Get My Cash Offer <ArrowRight aria-hidden="true" size={20} /></TextLink>
+            </div>
+          </div>}
+        </section>}
       </div>
     </section>
   );
