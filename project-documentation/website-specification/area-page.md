@@ -1579,13 +1579,10 @@ Contains, in document order:
    Answer: **No. We buy houses as-is, so you do not need to make repairs, complete updates, stage the property, or prepare it for a traditional listing before selling.**
 3. Question: **Are there any fees or commissions?**
    Answer: **No. We do not charge fees or commissions for selling your house to us. The cash offer is presented clearly so you can understand it before deciding whether to move forward.**
-4. Question: **How quickly can I sell my house?**
-   Answer: **The timeline depends on your situation and the details of the property. If you need to move quickly, we can work toward an earlier closing. If you need more time, you can choose a closing date that better fits your schedule.**
+4. Question: **Is a POS inspection the same as a private home inspection?**
+   Answer: **No. A Point-of-Sale inspection is a city process that checks compliance with local rules. A private home inspection is arranged by the buyer for their own information and does not replace a required city inspection.**
 5. Question: **How do you determine your offer?**
    Answer: **We consider the property’s condition, location, layout, and any updates or repairs it may need. We also review recent sales, local buyer demand, and how similar properties are performing in the surrounding market before preparing the cash offer.**
-6. Question: **Am I obligated to accept the offer?**
-   Answer: **No. The offer is completely optional, and there is no pressure to accept it. We explain the offer clearly so you can decide whether it is right for your situation.**
-
 ### Component and Semantics
 
 - Questions are displayed using the **Accordion** defined in the Component Library.
