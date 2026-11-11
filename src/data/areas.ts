@@ -315,6 +315,7 @@ export const clevelandArea = createArea({
 const clevelandHeightsArea = createArea({
   city: "Cleveland Heights",
   slug: "cleveland-heights",
+  introSupportingCopy: "In Cleveland Heights, sellers need a Point-of-Sale Certificate of Inspection before entering into a sale agreement. If the report includes unresolved Class A violations, the City may require at least 125% of its estimated repair cost to be held in escrow before the sale can close. That can make the cost of fixing the house before listing an important part of the decision. We can give you an as-is cash offer to compare with the repairs, escrow, and time involved in a traditional sale.",
   posInspection: {
     status: "required",
     shortAnswer: "The seller must obtain a Point-of-Sale Certificate of Inspection before entering into a sale agreement. A sale can close with unresolved Class A violations when the required escrow and purchaser acknowledgement are in place.",

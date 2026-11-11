@@ -58,8 +58,9 @@ These are the approved City Pages. Every page uses the shared Area Page template
 ## Shared City Content
 
 * Local headline: `We Know {City}`.
-* Local supporting copy for all cities except Cleveland, Euclid, Garfield Heights, Independence, Parma, Parma Heights, and Maple Heights: `Whether you’re selling a home you live in or a rental property, we look at its condition, your situation, and the local {City} market to prepare a straightforward as-is cash offer.`
+* Local supporting copy for all cities except Cleveland, Cleveland Heights, Euclid, Garfield Heights, Independence, Parma, Parma Heights, and Maple Heights: `Whether you’re selling a home you live in or a rental property, we look at its condition, your situation, and the local {City} market to prepare a straightforward as-is cash offer.`
 * Cleveland retains: `Cleveland is a big city, and selling a home in Old Brooklyn can be very different from selling one in Tremont, Collinwood, or West Park. Home values, property conditions, and buyer demand can vary from neighborhood to neighborhood—and sometimes from one block to the next. We take those local differences into account when we evaluate a house, helping you understand what an as-is sale could look like and decide what makes sense for your situation.`
+* Cleveland Heights retains: `In Cleveland Heights, sellers need a Point-of-Sale Certificate of Inspection before entering into a sale agreement. If the report includes unresolved Class A violations, the City may require at least 125% of its estimated repair cost to be held in escrow before the sale can close. That can make the cost of fixing the house before listing an important part of the decision. We can give you an as-is cash offer to compare with the repairs, escrow, and time involved in a traditional sale.`
 * Euclid retains: `In Euclid, a Point-of-Sale inspection is part of selling a home. If the inspection finds violations, a buyer can assume them, but the repairs must be completed within six months. That can affect whether you put money into the house before listing or look for a buyer prepared to take it as-is. We understand Euclid’s process and can give you a clear cash offer to compare with your other options.`
 * Garfield Heights retains: `If you’re selling a house in Garfield Heights, the Point-of-Sale inspection is one of the first things to plan for. The City requires it before title can transfer, and any violations may leave you deciding whether to make repairs yourself or have the buyer assume them. We buy Garfield Heights houses as-is, so you can compare a cash offer with the cost, time, and uncertainty of preparing the property for a traditional sale.`
 * Independence retains: `Only 12 homes sold in Independence between July and September 2026, with a median sale price of $432,244. When relatively few homes sell, a citywide average can tell you only so much about what a particular house may bring; its condition, location, and buyer interest matter more. We can evaluate your home as it is and give you a clear cash offer to compare with the time and uncertainty of listing it.`
@@ -71,6 +72,17 @@ These are the approved City Pages. Every page uses the shared Area Page template
   * Homes Sold: `Recent sales activity across {City}.`
   * Median Price per Sq. Ft.: `Compare {City} home values by square foot.`
   * Median Days on Market: `See how long {City} homes typically stay on the market before selling.`
+
+### Rules for City-Specific Local Supporting Copy
+
+Use custom local supporting copy only when it gives a seller information that could affect the way they sell. Do not rewrite the shared paragraph solely to make the wording different.
+
+1. Write one concise paragraph, normally three sentences: a verified local fact, what that fact means for the seller's decision, and how Your House in Cash can help them compare a direct sale with another option.
+2. Prefer facts in this order: city transfer or inspection requirements; current city-specific market data; rental economics that apply to rental owners; then neighborhood or housing context. A neighborhood name or general city description is not enough by itself.
+3. Explain the decision created by the fact. For example, a POS rule can change repair, escrow, or timing choices; a small sales sample can make a citywide median less conclusive; and rent data can inform whether to keep a rental or sell.
+4. Be precise about scope, date, and uncertainty. Do not present a median sale price, rent figure, or nearby-city comparison as a prediction or guarantee for an individual house. State when a figure applies only to a particular ZIP code, property type, owner type, or reporting period.
+5. Describe the service plainly: offer to evaluate the house as it stands and provide a clear cash offer to compare. Do not use pressure language, unsupported claims of expertise, or unrelated local trivia.
+6. Add an internal city link only when the linked city is a meaningful comparison in the sentence. Link the city name itself and use the canonical Area Page path.
 
 ## Point-of-Sale Inspection Content
 
