@@ -255,6 +255,7 @@ const bedfordHeightsArea = createArea({
 export const clevelandArea = createArea({
   city: "Cleveland",
   slug: "cleveland",
+  introSupportingCopy: "Cleveland is a big city, and selling a home in Old Brooklyn can be very different from selling one in Tremont, Collinwood, or West Park. Home values, property conditions, and buyer demand can vary from neighborhood to neighborhood—and sometimes from one block to the next. We take those local differences into account when we evaluate a house, helping you understand what an as-is sale could look like and decide what makes sense for your situation.",
   posInspection: {
     status: "not-required",
     shortAnswer: "Cleveland does not require a point-of-sale inspection for a residential home transfer. It does require a Certificate of Disclosure before a voluntary transfer of one- to four-unit residential property; the certificate reports City records and is not a POS inspection.",

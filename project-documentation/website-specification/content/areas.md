@@ -59,7 +59,7 @@ These are the approved City Pages. Every page uses the shared Area Page template
 
 * Local headline: `We Know {City}`.
 * Local supporting copy for all cities except Cleveland and Garfield Heights: `Whether you’re selling a home you live in or a rental property, we look at its condition, your situation, and the local {City} market to prepare a straightforward as-is cash offer.`
-* Cleveland retains: `Every local market has its own character. We understand the communities, housing landscape, and local factors that can shape a home sale in Cleveland.`
+* Cleveland retains: `Cleveland is a big city, and selling a home in Old Brooklyn can be very different from selling one in Tremont, Collinwood, or West Park. Home values, property conditions, and buyer demand can vary from neighborhood to neighborhood—and sometimes from one block to the next. We take those local differences into account when we evaluate a house, helping you understand what an as-is sale could look like and decide what makes sense for your situation.`
 * Garfield Heights retains: `If you’re selling a house in Garfield Heights, the Point-of-Sale inspection is one of the first things to plan for. The City requires it before title can transfer, and any violations may leave you deciding whether to make repairs yourself or have the buyer assume them. We buy Garfield Heights houses as-is, so you can compare a cash offer with the cost, time, and uncertainty of preparing the property for a traditional sale.`
 * Statistic supporting copy:
   * Median Sale Price: `See what homes are selling for across {City}.` Cleveland retains `See what homes are selling for across Cleveland and get a quick sense of the local market.`
