@@ -371,6 +371,7 @@ const clevelandHeightsArea = createArea({
 export const euclidArea = createArea({
   city: "Euclid",
   slug: "euclid",
+  introSupportingCopy: "In Euclid, a Point-of-Sale inspection is part of selling a home. If the inspection finds violations, a buyer can assume them, but the repairs must be completed within six months. That can affect whether you put money into the house before listing or look for a buyer prepared to take it as-is. We understand Euclid’s process and can give you a clear cash offer to compare with your other options.",
   posInspection: {
     status: "required",
     shortAnswer: "Euclid requires a Point-of-Sale inspection and offers an assumption process when a purchaser takes responsibility for cited violations. A purchaser who assumes violations must correct them within six months.",
