@@ -25,6 +25,11 @@ export type AreaPageData = {
   intro: {
     headline: string;
     supportingCopy: string;
+    link?: {
+      href: string;
+      matchText?: string;
+      text: string;
+    };
   };
   nearbyCities: readonly [
     NearbyCity,
@@ -125,6 +130,7 @@ export const defaultLocalPhoto = localPhotos.cleveland;
 type AreaRecord = Pick<AreaPageData, "city" | "slug" | "nearbyCities" | "posInspection"> & {
   statistics?: Omit<AreaStatistics, "supportingCopy">;
   googleMapsEmbedUrl?: string;
+  introLink?: AreaPageData["intro"]["link"];
   introSupportingCopy?: string;
 };
 
@@ -140,6 +146,7 @@ function createArea(record: AreaRecord): AreaPageData {
       supportingCopy: record.introSupportingCopy ?? (city === "Cleveland"
         ? "Every local market has its own character. We understand the communities, housing landscape, and local factors that can shape a home sale in Cleveland."
         : `Whether you’re selling a home you live in or a rental property, we look at its condition, your situation, and the local ${city} market to prepare a straightforward as-is cash offer.`),
+      link: record.introLink,
     },
     statistics: record.statistics && {
       ...record.statistics,
@@ -826,6 +833,8 @@ const parmaArea = createArea({
 const parmaHeightsArea = createArea({
   city: "Parma Heights",
   slug: "parma-heights",
+  introSupportingCopy: "Recent sales in Parma Heights have been higher than in neighboring Parma, with a median sale price of $243,884 compared with $229,891. That does not determine what any individual house will sell for, but it is a good reason to look carefully at your options before making a decision. We can give you a clear cash offer for the house as it stands, so you can weigh a faster, simpler sale against the potential time and cost of listing it.",
+  introLink: { text: "Parma", matchText: "neighboring Parma", href: "/sell-your-house-fast-as-is-parma" },
   statistics: {
     medianSalePrice: "$243,884",
     homesSold: "66",

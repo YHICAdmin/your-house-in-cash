@@ -43,6 +43,11 @@ const headingId = "local-area-heading";
 export function AreaLocal({ area }: AreaLocalProps) {
   const activeAreaSlugs = new Set(areas.map((activeArea) => activeArea.slug));
   const nearbyCities = area.nearbyCities.filter((city) => activeAreaSlugs.has(city.slug));
+  const introLink = area.intro.link;
+  const introLinkMatch = introLink ? (introLink.matchText ?? introLink.text) : "";
+  const [introBeforeLink, introAfterLink] = introLink
+    ? area.intro.supportingCopy.split(introLinkMatch)
+    : [area.intro.supportingCopy, ""];
   const statistics: readonly StatisticCard[] = area.statistics ? [
     {
       label: "Median Sale Price",
@@ -88,7 +93,12 @@ export function AreaLocal({ area }: AreaLocalProps) {
             {area.intro.headline}
           </h2>
           <p className={`${styles.introCopy} text-body-large`}>
-            {area.intro.supportingCopy}
+            {introLink ? <>
+              {introBeforeLink}
+              {introLink.matchText?.replace(introLink.text, "")}
+              <TextLink href={introLink.href}>{introLink.text}</TextLink>
+              {introAfterLink}
+            </> : area.intro.supportingCopy}
           </p>
         </div>
 
