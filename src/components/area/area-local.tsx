@@ -28,6 +28,7 @@ import styles from "./area-local.module.css";
 
 type AreaLocalProps = {
   area: AreaPageData;
+  background?: "default" | "soft";
 };
 
 type StatisticCard = {
@@ -40,7 +41,7 @@ type StatisticCard = {
 
 const headingId = "local-area-heading";
 
-export function AreaLocal({ area }: AreaLocalProps) {
+export function AreaLocal({ area, background = "default" }: AreaLocalProps) {
   const activeAreaSlugs = new Set(areas.map((activeArea) => activeArea.slug));
   const nearbyCities = area.nearbyCities.filter((city) => activeAreaSlugs.has(city.slug));
   const introLink = area.intro.link;
@@ -85,6 +86,7 @@ export function AreaLocal({ area }: AreaLocalProps) {
     <section
       className={`${styles.section} section-spacing system-lines-bg`}
       aria-labelledby={headingId}
+      data-background={background}
     >
       <div className={`${styles.layout} content-grid`}>
         <div className={styles.intro}>

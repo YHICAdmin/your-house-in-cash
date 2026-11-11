@@ -1,0 +1,141 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  padding-block: calc(var(--section-spacing) + var(--spacing-2xl)) var(--section-spacing);
+  background: var(--color-background-soft);
+}
+
+.angle {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: var(--spacing-2xl);
+  background: var(--color-background);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+}
+
+.decorations {
+  position: absolute;
+  z-index: 0;
+  top: var(--spacing-s);
+  right: var(--spacing-s);
+  width: min(42vw, 20rem);
+  height: var(--spacing-2xl);
+}
+
+.rectangle {
+  position: absolute;
+  display: block;
+  height: var(--spacing-s);
+}
+
+.rectanglePrimary {
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: var(--color-brand);
+  transform: rotate(-4deg);
+}
+
+.rectangleLight {
+  top: var(--spacing-m);
+  right: var(--spacing-l);
+  width: 54%;
+  background: var(--color-brand-light);
+}
+
+.rectangleDark {
+  top: calc(var(--spacing-m) + var(--spacing-xs));
+  right: 0;
+  width: 48%;
+  background: var(--color-brand-dark);
+  transform: rotate(-4deg);
+}
+
+.layout {
+  position: relative;
+  z-index: 1;
+  row-gap: var(--spacing-xl);
+}
+
+.content,
+.photo {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+.heading {
+  margin: var(--spacing-s) 0 var(--spacing-m);
+}
+
+.address {
+  margin: 0 0 var(--spacing-m);
+  color: var(--color-brand-dark);
+  font-weight: 600;
+}
+
+.summary {
+  max-width: 42rem;
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.terms {
+  display: grid;
+  gap: var(--spacing-s);
+  margin: var(--spacing-l) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.terms li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
+}
+
+.terms svg {
+  width: var(--icon-medium);
+  height: var(--icon-medium);
+  flex: 0 0 auto;
+  margin-top: 0.3rem;
+  color: var(--color-brand);
+}
+
+.photo {
+  position: relative;
+  min-height: 16rem;
+  overflow: hidden;
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-floating);
+}
+
+.photo img {
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    align-items: center;
+  }
+
+  .content {
+    grid-column: 1 / 5;
+  }
+
+  .photo {
+    grid-column: 5 / -1;
+    min-height: 24rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    grid-column: 1 / 6;
+  }
+
+  .photo {
+    grid-column: 7 / -1;
+    min-height: 26rem;
+  }
+}

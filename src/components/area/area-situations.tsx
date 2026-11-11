@@ -19,11 +19,12 @@ const situationLinks = [
   { label: "Hoarder House", href: "/hoarder-house" },
 ] as const;
 
-export function AreaSituations() {
+export function AreaSituations({ background = "soft" }: { background?: "default" | "soft" }) {
   return (
     <section
       className={`${styles.section} section-spacing`}
       aria-labelledby={headingId}
+      data-background={background}
     >
       <div className={`${styles.layout} content-grid`}>
         <div className={styles.sectionLabel}>

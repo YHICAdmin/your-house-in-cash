@@ -21,6 +21,7 @@ export type AreaStatistics = {
 
 export type AreaPageData = {
   city: string;
+  dealStory?: LocalDealStory;
   googleMapsEmbedUrl: string;
   intro: {
     headline: string;
@@ -43,6 +44,17 @@ export type AreaPageData = {
   posInspection?: PosInspection;
   slug: string;
   statistics?: AreaStatistics;
+};
+
+export type LocalDealStory = {
+  address: string;
+  image: {
+    alt: string;
+    src: string;
+  };
+  summary: string;
+  terms: readonly string[];
+  title: string;
 };
 
 export type PosInspection = {
@@ -128,6 +140,7 @@ Object.assign(localPhotos, {
 export const defaultLocalPhoto = localPhotos.cleveland;
 
 type AreaRecord = Pick<AreaPageData, "city" | "slug" | "nearbyCities" | "posInspection"> & {
+  dealStory?: LocalDealStory;
   statistics?: Omit<AreaStatistics, "supportingCopy">;
   googleMapsEmbedUrl?: string;
   introLink?: AreaPageData["intro"]["link"];
@@ -605,6 +618,21 @@ const lyndhurstArea = createArea({
 const mapleHeightsArea = createArea({
   city: "Maple Heights",
   slug: "maple-heights",
+  dealStory: {
+    title: "A Maple Heights deal that worked for everyone",
+    address: "Reddington Ave, Maple Heights",
+    image: {
+      src: "/images/deal-stories/reddington-avenue-maple-heights.jpg",
+      alt: "White house with blue awnings on Reddington Avenue in Maple Heights",
+    },
+    summary: "This tenant-occupied Maple Heights property sold as-is. Coordinating the walkthrough while the tenant was home took some extra planning, but the process went smoothly. The seller was happy with how it went, and we’ve done more deals together since.",
+    terms: [
+      "Sale price: $97K",
+      "The seller didn’t have to handle the POS violations",
+      "The seller didn’t pay any closing costs",
+      "Sold as-is with the tenant in place",
+    ],
+  },
   introSupportingCopy: "Maple Heights has an active rental market: in September 2026, advertised rents averaged $1,641 for three-bedroom houses and $1,790 for four-bedroom houses. If you own a rental, that gives you a real choice between keeping the property for income or selling it now. We can give you a clear cash offer, so you can compare both paths and decide what makes the most sense for you.",
   posInspection: {
     status: "required",

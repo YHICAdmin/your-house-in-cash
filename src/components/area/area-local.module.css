@@ -2,6 +2,10 @@
   background: var(--color-background);
 }
 
+.section[data-background="soft"] {
+  background: var(--color-background-soft);
+}
+
 .layout {
   row-gap: 0;
 }

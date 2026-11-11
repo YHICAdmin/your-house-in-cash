@@ -1,9 +1,9 @@
 import { CalendarCheck, House } from "lucide-react";
 import { FinalCta } from "@/components/ui/final-cta";
 
-export function AreaFinalCta({ areaName }: { areaName?: string }) {
+export function AreaFinalCta({ areaName, background = "default" }: { areaName?: string; background?: "default" | "soft" }) {
   const houseDescription = areaName ? `${areaName} house` : "house";
-  return <FinalCta content={{
+  return <FinalCta background={background} content={{
     label: "Ready When You Are",
     headline: `Ready to sell your ${houseDescription}?`,
     supportingCopy: `Tell us about your ${houseDescription} and receive a fair, no-obligation cash offer built around your situation and timeline.`,
