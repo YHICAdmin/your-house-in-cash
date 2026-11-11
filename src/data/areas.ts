@@ -480,6 +480,21 @@ export const euclidArea = createArea({
 const garfieldHeightsArea = createArea({
   city: "Garfield Heights",
   slug: "garfield-heights",
+  dealStory: {
+    title: "A flexible sale for a dated Garfield Heights home",
+    address: "Wadsworth Ave, Garfield Heights",
+    image: {
+      src: "/images/deal-stories/wadsworth-avenue-garfield-heights.jpg",
+      alt: "Dated house on Wadsworth Avenue in Garfield Heights",
+    },
+    summary: "This dated Garfield Heights home sold for $87K on the seller’s timeline. With a house full of belongings to sort through, the seller needed a 60-day closing—and we were able to make it happen.",
+    terms: [
+      "Sale price: $87K",
+      "60-day closing timeline",
+      "Dated house",
+      "The seller didn’t have to handle the POS violations",
+    ],
+  },
   introSupportingCopy: "If you’re selling a house in Garfield Heights, the Point-of-Sale inspection is one of the first things to plan for. The City requires it before title can transfer, and any violations may leave you deciding whether to make repairs yourself or have the buyer assume them. We buy Garfield Heights houses as-is, so you can compare a cash offer with the cost, time, and uncertainty of preparing the property for a traditional sale.",
   posInspection: {
     status: "required",
