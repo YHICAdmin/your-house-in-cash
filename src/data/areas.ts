@@ -563,6 +563,7 @@ const lyndhurstArea = createArea({
 const mapleHeightsArea = createArea({
   city: "Maple Heights",
   slug: "maple-heights",
+  introSupportingCopy: "Maple Heights has an active rental market: in September 2026, advertised rents averaged $1,641 for three-bedroom houses and $1,790 for four-bedroom houses. If you own a rental, that gives you a real choice between keeping the property for income or selling it now. We can give you a clear cash offer, so you can compare both paths and decide what makes the most sense for you.",
   posInspection: {
     status: "required",
     shortAnswer: "The owner must obtain a Point of Sale/Property Maintenance inspection before selling or transferring an improved residential property. A sale can proceed with violations still outstanding only when the City’s approved escrow and buyer paperwork requirements are completed.",
