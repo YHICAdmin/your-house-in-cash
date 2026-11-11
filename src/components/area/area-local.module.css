@@ -234,6 +234,7 @@
 }
 
 .posCta {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: var(--spacing-s);
@@ -241,6 +242,16 @@
   padding: var(--spacing-m);
   border-radius: var(--radius-medium);
   background: var(--color-background-soft);
+}
+
+.posCta::before {
+  position: absolute;
+  top: var(--spacing-xs);
+  bottom: var(--spacing-xs);
+  left: var(--spacing-xs);
+  width: 4px;
+  background: var(--color-brand);
+  content: "";
 }
 
 .posCta > div {
