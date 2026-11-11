@@ -785,6 +785,7 @@ const middleburgHeightsArea = createArea({
 const parmaArea = createArea({
   city: "Parma",
   slug: "parma",
+  introSupportingCopy: "Parma is a large city, and selling a house near Ukrainian Village can feel different from selling one closer to Ridge Road or West Creek. We know the area and understand that a house needing repairs, an inherited property, or a rental may not fit the usual listing route. We will look at the property as it is and give you a clear cash offer, so you can compare your options without committing to repairs, showings, or a long sale process.",
   statistics: {
     medianSalePrice: "$229,891",
     homesSold: "309",
