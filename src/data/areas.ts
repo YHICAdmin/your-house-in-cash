@@ -484,6 +484,7 @@ const garfieldHeightsArea = createArea({
 const independenceArea = createArea({
   city: "Independence",
   slug: "independence",
+  introSupportingCopy: "Only 12 homes sold in Independence between July and September 2026, with a median sale price of $432,244. When relatively few homes sell, a citywide average can tell you only so much about what a particular house may bring; its condition, location, and buyer interest matter more. We can evaluate your home as it is and give you a clear cash offer to compare with the time and uncertainty of listing it.",
   statistics: {
     medianSalePrice: "$432,244",
     homesSold: "12",
