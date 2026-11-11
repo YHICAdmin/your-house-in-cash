@@ -125,6 +125,7 @@ export const defaultLocalPhoto = localPhotos.cleveland;
 type AreaRecord = Pick<AreaPageData, "city" | "slug" | "nearbyCities" | "posInspection"> & {
   statistics?: Omit<AreaStatistics, "supportingCopy">;
   googleMapsEmbedUrl?: string;
+  introSupportingCopy?: string;
 };
 
 function createArea(record: AreaRecord): AreaPageData {
@@ -136,9 +137,9 @@ function createArea(record: AreaRecord): AreaPageData {
       `https://www.google.com/maps?q=${encodeURIComponent(`${city}, Ohio, USA`)}&output=embed`,
     intro: {
       headline: `We Know ${city}`,
-      supportingCopy: city === "Cleveland"
+      supportingCopy: record.introSupportingCopy ?? (city === "Cleveland"
         ? "Every local market has its own character. We understand the communities, housing landscape, and local factors that can shape a home sale in Cleveland."
-        : `Whether you’re selling a home you live in or a rental property, we look at its condition, your situation, and the local ${city} market to prepare a straightforward as-is cash offer.`,
+        : `Whether you’re selling a home you live in or a rental property, we look at its condition, your situation, and the local ${city} market to prepare a straightforward as-is cash offer.`),
     },
     statistics: record.statistics && {
       ...record.statistics,
@@ -417,6 +418,7 @@ export const euclidArea = createArea({
 const garfieldHeightsArea = createArea({
   city: "Garfield Heights",
   slug: "garfield-heights",
+  introSupportingCopy: "If you’re selling a house in Garfield Heights, the Point-of-Sale inspection is one of the first things to plan for. The City requires it before title can transfer, and any violations may leave you deciding whether to make repairs yourself or have the buyer assume them. We buy Garfield Heights houses as-is, so you can compare a cash offer with the cost, time, and uncertainty of preparing the property for a traditional sale.",
   posInspection: {
     status: "required",
     shortAnswer: "A Point-of-Sale inspection and Compliance Certificate are required before title transfer. The buyer can assume outstanding violations by completing the City’s required forms and must complete the repairs within 90 days after transfer.",
