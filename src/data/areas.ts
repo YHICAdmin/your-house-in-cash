@@ -1458,15 +1458,19 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
   },
   "brook-park": {
     status: "required",
-    shortAnswer: "Brook Park requires a point-of-sale inspection when you sell your home. The City advises scheduling early because the inspection is valid for six months.",
+    shortAnswer: "Brook Park requires a Re-Occupancy Inspection for any title transfer or change in occupant. For a home sale, it is an exterior, plain-view inspection valid for six months.",
     tableRows: [
-      { question: "When is it required?", requirement: "When selling a home. The City says the Point-of-Sale inspection is valid for six months." },
-      { question: "How do I apply?", requirement: "Contact the Brook Park Building Department to schedule the inspection early enough for closing." },
+      { question: "When is it required?", requirement: "For any transfer in title or change in occupant. The inspection is valid for six months from the initial inspection date." },
+      { question: "What does it cost?", requirement: "$60 for a one-, two-, or three-family home; $30 for a condominium unit; and $100 for commercial property." },
+      { question: "What does the City inspect?", requirement: "The Building Department completes an exterior, plain-view inspection. After the completed form and fee are received, the City allows three to five business days for processing." },
+      { question: "What if violations are found?", requirement: "The current owner may correct the violations, or the buyer may assume them by submitting a Certificate of Title Transfer before closing. If no violations are found, the buyer submits a Re-Occupancy Permit before closing." },
+      { question: "How do I apply?", requirement: "Complete and return the current-year Re-Occupancy Inspection form with the appropriate fee to the Building Department." },
     ],
     sources: [
-      { label: "City of Brook Park Building Department: FAQ (PDF)", url: "https://cityofbrookpark.com/forms/faq.pdf" },
+      { label: "City of Brook Park: 2026 Re-Occupancy Inspection Form (PDF)", url: "https://www.cityofbrookpark.com/building_dept/2026/2026%20Re-Occupancy%20Inspection.pdf" },
+      { label: "City of Brook Park: Building Department", url: "https://www.cityofbrookpark.com/building-department/" },
     ],
-    verifiedDate: "November 10, 2026",
+    verifiedDate: "November 12, 2026",
   },
   "cuyahoga-heights": {
     status: "required",

@@ -98,7 +98,7 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Beachwood | No general POS inspection; occupancy and rental requirements apply | City Building Department FAQ; Certificate of Rental Occupancy Ordinance |
 | Bedford | POS program frozen since 2016; older code provisions remain | City Code; Akron Cleveland REALTORS® Local Government Info |
 | Berea | No POS inspection | City repeal of Exterior Point-of-Sale Inspection Chapter |
-| Brook Park | POS required | City Building Department FAQ |
+| Brook Park | Re-Occupancy inspection required for title transfers | City 2026 Re-Occupancy Inspection Form |
 | Brooklyn Heights | POS required | Village Point-of-Sale Application; Certificate of Inspection at Time of Sale |
 | Broadview Heights | No general POS inspection; septic-system inspection applies | City Code: Point-of-Sale Inspections of Septic Systems |
 | Cleveland Heights | POS required | City Point-of-Sale Inspections; Escrow Requirements |
