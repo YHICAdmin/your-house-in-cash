@@ -4,7 +4,7 @@ Publication date: 2026-11-03
 
 Topics covered: Tenant-Occupied Property, Ohio Landlord-Tenant Law, Rental Property, Net Proceeds, Cash Offers
 
-Meta title: Selling a House With Tenants in Ohio vs. Vacant: 4 Differences
+Meta title: Selling a House With Tenants in Ohio: 4 Differences
 
 Meta description: Compare four important differences between selling an Ohio house vacant and selling it with a tenant still living there.
 

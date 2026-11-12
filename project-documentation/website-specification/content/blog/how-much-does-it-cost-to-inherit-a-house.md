@@ -1,5 +1,7 @@
 Main topic: Selling a House
 
+Meta title: Costs of Inheriting a House Explained | Your House in Cash
+
 Meta description: Understand the probate, upkeep, debt, and tax-related costs that can come with inheriting a house, plus how timing and the estate affect who pays.
 
 Publication date: 2026-10-15

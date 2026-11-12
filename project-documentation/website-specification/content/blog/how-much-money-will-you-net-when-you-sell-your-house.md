@@ -1,5 +1,7 @@
 Main topic: Selling a House
 
+Meta title: Home Sale Net Proceeds Guide | Your House in Cash
+
 Meta description: Learn how to estimate home-sale net proceeds by accounting for mortgage payoff, liens, closing costs, credits, and other deductions from the sale price.
 
 Publication date: 2026-10-08

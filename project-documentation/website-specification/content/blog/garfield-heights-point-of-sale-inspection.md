@@ -1,4 +1,4 @@
-Meta title: Garfield Heights Point-of-Sale Inspection | Your House in Cash
+Meta title: Garfield Heights Point-of-Sale Inspection Guide
 
 Main topic: Selling a House
 
