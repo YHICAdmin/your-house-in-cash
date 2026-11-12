@@ -1330,6 +1330,16 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 12, 2026",
   },
+  beachwood: {
+    status: "not-required",
+    shortAnswer: "Beachwood does not require a general point-of-sale inspection before a home sale. The City requires an occupancy inspection when someone moves into a single-family home. Single-family rentals must also maintain an annual Certificate of Rental Occupancy and undergo City inspections.",
+    sources: [
+      { label: "City of Beachwood: Building Department FAQ", url: "https://www.beachwoodohio.com/m/FAQ" },
+      { label: "City of Beachwood: Certificate of Rental Occupancy Ordinance (PDF)", url: "https://www.beachwoodohio.com/DocumentCenter/View/8112/CH-1391-Ord-2022-109-Single-Famly-Short-Term-Rental-Occupancy-Certificate?bidId=" },
+      { label: "City of Beachwood: Rental Inspection Ordinance (PDF)", url: "https://www.beachwoodohio.com/DocumentCenter/View/51/CH1393-Interior-Inspection-Rental-Properties?bidId=" },
+    ],
+    verifiedDate: "November 12, 2026",
+  },
   "brooklyn-heights": {
     status: "required",
     shortAnswer: "The seller must obtain a Certificate of Inspection before entering into an agreement to sell or transfer a single- or two-family home. The seller must give the prospective buyer a copy of that certificate.",
