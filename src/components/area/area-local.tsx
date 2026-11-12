@@ -248,7 +248,7 @@ export function AreaLocal({ area, background = "default" }: AreaLocalProps) {
               </span>
             ))} · Checked {area.posInspection.verifiedDate}
           </p>
-          {area.posInspection.disclosure && <p className={`${styles.posDisclosure} text-body-small`}>{area.posInspection.disclosure}</p>}
+          <p className={`${styles.posDisclosure} text-body-small`}>Requirements can change and may depend on the property. Confirm current requirements with the applicable local building department before listing, signing a purchase agreement, or closing.</p>
           {area.posInspection.status === "required" && <div className={styles.posCta}>
             <IconContainer aria-hidden="true" icon={MessageCircle} />
             <div>

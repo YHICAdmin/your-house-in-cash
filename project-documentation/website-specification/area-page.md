@@ -1438,7 +1438,7 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 * If a city is unverified or its rules are unclear, the subsection is omitted entirely. It must never display a default claim that no POS inspection is required.
 * The subsection uses the heading `Point-of-Sale Inspections in {City}` and a `The Short Answer` callout.
 * A city with `required` status includes the seller-question and city-requirements table, official municipal source links, and a source-check date. A city with `not-required` status ordinarily has no table and distinguishes any separate city transfer requirement from a POS inspection. Bay Village is the exception: its `not-required` record includes a table limited to the vacant-building sale process, without presenting that process as a general POS requirement.
-* Beachwood's `not-required` record includes a disclosure after its official sources: `Requirements can change and may depend on the property’s use and occupancy. Confirm current requirements with the Beachwood Building Department before listing, signing a purchase agreement, or moving in.`
+* Every POS subsection includes this disclosure after its official sources: `Requirements can change and may depend on the property. Confirm current requirements with the applicable local building department before listing, signing a purchase agreement, or closing.`
 * The closing conversion note appears only for cities with `required` status; it is not shown for a `not-required` city such as Cleveland. It is part of the optional subsection and is never displayed independently. It uses the `MessageCircle` icon, the heading `Questions about selling with POS requirements?`, the supporting copy `We’re happy to talk through your situation and help you understand your options.`, and the `Get My Cash Offer` text link to `/get-cash-offer`.
 
 ### Design and Accessibility
@@ -1447,7 +1447,7 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 * The `MessageCircle` icon uses the default `Icon Container` and is decorative.
 * The requirements table uses the shared `Content Table` component. It remains horizontally scrollable within its labeled region at narrow widths so columns remain readable.
 * The source links and conversion link use the shared `Text Link` component.
-* A city-specific disclosure uses muted `Body Small` typography and follows the official-source line with `S` (`16px`) spacing.
+* The disclosure uses muted `Body Small` typography and follows the official-source line with `S` (`16px`) spacing.
 
 ## Local Market Content
 
