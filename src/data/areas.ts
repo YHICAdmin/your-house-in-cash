@@ -1368,9 +1368,9 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     status: "not-required",
     shortAnswer: "Broadview Heights does not publish a general point-of-sale inspection requirement for a home sale. A property with a septic system is subject to the City’s point-of-sale septic inspection ordinance.",
     sources: [
-      { label: "City of Broadview Heights: Point-of-Sale Septic Inspection Notice", url: "https://www.broadview-heights.org/ArchiveCenter/ViewFile/Item/825" },
+      { label: "City of Broadview Heights Code: Point-of-Sale Inspections of Septic Systems", url: "https://codelibrary.amlegal.com/codes/broadviewhts/latest/broadview_oh/0-0-0-13398" },
     ],
-    verifiedDate: "November 10, 2026",
+    verifiedDate: "November 12, 2026",
   },
   "north-olmsted": {
     status: "not-required",
