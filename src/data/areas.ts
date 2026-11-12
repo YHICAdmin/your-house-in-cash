@@ -159,7 +159,7 @@ const approvedIntroSupportingCopy: Record<string, string> = {
   solon: "Solon does not require a Point-of-Sale inspection for a typical home sale. That can simplify the City side of a transaction, but sellers still need to decide whether preparing the house for the market is worth the time and expense. We can evaluate the home in its current condition and give you a clear cash offer to compare.",
   "south-euclid": "South Euclid does not require a general Point-of-Sale inspection for an occupied home sale, but a vacant property must be registered and inspected before title can transfer. If the house is empty, that requirement can add another step before closing. We can give you an as-is offer and help you compare a direct sale with preparing the home for the market.",
   "university-heights": "University Heights requires a Point-of-Sale inspection before title can transfer. A buyer may assume unresolved violations through the City’s required paperwork, which can change whether you repair the house before selling or sell it as-is. We understand that decision and can give you a clear cash offer to compare with your other sale options.",
-  "bay-village": "Bay Village does not publish a general Point-of-Sale inspection requirement, but vacant buildings need a vacant-building inspection and Certificate of Compliance before they are sold or transferred. If your property is vacant, that process is important to consider before setting a closing date. We can evaluate the home as it stands and give you a cash offer to compare.",
+  "bay-village": "Bay Village does not publish a general Point-of-Sale inspection requirement, but a vacant building must be inspected by the City before a sale agreement is signed. If the inspection identifies violations, repairs or escrow can affect the timing of the sale. We can evaluate the home as it stands and give you a cash offer to compare.",
   berea: "Berea does not require a Point-of-Sale inspection for this type of home sale, and homes sold in a median of nine days in the latest local snapshot. A quick market may make a traditional listing appealing, but it is still worth comparing that route with the work needed to get the house ready. We can provide a clear as-is cash offer for that comparison.",
   beachwood: "Only 34 homes sold in Beachwood between July and September 2026, and the median time on market was 48 days. With fewer sales and a longer selling period, the best plan can depend heavily on the specific house, its condition, and the buyer it attracts. We can evaluate your home as it stands and give you a cash offer to compare with listing.",
   "broadview-heights": "Broadview Heights does not have a general Point-of-Sale inspection requirement, but homes with septic systems are subject to the City’s septic inspection ordinance. If your property uses septic, that is a local requirement to factor into your timing and repair decisions. We can give you a clear cash offer to compare with the traditional-sale process.",
@@ -1318,11 +1318,17 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
   },
   "bay-village": {
     status: "not-required",
-    shortAnswer: "Bay Village does not publish a general point-of-sale inspection requirement for a home sale. A vacant building must receive a vacant-building inspection and Certificate of Compliance before it is sold or transferred.",
-    sources: [
-      { label: "City of Bay Village: Vacant Building Certificate of Compliance Application (PDF)", url: "https://www.cityofbayvillage.gov/DocumentCenter/View/2381/Application-for-Vacant-Building-Certificate-of-Compliance-PDF" },
+    shortAnswer: "Bay Village has a point-of-sale process for vacant houses. A vacant building must receive a City vacant-building inspection before the owner enters into an agreement to sell or transfer it. Bay Village does not require a general point-of-sale inspection for other home sales.",
+    tableRows: [
+      { question: "When does it apply?", requirement: "Before entering into an agreement to sell or transfer a vacant building." },
+      { question: "What does the City inspect?", requirement: "The City performs a general exterior and interior inspection and provides a report listing known code violations. The prospective buyer must receive a copy before title is conveyed." },
+      { question: "What if violations remain?", requirement: "The parties must establish escrow for uncorrected violations: at least $1,000 and 100% of the estimated repair cost. A buyer who assumes qualifying violations generally has six months after title transfer to correct them." },
     ],
-    verifiedDate: "November 10, 2026",
+    sources: [
+      { label: "City of Bay Village: Does Bay Village have a Point of Sale inspection?", url: "https://www.cityofbayvillage.gov/m/faq?cat=0" },
+      { label: "City of Bay Village: Vacant Buildings Ordinance (PDF)", url: "https://www.cityofbayvillage.gov/DocumentCenter/View/806/19-64--Vacant-Buildings-PDF" },
+    ],
+    verifiedDate: "November 12, 2026",
   },
   "brooklyn-heights": {
     status: "required",

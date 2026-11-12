@@ -232,7 +232,7 @@ export function AreaLocal({ area, background = "default" }: AreaLocalProps) {
             <p className={`${styles.posAnswerHeading} text-body`}>The Short Answer</p>
             <p className="text-body">{area.posInspection.shortAnswer}</p>
           </div>
-          {area.posInspection.status === "required" && area.posInspection.tableRows && (
+          {area.posInspection.tableRows && (
             <ContentTable
               longText
               labelledBy="pos-inspection-heading"

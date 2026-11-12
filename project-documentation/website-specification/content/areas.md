@@ -94,7 +94,7 @@ Each verified record includes the status, seller-facing short answer, applicable
 |---|---|---|
 | Cleveland | No POS inspection; Certificate of Disclosure applies | City of Cleveland Certificates of Disclosure |
 | Bedford Heights | POS required | City Point of Sale Inspections and Application |
-| Bay Village | No general POS inspection; vacant-building inspection applies | City Vacant Building Certificate of Compliance Application |
+| Bay Village | No general POS inspection; vacant-building inspection applies | City Building Department FAQ; Vacant Buildings Ordinance |
 | Berea | No POS inspection | City repeal of Exterior Point-of-Sale Inspection Chapter |
 | Brook Park | POS required | City Building Department FAQ |
 | Brooklyn Heights | POS required | Village Point-of-Sale Application; Certificate of Inspection at Time of Sale |
