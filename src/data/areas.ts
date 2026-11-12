@@ -1472,6 +1472,15 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 12, 2026",
   },
+  brooklyn: {
+    status: "not-required",
+    shortAnswer: "Brooklyn does not require a general point-of-sale inspection before a home sale. Rental residences must be inspected and licensed before being rented, and again whenever a new resident moves in.",
+    sources: [
+      { label: "City of Brooklyn: Rental Inspection Guidance (PDF)", url: "https://www.brooklynohio.gov/DocumentCenter/View/225/Good-Neighbor-Guide-PDF" },
+      { label: "City of Brooklyn: Building Department", url: "https://brooklynohio.gov/158/Building-Department" },
+    ],
+    verifiedDate: "November 12, 2026",
+  },
   "cuyahoga-heights": {
     status: "required",
     shortAnswer: "The seller must obtain a Certificate of Inspection before transferring property in Cuyahoga Heights. If violations remain, the purchaser must correct them within the time set by the Building Commissioner.",
