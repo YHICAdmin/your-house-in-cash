@@ -1340,6 +1340,15 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 12, 2026",
   },
+  bedford: {
+    status: "not-required",
+    shortAnswer: "Bedford’s point-of-sale inspection program has been on freeze since 2016. The City’s code still includes older POS provisions, so confirm the current Certificate of Transfer and any property-specific requirements with the Bedford Building Department before listing or signing a purchase agreement.",
+    sources: [
+      { label: "City of Bedford Code: Certificate to Be Furnished by Seller", url: "https://codelibrary.amlegal.com/codes/bedford/latest/bedford_oh/0-0-0-84642" },
+      { label: "Akron Cleveland REALTORS®: Bedford Local Government Information", url: "https://akronclevelandrealtors.com/advocacy-outreach/local-government-info/" },
+    ],
+    verifiedDate: "November 12, 2026",
+  },
   "brooklyn-heights": {
     status: "required",
     shortAnswer: "The seller must obtain a Certificate of Inspection before entering into an agreement to sell or transfer a single- or two-family home. The seller must give the prospective buyer a copy of that certificate.",
@@ -1507,6 +1516,8 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     verifiedDate: "November 10, 2026",
   },
 };
+
+bedfordArea.posInspection = additionalPosInspections.bedford;
 
 const additionalAreas = [
   ["Bay Village", "bay-village", ["Westlake", "Rocky River", "Fairview Park", "North Olmsted", "Berea", "Lakewood"]],
