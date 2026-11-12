@@ -32,14 +32,7 @@ export type AreaPageData = {
       text: string;
     };
   };
-  nearbyCities: readonly [
-    NearbyCity,
-    NearbyCity,
-    NearbyCity,
-    NearbyCity,
-    NearbyCity,
-    NearbyCity,
-  ];
+  nearbyCities: readonly NearbyCity[];
   localPhoto: LocalPhoto;
   posInspection?: PosInspection;
   slug: string;
@@ -118,13 +111,10 @@ Object.assign(localPhotos, {
   brooklyn: { src: "/images/local-area/brooklyn.jpg", alt: "Welcome sign in Brooklyn, Ohio", title: "Brooklyn Welcome Sign", photographer: "Vaultguy999", sourceUrl: "https://commons.wikimedia.org/wiki/File:BrooklynWelcomeSign.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
   "brooklyn-heights": { src: "/images/local-area/brooklyn-heights.jpg", alt: "Brooklyn Heights, Ohio", title: "Brooklyn Heights", photographer: "SilentMatt Psychedelic", sourceUrl: "https://commons.wikimedia.org/wiki/File:Brooklyn_Heights(8)9-15-24_thumbnail_IMG_7510.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
   "chagrin-falls": { src: "/images/local-area/chagrin-falls.jpg", alt: "Chagrin Falls waterfall and bridge", title: "Chagrin Falls, Ohio", photographer: "Paul Sableman", sourceUrl: "https://commons.wikimedia.org/wiki/File:Chagrin_Falls,_Ohio.jpg", license: "CC BY 2.0", licenseUrl: "https://creativecommons.org/licenses/by/2.0", attributionRequired: true },
-  "cuyahoga-heights": { src: "/images/local-area/cuyahoga-heights.jpg", alt: "Cuyahoga Heights Village Hall", title: "Cuyahoga Heights village hall", photographer: "SilentMatt Psychedelic", sourceUrl: "https://commons.wikimedia.org/wiki/File:Cuyahoga_heights_village_hall.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
   "east-cleveland": { src: "/images/local-area/east-cleveland.jpg", alt: "East Cleveland City Hall", title: "East Cleveland City Hall", photographer: "Greg", sourceUrl: "https://commons.wikimedia.org/wiki/File:East_Cleveland_City_Hall.jpg", license: "CC BY-SA 2.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0", attributionRequired: true },
   "fairview-park": { src: "/images/local-area/fairview-park.jpg", alt: "Bain Cabin in Fairview Park", title: "Fairview Park Bain Cabin", photographer: "Vinceye", sourceUrl: "https://commons.wikimedia.org/wiki/File:Fairview_Park_Bain_Cabin.jpg", license: "CC0", attributionRequired: false },
   lakewood: { src: "/images/local-area/lakewood.jpg", alt: "Lakewood Downtown Historic District", title: "Lakewood Downtown Historic District", photographer: "Catsmeowmeow", sourceUrl: "https://commons.wikimedia.org/wiki/File:OH_Cuyahoga_Lakewood_Downtown_Historic_District_016.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
-  linndale: { src: "/images/local-area/linndale.jpg", alt: "Linndale Village Hall", title: "Linndale village hall", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Linndale_village_hall.jpg", license: "Public domain", attributionRequired: false },
   "north-olmsted": { src: "/images/local-area/north-olmsted.jpg", alt: "North Olmsted Old Town Hall", title: "North Olmsted Old Town Hall", photographer: "Ameike", sourceUrl: "https://commons.wikimedia.org/wiki/File:North_Olmsted_Old_Town_Hall.JPG", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0", attributionRequired: true },
-  "north-randall": { src: "/images/local-area/north-randall.jpg", alt: "Thistledown Racino racetrack in North Randall, Ohio", title: "Thistledown Racino, North Randall, Ohio", photographer: "Nicholas Eckhart", sourceUrl: "https://commons.wikimedia.org/wiki/File:Thistledown_Racino,_North_Randall,_Ohio.jpg", license: "CC BY 2.0", licenseUrl: "https://creativecommons.org/licenses/by/2.0", attributionRequired: true },
   "north-royalton": { src: "/images/local-area/north-royalton.jpg", alt: "John M. Annis House in North Royalton", title: "John M. Annis House", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:John_M._Annis_House.jpg", license: "Public domain", attributionRequired: false },
   "olmsted-falls": { src: "/images/local-area/olmsted-falls.jpg", alt: "Grand Pacific Hotel in Olmsted Falls", title: "Grand Pacific Hotel in Olmsted Falls", photographer: "Nyttend", sourceUrl: "https://commons.wikimedia.org/wiki/File:Grand_Pacific_Hotel_in_Olmsted_Falls.jpg", license: "Public domain", attributionRequired: false },
   "orange-village": { src: "/images/local-area/orange-village.jpg", alt: "Orange Village, Ohio", title: "Orange Village", photographer: "SilentMatt Psychedelic", sourceUrl: "https://commons.wikimedia.org/wiki/File:Orange_8-3-25_thumbnail_IMG_1.jpg", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0", attributionRequired: true },
@@ -167,13 +157,10 @@ const approvedIntroSupportingCopy: Record<string, string> = {
   brooklyn: "Brooklyn homes sold in a median of 14 days between July and September 2026. That suggests active buyer interest, but the condition of your house still affects how much time and money you may need to spend before it is ready to list. We can give you a straightforward cash offer, so you can compare a direct sale with a traditional listing.",
   "brooklyn-heights": "Brooklyn Heights requires a Certificate of Inspection before an owner sells or transfers improved residential property. The buyer must receive a current certificate before the sale or transfer, so it is a process worth starting early. We can evaluate the property as it stands and give you a clear cash offer to compare.",
   "chagrin-falls": "Only 24 homes sold in Chagrin Falls between July and September 2026, with a median sale price of $542,742. In a smaller market, broad averages may not say much about a particular home’s value or the time it will take to sell. We can give you a clear as-is offer to compare with the uncertainty of listing.",
-  "cuyahoga-heights": "Cuyahoga Heights requires a Certificate of Inspection before title can transfer. If violations remain, the buyer may be responsible for correcting them within the timeframe set by the Building Commissioner. That can affect whether you make repairs first or seek a buyer prepared to take on the work. We can give you a clear cash offer to compare with those options.",
   "east-cleveland": "East Cleveland requires a Point-of-Sale inspection and Certificate of Inspection before a property can be transferred. Outstanding Class A violations can involve the City’s escrow process, making the repair plan an important part of the sale decision. We can evaluate the house as it stands and give you an as-is cash offer to compare with a traditional sale.",
   "fairview-park": "Fifty-five homes sold in Fairview Park between July and September 2026, with a median time on market of 12 days. A faster market can make listing worthwhile, but it does not eliminate the time and expense of getting a house ready for buyers. We can give you a clear cash offer so you can compare both paths.",
   lakewood: "Lakewood requires a Point-of-Sale inspection before selling a non-owner-occupied residential rental property, while owner-occupied homes are treated differently. For rental owners, that inspection can affect whether another lease term, repairs, or a sale makes the most sense. We can evaluate the property as it is and provide a clear cash offer to compare.",
-  linndale: "Linndale’s latest market snapshot included only one recorded sale. With so little recent local sales data, a citywide average is not enough to tell you what a particular property may bring. We can evaluate the house itself and give you a clear cash offer to compare with listing it.",
   "north-olmsted": "North Olmsted does not require a Point-of-Sale inspection for this type of sale, but the City encourages buyers to review a property’s permit, citation, and inspection history. Being prepared for those questions can matter when deciding whether to repair, list, or sell as-is. We can evaluate the home in its current condition and give you a cash offer to compare.",
-  "north-randall": "North Randall requires a City Occupancy Permit inspection for a direct house sale before closing. That local requirement is worth factoring into your timeline before you commit to a sale date. We can give you a clear as-is cash offer and help you compare a direct sale with your other options.",
   "north-royalton": "One hundred twenty-one homes sold in North Royalton between July and September 2026, with a median time on market of 19 days. The market data provides useful context, but the condition of your house and the work needed before listing can still shape the best path forward. We can give you a cash offer to compare with preparing the home for sale.",
   "olmsted-falls": "Fifty-three homes sold in Olmsted Falls between July and September 2026, with a median time on market of 27 days. That gives sellers a local benchmark, but it does not answer whether repairs and listing preparation are worthwhile for a particular home. We can evaluate your house as it stands and give you a clear cash offer to compare.",
   "orange-village": "Orange Village requires a Point-of-Sale inspection before a home is sold. The process includes checking smoke and carbon-monoxide detectors and, when applicable, septic or well systems. We can evaluate the property as it is and give you an as-is cash offer to compare with the work and timing involved in a traditional sale.",
@@ -1242,10 +1229,6 @@ const additionalAreaStatistics: Partial<Record<string, Omit<AreaStatistics, "sup
     medianSalePrice: "$542,742", homesSold: "24", medianPricePerSquareFoot: "$329/sq ft", medianDaysOnMarket: "27 days",
     dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/3481/OH/Chagrin-Falls/housing-market",
   },
-  "cuyahoga-heights": {
-    medianSalePrice: "$180,000", homesSold: "1", medianPricePerSquareFoot: "$122/sq ft", medianDaysOnMarket: "97 days",
-    dataPeriod: "Redfin snapshot checked November 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/5101/OH/Cuyahoga-Heights",
-  },
   "east-cleveland": {
     medianSalePrice: "$143,432", homesSold: "14", medianPricePerSquareFoot: "$46/sq ft", medianDaysOnMarket: "78 days",
     dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/6038/OH/East-Cleveland/housing-market",
@@ -1258,17 +1241,9 @@ const additionalAreaStatistics: Partial<Record<string, Omit<AreaStatistics, "sup
     medianSalePrice: "$342,837", homesSold: "198", medianPricePerSquareFoot: "$196/sq ft", medianDaysOnMarket: "21 days",
     dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/10611/OH/Lakewood/housing-market",
   },
-  linndale: {
-    medianSalePrice: "$140,000", homesSold: "1", medianPricePerSquareFoot: "$107/sq ft", medianDaysOnMarket: "47 days",
-    dataPeriod: "Redfin snapshot checked November 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/11182/OH/Linndale",
-  },
   "north-olmsted": {
     medianSalePrice: "$288,862", homesSold: "149", medianPricePerSquareFoot: "$172/sq ft", medianDaysOnMarket: "12 days",
     dataPeriod: "July–September 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/city/14718/OH/North-Olmsted/housing-market",
-  },
-  "north-randall": {
-    medianSalePrice: "$200,000", homesSold: "1", medianPricePerSquareFoot: "$174/sq ft", medianDaysOnMarket: "27 days",
-    dataPeriod: "Redfin snapshot checked November 2026", sourceName: "Redfin", sourceUrl: "https://www.redfin.com/neighborhood/765795/OH/North-Randall/North-Randall-Village",
   },
   "north-royalton": {
     medianSalePrice: "$357,830", homesSold: "121", medianPricePerSquareFoot: "$183/sq ft", medianDaysOnMarket: "19 days",
@@ -1393,18 +1368,6 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 10, 2026",
   },
-  "north-randall": {
-    status: "required",
-    shortAnswer: "North Randall requires a City Occupancy Permit inspection for a direct sale of a house. The seller or buyer should request the inspection through the Village Building Department before closing.",
-    tableRows: [
-      { question: "When is it required?", requirement: "The Village’s Occupancy Permit application identifies Direct Sale as a transaction requiring an inspection and includes houses among the covered structures." },
-      { question: "How do I apply?", requirement: "Submit the Village Occupancy Permit Application to the Building Department, identify the transaction as a Direct Sale, and request an inspection time." },
-    ],
-    sources: [
-      { label: "Village of North Randall: Occupancy Permit Application (PDF)", url: "https://northrandall.com/wp-content/uploads/2018/01/Occupancy-Permit-1-26-18.pdf" },
-    ],
-    verifiedDate: "November 10, 2026",
-  },
   "east-cleveland": {
     status: "required",
     shortAnswer: "East Cleveland requires a point-of-sale inspection for housing units. The seller must obtain the City’s Certificate of Inspection before the property is transferred; outstanding Class A violations are subject to the City’s escrow process.",
@@ -1494,22 +1457,6 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 12, 2026",
   },
-  "cuyahoga-heights": {
-    status: "required",
-    shortAnswer: "The seller must obtain a Certificate of Inspection before transferring property in Cuyahoga Heights. If violations remain, the purchaser must correct them within the time set by the Building Commissioner.",
-    tableRows: [
-      { question: "When is it required?", requirement: "Before transferring title, except transfers through probate to heirs or due to divorce. The Certificate of Inspection is valid for one year and is ordinarily issued at least 30 days before transfer unless the Building Commissioner approves a shorter period." },
-      { question: "What does it cost?", requirement: "Single-family: $150. Two-family: $200. Three-family: $250. Four-plex: $300." },
-      { question: "What does the City inspect?", requirement: "The Certificate lists known building- or zoning-code violations identified during the inspection." },
-      { question: "Can the sale close with violations?", requirement: "Yes. If the seller does not correct violations before transfer, the purchaser must correct them within the allotted time or an approved extension." },
-      { question: "How do I apply?", requirement: "The owner or an authorized representative applies to the Building Commissioner and submits the required fee." },
-    ],
-    sources: [
-      { label: "Village of Cuyahoga Heights Code: Point of Sale Inspections", url: "https://codelibrary.amlegal.com/codes/cuyahogahts/latest/cuyahoga_oh/0-0-0-34554" },
-      { label: "Village of Cuyahoga Heights Code: Point of Sale Inspection Fees", url: "https://codelibrary.amlegal.com/codes/cuyahogahts/latest/cuyahoga_oh/0-0-0-34516" },
-    ],
-    verifiedDate: "November 10, 2026",
-  },
   "shaker-heights": {
     status: "required",
     shortAnswer: "The seller must apply for a Point-of-Sale inspection before entering into a contract to sell a residential property. A sale can close with violations still outstanding only when the City approves the required escrow arrangement.",
@@ -1556,12 +1503,9 @@ const additionalAreas = [
   ["Chagrin Falls", "chagrin-falls", ["Solon", "Lyndhurst", "Orange Village", "Mayfield Village", "Mayfield Heights", "Richmond Heights"]],
   ["East Cleveland", "east-cleveland", ["Cleveland", "Cleveland Heights", "Euclid", "Garfield Heights", "Shaker Heights", "University Heights"]],
   ["Beachwood", "beachwood", ["Shaker Heights", "University Heights", "Cleveland Heights", "Warrensville Heights", "Orange Village", "Pepper Pike"]],
-  ["Cuyahoga Heights", "cuyahoga-heights", ["Cleveland", "Garfield Heights", "Valley View", "Brooklyn Heights", "Independence", "Maple Heights"]],
   ["Fairview Park", "fairview-park", ["Rocky River", "North Olmsted", "Westlake", "Lakewood", "Brook Park", "Berea"]],
   ["Lakewood", "lakewood", ["Rocky River", "Fairview Park", "Brooklyn", "Cleveland", "Westlake", "Bay Village"]],
-  ["Linndale", "linndale", ["Cleveland", "Brooklyn", "Lakewood", "Parma", "Parma Heights", "Brooklyn Heights"]],
   ["North Olmsted", "north-olmsted", ["Westlake", "Fairview Park", "Olmsted Falls", "Berea", "North Royalton", "Bay Village"]],
-  ["North Randall", "north-randall", ["Warrensville Heights", "South Euclid", "Maple Heights", "Bedford Heights", "Bedford", "Garfield Heights"]],
   ["North Royalton", "north-royalton", ["Broadview Heights", "Middleburg Heights", "Strongsville", "Parma", "Seven Hills", "Olmsted Falls"]],
   ["Olmsted Falls", "olmsted-falls", ["North Olmsted", "Berea", "Strongsville", "Westlake", "Fairview Park", "Bay Village"]],
   ["Orange Village", "orange-village", ["Chagrin Falls", "Pepper Pike", "Mayfield Village", "Mayfield Heights", "Lyndhurst", "Solon"]],
@@ -1569,10 +1513,10 @@ const additionalAreas = [
   ["Rocky River", "rocky-river", ["Lakewood", "Fairview Park", "Westlake", "Bay Village", "North Olmsted", "Cleveland"]],
   ["Shaker Heights", "shaker-heights", ["Cleveland Heights", "University Heights", "Garfield Heights", "Maple Heights", "Cleveland", "East Cleveland"]],
   ["Strongsville", "strongsville", ["North Royalton", "Olmsted Falls", "Berea", "Middleburg Heights", "Parma Heights", "Broadview Heights"]],
-  ["Valley View", "valley-view", ["Cuyahoga Heights", "Independence", "Garfield Heights", "Bedford", "Bedford Heights", "Seven Hills"]],
-  ["Warrensville Heights", "warrensville-heights", ["Beachwood", "Bedford Heights", "North Randall", "Shaker Heights", "University Heights", "Maple Heights"]],
+  ["Valley View", "valley-view", ["Independence", "Garfield Heights", "Bedford", "Bedford Heights", "Seven Hills"]],
+  ["Warrensville Heights", "warrensville-heights", ["Beachwood", "Bedford Heights", "Shaker Heights", "University Heights", "Maple Heights"]],
   ["Westlake", "westlake", ["Bay Village", "Rocky River", "Fairview Park", "North Olmsted", "Olmsted Falls", "Strongsville"]],
-] as const satisfies readonly (readonly [string, string, readonly [string, string, string, string, string, string]])[];
+] as const satisfies readonly (readonly [string, string, readonly string[]])[];
 
 const additionalAreaPages = additionalAreas.map(([city, slug, nearbyCities]) => createArea({
   city,

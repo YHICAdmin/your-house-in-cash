@@ -10,13 +10,16 @@ const retiredAreaSlugs = [
   "oakwood-village",
   "walton-hills",
   "woodmere",
+  "cuyahoga-heights",
+  "linndale",
+  "north-randall",
 ];
 
 const nextConfig: NextConfig = {
   async redirects() {
     return retiredAreaSlugs.map((slug) => ({
       source: `/sell-your-house-fast-as-is-${slug}`,
-      destination: "/areas-we-buy-in",
+      destination: "/",
       permanent: true,
     }));
   },

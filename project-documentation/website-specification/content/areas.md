@@ -47,10 +47,7 @@ These are the approved City Pages. Every page uses the shared Area Page template
 | Strongsville | `strongsville` | `/sell-your-house-fast-as-is-strongsville` |
 | Westlake | `westlake` | `/sell-your-house-fast-as-is-westlake` |
 | Beachwood | `beachwood` | `/sell-your-house-fast-as-is-beachwood` |
-| Cuyahoga Heights | `cuyahoga-heights` | `/sell-your-house-fast-as-is-cuyahoga-heights` |
 | Lakewood | `lakewood` | `/sell-your-house-fast-as-is-lakewood` |
-| Linndale | `linndale` | `/sell-your-house-fast-as-is-linndale` |
-| North Randall | `north-randall` | `/sell-your-house-fast-as-is-north-randall` |
 | Pepper Pike | `pepper-pike` | `/sell-your-house-fast-as-is-pepper-pike` |
 | Valley View | `valley-view` | `/sell-your-house-fast-as-is-valley-view` |
 | Warrensville Heights | `warrensville-heights` | `/sell-your-house-fast-as-is-warrensville-heights` |
@@ -104,7 +101,6 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Chagrin Falls | No general POS inspection; existing Village violation notices must be disclosed to prospective buyers | Village Code: Notice of Violation; Akron Cleveland REALTORS® Local Government Info |
 | Broadview Heights | No general POS inspection; septic-system inspection applies | City Code: Point-of-Sale Inspections of Septic Systems |
 | Cleveland Heights | POS required | City Point-of-Sale Inspections; Escrow Requirements |
-| Cuyahoga Heights | POS required | Village Code Point of Sale Inspections; Point of Sale Inspection Fees |
 | East Cleveland | POS required | City HUD Consolidated Plan; Housing Programs Description |
 | Euclid | POS required | City Forms and Permits; Assumption Application |
 | Garfield Heights | POS required | City Point-of-Sale Inspections; Buyer Affidavit |
@@ -114,7 +110,6 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Mayfield Village | No general POS inspection; septic-system certificate applies | Mayfield Village Point-of-Sale FAQ |
 | Middleburg Heights | No general POS inspection; septic-system certificate applies | City Building Division FAQ |
 | North Olmsted | No POS inspection | City Assistance to Homebuyers |
-| North Randall | Sale-time occupancy inspection required | Village Occupancy Permit Application |
 | Orange Village | POS required | Village Point-of-Sale Inspection; Point-of-Sale Application Instructions |
 | Richmond Heights | No POS inspection; exterior home inspection applies | City Exterior Maintenance Inspection Program |
 | Seven Hills | POS required for septic-system properties | City Code Point of Sale Inspection of Septic Systems |
@@ -150,7 +145,6 @@ Each area uses the lead image from its corresponding English Wikipedia city arti
 | South Euclid | [South Euclid War Memorial](https://commons.wikimedia.org/wiki/File:South_Euclid_War_Memorial_2.jpg) | CC BY 3.0 |
 | University Heights | [Saint Ignatius Hall](https://commons.wikimedia.org/wiki/File:Administration_Building_(Saint_Ignatius_Hall),_John_Carroll_University,_University_Heights,_OH.jpg) | CC BY-SA 2.0 |
 | Brook Park | [Richard from Smith, Brook Park](https://commons.wikimedia.org/wiki/File:Richard_from_Smith,_Brook_Park.jpg) | Public domain |
-| North Randall | [Thistledown Racino](https://commons.wikimedia.org/wiki/File:Thistledown_Racino,_North_Randall,_Ohio.jpg) | CC BY 2.0 |
 
 ## Brook Park
 
