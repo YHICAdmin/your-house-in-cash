@@ -1364,6 +1364,15 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 12, 2026",
   },
+  "chagrin-falls": {
+    status: "not-required",
+    shortAnswer: "Chagrin Falls does not require a general point-of-sale inspection for a normal residential home sale. If the property has a Village notice of violation or order to make corrections, the owner must inform prospective buyers of that notice.",
+    sources: [
+      { label: "Village of Chagrin Falls Code: Notice of Violation", url: "https://codelibrary.amlegal.com/codes/chagrinfalls/latest/chagrinfalls_oh/0-0-0-16714" },
+      { label: "Akron Cleveland REALTORS®: Chagrin Falls Local Government Information", url: "https://akronclevelandrealtors.com/advocacy-outreach/local-government-info/" },
+    ],
+    verifiedDate: "November 12, 2026",
+  },
   "broadview-heights": {
     status: "not-required",
     shortAnswer: "Broadview Heights does not publish a general point-of-sale inspection requirement for a home sale. A property with a septic system is subject to the City’s point-of-sale septic inspection ordinance.",
