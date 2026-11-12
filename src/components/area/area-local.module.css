@@ -233,6 +233,11 @@
   color: var(--color-text-muted);
 }
 
+.posDisclosure {
+  margin: var(--spacing-s) 0 0;
+  color: var(--color-text-muted);
+}
+
 .posCta {
   position: relative;
   display: flex;

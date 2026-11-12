@@ -248,6 +248,7 @@ export function AreaLocal({ area, background = "default" }: AreaLocalProps) {
               </span>
             ))} · Checked {area.posInspection.verifiedDate}
           </p>
+          {area.posInspection.disclosure && <p className={`${styles.posDisclosure} text-body-small`}>{area.posInspection.disclosure}</p>}
           {area.posInspection.status === "required" && <div className={styles.posCta}>
             <IconContainer aria-hidden="true" icon={MessageCircle} />
             <div>
