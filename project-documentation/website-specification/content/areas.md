@@ -92,7 +92,7 @@ Each verified record includes the status, seller-facing short answer, applicable
 
 | City | Status | Official source records |
 |---|---|---|
-| Cleveland | No POS inspection; Certificate of Disclosure applies | City of Cleveland Certificates of Disclosure |
+| Cleveland | No general POS inspection; Certificate of Disclosure applies, and vacant-property registration remains required | City of Cleveland Certificates of Disclosure; Vacant Properties |
 | Bedford Heights | POS required | City Point of Sale Inspections and Application |
 | Bay Village | No general POS inspection; vacant-building inspection applies | City Building Department FAQ; Vacant Buildings Ordinance |
 | Beachwood | No general POS inspection; occupancy and rental requirements apply | City Building Department FAQ; Certificate of Rental Occupancy Ordinance |
