@@ -252,8 +252,8 @@ export function AreaLocal({ area, background = "default" }: AreaLocalProps) {
           {area.posInspection.status === "required" && <div className={styles.posCta}>
             <IconContainer aria-hidden="true" icon={MessageCircle} />
             <div>
-              <p className={`${styles.posCtaHeading} text-body`}>Questions about selling with POS requirements?</p>
-              <p className="text-body">We’re happy to talk through your situation and help you understand your options.</p>
+              <p className={`${styles.posCtaHeading} text-body`}>POS requirements can affect your sale.</p>
+              <p className="text-body">If local POS requirements are part of your sale, we can make a cash offer for the property as-is so you can compare your options.</p>
               <TextLink href="/get-cash-offer">Get My Cash Offer <ArrowRight aria-hidden="true" size={20} /></TextLink>
             </div>
           </div>}
