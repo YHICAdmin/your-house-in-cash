@@ -100,7 +100,7 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Berea | No POS inspection | City repeal of Exterior Point-of-Sale Inspection Chapter |
 | Brook Park | Re-Occupancy inspection required for title transfers | City 2026 Re-Occupancy Inspection Form |
 | Brooklyn | No general POS inspection; rental inspection and licensing apply | City Rental Inspection Guidance; Building Department |
-| Brooklyn Heights | POS required | Village Point-of-Sale Application; Certificate of Inspection at Time of Sale |
+| Brooklyn Heights | POS required for improved residential property; current certificate required within one year | Village Code: Certificate of Inspection at Time of Sale; Point-of-Sale Application |
 | Broadview Heights | No general POS inspection; septic-system inspection applies | City Code: Point-of-Sale Inspections of Septic Systems |
 | Cleveland Heights | POS required | City Point-of-Sale Inspections; Escrow Requirements |
 | Cuyahoga Heights | POS required | Village Code Point of Sale Inspections; Point of Sale Inspection Fees |

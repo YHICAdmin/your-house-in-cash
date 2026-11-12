@@ -165,7 +165,7 @@ const approvedIntroSupportingCopy: Record<string, string> = {
   "broadview-heights": "Broadview Heights does not have a general Point-of-Sale inspection requirement, but homes with septic systems are subject to the City’s septic inspection ordinance. If your property uses septic, that is a local requirement to factor into your timing and repair decisions. We can give you a clear cash offer to compare with the traditional-sale process.",
   "brook-park": "Brook Park requires a Point-of-Sale inspection when you sell a home, and the City advises scheduling early because the inspection is valid for six months. Planning the inspection early can help avoid making it a last-minute closing issue. We can evaluate the house as it is and give you a cash offer to compare with repairing and listing it.",
   brooklyn: "Brooklyn homes sold in a median of 14 days between July and September 2026. That suggests active buyer interest, but the condition of your house still affects how much time and money you may need to spend before it is ready to list. We can give you a straightforward cash offer, so you can compare a direct sale with a traditional listing.",
-  "brooklyn-heights": "Brooklyn Heights requires a Certificate of Inspection before an owner enters into an agreement to sell or transfer a one- or two-family home. The buyer must receive that certificate before the sale agreement is signed, so it is a process worth starting early. We can evaluate the property as it stands and give you a clear cash offer to compare.",
+  "brooklyn-heights": "Brooklyn Heights requires a Certificate of Inspection before an owner sells or transfers improved residential property. The buyer must receive a current certificate before the sale or transfer, so it is a process worth starting early. We can evaluate the property as it stands and give you a clear cash offer to compare.",
   "chagrin-falls": "Only 24 homes sold in Chagrin Falls between July and September 2026, with a median sale price of $542,742. In a smaller market, broad averages may not say much about a particular home’s value or the time it will take to sell. We can give you a clear as-is offer to compare with the uncertainty of listing.",
   "cuyahoga-heights": "Cuyahoga Heights requires a Certificate of Inspection before title can transfer. If violations remain, the buyer may be responsible for correcting them within the timeframe set by the Building Commissioner. That can affect whether you make repairs first or seek a buyer prepared to take on the work. We can give you a clear cash offer to compare with those options.",
   "east-cleveland": "East Cleveland requires a Point-of-Sale inspection and Certificate of Inspection before a property can be transferred. Outstanding Class A violations can involve the City’s escrow process, making the repair plan an important part of the sale decision. We can evaluate the house as it stands and give you an as-is cash offer to compare with a traditional sale.",
@@ -1352,17 +1352,17 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
   },
   "brooklyn-heights": {
     status: "required",
-    shortAnswer: "The seller must obtain a Certificate of Inspection before entering into an agreement to sell or transfer a single- or two-family home. The seller must give the prospective buyer a copy of that certificate.",
+    shortAnswer: "The seller must obtain a Certificate of Inspection before selling or transferring improved residential property. The seller must give the prospective buyer a current Certificate of Inspection or Certificate of Compliance.",
     tableRows: [
-      { question: "When is it required?", requirement: "Before entering into an agreement to sell or convey a single- or two-family dwelling. A current certificate or compliance certificate must be presented to the buyer." },
-      { question: "What does it cost?", requirement: "$50 for the Point-of-Sale inspection application." },
+      { question: "When is it required?", requirement: "Before selling, transferring, or conveying an interest in improved residential property. Give the buyer a Certificate of Inspection or Certificate of Compliance issued within the prior year." },
+      { question: "What does it cost?", requirement: "$50 for the first dwelling unit, plus $20 for each additional unit. A $25 reinspection fee applies after the first two reinspections." },
       { question: "How do I apply?", requirement: "Submit the Village Point-of-Sale Application to the Building Department." },
     ],
     sources: [
+      { label: "Village of Brooklyn Heights Code: Certificate of Inspection at Time of Sale", url: "https://codelibrary.amlegal.com/codes/brooklynheights/latest/brookhts_oh/0-0-0-13877" },
       { label: "Village of Brooklyn Heights: Point-of-Sale Application (PDF)", url: "https://www.brooklynhts.org/DocumentCenter/View/141/Point-of-Sale-Application-PDF" },
-      { label: "Village of Brooklyn Heights: Certificate of Inspection at Time of Sale (PDF)", url: "https://www.brooklynhts.org/DocumentCenter/View/155/Chapter-1446-Certificate-of-Inspection-at-Time-of-Sale-PDF" },
     ],
-    verifiedDate: "November 10, 2026",
+    verifiedDate: "November 12, 2026",
   },
   "broadview-heights": {
     status: "not-required",
