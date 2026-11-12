@@ -263,7 +263,7 @@ const bedfordHeightsArea = createArea({
     status: "required",
     shortAnswer: "A Point-of-Sale inspection and occupancy permit are required before a home can be occupied or title transferred. A sale can close with violations still outstanding only after the City accepts the required escrow.",
     tableRows: [
-      { question: "When is it required?", requirement: "Before title transfer or occupancy. The inspection is valid for one year from compliance or title transfer; the dye test is valid for 12 months." },
+      { question: "When is it required?", requirement: "Before entering an agreement to sell or transfer. The seller must give the buyer a Certificate of Inspection or Compliance issued within the previous 90 days." },
       { question: "What does it cost?", requirement: "$150, including the sewer dye test. The application offers exterior-only or interior-and-exterior inspection with owner consent." },
       { question: "What does the City inspect?", requirement: "A visual interior and exterior inspection, or exterior only if selected. The dye test confirms proper sewer connections." },
       { question: "Can the sale close with violations?", requirement: "Yes. The seller must submit written repair estimates for City approval and deposit at least $100 and 100% of the approved estimate with a bank or title company." },
@@ -271,8 +271,9 @@ const bedfordHeightsArea = createArea({
     ],
     sources: [
       { label: "City of Bedford Heights: Point of Sale Inspections and Application (PDF)", url: "https://cms5.revize.com/revize/bedfordheightsoh/PDF%20Files/Fillable%20Forms/ResidentialPropertyInspections-POS-2021.pdf" },
+      { label: "City of Bedford Heights Code: Pre-Sale Inspections", url: "https://codelibrary.amlegal.com/codes/bedfordhts/latest/bedfordhts_oh/0-0-0-59754" },
     ],
-    verifiedDate: "November 10, 2026",
+    verifiedDate: "November 12, 2026",
   },
   "statistics": {
     "medianSalePrice": "$199,905",
