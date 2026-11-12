@@ -1,5 +1,7 @@
 Main topic: Foreclosure
 
+Meta description: Understand how mortgage forbearance pauses or reduces payments, what happens to the unpaid balance, and when it may or may not fit your situation.
+
 Publication date: 2026-10-13
 
 Topics covered: Missed Mortgage Payments, Mortgage Servicer, Foreclosure Prevention

@@ -2,6 +2,8 @@ Meta title: Section 8 Landlords in Cuyahoga County | Your House in Cash
 
 Main topic: Rent
 
+Meta description: Learn how Cuyahoga County's Housing Choice Voucher program works for landlords, including CMHA rent approval, inspections, payments, and tenant screening.
+
 Publication date: 2026-10-11
 
 Topics covered: Section 8, Housing Choice Vouchers, CMHA, Euclid, Maple Heights, Garfield Heights, Parma, Cleveland Heights

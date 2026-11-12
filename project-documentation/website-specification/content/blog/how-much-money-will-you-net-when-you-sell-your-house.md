@@ -1,5 +1,7 @@
 Main topic: Selling a House
 
+Meta description: Learn how to estimate home-sale net proceeds by accounting for mortgage payoff, liens, closing costs, credits, and other deductions from the sale price.
+
 Publication date: 2026-10-08
 
 Topics covered: Net Proceeds, Mortgage Payoff, Closing Costs, Seller Concessions, Off-Market Sales

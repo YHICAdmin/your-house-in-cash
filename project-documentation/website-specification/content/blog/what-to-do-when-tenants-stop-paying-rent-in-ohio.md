@@ -1,5 +1,7 @@
 Main topic: Rent
 
+Meta description: Learn the Ohio process for responding when a tenant stops paying rent, from documenting the issue and serving notice to avoiding illegal self-help eviction.
+
 Publication date: 2026-10-18
 
 Topics covered: Ohio Eviction Process, Nonpayment of Rent, Three-Day Notice, Landlord Responsibilities

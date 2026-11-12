@@ -2,6 +2,8 @@ Meta title: Garfield Heights Point-of-Sale Inspection | Your House in Cash
 
 Main topic: Selling a House
 
+Meta description: Learn how Garfield Heights point-of-sale inspections work, when a Certificate of Inspection or Compliance is required, and how sellers can prepare for transfer.
+
 Publication date: 2026-10-09
 
 Topics covered: Garfield Heights, Point-of-Sale Inspection, Compliance Certificate, Code Violations, Selling As Is

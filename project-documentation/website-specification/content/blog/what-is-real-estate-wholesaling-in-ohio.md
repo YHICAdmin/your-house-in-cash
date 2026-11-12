@@ -1,5 +1,7 @@
 Main topic: Selling a House
 
+Meta description: Learn how Ohio real estate wholesaling works, including contract assignments, who may buy your home, key contract terms, and how to compare your options.
+
 Publication date: 2026-10-10
 
 Topics covered: Real Estate Wholesaling, Contract Assignment, Ohio Seller Disclosure, Off-Market Sales, Cash Offers

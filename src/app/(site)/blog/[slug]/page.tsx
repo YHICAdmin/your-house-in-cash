@@ -16,10 +16,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = await readBlogArticle(slug);
   if (article) {
-    const opening = article.blocks.find(block => block.type === "paragraph")?.text ?? "";
     return createPageMetadata({
       title: article.metaTitle ?? `${article.title} | Your House in Cash`,
-      description: article.metaDescription ?? opening.slice(0, 155),
+      description: article.metaDescription,
       canonical: `/blog/${slug}`,
       image: article.image ? {
         url: article.image.src,

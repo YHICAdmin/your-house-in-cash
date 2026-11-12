@@ -22,7 +22,7 @@ export async function readBlogArticle(slug: string) {
   const imageWidth = /^Image width: (\d+)$/m.exec(source)?.[1];
   const imageHeight = /^Image height: (\d+)$/m.exec(source)?.[1];
   const imagePaths = [...source.matchAll(/^Image (\d+) path: (\/images\/blog\/[a-z0-9.-]+)$/gm)];
-  if (!title || !publicationDate || !mainTopic || !relatedTopics?.length) throw new Error(`Blog article ${slug} needs a title, publication date, and topics`);
+  if (!title || !publicationDate || !mainTopic || !relatedTopics?.length || !metaDescription) throw new Error(`Blog article ${slug} needs a title, meta description, publication date, and topics`);
   if (imagePath && !imageAlt) throw new Error(`Blog article ${slug} needs image alt text`);
   const images = imagePaths.map(([, index, src]) => {
     const alt = new RegExp(`^Image ${index} alt: (.+)$`, "m").exec(source)?.[1];
