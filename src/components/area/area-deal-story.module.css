@@ -90,7 +90,7 @@
 
 .terms li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--spacing-xs);
 }
 
@@ -98,7 +98,6 @@
   width: var(--icon-medium);
   height: var(--icon-medium);
   flex: 0 0 auto;
-  margin-top: 0.3rem;
   color: var(--color-brand);
 }
 

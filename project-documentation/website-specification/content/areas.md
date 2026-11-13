@@ -104,7 +104,7 @@ Each verified record includes the status, seller-facing short answer, applicable
 | East Cleveland | POS required; buyer may assume listed violations by affidavit | City Code: Certificate of Use, Occupancy and Inspection; POS Buyer Assumption Affidavit |
 | Euclid | POS required; Certificate of Code Compliance valid for six months | City Code: Sales of Dwellings; Point-of-Sale Fees; Assumption Application |
 | Fairview Park | No general POS inspection; annual maintenance inspections are not sale-triggered | City Property Maintenance; Building Department; Akron Cleveland REALTORS® Local Government Info |
-| Garfield Heights | POS required | City Point-of-Sale Inspections; Buyer Affidavit |
+| Garfield Heights | POS required; buyer-assumption and escrow rules apply to unresolved violations | City Point-of-Sale Inspections; Buyer Affidavit; City Code Chapter 1313 |
 | Lakewood | POS required for non-owner-occupied residential rentals | City Inspections and Code Compliance |
 | Maple Heights | POS required | City Point of Sale Inspection; Point of Sale Application |
 | Mayfield Heights | POS required | City Residential Point-of-Sale Application; Statement of Assumption of Housing Violations |
