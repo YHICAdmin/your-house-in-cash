@@ -1399,6 +1399,15 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 13, 2026",
   },
+  independence: {
+    status: "not-required",
+    shortAnswer: "Independence does not require a general point-of-sale inspection for a normal residential home sale when there is no change of use. Commercial changes of use or occupancy require an occupancy permit and inspection. If a rental property is sold, the new owner must submit a rental registration within seven days after the deed is recorded.",
+    sources: [
+      { label: "Independence Code: Occupancy Permit for Change of Use", url: "https://codelibrary.amlegal.com/codes/independence/latest/independence_oh/0-0-0-22741" },
+      { label: "Independence Code: Lease/Rental Occupancy Registration", url: "https://codelibrary.amlegal.com/codes/independence/latest/independence_oh/0-0-0-39660" },
+    ],
+    verifiedDate: "November 13, 2026",
+  },
   "seven-hills": {
     status: "required",
     shortAnswer: "Seven Hills requires a point-of-sale septic-system inspection when the property has a septic system. The seller must obtain a current County septic-system evaluation before transfer.",
@@ -1509,6 +1518,7 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
 };
 
 bedfordArea.posInspection = additionalPosInspections.bedford;
+independenceArea.posInspection = additionalPosInspections.independence;
 
 const additionalAreas = [
   ["Bay Village", "bay-village", ["Westlake", "Rocky River", "Fairview Park", "North Olmsted", "Berea", "Lakewood"]],
