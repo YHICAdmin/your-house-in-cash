@@ -6,14 +6,12 @@ import {
   House,
   Info,
   MapPin,
-  MessageCircle,
   Ruler,
   type LucideIcon,
 } from "lucide-react";
 import { SectionLabel } from "@/components/ui/section-label";
 import { TextLink } from "@/components/ui/text-link";
 import { ContentTable } from "@/components/ui/content-table";
-import { IconContainer } from "@/components/ui/icon-container";
 import {
   areas,
   getAreaPagePath,
@@ -249,14 +247,6 @@ export function AreaLocal({ area, background = "default" }: AreaLocalProps) {
             ))} · Checked {area.posInspection.verifiedDate}
           </p>
           <p className={`${styles.posDisclosure} text-body-small`}>Requirements can change and may depend on the property. Confirm current requirements with the applicable local building department before listing, signing a purchase agreement, or closing.</p>
-          {area.posInspection.status === "required" && <div className={styles.posCta}>
-            <IconContainer aria-hidden="true" icon={MessageCircle} />
-            <div>
-              <p className={`${styles.posCtaHeading} text-body`}>POS requirements can affect your sale.</p>
-              <p className="text-body">If local POS requirements are part of your sale, we can make a cash offer for the property as-is so you can compare your options.</p>
-              <TextLink href="/get-cash-offer">Get My Cash Offer <ArrowRight aria-hidden="true" size={20} /></TextLink>
-            </div>
-          </div>}
         </section>}
       </div>
     </section>

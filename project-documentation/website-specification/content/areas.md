@@ -83,7 +83,7 @@ Use custom local supporting copy only when it gives a seller information that co
 
 ## Point-of-Sale Inspection Content
 
-Point-of-sale (POS) content is stored as the optional `posInspection` record on the corresponding city entry in `src/data/areas.ts`. The shared Area Page renders no POS content, including its closing conversion note, when that record is absent. An absent record means the city is unverified or unclear; it must never be presented as having no POS requirement.
+Point-of-sale (POS) content is stored as the optional `posInspection` record on the corresponding city entry in `src/data/areas.ts`. The shared Area Page renders no POS content when that record is absent. An absent record means the city is unverified or unclear; it must never be presented as having no POS requirement.
 
 Each verified record includes the status, seller-facing short answer, applicable table rows, official municipal source links, and the source-check date. The current verified records are:
 
@@ -109,7 +109,7 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Lakewood | POS required for non-owner-occupied residential rentals | City Inspections and Code Compliance |
 | Lyndhurst | No general POS inspection; Certificate of Authorized Occupancy required for two-family sales | City Code: Certificate of Authorized Occupancy; Rental and Non-Owner-Occupied Property Guidance |
 | Maple Heights | POS required for improved residential and commercial property | City Code: Point-of-Sale/Property Maintenance Inspection; Point of Sale Application |
-| Mayfield Heights | POS required | City Residential Point-of-Sale Application; Statement of Assumption of Housing Violations |
+| Mayfield Heights | Exterior POS required for dwelling sales; certificate valid 12 months | City Code Chapter 1339; City Residential Point-of-Sale Application; Statement of Assumption of Housing Violations |
 | Mayfield Village | No general POS inspection; septic-system certificate applies | Mayfield Village Point-of-Sale FAQ |
 | Middleburg Heights | No general POS inspection; septic-system certificate applies | City Building Division FAQ |
 | North Olmsted | No POS inspection | City Assistance to Homebuyers |

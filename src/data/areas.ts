@@ -734,19 +734,21 @@ const mayfieldHeightsArea = createArea({
   "slug": "mayfield-heights",
   posInspection: {
     status: "required",
-    shortAnswer: "A Point-of-Sale inspection is required before selling a house in Mayfield Heights. Condominiums and cluster homes where the owner is not responsible for exterior maintenance are exempt.",
+    shortAnswer: "Mayfield Heights requires an exterior Point-of-Sale inspection before an owner enters an agreement to sell or convey a house. Condominiums and cluster homes where the owner is not responsible for exterior maintenance are exempt.",
     tableRows: [
-      { question: "When is it required?", requirement: "Before selling a house. Condominiums and cluster homes where the owner is not responsible for exterior maintenance do not require a POS inspection." },
+      { question: "When is it required?", requirement: "Before entering into an agreement to sell or otherwise conveying a dwelling structure. Condominiums and cluster homes where the owner is not responsible for exterior maintenance do not require a POS inspection. The certificate is valid for 12 months from the inspection date." },
       { question: "What does it cost?", requirement: "$100 for the residential Point-of-Sale inspection." },
       { question: "What does the City inspect?", requirement: "The exterior of the dwelling structure and premises." },
-      { question: "What happens if there are violations?", requirement: "A purchaser may assume remaining violations by submitting the City’s notarized Statement of Assumption of Housing Violations. The form says violations must be corrected within six months after title transfer, with health or safety violations corrected before occupancy." },
+      { question: "What happens if there are violations?", requirement: "Violations must be corrected before a certificate is issued unless the purchaser submits the City’s notarized Statement of Assumption of Housing Violations and agrees to correct them within six months of the certificate’s issuance. The seller and buyer must identify who is responsible for the work, and the Building Department may require sufficient funds to be held in independent escrow." },
       { question: "How do I apply?", requirement: "Submit the City’s residential Point-of-Sale Inspection application and authorize the exterior inspection." },
     ],
     sources: [
       { label: "City of Mayfield Heights: Residential Point-of-Sale Inspection Application (PDF)", url: "https://www.mayfieldheightsohio.gov/DocumentCenter/View/3259/Point-of-Sale-Inspection-Application-PDF" },
       { label: "City of Mayfield Heights: Statement of Assumption of Housing Violations (PDF)", url: "https://www.mayfieldheightsohio.gov/DocumentCenter/View/105/Point-of-Sale-InspectionBuyers-Assumption-Form-PDF" },
+      { label: "City Code: Certificates of Inspection, Chapter 1339", url: "https://codelibrary.amlegal.com/codes/mayfieldhts/latest/mayfieldhts_oh/0-0-0-100690" },
+      { label: "City Code: Certificate of Inspection Fee, § 1335.06", url: "https://codelibrary.amlegal.com/codes/mayfieldhts/latest/mayfieldhts_oh/0-0-0-100523" },
     ],
-    verifiedDate: "November 10, 2026",
+    verifiedDate: "November 13, 2026",
   },
   "statistics": {
     "medianSalePrice": "$271,871",

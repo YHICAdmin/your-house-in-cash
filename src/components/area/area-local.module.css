@@ -238,43 +238,6 @@
   color: var(--color-text-muted);
 }
 
-.posCta {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  gap: var(--spacing-s);
-  margin-top: var(--spacing-l);
-  padding: var(--spacing-m);
-  border-radius: var(--radius-medium);
-  background: var(--color-background-soft);
-}
-
-.posCta::before {
-  position: absolute;
-  top: var(--spacing-xs);
-  bottom: var(--spacing-xs);
-  left: var(--spacing-xs);
-  width: 4px;
-  background: var(--color-brand);
-  content: "";
-}
-
-.posCta > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-s);
-}
-
-.posCta p {
-  margin: 0;
-}
-
-.posCtaHeading {
-  margin: 0;
-  font-weight: 700;
-}
-
 .marketCredit {
   margin: var(--spacing-xs) 0 0;
   color: var(--color-text-secondary);
