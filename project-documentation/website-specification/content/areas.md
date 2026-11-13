@@ -124,9 +124,12 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Seven Hills | Septic-system evaluation required for septic-property transfers; vacant and rental requirements are separate | City Code § 721.09; Vacant Property Registration § 1144.03; Rental Property § 1146.02 |
 | Shaker Heights | POS required for improved residential properties; rental inspection program is separate | City Point of Sale Procedure; POS Inspection and Escrow Requirements; Point-of-Sale FAQs; Rental Property Inspections |
 | Solon | No general POS inspection; rental registration, occupancy permit, and inspections are separate | City Residential Rental Registration Program; City Code Chapter 1489; Council Minutes |
-| South Euclid | No general POS inspection; vacant-property inspection applies | City Housing Department |
-| University Heights | POS required | City Point-of-Sale Application; Point-of-Sale Transfer Process |
-| Warrensville Heights | POS required | City Residential POS Application and Checklist; Inspections |
+| South Euclid | No general POS inspection for an occupied home; vacant-property inspection and escrow process applies | City Code Chapter 1414 |
+| Strongsville | No general POS inspection; commercial occupancy permits are separate | Akron Cleveland REALTORS® Local Government Information |
+| University Heights | POS required; interior-and-exterior inspection and buyer-assumption process apply | City Point-of-Sale Application; Point-of-Sale Transfer Process |
+| Valley View | No general POS inspection; commercial business licensing is separate | Akron Cleveland REALTORS® Local Government Information |
+| Warrensville Heights | POS required for residential and commercial property; vacant and rental requirements are separate | City Residential POS Application and Checklist; Inspections |
+| Westlake | No general POS inspection; rental license and Certificate of Occupancy are separate | City Code Chapter 1356 |
 
 ## Local Market Images
 

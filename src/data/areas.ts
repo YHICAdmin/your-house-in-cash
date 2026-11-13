@@ -1152,9 +1152,18 @@ const southEuclidArea = createArea({
   slug: "south-euclid",
   posInspection: {
     status: "not-required",
-    shortAnswer: "South Euclid does not require a general point-of-sale inspection for an occupied home sale. A vacant property must be registered and inspected before title transfer.",
+    shortAnswer: "South Euclid does not require a general Point-of-Sale inspection for an occupied home sale. A vacant property must have a City inspection before an agreement to sell or transfer is signed.",
+    tableRows: [
+      { question: "Is a POS inspection required?", requirement: "Only when the property is vacant. South Euclid does not require a general POS inspection for an occupied home sale." },
+      { question: "What does the City inspect?", requirement: "The City performs a general exterior and interior inspection of the vacant building and premises and lists known code violations." },
+      { question: "How long is the inspection valid?", requirement: "One year from the inspection date, for one transfer." },
+      { question: "Can the sale close with violations?", requirement: "Yes, if the parties establish escrow of at least $1,000 and 100% of the estimated cost to correct the remaining violations." },
+      { question: "Can the vacant home be occupied after the sale?", requirement: "No. Once the listed violations are corrected, the owner must obtain a Certificate of Compliance before the previously vacant building may be occupied." },
+    ],
     sources: [
-      { label: "City of South Euclid: Housing", url: "https://southeuclid.gov/housing/" },
+      { label: "City of South Euclid Code: Vacant Building Inspection Required, § 1414.03", url: "https://codelibrary.amlegal.com/codes/southeuclid/latest/seuclid_oh/0-0-0-27356" },
+      { label: "City of South Euclid Code: Vacant Building Inspection, § 1414.04", url: "https://codelibrary.amlegal.com/codes/southeuclid/latest/seuclid_oh/0-0-0-27358" },
+      { label: "City of South Euclid Code: Escrow Deposit Prior to Sale, § 1414.06", url: "https://codelibrary.amlegal.com/codes/southeuclid/latest/seuclid_oh/0-0-0-27362" },
     ],
     verifiedDate: "November 10, 2026",
   },
@@ -1202,8 +1211,9 @@ const universityHeightsArea = createArea({
     status: "required",
     shortAnswer: "The seller must obtain a Point-of-Sale inspection before title transfer. A buyer may assume unresolved violations when the City’s Statement of Assumption of Violations is submitted before transfer.",
     tableRows: [
-      { question: "When is it required?", requirement: "Before title transfer. The inspection is valid for one year from the initial inspection date." },
+      { question: "Is a POS inspection required?", requirement: "Yes. Before title transfer. The inspection is valid for one year from the initial inspection date." },
       { question: "What does it cost?", requirement: "$250 for a single-family home and $300 for a two-family home." },
+      { question: "What does the City inspect?", requirement: "The City performs a visual interior-and-exterior inspection of the home." },
       { question: "What happens if there are violations?", requirement: "The seller may correct all violations, correct some while the buyer assumes the rest, or have the buyer assume all violations. The City requires the buyer’s Statement of Assumption of Violations before transfer when violations remain." },
       { question: "How do I apply?", requirement: "Submit the Point-of-Sale application through CitizenServe or in person with the Housing Department, then schedule the inspection." },
     ],
@@ -1357,6 +1367,36 @@ const additionalAreaStatistics: Partial<Record<string, Omit<AreaStatistics, "sup
 };
 
 const additionalPosInspections: Partial<Record<string, PosInspection>> = {
+  strongsville: {
+    status: "not-required",
+    shortAnswer: "Strongsville does not require a general Point-of-Sale inspection for a typical home sale. The City’s occupancy-permit process applies to commercial properties, not a normal residential resale.",
+    sources: [
+      { label: "Akron Cleveland REALTORS®: Strongsville Local Government Information", url: "https://akronclevelandrealtors.com/advocacy-outreach/local-government-info/" },
+    ],
+    verifiedDate: "November 13, 2026",
+  },
+  "valley-view": {
+    status: "not-required",
+    shortAnswer: "Valley View does not require a general Point-of-Sale inspection for a typical home sale. Its business-license process applies to commercial properties, not a normal residential resale.",
+    sources: [
+      { label: "Akron Cleveland REALTORS®: Valley View Local Government Information", url: "https://akronclevelandrealtors.com/advocacy-outreach/local-government-info/" },
+    ],
+    verifiedDate: "November 13, 2026",
+  },
+  westlake: {
+    status: "not-required",
+    shortAnswer: "Westlake does not require a general Point-of-Sale inspection for a typical home sale. Residential rentals have a separate City rental-license and Certificate of Occupancy process.",
+    tableRows: [
+      { question: "Is a POS inspection required?", requirement: "No. Westlake does not require a general Point-of-Sale inspection for a typical home sale." },
+      { question: "What if the property is a rental?", requirement: "A one-, two-, or three-unit residential rental needs a current City Rental License/Certificate of Occupancy before it may be rented or occupied." },
+      { question: "When does a rental license expire?", requirement: "The license is valid for 24 months or until occupancy changes, whichever occurs first." },
+    ],
+    sources: [
+      { label: "City of Westlake Code: Rental License, Chapter 1356", url: "https://codelibrary.amlegal.com/codes/westlake/latest/westlake_oh/0-0-0-27030" },
+      { label: "City of Westlake Code: Rental License Term, § 1356.03", url: "https://codelibrary.amlegal.com/codes/westlake/latest/westlake_oh/0-0-0-27073" },
+    ],
+    verifiedDate: "November 13, 2026",
+  },
   berea: {
     status: "not-required",
     shortAnswer: "Berea repealed its Exterior Point-of-Sale Inspection chapter in 2019 and does not require a point-of-sale inspection for this type of home sale.",
@@ -1646,7 +1686,7 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     status: "required",
     shortAnswer: "The seller must obtain a Point-of-Sale Certificate of Inspection before agreeing to sell or transfer property. A sale can close with unresolved violations only when the City’s escrow and buyer-acknowledgement requirements are completed.",
     tableRows: [
-      { question: "When is it required?", requirement: "Before entering an agreement to sell or convey residential or commercial property. The certificate provided to the buyer must have been issued within one year before the agreement." },
+      { question: "Is a POS inspection required?", requirement: "Yes. Before entering an agreement to sell or convey residential or commercial property. The certificate provided to the buyer must have been issued within one year before the agreement." },
       { question: "What does it cost?", requirement: "Residential: $100. Condominiums and apartments: $30 per unit. Commercial: $200 for the first unit and $90 for each additional unit." },
       { question: "What paperwork is required?", requirement: "The seller must give the buyer a Certificate of Inspection or Compliance. A buyer-signed Acknowledgement Form must be deposited in escrow and copied to the Building Department before title transfer." },
       { question: "Can the sale close with violations?", requirement: "Yes. Escrow of at least $100 and 150% of an itemized, current-market repair estimate from a City-registered company is required for remaining violations." },
