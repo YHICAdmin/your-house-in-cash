@@ -79,6 +79,9 @@ export function AreaLocal({ area, background = "default" }: AreaLocalProps) {
   ] : [];
 
   const statisticColumns = [statistics.slice(0, 2), statistics.slice(2)];
+  const imageDescription = area.slug === "maple-heights"
+    ? area.localPhoto.title
+    : undefined;
 
   return (
     <section
@@ -207,6 +210,11 @@ export function AreaLocal({ area, background = "default" }: AreaLocalProps) {
               Straightforward Offers.
             </h3>
           </div>
+          {imageDescription && (
+            <figcaption className={`${styles.marketDescription} text-body-small`}>
+              {imageDescription}
+            </figcaption>
+          )}
           {area.localPhoto.attributionRequired && (
             <figcaption className={`${styles.marketCredit} text-body-small`}>
               Photo by {area.localPhoto.photographer} via{" "}

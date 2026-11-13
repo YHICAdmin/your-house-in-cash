@@ -243,6 +243,11 @@
   color: var(--color-text-secondary);
 }
 
+.marketDescription {
+  margin: var(--spacing-xs) 0 0;
+  color: var(--color-text-secondary);
+}
+
 .marketCredit a {
   color: inherit;
 }

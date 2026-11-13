@@ -1462,6 +1462,7 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 
 * Uses a `figure` containing the photograph and overlaid `H3` headline.
 * When the image license requires attribution, a visible caption beneath the image credits the photographer and links to both its Wikimedia Commons source and license. Public-domain images do not display a credit row.
+* Maple Heights additionally displays its approved local-photo title as a visible description beneath the image: `Southern end of Vine Street, Maple Heights`.
 
 ### Visual Design
 

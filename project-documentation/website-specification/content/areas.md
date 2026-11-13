@@ -110,7 +110,7 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Lyndhurst | No general POS inspection; Certificate of Authorized Occupancy required for two-family sales | City Code: Certificate of Authorized Occupancy; Rental and Non-Owner-Occupied Property Guidance |
 | Maple Heights | POS required for improved residential and commercial property | City Code: Point-of-Sale/Property Maintenance Inspection; Point of Sale Application |
 | Mayfield Heights | Exterior POS required for dwelling sales; certificate valid 12 months | City Code Chapter 1339; City Residential Point-of-Sale Application; Statement of Assumption of Housing Violations |
-| Mayfield Village | No general POS inspection; septic-system certificate applies | Mayfield Village Point-of-Sale FAQ |
+| Mayfield Village | No general POS inspection; County septic-system certificate applies to homes with private sewage systems | Mayfield Village Point-of-Sale FAQ; Village Code § 1365.01 |
 | Middleburg Heights | No general POS inspection; septic-system certificate applies | City Building Division FAQ |
 | North Olmsted | No POS inspection | City Assistance to Homebuyers |
 | Orange Village | POS required | Village Point-of-Sale Inspection; Point-of-Sale Application Instructions |

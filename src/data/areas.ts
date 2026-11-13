@@ -793,10 +793,17 @@ const mayfieldVillageArea = createArea({
   posInspection: {
     status: "not-required",
     shortAnswer: "Mayfield Village does not require a general point-of-sale inspection for a home sale. A property with a septic system does require a Certificate of Inspection from the Cuyahoga County Board of Health.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Only when a residential property has a private sewage (septic) system. Before entering into an agreement to sell or convey the property, the owner must obtain the County Certificate of Inspection and provide it to the prospective buyer." },
+      { question: "What does it cost?", requirement: "The Village lists the Cuyahoga County Board of Health inspection fee as $225, with the required application." },
+      { question: "What does the buyer receive?", requirement: "The owner must give the prospective buyer a copy of the septic Certificate of Inspection and obtain the buyer’s signed acknowledgment of receipt." },
+      { question: "How do I apply?", requirement: "Apply through the Cuyahoga County Board of Health for the private sewage-system inspection." },
+    ],
     sources: [
       { label: "Mayfield Village: Point-of-Sale FAQ", url: "https://mayfieldvillage.com/mayfield-village-faq/" },
+      { label: "Mayfield Village Code: Septic Certificate of Inspection at Time of Sale, § 1365.01", url: "https://codelibrary.amlegal.com/codes/mayfieldvillage/latest/mayfieldvillage_oh/0-0-0-20397" },
     ],
-    verifiedDate: "November 10, 2026",
+    verifiedDate: "November 13, 2026",
   },
   "statistics": {
     "medianSalePrice": "$447,287",
