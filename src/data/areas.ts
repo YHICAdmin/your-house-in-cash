@@ -416,20 +416,24 @@ const clevelandHeightsArea = createArea({
 export const euclidArea = createArea({
   city: "Euclid",
   slug: "euclid",
-  introSupportingCopy: "In Euclid, a Point-of-Sale inspection is part of selling a home. If the inspection finds violations, a buyer can assume them, but the repairs must be completed within six months. That can affect whether you put money into the house before listing or look for a buyer prepared to take it as-is. We understand Euclid’s process and can give you a clear cash offer to compare with your other options.",
+  introSupportingCopy: "In Euclid, a Point-of-Sale Certificate of Code Compliance is required before a seller enters into an agreement to sell a home. If the inspection finds violations, a buyer can assume them, but the repairs must be completed within six months. That can affect whether you put money into the house before listing or look for a buyer prepared to take it as-is. We understand Euclid’s process and can give you a clear cash offer to compare with your other options.",
   posInspection: {
     status: "required",
-    shortAnswer: "Euclid requires a Point-of-Sale inspection and offers an assumption process when a purchaser takes responsibility for cited violations. A purchaser who assumes violations must correct them within six months.",
+    shortAnswer: "Euclid requires a Point-of-Sale application and Certificate of Code Compliance before a seller enters into an agreement to sell a dwelling. A purchaser may assume cited violations through the City’s process and must correct them within six months.",
     tableRows: [
+      { question: "When is it required?", requirement: "Before entering into an agreement to sell or otherwise convey a dwelling. The Certificate of Code Compliance is valid for six months." },
+      { question: "What does it cost?", requirement: "$225 for the Point-of-Sale application. For a dwelling structure with more than three units, there is an additional $35 fee per dwelling unit. Qualifying senior homeowners receiving the Cuyahoga County homestead exemption pay $100." },
       { question: "What happens if there are violations?", requirement: "A purchaser may assume the cited violations by submitting the City’s Assumption Application. The responsible party must correct all assumed violations within six months and the City schedules a reinspection." },
       { question: "What does the assumption process cost?", requirement: "The City’s Assumption Application has a $150 non-refundable fee." },
       { question: "How do I apply?", requirement: "Submit the Point-of-Sale Inspection Application and, when applicable, the Assumption Application to the City Building and Housing Department." },
     ],
     sources: [
+      { label: "Euclid Code: Sales of Dwellings; Certificate Required", url: "https://codelibrary.amlegal.com/codes/euclid/latest/euclid_oh/0-0-0-20339" },
+      { label: "Euclid Code: Point-of-Sale Fees", url: "https://codelibrary.amlegal.com/codes/euclid/latest/euclid_oh/0-0-0-20352" },
       { label: "City of Euclid: All Forms and Permits", url: "https://www.cityofeuclid.gov/allformsandpermits" },
       { label: "City of Euclid: Assumption Application (PDF)", url: "https://irp.cdn-website.com/83d949c5/files/uploaded/Assumption-Application-fillable.pdf" },
     ],
-    verifiedDate: "November 10, 2026",
+    verifiedDate: "November 13, 2026",
   },
   statistics: {
     medianSalePrice: "$172,168",
