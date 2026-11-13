@@ -113,6 +113,7 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Mayfield Village | No general POS inspection; County septic-system certificate applies to homes with private sewage systems | Mayfield Village Point-of-Sale FAQ; Village Code § 1365.01 |
 | Middleburg Heights | No general POS inspection; County septic-system evaluation applies to properties with septic systems | City Building Division FAQ; Cuyahoga County Board of Health Point-of-Sale Evaluation Application |
 | North Olmsted | No POS inspection | City Assistance to Homebuyers |
+| North Royalton | No general POS inspection; rental registration and inspections are separate | Akron Cleveland REALTORS® Local Government Information; City Code Chapter 1485 |
 | Orange Village | POS required | Village Point-of-Sale Inspection; Point-of-Sale Application Instructions |
 | Richmond Heights | No POS inspection; exterior home inspection applies | City Exterior Maintenance Inspection Program |
 | Seven Hills | POS required for septic-system properties | City Code Point of Sale Inspection of Septic Systems |

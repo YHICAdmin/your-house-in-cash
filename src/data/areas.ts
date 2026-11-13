@@ -1398,6 +1398,15 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 10, 2026",
   },
+  "north-royalton": {
+    status: "not-required",
+    shortAnswer: "North Royalton does not require a general point-of-sale inspection for a typical home sale. Residential rental properties have separate City registration and inspection requirements.",
+    sources: [
+      { label: "Akron Cleveland REALTORS®: North Royalton Local Government Information (PDF)", url: "https://akronclevelandrealtors.com/wp-content/uploads/2025/04/point-of-Sale-04.18.2025.pdf" },
+      { label: "North Royalton Code: Residential Rental Registration and Inspection, Chapter 1485", url: "https://codelibrary.amlegal.com/codes/northroyalton/latest/noroyal_oh/0-0-0-64304" },
+    ],
+    verifiedDate: "November 13, 2026",
+  },
   "east-cleveland": {
     status: "required",
     shortAnswer: "East Cleveland requires a Certificate of Use, Occupancy, and Inspection before a property is sold or transferred. A buyer may accept responsibility for listed violations by completing the City’s notarized affidavit.",
