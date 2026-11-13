@@ -1407,6 +1407,15 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 13, 2026",
   },
+  "olmsted-falls": {
+    status: "not-required",
+    shortAnswer: "Olmsted Falls does not require a general point-of-sale inspection for a typical home sale. The City’s Certificate of Occupancy and Zoning Compliance process applies to opening or relocating a business, not a normal residential resale.",
+    sources: [
+      { label: "Akron Cleveland REALTORS®: Olmsted Falls Local Government Information", url: "https://akronclevelandrealtors.com/advocacy-outreach/local-government-info/" },
+      { label: "City of Olmsted Falls: Occupancy and Zoning Compliance", url: "https://www.olmstedfalls.org/permits/occupancy" },
+    ],
+    verifiedDate: "November 13, 2026",
+  },
   "east-cleveland": {
     status: "required",
     shortAnswer: "East Cleveland requires a Certificate of Use, Occupancy, and Inspection before a property is sold or transferred. A buyer may accept responsibility for listed violations by completing the City’s notarized affidavit.",
