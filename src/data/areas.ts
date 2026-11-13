@@ -1618,7 +1618,7 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     status: "required",
     shortAnswer: "The seller must apply for a Point-of-Sale inspection before entering into a contract to sell a residential property. A sale can close with violations still outstanding only when the City approves the required escrow arrangement.",
     tableRows: [
-      { question: "When is it required?", requirement: "Before entering into an agreement to sell a residential property with a structure. The inspection is valid for transfer for 24 months from the original inspection date." },
+      { question: "Is a POS inspection required?", requirement: "Yes. Before entering into an agreement to sell a residential property with a structure. The inspection is valid for transfer for 24 months from the original inspection date." },
       { question: "What does it cost?", requirement: "Single-family: $200. Two-family: $300. Condominium: $150. Apartment building: $200 for the first unit and $50 for each additional unit." },
       { question: "What does the City inspect?", requirement: "A visual inspection of the interior and exterior. Apartment-building common areas and fire-code violations are also included." },
       { question: "Can the sale close with violations?", requirement: "Yes. The buyer or seller must submit an itemized estimate from a registered contractor; after City approval, the buyer establishes City-held escrow equal to 150% of the estimated repairs." },
