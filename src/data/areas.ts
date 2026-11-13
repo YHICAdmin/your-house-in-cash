@@ -1387,6 +1387,16 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 12, 2026",
   },
+  "fairview-park": {
+    status: "not-required",
+    shortAnswer: "Fairview Park does not require a general point-of-sale inspection for a normal home sale. The City’s annual exterior property-maintenance inspections are conducted by neighborhood rotation and are not triggered by a sale. Rental properties and certain occupancy changes have separate City requirements.",
+    sources: [
+      { label: "City of Fairview Park: Property Maintenance", url: "https://fairviewparkohio.gov/172/Property-Maintenance" },
+      { label: "City of Fairview Park: Building Department", url: "https://www.fairviewparkohio.gov/165/Building-Department" },
+      { label: "Akron Cleveland REALTORS®: Fairview Park Local Government Information", url: "https://akronclevelandrealtors.com/advocacy-outreach/local-government-info/" },
+    ],
+    verifiedDate: "November 13, 2026",
+  },
   "seven-hills": {
     status: "required",
     shortAnswer: "Seven Hills requires a point-of-sale septic-system inspection when the property has a septic system. The seller must obtain a current County septic-system evaluation before transfer.",
