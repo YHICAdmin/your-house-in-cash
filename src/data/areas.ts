@@ -1500,9 +1500,10 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
   },
   "seven-hills": {
     status: "required",
-    shortAnswer: "Seven Hills requires a point-of-sale septic-system evaluation when the property has a septic system. Vacant and rental properties also have separate City registration and inspection requirements.",
+    shortAnswer: "Seven Hills does not require a general Point-of-Sale inspection for a typical home sale. If the property has a septic system, the seller must obtain a current Cuyahoga County Certificate of Septic System Evaluation before entering into an agreement to sell, convey, or transfer it.",
     tableRows: [
-      { question: "When is it required?", requirement: "Before selling, conveying, or transferring a property with a septic system." },
+      { question: "Is a POS inspection required?", requirement: "Only for a property with a septic system. Seven Hills does not require a general POS inspection for a typical home sale." },
+      { question: "When is the septic evaluation required?", requirement: "Before entering into an agreement to sell, convey, or transfer a property with a septic system." },
       { question: "What is required for a septic sale?", requirement: "Obtain a current Certificate of Septic System Evaluation from the Cuyahoga County Board of Health and present it to the buyer." },
       { question: "What about escrow?", requirement: "If escrow is established, the buyer's acknowledgement of receipt of the certificate must be deposited in escrow before possession or title transfer." },
       { question: "What if the house is vacant?", requirement: "A vacant or abandoned property must be registered with the City within 30 days of becoming vacant. Registration is $200 annually and requires a local agent responsible for security, maintenance, and marketing." },
