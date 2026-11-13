@@ -1518,12 +1518,19 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
   },
   solon: {
     status: "not-required",
-    shortAnswer: "Solon does not require a point-of-sale inspection for this type of home sale. The City’s Building Department states that it does not perform Point-of-Sale inspections.",
-    sources: [
-      { label: "City of Solon: Certificate of Occupancy Procedure (PDF)", url: "https://www.solonohio.gov/DocumentCenter/View/857/COO-ProdedureSolon-Comm--4Res?bidId=" },
-      { label: "City of Solon Council Minutes, February 19, 2019", url: "https://www.solonohio.gov/ArchiveCenter/ViewFile/Item/2230" },
+    shortAnswer: "Solon does not require a general Point-of-Sale inspection for a typical home sale. Residential rental properties have separate City registration, occupancy-permit, and inspection requirements.",
+    tableRows: [
+      { question: "Is a POS inspection required?", requirement: "No. Solon does not require a general Point-of-Sale inspection for a typical home sale." },
+      { question: "What if the property is a rental?", requirement: "A residential rental needs a current Rental Unit Occupancy Permit. The City requires registration and inspection of every unit that is or may be rented." },
+      { question: "How often are rentals renewed and inspected?", requirement: "Rental permits are renewed on a three-year cycle. The City’s current cycle requires an interior and exterior inspection." },
+      { question: "What if a rental unit becomes vacant?", requirement: "The City asks owners to submit a Rental Status Reporting Form when a unit’s status changes, including a move-in, move-out, or vacancy." },
     ],
-    verifiedDate: "November 10, 2026",
+    sources: [
+      { label: "City of Solon: Residential Rental Registration Program", url: "https://www.solonohio.gov/1578/Residential-Rental-Registration-Program" },
+      { label: "City Code: Residential Rental Occupancy Permit, Chapter 1489", url: "https://codelibrary.amlegal.com/codes/solon/latest/solon_oh/0-0-0-15917" },
+      { label: "City of Solon Council Minutes, February 19, 2019", url: "https://www.solonohio.gov/Archive/ViewFile/Item/2230" },
+    ],
+    verifiedDate: "November 13, 2026",
   },
   lakewood: {
     status: "required",
@@ -1657,6 +1664,7 @@ bedfordArea.posInspection = additionalPosInspections.bedford;
 independenceArea.posInspection = additionalPosInspections.independence;
 lyndhurstArea.posInspection = additionalPosInspections.lyndhurst;
 sevenHillsArea.posInspection = additionalPosInspections["seven-hills"];
+solonArea.posInspection = additionalPosInspections.solon;
 
 const additionalAreas = [
   ["Bay Village", "bay-village", ["Westlake", "Rocky River", "Fairview Park", "North Olmsted", "Berea", "Lakewood"]],

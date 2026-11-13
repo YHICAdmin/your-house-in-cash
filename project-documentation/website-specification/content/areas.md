@@ -123,7 +123,7 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Rocky River | No general POS inspection; rental licensing/inspection and property-maintenance rules are separate | City Code Chapter 1371; City Code § 1370.04; Akron Cleveland REALTORS® Local Government Information |
 | Seven Hills | Septic-system evaluation required for septic-property transfers; vacant and rental requirements are separate | City Code § 721.09; Vacant Property Registration § 1144.03; Rental Property § 1146.02 |
 | Shaker Heights | POS required for improved residential properties; rental inspection program is separate | City Point of Sale Procedure; POS Inspection and Escrow Requirements; Point-of-Sale FAQs; Rental Property Inspections |
-| Solon | No POS inspection | City Certificate of Occupancy Procedure; Council Minutes |
+| Solon | No general POS inspection; rental registration, occupancy permit, and inspections are separate | City Residential Rental Registration Program; City Code Chapter 1489; Council Minutes |
 | South Euclid | No general POS inspection; vacant-property inspection applies | City Housing Department |
 | University Heights | POS required | City Point-of-Sale Application; Point-of-Sale Transfer Process |
 | Warrensville Heights | POS required | City Residential POS Application and Checklist; Inspections |
