@@ -1496,18 +1496,22 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
   },
   "orange-village": {
     status: "required",
-    shortAnswer: "Orange Village requires a Point-of-Sale inspection before selling a home. The process includes verification of required smoke and carbon-monoxide detectors, plus septic or well inspection when applicable.",
+    shortAnswer: "Orange Village requires a Point-of-Sale Certificate of Compliance or Certificate of Conditional Transfer before title to a home can transfer. The process includes smoke and carbon-monoxide detector verification, plus septic or well inspection when applicable.",
     tableRows: [
-      { question: "When is it required?", requirement: "Before selling a house." },
-      { question: "What does it cost?", requirement: "$50, paid with the Point-of-Sale application." },
+      { question: "When is it required?", requirement: "Before title transfers for a dwelling or dwelling unit. Transfers by inheritance or gift without a bona fide sale, and new dwellings subject to a Certificate of Occupancy, are excluded. A Certificate of Compliance is valid for one year." },
+      { question: "What does it cost?", requirement: "$50, paid with the Point-of-Sale application. Cuyahoga County Board of Health fees apply separately to septic and well work when applicable." },
       { question: "What does the City inspect?", requirement: "The Fire Department verifies working smoke and carbon-monoxide detectors in the required locations. Septic and well inspections are scheduled with the Cuyahoga County Board of Health when applicable." },
+      { question: "What if the house is vacant and has septic?", requirement: "If a sewage-system evaluation cannot be performed because the home has not been continuously occupied for at least 30 days, the seller receives a Certificate of Conditional Transfer. The buyer receives and signs it, then the septic test must occur after the home has been continuously occupied for 30 to 90 days." },
+      { question: "What happens if the property is not yet compliant?", requirement: "The Building Department may issue a Certificate of Conditional Transfer. The seller must give it to the buyer, and the buyer must sign and date it; when an escrow is used, the signed certificate must be deposited before possession or title transfers." },
       { question: "How do I apply?", requirement: "Complete the two-page application, submit it to the Building Department with payment, then schedule the detector inspection through the Building Department." },
     ],
     sources: [
       { label: "Orange Village: Point-of-Sale Inspection", url: "https://www.orangevillage.com/building-department-2/" },
-      { label: "Orange Village: Point-of-Sale Application Instructions (PDF)", url: "https://www.orangevillage.com/wp-content/uploads/2020/01/full-pos-information-updated-jan-2020.pdf" },
+      { label: "Orange Village Code: Certificate of Compliance Required, § 1337.02", url: "https://codelibrary.amlegal.com/codes/orange/latest/orange_oh/0-0-0-97503" },
+      { label: "Orange Village Code: POS Inspection and One-Year Effective Period, § 1337.03", url: "https://codelibrary.amlegal.com/codes/orange/latest/orange_oh/0-0-0-97509" },
+      { label: "Orange Village Code: Vacant Septic-Property Procedure, § 1337.09", url: "https://codelibrary.amlegal.com/codes/orange/latest/orange_oh/0-0-0-97537" },
     ],
-    verifiedDate: "November 10, 2026",
+    verifiedDate: "November 13, 2026",
   },
   "brook-park": {
     status: "required",
