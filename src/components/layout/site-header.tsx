@@ -187,7 +187,10 @@ export function SiteHeader() {
         <div className={styles.actions}>
           <div className={styles.headerPhoneContact}><PhoneContact /></div>
           <span className={styles.headerCta}>
-            <Button href="/get-cash-offer">Get My Cash Offer</Button>
+            <Button href="/get-cash-offer" aria-label="Get My Cash Offer">
+              <span className={styles.mobileCtaLabel}>Get Offer</span>
+              <span className={styles.standardCtaLabel}>Get My Cash Offer</span>
+            </Button>
           </span>
           <button
             ref={toggleRef}
@@ -230,10 +233,7 @@ export function SiteHeader() {
                 </Link>
               ))}
             </nav>
-            <PhoneContact className={styles.menuPhoneContact} />
-            <div className={`${styles.menuCta} content-inset`}>
-              <Button href="/get-cash-offer">Get My Cash Offer</Button>
-            </div>
+            <PhoneContact className={`${styles.menuPhoneContact} content-inset`} />
           </div>
         </div>
       ) : null}

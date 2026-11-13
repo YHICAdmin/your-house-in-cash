@@ -422,7 +422,6 @@ Provide clear, accessible navigation.
 
   1. Menu Navigation containing the Header Navigation Links.
   2. Phone Contact.
-  3. Menu Primary CTA with the label `Get My Cash Offer`.
 
 ### Component and Semantics
 
@@ -438,7 +437,7 @@ Provide clear, accessible navigation.
 
 #### Mobile
 
-* The Menu Primary CTA uses the standard `Button` Component with link semantics and navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
+* The Header CTA uses the standard `Button` Component with link semantics and navigates to the Seller Lead Form Flow at the canonical internal route `/get-cash-offer`.
 
 ### Visual Design
 
@@ -457,7 +456,8 @@ Provide clear, accessible navigation.
 
 #### Mobile
 
-* The Menu Primary CTA inherits the standard `Button` Component's visual styling.
+* The Header CTA inherits the standard `Button` Component's visual styling.
+* The Phone Contact follows the final Menu Navigation row and aligns with the Menu Navigation content area. The final Menu Navigation row retains its `1px` solid `#E4E7E4` bottom divider above the Phone Contact.
 
 ### Dimensions and Alignment
 
@@ -472,9 +472,8 @@ Provide clear, accessible navigation.
 
 #### Mobile
 
-* The Menu Control is the only element in the Header's right-side control area.
-* The Menu Primary CTA preserves the standard `Button` Component's dimensions except that its width fills `100%` of the available Menu content width.
-* It remains bounded by the Menu Panel content area, appears at the bottom of the Open Menu Panel, and has `24px` (`M`) padding beneath it.
+* The Header CTA appears immediately before the Menu Control in the Header's right-side control area and is separated from it by `8px` (`XS`).
+* On Mobile, the Header CTA retains the standard Button height and styling with `14px` horizontal padding so it fits alongside the Logo and Menu Control.
 
 ### Interaction
 
@@ -499,7 +498,7 @@ Provide clear, accessible navigation.
 
 #### Mobile
 
-* The Menu Primary CTA inherits the standard `Button` Component's interaction states.
+* The Header CTA inherits the standard `Button` Component's interaction states.
 
 ### Accessibility
 
@@ -526,11 +525,10 @@ Provide clear, accessible navigation.
 
 #### Mobile
 
-* The Menu Control follows the Logo in document, reading, and focus order because the Header CTA is not displayed in the Header.
+* The Header CTA and Menu Control follow the Logo in document, reading, and focus order.
 * The Open Menu Panel follows the Menu Control in document, reading, and focus order.
 * Menu Navigation is the first content element in the Open Menu Panel.
 * The Phone Contact follows Menu Navigation in document, reading, and focus order.
-* The Menu Primary CTA follows the Phone Contact in document, reading, and focus order and inherits the standard `Button` Component's accessibility behavior.
 
 ## Phone Contact
 
@@ -559,7 +557,7 @@ Provide clear, accessible navigation.
 * The Phone icon, label, Divider, and phone number form one horizontal composition in that order, with an `8px` (`XS`) gap between adjacent items across all Breakpoints.
 * The Divider is vertical and `24px` long across all Breakpoints.
 * The complete Phone Contact is vertically center-aligned across all Breakpoints and, on Desktop and Tablet, vertically centered relative to the Header CTA.
-* On Mobile, appears directly above the Menu Primary CTA, is separated from it by `16px` (`S`), and is horizontally centered.
+* On Mobile, appears directly below the final Menu Navigation row, aligned with the Menu Navigation content area, with `24px` (`M`) vertical padding and a bottom divider.
 
 ### Responsive Behavior
 
@@ -575,7 +573,7 @@ Provide clear, accessible navigation.
 
 ### Content
 
-* Label: `Get My Cash Offer`.
+* Label: `Get My Cash Offer` on Desktop and Tablet; `Get Offer` on Mobile.
 
 ### Component and Semantics
 
@@ -589,7 +587,7 @@ Provide clear, accessible navigation.
 
 ### Responsive Behavior
 
-* Not displayed in the Header on Mobile.
+* Displayed in the Header at every Breakpoint. On Mobile, it appears immediately before the Menu Control with the `Get Offer` label and Body Small typography.
 
 # Minimal Footer
 

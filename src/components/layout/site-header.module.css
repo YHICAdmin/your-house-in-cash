@@ -39,10 +39,19 @@
   display: flex;
   flex: 0 0 auto;
   align-items: center;
-  gap: var(--spacing-s);
+  gap: var(--spacing-xs);
 }
 
 .headerCta {
+  display: inline-flex;
+}
+
+.headerCta > a {
+  padding-inline: 14px;
+  font-size: var(--text-body-small);
+}
+
+.standardCtaLabel {
   display: none;
 }
 
@@ -51,9 +60,7 @@
 }
 
 .menuPhoneContact {
-  justify-content: center;
-  margin-top: auto;
-  margin-bottom: var(--spacing-s);
+  padding-block: var(--spacing-m);
 }
 
 .menuToggle {
@@ -143,15 +150,6 @@
   flex-direction: column;
 }
 
-.menuCta {
-  display: flex;
-  padding-bottom: var(--spacing-m);
-}
-
-.menuCta > a {
-  width: 100%;
-}
-
 .menuNavigation a {
   display: flex;
   width: 100%;
@@ -168,6 +166,12 @@
 
 .menuNavigation a:last-child {
   border-bottom: 0;
+}
+
+@media (width < 768px) {
+  .menuNavigation a:last-child {
+    border-bottom: 1px solid var(--color-border);
+  }
 }
 
 .menuNavigation a:hover,
@@ -188,12 +192,28 @@
     display: inline-flex;
   }
 
+  .actions {
+    gap: var(--spacing-s);
+  }
+
+  .headerCta > a {
+    padding-inline: 22px;
+    font-size: var(--text-button);
+  }
+
+  .mobileCtaLabel {
+    display: none;
+  }
+
+  .standardCtaLabel {
+    display: inline;
+  }
+
   .headerPhoneContact {
     display: flex;
   }
 
-  .menuPhoneContact,
-  .menuCta {
+  .menuPhoneContact {
     display: none;
   }
 }

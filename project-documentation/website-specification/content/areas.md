@@ -107,7 +107,8 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Garfield Heights | POS required; buyer-assumption and escrow rules apply to unresolved violations | City Point-of-Sale Inspections; Buyer Affidavit; City Code Chapter 1313 |
 | Independence | No general POS inspection; commercial occupancy and rental-transfer rules may apply | City Code: Occupancy Permit for Change of Use; Lease/Rental Occupancy Registration |
 | Lakewood | POS required for non-owner-occupied residential rentals | City Inspections and Code Compliance |
-| Maple Heights | POS required | City Point of Sale Inspection; Point of Sale Application |
+| Lyndhurst | No general POS inspection; Certificate of Authorized Occupancy required for two-family sales | City Code: Certificate of Authorized Occupancy; Rental and Non-Owner-Occupied Property Guidance |
+| Maple Heights | POS required for improved residential and commercial property | City Code: Point-of-Sale/Property Maintenance Inspection; Point of Sale Application |
 | Mayfield Heights | POS required | City Residential Point-of-Sale Application; Statement of Assumption of Housing Violations |
 | Mayfield Village | No general POS inspection; septic-system certificate applies | Mayfield Village Point-of-Sale FAQ |
 | Middleburg Heights | No general POS inspection; septic-system certificate applies | City Building Division FAQ |

@@ -649,11 +649,11 @@ const mapleHeightsArea = createArea({
   introSupportingCopy: "Maple Heights has an active rental market: in September 2026, advertised rents averaged $1,641 for three-bedroom houses and $1,790 for four-bedroom houses. If you own a rental, that gives you a real choice between keeping the property for income or selling it now. We can give you a clear cash offer, so you can compare both paths and decide what makes the most sense for you.",
   posInspection: {
     status: "required",
-    shortAnswer: "The owner must obtain a Point of Sale/Property Maintenance inspection before selling or transferring an improved residential property. A sale can proceed with violations still outstanding only when the City’s approved escrow and buyer paperwork requirements are completed.",
+    shortAnswer: "The owner must obtain a Point of Sale/Property Maintenance inspection before selling or transferring improved residential or commercial property. A sale can proceed with violations still outstanding only when the City’s approved escrow and buyer paperwork requirements are completed.",
     tableRows: [
       {
         question: "When is it required?",
-        requirement: "Before selling, transferring, conveying, or entering into an agreement to transfer improved residential property. The initial inspection is valid for six months, subject to the City’s conditions.",
+        requirement: "Before selling, transferring, conveying, or entering into an agreement to transfer improved residential or commercial property. The initial inspection is valid for six months, subject to the City’s conditions.",
       },
       {
         question: "What does it cost?",
@@ -674,6 +674,14 @@ const mapleHeightsArea = createArea({
     ],
     sources: [
       {
+        label: "Maple Heights Code: Point-of-Sale/Property Maintenance Inspection",
+        url: "https://codelibrary.amlegal.com/codes/mapleheights/latest/mapleheights_oh/0-0-0-45458",
+      },
+      {
+        label: "Maple Heights Code: Required Use of Certificate of Inspection",
+        url: "https://codelibrary.amlegal.com/codes/mapleheights/latest/mapleheights_oh/0-0-0-45474",
+      },
+      {
         label: "City of Maple Heights: Point of Sale Inspection",
         url: "https://mapleheightsohio.gov/businesses/permits-and-registrations/point-of-sale-inspection/",
       },
@@ -682,7 +690,7 @@ const mapleHeightsArea = createArea({
         url: "https://mapleheightsohio.gov/wp-content/uploads/2025/06/Point-of-Sale-Application_2.pdf",
       },
     ],
-    verifiedDate: "November 10, 2026",
+    verifiedDate: "November 13, 2026",
   },
   statistics: {
     medianSalePrice: "$144,931",
@@ -1408,6 +1416,15 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 13, 2026",
   },
+  lyndhurst: {
+    status: "not-required",
+    shortAnswer: "Lyndhurst does not require a POS inspection for a single-family home sale. Before entering into an agreement to sell a double house or two-family dwelling, however, the owner must hold a current Certificate of Authorized Occupancy and show it to the prospective buyer. Rental properties have separate registration and recurring exterior-inspection requirements.",
+    sources: [
+      { label: "Lyndhurst Code: Certificate of Authorized Occupancy", url: "https://codelibrary.amlegal.com/codes/lyndhurst/latest/lyndhurst_oh/0-0-0-33365" },
+      { label: "City of Lyndhurst: Rental and Non-Owner-Occupied Property Guidance", url: "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3516/Lyndhurst/820af718-9021-4c2d-9d8b-92b2c5c5c864/COVER_LETTER__LLC-CORPORATE_with_TENANT_fillab.pdf?disposition=inline" },
+    ],
+    verifiedDate: "November 13, 2026",
+  },
   "seven-hills": {
     status: "required",
     shortAnswer: "Seven Hills requires a point-of-sale septic-system inspection when the property has a septic system. The seller must obtain a current County septic-system evaluation before transfer.",
@@ -1519,6 +1536,7 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
 
 bedfordArea.posInspection = additionalPosInspections.bedford;
 independenceArea.posInspection = additionalPosInspections.independence;
+lyndhurstArea.posInspection = additionalPosInspections.lyndhurst;
 
 const additionalAreas = [
   ["Bay Village", "bay-village", ["Westlake", "Rocky River", "Fairview Park", "North Olmsted", "Berea", "Lakewood"]],
