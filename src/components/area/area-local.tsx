@@ -79,9 +79,7 @@ export function AreaLocal({ area, background = "default" }: AreaLocalProps) {
   ] : [];
 
   const statisticColumns = [statistics.slice(0, 2), statistics.slice(2)];
-  const imageDescription = area.slug === "maple-heights"
-    ? area.localPhoto.title
-    : undefined;
+  const imageDescription = area.localPhoto.title;
 
   return (
     <section
@@ -210,24 +208,28 @@ export function AreaLocal({ area, background = "default" }: AreaLocalProps) {
               Straightforward Offers.
             </h3>
           </div>
-          {imageDescription && (
-            <figcaption className={`${styles.marketDescription} text-body-small`}>
-              {imageDescription}
-            </figcaption>
-          )}
-          {area.localPhoto.attributionRequired && (
-            <figcaption className={`${styles.marketCredit} text-body-small`}>
-              Photo by {area.localPhoto.photographer} via{" "}
-              <a href={area.localPhoto.sourceUrl} target="_blank" rel="noreferrer">
-                Wikimedia Commons
-              </a>{" "}
-              (
-              <a href={area.localPhoto.licenseUrl} target="_blank" rel="noreferrer">
-                {area.localPhoto.license}
-              </a>
-              )
-            </figcaption>
-          )}
+          <figcaption className={`${styles.marketCaption} text-body-small`}>
+            {imageDescription && (
+              <p className={styles.marketDescription}>{imageDescription}</p>
+            )}
+            {area.localPhoto.attributionRequired && (
+              <p className={styles.marketCredit}>
+                Photo: {area.localPhoto.photographer} · {" "}
+                <a href={area.localPhoto.sourceUrl} target="_blank" rel="noreferrer">
+                  Wikimedia Commons
+                </a>{" "}
+                · {" "}
+                <a href={area.localPhoto.licenseUrl} target="_blank" rel="noreferrer">
+                  {area.localPhoto.license}
+                </a>
+              </p>
+            )}
+            {!area.localPhoto.attributionRequired && (
+              <p className={styles.marketCredit}>
+                Source: <a href={area.localPhoto.sourceUrl} target="_blank" rel="noreferrer">Wikimedia Commons</a>
+              </p>
+            )}
+          </figcaption>
         </figure>
 
         {area.posInspection && <section className={styles.posInspection} aria-labelledby="pos-inspection-heading">

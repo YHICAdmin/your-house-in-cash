@@ -238,17 +238,20 @@
   color: var(--color-text-muted);
 }
 
-.marketCredit {
+.marketCaption {
   margin: var(--spacing-xs) 0 0;
   color: var(--color-text-secondary);
 }
 
 .marketDescription {
-  margin: var(--spacing-xs) 0 0;
-  color: var(--color-text-secondary);
+  margin: 0;
 }
 
-.marketCredit a {
+.marketCredit {
+  margin: var(--spacing-xs) 0 0;
+}
+
+.marketCaption a {
   color: inherit;
 }
 

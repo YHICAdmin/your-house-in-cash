@@ -111,7 +111,7 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Maple Heights | POS required for improved residential and commercial property | City Code: Point-of-Sale/Property Maintenance Inspection; Point of Sale Application |
 | Mayfield Heights | Exterior POS required for dwelling sales; certificate valid 12 months | City Code Chapter 1339; City Residential Point-of-Sale Application; Statement of Assumption of Housing Violations |
 | Mayfield Village | No general POS inspection; County septic-system certificate applies to homes with private sewage systems | Mayfield Village Point-of-Sale FAQ; Village Code § 1365.01 |
-| Middleburg Heights | No general POS inspection; septic-system certificate applies | City Building Division FAQ |
+| Middleburg Heights | No general POS inspection; County septic-system evaluation applies to properties with septic systems | City Building Division FAQ; Cuyahoga County Board of Health Point-of-Sale Evaluation Application |
 | North Olmsted | No POS inspection | City Assistance to Homebuyers |
 | Orange Village | POS required | Village Point-of-Sale Inspection; Point-of-Sale Application Instructions |
 | Richmond Heights | No POS inspection; exterior home inspection applies | City Exterior Maintenance Inspection Program |

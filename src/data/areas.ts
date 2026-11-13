@@ -848,10 +848,17 @@ const middleburgHeightsArea = createArea({
   posInspection: {
     status: "not-required",
     shortAnswer: "Middleburg Heights does not require a general point-of-sale inspection for a home sale. A property with a septic system must obtain a Certificate of Septic System Evaluation from the Cuyahoga County Board of Health.",
-    sources: [
-      { label: "City of Middleburg Heights: Building Division FAQ", url: "https://middleburgheights.com/faq/" },
+    tableRows: [
+      { question: "When is it required?", requirement: "Only when the property has a septic system. The City requires a Certificate of Septic System Evaluation from the Cuyahoga County Board of Health." },
+      { question: "What does it cost?", requirement: "The Cuyahoga County Board of Health lists a $350 nonrefundable fee for the point-of-sale sewage-system evaluation, including sampling costs for discharging systems." },
+      { question: "What if the house is vacant?", requirement: "The County cannot conduct the sewage-system evaluation until the home has been continuously occupied for at least 30 days. A vacant home must be reoccupied for that period before the evaluation can proceed." },
+      { question: "How do I apply?", requirement: "Submit the Cuyahoga County Board of Health’s Sewage Treatment System Point-of-Sale Evaluation Application. The system must be prepared for the evaluation, including access to the listed components." },
     ],
-    verifiedDate: "November 10, 2026",
+    sources: [
+      { label: "City of Middleburg Heights: Building Division FAQ", url: "https://middleburgheights.com/building/div-of-building-faq/" },
+      { label: "Cuyahoga County Board of Health: Sewage Treatment System Point-of-Sale Evaluation Application (PDF)", url: "https://www.ccbh.net/wp-content/uploads/2021/08/SEWAGE-TREATMENT-SYSTEM-POINT-OF-SALE-EVALUATION-APPLICATION-3-3-2020.pdf" },
+    ],
+    verifiedDate: "November 13, 2026",
   },
   statistics: {
     medianSalePrice: "$339,838",
