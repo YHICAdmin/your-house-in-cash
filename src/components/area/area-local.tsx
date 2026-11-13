@@ -202,11 +202,6 @@ export function AreaLocal({ area, background = "default" }: AreaLocalProps) {
               fill
               sizes="(min-width: 1200px) 600px, (min-width: 768px) 50vw, 100vw"
             />
-            <h3 className={`${styles.marketHeading} text-body`}>
-              Local Knowledge.
-              <br />
-              Straightforward Offers.
-            </h3>
           </div>
           <figcaption className={`${styles.marketCaption} text-body-small`}>
             {imageDescription && (

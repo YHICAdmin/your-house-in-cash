@@ -1451,7 +1451,6 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 ### Content
 
 * Displays a real local residential photograph.
-* A compact white overlay retains the shared headline on two lines: **Local Knowledge.** followed by **Straightforward Offers.**
 * Every Area Page uses the current lead image from its corresponding English Wikipedia city article. The canonical per-city `localPhoto` record in `src/data/areas.ts` supplies the local asset, descriptive alternative text, title, photographer, Wikimedia Commons source URL, and license.
 * The approved city-to-image mapping, including source and license records, is defined in [Area Data](content/areas.md#local-market-images). Mayfield Village follows the lead image of its redirected `Mayfield, Ohio` article.
 * If a current or future Area Page has no approved Wikipedia lead image, it uses the Cleveland skyline record (`defaultLocalPhoto`) as its default. Its existing attribution requirements remain in effect.
@@ -1460,7 +1459,7 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 
 ### Component and Semantics
 
-* Uses a `figure` containing the photograph and overlaid `H3` headline.
+* Uses a `figure` containing the photograph.
 * Every Area Page displays one visible credit line beneath the image. Public-domain images use a `Source: Wikimedia Commons` link. When the image license requires attribution, the same line credits the photographer and links to both its Wikimedia Commons source and license.
 * Every Area Page displays its approved local-photo title as a visible description beneath the image.
 
@@ -1468,20 +1467,17 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 
 * On Mobile and Tablet, the image frame uses a `4:3` Aspect Ratio. On Desktop, its height fills the available space below Nearby Areas, aligning its bottom with the left column's Local Statistics content. The photo's intrinsic aspect ratio does not determine Desktop row height.
 * The image frame uses global Medium Radius (`12px`), no Border, and no Shadow. The photograph fills the frame with `object-fit: cover` and centered positioning, allowing a taller Desktop crop without distortion.
-* The overlay uses global Surface, Small Radius (`8px`), no Border or Shadow, and global Body typography at weight `600` with Text Primary color.
 * The photograph remains above the global System Lines; no additional System Line is drawn through it.
 
 ### Dimensions and Alignment
 
 * On Desktop and Tablet, occupies the full width of the right area, visually directly after Nearby Areas. On Mobile, follows Local Statistics.
 * On Desktop, the photograph stretches to the bottom of the Local Statistics composition. Left-column content remains top-aligned at its documented spacing; explicit Grid placement preserves the independent column flows without JavaScript measurement.
-* The compact, content-sized overlay sits inside the lower-left corner of the photograph. It preserves the two-line headline where space permits and wraps naturally at narrow widths.
-* On Mobile, uses its independent `4:3` ratio and retains the overlay placement within the canonical document flow.
+* On Mobile, uses its independent `4:3` ratio within the canonical document flow.
 
 ### Spacing
 
 * On Desktop and Tablet, the existing `XL` (`48px`) gap after Nearby Areas is retained. On Mobile, `L` (`32px`) separates Local Statistics from the photograph.
-* The overlay uses `S` (`16px`) internal Padding and `S` insets from the left and bottom image edges. It also preserves at least `S` clearance from the right edge.
 
 ### Accessibility and Image Use
 

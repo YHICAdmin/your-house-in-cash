@@ -266,18 +266,6 @@
   object-fit: cover;
 }
 
-.marketHeading {
-  position: absolute;
-  left: var(--spacing-s);
-  bottom: var(--spacing-s);
-  max-width: calc(100% - var(--spacing-l));
-  margin: 0;
-  padding: var(--spacing-s);
-  border-radius: var(--radius-small);
-  background: var(--color-surface);
-  font-weight: 600;
-}
-
 @media (min-width: 768px) {
   .layout {
     /* The flexible middle track preserves the staggered column flows. */
