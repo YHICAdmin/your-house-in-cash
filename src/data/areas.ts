@@ -1500,16 +1500,20 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
   },
   "seven-hills": {
     status: "required",
-    shortAnswer: "Seven Hills requires a point-of-sale septic-system inspection when the property has a septic system. The seller must obtain a current County septic-system evaluation before transfer.",
+    shortAnswer: "Seven Hills requires a point-of-sale septic-system evaluation when the property has a septic system. Vacant and rental properties also have separate City registration and inspection requirements.",
     tableRows: [
       { question: "When is it required?", requirement: "Before selling, conveying, or transferring a property with a septic system." },
-      { question: "What is required?", requirement: "Obtain a current Certificate of Septic System Evaluation from the Cuyahoga County Board of Health and present it to the buyer." },
+      { question: "What is required for a septic sale?", requirement: "Obtain a current Certificate of Septic System Evaluation from the Cuyahoga County Board of Health and present it to the buyer." },
       { question: "What about escrow?", requirement: "If escrow is established, the buyer's acknowledgement of receipt of the certificate must be deposited in escrow before possession or title transfer." },
+      { question: "What if the house is vacant?", requirement: "A vacant or abandoned property must be registered with the City within 30 days of becoming vacant. Registration is $200 annually and requires a local agent responsible for security, maintenance, and marketing." },
+      { question: "What if the property is a rental?", requirement: "Rental properties must be registered annually. The City requires an interior inspection before occupancy or a tenant change, plus an annual exterior inspection. The base annual fee is $100, plus $50 per additional unit." },
     ],
     sources: [
       { label: "City of Seven Hills Code: Point of Sale Inspection of Septic Systems", url: "https://codelibrary.amlegal.com/codes/sevenhills/latest/sevenhills_oh/0-0-0-16271" },
+      { label: "City of Seven Hills Code: Vacant Property Registration, § 1144.03", url: "https://codelibrary.amlegal.com/codes/sevenhills/latest/sevenhills_oh/0-0-0-33316" },
+      { label: "City of Seven Hills Code: Rental Property Registration and Inspections, § 1146.02", url: "https://codelibrary.amlegal.com/codes/sevenhills/latest/sevenhills_oh/0-0-0-43489" },
     ],
-    verifiedDate: "November 10, 2026",
+    verifiedDate: "November 13, 2026",
   },
   solon: {
     status: "not-required",
@@ -1564,6 +1568,23 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
       { label: "Akron Cleveland REALTORS®: Pepper Pike Local Government Information (PDF)", url: "https://akronclevelandrealtors.com/wp-content/uploads/2025/05/point-of-Sale-04.18.2025-REVISED.pdf" },
       { label: "City of Pepper Pike: Rental Property Application and Inspection Information (PDF)", url: "https://www.pepperpike.org/DocumentCenter/View/4691/Rental-Property-Application" },
       { label: "City Code: Occupancy Permits, § 1444.08", url: "https://codelibrary.amlegal.com/codes/pepperpike/latest/pepperpike_oh/0-0-0-46849" },
+    ],
+    verifiedDate: "November 13, 2026",
+  },
+  "rocky-river": {
+    status: "not-required",
+    shortAnswer: "Rocky River does not require a general point-of-sale inspection for a typical home sale. Rental properties have separate licensing and inspection requirements, and all properties remain subject to City property-maintenance rules.",
+    tableRows: [
+      { question: "Is a POS inspection required?", requirement: "No. Rocky River does not require a general point-of-sale inspection for a typical home sale." },
+      { question: "What if the property is a rental?", requirement: "Non-owner-occupied properties need a Rental License/Certificate of Occupancy and a general City inspection. The certificate is valid for 12 months." },
+      { question: "What happens when a rental sells?", requirement: "The former owner’s rental certificate becomes void when ownership changes. The new owner must apply for a new certificate within 30 days; no fee is charged when that deadline is met." },
+      { question: "What if the house is vacant?", requirement: "The City’s property-maintenance rules apply to all properties, including vacant homes. This is ongoing code enforcement, not a sale-triggered inspection or registration requirement." },
+    ],
+    sources: [
+      { label: "Akron Cleveland REALTORS®: Rocky River Local Government Information", url: "https://akronclevelandrealtors.com/advocacy-outreach/local-government-info/" },
+      { label: "City Code: Rental License/Certificate of Occupancy, Chapter 1371", url: "https://codelibrary.amlegal.com/codes/rockyriver/latest/rockyriver_oh/0-0-0-22051" },
+      { label: "City Code: Rental Ownership Changes, § 1371.07", url: "https://codelibrary.amlegal.com/codes/rockyriver/latest/rockyriver_oh/0-0-0-22072" },
+      { label: "City Code: Property Maintenance Responsibilities, § 1370.04", url: "https://codelibrary.amlegal.com/codes/rockyriver/latest/rockyriver_oh/0-0-0-21930" },
     ],
     verifiedDate: "November 13, 2026",
   },

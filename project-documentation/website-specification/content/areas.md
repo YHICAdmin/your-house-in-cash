@@ -120,7 +120,8 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Parma | No general POS inspection; vacant-property registration and rental requirements are separate | City Permit and License Applications; City Code Chapters 1715 and 1713 |
 | Parma Heights | No general POS inspection; rental and vacant-property requirements are separate | City Rental Housing Registration and Inspection Ordinance; Vacant Property Registration Materials |
 | Richmond Heights | No traditional POS inspection; exterior home inspection and sanitary-sewer dye test required before home transfer | City Exterior Maintenance Inspection Program; Storm and Sanitary Sewers FAQ; Rental Property Registration Application |
-| Seven Hills | POS required for septic-system properties | City Code Point of Sale Inspection of Septic Systems |
+| Rocky River | No general POS inspection; rental licensing/inspection and property-maintenance rules are separate | City Code Chapter 1371; City Code § 1370.04; Akron Cleveland REALTORS® Local Government Information |
+| Seven Hills | Septic-system evaluation required for septic-property transfers; vacant and rental requirements are separate | City Code § 721.09; Vacant Property Registration § 1144.03; Rental Property § 1146.02 |
 | Shaker Heights | POS required | City Point of Sale Procedure; POS Inspection and Escrow Requirements |
 | Solon | No POS inspection | City Certificate of Occupancy Procedure; Council Minutes |
 | South Euclid | No general POS inspection; vacant-property inspection applies | City Housing Department |
