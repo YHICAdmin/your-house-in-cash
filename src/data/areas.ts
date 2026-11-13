@@ -959,6 +959,20 @@ const parmaHeightsArea = createArea({
   slug: "parma-heights",
   introSupportingCopy: "Recent sales in Parma Heights have been higher than in neighboring Parma, with a median sale price of $243,884 compared with $229,891. That does not determine what any individual house will sell for, but it is a good reason to look carefully at your options before making a decision. We can give you a clear cash offer for the house as it stands, so you can weigh a faster, simpler sale against the potential time and cost of listing it.",
   introLink: { text: "Parma", matchText: "neighboring Parma", href: "/sell-your-house-fast-as-is-parma" },
+  posInspection: {
+    status: "not-required",
+    shortAnswer: "Parma Heights does not require a general point-of-sale inspection for a typical home sale. Rental and vacant properties have separate City registration and maintenance requirements.",
+    tableRows: [
+      { question: "Is a POS inspection required?", requirement: "No. Parma Heights does not require a general point-of-sale inspection for a typical home sale." },
+      { question: "What if the property is a rental?", requirement: "Rental properties must be registered annually. A new owner must apply for registration within 30 days after acquiring a rental property, and the property must pass an exterior inspection before the City issues a Rental Certification." },
+      { question: "What if the house is vacant?", requirement: "Vacant properties have a separate City registration and maintenance process. This is not a point-of-sale inspection requirement." },
+    ],
+    sources: [
+      { label: "City of Parma Heights: Rental Housing Registration and Inspection Ordinance (PDF)", url: "https://parmaheightsoh.gov/wp-content/uploads/2024/02/CC-PACKET-2-26-2024.pdf" },
+      { label: "City of Parma Heights: Vacant Property Registration Materials (PDF)", url: "https://parmaheightsoh.gov/wp-content/uploads/2023/03/Vacant-Property-Registration-Application-Chapter-634-1.pdf" },
+    ],
+    verifiedDate: "November 13, 2026",
+  },
   statistics: {
     medianSalePrice: "$243,884",
     homesSold: "66",

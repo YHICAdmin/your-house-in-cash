@@ -1436,7 +1436,7 @@ Approved city-specific headlines and supporting copy are defined in [Area Data](
 
 * This optional subsection appears at the bottom of the `We Know {City}` local-area section only when the current city has a verified `posInspection` record in [Area Data](content/areas.md#point-of-sale-inspection-content).
 * If a city is unverified or its rules are unclear, the subsection is omitted entirely. It must never display a default claim that no POS inspection is required.
-* The subsection uses the heading `Point-of-Sale Inspections in {City}` and a `The Short Answer` callout.
+* The subsection uses the heading `Local Requirements When Selling in {City}` and a `What to Know` callout.
 * A city with `required` status includes the seller-question and city-requirements table, official municipal source links, and a source-check date. A city with `not-required` status ordinarily has no table and distinguishes any separate city transfer requirement from a POS inspection. Bay Village is the exception: its `not-required` record includes a table limited to the vacant-building sale process, without presenting that process as a general POS requirement.
 * Every POS subsection includes this disclosure after its official sources: `Requirements can change and may depend on the property. Confirm current requirements with the applicable local building department before listing, signing a purchase agreement, or closing.`
 

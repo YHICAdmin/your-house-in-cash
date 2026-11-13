@@ -117,6 +117,7 @@ Each verified record includes the status, seller-facing short answer, applicable
 | Olmsted Falls | No general POS inspection; business occupancy process is separate | Akron Cleveland REALTORS® Local Government Information; City Occupancy and Zoning Compliance |
 | Orange Village | POS required; vacant septic homes follow a conditional-transfer procedure | Village Code Chapter 1337; Village Point-of-Sale Inspection |
 | Parma | No general POS inspection; vacant-property registration and rental requirements are separate | City Permit and License Applications; City Code Chapters 1715 and 1713 |
+| Parma Heights | No general POS inspection; rental and vacant-property requirements are separate | City Rental Housing Registration and Inspection Ordinance; Vacant Property Registration Materials |
 | Richmond Heights | No POS inspection; exterior home inspection applies | City Exterior Maintenance Inspection Program |
 | Seven Hills | POS required for septic-system properties | City Code Point of Sale Inspection of Septic Systems |
 | Shaker Heights | POS required | City Point of Sale Procedure; POS Inspection and Escrow Requirements |
