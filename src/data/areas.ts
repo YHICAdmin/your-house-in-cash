@@ -1650,6 +1650,7 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
 bedfordArea.posInspection = additionalPosInspections.bedford;
 independenceArea.posInspection = additionalPosInspections.independence;
 lyndhurstArea.posInspection = additionalPosInspections.lyndhurst;
+sevenHillsArea.posInspection = additionalPosInspections["seven-hills"];
 
 const additionalAreas = [
   ["Bay Village", "bay-village", ["Westlake", "Rocky River", "Fairview Park", "North Olmsted", "Berea", "Lakewood"]],
