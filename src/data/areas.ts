@@ -144,7 +144,7 @@ const approvedIntroSupportingCopy: Record<string, string> = {
   "mayfield-heights": "Mayfield Heights requires a Point-of-Sale inspection before selling a house, although condominiums and cluster homes may be exempt when the owner is not responsible for exterior maintenance. Knowing which rules apply to your property can affect the work and timing involved before closing. We can evaluate the house as it is and give you a cash offer to compare with preparing it for a traditional sale.",
   "mayfield-village": "Mayfield Village does not have a general Point-of-Sale inspection for a home sale, but properties with septic systems need a County Certificate of Inspection before transfer. If your property has septic, that requirement is worth understanding before you set a closing timeline. We can give you a clear as-is offer and help you compare a direct sale with your other options.",
   "middleburg-heights": "Homes in Middleburg Heights sold in a median of 13 days between July and September 2026. A faster local market can make listing attractive, but it does not remove the cost and work of repairs, cleaning, showings, and uncertainty around the final offer. We can give you a straightforward cash offer so you can compare both paths.",
-  "richmond-heights": "Richmond Heights does not call its transfer review a Point-of-Sale inspection, but the City requires a no-cost exterior home inspection before a transfer. That gives sellers a local step to account for before closing, even when no interior inspection is required. We can evaluate the property as it stands and provide a cash offer to compare with a traditional sale.",
+  "richmond-heights": "Richmond Heights requires a no-cost exterior inspection and a sanitary-sewer dye test before a home can transfer. If exterior violations remain, the buyer can acknowledge them by affidavit and accept the repair deadline instead of requiring the seller to finish the work before closing. We can evaluate the property as it stands and provide a cash offer to compare with a traditional sale.",
   "seven-hills": "In Seven Hills, a home with a septic system needs a current County septic-system evaluation before it can be transferred. If the property uses septic, that requirement can affect your sale timeline and the work you may need to plan for. We can give you an as-is cash offer to compare with repairing, listing, and selling the home traditionally.",
   solon: "Solon does not require a Point-of-Sale inspection for a typical home sale. That can simplify the City side of a transaction, but sellers still need to decide whether preparing the house for the market is worth the time and expense. We can evaluate the home in its current condition and give you a clear cash offer to compare.",
   "south-euclid": "South Euclid does not require a general Point-of-Sale inspection for an occupied home sale, but a vacant property must be registered and inspected before title can transfer. If the house is empty, that requirement can add another step before closing. We can give you an as-is offer and help you compare a direct sale with preparing the home for the market.",
@@ -1015,11 +1015,20 @@ const richmondHeightsArea = createArea({
   slug: "richmond-heights",
   posInspection: {
     status: "not-required",
-    shortAnswer: "Richmond Heights does not call its required transfer review a point-of-sale inspection. Before a home transfer, the City requires a no-cost exterior home inspection; it does not include an interior inspection.",
+    shortAnswer: "Richmond Heights does not call its process a point-of-sale inspection, but it requires a no-cost exterior home inspection and a sanitary-sewer dye test before a home transfer. The City’s required inspection is limited to the exterior of the property.",
+    tableRows: [
+      { question: "When is it required?", requirement: "Before any home transfer. The City requires both the exterior home inspection and the sanitary-sewer dye test before title can transfer." },
+      { question: "What does the City inspect?", requirement: "The inspection covers exterior property areas and produces a report of current violations. There is no interior inspection or City fee." },
+      { question: "What is the sewer requirement?", requirement: "A sanitary-sewer dye test must be completed before title transfer to confirm proper sanitary-sewer operation. The City says the test is performed at no cost; contact the Building Department to arrange the work with Cuyahoga County Public Works." },
+      { question: "Can the sale close with exterior violations?", requirement: "Yes. The seller may make the repairs before transfer, or the buyer may sign a notarized affidavit acknowledging the listed violations and agreeing to complete the repairs by the City’s target date. The City does not hold escrow for those violations." },
+      { question: "What if the property is a rental?", requirement: "Rental registration is separate. The City’s form lists a $100 fee for a change of ownership or property transfer for a rental property." },
+    ],
     sources: [
       { label: "City of Richmond Heights: Exterior Maintenance Inspection Program (PDF)", url: "https://www.richmondheightsohio.org/DocumentCenter/View/165/Exterior-Maintenance-Inspection-Rules-Revised-7-28-2017-PDF?bidId=" },
+      { label: "City of Richmond Heights: Storm and Sanitary Sewers FAQ (PDF)", url: "https://www.richmondhtsoh.gov/DocumentCenter/View/166" },
+      { label: "City of Richmond Heights: Rental Property Registration Application (PDF)", url: "https://richmondheightsohio.org/DocumentCenter/View/188/Rental-Property-Registration-Application-PDF" },
     ],
-    verifiedDate: "November 10, 2026",
+    verifiedDate: "November 13, 2026",
   },
   statistics: {
     medianSalePrice: "$270,871",
