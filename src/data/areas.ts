@@ -901,6 +901,22 @@ const parmaArea = createArea({
   city: "Parma",
   slug: "parma",
   introSupportingCopy: "Parma is a large city, and selling a house near Ukrainian Village can feel different from selling one closer to Ridge Road or West Creek. We know the area and understand that a house needing repairs, an inherited property, or a rental may not fit the usual listing route. We will look at the property as it is and give you a clear cash offer, so you can compare your options without committing to repairs, showings, or a long sale process.",
+  posInspection: {
+    status: "not-required",
+    shortAnswer: "Parma does not require a general point-of-sale inspection for a typical home sale. A vacant property must be registered with the City, but that requirement is triggered by vacancy rather than by a sale.",
+    tableRows: [
+      { question: "Is a POS inspection required?", requirement: "No. Parma does not require a general point-of-sale inspection for a typical home sale." },
+      { question: "What if the house is vacant?", requirement: "The owner must register a vacant residential or nonresidential property with the City, renew the registration annually while it remains vacant, and pay a $200 annual registration fee." },
+      { question: "What does vacant-property registration involve?", requirement: "The registration identifies the owner, interested parties, local maintenance agent, utility shutoff dates, and weatherization date. The owner must inspect the property monthly for code violations and provide a report if the City requests one." },
+      { question: "What about rental property?", requirement: "Residential rentals have a separate annual registration and external property-maintenance inspection program. That program is not a POS requirement." },
+    ],
+    sources: [
+      { label: "City of Parma: Permit and License Applications", url: "https://cityofparma-oh.gov/185/Permit-License-Applications" },
+      { label: "Parma Code: Vacant Properties, Chapter 1715", url: "https://codelibrary.amlegal.com/codes/parma/latest/Parma_oh/0-0-0-217619" },
+      { label: "Parma Code: Residential Rental Properties, Chapter 1713", url: "https://codelibrary.amlegal.com/codes/parma/latest/Parma_oh/0-0-0-217585" },
+    ],
+    verifiedDate: "November 13, 2026",
+  },
   statistics: {
     medianSalePrice: "$229,891",
     homesSold: "309",
