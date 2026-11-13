@@ -1543,6 +1543,21 @@ const additionalPosInspections: Partial<Record<string, PosInspection>> = {
     ],
     verifiedDate: "November 13, 2026",
   },
+  "pepper-pike": {
+    status: "not-required",
+    shortAnswer: "Pepper Pike does not require a general point-of-sale inspection for a typical home sale. Rental properties have separate City registration and inspection requirements.",
+    tableRows: [
+      { question: "Is a POS inspection required?", requirement: "No. Pepper Pike does not require a general point-of-sale inspection for a typical home sale." },
+      { question: "What if the property is a rental?", requirement: "Rental properties have a separate City registration and inspection process. The City requires the owner to apply and pay the inspection fee before an inspection is scheduled." },
+      { question: "Does an occupancy permit apply to a typical home sale?", requirement: "No. The City’s occupancy-permit rules cover construction, certain changes of use, and commercial leases; they do not establish a general residential resale inspection." },
+    ],
+    sources: [
+      { label: "Akron Cleveland REALTORS®: Pepper Pike Local Government Information (PDF)", url: "https://akronclevelandrealtors.com/wp-content/uploads/2025/05/point-of-Sale-04.18.2025-REVISED.pdf" },
+      { label: "City of Pepper Pike: Rental Property Application and Inspection Information (PDF)", url: "https://www.pepperpike.org/DocumentCenter/View/4691/Rental-Property-Application" },
+      { label: "City Code: Occupancy Permits, § 1444.08", url: "https://codelibrary.amlegal.com/codes/pepperpike/latest/pepperpike_oh/0-0-0-46849" },
+    ],
+    verifiedDate: "November 13, 2026",
+  },
   "brook-park": {
     status: "required",
     shortAnswer: "Brook Park requires a Re-Occupancy Inspection for any title transfer or change in occupant. For a home sale, it is an exterior, plain-view inspection valid for six months.",
