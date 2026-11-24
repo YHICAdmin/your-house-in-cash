@@ -46,27 +46,15 @@ export function GoogleAnalytics({ measurementId, productionDeployment }: { measu
     if (!trackingAllowed || window.__analyticsConsentGranted) return;
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function gtag(...args: unknown[]) { window.dataLayer?.push(args); };
-    window.gtag("consent", "default", {
-      ad_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied",
-      analytics_storage: "denied",
-    });
+    window.gtag("js", new Date());
 
     const script = document.createElement("script");
     script.id = "google-analytics";
     script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    script.src = `https://www.googletagmanager.com/gtm.js?id=${measurementId}`;
     script.addEventListener("load", () => {
-      window.gtag?.("consent", "update", { analytics_storage: "granted" });
-      window.gtag?.("js", new Date());
-      window.gtag?.("config", measurementId, {
-        allow_ad_personalization_signals: false,
-        allow_google_signals: false,
-      });
       window.__analyticsMeasurementId = measurementId;
       window.__analyticsConsentGranted = true;
-      lastPagePath.current = window.location.pathname;
       setTagReady(true);
     });
     document.head.appendChild(script);
