@@ -63,10 +63,10 @@ export function GoogleAnalytics({ measurementId, productionDeployment }: { measu
       window.gtag?.("config", measurementId, {
         allow_ad_personalization_signals: false,
         allow_google_signals: false,
-        send_page_view: false,
       });
       window.__analyticsMeasurementId = measurementId;
       window.__analyticsConsentGranted = true;
+      lastPagePath.current = window.location.pathname;
       setTagReady(true);
     });
     document.head.appendChild(script);
