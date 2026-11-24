@@ -52,20 +52,23 @@ export function GoogleAnalytics({ measurementId, productionDeployment }: { measu
       ad_personalization: "denied",
       analytics_storage: "denied",
     });
-    window.gtag("consent", "update", { analytics_storage: "granted" });
-    window.gtag("js", new Date());
-    window.gtag("config", measurementId, {
-      allow_ad_personalization_signals: false,
-      allow_google_signals: false,
-      send_page_view: false,
-    });
-    window.__analyticsConsentGranted = true;
 
     const script = document.createElement("script");
     script.id = "google-analytics";
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-    script.addEventListener("load", () => setTagReady(true));
+    script.addEventListener("load", () => {
+      window.gtag?.("consent", "update", { analytics_storage: "granted" });
+      window.gtag?.("js", new Date());
+      window.gtag?.("config", measurementId, {
+        allow_ad_personalization_signals: false,
+        allow_google_signals: false,
+        send_page_view: false,
+      });
+      window.__analyticsMeasurementId = measurementId;
+      window.__analyticsConsentGranted = true;
+      setTagReady(true);
+    });
     document.head.appendChild(script);
   }, [measurementId, trackingAllowed]);
 
