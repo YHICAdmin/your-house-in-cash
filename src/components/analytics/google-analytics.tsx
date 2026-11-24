@@ -45,7 +45,11 @@ export function GoogleAnalytics({ measurementId, productionDeployment }: { measu
   useEffect(() => {
     if (!trackingAllowed || window.__analyticsConsentGranted) return;
     window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function gtag(...args: unknown[]) { window.dataLayer?.push(args); };
+    window.gtag = window.gtag || function gtag() {
+      // Google requires an arguments object rather than a rest-parameter array.
+      // eslint-disable-next-line prefer-rest-params
+      window.dataLayer?.push(arguments);
+    };
     window.gtag("js", new Date());
 
     const script = document.createElement("script");
