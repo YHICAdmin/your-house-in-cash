@@ -26,7 +26,7 @@ How much you keep depends on the house, the offers you receive, and what it cost
 
 ## Cash Offer vs. Listing a Rental in Euclid, Ohio
 
-Let’s look at a real example from [Euclid, Ohio](/sell-your-house-fast-as-is-euclid). The tenant had moved out, and the owner decided to sell the vacant rental. The owner figured it could use some touch-ups. The house went on the market as-is for **$125,000**, and a cash buyer offered **$92,500**.
+Let’s look at a real example from [Euclid, Ohio](/sell-your-house-fast-as-is-euclid). When the tenant moved out, the owner decided to sell the vacant rental. Getting a rental ready to list often means paying for touch-ups like painting or minor repairs, and the owner figured this house could use some work. The house went on the market as-is for **$125,000**, and a cash buyer offered **$92,500**.
 
 If the house sells at asking price, listing starts with a price advantage. Some of that difference would go toward touch-ups, agent fees, closing costs, and the bills that keep coming while the house sits empty.
 
